@@ -14,13 +14,14 @@ import logging
 import getpass
 import requests
 import os
+import vos
 
 import numpy as np
 import pandas as pd
 from astropy.table import Table, Column
 
 BASEURL = "http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/vospace/auth/synctrans"
-
+vospace = vos.Client()
 
 # CUT OUT (image, RA, DEC, radius, CADC permissions)
 	# for each attribute in mpc_observations:
@@ -40,7 +41,6 @@ def cutout(image, RA, DEC, radius, username, password):
     uri = os.path.join(DBIMAGES,'%s%s' % (str(image), ext))
     print "got uri: " + str(uri)
 
-
     target = storage.vospace.fixURI(uri)
     direction = "pullFromVoSpace"
     protocol = "ivo://ivoa.net/vospace/core#httpget"
@@ -55,7 +55,7 @@ def cutout(image, RA, DEC, radius, username, password):
     postage_stamp_filename = "{:11.5s}_{:11.5f}_{:+11.5f}.fits".format(image, RA, DEC)
     with open(postage_stamp_filename, 'w') as tmp_file:
         tmp_file.write(r.content)
-        copy(postage_stamp_filename, obj_dir + "/" + postage_stamp_filename)
+        #copy(postage_stamp_filename, obj_dir + "/" + postage_stamp_filename)
     os.unlink(postage_stamp_filename)  # easier not to have them hanging around	
 
 # from OSSOS storage.py

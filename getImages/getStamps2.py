@@ -55,7 +55,8 @@ def cutout(image, RA, DEC, radius, username, password):
     postage_stamp_filename = "{:11.5s}_{:11.5f}_{:+11.5f}.fits".format(image, RA, DEC)
     with open(postage_stamp_filename, 'w') as tmp_file:
         tmp_file.write(r.content)
-        #copy(postage_stamp_filename, obj_dir + "/" + postage_stamp_filename)
+        obj_dir = "/fitsImages"
+        copy(postage_stamp_filename, obj_dir + "/" + postage_stamp_filename)
     os.unlink(postage_stamp_filename)  # easier not to have them hanging around	
 
 # from OSSOS storage.py

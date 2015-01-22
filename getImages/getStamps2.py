@@ -38,6 +38,9 @@ def cutout(image, RA, DEC, radius, username, password):
     
     DBIMAGES = 'vos:OSSOS/dbimages'
     ext = '.fits'
+    
+    # I THINK THE PROBLEM IS HERE AS I SHORTENED THE URI. IM NOT SURE WHAT FORM
+    # IT SHOULD BE THOUGH....
     uri = os.path.join(DBIMAGES,'%s%s' % (str(image), ext))
     print "got uri: " + str(uri)
 

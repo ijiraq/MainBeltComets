@@ -146,7 +146,7 @@ def main():
                     outfile.write("{:>10s} {:>10s} {:>10d} {:8.16f} {:8.16f} {:>10s} {:>10s}\n".format(object_name,
                             line['Image'], line['Exptime'], line['Object_RA'], line['Object_Dec'],
                             Time(line['MJD'], format='mjd', scale='utc'), line['Filter']))
-                    outfile.write('\n')
+                    
 
             # Confirm that there is coordinates for each image
             # Add information to table? or file corresponding to the image name?

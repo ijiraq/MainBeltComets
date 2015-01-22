@@ -36,7 +36,7 @@ def cutout(image, RA, DEC, radius, username, password):
     this_cutout = "CIRCLE ICRS {} {} {}".format(RA, DEC, radius)                                 
     print this_cutout
     
-    DBIMAGES = 'vos:OSSOS/dbimages'
+    DBIMAGES = 'vos:OSSOS/dbimages' # DOESN'T QUITE MATCH EXAMPLE AT TOP OF SCRIPT
     ext = '.fits'
     
     # I THINK THE PROBLEM IS HERE AS I SHORTENED THE URI. IM NOT SURE WHAT FORM

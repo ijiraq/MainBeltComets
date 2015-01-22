@@ -11,6 +11,14 @@ ivo://ivoa.net/vospace/core%23httpget&view=cutout&cutout=CIRCLE+ICRS+242.1318+-1
 2.4747+0.05
 """
 	# PERMISSIONS DENIED, WHAT IS .AST FILE IN DBASE FORM?
+    
+# from astrom.py AstromParser
+    """
+    Parses a .astrom file (our own format) which specifies exposure numbers,
+    identified point sources, their x, y location, source readings for
+    potential moving objects, etc.
+    """    
+
 	
 import argparse
 import logging
@@ -108,13 +116,15 @@ def main():
 		# assign to a file
 		
 def cutout(obj, obj_dir, radius, username, password):
-    for obs in obj.mpc_observations:  # FIXME: TESTING ONLY
+    for obs in obj.mpc_observations:  
         if obs.null_observation:
             continue
 ###        expnum = obs.comment.frame.split('p')[0] 
         this_cutout = "CIRCLE ICRS {} {} {}".format(obs.coordinate.ra.degree,
                                                obs.coordinate.dec.degree,
                                                radius)
+###     # CHANGE TO RA DEC ?
+                                 
         print this_cutout
 
         target = storage.vospace.fixURI(storage.get_uri(expnum))

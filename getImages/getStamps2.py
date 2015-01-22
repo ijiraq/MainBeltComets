@@ -44,7 +44,7 @@ def cutout(image, RA, DEC, radius, username, password):
     uri = os.path.join(DBIMAGES,'%s%s' % (str(image), ext))
     print "got uri: " + str(uri)
 
-    target = storage.vospace.fixURI(uri)
+    target = storage.vospace.fixURI(uri) # CANNOT FIND "vospace.fixURI" or "fixURI" in storage.py, not sure what this does
     direction = "pullFromVoSpace"
     protocol = "ivo://ivoa.net/vospace/core#httpget"
     view = "cutout"

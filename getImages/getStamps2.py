@@ -2,10 +2,12 @@
 Takes a table (getmbc.py output) as input
 
 An Example URL for cutouts from OSSOS (not CFHT/MegaCam)
-http://www.canfar.phys.uvic.ca/vospace/auth/synctrans?TARGET=vos://cadc.nrc.ca~
-vospace/OSSOS/dbimages/1625356/1625356p.fits&DIRECTION=pullFromVoSpace&PROTOCOL=
-ivo://ivoa.net/vospace/core%23httpget&view=cutout&cutout=CIRCLE+ICRS+242.1318+-1
-2.4747+0.05
+http://www.canfar.phys.uvic.ca/vospace/auth/synctrans?
+TARGET=vos://cadc.nrc.ca~vospace/OSSOS/dbimages/1625356/1625356p.fits&
+DIRECTION=pullFromVoSpace&
+PROTOCOL=ivo://ivoa.net/vospace/core%23httpget&
+view=cutout&
+cutout=CIRCLE+ICRS+242.1318+-12.4747+0.05
 """
 # in this case, the image is the exposure number
 
@@ -15,6 +17,11 @@ import getpass
 import requests
 import os
 import vos
+
+import storage
+import coding
+import mpc
+import util
 
 import numpy as np
 import pandas as pd
@@ -35,32 +42,26 @@ def cutout(image, RA, DEC, radius, username, password):
     
     this_cutout = "CIRCLE ICRS {} {} {}".format(RA, DEC, radius)                                 
     print this_cutout
-    
-    DBIMAGES = 'vos:OSSOS/dbimages' # DOESN'T QUITE MATCH EXAMPLE AT TOP OF SCRIPT
-    ext = '.fits'
-    
-    # I THINK THE PROBLEM IS HERE AS I SHORTENED THE URI. IM NOT SURE WHAT FORM
-    # IT SHOULD BE THOUGH....
-    uri = os.path.join(DBIMAGES,'%s%s' % (str(image), ext))
-    print "got uri: " + str(uri)
 
-    target = storage.vospace.fixURI(uri) # CANNOT FIND "vospace.fixURI" or "fixURI" in storage.py, not sure what this does
-    direction = "pullFromVoSpace"
-    protocol = "ivo://ivoa.net/vospace/core#httpget"
-    view = "cutout"
-    params = {"TARGET": target,
+    try:
+        target = storage.vospace.fixURI(storage.get_uri(image)) ## this must be wrong
+        protocol = "ivo://ivoa.net/vospace/core#httpget"
+        view = "cutout"
+        params = {"TARGET": target,
                   "PROTOCOL": protocol,
                   "DIRECTION": direction,
                   "cutout": this_cutout,
                   "view": view}
-    r = requests.get(BASEURL, params=params, auth=(username, password))
-    r.raise_for_status()  # confirm the connection worked as hoped
-    postage_stamp_filename = "{:11.5s}_{:11.5f}_{:+11.5f}.fits".format(image, RA, DEC)
-    with open(postage_stamp_filename, 'w') as tmp_file:
-        tmp_file.write(r.content)
-        obj_dir = "/fitsImages"
-        copy(postage_stamp_filename, obj_dir + "/" + postage_stamp_filename)
-    os.unlink(postage_stamp_filename)  # easier not to have them hanging around	
+        r = requests.get(BASEURL, params=params, auth=(username, password))
+        r.raise_for_status()  # confirm the connection worked as hoped
+        postage_stamp_filename = "{:11.5s}_{:11.5f}_{:+11.5f}.fits".format(image, RA, DEC)
+        with open(postage_stamp_filename, 'w') as tmp_file:
+            tmp_file.write(r.content)
+            obj_dir = "/fitsImages"
+            copy(postage_stamp_filename, obj_dir + "/" + postage_stamp_filename)
+        os.unlink(postage_stamp_filename)  # easier not to have them hanging around
+    except:
+        print "it stops working here"	
 
 # from OSSOS storage.py
 def copy(source, dest):
@@ -103,7 +104,7 @@ def main():
     
     # PRINT HEADER
 
-    print "-------------------- \n Cutting postage stamps of objects in input file %s from CFHT/MegaCam images \n--------------------" % args.infile	
+    print "-------------------- \n Cutting postage stamps of objects in input file %s from CFHT/MegaCam images \n--------------------" % args.ossin	
 
     # CADC PERMISSIONS
     username = raw_input("CADC username: ")
@@ -113,16 +114,17 @@ def main():
         # format into lines, parse for image, RA and DEC
         # CUT OUT IMAGE
 	        # PASS: object, directory, radius, CADC permissions                    
-
-    with open(in_file) as infile: 
+    
+    with open(args.ossin) as infile: 
         for line in infile.readlines()[1:]:
-            s = str(line)
-            image = s[10:21].strip()    # string
-            RA = s[33:54].strip()       # string, needs to be float ?
-            DEC = s[54:75].strip()      # string, needs to be float ?
+            assert len(line.split()) > 0
+            image = line.split()[1]
+            RA = float(line.split()[3])   
+            DEC = float(line.split()[4])
             cutout(image, RA, DEC, args.radius, username, password)
 		
-	
+if __name__ == '__main__':
+    main()	
 		
 		
 		

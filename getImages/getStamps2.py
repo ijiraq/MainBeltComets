@@ -43,7 +43,8 @@ def cutout(image, RA, DEC, radius, username, password):
     this_cutout = "CIRCLE ICRS {} {} {}".format(RA, DEC, radius)                                 
     print this_cutout
 
-    target = storage.vospace.fixURI(storage.get_uri(image))
+    expnum = image.split('p')[0] # only want calibrated images    
+    target = storage.vospace.fixURI(storage.get_uri(expnum))
     direction = "pullFromVoSpace"
     protocol = "ivo://ivoa.net/vospace/core#httpget"
     view = "cutout"
@@ -53,25 +54,22 @@ def cutout(image, RA, DEC, radius, username, password):
                   "cutout": this_cutout,
                   "view": view}
     r = requests.get(BASEURL, params=params, auth=(username, password))
-    r.raise_for_status()  # confirm the connection worked as hoped # RAISES ERROR, URL OR PERMISSIONS WRONG
+    r.raise_for_status()  # confirm the connection worked as hoped
     try:
-        postage_stamp_filename = "{:11.5s}_{:11.5f}_{:+11.5f}.fits".format(image, RA, DEC)
+        postage_stamp_filename = "{}_{}_{}.fits".format(image, RA, DEC)
+        print postage_stamp_filename
         with open(postage_stamp_filename, 'w') as tmp_file:
             tmp_file.write(r.content)
             try:
-                obj_dir = "/fitsImages"
-                copy(postage_stamp_filename, obj_dir + "/" + postage_stamp_filename)
+                #obj_dir = "/fitsImages"
+                obj_dir = '{}/{}'.format(storage.POSTAGE_STAMPS, image)
+                storage.copy(postage_stamp_filename, obj_dir + "/" + postage_stamp_filename)
             except:
                 print " cannot save file to directory "
         os.unlink(postage_stamp_filename)  # easier not to have them hanging around
     except:
         print "it stops working here"	
 
-# from OSSOS storage.py
-def copy(source, dest):
-    """use the vospace service to get a file. """
-    print "copying {} -> {}".format(source, dest)
-    return vospace.copy(source, dest)
 
 # PARSE INFORMATION INPUTTED FROM THE COMMAND LINE
 	# VERSION - OSSOS DATA RELEASE VERSION THE STAMPS ARE TO BE ASSIGNED TO

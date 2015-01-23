@@ -62,6 +62,7 @@ def _skip_missing_data(str_vals, ncols):
         return str_vals
     else:
         raise ValueError("not enough columns in table")
+        # object U0233 does not have enough columns in table
     
 def main():
 
@@ -77,7 +78,7 @@ def main():
                     dest="filter",
                     choices=['r', 'u'],
                     help="passband: default is r'")
-    parser.add_argument("--infile",
+    parser.add_argument("--ossin",
                         action="store",
                         default="mbc.txt",
                         help='vospace dbaseclone containerNode')
@@ -96,7 +97,7 @@ def main():
 
     args = parser.parse_args()
     
-    mbc_file = args.infile
+    mbc_file = args.ossin
     with open(mbc_file) as infile: 
         filestr = infile.read()
     input_mbc_lines = filestr.split('\n') # array of MBCs to query
@@ -143,9 +144,12 @@ def main():
         if len(obs_in_filter) > 0:
             with open(args.output, 'a') as outfile:
                 for line in obs_in_filter:
-                    outfile.write("{:>10s} {:>10s} {:>10d} {:8.16f} {:8.16f} {:>10s} {:>10s}\n".format(object_name,
+                    try:
+                        outfile.write("{:>10s} {:>10s} {:>10d} {:8.16f} {:8.16f} {:>10s} {:>10s}\n".format(object_name,
                             line['Image'], line['Exptime'], line['Object_RA'], line['Object_Dec'],
                             Time(line['MJD'], format='mjd', scale='utc'), line['Filter']))
+                    except:
+                        print "cannot write to outfile"
                     
 
             # Confirm that there is coordinates for each image

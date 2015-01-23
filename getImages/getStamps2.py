@@ -28,23 +28,28 @@ import pandas as pd
 from astropy.table import Table, Column
 
 BASEURL = "http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/vospace/auth/synctrans"
-vospace = vos.Client()
+	
+def cutout(image, RA, DEC, radius, username, password):
 
 # CUT OUT (image, RA, DEC, radius, CADC permissions)
 	# for each attribute in mpc_observations:
-		# storage.vospace.fixURI and  (WHERE IS THIS?)
+		# storage.vospace.fixURI and 
 			# storage.get_uri (Build the uri for an OSSOS image stored in the dbimages containerNode)
 		# define parameters for request: target, protocol, direction, cutout, view
 		# request image : url, parameters, cadc permissions
 		# assign to a file
-		
-def cutout(image, RA, DEC, radius, username, password):
+    
+    ''' Test for image known to work   
+    image = '1667879p'
+    RA = 21.1236333333
+    DEC = 11.8697277778
+    '''
     
     this_cutout = "CIRCLE ICRS {} {} {}".format(RA, DEC, radius)                                 
-    print this_cutout
+    print "cut out: ", this_cutout
 
     expnum = image.split('p')[0] # only want calibrated images    
-    target = storage.vospace.fixURI(storage.get_uri(expnum))
+    target = storage.vospace.fixURI(storage.get_uri(expnum)) 
     direction = "pullFromVoSpace"
     protocol = "ivo://ivoa.net/vospace/core#httpget"
     view = "cutout"
@@ -54,30 +59,21 @@ def cutout(image, RA, DEC, radius, username, password):
                   "cutout": this_cutout,
                   "view": view}
     r = requests.get(BASEURL, params=params, auth=(username, password))
-    r.raise_for_status()  # confirm the connection worked as hoped
-    try:
+    if r.status_code == 403:
+        print " Image cannot be cut out, response status = 403 "
+    else:
+        r.raise_for_status()  # confirm the connection worked as hoped
         postage_stamp_filename = "{}_{}_{}.fits".format(image, RA, DEC)
-        print postage_stamp_filename
         with open(postage_stamp_filename, 'w') as tmp_file:
             tmp_file.write(r.content)
-            try:
-                #obj_dir = "/fitsImages"
-                obj_dir = '{}/{}'.format(storage.POSTAGE_STAMPS, image)
-                storage.copy(postage_stamp_filename, obj_dir + "/" + postage_stamp_filename)
-            except:
-                print " cannot save file to directory "
-        os.unlink(postage_stamp_filename)  # easier not to have them hanging around
-    except:
-        print "it stops working here"	
 
 
+def main():
+    
 # PARSE INFORMATION INPUTTED FROM THE COMMAND LINE
 	# VERSION - OSSOS DATA RELEASE VERSION THE STAMPS ARE TO BE ASSIGNED TO
 	# INPUT FILE
-	# BLOCKS - PREFIXES OF OBJECT DESIGNATIONS TO BE USED
 	# RADIUS - SIZE OF CIRCULAR CUTOUT
-    
-def main():
     
     # INPUT LIST OF IMAGES IN COMMAND LINE
     # IDENTIFY PARAMETERS FOR QUERY OF SSOIS FROM INPUT
@@ -105,7 +101,6 @@ def main():
     args = parser.parse_args()
     
     # PRINT HEADER
-
     print "-------------------- \n Cutting postage stamps of objects in input file %s from CFHT/MegaCam images \n--------------------" % args.ossin	
 
     # CADC PERMISSIONS
@@ -118,7 +113,7 @@ def main():
 	        # PASS: object, directory, radius, CADC permissions                    
     
     with open(args.ossin) as infile: 
-        for line in infile.readlines()[1:]:
+        for line in infile.readlines()[1:]: # testing for one image only
             assert len(line.split()) > 0
             image = line.split()[1]
             RA = float(line.split()[3])   

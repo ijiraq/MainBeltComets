@@ -29,7 +29,7 @@ from astropy.table import Table, Column
 
 BASEURL = "http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/vospace/auth/synctrans"
 	
-def cutout(image, RA, DEC, radius, username, password):
+def cutout(objectname, image, RA, DEC, radius, username, password):
 
 # CUT OUT (image, RA, DEC, radius, CADC permissions)
 	# for each attribute in mpc_observations:
@@ -63,7 +63,7 @@ def cutout(image, RA, DEC, radius, username, password):
         print " Image cannot be cut out, response status = 403 "
     else:
         r.raise_for_status()  # confirm the connection worked as hoped
-        postage_stamp_filename = "{}_{}_{}.fits".format(image, RA, DEC)
+        postage_stamp_filename = "{}_{}_{:8f}_{:8f}.fits".format(objectname, image, RA, DEC)
         with open(postage_stamp_filename, 'w') as tmp_file:
             tmp_file.write(r.content)
 
@@ -115,10 +115,11 @@ def main():
     with open(args.ossin) as infile: 
         for line in infile.readlines()[1:]: # testing for one image only
             assert len(line.split()) > 0
+            objectname = line.split()[0]
             image = line.split()[1]
             RA = float(line.split()[3])   
             DEC = float(line.split()[4])
-            cutout(image, RA, DEC, args.radius, username, password)
+            cutout(objectname, image, RA, DEC, args.radius, username, password)
 		
 if __name__ == '__main__':
     main()	

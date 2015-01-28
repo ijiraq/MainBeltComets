@@ -13,7 +13,7 @@ import argparse
 def main(): 
     
     parser = argparse.ArgumentParser(
-        description='For an input .fits image, aperture size, and output file: preforms photometry')
+        description='For an input .fits image, aperture size, threshold, and output file: preforms photometry')
     parser.add_argument("--ossin",
                         action="store",
                         default="3330_stamps_gt8/*.fits",
@@ -38,7 +38,7 @@ def main():
     global th
     th = float(args.thresh)
     
-    with fits.open('3330_stamps_gt8/304757_1692837p_242.335075_-14.024202.fits') as hdulist: # 
+    with fits.open('3330_stamps_gt8/304757_1705715p_238.059140_-13.564710.fits') as hdulist: # 
         
         print hdulist.info()
         if (hdulist[0].data == None):
@@ -49,7 +49,6 @@ def main():
             # what if more than two ccds???
         else:
             table0 = dosep(hdulist[0].data)
-            print "hi"
             ascii.write(table0, '{}'.format(args.output))
         #print data
         

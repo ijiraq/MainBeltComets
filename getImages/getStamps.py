@@ -18,10 +18,13 @@ import requests
 import os
 import vos
 
-import storage
-import coding
-import mpc
-import util
+import sys
+sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
+
+import ossos_scripts.storage
+import ossos_scripts.coding
+import ossos_scripts.mpc
+import ossos_scripts.util
 
 import numpy as np
 import pandas as pd
@@ -79,7 +82,7 @@ def main():
     # IDENTIFY PARAMETERS FOR QUERY OF SSOIS FROM INPUT
 
     parser = argparse.ArgumentParser(
-        description='Parse an obects.txt input file (getmbc.py output) and create links in the postage stamp directory '
+        description='Parse an obects.txt input file (find_family.py output) and create links in the postage stamp directory '
                     'that allow retrieval of cutouts of the FITS images associated with the CHT/MegaCam detections. '
                     'Cutouts are defined on the WCS RA/DEC of the object position.')
     parser.add_argument("--ossin",

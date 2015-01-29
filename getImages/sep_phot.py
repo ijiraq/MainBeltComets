@@ -16,8 +16,9 @@ def main():
         description='For an input .fits image, aperture size, threshold, and output file: preforms photometry')
     parser.add_argument("--ossin",
                         action="store",
-                        default="3330_stamps_gt8/*.fits",
-                        help="The input .fits files for astrometry/photometry measurements.")
+                        default="3330_stamps_gt8/",
+                        help="The directory in getImages/ with input .fits files for astrometry/photometry measurements.")
+# CREATE A DIRECTORY FOR OUTPUT?
 #    parser.add_argument("--output", "-o",
 #                        action="store",
 #                        default="/Users/admin/Desktop/MainBeltComets/getImages/sep_phot.txt",   
@@ -38,12 +39,12 @@ def main():
     global th
     th = float(args.thresh)
     
-    for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/3330_stamps_test'):
+    for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
         if image.endswith('.fits') == True:
-            with fits.open('3330_stamps_test/{}'.format(image)) as hdulist:
+            with fits.open('{}/{}'.format(args.ossin, image)) as hdulist:
                 # doesnt work for 304757_1692837p_242.335075_-14.024202.fits specifically for default values
                 print "Doing photometry on image %s " % image
-                print hdulist.info()
+                #print hdulist.info()
                 if (hdulist[0].data == None):
                     table1 = dosep(hdulist[1].data)
                     table2 = dosep(hdulist[2].data)

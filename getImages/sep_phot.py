@@ -5,6 +5,7 @@ from astropy.io import fits
 from astropy.table import Table, vstack
 from astropy.io import ascii
 import argparse
+from drizzlepac import pixtosky
 
 
 # Identify objects in each postage stamp
@@ -17,7 +18,7 @@ def main():
     parser.add_argument("--ossin",
                         action="store",
                         default="3330_stamps_gt8/",
-                        help="The directory in getImages/ with input .fits files for astrometry/photometry measurements.")
+                        help="The directory in getImages/3330/ with input .fits files for astrometry/photometry measurements.")
 # CREATE A DIRECTORY FOR OUTPUT?
 #    parser.add_argument("--output", "-o",
 #                        action="store",
@@ -31,6 +32,8 @@ def main():
                             action='store',
                             default=1.5,
                             help='threshold value.')
+                            
+# PARSE IN MEASURED X AND Y COORDINATES
     
     
     args = parser.parse_args()
@@ -38,6 +41,11 @@ def main():
     ap = float(args.radius)
     global th
     th = float(args.thresh)
+    
+    global x
+    x = 387
+    global y
+    y = 422
     
     for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
         if image.endswith('.fits') == True:
@@ -50,10 +58,12 @@ def main():
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
                     ascii.write(table, '{}_info.txt'.format(image))
+                    compare(table, image)
                     # what if more than two ccds???
                 else:
                     table0 = dosep(hdulist[0].data)
                     ascii.write(table0, '{}_info.txt'.format(image))
+                    compare(table, image)
                 #print data
         
 def dosep(data):
@@ -93,6 +103,31 @@ def dosep(data):
     table = Table([objs['x'], objs['y'], flux], names=('x', 'y', 'flux'))
     return table
 
+def compare(table, image):
+    # compare predicted RA and DEC to that measured by sep photometry
+    # get predicted RA and DEC from text output from getImages
+    with open('test_images.txt') as infile:
+        for line in infile.readlines()[1:]:
+            assert len(line.split()) > 0
+            objectname = line.split()[0]
+            image = line.split()[1]
+            pRA = float(line.split()[3])
+            pDEC = float(line.split()[4])
+            print " Predicted RA and DEC for object {} in image {}: {}  {}".format(objectname, image, pRA, pDEC)
+    
+    # parse through table and get RA and DEC closest to measured-by-eye coordinates
+    # compare to predicted
+    for row in table:
+        x_max = x + 2
+        x_min = x - 2
+        y_max = y + 2
+        y_min = y - 2
+        if (float(row['x']) < x_max) & (float(row['x']) > x_min) & (float(row['y']) < y_max) & (float(row['y']) > y_min):
+            mRA_pix = float(row['x'])
+            mDEC_pix = float(roy['y'])
+    mRA, mDEC = pixtosky.xy2rd('{}'.format(image), mRA_pix, mDEC_pix)
+    print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
+        
 
 if __name__ == '__main__':
     main()

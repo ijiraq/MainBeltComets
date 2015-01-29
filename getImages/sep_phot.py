@@ -18,10 +18,10 @@ def main():
                         action="store",
                         default="3330_stamps_gt8/*.fits",
                         help="The input .fits files for astrometry/photometry measurements.")
-    parser.add_argument("--output", "-o",
-                        action="store",
-                        default="/Users/admin/Desktop/MainBeltComets/getImages/sep_phot.txt",   
-                        help='Location and name of output file containing image photometry values.')
+#    parser.add_argument("--output", "-o",
+#                        action="store",
+#                        default="/Users/admin/Desktop/MainBeltComets/getImages/sep_phot.txt",   
+#                        help='Location and name of output file containing image photometry values.')
     parser.add_argument("--radius", '-r',
                         action='store',
                         default=6.0,
@@ -38,19 +38,22 @@ def main():
     global th
     th = float(args.thresh)
     
-    with fits.open('3330_stamps_gt8/304757_1705715p_238.059140_-13.564710.fits') as hdulist: # 
-        
-        print hdulist.info()
-        if (hdulist[0].data == None):
-            table1 = dosep(hdulist[1].data)
-            table2 = dosep(hdulist[2].data)
-            table = vstack([table1, table2])
-            ascii.write(table, '{}'.format(args.output))
-            # what if more than two ccds???
-        else:
-            table0 = dosep(hdulist[0].data)
-            ascii.write(table0, '{}'.format(args.output))
-        #print data
+    for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/3330_stamps_test'):
+        if image.endswith('.fits') == True:
+            with fits.open('3330_stamps_test/{}'.format(image)) as hdulist:
+                # doesnt work for 304757_1692837p_242.335075_-14.024202.fits specifically for default values
+                print "Doing photometry on image %s " % image
+                print hdulist.info()
+                if (hdulist[0].data == None):
+                    table1 = dosep(hdulist[1].data)
+                    table2 = dosep(hdulist[2].data)
+                    table = vstack([table1, table2])
+                    ascii.write(table, '{}_info.txt'.format(image))
+                    # what if more than two ccds???
+                else:
+                    table0 = dosep(hdulist[0].data)
+                    ascii.write(table0, '{}_info.txt'.format(image))
+                #print data
         
 def dosep(data):
         
@@ -86,7 +89,7 @@ def dosep(data):
     # flux, fluxerr, flag = sep.sum_circle(data, objs['x'], objs['y'], 3.0, err=bkg.globalrms, gain=1.0)
 
     # write to ascii table
-    table = Table([objs['x'], objs['y'], flux, fluxerr], names=('x', 'y', 'flux', 'flux_err'))
+    table = Table([objs['x'], objs['y'], flux], names=('x', 'y', 'flux'))
     return table
 
 

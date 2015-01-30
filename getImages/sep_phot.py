@@ -5,7 +5,12 @@ from astropy.io import fits
 from astropy.table import Table, vstack
 from astropy.io import ascii
 import argparse
-#from drizzlepac import pixtosky
+from drizzlepac import pixtosky
+# to install drizzlepac:
+# pip install stsci.distutils
+# pip install stscipython
+# pip install --upgrade drizzlepac
+
 
 
 # Identify objects in each postage stamp
@@ -48,9 +53,9 @@ def main():
     th = float(args.thresh)
     
     global x
-    x = 387
+    x = 420
     global y
-    y = 422
+    y = 388
     
     for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
         if image.endswith('.fits') == True:
@@ -67,12 +72,12 @@ def main():
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
                     ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
-                    #compare(table, image)
+                    compare(table, image)
                     # what if more than two ccds???
                 else:
                     table0 = dosep(hdulist[0].data)
                     ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
-                    #compare(table, image)
+                    compare(table0, image)
                 #print data
         
 def dosep(data):
@@ -112,7 +117,7 @@ def dosep(data):
     table = Table([objs['x'], objs['y'], flux], names=('x', 'y', 'flux'))
     return table
 
-def compare(table, image):
+def compare(septable, image):
     # compare predicted RA and DEC to that measured by sep photometry
     # get predicted RA and DEC from text output from getImages
     with open('test_images.txt') as infile:
@@ -126,18 +131,27 @@ def compare(table, image):
     
     # parse through table and get RA and DEC closest to measured-by-eye coordinates
     # compare to predicted
-    for row in table:
-        x_max = x + 2
-        x_min = x - 2
-        y_max = y + 2
-        y_min = y - 2
-        if (float(row['x']) < x_max) & (float(row['x']) > x_min) & (float(row['y']) < y_max) & (float(row['y']) > y_min):
-            mRA_pix = float(row['x'])
-            mDEC_pix = float(roy['y'])
-    mRA, mDEC = pixtosky.xy2rd('{}'.format(image), mRA_pix, mDEC_pix)
-    print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
-        
-
+    #print septable
+    x_max = x + 2
+    x_min = x - 2
+    y_max = y + 2
+    y_min = y - 2
+    print x_max, x_min
+    print y_max, y_min
+    try:
+        for row in septable:
+            #print row['x'], row['y']
+            if (float(row['x']) < x_max) & (float(row['x']) > x_min) & (float(row['y']) < y_max) & (float(row['y']) > y_min):
+                print row
+                mRA_pix = float(row['x'])
+                mDEC_pix = float(row['y'])
+                print mRA_pix, mDEC_pix
+                mRA, mDEC = pixtosky.xy2rd('test/test_2.fits', mRA_pix, mDEC_pix)# FIX THIS '{}'.format(image), mRA_pix, mDEC_pix)
+                # this format: pixtosky.xy2rd('test_2.fits', 420, 388)
+                print mRA, mDEC
+                print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
+    except:
+        print "no rows qualify"
 if __name__ == '__main__':
     main()
 

@@ -67,7 +67,8 @@ def main():
                 # doesnt work for 304757_1692837p_242.335075_-14.024202.fits specifically for default values
                 print "Doing photometry on image %s " % image
                 #print hdulist.info()
-                if (hdulist[0].data == None):
+                #if (hdulist[0].data == None):
+                if hdulist[0].data is None:
                     table1 = dosep(hdulist[1].data)
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
@@ -147,11 +148,12 @@ def compare(septable, image):
                 mDEC_pix = float(row['y'])
                 print mRA_pix, mDEC_pix
                 mRA, mDEC = pixtosky.xy2rd('test/test_2.fits', mRA_pix, mDEC_pix)# FIX THIS '{}'.format(image), mRA_pix, mDEC_pix)
-                # this format: pixtosky.xy2rd('test_2.fits', 420, 388)
+                # this format: pixtosky.xy2rd('test_2.fits', 420, 388) hms = True, False (default false)
                 print mRA, mDEC
                 print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
     except:
         print "no rows qualify"
+        
 if __name__ == '__main__':
     main()
 

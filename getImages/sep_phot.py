@@ -11,7 +11,12 @@ from drizzlepac import pixtosky
 # pip install stscipython
 # pip install --upgrade drizzlepac
 
+import sys
+sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
 
+import ossos_scripts.ssos
+import ossos_scripts.wcs as wcs
+from ossos_scripts.storage import get_astheader
 
 # Identify objects in each postage stamp
 
@@ -36,17 +41,24 @@ def main():
 
     parser.add_argument("--radius", '-r',
                         action='store',
-                        default=6.0,
+                        default=10.0,
                         help='aperture (degree) of circle for photometry.')
     parser.add_argument("--thresh", '-t',
                             action='store',
-                            default=1.5,
+                            default=5.0,
                             help='threshold value.')
+    parser.add_argument("--images", '-i',
+                            action='store',
+                            default='test_images.txt',
+                            help='image information text file.')
                             
 # PARSE IN MEASURED X AND Y COORDINATES
     dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
     
     args = parser.parse_args()
+    
+    global imageinfo
+    imageinfo = args.images
     global ap
     ap = float(args.radius)
     global th
@@ -57,9 +69,12 @@ def main():
     global y
     y = 388
     
+    # perhaps there's a better way of doing this, self.variable?
+    
     for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
         if image.endswith('.fits') == True:
             objectname = str(image.split('_')[0])
+            imagename = str(image.split('_')[1])
             dir_path = os.path.join(dir_path_base, objectname)
             if os.path.isdir(dir_path) == False:
                 os.makedirs(dir_path)
@@ -73,12 +88,13 @@ def main():
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
                     ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
-                    compare(table, image)
-                    # what if more than two ccds???
+                    astheader = hdulist[0].header
+                    compare(table, imagename, astheader) # how to get header information ??
                 else:
                     table0 = dosep(hdulist[0].data)
+                    astheader = hdulist[0].header
                     ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
-                    compare(table0, image)
+                    compare(table0, imagename, astheader)
                 #print data
         
 def dosep(data):
@@ -118,41 +134,52 @@ def dosep(data):
     table = Table([objs['x'], objs['y'], flux], names=('x', 'y', 'flux'))
     return table
 
-def compare(septable, image):
+def compare(septable, imagename, astheader):
     # compare predicted RA and DEC to that measured by sep photometry
     # get predicted RA and DEC from text output from getImages
-    with open('test_images.txt') as infile:
+    # print '{}'.format(imageinfo)
+    with open('{}'.format(imageinfo)) as infile:
         for line in infile.readlines()[1:]:
             assert len(line.split()) > 0
             objectname = line.split()[0]
             image = line.split()[1]
             pRA = float(line.split()[3])
             pDEC = float(line.split()[4])
-            print " Predicted RA and DEC for object {} in image {}: {}  {}".format(objectname, image, pRA, pDEC)
-    
-    # parse through table and get RA and DEC closest to measured-by-eye coordinates
-    # compare to predicted
-    #print septable
-    x_max = x + 2
-    x_min = x - 2
-    y_max = y + 2
-    y_min = y - 2
-    print x_max, x_min
-    print y_max, y_min
-    try:
-        for row in septable:
-            #print row['x'], row['y']
-            if (float(row['x']) < x_max) & (float(row['x']) > x_min) & (float(row['y']) < y_max) & (float(row['y']) > y_min):
-                print row
-                mRA_pix = float(row['x'])
-                mDEC_pix = float(row['y'])
-                print mRA_pix, mDEC_pix
-                mRA, mDEC = pixtosky.xy2rd('test/test_2.fits', mRA_pix, mDEC_pix)# FIX THIS '{}'.format(image), mRA_pix, mDEC_pix)
-                # this format: pixtosky.xy2rd('test_2.fits', 420, 388) hms = True, False (default false)
-                print mRA, mDEC
-                print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
-    except:
-        print "no rows qualify"
+            
+            pvwcs = wcs.WCS(astheader)
+            pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC)
+            print "  predicted pix: {} {}".format(pRA_pix, pDEC_pix)
+            
+            expnum = (line.split()[1]).rstrip('p')
+            if image == imagename:
+                print " Predicted RA and DEC for object {} in image {}: {}  {}".format(objectname, image, pRA, pDEC)
+
+                # parse through table and get RA and DEC closest to measured-by-eye coordinates
+                # compare to predicted
+                #print septable
+                x_max = pRA_pix + 25
+                x_min = pRA_pix - 25
+                y_max = pDEC_pix + 5
+                y_min = pDEC_pix - 5
+                print " Specified x,y coordinates on image: {} {}".format(x,y)
+                try:
+                    for row in septable:
+                        #print row['x'], row['y']
+                        if (float(row['x']) < x_max) & (float(row['x']) > x_min) & (float(row['y']) < y_max) & (float(row['y']) > y_min):
+                            mRA_pix = float(row['x'])
+                            mDEC_pix = float(row['y'])
+                            #print mRA_pix, mDEC_pix
+                            mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix)
+                
+                            # print mRA, mDEC
+                            print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
+                            diffRA = mRA - pRA
+                            diffDEC = mDEC - pDEC
+                            print " Difference: {} {}".format(diffRA, diffDEC)
+                except:
+                    print "no rows qualify"
+            else:
+                print image, imagename
         
 if __name__ == '__main__':
     main()

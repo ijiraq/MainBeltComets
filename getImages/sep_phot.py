@@ -5,7 +5,7 @@ from astropy.io import fits
 from astropy.table import Table, vstack
 from astropy.io import ascii
 import argparse
-from drizzlepac import pixtosky
+#from drizzlepac import pixtosky
 
 
 # Identify objects in each postage stamp
@@ -19,11 +19,16 @@ def main():
                         action="store",
                         default="3330_stamps_gt8/",
                         help="The directory in getImages/3330/ with input .fits files for astrometry/photometry measurements.")
+
 # CREATE A DIRECTORY FOR OUTPUT?
 #    parser.add_argument("--output", "-o",
 #                        action="store",
 #                        default="/Users/admin/Desktop/MainBeltComets/getImages/sep_phot.txt",   
 #                        help='Location and name of output file containing image photometry values.')
+# dir_path = os.path.join(self.feed, self.address)  # will return 'feed/address'
+#os.makedirs(dir_path)                             # create directory [current_path]/feed/address
+#output = open(os.path.join(dir_path, file_name), 'wb')
+
     parser.add_argument("--radius", '-r',
                         action='store',
                         default=6.0,
@@ -34,7 +39,7 @@ def main():
                             help='threshold value.')
                             
 # PARSE IN MEASURED X AND Y COORDINATES
-    
+    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
     
     args = parser.parse_args()
     global ap
@@ -49,6 +54,10 @@ def main():
     
     for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
         if image.endswith('.fits') == True:
+            objectname = str(image.split('_')[0])
+            dir_path = os.path.join(dir_path_base, objectname)
+            if os.path.isdir(dir_path) == False:
+                os.makedirs(dir_path)
             with fits.open('{}/{}'.format(args.ossin, image)) as hdulist:
                 # doesnt work for 304757_1692837p_242.335075_-14.024202.fits specifically for default values
                 print "Doing photometry on image %s " % image
@@ -57,13 +66,13 @@ def main():
                     table1 = dosep(hdulist[1].data)
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
-                    ascii.write(table, '{}_info.txt'.format(image))
-                    compare(table, image)
+                    ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
+                    #compare(table, image)
                     # what if more than two ccds???
                 else:
                     table0 = dosep(hdulist[0].data)
-                    ascii.write(table0, '{}_info.txt'.format(image))
-                    compare(table, image)
+                    ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
+                    #compare(table, image)
                 #print data
         
 def dosep(data):

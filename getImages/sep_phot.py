@@ -64,11 +64,6 @@ def main():
     global th
     th = float(args.thresh)
     
-    global x
-    x = 420
-    global y
-    y = 388
-    
     # perhaps there's a better way of doing this, self.variable?
     
     for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
@@ -87,13 +82,13 @@ def main():
                     table1 = dosep(hdulist[1].data)
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
-                    ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
+                    #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
                     astheader = hdulist[0].header
                     compare(table, imagename, astheader) # how to get header information ??
                 else:
                     table0 = dosep(hdulist[0].data)
                     astheader = hdulist[0].header
-                    ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
+                    #ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
                     compare(table0, imagename, astheader)
                 #print data
         
@@ -148,38 +143,37 @@ def compare(septable, imagename, astheader):
             
             pvwcs = wcs.WCS(astheader)
             pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC)
-            print "  predicted pix: {} {}".format(pRA_pix, pDEC_pix)
             
             expnum = (line.split()[1]).rstrip('p')
             if image == imagename:
                 print " Predicted RA and DEC for object {} in image {}: {}  {}".format(objectname, image, pRA, pDEC)
-
+                print "  predicted pix: {} {}".format(pRA_pix, pDEC_pix)
+                
                 # parse through table and get RA and DEC closest to measured-by-eye coordinates
                 # compare to predicted
                 #print septable
-                x_max = pRA_pix + 25
-                x_min = pRA_pix - 25
+                x_max = pRA_pix + 40
+                x_min = pRA_pix - 40
                 y_max = pDEC_pix + 5
                 y_min = pDEC_pix - 5
-                print " Specified x,y coordinates on image: {} {}".format(x,y)
                 try:
                     for row in septable:
                         #print row['x'], row['y']
                         if (float(row['x']) < x_max) & (float(row['x']) > x_min) & (float(row['y']) < y_max) & (float(row['y']) > y_min):
                             mRA_pix = float(row['x'])
                             mDEC_pix = float(row['y'])
-                            #print mRA_pix, mDEC_pix
                             mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix)
                 
                             # print mRA, mDEC
                             print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
+                            print "  phot measured pix: {} {}".format(mRA_pix, mDEC_pix)
+                            
                             diffRA = mRA - pRA
                             diffDEC = mDEC - pDEC
                             print " Difference: {} {}".format(diffRA, diffDEC)
                 except:
                     print "no rows qualify"
-            else:
-                print image, imagename
+
         
 if __name__ == '__main__':
     main()

@@ -5,6 +5,7 @@ from astropy.io import fits
 from astropy.table import Table, vstack
 from astropy.io import ascii
 import argparse
+from scipy.spatial import cKDTree
 
 
 import sys
@@ -83,7 +84,7 @@ def main():
                 else:
                     table0 = dosep(hdulist[0].data)
                     astheader = hdulist[0].header
-                    #ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
+                    ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
                     compare(table0, imagename, astheader)
         
 def dosep(data):
@@ -147,32 +148,42 @@ def compare(septable, imagename, astheader):
                 # parse through table and get RA and DEC closest to measured-by-eye coordinates
                 # compare to predicted
                 #print septable
-                x_max = pRA_pix + 40
-                x_min = pRA_pix - 40
-                y_max = pDEC_pix + 5
-                y_min = pDEC_pix - 5
                 
-                try:
-                    for row in septable:
-                        #print row['x'], row['y']
-                        if (float(row['x']) < x_max) & (float(row['x']) > x_min) & (float(row['y']) < y_max) & (float(row['y']) > y_min):
-                            flux = row['flux']
-                            mRA_pix = float(row['x'])
-                            mDEC_pix = float(row['y'])
-                            mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix)
                 
-                            # print mRA, mDEC
-                            print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
-                            print "  phot measured pix: {} {}".format(mRA_pix, mDEC_pix)
-                            
-                            diffRA = mRA - pRA
-                            diffDEC = mDEC - pDEC
-                            print " Difference: {} {}".format(diffRA, diffDEC)
-                            
-                            #with open('test_output.txt', 'a') as outfile:
-                            #    outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)
-                except:
-                    print "no rows qualify"
+                '''xytable = np.dstack([septable['x'].ravel(),septable['y'].ravel()]) 
+                #xytable = Table([septable['x'], septable['y']])
+                results = do_kdtree(xytable,coords)
+                print results'''
+                
+                x_array = np.array(septable['x'])
+                y_array = np.array(septable['y'])
+                tree = cKDTree(zip(x_array.ravel(), y_array.ravel()))
+                # print tree.data
+                coords = np.array([pRA_pix, pDEC_pix])
+                d, i = tree.query(coords)
+                
+                for row in septable[i:i+1]:
+                    mRA_pix = row['x']
+                    mDEC_pix = row['y']
+                
+                mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix)
+                
+                # print mRA, mDEC
+                print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
+                print "  phot measured pix: {} {}".format(mRA_pix, mDEC_pix)
+                
+                diffRA = mRA - pRA
+                diffDEC = mDEC - pDEC
+                print " Difference: {} {}".format(diffRA, diffDEC)
+                                
+                '''for row in septable:
+                    if (row['x'] == mRA_pix ):# & (float(row['y']) == mDEC_pix):
+                        flux = row['flux']
+                        print "   Flux: {}".format(flux)'''
+                          
+                #with open('test_output.txt', 'a') as outfile:
+                #    outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)
+
 
         
 if __name__ == '__main__':

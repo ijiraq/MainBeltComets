@@ -165,6 +165,7 @@ def compare(septable, imagename, astheader):
                 for row in septable[i:i+1]:
                     mRA_pix = row['x']
                     mDEC_pix = row['y']
+                    flux = row['flux']
                 
                 mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix)
                 
@@ -175,11 +176,7 @@ def compare(septable, imagename, astheader):
                 diffRA = mRA - pRA
                 diffDEC = mDEC - pDEC
                 print " Difference: {} {}".format(diffRA, diffDEC)
-                                
-                '''for row in septable:
-                    if (row['x'] == mRA_pix ):# & (float(row['y']) == mDEC_pix):
-                        flux = row['flux']
-                        print "   Flux: {}".format(flux)'''
+                print "   Flux: {}".format(flux)
                           
                 #with open('test_output.txt', 'a') as outfile:
                 #    outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)

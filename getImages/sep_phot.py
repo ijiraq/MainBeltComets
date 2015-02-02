@@ -26,10 +26,12 @@ def main():
                         action="store",
                         default="test",
                         help="The directory in getImages/3330/ with input .fits files for astrometry/photometry measurements.")
+    
+    # TO DO: MAKE OUTPUT FILE IN DIRECTORY OF INPUT
     parser.add_argument("--output", "-o",
                         action="store",
                         default="test_output.txt",   
-                        help='Location and name of output file containing image photometry values.')
+                        help='Location and name of output file containing image coordinates photometry values.')
     parser.add_argument("--radius", '-r',
                         action='store',
                         default=10.0,
@@ -56,6 +58,7 @@ def main():
     
     # perhaps there's a better way of doing this, self.variable?
     
+    # make output file, still need to add entries to this
     with open('output.txt', 'w') as outfile:
         outfile.write("{} {} {} {} {} {} {} {}\n".format(
             "Image", "pRA", "mRA", "diffRA", "pDEC", "mDEC", "diffDEC", "flux"))
@@ -74,13 +77,13 @@ def main():
                 print "Doing photometry on image %s " % image
                 #print hdulist.info()
                 #if (hdulist[0].data == None):
-                if hdulist[0].data is None:
+                if hdulist[0].data is None: # STILL NOT WORKING, what if more than 2ccd mosaic?
                     table1 = dosep(hdulist[1].data)
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
-                    #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
+                    ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
                     astheader = hdulist[0].header
-                    compare(table, imagename, astheader) # how to get header information ??
+                    compare(table, imagename, astheader)
                 else:
                     table0 = dosep(hdulist[0].data)
                     astheader = hdulist[0].header
@@ -117,7 +120,7 @@ def dosep(data):
     # sep.mask_ellipse(mask, objs['x'], objs['y'], obs['a'], objs['b'], objs['theta'], r=3.)
 
     # Specify a per-pixel "background" error and a gain. This is suitable when the data have been background subtracted.
-    # ***WHAT IS THE IMAGE GAIN? 1.67 ?***
+    # *** check image header for gain value ***
     # flux, fluxerr, flag = sep.sum_circle(data, objs['x'], objs['y'], 3.0, err=bkg.globalrms, gain=1.0)
 
     # write to ascii table
@@ -125,8 +128,9 @@ def dosep(data):
     return table
 
 def compare(septable, imagename, astheader):
+    
     # compare predicted RA and DEC to that measured by sep photometry
-    # get predicted RA and DEC from text output from getImages
+
     # print '{}'.format(imageinfo)
     with open('{}'.format(imageinfo)) as infile:
         for line in infile.readlines()[1:]:
@@ -147,14 +151,7 @@ def compare(septable, imagename, astheader):
                 
                 # parse through table and get RA and DEC closest to measured-by-eye coordinates
                 # compare to predicted
-                #print septable
-                
-                
-                '''xytable = np.dstack([septable['x'].ravel(),septable['y'].ravel()]) 
-                #xytable = Table([septable['x'], septable['y']])
-                results = do_kdtree(xytable,coords)
-                print results'''
-                
+
                 x_array = np.array(septable['x'])
                 y_array = np.array(septable['y'])
                 tree = cKDTree(zip(x_array.ravel(), y_array.ravel()))
@@ -177,7 +174,9 @@ def compare(septable, imagename, astheader):
                 diffDEC = mDEC - pDEC
                 print " Difference: {} {}".format(diffRA, diffDEC)
                 print "   Flux: {}".format(flux)
-                          
+                        
+                        
+                # CANT FIGURE OUT WHY THIS DOESNT WORK
                 #with open('test_output.txt', 'a') as outfile:
                 #    outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)
 

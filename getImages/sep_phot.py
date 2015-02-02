@@ -5,11 +5,7 @@ from astropy.io import fits
 from astropy.table import Table, vstack
 from astropy.io import ascii
 import argparse
-from drizzlepac import pixtosky
-# to install drizzlepac:
-# pip install stsci.distutils
-# pip install stscipython
-# pip install --upgrade drizzlepac
+
 
 import sys
 sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
@@ -30,15 +26,6 @@ def main():
                         default="3330_stamps_gt8/",
                         help="The directory in getImages/3330/ with input .fits files for astrometry/photometry measurements.")
 
-# CREATE A DIRECTORY FOR OUTPUT?
-#    parser.add_argument("--output", "-o",
-#                        action="store",
-#                        default="/Users/admin/Desktop/MainBeltComets/getImages/sep_phot.txt",   
-#                        help='Location and name of output file containing image photometry values.')
-# dir_path = os.path.join(self.feed, self.address)  # will return 'feed/address'
-#os.makedirs(dir_path)                             # create directory [current_path]/feed/address
-#output = open(os.path.join(dir_path, file_name), 'wb')
-
     parser.add_argument("--radius", '-r',
                         action='store',
                         default=10.0,
@@ -51,8 +38,12 @@ def main():
                             action='store',
                             default='test_images.txt',
                             help='image information text file.')
+    parser.add_argument("--output", "-o",
+                        action="store",
+                        default="/Users/admin/Desktop/band.txt",   
+                        help='Location and name of output file containing image IDs.')
+
                             
-# PARSE IN MEASURED X AND Y COORDINATES
     dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
     
     args = parser.parse_args()
@@ -63,34 +54,38 @@ def main():
     ap = float(args.radius)
     global th
     th = float(args.thresh)
+    # perhaps there's a better way of doing this, self.variable?    
     
-    # perhaps there's a better way of doing this, self.variable?
+    with open(os.path.join(dir_path, '{}_output.txt'.format(args.output)), 'w') as outfile:
+        outfile.write("{} {} {} {} {} {} {} {}\n".format(
+            "Image", "pRA", "mRA", "diffRA", "pDEC", "mDEC", "diffDEC", "flux"))
     
-    for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
-        if image.endswith('.fits') == True:
-            objectname = str(image.split('_')[0])
-            imagename = str(image.split('_')[1])
+    for file in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
+        
+        if file.endswith('.fits') == True:
+            objectname = str(file.split('_')[0])
+            imagename = str(file.split('_')[1])
+        
             dir_path = os.path.join(dir_path_base, objectname)
             if os.path.isdir(dir_path) == False:
                 os.makedirs(dir_path)
-            with fits.open('{}/{}'.format(args.ossin, image)) as hdulist:
-                # doesnt work for 304757_1692837p_242.335075_-14.024202.fits specifically for default values
-                print "Doing photometry on image %s " % image
+                
+            with fits.open('{}/{}'.format(args.ossin, file)) as hdulist:
+                print "Doing photometry on image {} ".format(file)
                 #print hdulist.info()
                 #if (hdulist[0].data == None):
                 if hdulist[0].data is None:
                     table1 = dosep(hdulist[1].data)
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
-                    #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
+                    ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
                     astheader = hdulist[0].header
                     compare(table, imagename, astheader) # how to get header information ??
                 else:
                     table0 = dosep(hdulist[0].data)
                     astheader = hdulist[0].header
-                    #ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
+                    ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(file)))
                     compare(table0, imagename, astheader)
-                #print data
         
 def dosep(data):
         
@@ -145,21 +140,26 @@ def compare(septable, imagename, astheader):
             pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC)
             
             expnum = (line.split()[1]).rstrip('p')
+            
             if image == imagename:
                 print " Predicted RA and DEC for object {} in image {}: {}  {}".format(objectname, image, pRA, pDEC)
                 print "  predicted pix: {} {}".format(pRA_pix, pDEC_pix)
                 
                 # parse through table and get RA and DEC closest to measured-by-eye coordinates
+                # BY MAGNITUDE AND NEAREST NEIGHBOUR
                 # compare to predicted
-                #print septable
+                
                 x_max = pRA_pix + 40
                 x_min = pRA_pix - 40
                 y_max = pDEC_pix + 5
                 y_min = pDEC_pix - 5
+                # maybe enter this in on the command line
+                
                 try:
                     for row in septable:
-                        #print row['x'], row['y']
                         if (float(row['x']) < x_max) & (float(row['x']) > x_min) & (float(row['y']) < y_max) & (float(row['y']) > y_min):
+                            flux = row['flux']
+                            
                             mRA_pix = float(row['x'])
                             mDEC_pix = float(row['y'])
                             mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix)
@@ -171,9 +171,10 @@ def compare(septable, imagename, astheader):
                             diffRA = mRA - pRA
                             diffDEC = mDEC - pDEC
                             print " Difference: {} {}".format(diffRA, diffDEC)
+                            
+                            outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)
                 except:
                     print "no rows qualify"
-
         
 if __name__ == '__main__':
     main()

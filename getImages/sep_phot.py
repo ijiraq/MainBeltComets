@@ -23,9 +23,12 @@ def main():
         description='For an input .fits image, aperture size, threshold, and output file: preforms photometry')
     parser.add_argument("--ossin",
                         action="store",
-                        default="3330_stamps_gt8/",
+                        default="test",
                         help="The directory in getImages/3330/ with input .fits files for astrometry/photometry measurements.")
-
+    parser.add_argument("--output", "-o",
+                        action="store",
+                        default="test_output.txt",   
+                        help='Location and name of output file containing image photometry values.')
     parser.add_argument("--radius", '-r',
                         action='store',
                         default=10.0,
@@ -38,11 +41,6 @@ def main():
                             action='store',
                             default='test_images.txt',
                             help='image information text file.')
-    parser.add_argument("--output", "-o",
-                        action="store",
-                        default="/Users/admin/Desktop/band.txt",   
-                        help='Location and name of output file containing image IDs.')
-
                             
     dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
     
@@ -54,37 +52,38 @@ def main():
     ap = float(args.radius)
     global th
     th = float(args.thresh)
-    # perhaps there's a better way of doing this, self.variable?    
     
-    with open(os.path.join(dir_path, '{}_output.txt'.format(args.output)), 'w') as outfile:
+    # perhaps there's a better way of doing this, self.variable?
+    
+    with open('output.txt', 'w') as outfile:
         outfile.write("{} {} {} {} {} {} {} {}\n".format(
             "Image", "pRA", "mRA", "diffRA", "pDEC", "mDEC", "diffDEC", "flux"))
     
-    for file in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
-        
-        if file.endswith('.fits') == True:
-            objectname = str(file.split('_')[0])
-            imagename = str(file.split('_')[1])
-        
+    for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
+        if image.endswith('.fits') == True:
+            
+            objectname = str(image.split('_')[0])
+            imagename = str(image.split('_')[1])
+            
             dir_path = os.path.join(dir_path_base, objectname)
             if os.path.isdir(dir_path) == False:
                 os.makedirs(dir_path)
                 
-            with fits.open('{}/{}'.format(args.ossin, file)) as hdulist:
-                print "Doing photometry on image {} ".format(file)
+            with fits.open('{}/{}'.format(args.ossin, image)) as hdulist:
+                print "Doing photometry on image %s " % image
                 #print hdulist.info()
                 #if (hdulist[0].data == None):
                 if hdulist[0].data is None:
                     table1 = dosep(hdulist[1].data)
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
-                    ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
+                    #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
                     astheader = hdulist[0].header
                     compare(table, imagename, astheader) # how to get header information ??
                 else:
                     table0 = dosep(hdulist[0].data)
                     astheader = hdulist[0].header
-                    ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(file)))
+                    #ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
                     compare(table0, imagename, astheader)
         
 def dosep(data):
@@ -146,20 +145,18 @@ def compare(septable, imagename, astheader):
                 print "  predicted pix: {} {}".format(pRA_pix, pDEC_pix)
                 
                 # parse through table and get RA and DEC closest to measured-by-eye coordinates
-                # BY MAGNITUDE AND NEAREST NEIGHBOUR
                 # compare to predicted
-                
+                #print septable
                 x_max = pRA_pix + 40
                 x_min = pRA_pix - 40
                 y_max = pDEC_pix + 5
                 y_min = pDEC_pix - 5
-                # maybe enter this in on the command line
                 
                 try:
                     for row in septable:
+                        #print row['x'], row['y']
                         if (float(row['x']) < x_max) & (float(row['x']) > x_min) & (float(row['y']) < y_max) & (float(row['y']) > y_min):
                             flux = row['flux']
-                            
                             mRA_pix = float(row['x'])
                             mDEC_pix = float(row['y'])
                             mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix)
@@ -172,10 +169,11 @@ def compare(septable, imagename, astheader):
                             diffDEC = mDEC - pDEC
                             print " Difference: {} {}".format(diffRA, diffDEC)
                             
-                            outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)
+                            #with open('test_output.txt', 'a') as outfile:
+                            #    outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)
                 except:
                     print "no rows qualify"
+
         
 if __name__ == '__main__':
     main()
-

@@ -147,7 +147,7 @@ def main():
             with open(args.output, 'a') as outfile:
                 for line in obs_in_filter:
                     try:
-                        outfile.write("{:>10s} {:>10s} {:>10d} {:8.16f} {:8.16f} {:>10s} {:>10s}\n".format(object_name,
+                        outfile.write("{} {} {} {} {} {} {}\n".format(object_name,
                             line['Image'], line['Exptime'], line['Object_RA'], line['Object_Dec'],
                             Time(line['MJD'], format='mjd', scale='utc'), line['Filter']))
                     except:

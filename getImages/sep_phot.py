@@ -23,10 +23,10 @@ def main():
     
     parser = argparse.ArgumentParser(
         description='For an input .fits image, aperture size, threshold, and output file: preforms photometry')
-    parser.add_argument("--ossin",
+    parser.add_argument("--family", '-f',
                         action="store",
-                        default="test",
-                        help="The directory in getImages/3330/ with input .fits files for astrometry/photometry measurements.")
+                        default="testfamily",
+                        help="The directory in getImages/family/ with input .fits files for astrometry/photometry measurements.")
     parser.add_argument("--radius", '-r',
                         action='store',
                         default=10.0,
@@ -35,52 +35,55 @@ def main():
                             action='store',
                             default=5.0,
                             help='threshold value.')
-    parser.add_argument("--images", '-i',
+    parser.add_argument("--object", '-o',
                             action='store',
-                            default='test_images.txt',
-                            help='image information text file.')
+                            default='test',
+                            help='the object to preform photometry on')
                             
-    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
-    
     args = parser.parse_args()
     
-    global imageinfo
-    imageinfo = args.images
+    
+    global familyname
+    familyname = args.family
+    global objectname
+    objectname = args.object
     global ap
     ap = float(args.radius)
     global th
     th = float(args.thresh)
     # perhaps there's a better way of doing this, self.variable?
     
+    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
+    global family_dir
+    family_dir = os.path.join(dir_path_base, familyname)
+    object_dir = os.path.join(family_dir, familyname+'_'+objectname)
+    output_dir = os.path.join(object_dir, 'sep_phot_output')
+    if os.path.isdir(output_dir) == False:
+        os.makedirs(output_dir)
+        
     # to do: make output file, still need to add entries to this
-    imageinfo_out = imageinfo.split('_')[0]
-    with open('{}_r{}_t{}_output.txt'.format(imageinfo_out, ap, th), 'w') as outfile:
+    with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'w') as outfile:
         outfile.write("{:>3s} {:>8s} {:>14s} {:>14s} {:>18s} {:>16s} {:>10s}\n".format(
             "Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux", "mag"))
     
     mag_list = []
     
-    for file in os.listdir('{}'.format(args.ossin)):
+    for file in os.listdir('{}'.format(object_dir)):
         
         if file.endswith('.fits') == True:
-            objectname = file.split('_')[0]
             expnum_p = file.split('_')[1]
-            
-            dir_path = os.path.join(dir_path_base, objectname+'_output') # ideally, dpb/famname/famname_objname/objname_output
-            if os.path.isdir(dir_path) == False:
-                os.makedirs(dir_path)
-                
-            with fits.open('{}/{}'.format(args.ossin, file)) as hdulist:
-                print "Preforming photometry on image %s " % file
+
+            with fits.open('{}/{}'.format(object_dir, file)) as hdulist:
+                print "Preforming photometry on image {} ".format(file)
                 #print hdulist.info()
-                #if (hdulist[0].data == None):
+                
                 if hdulist[0].data is None: # STILL NOT WORKING, what if more than 2ccd mosaic? could just be aperture values?
                     try:
-                        zeropt = fits.getval('{}/{}'.format(args.ossin, file), 'PHOTZP', 1)
+                        zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 1)
                         table1 = sep_phot(hdulist[1].data)
                         table2 = dosep(hdulist[2].data)
                         table = vstack([table1, table2])
-                        #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
+                        #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p)))
                         astheader = hdulist[0].header
                     except LookupError: # maybe not correct error type?
                         print " no PHOTZP in header "
@@ -89,8 +92,8 @@ def main():
                     try:
                         table = sep_phot(hdulist[0].data)
                         astheader = hdulist[0].header
-                        #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
-                        zeropt = fits.getval('{}/{}'.format(args.ossin, file), 'PHOTZP', 0)
+                        #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p)))
+                        zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 0)
                     except LookupError:
                         print " no PHOTZP in header "
                         
@@ -98,13 +101,15 @@ def main():
                 mag_list.append(object_data[6])
                 
                 if len(object_data) > 0:
-                    with open('{}_r{}_t{}_output.txt'.format(imageinfo_out, ap, th), 'a') as outfile:
+                    with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
                         try:
                             outfile.write('{} {} {} {} {} {} {}\n'.format(
                                     object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
                         except:
                             print "cannot write to outfile"
     
+    # should query JPL Horizons to see how much the object varies in magnitude about its orbit
+    '''
     mag_list = [21, 21.5, 21.6, 22, 26]
     avg = np.mean(mag_list)
     assert len(mag_list) > 0
@@ -115,6 +120,7 @@ def main():
             print " mag: {}    average: {}    difference: {}".format(element, avg, abs(element - avg))
             print " magnitude varies by more than one, object not identified correctly"
         mag0 = element
+    '''
         
 def sep_phot(data):
     ''' preform photometry similar to source extractor '''
@@ -157,32 +163,35 @@ def sep_phot(data):
 def comp_coords(septable, expnum_p, astheader, zeropt):
     '''compare predicted RA and DEC to that measured by sep photometry'''
 
-    # print '{}'.format(imageinfo)
-    with open('{}'.format(imageinfo)) as infile:
+    x_array = np.array(septable['x'])
+    y_array = np.array(septable['y'])
+    tree = cKDTree(zip(x_array.ravel(), y_array.ravel()))
+    # print tree.data
+
+    imageinfo = familyname+'_images.txt'
+    with open('{}/{}'.format(family_dir, imageinfo)) as infile:
         for line in infile.readlines()[1:]:
             assert len(line.split()) > 0
             objectname = line.split()[0]
-            expnum_p2 = line.split()[1]
+            expnum_p_fromfile = line.split()[1]
             pRA = float(line.split()[3])
             pDEC = float(line.split()[4])
             
             pvwcs = wcs.WCS(astheader)
-            pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC) # convert from WCS to pixels
+            
             
             
             expnum = (line.split()[1]).rstrip('p')
             
             # for entries in *_images.txt that correspond to images of the object
-            if expnum_p2 == expnum_p:
+            if expnum_p_fromfile == expnum_p:
                 
+                pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC) # convert from WCS to pixels
                 #print " Predicted RA and DEC: {}  {}".format(pRA, pDEC)
                 #print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
                 
                 # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
-                x_array = np.array(septable['x'])
-                y_array = np.array(septable['y'])
-                tree = cKDTree(zip(x_array.ravel(), y_array.ravel()))
-                # print tree.data
+                
                 coords = np.array([pRA_pix, pDEC_pix])
                 d, i = tree.query(coords)
                 
@@ -200,7 +209,7 @@ def comp_coords(septable, expnum_p, astheader, zeropt):
                 #print " Difference: {} {}".format(diffRA, diffDEC)
                 
                 APmag = -2.5*math.log10(flux)+zeropt
-                print "   Flux: {}, {}".format(flux, APmag)
+                print "   Flux, mag: {}, {}".format(flux, APmag)
                         
                 return expnum_p, mRA, diffRA, mDEC, diffDEC, flux, APmag
 

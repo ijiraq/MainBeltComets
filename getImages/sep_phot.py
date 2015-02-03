@@ -55,8 +55,8 @@ def main():
     # to do: make output file, still need to add entries to this
     imageinfo_out = imageinfo.split('_')[0]
     with open('{}_r{}_t{}_output.txt'.format(imageinfo_out, ap, th), 'w') as outfile:
-        outfile.write("{} {} {} {} {} {}\n".format(
-            "Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux"))
+        outfile.write("{:>3s} {:>8s} {:>14s} {:>14s} {:>18s} {:>16s} {:>10s}\n".format(
+            "Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux", "mag"))
     
     for file in os.listdir('{}'.format(args.ossin)):
         
@@ -73,19 +73,25 @@ def main():
                 #print hdulist.info()
                 #if (hdulist[0].data == None):
                 if hdulist[0].data is None: # STILL NOT WORKING, what if more than 2ccd mosaic? could just be aperture values?
-                    table1 = sep_phot(hdulist[1].data)
-                    table2 = dosep(hdulist[2].data)
-                    table = vstack([table1, table2])
-                    #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
-                    astheader = hdulist[0].header
-                    zeropt = fits.getval('{}/{}'.format(args.ossin, file), 'PHOTZP', 1)
+                    try:
+                        zeropt = fits.getval('{}/{}'.format(args.ossin, file), 'PHOTZP', 1)
+                        table1 = sep_phot(hdulist[1].data)
+                        table2 = dosep(hdulist[2].data)
+                        table = vstack([table1, table2])
+                        #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
+                        astheader = hdulist[0].header
+                    except LookupError: # maybe not correct error type?
+                        print " no PHOTZP in header "
                     
                 else:
-                    table = sep_phot(hdulist[0].data)
-                    astheader = hdulist[0].header
-                    #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
-                    zeropt = fits.getval('{}/{}'.format(args.ossin, file), 'PHOTZP', 0)
-                
+                    try:
+                        table = sep_phot(hdulist[0].data)
+                        astheader = hdulist[0].header
+                        #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
+                        zeropt = fits.getval('{}/{}'.format(args.ossin, file), 'PHOTZP', 0)
+                    except LookupError:
+                        print " no PHOTZP in header "
+                        
                 object_data = comp_coords(table, expnum_p, astheader, zeropt)
                 
                 if len(object_data) > 0:
@@ -158,7 +164,7 @@ def comp_coords(septable, expnum_p, astheader, zeropt):
             # for entries in *_images.txt that correspond to images of the object
             if expnum_p2 == expnum_p:
                 
-                print " Predicted RA and DEC: {}  {}".format(pRA, pDEC)
+                #print " Predicted RA and DEC: {}  {}".format(pRA, pDEC)
                 #print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
                 
                 # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
@@ -175,12 +181,12 @@ def comp_coords(septable, expnum_p, astheader, zeropt):
                     flux = row['flux']
                                     
                 mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
-                print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
+                #print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
                 #print "  in pixels: {} {}".format(mRA_pix, mDEC_pix)
                 
                 diffRA = mRA - pRA
                 diffDEC = mDEC - pDEC
-                print " Difference: {} {}".format(diffRA, diffDEC)
+                #print " Difference: {} {}".format(diffRA, diffDEC)
                 
                 APmag = -2.5*math.log10(flux)+zeropt
                 print "   Flux: {}, {}".format(flux, APmag)

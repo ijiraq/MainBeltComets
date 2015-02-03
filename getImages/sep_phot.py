@@ -58,6 +58,8 @@ def main():
         outfile.write("{:>3s} {:>8s} {:>14s} {:>14s} {:>18s} {:>16s} {:>10s}\n".format(
             "Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux", "mag"))
     
+    mag_list = []
+    
     for file in os.listdir('{}'.format(args.ossin)):
         
         if file.endswith('.fits') == True:
@@ -93,17 +95,26 @@ def main():
                         print " no PHOTZP in header "
                         
                 object_data = comp_coords(table, expnum_p, astheader, zeropt)
+                mag_list.append(object_data[6])
                 
                 if len(object_data) > 0:
                     with open('{}_r{}_t{}_output.txt'.format(imageinfo_out, ap, th), 'a') as outfile:
                         try:
                             outfile.write('{} {} {} {} {} {} {}\n'.format(
                                     object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
-                            #outfile.write("{} {} {} {} {} {}\n".format("Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux"))
                         except:
                             print "cannot write to outfile"
-
-                
+    
+    mag_list = [21, 21.5, 21.6, 22, 26]
+    avg = np.mean(mag_list)
+    assert len(mag_list) > 0
+    for element in mag_list:
+        if abs(element - avg) < 1:
+            print " object successfully identified"
+        else:
+            print " mag: {}    average: {}    difference: {}".format(element, avg, abs(element - avg))
+            print " magnitude varies by more than one, object not identified correctly"
+        mag0 = element
         
 def sep_phot(data):
     ''' preform photometry similar to source extractor '''
@@ -128,8 +139,8 @@ def sep_phot(data):
     #print objs['x'][0] # print flux-wieghted 
 
     # calculate the Kron radius for each object, then we perform elliptical aperture photometry within that radius
-    kronrad, krflag = sep.kron_radius(data, objs['x'], objs['x'], objs['y'], objs['b'], objs['theta'], ap)
-    flux, fluxerr, flag = sep.sum_ellipse(data, objs['x'], objs['x'], objs['y'], objs['b'], objs['theta'], 2.5*kronrad, subpix=1)
+    kronrad, krflag = sep.kron_radius(data, objs['x'], objs['y'], objs['a'], objs['b'], objs['theta'], ap)
+    flux, fluxerr, flag = sep.sum_ellipse(data, objs['x'], objs['y'], objs['a'], objs['b'], objs['theta'], 2.5*kronrad, subpix=1)
     flag |= krflag  # combine flags into 'flag'
     
     # mask = np.zeros(data.shape, dtype=np.bool)

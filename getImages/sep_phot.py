@@ -6,6 +6,7 @@ from astropy.table import Table, vstack
 from astropy.io import ascii
 import argparse
 from scipy.spatial import cKDTree
+import math
 
 
 import sys
@@ -26,12 +27,6 @@ def main():
                         action="store",
                         default="test",
                         help="The directory in getImages/3330/ with input .fits files for astrometry/photometry measurements.")
-    
-    # TO DO: MAKE OUTPUT FILE IN DIRECTORY OF INPUT
-    parser.add_argument("--output", "-o",
-                        action="store",
-                        default="test_output.txt",   
-                        help='Location and name of output file containing image coordinates photometry values.')
     parser.add_argument("--radius", '-r',
                         action='store',
                         default=10.0,
@@ -55,42 +50,61 @@ def main():
     ap = float(args.radius)
     global th
     th = float(args.thresh)
-    
     # perhaps there's a better way of doing this, self.variable?
     
-    # make output file, still need to add entries to this
-    with open('output.txt', 'w') as outfile:
-        outfile.write("{} {} {} {} {} {} {} {}\n".format(
-            "Image", "pRA", "mRA", "diffRA", "pDEC", "mDEC", "diffDEC", "flux"))
+    # to do: make output file, still need to add entries to this
+    imageinfo_out = imageinfo.split('.')[0]
+    with open('{}_output.txt'.format(imageinfo_out), 'w') as outfile:
+        outfile.write("{} {} {} {} {} {}\n".format(
+            "Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux"))
     
-    for image in os.listdir('/Users/admin/Desktop/MainBeltComets/getImages/{}'.format(args.ossin)):
-        if image.endswith('.fits') == True:
+    for file in os.listdir('{}'.format(args.ossin)):
+        
+        if file.endswith('.fits') == True:
+            objectname = file.split('_')[0]
+            expnum_p = file.split('_')[1]
             
-            objectname = str(image.split('_')[0])
-            imagename = str(image.split('_')[1])
-            
-            dir_path = os.path.join(dir_path_base, objectname)
+            dir_path = os.path.join(dir_path_base, objectname+'_output') # ideally, dpb/famname/famname_objname/objname_output
             if os.path.isdir(dir_path) == False:
                 os.makedirs(dir_path)
                 
-            with fits.open('{}/{}'.format(args.ossin, image)) as hdulist:
-                print "Doing photometry on image %s " % image
+            with fits.open('{}/{}'.format(args.ossin, file)) as hdulist:
+                print "Preforming photometry on image %s " % file
                 #print hdulist.info()
                 #if (hdulist[0].data == None):
-                if hdulist[0].data is None: # STILL NOT WORKING, what if more than 2ccd mosaic?
-                    table1 = dosep(hdulist[1].data)
+                if hdulist[0].data is None: # STILL NOT WORKING, what if more than 2ccd mosaic? could just be aperture values?
+                    table1 = sep_phot(hdulist[1].data)
                     table2 = dosep(hdulist[2].data)
                     table = vstack([table1, table2])
-                    ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(image)))
+                    #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
                     astheader = hdulist[0].header
-                    compare(table, imagename, astheader)
+                    zeropt = fits.getval('{}/{}'.format(args.ossin, file), 'PHOTZP', 1)
+                    
                 else:
-                    table0 = dosep(hdulist[0].data)
+                    table = sep_phot(hdulist[0].data)
                     astheader = hdulist[0].header
-                    ascii.write(table0, os.path.join(dir_path, '{}_info.txt'.format(image)))
-                    compare(table0, imagename, astheader)
+                    #ascii.write(table, os.path.join(dir_path, '{}_info.txt'.format(file)))
+                    zeropt = fits.getval('{}/{}'.format(args.ossin, file), 'PHOTZP', 0)
+                
+                object_data = comp_coords(table, expnum_p, astheader, zeropt)
+                print object_data
+                
+                if len(object_data) > 0:
+                    with open('{}_output.txt'.format(imageinfo_out), 'a') as outfile:
+                        try:
+                            outfile.write('{} {} {} {} {} {}\n'.format(
+                                    object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5]))
+                            #outfile.write("{} {} {} {} {} {}\n".format("Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux"))
+                        except:
+                            print "cannot write to outfile"
+                            
+                
+                #with open('test_output.txt', 'a') as outfile:
+                #    outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)
+                
         
-def dosep(data):
+def sep_phot(data):
+    ''' preform photometry similar to source extractor '''
         
     # Measure a spatially variable background of some image data (numpy array)
     bkg = sep.Background(data) #, mask=mask, bw=64, bh=64, fw=3, fh=3) # optional parameters
@@ -127,31 +141,29 @@ def dosep(data):
     table = Table([objs['x'], objs['y'], flux], names=('x', 'y', 'flux'))
     return table
 
-def compare(septable, imagename, astheader):
-    
-    # compare predicted RA and DEC to that measured by sep photometry
+def comp_coords(septable, expnum_p, astheader, zeropt):
+    '''compare predicted RA and DEC to that measured by sep photometry'''
 
     # print '{}'.format(imageinfo)
     with open('{}'.format(imageinfo)) as infile:
         for line in infile.readlines()[1:]:
             assert len(line.split()) > 0
             objectname = line.split()[0]
-            image = line.split()[1]
+            expnum_p2 = line.split()[1]
             pRA = float(line.split()[3])
             pDEC = float(line.split()[4])
             
             pvwcs = wcs.WCS(astheader)
-            pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC)
+            pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC) # convert from WCS to pixels
+            print " Predicted RA and DEC: {}  {}".format(pRA, pDEC)
+            #print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
             
             expnum = (line.split()[1]).rstrip('p')
             
-            if image == imagename:
-                print " Predicted RA and DEC for object {} in image {}: {}  {}".format(objectname, image, pRA, pDEC)
-                print "  predicted pix: {} {}".format(pRA_pix, pDEC_pix)
+            # for entries in *_images.txt that correspond to images of the object
+            if expnum_p2 == expnum_p:
                 
-                # parse through table and get RA and DEC closest to measured-by-eye coordinates
-                # compare to predicted
-
+                # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
                 x_array = np.array(septable['x'])
                 y_array = np.array(septable['y'])
                 tree = cKDTree(zip(x_array.ravel(), y_array.ravel()))
@@ -163,23 +175,17 @@ def compare(septable, imagename, astheader):
                     mRA_pix = row['x']
                     mDEC_pix = row['y']
                     flux = row['flux']
-                
-                mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix)
-                
-                # print mRA, mDEC
-                print " Measured RA and DEC for object {} in image {}: {}  {}".format(objectname, image, mRA, mDEC)
-                print "  phot measured pix: {} {}".format(mRA_pix, mDEC_pix)
+                                    
+                mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
+                print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
+                #print "  in pixels: {} {}".format(mRA_pix, mDEC_pix)
                 
                 diffRA = mRA - pRA
                 diffDEC = mDEC - pDEC
                 print " Difference: {} {}".format(diffRA, diffDEC)
-                print "   Flux: {}".format(flux)
+                print "   Flux: {}, {}".format(flux, -2.5*math.log10(flux)+zeropt)
                         
-                        
-                # CANT FIGURE OUT WHY THIS DOESNT WORK
-                #with open('test_output.txt', 'a') as outfile:
-                #    outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)
-
+                return expnum_p, mRA, diffRA, mDEC, diffDEC, flux
 
         
 if __name__ == '__main__':

@@ -53,8 +53,8 @@ def main():
     # perhaps there's a better way of doing this, self.variable?
     
     # to do: make output file, still need to add entries to this
-    imageinfo_out = imageinfo.split('.')[0]
-    with open('{}_output.txt'.format(imageinfo_out), 'w') as outfile:
+    imageinfo_out = imageinfo.split('_')[0]
+    with open('{}_r{}_t{}_output.txt'.format(imageinfo_out, ap, th), 'w') as outfile:
         outfile.write("{} {} {} {} {} {}\n".format(
             "Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux"))
     
@@ -87,20 +87,16 @@ def main():
                     zeropt = fits.getval('{}/{}'.format(args.ossin, file), 'PHOTZP', 0)
                 
                 object_data = comp_coords(table, expnum_p, astheader, zeropt)
-                print object_data
                 
                 if len(object_data) > 0:
-                    with open('{}_output.txt'.format(imageinfo_out), 'a') as outfile:
+                    with open('{}_r{}_t{}_output.txt'.format(imageinfo_out, ap, th), 'a') as outfile:
                         try:
-                            outfile.write('{} {} {} {} {} {}\n'.format(
-                                    object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5]))
+                            outfile.write('{} {} {} {} {} {} {}\n'.format(
+                                    object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
                             #outfile.write("{} {} {} {} {} {}\n".format("Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux"))
                         except:
                             print "cannot write to outfile"
-                            
-                
-                #with open('test_output.txt', 'a') as outfile:
-                #    outfile.write("{} {} {} {} {} {} {} {}\n".format(image, pRA, mRA, diffRA, pDEC, mDEC, diffDEc, flux)
+
                 
         
 def sep_phot(data):
@@ -155,13 +151,15 @@ def comp_coords(septable, expnum_p, astheader, zeropt):
             
             pvwcs = wcs.WCS(astheader)
             pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC) # convert from WCS to pixels
-            print " Predicted RA and DEC: {}  {}".format(pRA, pDEC)
-            #print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
+            
             
             expnum = (line.split()[1]).rstrip('p')
             
             # for entries in *_images.txt that correspond to images of the object
             if expnum_p2 == expnum_p:
+                
+                print " Predicted RA and DEC: {}  {}".format(pRA, pDEC)
+                #print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
                 
                 # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
                 x_array = np.array(septable['x'])
@@ -183,9 +181,11 @@ def comp_coords(septable, expnum_p, astheader, zeropt):
                 diffRA = mRA - pRA
                 diffDEC = mDEC - pDEC
                 print " Difference: {} {}".format(diffRA, diffDEC)
-                print "   Flux: {}, {}".format(flux, -2.5*math.log10(flux)+zeropt)
+                
+                APmag = -2.5*math.log10(flux)+zeropt
+                print "   Flux: {}, {}".format(flux, APmag)
                         
-                return expnum_p, mRA, diffRA, mDEC, diffDEC, flux
+                return expnum_p, mRA, diffRA, mDEC, diffDEC, flux, APmag
 
         
 if __name__ == '__main__':

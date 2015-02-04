@@ -81,6 +81,7 @@ def main():
     
     step = 1
     mag_list_jpl = mag_query_jpl(step)
+    print mag_list_jpl
     
 # FOR .fits FILE IN DIRECTORY familyname/familyname_objectname/ PREFORM PHOTOMETRY
     # from familyname_images.txt get predicted RA and DEC, convert to pixels
@@ -120,10 +121,6 @@ def main():
                         print " no PHOTZP in header "
                         
                 object_data = comp_coords(table, expnum_p, astheader, zeropt, mag_list_jpl)
-                
-                ''' date_range.append(object_data[1])
-                mag_list_sep.append(object_data[7])
-                image_list.append(object_data[0]) '''
                 
                 if len(object_data) > 0:
                     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
@@ -331,7 +328,7 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                 
                 pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC) # convert from WCS to pixels
                 #print " Predicted RA and DEC: {}  {}".format(pRA, pDEC)
-                #print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
+                print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
                 
                 # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
                 
@@ -339,25 +336,31 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                 d_list, i_list = tree.query(coords, k=10)
 
                 for i in i_list:
-                    for row in septable[i:i+1]:
-                        flux = row['flux'] 
-                        try:
-                            mag_sep = -2.5*math.log10(flux)+zeropt
-                            #print "   Flux, mag: {}, {}".format(flux, mag_sep)
-                            mean = np.mean(mag_list_jpl)
-                            maxmag = np.amax(mag_list_jpl)
-                            minmag = np.amin(mag_list_jpl)
-                
-                            if (abs(mag_sep - mean) < maxmag - minmag) or (abs(mag_sep - mean) < 1):
-                                #print "  Apparent magnitude {} is greater/smaller than expected".format(mag_sep)
-                                mRA_pix = row['x']
-                                mDEC_pix = row['y']     
-                        except:
-                            None          
-                                    
+                    flux = septable[i][2]
+                    try:
+                        mag_sep = -2.5*math.log10(flux)+zeropt
+                        mean = np.mean(mag_list_jpl)
+                        maxmag = np.amax(mag_list_jpl)
+                        minmag = np.amin(mag_list_jpl)
+                        
+                        if ( 1 > maxmag - minmag):
+                            if (abs(mag_sep - mean) < 1):
+                                mRA_pix = septable[i][0]
+                                mDEC_pix = septable[i][1]
+                                print "   Flux, mag: {}, {}".format(flux, mag_sep) 
+                                break
+                        else:
+                            if (abs(mag_sep - mean) < maxmag - minmag):
+                                mRA_pix = septable[i][0]
+                                mDEC_pix = septable[i][1]
+                                print "   Flux, mag: {}, {}".format(flux, mag_sep)   
+                                break 
+                    except:
+                        None
+                    
                 mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
                 #print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
-                #print "  in pixels: {} {}".format(mRA_pix, mDEC_pix)
+                print "  in pixels: {} {}".format(mRA_pix, mDEC_pix)
                 
                 diffRA = mRA - pRA
                 diffDEC = mDEC - pDEC
@@ -366,7 +369,7 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                 
 
                         
-                return expnum_p, mRA, diffRA, mDEC, diffDEC, flux, mag_sep    
+                return expnum_p, mRA, diffRA, mDEC, diffDEC, flux, mag_sep   
     
     
 if __name__ == '__main__':

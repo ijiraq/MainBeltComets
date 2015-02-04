@@ -69,8 +69,8 @@ def main():
         os.makedirs(output_dir)
 
     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'w') as outfile:
-        outfile.write("{:>3s} {:>8s} {:>8s} {:>14s} {:>14s} {:>18s} {:>16s} {:>10s}\n".format(
-            "Image", 'time', "meas_RA", "diff_RA", "meas_DEC", "diff_DEC", "flux", "meas_mag"))        
+        outfile.write("{:>3s} {:>8s} {:>14s} {:>14s} {:>18s} {:>16s} {:>10s}\n".format(
+            "Image", "meas_RA", "diff_RA", "meas_DEC", "diff_DEC", "flux", "meas_mag"))        
         
     # FROM familyname_images.txt FIND IMAGE DATES
         # for given dates, select first and last
@@ -128,8 +128,8 @@ def main():
                 if len(object_data) > 0:
                     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
                         try:
-                            outfile.write('{} {} {} {} {} {} {} {}\n'.format(
-                                    object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6], object_data[7]))
+                            outfile.write('{} {} {} {} {} {} {}\n'.format(
+                                    object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
                         except:
                             print "cannot write to outfile"
      
@@ -336,12 +336,24 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                 # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
                 
                 coords = np.array([pRA_pix, pDEC_pix])
-                d, i = tree.query(coords)
+                d_list, i_list = tree.query(coords, k=10)
+
+                for i in i_list:
+                    for row in septable[i:i+1]:
+                        flux = row['flux'] 
+                        try:
+                            mag_sep = -2.5*math.log10(flux)+zeropt
+                            #print "   Flux, mag: {}, {}".format(flux, mag_sep)
+                            mean = np.mean(mag_list_jpl)
+                            maxmag = np.amax(mag_list_jpl)
+                            minmag = np.amin(mag_list_jpl)
                 
-                for row in septable[i:i+1]:
-                    mRA_pix = row['x']
-                    mDEC_pix = row['y']
-                    flux = row['flux']
+                            if (abs(mag_sep - mean) < maxmag - minmag) or (abs(mag_sep - mean) < 1):
+                                #print "  Apparent magnitude {} is greater/smaller than expected".format(mag_sep)
+                                mRA_pix = row['x']
+                                mDEC_pix = row['y']     
+                        except:
+                            None          
                                     
                 mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
                 #print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
@@ -351,17 +363,10 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                 diffDEC = mDEC - pDEC
                 #print " Difference: {} {}".format(diffRA, diffDEC)
                 
-                mag_sep = -2.5*math.log10(flux)+zeropt
-                #print "   Flux, mag: {}, {}".format(flux, mag_sep)
-                mean = np.mean(mag_list_jpl)
-                maxmag = np.amax(mag_list_jpl)
-                minmag = np.amin(mag_list_jpl)
                 
-                if (abs(mag_sep - mean) > maxmag - minmag) & (abs(mag_sep - mean) > 1):
-                    print "  Apparent magnitude {} is greater/smaller than expected".format(mag_sep)
 
                         
-                return expnum_p, time, mRA, diffRA, mDEC, diffDEC, flux, mag_sep    
+                return expnum_p, mRA, diffRA, mDEC, diffDEC, flux, mag_sep    
     
     
 if __name__ == '__main__':

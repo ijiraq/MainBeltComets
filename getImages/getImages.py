@@ -8,7 +8,7 @@ import sys
 import argparse
 import requests
 
-from ssos import Query
+from ossos_scripts.ssos import Query
 
 # could not figure out how to import, so just copied here
 def parse_ssois_return(ssois_return, object_name, imagetype, camera_filter='r.MP9601', telescope_instrument='CFHT/MegaCam'):
@@ -80,7 +80,7 @@ def main():
                     help="passband: default is r'")
     parser.add_argument("--ossin",
                         action="store",
-                        default="mbc.txt",
+                        default="testfamily/testfamily_family.txt",
                         help='list of objects to query')
     parser.add_argument("--dbimages",
                         action="store",
@@ -90,10 +90,9 @@ def main():
                         default='p',
                         choices=['o', 'p', 's'], 
                         help="restrict type of image (unprocessed, reduced, calibrated)")
-                        # DOESNT ACTUALLY DO ANYTHING WITH TYPE YET
     parser.add_argument("--output", "-o",
                         action="store",
-                        default="/Users/admin/Desktop/band.txt",   
+                        default="/Users/admin/MainBeltComets/getImages/testfamily/testfamily_images.txt",   
                         help='Location and name of output file containing image IDs.')
 
     args = parser.parse_args()
@@ -117,7 +116,7 @@ def main():
 
     search_start_date=Time('2013-01-01', scale='utc')   # epoch1=2013+01+01
     search_end_date=Time('2017-01-01', scale='utc')     # epoch2=2017+1+1
-    
+        
     # Setup output, label columns
     
     with open(args.output, 'w') as outfile:
@@ -147,6 +146,7 @@ def main():
             with open(args.output, 'a') as outfile:
                 for line in obs_in_filter:
                     try:
+                        print line['MJD'], Time(line['MJD'], format='mjd', scale='utc')
                         outfile.write("{} {} {} {} {} {} {}\n".format(object_name,
                             line['Image'], line['Exptime'], line['Object_RA'], line['Object_Dec'],
                             Time(line['MJD'], format='mjd', scale='utc'), line['Filter']))

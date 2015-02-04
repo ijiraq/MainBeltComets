@@ -1,14 +1,14 @@
 import os
 import sep
+import urllib2 as url
 import numpy as np
 from astropy.io import fits
 from astropy.table import Table, vstack
 from astropy.io import ascii
+from astropy.time import Time
 import argparse
 from scipy.spatial import cKDTree
 import math
-
-import mag_range
 
 import sys
 sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
@@ -69,16 +69,22 @@ def main():
         
     # to do: make output file, still need to add entries to this
     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'w') as outfile:
-        outfile.write("{:>3s} {:>8s} {:>14s} {:>14s} {:>18s} {:>16s} {:>10s}\n".format(
-            "Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux", "mag"))
+        outfile.write("{:>3s} {:>8s} {:>8s} {:>14s} {:>14s} {:>18s} {:>16s} {:>10s}\n".format(
+            "Image", 'time', "mRA", "diffRA", "mDEC", "diffDEC", "flux", "mag"))
         
+    date_range = []
+    mag_list_sep = []
+    image_list = []
+    
+    print "----- Preforming photometry on all images of {} in family {} -----".format(objectname, familyname)
+    
     for file in os.listdir('{}'.format(object_dir)):
         
         if file.endswith('.fits') == True:
             expnum_p = file.split('_')[1]
 
             with fits.open('{}/{}'.format(object_dir, file)) as hdulist:
-                print "Preforming photometry on image {} ".format(file)
+                print " Preforming photometry on image {} ".format(file)
                 #print hdulist.info()
                 
                 if hdulist[0].data is None: # STILL NOT WORKING, what if more than 2ccd mosaic? could just be aperture values?
@@ -102,15 +108,37 @@ def main():
                         print " no PHOTZP in header "
                         
                 object_data = comp_coords(table, expnum_p, astheader, zeropt)
-                #mag_list.append(object_data[6])
+                date_range.append(object_data[1])
+                mag_list_sep.append(object_data[7])
+                image_list.append(object_data[0])
                 
                 if len(object_data) > 0:
                     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
                         try:
-                            outfile.write('{} {} {} {} {} {} {}\n'.format(
-                                    object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
+                            outfile.write('{} {} {} {} {} {} {} {}\n'.format(
+                                    object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6], object_data[7]))
                         except:
                             print "cannot write to outfile"
+    
+    print "----- Checking that measured magnitudes are consistent with predicted values -----"
+   
+    # query the JPL horizons ephemeris for predicted range in apparent magnitude over time interval                        
+    date_range_t = Time(date_range, format='mjd')
+    time_start = date_range_t.iso[0]
+    time_end = date_range_t.iso[-1]
+    
+    step = 1
+    mag_list_jpl, mean, std = mag_query_jpl('{}'.format(objectname), '{}'.format(time_start), '{}'.format(time_end), step)
+    #print mag_list_jpl, mean, std
+    
+    # compare predicted apparent magnitudes from JPL with those measured by phot
+    try:
+        for idx, mag in enumerate(mag_list_sep):
+            if abs(mag - mean) > 1:
+                print " Apparent magnitude {} is greater/smaller than expected {}, image: {}".format(mag, mag_list_jpl[idx], image_list[idx])
+    except:
+        print " All apparent magnitudes within expected range"
+    
         
 def sep_phot(data):
     ''' 
@@ -165,7 +193,7 @@ def comp_coords(septable, expnum_p, astheader, zeropt):
     y_array = np.array(septable['y'])
     tree = cKDTree(zip(x_array.ravel(), y_array.ravel()))
     # print tree.data
-
+    
     imageinfo = familyname+'_images.txt'
     with open('{}/{}'.format(family_dir, imageinfo)) as infile:
         for line in infile.readlines()[1:]:
@@ -175,6 +203,7 @@ def comp_coords(septable, expnum_p, astheader, zeropt):
             pRA = float(line.split()[3])
             pDEC = float(line.split()[4])
             expnum = (line.split()[1]).rstrip('p')
+            time = float(line.split()[5])
             
             pvwcs = wcs.WCS(astheader)
             
@@ -204,10 +233,118 @@ def comp_coords(septable, expnum_p, astheader, zeropt):
                 #print " Difference: {} {}".format(diffRA, diffDEC)
                 
                 APmag = -2.5*math.log10(flux)+zeropt
-                print "   Flux, mag: {}, {}".format(flux, APmag)
+                #print "   Flux, mag: {}, {}".format(flux, APmag)
                         
-                return expnum_p, mRA, diffRA, mDEC, diffDEC, flux, APmag
+                return expnum_p, time, mRA, diffRA, mDEC, diffDEC, flux, APmag
 
+def mag_query_jpl(object, time_start, time_end, step, su='d'):
+    '''
+    Constructs a URL to query JPL Horizon's for apparent magnitude in a date range
+    '''
+    if step == None: # default
+        step = 1
+    else:
+        step = int(step)
+
+    s = '9' # apparent magnitude
+    
+    # URL pieces that Horizon needs for its processing instructions
+    urlArr = ["http://ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=",
+              '',
+              "&MAKE_EPHEM='YES'&TABLE_TYPE='OBSERVER'&START_TIME=",
+              '',
+              "&STOP_TIME=",
+              '',
+              "&STEP_SIZE=",
+              '',
+              "&QUANTITIES=" + s,
+              "&CSV_FORMAT='YES'"]
+              
+    # Change the object name, start and end times, and time step into proper url-formatting
+    url_style_output = []
+    for obj in [object, time_start, time_end]:
+        os = obj.split()
+        if len(os) > 1:
+            ob = "'" + os[0] + '%20' + os[1] + "'"
+        else:
+            ob =  "'" + object + "'"
+        url_style_output.append(ob)
+    step = "'" + str(step) + "%20" + su + "'"
+     
+    # URL components
+    urlArr[1] = url_style_output[0]  # formatted object name
+    urlArr[3] = url_style_output[1]  # start time
+    urlArr[5] = url_style_output[2]  # end time
+    urlArr[7] = step  # timestep   
+    urlStr = "".join(urlArr)  # create the url to pass to Horizons
+       
+    # Query Horizons; if it's busy, wait and try again in a minute
+    done = 0
+    while not done:
+        urlHan = url.urlopen(urlStr)
+        urlData = urlHan.readlines()
+        urlHan.close()
+        if len(urlData[0].split()) > 1:
+            if "BUSY:" <> urlData[0].split()[1]:
+                done = 1
+            else:
+                print urlData[0],
+                print "Sleeping 60 s and trying again"
+                time.sleep(60)
+        else:
+            done = 1   
+       
+    date_start = change_date(time_start)
+    date_end = change_date(time_end)
+    
+    mag_list = []
+    
+    
+    # parse through urlData for indexes of start and end dates
+    for idx, line in enumerate(urlData):  #testing
+        try:
+            date_jpl = line.split()[0]+' '+(line.split()[1]).strip(',')
+            if date_start == date_jpl:
+                index_start = idx
+        except:
+            index_start = 69
+             
+    for idx, line in enumerate(urlData):  #testing
+        try:
+            date_jpl = line.split()[0]+' '+(line.split()[1]).strip(',')
+            if date_end == date_jpl:
+                index_end = idx
+        except:
+            index_end = 90
+ 
+    for line in urlData[index_start:index_end+1]:
+        try:
+            mag_list.append(float((line.split()[4]).strip(',')))
+        except:
+            None
+    
+    mean = np.mean(mag_list)
+    std = np.std(mag_list)
+    maxval = np.amax(mag_list)
+    minval = np.amin(mag_list)
+        
+    return mag_list, mean, std
+    
+    
+       
+def change_date(date):
+    '''
+    convert time format 01-01-2001 00:00 to 01-Jan-2001 00:00
+    '''
+    date_split = date.split('-')
+    month = int(date_split[1])
+    month_name = ['nan', 'Jan', "Feb", 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    for i in range(0,13):
+        if i == month:
+            month_jpl = month_name[i]
+    date_new = date_split[0]+'-'+month_jpl+'-'+date_split[2]
+    
+    return date_new
         
 if __name__ == '__main__':
     main()

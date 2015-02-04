@@ -8,6 +8,7 @@ import argparse
 from scipy.spatial import cKDTree
 import math
 
+import mag_range
 
 import sys
 sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
@@ -20,6 +21,12 @@ from ossos_scripts.storage import get_astheader
 
 
 def main(): 
+    ''' 
+    Preforms photometry on .fits files given an input of family name and object name
+    Assumes files organised as:
+    dir_path_base/familyname/familyname_objectname/*.fits       - images to do photometry on
+    dir_path_base/familyname/*_images.txt                       - list of image exposures, predicted RA and DEC, dates etc.
+    '''
     
     parser = argparse.ArgumentParser(
         description='For an input .fits image, aperture size, threshold, and output file: preforms photometry')
@@ -41,7 +48,6 @@ def main():
                             help='the object to preform photometry on')
                             
     args = parser.parse_args()
-    
     
     global familyname
     familyname = args.family
@@ -65,9 +71,7 @@ def main():
     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'w') as outfile:
         outfile.write("{:>3s} {:>8s} {:>14s} {:>14s} {:>18s} {:>16s} {:>10s}\n".format(
             "Image", "mRA", "diffRA", "mDEC", "diffDEC", "flux", "mag"))
-    
-    mag_list = []
-    
+        
     for file in os.listdir('{}'.format(object_dir)):
         
         if file.endswith('.fits') == True:
@@ -98,7 +102,7 @@ def main():
                         print " no PHOTZP in header "
                         
                 object_data = comp_coords(table, expnum_p, astheader, zeropt)
-                mag_list.append(object_data[6])
+                #mag_list.append(object_data[6])
                 
                 if len(object_data) > 0:
                     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
@@ -107,23 +111,12 @@ def main():
                                     object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
                         except:
                             print "cannot write to outfile"
-    
-    # should query JPL Horizons to see how much the object varies in magnitude about its orbit
-    '''
-    mag_list = [21, 21.5, 21.6, 22, 26]
-    avg = np.mean(mag_list)
-    assert len(mag_list) > 0
-    for element in mag_list:
-        if abs(element - avg) < 1:
-            print " object successfully identified"
-        else:
-            print " mag: {}    average: {}    difference: {}".format(element, avg, abs(element - avg))
-            print " magnitude varies by more than one, object not identified correctly"
-        mag0 = element
-    '''
         
 def sep_phot(data):
-    ''' preform photometry similar to source extractor '''
+    ''' 
+    Preforms photometry by SEP, similar to source extractor 
+    input is .fits file data
+    '''
         
     # Measure a spatially variable background of some image data (numpy array)
     bkg = sep.Background(data) #, mask=mask, bw=64, bh=64, fw=3, fh=3) # optional parameters
@@ -161,7 +154,12 @@ def sep_phot(data):
     return table
 
 def comp_coords(septable, expnum_p, astheader, zeropt):
-    '''compare predicted RA and DEC to that measured by sep photometry'''
+    '''
+    Compares predicted RA and DEC to that measured by sep photometry
+    Selects nearest neighbour object from predicted coordinates as object of interest
+    Should eventually also filter objects by variation in magnitude
+      eventually.... by variation as computed by position in orbit by JPL Horizons query
+    '''
 
     x_array = np.array(septable['x'])
     y_array = np.array(septable['y'])
@@ -176,12 +174,9 @@ def comp_coords(septable, expnum_p, astheader, zeropt):
             expnum_p_fromfile = line.split()[1]
             pRA = float(line.split()[3])
             pDEC = float(line.split()[4])
+            expnum = (line.split()[1]).rstrip('p')
             
             pvwcs = wcs.WCS(astheader)
-            
-            
-            
-            expnum = (line.split()[1]).rstrip('p')
             
             # for entries in *_images.txt that correspond to images of the object
             if expnum_p_fromfile == expnum_p:

@@ -24,13 +24,13 @@ def main():
     
     find_family_members(args.family, args.output)
     
-def find_family_members(familyname, output):    
+def find_family_members(familyname, output=None):    
     '''
     Queries the AstDys database for members of specified family, family name is name of largest member
     '''
     
     if output == None:
-        output = 'family.txt'
+        output = familyname+'_family.txt'
         
     dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
     output_dir = os.path.join(dir_path_base, familyname)
@@ -67,6 +67,8 @@ def find_family_members(familyname, output):
     with open('{}/{}'.format(output_dir, output), 'w') as outfile:
         for item in asteroid_list:
               outfile.write("{}\n".format(item))
+              
+    return asteroid_list
 
 
 if __name__ == '__main__':

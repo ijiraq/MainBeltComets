@@ -9,10 +9,8 @@ PROTOCOL=ivo://ivoa.net/vospace/core%23httpget&
 view=cutout&
 cutout=CIRCLE+ICRS+242.1318+-12.4747+0.05
 """
-# in this case, the image is the exposure number
 
 import argparse
-import logging
 import getpass
 import requests
 import os
@@ -31,6 +29,63 @@ import pandas as pd
 from astropy.table import Table, Column
 
 BASEURL = "http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/vospace/auth/synctrans"
+
+def main():
+    
+# PARSE INFORMATION INPUTTED FROM THE COMMAND LINE
+	# VERSION - OSSOS DATA RELEASE VERSION THE STAMPS ARE TO BE ASSIGNED TO
+	# INPUT FILE
+	# RADIUS - SIZE OF CIRCULAR CUTOUT
+    
+    # INPUT LIST OF IMAGES IN COMMAND LINE
+    # IDENTIFY PARAMETERS FOR QUERY OF SSOIS FROM INPUT
+
+    parser = argparse.ArgumentParser(
+        description='Parse an obects.txt input file (find_family.py output) and create links in the postage stamp directory '
+                    'that allow retrieval of cutouts of the FITS images associated with the CHT/MegaCam detections. '
+                    'Cutouts are defined on the WCS RA/DEC of the object position.')
+    parser.add_argument("--family",
+                        action="store",
+                        default="lixImages.txt",
+                        help="The input .txt files of astrometry/photometry measurements.")
+    parser.add_argument("--radius", '-r',
+                        action='store',
+                        default=0.02,
+                        help='Radius (degree) of circle of cutout postage stamp.')
+    
+    args = parser.parse_args()
+    
+    familyname = args.family
+    radius = args.radius
+    
+def get_stamps(familyname, radius):
+    
+    print "----- Cutting postage stamps of objects in family {}  from CFHT/MegaCam images -----".format(familyname)	
+
+    # CADC PERMISSIONS
+    username = raw_input("CADC username: ")
+    password = getpass.getpass("CADC password: ")
+
+    # PARSE THROUGH INPUT FILE FOR IMAGE INFORMATION
+        # format into lines, parse for image, RA and DEC
+        # CUT OUT IMAGE
+	        # PASS: object, directory, radius, CADC permissions                    
+    
+    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
+    family_dir = os.path.join(dir_path_base, familyname)
+    if os.path.isdir(family_dir) == False:
+        print "Invalid family name or directory does not exist"
+    
+    image_list = '{}/{}_images.txt'.format(family_dir, familyname)
+    
+    with open(image_list) as infile: 
+        for line in infile.readlines()[1:]: # skip header info
+            assert len(line.split()) > 0
+            objectname = line.split()[0]
+            expnum = line.split()[1]
+            RA = float(line.split()[3])   
+            DEC = float(line.split()[4])
+            cutout(objectname, expnum, RA, DEC, radius, username, password)
 	
 def cutout(objectname, image, RA, DEC, radius, username, password):
 
@@ -70,59 +125,6 @@ def cutout(objectname, image, RA, DEC, radius, username, password):
         with open(postage_stamp_filename, 'w') as tmp_file:
             tmp_file.write(r.content)
 
-
-def main():
-    
-# PARSE INFORMATION INPUTTED FROM THE COMMAND LINE
-	# VERSION - OSSOS DATA RELEASE VERSION THE STAMPS ARE TO BE ASSIGNED TO
-	# INPUT FILE
-	# RADIUS - SIZE OF CIRCULAR CUTOUT
-    
-    # INPUT LIST OF IMAGES IN COMMAND LINE
-    # IDENTIFY PARAMETERS FOR QUERY OF SSOIS FROM INPUT
-
-    parser = argparse.ArgumentParser(
-        description='Parse an obects.txt input file (find_family.py output) and create links in the postage stamp directory '
-                    'that allow retrieval of cutouts of the FITS images associated with the CHT/MegaCam detections. '
-                    'Cutouts are defined on the WCS RA/DEC of the object position.')
-    parser.add_argument("--ossin",
-                        action="store",
-                        default="lixImages.txt",
-                        help="The input .txt files of astrometry/photometry measurements.")
-    parser.add_argument("--radius", '-r',
-                        action='store',
-                        default=0.02,
-                        help='Radius (degree) of circle of cutout postage stamp.')
-    
-    ''' Necessary for debugging, but not used in the code
-    parser.add_argument("--debug", "-d",
-                        action="store_true")
-    parser.add_argument("--verbose", "-v",
-                        action="store_true")
-    '''
-    
-    args = parser.parse_args()
-    
-    # PRINT HEADER
-    print "-------------------- \n Cutting postage stamps of objects in input file %s from CFHT/MegaCam images \n--------------------" % args.ossin	
-
-    # CADC PERMISSIONS
-    username = raw_input("CADC username: ")
-    password = getpass.getpass("CADC password: ")
-
-    # PARSE THROUGH INPUT FILE FOR IMAGE INFORMATION
-        # format into lines, parse for image, RA and DEC
-        # CUT OUT IMAGE
-	        # PASS: object, directory, radius, CADC permissions                    
-    
-    with open(args.ossin) as infile: 
-        for line in infile.readlines()[42:]: # testing for one image only
-            assert len(line.split()) > 0
-            objectname = line.split()[0]
-            image = line.split()[1]
-            RA = float(line.split()[3])   
-            DEC = float(line.split()[4])
-            cutout(objectname, image, RA, DEC, args.radius, username, password)
 		
 if __name__ == '__main__':
     main()	

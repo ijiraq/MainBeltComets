@@ -1,7 +1,6 @@
 import os
 import sep
 import urllib2 as url
-#import time
 import numpy as np
 from astropy.io import fits
 from astropy.table import Table, vstack
@@ -11,7 +10,6 @@ import argparse
 from scipy.spatial import cKDTree
 import math
 
-
 import sys
 sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
 
@@ -19,142 +17,102 @@ import ossos_scripts.wcs as wcs
 from ossos_scripts.storage import get_astheader
 from getImages import get_image_info
 
-
 def main(): 
     ''' 
     Preforms photometry on .fits files given an input of family name and object name
+    Identifies object in image from predicted coordinates, magnitude (and eventually shape)
     Assumes files organised as:
     dir_path_base/familyname/familyname_objectname/*.fits       - images to do photometry on
+      or dir_path_base/familyname/familyname_stamps/*.fits
     dir_path_base/familyname/*_images.txt                       - list of image exposures, predicted RA and DEC, dates etc.
     '''
     
     parser = argparse.ArgumentParser(
-        description='For an input .fits image, aperture size, threshold, and output file: preforms photometry')
+                        description='For an object in an asteroid family, parses AstDys for a list of members, \
+                        parses MPC for images of those objects from CFHT/MegaCam in specific filter and exposure time,\
+                        cuts out postage stamps images of given radius (should eventually be uncertainty ellipse), \
+                         preforms photometry on a specified object given an aperture size and threshold, \
+                        and then selects the object in the image from the predicted coordinates, magnitude, and eventually shape')
     parser.add_argument("--family", '-f',
                         action="store",
                         default="3330",
-                        help="The directory in getImages/family/ with input .fits files for astrometry/photometry measurements.")
+                        help="Asteroid family name. Usually the asteroid number of the largest member.")
     parser.add_argument("--aperture", '-a',
                         action='store',
                         default=10.0,
                         help='aperture (degree) of circle for photometry.')
     parser.add_argument("--thresh", '-t',
-                            action='store',
-                            default=5.0,
-                            help='threshold value.')
+                        action='store',
+                        default=5.0,
+                        help='threshold value for photometry (sigma above background).')
     parser.add_argument("--object", '-o',
-                            action='store',
-                            default='54286',
-                            help='the object to preform photometry on')
+                        action='store',
+                        default='54286',
+                        help='The object to preform photometry on.')
                             
     args = parser.parse_args()
     
-    familyname = args.family
-    global objectname
-    objectname = args.object
-    global ap
-    ap = float(args.aperture)
-    global th
-    th = float(args.thresh)
-    # perhaps there's a better way of doing this, self.variable?
-    
-    find_objects_by_phot(familyname, objectname, ap, th)
+    find_objects_by_phot(args.family, args.object, float(args.aperture), float(args.thresh))
 
 def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0):
     
     ''' Not yet working, objectname must be specified
-    print objectname
     if objectname == None:
         image_list = get_image_info(familyname, filtertype, imagetype)
-        print image_list
         objectname = image_list[0]
         print "WARNING: Object name not specified, searching for {}".format(objectname)
-    else:
-        print "if statement not working"
-    print objectname
     '''
     
-    global imageinfo
-    imageinfo = familyname+'_images.txt'
-    
-    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
-    global family_dir
-    family_dir = os.path.join(dir_path_base, familyname)
-    if os.path.isdir(family_dir) == False:
-        print "Invalid family name"
-    stamps_dir = os.path.join(family_dir, familyname+'_stamps')
-    object_dir = os.path.join(family_dir, familyname+'_'+objectname)
-    if os.path.isdir(object_dir) == False:
-        print "Invalid object name or object directory does not exist, searching through {}/{}_stamps instead".format(familyname, familyname)
-        object_dir = stamps_dir
-    output_dir = os.path.join(object_dir, 'sep_phot_output')
-    if os.path.isdir(output_dir) == False:
-        os.makedirs(output_dir)
+    # initiate directories
+    family_dir, object_dir, output_dir = init_dirs(familyname, objectname)
 
     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'w') as outfile:
-        outfile.write("{:>3s} {:>8s} {:>14s} {:>14s} {:>18s} {:>16s} {:>10s}\n".format(
-            "Image", "meas_RA", "diff_RA", "meas_DEC", "diff_DEC", "flux", "meas_mag"))        
-        
-    # FROM familyname_images.txt FIND IMAGE DATES
-        # for given dates, select first and last
-        # query JPL horizons for apparent magnitudes in that date range
-        # calculate mean or range of values
+        outfile.write("{:>3s} {:>5s} {:>17s} {:>10s} {:>17s} {:>10s} {:>17s}\n".format(
+            "Image", "RA", "RA_pix", "DEC", "DEC_pix", "flux", "meas_mag"))        
 
+    # get range of magnitudes of object over time span that the images were taken
     print "----- Querying JPL Horizon's ephemeris for apparent magnitudes -----"
+    mag_list_jpl = mag_query_jpl(objectname, step=1)
     
-    step = 1
-    mag_list_jpl = mag_query_jpl(step)
-    #print mag_list_jpl
-    
-# FOR .fits FILE IN DIRECTORY familyname/familyname_objectname/ PREFORM PHOTOMETRY
-    # from familyname_images.txt get predicted RA and DEC, convert to pixels
-    # select object objectname in image by nearest neighbour to predicted coordinates
-    # check against predicted magnitude
-    
+    # preform the photometry and identify object
     print "----- Preforming photometry on all images of {} in family {} -----".format(objectname, familyname)
-    
     for file in os.listdir('{}'.format(object_dir)):
         if file.endswith('.fits') == True:
             expnum_p = file.split('_')[1]
 
             with fits.open('{}/{}'.format(object_dir, file)) as hdulist:
                 print " Preforming photometry on image {} ".format(expnum_p)
-                #print hdulist.info()
                 
-                if hdulist[0].data is None: # STILL NOT WORKING, what if more than 2ccd mosaic? could just be aperture values?
+                if hdulist[0].data is None: # what if more than 2ccd mosaic? could just be aperture values?
                     try:
                         zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 1)
-                        table1 = sep_phot(hdulist[1].data)
-                        table2 = sep_phot(hdulist[2].data)
+                        table1 = sep_phot(hdulist[1].data, ap, th)
+                        table2 = sep_phot(hdulist[2].data, ap, th)
                         table = vstack([table1, table2])
-                        # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
-                        #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) 
+                        #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
                         astheader = hdulist[0].header
                     except LookupError: # maybe not correct error type?
-                        print " no PHOTZP in header "
+                        print "ERROR: no PHOTZP in header, skipping image "
                     
                 else:
                     try:
                         zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 0)
-                        table = sep_phot(hdulist[0].data)
+                        table = sep_phot(hdulist[0].data, ap, th)
                         astheader = hdulist[0].header
-                        # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
-                        #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p)))
+                        #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
                     except LookupError:
-                        print " no PHOTZP in header "
+                        print "ERROR: no PHOTZP in header, skipping image "
                 
                 object_data = comp_coords(table, expnum_p, astheader, zeropt, mag_list_jpl)
-                
                 assert len(object_data) > 0
                 with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
                     try:
                         outfile.write('{} {} {} {} {} {} {}\n'.format(
                                 object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
                     except:
-                        print "cannot write to outfile"    
-     
-    
-def mag_query_jpl(step, su='d'):
+                        print "ERROR: cannot write to outfile"    
+
+def mag_query_jpl(objectname, step=1, su='d'):
     '''
     Constructs a URL to query JPL Horizon's for apparent magnitude in a date range
     '''
@@ -166,21 +124,19 @@ def mag_query_jpl(step, su='d'):
             if objectname == line.split()[0]:
                 date_range.append(float(line.split()[5]))
     date_range_t = Time(date_range, format='mjd', scale='utc')
-    print date_range_t
     assert  len(date_range_t.iso) > 0
     time_start = ((date_range_t.iso[0]).split())[0] + ' 00:00:00.0'
     time_end = ((date_range_t.iso[-1]).split())[0] + ' 00:00:00.0'
     
     if time_start == time_end:
         print "WARNING: only searching for one day"
-        time_end_date = ((date_range_t.iso[-1]).split())[0]
-        time_end_split = time_end_date.split('-')
-        day_add_one = int(time_end_split[2])+1
+        time_end_date = (((date_range_t.iso[-1]).split())[0]).split('-')
+        day_add_one = int(time_end_date[2])+1
         if day_add_one < 10:
             day = '0{}'.format(day_add_one)
         else:
             day = day_add_one
-        time_end = '{}-{}-{} 00:00:00.0'.format(time_end_split[0], time_end_split[1], day)
+        time_end = '{}-{}-{} 00:00:00.0'.format(time_end_date[0], time_end_date[1], day)
     
     print " Date range in query: {} -- {}".format(time_start, time_end)
     
@@ -188,14 +144,6 @@ def mag_query_jpl(step, su='d'):
     date_start = change_date(time_start)
     date_end = change_date(time_end)
     
-    
-    #print date_start, date_end
-    
-    if step == None: # default
-        step = 1
-    else:
-        step = int(step)
-
     # select parameter for apparent magnitude
     s = '9'
     
@@ -246,12 +194,10 @@ def mag_query_jpl(step, su='d'):
             done = 1   
     
     mag_list = []
-    
     # parse through urlData for indexes of start and end dates
     index_end = None
     index_start = None
     for idx, line in enumerate(urlData):  #testing
-        assert line.split() > 0
         try:
             date_jpl = line.split()[0]+' '+(line.split()[1]).strip(',')
             if date_start == date_jpl:
@@ -261,6 +207,7 @@ def mag_query_jpl(step, su='d'):
     if index_start is None:
         print "index start could not be obtained"
         index_start = 69
+        
     for idx, line in enumerate(urlData):  #testing
         try:
             date_jpl = line.split()[0]+' '+(line.split()[1]).strip(',')
@@ -273,7 +220,7 @@ def mag_query_jpl(step, su='d'):
         index_end = 70
     # for indexes from start to end dates, get apparent magnitude values
     for line in urlData[index_start:index_end+1]:
-        #print line
+        assert len(line.split()) > 0    
         try:
             mag_list.append(float((line.split()[4]).strip(',')))
         except:
@@ -299,7 +246,7 @@ def change_date(date):
     
     return date_new    
     
-def sep_phot(data):
+def sep_phot(data, ap, th):
     ''' 
     Preforms photometry by SEP, similar to source extractor 
     input is .fits file data
@@ -418,8 +365,28 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                 
 
                         
-                return expnum_p, mRA, diffRA, mDEC, diffDEC, flux, mag_sep   
+                return expnum_p, mRA, mRA_pix, mDEC, mDEC_pix, flux, mag_sep   
+
+def init_dirs(familyname, objectname):
+    global imageinfo
+    imageinfo = familyname+'_images.txt'
     
+    # would like dir_path_base to be specified
+    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
+    global family_dir
+    family_dir = os.path.join(dir_path_base, familyname)
+    if os.path.isdir(family_dir) == False:
+        print "Invalid family name"
+    stamps_dir = os.path.join(family_dir, familyname+'_stamps')
+    object_dir = os.path.join(family_dir, familyname+'_'+objectname)
+    if os.path.isdir(object_dir) == False:
+        print "Invalid object name or object directory does not exist, searching through {}/{}_stamps instead".format(familyname, familyname)
+        object_dir = stamps_dir
+    output_dir = os.path.join(object_dir, 'sep_phot_output')
+    if os.path.isdir(output_dir) == False:
+        os.makedirs(output_dir)
+    
+    return family_dir, object_dir, output_dir
     
 if __name__ == '__main__':
     main()

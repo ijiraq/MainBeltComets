@@ -16,7 +16,12 @@ def main():
     Input asteroid family name and an asteroid number and get out photometry values
     """
     
-    parser = argparse.ArgumentParser(description='Run SSOIS and return the available images in a particular filter.')
+    parser = argparse.ArgumentParser(
+                    description='For an object in an asteroid family, parses AstDys for a list of members, \
+                        parses MPC for images of those objects from CFHT/MegaCam in specific filter and exposure time,\
+                        cuts out postage stamps images of given radius (should eventually be uncertainty ellipse), \
+                         preforms photometry on a specified object given an aperture size and threshold, \
+                        and then selects the object in the image from the predicted coordinates, magnitude, and eventually shape')
 
     parser.add_argument("--filter",
                     action="store",
@@ -25,47 +30,36 @@ def main():
                     choices=['r', 'u'],
                     help="passband: default is r'")
     parser.add_argument("--family",
-                        action="store",
-                        default="3330",
-                        help='list of objects to query')
+                    action="store",
+                    default="3330",
+                    help='list of objects to query')
     parser.add_argument('--type',
-                        default='p',
-                        choices=['o', 'p', 's'], 
-                        help="restrict type of image (unprocessed, reduced, calibrated)")
+                    default='p',
+                    choices=['o', 'p', 's'], 
+                    help="restrict type of image (unprocessed, reduced, calibrated)")
     parser.add_argument("--radius", '-r',
-                        action='store',
-                        default=0.02,
-                        help='Radius (degree) of circle of cutout postage stamp.')
+                    action='store',
+                    default=0.02,
+                    help='Radius (degree) of circle of cutout postage stamp.')
     parser.add_argument("--aperture", '-a',
-                        action='store',
-                        default=10.0,
-                        help='aperture (degree) of circle for photometry.')
+                    action='store',
+                    default=10.0,
+                    help='aperture (degree) of circle for photometry.')
     parser.add_argument("--thresh", '-t',
-                            action='store',
-                            default=5.0,
-                            help='threshold value.')
+                    action='store',
+                    default=5.0,
+                    help='threshold value.')
     parser.add_argument("--object", '-o',
-                            action='store',
-                            default='54286',
-                            help='the object to preform photometry on')
+                    action='store',
+                    default='54286',
+                    help='the object to preform photometry on')
                             
     args = parser.parse_args()
     
     do_all_things(args.family, args.object, args.filter, args.type, args.radius, args.aperture, args.thresh)
 
-def do_all_things(familyname, objectname=None, filtertype=None, imagetype=None, radius=None, aperture=None, thresh=None):
-    
-    if filtertype == None:
-        filtertype = 'r'
-    if imagetype == None:
-        imagetype == 'p'
-    if radius == None:
-        radius == 0.02
-    if aperture == None:
-        aperture == 10.0
-    if thresh == None:
-        thresh = 5.0
-    
+def do_all_things(familyname, objectname=None, filtertype='r', imagetype='p', radius=0.02, aperture=10.0, thresh=5.0):
+   
     # find_family.py - family name
         # find_family_members()
         # get list of asteroids in a family

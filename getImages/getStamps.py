@@ -19,10 +19,10 @@ import vos
 import sys
 sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
 
-import ossos_scripts.storage
-import ossos_scripts.coding
-import ossos_scripts.mpc
-import ossos_scripts.util
+from ossos_scripts import storage
+from ossos_scripts import coding
+from ossos_scripts import mpc
+from ossos_scripts import util
 
 import numpy as np
 import pandas as pd
@@ -55,8 +55,7 @@ def main():
     
     args = parser.parse_args()
     
-    familyname = args.family
-    radius = args.radius
+    get_stamps(args.family, args.radius)
     
 def get_stamps(familyname, radius):
     
@@ -85,9 +84,9 @@ def get_stamps(familyname, radius):
             expnum = line.split()[1]
             RA = float(line.split()[3])   
             DEC = float(line.split()[4])
-            cutout(objectname, expnum, RA, DEC, radius, username, password)
+            cutout(objectname, expnum, RA, DEC, radius, username, password, familyname)
 	
-def cutout(objectname, image, RA, DEC, radius, username, password):
+def cutout(objectname, image, RA, DEC, radius, username, password, familyname):
 
 # CUT OUT (image, RA, DEC, radius, CADC permissions)
 	# for each attribute in mpc_observations:
@@ -103,6 +102,10 @@ def cutout(objectname, image, RA, DEC, radius, username, password):
     DEC = 11.8697277778
     '''
     
+    output_dir = '{}/{}_stamps'.format(familyname, familyname)
+    if os.path.isdir(output_dir) == False:
+            os.makedirs(output_dir)
+        
     this_cutout = "CIRCLE ICRS {} {} {}".format(RA, DEC, radius)                                 
     print "cut out: ", this_cutout
 
@@ -117,13 +120,10 @@ def cutout(objectname, image, RA, DEC, radius, username, password):
                   "cutout": this_cutout,
                   "view": view}
     r = requests.get(BASEURL, params=params, auth=(username, password))
-    if r.status_code == 403:
-        print " Image cannot be cut out, response status = 403 "
-    else:
-        r.raise_for_status()  # confirm the connection worked as hoped
-        postage_stamp_filename = "{}_{}_{:8f}_{:8f}.fits".format(objectname, image, RA, DEC)
-        with open(postage_stamp_filename, 'w') as tmp_file:
-            tmp_file.write(r.content)
+    r.raise_for_status()  # confirm the connection worked as hoped
+    postage_stamp_filename = "{}_{}_{:8f}_{:8f}.fits".format(objectname, image, RA, DEC)
+    with open('{}/{}'.format(output_dir, postage_stamp_filename), 'w') as tmp_file:
+        tmp_file.write(r.content)
 
 		
 if __name__ == '__main__':

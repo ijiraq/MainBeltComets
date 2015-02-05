@@ -1,17 +1,105 @@
 import datetime
 import os
-import warnings
 from astropy.io import ascii
 from astropy.time import Time
 import requests
-import sys
 import argparse
 import requests
 
 from ossos_scripts.ssos import Query
 
-# could not figure out how to import, so just copied here
+def main():
+    '''
+    Input asteroid family, filter type, and image type to query SSOIS
+    '''
+    
+    parser = argparse.ArgumentParser(description='Run SSOIS and return the available images in a particular filter.')
+
+    parser.add_argument("--filter", "-f",
+                    action="store",
+                    default='r',
+                    dest="filter",
+                    choices=['r', 'u'],
+                    help="passband: default is r'")
+    parser.add_argument("--family",
+                        action="store",
+                        default="testfamily/testfamily_family.txt",
+                        help='list of objects to query')
+    parser.add_argument('--type',
+                        default='p',
+                        choices=['o', 'p', 's'], 
+                        help="restrict type of image (unprocessed, reduced, calibrated)")
+
+    args = parser.parse_args()
+    
+    get_image_info(args.family, args.filter, args.type)
+
+def get_image_info(familyname, filtertype, imagetype):
+    '''
+    Query the ssois ephemeris for images of objects in a given family. Then parse through for desired image type, 
+    filter, exposure time, and telescopy instrument
+    '''
+    
+    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
+    family_dir = os.path.join(dir_path_base, familyname)
+    if os.path.isdir(family_dir) == False:
+        print "Invalid family name or directory does not exist"
+    
+    family_list = '{}/{}_family.txt'.format(family_dir, familyname)
+    
+    with open(family_list) as infile: 
+        filestr = infile.read()
+    object_list = filestr.split('\n') # array of objects to query
+
+    # TO DO: confirm that the input is the proper format to search for the appropriate ephemeris
+    
+    # From the given input, identify the desired filter and rename appropriately
+    if filtertype.lower().__contains__('r'):
+        filtertype = 'r.MP9601'  # this is the old (standard) r filter for MegaCam
+    if filtertype.lower().__contains__('u'):
+        filtertype = 'u.MP9301'
+
+    # Define time period of image search, basically while MegaCam in operation
+    search_start_date=Time('2013-01-01', scale='utc')   # epoch1=2013+01+01
+    search_end_date=Time('2017-01-01', scale='utc')     # epoch2=2017+1+1
+        
+    # Setup output, label columns
+    with open('{}/{}_images.txt'.format(family_dir, familyname), 'w') as outfile:
+        outfile.write("{:>10s} {:>10s} {:>10s} {:>16s} {:>16s} {:>16s} {:>12s}\n".format(
+            "Object", "Image", "Exp_time", "RA", "DEC", "time", "filter"))
+
+    # Query a specific ephemeris depending on object naming convention. CADC : search = bynameCADC , MPC : search = bynameMPC
+    # Specify search parameters
+        # ephemeris, name, date range, resolve image extension, resolve to x,y, positional uncertainty?
+        # http:// www3.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/cadcbin/ssos/ssosclf.pl?lang=en; object=elst-pizarro; search=bynameMPC; epoch1=2013+01+01; epoch2=2015+1+16; eellipse=; eunits=arcseconds; extres=yes; xyres=yes; format=tsv
+        
+    print "-------------------- \n Searching for images of objects in family {} from CFHT/Megacam from the MPC ephemeris".format(familyname)
+    print " with filter {} and exposure time of 287, 387, 500 seconds (OSSOS data) \n--------------------".format(filtertype)
+        
+    for object_name in object_list[:len(object_list)-1]:
+        query = Query(object_name, search_start_date=search_start_date, search_end_date=search_end_date)
+
+        # GET/REVIEW THE DATA RETURNED FROM THE SEARCH
+        # Parse the data for Image, Instrument, Filter and create table for each object
+        # Download files with appropriate names? ie object+SSOISfilename ??
+        obs_in_filter = parse_ssois_return(query.get(), object_name, imagetype, camera_filter=filtertype)
+
+        # output the data is previously initiated output file
+        if len(obs_in_filter) > 0:
+            with open('{}/{}_images.txt'.format(family_dir, familyname), 'a') as outfile:
+                for line in obs_in_filter:
+                    try:
+                        outfile.write("{} {} {} {} {} {} {}\n".format(object_name,
+                            line['Image'], line['Exptime'], line['Object_RA'], line['Object_Dec'],
+                            Time(line['MJD'], format='mjd', scale='utc'), line['Filter']))
+                    except:
+                        print "cannot write to outfile"
+                    
 def parse_ssois_return(ssois_return, object_name, imagetype, camera_filter='r.MP9601', telescope_instrument='CFHT/MegaCam'):
+    '''
+    Parse through objects in ssois query and filter out images of desired filter, type, exposure time, and instrument
+    '''
+    
     assert camera_filter in ['r.MP9601', 'u.MP9301']
     ret_table = []
     good_table = 0
@@ -64,100 +152,6 @@ def _skip_missing_data(str_vals, ncols):
         raise ValueError("not enough columns in table")
         # object U0233 does not have enough columns in table
     
-def main():
-
-    # IDENTIFY PARAMETERS FOR QUERY OF SSOIS FROM INPUT
-
-    # From the given input, make list of MBCs to query
-    
-    parser = argparse.ArgumentParser(description='Run SSOIS and return the available images in a particular filter.')
-
-    parser.add_argument("--filter", "-f",
-                    action="store",
-                    default='r',
-                    dest="filter",
-                    choices=['r', 'u'],
-                    help="passband: default is r'")
-    parser.add_argument("--ossin",
-                        action="store",
-                        default="testfamily/testfamily_family.txt",
-                        help='list of objects to query')
-    parser.add_argument("--dbimages",
-                        action="store",
-                        default="vos:OSSOS/dbimages",
-                        help='vospace dbimages containerNode')
-    parser.add_argument('--type',
-                        default='p',
-                        choices=['o', 'p', 's'], 
-                        help="restrict type of image (unprocessed, reduced, calibrated)")
-    parser.add_argument("--output", "-o",
-                        action="store",
-                        default="/Users/admin/MainBeltComets/getImages/testfamily/testfamily_images.txt",   
-                        help='Location and name of output file containing image IDs.')
-
-    args = parser.parse_args()
-    imagetype = args.type
-    
-    mbc_file = args.ossin
-    with open(mbc_file) as infile: 
-        filestr = infile.read()
-    input_mbc_lines = filestr.split('\n') # array of MBCs to query
-
-    # CONFIRM that the input is the proper format to search for the appropriate ephemeris
-
-    # FROM the given input, identify the desired filter and rename appropriately
-
-    if args.filter.lower().__contains__('r'):
-        args.filter = 'r.MP9601'  # this is the old (standard) r filter for MegaCam
-    if args.filter.lower().__contains__('u'):
-        args.filter = 'u.MP9301'
-
-    # Define time period of image search, basically while MegaCam in operation
-
-    search_start_date=Time('2013-01-01', scale='utc')   # epoch1=2013+01+01
-    search_end_date=Time('2017-01-01', scale='utc')     # epoch2=2017+1+1
-        
-    # Setup output, label columns
-    
-    with open(args.output, 'w') as outfile:
-        outfile.write("{:>10s} {:>10s} {:>10s} {:>16s} {:>16s} {:>16s} {:>12s}\n".format(
-            "Object", "Image", "Exp_time", "RA", "DEC", "time", "filter"))
-
-    # Query a specific ephemeris depending on object naming convention. CADC : search = bynameCADC , MPC : search = bynameMPC
-    # Specify search parameters
-        # ephemeris, name, date range, resolve image extension, resolve to x,y, positional uncertainty?
-        # http:// www3.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/cadcbin/ssos/ssosclf.pl?lang=en; object=elst-pizarro; search=bynameMPC; epoch1=2013+01+01; epoch2=2015+1+16; eellipse=; eunits=arcseconds; extres=yes; xyres=yes; format=tsv
-        
-    print "-------------------- \n Searching for images of input objects (%s) from CFHT/Megacam from the MPC ephemeris" % args.ossin
-    print " with filter %s and exposure time of 287, 387, 500 seconds (OSSOS data) \n--------------------"  % args.filter
-        
-    for object_name in input_mbc_lines: #[:len(input_mbc_lines)]:
-        query = Query(object_name, search_start_date=search_start_date, search_end_date=search_end_date)
-
-        # GET/REVIEW THE DATA RETURNED FROM THE SEARCH
-        # Parse the data for Image, Instrument, Filter and create table for each object
-        # Download files with appropriate names? ie object+SSOISfilename ??
-        
-        obs_in_filter = parse_ssois_return(query.get(), object_name, imagetype, camera_filter=args.filter)
-
-        # OUTPUT DATA
-
-        if len(obs_in_filter) > 0:
-            with open(args.output, 'a') as outfile:
-                for line in obs_in_filter:
-                    try:
-                        print line['MJD'], Time(line['MJD'], format='mjd', scale='utc')
-                        outfile.write("{} {} {} {} {} {} {}\n".format(object_name,
-                            line['Image'], line['Exptime'], line['Object_RA'], line['Object_Dec'],
-                            Time(line['MJD'], format='mjd', scale='utc'), line['Filter']))
-                    except:
-                        print "cannot write to outfile"
-                    
-
-            # Confirm that there is coordinates for each image
-            # Add information to table? or file corresponding to the image name?
 
 if __name__ == '__main__':
     main()
-    
-# exp time = 287, 387, 500

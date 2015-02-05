@@ -14,7 +14,6 @@ import math
 import sys
 sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
 
-import ossos_scripts.ssos
 import ossos_scripts.wcs as wcs
 from ossos_scripts.storage import get_astheader
 
@@ -48,7 +47,6 @@ def main():
                             
     args = parser.parse_args()
     
-    global familyname
     familyname = args.family
     global objectname
     objectname = args.object
@@ -56,14 +54,23 @@ def main():
     ap = float(args.radius)
     global th
     th = float(args.thresh)
+    # perhaps there's a better way of doing this, self.variable?
+    
+    find_objects_by_phot(familyname, objectname, ap, th)
+
+def find_objects_by_phot(familyname, objectname, ap, th):
+    
     global imageinfo
     imageinfo = familyname+'_images.txt'
-    # perhaps there's a better way of doing this, self.variable?
     
     dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
     global family_dir
     family_dir = os.path.join(dir_path_base, familyname)
+    if os.path.isdir(family_dir) == False:
+        print "Invalid family name"
     object_dir = os.path.join(family_dir, familyname+'_'+objectname)
+    if os.path.isdir(object_dir) == False:
+        print "Invalid object name"
     output_dir = os.path.join(object_dir, 'sep_phot_output')
     if os.path.isdir(output_dir) == False:
         os.makedirs(output_dir)
@@ -81,7 +88,7 @@ def main():
     
     step = 1
     mag_list_jpl = mag_query_jpl(step)
-    print mag_list_jpl
+    #print mag_list_jpl
     
 # FOR .fits FILE IN DIRECTORY familyname/familyname_objectname/ PREFORM PHOTOMETRY
     # from familyname_images.txt get predicted RA and DEC, convert to pixels
@@ -102,7 +109,7 @@ def main():
                     try:
                         zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 1)
                         table1 = sep_phot(hdulist[1].data)
-                        table2 = dosep(hdulist[2].data)
+                        table2 = sep_phot(hdulist[2].data)
                         table = vstack([table1, table2])
                         # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
                         #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) 
@@ -328,13 +335,14 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                 
                 pRA_pix, pDEC_pix = pvwcs.sky2xy(pRA, pDEC) # convert from WCS to pixels
                 #print " Predicted RA and DEC: {}  {}".format(pRA, pDEC)
-                print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
+                #print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
                 
                 # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
                 
                 coords = np.array([pRA_pix, pDEC_pix])
                 d_list, i_list = tree.query(coords, k=10)
 
+                mRA_pix = None
                 for i in i_list:
                     flux = septable[i][2]
                     try:
@@ -347,20 +355,22 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                             if (abs(mag_sep - mean) < 1):
                                 mRA_pix = septable[i][0]
                                 mDEC_pix = septable[i][1]
-                                print "   Flux, mag: {}, {}".format(flux, mag_sep) 
                                 break
                         else:
                             if (abs(mag_sep - mean) < maxmag - minmag):
                                 mRA_pix = septable[i][0]
-                                mDEC_pix = septable[i][1]
-                                print "   Flux, mag: {}, {}".format(flux, mag_sep)   
+                                mDEC_pix = septable[i][1]  
                                 break 
                     except:
                         None
-                    
+                
+                if mRA_pix == None:
+                    break
+                
+                #print "   Flux, mag: {}, {}".format(flux, mag_sep)     
                 mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
                 #print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
-                print "  in pixels: {} {}".format(mRA_pix, mDEC_pix)
+                #print "  in pixels: {} {}".format(mRA_pix, mDEC_pix)
                 
                 diffRA = mRA - pRA
                 diffDEC = mDEC - pDEC

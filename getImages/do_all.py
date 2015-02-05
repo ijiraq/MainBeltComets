@@ -6,6 +6,9 @@ from getStamps import get_stamps
 from sep_phot import find_objects_by_phot
 
 from ossos_scripts import storage
+import ossos_scripts.coding
+import ossos_scripts.mpc
+import ossos_scripts.util
 
 
 def main():
@@ -68,13 +71,13 @@ def do_all_things(familyname, objectname=None, filtertype=None, imagetype=None, 
         # get list of asteroids in a family
     #asteroid_list = find_family_members(familyname)
     
-    if objectname == None:
-        objectname = asteroid_list[0]
-    
     # getImages.py - family name, filter, type
         # get_image_info()
         # get images information from SSOIS
-    #get_image_info(familyname, filtertype, imagetype)
+    image_list = get_image_info(familyname, filtertype, imagetype)
+    
+    if objectname == None:
+        objectname = image_list[0]
         
     # getStamps.py - family name, radius of cutout
         # get_stamps()

@@ -76,6 +76,7 @@ def get_image_info(familyname, filtertype, imagetype):
     print "-------------------- \n Searching for images of objects in family {} from CFHT/Megacam from the MPC ephemeris".format(familyname)
     print " with filter {} and exposure time of 287, 387, 500 seconds (OSSOS data) \n--------------------".format(filtertype)
         
+    image_list = []
     for object_name in object_list[:len(object_list)-1]:
         query = Query(object_name, search_start_date=search_start_date, search_end_date=search_end_date)
 
@@ -88,12 +89,14 @@ def get_image_info(familyname, filtertype, imagetype):
         if len(obs_in_filter) > 0:
             with open('{}/{}_images.txt'.format(family_dir, familyname), 'a') as outfile:
                 for line in obs_in_filter:
+                    image_list.append(line['Image'])
                     try:
                         outfile.write("{} {} {} {} {} {} {}\n".format(object_name,
                             line['Image'], line['Exptime'], line['Object_RA'], line['Object_Dec'],
                             Time(line['MJD'], format='mjd', scale='utc'), line['Filter']))
                     except:
                         print "cannot write to outfile"
+    return image_list
                     
 def parse_ssois_return(ssois_return, object_name, imagetype, camera_filter='r.MP9601', telescope_instrument='CFHT/MegaCam'):
     '''

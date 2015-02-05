@@ -1,7 +1,7 @@
 import os
 import sep
 import urllib2 as url
-import time
+#import time
 import numpy as np
 from astropy.io import fits
 from astropy.table import Table, vstack
@@ -11,11 +11,13 @@ import argparse
 from scipy.spatial import cKDTree
 import math
 
+
 import sys
 sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
 
 import ossos_scripts.wcs as wcs
 from ossos_scripts.storage import get_astheader
+from getImages import get_image_info
 
 
 def main(): 
@@ -30,9 +32,9 @@ def main():
         description='For an input .fits image, aperture size, threshold, and output file: preforms photometry')
     parser.add_argument("--family", '-f',
                         action="store",
-                        default="testfamily",
+                        default="3330",
                         help="The directory in getImages/family/ with input .fits files for astrometry/photometry measurements.")
-    parser.add_argument("--radius", '-r',
+    parser.add_argument("--aperture", '-a',
                         action='store',
                         default=10.0,
                         help='aperture (degree) of circle for photometry.')
@@ -42,7 +44,7 @@ def main():
                             help='threshold value.')
     parser.add_argument("--object", '-o',
                             action='store',
-                            default='test',
+                            default='54286',
                             help='the object to preform photometry on')
                             
     args = parser.parse_args()
@@ -51,14 +53,26 @@ def main():
     global objectname
     objectname = args.object
     global ap
-    ap = float(args.radius)
+    ap = float(args.aperture)
     global th
     th = float(args.thresh)
     # perhaps there's a better way of doing this, self.variable?
     
     find_objects_by_phot(familyname, objectname, ap, th)
 
-def find_objects_by_phot(familyname, objectname, ap, th):
+def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0):
+    
+    ''' Not yet working, objectname must be specified
+    print objectname
+    if objectname == None:
+        image_list = get_image_info(familyname, filtertype, imagetype)
+        print image_list
+        objectname = image_list[0]
+        print "WARNING: Object name not specified, searching for {}".format(objectname)
+    else:
+        print "if statement not working"
+    print objectname
+    '''
     
     global imageinfo
     imageinfo = familyname+'_images.txt'
@@ -68,9 +82,11 @@ def find_objects_by_phot(familyname, objectname, ap, th):
     family_dir = os.path.join(dir_path_base, familyname)
     if os.path.isdir(family_dir) == False:
         print "Invalid family name"
+    stamps_dir = os.path.join(family_dir, familyname+'_stamps')
     object_dir = os.path.join(family_dir, familyname+'_'+objectname)
     if os.path.isdir(object_dir) == False:
-        print "Invalid object name"
+        print "Invalid object name or object directory does not exist, searching through {}/{}_stamps instead".format(familyname, familyname)
+        object_dir = stamps_dir
     output_dir = os.path.join(object_dir, 'sep_phot_output')
     if os.path.isdir(output_dir) == False:
         os.makedirs(output_dir)
@@ -126,16 +142,16 @@ def find_objects_by_phot(familyname, objectname, ap, th):
                         #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p)))
                     except LookupError:
                         print " no PHOTZP in header "
-                        
+                
                 object_data = comp_coords(table, expnum_p, astheader, zeropt, mag_list_jpl)
                 
-                if len(object_data) > 0:
-                    with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
-                        try:
-                            outfile.write('{} {} {} {} {} {} {}\n'.format(
-                                    object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
-                        except:
-                            print "cannot write to outfile"
+                assert len(object_data) > 0
+                with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
+                    try:
+                        outfile.write('{} {} {} {} {} {} {}\n'.format(
+                                object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
+                    except:
+                        print "cannot write to outfile"    
      
     
 def mag_query_jpl(step, su='d'):
@@ -149,15 +165,29 @@ def mag_query_jpl(step, su='d'):
             assert len(line.split()) > 0
             if objectname == line.split()[0]:
                 date_range.append(float(line.split()[5]))
-    date_range_t = Time(date_range, format='mjd')
+    date_range_t = Time(date_range, format='mjd', scale='utc')
+    print date_range_t
+    assert  len(date_range_t.iso) > 0
     time_start = ((date_range_t.iso[0]).split())[0] + ' 00:00:00.0'
     time_end = ((date_range_t.iso[-1]).split())[0] + ' 00:00:00.0'
     
-    print " Date range in query: {} - {}".format(time_start, time_end)
+    if time_start == time_end:
+        print "WARNING: only searching for one day"
+        time_end_date = ((date_range_t.iso[-1]).split())[0]
+        time_end_split = time_end_date.split('-')
+        day_add_one = int(time_end_split[2])+1
+        if day_add_one < 10:
+            day = '0{}'.format(day_add_one)
+        else:
+            day = day_add_one
+        time_end = '{}-{}-{} 00:00:00.0'.format(time_end_split[0], time_end_split[1], day)
+    
+    print " Date range in query: {} -- {}".format(time_start, time_end)
     
     # change date format from 01-01-2001 00:00 to 01-Jan-2001 00:00
     date_start = change_date(time_start)
     date_end = change_date(time_end)
+    
     
     #print date_start, date_end
     
@@ -240,14 +270,17 @@ def mag_query_jpl(step, su='d'):
             None
     if index_end is None:
         print "index end could not be obtained"
-        index_end = 69
+        index_end = 70
     # for indexes from start to end dates, get apparent magnitude values
     for line in urlData[index_start:index_end+1]:
+        #print line
         try:
             mag_list.append(float((line.split()[4]).strip(',')))
         except:
             None
-  
+    
+    #print mag_list
+    assert len(mag_list) > 0
     return mag_list
     
        
@@ -271,9 +304,14 @@ def sep_phot(data):
     Preforms photometry by SEP, similar to source extractor 
     input is .fits file data
     '''
-        
-    # Measure a spatially variable background of some image data (numpy array)
-    bkg = sep.Background(data) #, mask=mask, bw=64, bh=64, fw=3, fh=3) # optional parameters
+    
+    
+    try:    
+        # Measure a spatially variable background of some image data (numpy array)
+        bkg = sep.Background(data) #, mask=mask, bw=64, bh=64, fw=3, fh=3) # optional parameters
+    except:
+        data = data.byteswap(True).newbyteorder()
+        bkg = sep.Background(data) #, mask=mask, bw=64, bh=64, fw=3, fh=3) # optional parameters
         
     # Evaluate the spatially variable background and RMS:
     back = bkg.back() # creates an array, same shape and type as data
@@ -365,6 +403,7 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                         None
                 
                 if mRA_pix == None:
+                    print "WARNING: Magnitude condition could not be satisfied"
                     break
                 
                 #print "   Flux, mag: {}, {}".format(flux, mag_sep)     

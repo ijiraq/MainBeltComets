@@ -17,57 +17,16 @@ import ossos_scripts.wcs as wcs
 from ossos_scripts.storage import get_astheader
 from getImages import get_image_info
 
-def main(): 
-    ''' 
-    Preforms photometry on .fits files given an input of family name and object name
-    Identifies object in image from predicted coordinates, magnitude (and eventually shape)
-    Assumes files organised as:
-    dir_path_base/familyname/familyname_objectname/*.fits       - images to do photometry on
-      or dir_path_base/familyname/familyname_stamps/*.fits
-    dir_path_base/familyname/*_images.txt                       - list of image exposures, predicted RA and DEC, dates etc.
-    '''
-    
-    parser = argparse.ArgumentParser(
-                        description='For an object in an asteroid family, parses AstDys for a list of members, \
-                        parses MPC for images of those objects from CFHT/MegaCam in specific filter and exposure time,\
-                        cuts out postage stamps images of given radius (should eventually be uncertainty ellipse), \
-                         preforms photometry on a specified object given an aperture size and threshold, \
-                        and then selects the object in the image from the predicted coordinates, magnitude, and eventually shape')
-    parser.add_argument("--family", '-f',
-                        action="store",
-                        default="3330",
-                        help="Asteroid family name. Usually the asteroid number of the largest member.")
-    parser.add_argument("--aperture", '-a',
-                        action='store',
-                        default=10.0,
-                        help='aperture (degree) of circle for photometry.')
-    parser.add_argument("--thresh", '-t',
-                        action='store',
-                        default=5.0,
-                        help='threshold value for photometry (sigma above background).')
-    parser.add_argument("--object", '-o',
-                        action='store',
-                        default=None,
-                        help='The object to preform photometry on.')
-    parser.add_argument("--filter",
-                        action="store",
-                        default='r',
-                        dest="filter",
-                        choices=['r', 'u'],
-                        help="passband: default is r'")
-    parser.add_argument('--type',
-                        default='p',
-                        choices=['o', 'p', 's'], 
-                        help="restrict type of image (unprocessed, reduced, calibrated)")
-    parser.add_argument('--elim', '-el',
-                        default='0.4',
-                        help="restrict type of image (unprocessed, reduced, calibrated)")
-                            
-    args = parser.parse_args()
-    
-    find_objects_by_phot(args.family, args.object, float(args.aperture), float(args.thresh), args.filter, args.type, args.elim)
+''' 
+Preforms photometry on .fits files given an input of family name and object name
+Identifies object in image from predicted coordinates, magnitude (and eventually shape)
+Assumes files organised as:
+dir_path_base/familyname/familyname_objectname/*.fits       - images to do photometry on
+  or dir_path_base/familyname/familyname_stamps/*.fits
+dir_path_base/familyname/*_images.txt                       - list of image exposures, predicted RA and DEC, dates etc.
+'''
 
-def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0, filtertype='r', imagetype='p', elim=0.4):
+def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertype='r', imagetype='p', elim=0.3):
     
     if objectname == None:
         image_list = get_image_info(familyname, filtertype, imagetype)
@@ -83,8 +42,8 @@ def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0, filtertype='r'
 
     # get range of magnitudes of object over time span that the images were taken
     print "----- Querying JPL Horizon's ephemeris for apparent magnitudes -----"
-    urlData, date_start, date_end = query_jpl(objectname, step=1)
-    mag_list_jpl = parse_mag_jpl(urlData, date_start, date_end)
+    
+    mag_list_jpl = parse_mag_jpl(objectname, step=1)
     
     # preform the photometry and identify object
     print "----- Preforming photometry on all images of {} in family {} -----".format(objectname, familyname)
@@ -111,19 +70,24 @@ def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0, filtertype='r'
                         zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 0)
                         table = sep_phot(hdulist[0].data, ap, th)
                         astheader = hdulist[0].header
-                        #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
+                        ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
                     except LookupError:
                         print "ERROR: no PHOTZP in header, skipping image "
                 
-                object_data = iden_obj(table, expnum_p, astheader, zeropt, mag_list_jpl, elim)
-                assert len(object_data) > 0
-                with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
-                    try:
-                        outfile.write('{} {} {} {} {} {} {}\n'.format(
-                                object_data[0], object_data[1], object_data[2], object_data[3], 
-                                object_data[4], object_data[5], object_data[6]))
-                    except:
-                        print "ERROR: cannot write to outfile"    
+                pvwcs = wcs.WCS(astheader)
+                i_list = find_neighbours(table, expnum_p, pvwcs)
+                object_data = iden_obj(i_list, table, zeropt, mag_list_jpl, elim, pvwcs)
+                
+                if object_data == None:
+                    print "WARNING: Could not identify object {} in image".format(objectname, expnum_p)
+                else:
+                    with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
+                        try:
+                            outfile.write('{} {} {} {} {} {} {}\n'.format(
+                                      expnum_p, object_data[0], object_data[1], object_data[2], object_data[3], 
+                                      object_data[4], object_data[5]))
+                        except:
+                            print "ERROR: cannot write to outfile"
 
 def query_jpl(objectname, step=1, su='d'):
     '''
@@ -207,7 +171,9 @@ def query_jpl(objectname, step=1, su='d'):
             
     return urlData, date_start, date_end
 
-def parse_mag_jpl(urlData, date_start, date_end):
+def parse_mag_jpl(objectname, step=1):
+    
+    urlData, date_start, date_end = query_jpl(objectname, step=1)
     
     # parse through urlData for indexes of start and end dates    
     index_end = None
@@ -295,21 +261,16 @@ def sep_phot(data, ap, th):
     table = Table([objs['x'], objs['y'], flux, objs['a'], objs['b']], names=('x', 'y', 'flux', 'a', 'b'))
     return table
 
-def iden_obj(septable, expnum_p, astheader, zeropt, mag_list_jpl, elim):
+def find_neighbours(septable, expnum_p, pvwcs):
     '''
-    Compares predicted RA and DEC to that measured by sep photometry
-    Selects nearest neighbour object from predicted coordinates as object of interest
-    Compares measured apparent magnitude to predicted
+    Computes the nearest neighbours to predicted coordinates, should eventually find all those in uncertainty ellipse
     '''
-
     tree = cKDTree(zip((np.array(septable['x'])).ravel(), (np.array(septable['y'])).ravel()))
     
     with open('{}/{}'.format(family_dir, imageinfo)) as infile:
         for line in infile.readlines()[1:]:
             assert len(line.split()) > 0
             expnum_p_fromfile = line.split()[1]
-
-            pvwcs = wcs.WCS(astheader)
             
             # for entries in *_images.txt that correspond to images of the object
             if expnum_p_fromfile == expnum_p:
@@ -324,45 +285,74 @@ def iden_obj(septable, expnum_p, astheader, zeropt, mag_list_jpl, elim):
                 
                 # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
                 coords = np.array([pRA_pix, pDEC_pix])
-                d_list, i_list = tree.query(coords, k=10)
+                d_list, i_list = tree.query(coords, k=25)
+                
+                return i_list
 
-                mRA_pix = None
-                for i in i_list:
-                    flux = septable[i][2]
-                    a = septable[i][3]
-                    b = septable[i][4]
-                    ecc = (1-(b/a)**2)**0.5
-                    print ecc, elim
-                    try:
-                        mag_sep = -2.5*math.log10(flux)+zeropt
-                        mean = np.mean(mag_list_jpl)
-                        maxmag = np.amax(mag_list_jpl)
-                        minmag = np.amin(mag_list_jpl)
-                        
-                        if ( 1 > maxmag - minmag):
-                            if (abs(mag_sep - mean) < 1):
-                                mRA_pix = septable[i][0]
-                                mDEC_pix = septable[i][1]
-                                break
-                        else:
-                            if (abs(mag_sep - mean) < maxmag - minmag):
-                                mRA_pix = septable[i][0]
-                                mDEC_pix = septable[i][1]  
-                                break 
-                    except:
-                        None
-                
-                if mRA_pix == None:
-                    print "WARNING: Magnitude condition could not be satisfied"
+def iden_obj(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
+    '''
+    Selects nearest neighbour object from predicted coordinates as object of interest
+    In order:
+        Compares measured apparent magnitude to predicted, passes if in range of values
+        Calculates eccentricity, passes if greater than minimum value that is inputted
+    '''
+    
+    mRA_pix = None
+    e_cond = None
+    good_neighbours = []
+    
+    for i in i_list:
+        flux = septable[i][2]
+        a = septable[i][3]
+        b = septable[i][4]
+        ecc = (1-(b/a)**2)**0.5
+
+        if flux > 0:
+            mag_sep = -2.5*math.log10(flux)+zeropt
+            mag_sep_list.append(mag_sep)
+            mean = np.mean(mag_list_jpl)
+            maxmag = np.amax(mag_list_jpl)
+            minmag = np.amin(mag_list_jpl)
+        
+            if ( 1.5 > maxmag - minmag):
+                magrange = 1.5
+            else:
+                magrange = maxmag - minmag
+                    
+            # apply both eccentricity and magnitude conditions
+            try:
+                if (abs(mag_sep - mean) < magrange) & (ecc > float(elim)):
+                    mRA_pix = septable[i][0]
+                    mDEC_pix = septable[i][1]
+                    good_neighbours.append()
+                    e_cond = 1
+                    good_neighbour = 1
                     break
-                
-                #print "   Flux, mag: {}, {}".format(flux, mag_sep)     
-                mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
-                #print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
-                print "  in pixels: {} {}".format(mRA_pix, mDEC_pix)
-                #print " Difference: {} {}".format(mRA - pRA, mDEC - pDEC)
-                                        
-                return expnum_p, mRA, mRA_pix, mDEC, mDEC_pix, flux, mag_sep   
+        
+            # if not both, try each
+            except:              
+                if (abs(mag_sep - mean) < magrange):
+                    mRA_pix = septable[i][0]
+                    mDEC_pix = septable[i][1]
+                    good_neighbour = [i, flux, mRA_pix, mDEC_pix, mag_sep, ecc]
+                    break
+                    if ecc < 0.5:
+                        print "Eccentricity is low: {}".format(ecc)        
+    
+    if e_cond == None:
+        print "WARNING: Eccentricity condition could not be satisfied"
+    if mRA_pix == None:
+        print "WARNING: Magnitude condition could not be satisfied"
+        print i_list
+        print "  {} {} {}".format(i, mean, mag_sep_list)
+    else: 
+        #print "   Flux, mag: {}, {}".format(flux, mag_sep)     
+        mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
+        #print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
+        print "  Coordinates: {} {}".format(mRA_pix, mDEC_pix)
+        #print " Difference: {} {}".format(mRA - pRA, mDEC - pDEC)
+                            
+        return mRA, mRA_pix, mDEC, mDEC_pix, flux, mag_sep           
 
 def init_dirs(familyname, objectname):
     global imageinfo
@@ -384,6 +374,48 @@ def init_dirs(familyname, objectname):
         os.makedirs(output_dir)
     
     return family_dir, object_dir, output_dir
+
+def main(): 
+    
+    parser = argparse.ArgumentParser(
+                        description='For an object in an asteroid family, parses AstDys for a list of members, \
+                        parses MPC for images of those objects from CFHT/MegaCam in specific filter and exposure time,\
+                        cuts out postage stamps images of given radius (should eventually be uncertainty ellipse), \
+                         preforms photometry on a specified object given an aperture size and threshold, \
+                        and then selects the object in the image from the predicted coordinates, magnitude, and eventually shape')
+    parser.add_argument("--family", '-f',
+                        action="store",
+                        default="3330",
+                        help="Asteroid family name. Usually the asteroid number of the largest member.")
+    parser.add_argument("--aperture", '-a',
+                        action='store',
+                        default=10.0,
+                        help='aperture (degree) of circle for photometry.')
+    parser.add_argument("--thresh", '-t',
+                        action='store',
+                        default=5.0,
+                        help='threshold value for photometry (sigma above background).')
+    parser.add_argument("--object", '-o',
+                        action='store',
+                        default=None,
+                        help='The object to preform photometry on.')
+    parser.add_argument("--filter",
+                        action="store",
+                        default='r',
+                        dest="filter",
+                        choices=['r', 'u'],
+                        help="passband: default is r'")
+    parser.add_argument('--type',
+                        default='p',
+                        choices=['o', 'p', 's'], 
+                        help="restrict type of image (unprocessed, reduced, calibrated)")
+    parser.add_argument('--elim', '-el',
+                        default='0.4',
+                        help="restrict type of image (unprocessed, reduced, calibrated)")
+                            
+    args = parser.parse_args()
+    
+    find_objects_by_phot(args.family, args.object, float(args.aperture), float(args.thresh), args.filter, args.type, args.elim)
     
 if __name__ == '__main__':
     main()

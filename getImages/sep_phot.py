@@ -59,19 +59,20 @@ def main():
                         default='p',
                         choices=['o', 'p', 's'], 
                         help="restrict type of image (unprocessed, reduced, calibrated)")
+    parser.add_argument('--elim', '-el',
+                        default='0.4',
+                        help="restrict type of image (unprocessed, reduced, calibrated)")
                             
     args = parser.parse_args()
     
-    find_objects_by_phot(args.family, args.object, float(args.aperture), float(args.thresh), args.filter, args.type)
+    find_objects_by_phot(args.family, args.object, float(args.aperture), float(args.thresh), args.filter, args.type, args.elim)
 
-def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0, filtertype='r', imagetype='p'):
+def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0, filtertype='r', imagetype='p', elim=0.4):
     
-    print objectname
     if objectname == None:
         image_list = get_image_info(familyname, filtertype, imagetype)
         objectname = image_list[0]
         print "WARNING: Object name not specified, searching for {}".format(objectname)
-    print objectname
     
     # initiate directories
     family_dir, object_dir, output_dir = init_dirs(familyname, objectname)
@@ -82,7 +83,8 @@ def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0, filtertype='r'
 
     # get range of magnitudes of object over time span that the images were taken
     print "----- Querying JPL Horizon's ephemeris for apparent magnitudes -----"
-    mag_list_jpl = mag_query_jpl(objectname, step=1)
+    urlData, date_start, date_end = query_jpl(objectname, step=1)
+    mag_list_jpl = parse_mag_jpl(urlData, date_start, date_end)
     
     # preform the photometry and identify object
     print "----- Preforming photometry on all images of {} in family {} -----".format(objectname, familyname)
@@ -113,7 +115,7 @@ def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0, filtertype='r'
                     except LookupError:
                         print "ERROR: no PHOTZP in header, skipping image "
                 
-                object_data = comp_coords(table, expnum_p, astheader, zeropt, mag_list_jpl)
+                object_data = iden_obj(table, expnum_p, astheader, zeropt, mag_list_jpl, elim)
                 assert len(object_data) > 0
                 with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
                     try:
@@ -123,7 +125,7 @@ def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0, filtertype='r'
                     except:
                         print "ERROR: cannot write to outfile"    
 
-def mag_query_jpl(objectname, step=1, su='d'):
+def query_jpl(objectname, step=1, su='d'):
     '''
     Constructs a URL to query JPL Horizon's for apparent magnitude in a date range
     '''
@@ -202,29 +204,40 @@ def mag_query_jpl(objectname, step=1, su='d'):
                 time.sleep(60)
         else:
             done = 1   
+            
+    return urlData, date_start, date_end
+
+def parse_mag_jpl(urlData, date_start, date_end):
     
     # parse through urlData for indexes of start and end dates    
-    try: 
-        for idx, line in enumerate(urlData):
+    index_end = None
+    index_start = None
+    for idx, line in enumerate(urlData):  #testing
+        assert line.split() > 0
+        try:
             date_jpl = line.split()[0]+' '+(line.split()[1]).strip(',')
             if date_start == date_jpl:
                 index_start = idx
-    except:
-        print "index start could not be obtained"
+        except:
+            None
+    if index_start is None:
+        print "WARNING: index start could not be obtained, set to index 69"
         index_start = 69
-    try:
-        for idx, line in enumerate(urlData):  #testing
+    for idx, line in enumerate(urlData):  #testing
+        try:
             date_jpl = line.split()[0]+' '+(line.split()[1]).strip(',')
             if date_end == date_jpl:
                 index_end = idx
-    except:
-        print "index end could not be obtained"
+        except:
+            None
+    if index_end is None:
+        print "WARNING: index end could not be obtained, set to index 70"
         index_end = 70
         
     # for indexes from start to end dates, get apparent magnitude values
     mag_list = []
     for line in urlData[index_start:index_end+1]:
-        assert len(line.split()) > 0    
+        assert len(line.split()) > 0 
         try:
             mag_list.append(float((line.split()[4]).strip(',')))
         except:
@@ -279,10 +292,10 @@ def sep_phot(data, ap, th):
     flag |= krflag  # combine flags into 'flag'
    
     # write to ascii table
-    table = Table([objs['x'], objs['y'], flux], names=('x', 'y', 'flux'))
+    table = Table([objs['x'], objs['y'], flux, objs['a'], objs['b']], names=('x', 'y', 'flux', 'a', 'b'))
     return table
 
-def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
+def iden_obj(septable, expnum_p, astheader, zeropt, mag_list_jpl, elim):
     '''
     Compares predicted RA and DEC to that measured by sep photometry
     Selects nearest neighbour object from predicted coordinates as object of interest
@@ -295,7 +308,7 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
         for line in infile.readlines()[1:]:
             assert len(line.split()) > 0
             expnum_p_fromfile = line.split()[1]
-            
+
             pvwcs = wcs.WCS(astheader)
             
             # for entries in *_images.txt that correspond to images of the object
@@ -310,13 +323,16 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                 #print "  in pixels: {} {}".format(pRA_pix, pDEC_pix)
                 
                 # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
-                
                 coords = np.array([pRA_pix, pDEC_pix])
                 d_list, i_list = tree.query(coords, k=10)
 
                 mRA_pix = None
                 for i in i_list:
                     flux = septable[i][2]
+                    a = septable[i][3]
+                    b = septable[i][4]
+                    ecc = (1-(b/a)**2)**0.5
+                    print ecc, elim
                     try:
                         mag_sep = -2.5*math.log10(flux)+zeropt
                         mean = np.mean(mag_list_jpl)
@@ -343,15 +359,9 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
                 #print "   Flux, mag: {}, {}".format(flux, mag_sep)     
                 mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
                 #print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
-                #print "  in pixels: {} {}".format(mRA_pix, mDEC_pix)
-                
-                diffRA = mRA - pRA
-                diffDEC = mDEC - pDEC
-                #print " Difference: {} {}".format(diffRA, diffDEC)
-                
-                
-
-                        
+                print "  in pixels: {} {}".format(mRA_pix, mDEC_pix)
+                #print " Difference: {} {}".format(mRA - pRA, mDEC - pDEC)
+                                        
                 return expnum_p, mRA, mRA_pix, mDEC, mDEC_pix, flux, mag_sep   
 
 def init_dirs(familyname, objectname):

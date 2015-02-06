@@ -47,21 +47,31 @@ def main():
                         help='threshold value for photometry (sigma above background).')
     parser.add_argument("--object", '-o',
                         action='store',
-                        default='54286',
+                        default=None,
                         help='The object to preform photometry on.')
+    parser.add_argument("--filter",
+                        action="store",
+                        default='r',
+                        dest="filter",
+                        choices=['r', 'u'],
+                        help="passband: default is r'")
+    parser.add_argument('--type',
+                        default='p',
+                        choices=['o', 'p', 's'], 
+                        help="restrict type of image (unprocessed, reduced, calibrated)")
                             
     args = parser.parse_args()
     
-    find_objects_by_phot(args.family, args.object, float(args.aperture), float(args.thresh))
+    find_objects_by_phot(args.family, args.object, float(args.aperture), float(args.thresh), args.filter, args.type)
 
-def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0):
+def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0, filtertype='r', imagetype='p'):
     
-    ''' Not yet working, objectname must be specified
+    print objectname
     if objectname == None:
         image_list = get_image_info(familyname, filtertype, imagetype)
         objectname = image_list[0]
         print "WARNING: Object name not specified, searching for {}".format(objectname)
-    '''
+    print objectname
     
     # initiate directories
     family_dir, object_dir, output_dir = init_dirs(familyname, objectname)
@@ -108,7 +118,8 @@ def find_objects_by_phot(familyname, objectname, ap=10.0, th=5.0):
                 with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
                     try:
                         outfile.write('{} {} {} {} {} {} {}\n'.format(
-                                object_data[0], object_data[1], object_data[2], object_data[3], object_data[4], object_data[5], object_data[6]))
+                                object_data[0], object_data[1], object_data[2], object_data[3], 
+                                object_data[4], object_data[5], object_data[6]))
                     except:
                         print "ERROR: cannot write to outfile"    
 
@@ -144,8 +155,7 @@ def mag_query_jpl(objectname, step=1, su='d'):
     date_start = change_date(time_start)
     date_end = change_date(time_end)
     
-    # select parameter for apparent magnitude
-    s = '9'
+    s = '9' # select parameter for apparent magnitude
     
     # form URL pieces that Horizon needs for its processing instructions
     urlArr = ["http://ssd.jpl.nasa.gov/horizons_batch.cgi?batch=1&COMMAND=",
@@ -193,47 +203,39 @@ def mag_query_jpl(objectname, step=1, su='d'):
         else:
             done = 1   
     
-    mag_list = []
-    # parse through urlData for indexes of start and end dates
-    index_end = None
-    index_start = None
-    for idx, line in enumerate(urlData):  #testing
-        try:
+    # parse through urlData for indexes of start and end dates    
+    try: 
+        for idx, line in enumerate(urlData):
             date_jpl = line.split()[0]+' '+(line.split()[1]).strip(',')
             if date_start == date_jpl:
                 index_start = idx
-        except:
-            None
-    if index_start is None:
+    except:
         print "index start could not be obtained"
         index_start = 69
-        
-    for idx, line in enumerate(urlData):  #testing
-        try:
+    try:
+        for idx, line in enumerate(urlData):  #testing
             date_jpl = line.split()[0]+' '+(line.split()[1]).strip(',')
             if date_end == date_jpl:
                 index_end = idx
-        except:
-            None
-    if index_end is None:
+    except:
         print "index end could not be obtained"
         index_end = 70
+        
     # for indexes from start to end dates, get apparent magnitude values
+    mag_list = []
     for line in urlData[index_start:index_end+1]:
         assert len(line.split()) > 0    
         try:
             mag_list.append(float((line.split()[4]).strip(',')))
         except:
-            None
+            print "WARNING: could not get magnitude from JPL line"
     
-    #print mag_list
     assert len(mag_list) > 0
     return mag_list
-    
        
 def change_date(date):
     '''
-    Convert time format 01-01-2001 00:00 to 01-Jan-2001 00:00
+    Convert time format 01-01-2001 00:00:00.00 to 01-Jan-2001 00:00
     '''
     date_split = date.split('-')
     date_strip = (date_split[2]).split()
@@ -249,12 +251,10 @@ def change_date(date):
 def sep_phot(data, ap, th):
     ''' 
     Preforms photometry by SEP, similar to source extractor 
-    input is .fits file data
     '''
-    
-    
+
+    # Measure a spatially variable background of some image data (numpy array)
     try:    
-        # Measure a spatially variable background of some image data (numpy array)
         bkg = sep.Background(data) #, mask=mask, bw=64, bh=64, fw=3, fh=3) # optional parameters
     except:
         data = data.byteswap(True).newbyteorder()
@@ -270,24 +270,14 @@ def sep_phot(data, ap, th):
     bkg.globalrms     # Global "average" RMS of background
         
     # for the background subtracted data, detect objects in data given some threshold
-    # ****CHOOSE APPROPRIATE THRESHOLD****
     thresh = th * bkg.globalrms    # ensure the threshold is high enough wrt background        
     objs = sep.extract(data, thresh)
-    #print len(objs)
-    #print objs['x'][0] # print flux-wieghted 
 
     # calculate the Kron radius for each object, then we perform elliptical aperture photometry within that radius
     kronrad, krflag = sep.kron_radius(data, objs['x'], objs['y'], objs['a'], objs['b'], objs['theta'], ap)
     flux, fluxerr, flag = sep.sum_ellipse(data, objs['x'], objs['y'], objs['a'], objs['b'], objs['theta'], 2.5*kronrad, subpix=1)
     flag |= krflag  # combine flags into 'flag'
-    
-    # mask = np.zeros(data.shape, dtype=np.bool)
-    # sep.mask_ellipse(mask, objs['x'], objs['y'], obs['a'], objs['b'], objs['theta'], r=3.)
-
-    # Specify a per-pixel "background" error and a gain. This is suitable when the data have been background subtracted.
-    # *** check image header for gain value ***
-    # flux, fluxerr, flag = sep.sum_circle(data, objs['x'], objs['y'], 3.0, err=bkg.globalrms, gain=1.0)
-
+   
     # write to ascii table
     table = Table([objs['x'], objs['y'], flux], names=('x', 'y', 'flux'))
     return table
@@ -299,10 +289,7 @@ def comp_coords(septable, expnum_p, astheader, zeropt, mag_list_jpl):
     Compares measured apparent magnitude to predicted
     '''
 
-    x_array = np.array(septable['x'])
-    y_array = np.array(septable['y'])
-    tree = cKDTree(zip(x_array.ravel(), y_array.ravel()))
-    # print tree.data
+    tree = cKDTree(zip((np.array(septable['x'])).ravel(), (np.array(septable['y'])).ravel()))
     
     with open('{}/{}'.format(family_dir, imageinfo)) as infile:
         for line in infile.readlines()[1:]:

@@ -30,32 +30,7 @@ from astropy.table import Table, Column
 
 BASEURL = "http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/vospace/auth/synctrans"
 
-def main():
-    
-# PARSE INFORMATION INPUTTED FROM THE COMMAND LINE
-	# VERSION - OSSOS DATA RELEASE VERSION THE STAMPS ARE TO BE ASSIGNED TO
-	# INPUT FILE
-	# RADIUS - SIZE OF CIRCULAR CUTOUT
-    
-    # INPUT LIST OF IMAGES IN COMMAND LINE
-    # IDENTIFY PARAMETERS FOR QUERY OF SSOIS FROM INPUT
 
-    parser = argparse.ArgumentParser(
-        description='Parse an obects.txt input file (find_family.py output) and create links in the postage stamp directory '
-                    'that allow retrieval of cutouts of the FITS images associated with the CHT/MegaCam detections. '
-                    'Cutouts are defined on the WCS RA/DEC of the object position.')
-    parser.add_argument("--family",
-                        action="store",
-                        default="lixImages.txt",
-                        help="The input .txt files of astrometry/photometry measurements.")
-    parser.add_argument("--radius", '-r',
-                        action='store',
-                        default=0.02,
-                        help='Radius (degree) of circle of cutout postage stamp.')
-    
-    args = parser.parse_args()
-    
-    get_stamps(args.family, args.radius)
     
 def get_stamps(familyname, radius):
     
@@ -124,7 +99,35 @@ def cutout(objectname, image, RA, DEC, radius, username, password, familyname):
     postage_stamp_filename = "{}_{}_{:8f}_{:8f}.fits".format(objectname, image, RA, DEC)
     with open('{}/{}'.format(output_dir, postage_stamp_filename), 'w') as tmp_file:
         tmp_file.write(r.content)
+        storage.copy(postage_stamp_filename, 'kawebb/{}/{}'.format(output_dir, postage_stamp_filename))
+    os.unlink(postage_stamp_filename)  # easier not to have them hanging around
+    
+def main():
+    
+# PARSE INFORMATION INPUTTED FROM THE COMMAND LINE
+	# VERSION - OSSOS DATA RELEASE VERSION THE STAMPS ARE TO BE ASSIGNED TO
+	# INPUT FILE
+	# RADIUS - SIZE OF CIRCULAR CUTOUT
+    
+    # INPUT LIST OF IMAGES IN COMMAND LINE
+    # IDENTIFY PARAMETERS FOR QUERY OF SSOIS FROM INPUT
 
+    parser = argparse.ArgumentParser(
+        description='Parse an obects.txt input file (find_family.py output) and create links in the postage stamp directory '
+                    'that allow retrieval of cutouts of the FITS images associated with the CHT/MegaCam detections. '
+                    'Cutouts are defined on the WCS RA/DEC of the object position.')
+    parser.add_argument("--family",
+                        action="store",
+                        default="lixImages.txt",
+                        help="The input .txt files of astrometry/photometry measurements.")
+    parser.add_argument("--radius", '-r',
+                        action='store',
+                        default=0.02,
+                        help='Radius (degree) of circle of cutout postage stamp.')
+    
+    args = parser.parse_args()
+    
+    get_stamps(args.family, args.radius)
 		
 if __name__ == '__main__':
     main()	

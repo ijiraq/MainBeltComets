@@ -34,7 +34,7 @@ def main():
     
     get_image_info(args.family, args.filter, args.type)
 
-def get_image_info(familyname, filtertype, imagetype):
+def get_image_info(familyname, filtertype='r', imagetype='p'):
     '''
     Query the ssois ephemeris for images of objects in a given family. Then parse through for desired image type, 
     filter, exposure time, and telescopy instrument
@@ -89,7 +89,7 @@ def get_image_info(familyname, filtertype, imagetype):
         if len(obs_in_filter) > 0:
             with open('{}/{}_images.txt'.format(family_dir, familyname), 'a') as outfile:
                 for line in obs_in_filter:
-                    image_list.append(line['Image'])
+                    image_list.append(object_name)
                     try:
                         outfile.write("{} {} {} {} {} {} {}\n".format(object_name,
                             line['Image'], line['Exptime'], line['Object_RA'], line['Object_Dec'],

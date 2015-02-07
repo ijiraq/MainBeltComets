@@ -76,7 +76,9 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
                 
                 pvwcs = wcs.WCS(astheader)
                 i_list = find_neighbours(table, expnum_p, pvwcs)
-                object_data = iden_obj(i_list, table, zeropt, mag_list_jpl, elim, pvwcs)
+                good_neighbours, mean = iden_good_neighbours(i_list, table, zeropt, mag_list_jpl, elim, pvwcs)
+                object_data = iden_object(good_neighbours, mean)
+                
                 
                 if object_data == None:
                     print "WARNING: Could not identify object {} in image".format(objectname, expnum_p)
@@ -289,7 +291,7 @@ def find_neighbours(septable, expnum_p, pvwcs):
                 
                 return i_list
 
-def iden_obj(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
+def iden_good_neighbours(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
     '''
     Selects nearest neighbour object from predicted coordinates as object of interest
     In order:
@@ -298,8 +300,13 @@ def iden_obj(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
     '''
     
     mRA_pix = None
-    e_cond = None
-    good_neighbours = []
+    mag_sep_list = []
+    index_list = []
+    flux_list = []
+    mRA_pix_list = []
+    mDEC_pix_list = []
+    ecc_list = []
+    
     
     for i in i_list:
         flux = septable[i][2]
@@ -309,13 +316,12 @@ def iden_obj(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
 
         if flux > 0:
             mag_sep = -2.5*math.log10(flux)+zeropt
-            mag_sep_list.append(mag_sep)
             mean = np.mean(mag_list_jpl)
             maxmag = np.amax(mag_list_jpl)
             minmag = np.amin(mag_list_jpl)
         
-            if ( 1.5 > maxmag - minmag):
-                magrange = 1.5
+            if ( 1 > maxmag - minmag):
+                magrange = 1
             else:
                 magrange = maxmag - minmag
                     
@@ -324,23 +330,37 @@ def iden_obj(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
                 if (abs(mag_sep - mean) < magrange) & (ecc > float(elim)):
                     mRA_pix = septable[i][0]
                     mDEC_pix = septable[i][1]
-                    good_neighbours.append()
-                    e_cond = 1
-                    good_neighbour = 1
-                    break
+                    
+                    index_list.append(i)
+                    flux_list.append(flux)
+                    mRA_pix_list.append(mRA_pix)
+                    mDEC_pix_list.append(mDEC_pix)
+                    mag_sep_list.append(mag_sep)
+                    ecc_list.append(ecc)
+                    
         
             # if not both, try each
             except:              
                 if (abs(mag_sep - mean) < magrange):
                     mRA_pix = septable[i][0]
                     mDEC_pix = septable[i][1]
-                    good_neighbour = [i, flux, mRA_pix, mDEC_pix, mag_sep, ecc]
-                    break
+
+                    index_list.append(i)
+                    flux_list.append(flux)
+                    mRA_pix_list.append(mRA_pix)
+                    mDEC_pix_list.append(mDEC_pix)
+                    mag_sep_list.append(mag_sep)
+                    ecc_list.append(ecc)
+                    
                     if ecc < 0.5:
                         print "Eccentricity is low: {}".format(ecc)        
     
-    if e_cond == None:
-        print "WARNING: Eccentricity condition could not be satisfied"
+    # write to ascii table
+    good_neighbours = Table([index_list, flux_list, mag_sep_list, mRA_pix_list, mDEC_pix_list, ecc_list], 
+                names=('index', 'flux', 'mag', 'RA', 'DEC', 'ecc'))
+                
+    print good_neighbours
+    
     if mRA_pix == None:
         print "WARNING: Magnitude condition could not be satisfied"
         print i_list
@@ -351,9 +371,25 @@ def iden_obj(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
         #print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
         print "  Coordinates: {} {}".format(mRA_pix, mDEC_pix)
         #print " Difference: {} {}".format(mRA - pRA, mDEC - pDEC)
-                            
-        return mRA, mRA_pix, mDEC, mDEC_pix, flux, mag_sep           
-
+        
+        return good_neighbours, mean 
+        
+def iden_object(good_neighbours, mean):
+    
+    mag_diff = []
+    for objects in good_neighbours:
+        mag = objects[2]
+        mag_diff.append(mean - mag)
+        
+    min_mag = np.amin(mag_diff)
+    
+    for objects in good_neighbours:
+        mag = objects[2]
+        if mag == (mean - min_mag):
+            the_object = objects
+    print the_object
+    return the_object     
+        
 def init_dirs(familyname, objectname):
     global imageinfo
     imageinfo = familyname+'_images.txt'

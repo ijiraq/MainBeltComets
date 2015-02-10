@@ -1,5 +1,7 @@
 import os
 import sep
+import re
+import tempfile
 import urllib2 as url
 import numpy as np
 from astropy.io import fits
@@ -9,6 +11,7 @@ from astropy.time import Time
 import argparse
 from scipy.spatial import cKDTree
 import math
+from pyraf import iraf
 
 import sys
 sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
@@ -38,7 +41,7 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
 
     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'w') as outfile:
         outfile.write("{:>3s} {:>5s} {:>17s} {:>10s} {:>17s} {:>10s} {:>17s}\n".format(
-            "Image", "RA", "RA_pix", "DEC", "DEC_pix", "flux", "meas_mag"))        
+            "Image", 'flux', 'mag', 'RA', 'DEC', 'ecc'))        
 
     # get range of magnitudes of object over time span that the images were taken
     print "----- Querying JPL Horizon's ephemeris for apparent magnitudes -----"
@@ -78,16 +81,16 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
                 i_list = find_neighbours(table, expnum_p, pvwcs)
                 good_neighbours, mean = iden_good_neighbours(i_list, table, zeropt, mag_list_jpl, elim, pvwcs)
                 object_data = iden_object(good_neighbours, mean)
-                
+                thingy = daophot_revised(hdulist, table, ap, sky=20, swidth=10, apcor=0.3, maxcount=30000.0, exptime=1.0, zmag=None)
                 
                 if object_data == None:
                     print "WARNING: Could not identify object {} in image".format(objectname, expnum_p)
                 else:
                     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
                         try:
-                            outfile.write('{} {} {} {} {} {} {}\n'.format(
-                                      expnum_p, object_data[0], object_data[1], object_data[2], object_data[3], 
-                                      object_data[4], object_data[5]))
+                            outfile.write('{} {} {} {} {} {}\n'.format(
+                                      expnum_p, object_data[1], object_data[2], object_data[5], object_data[6], 
+                                      object_data[7]))
                         except:
                             print "ERROR: cannot write to outfile"
 
@@ -306,10 +309,13 @@ def iden_good_neighbours(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
     mRA_pix_list = []
     mDEC_pix_list = []
     ecc_list = []
-    
+    x_list = []
+    y_list = []
     
     for i in i_list:
         flux = septable[i][2]
+        x = septable[i][0]
+        y = septable[i][1]
         a = septable[i][3]
         b = septable[i][4]
         ecc = (1-(b/a)**2)**0.5
@@ -337,7 +343,8 @@ def iden_good_neighbours(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
                     mDEC_pix_list.append(mDEC_pix)
                     mag_sep_list.append(mag_sep)
                     ecc_list.append(ecc)
-                    
+                    x_list.append(x)
+                    y_list.append(y)
         
             # if not both, try each
             except:              
@@ -351,13 +358,15 @@ def iden_good_neighbours(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
                     mDEC_pix_list.append(mDEC_pix)
                     mag_sep_list.append(mag_sep)
                     ecc_list.append(ecc)
+                    x_list.append(x)
+                    y_list.append(y)
                     
                     if ecc < 0.5:
                         print "Eccentricity is low: {}".format(ecc)        
     
     # write to ascii table
-    good_neighbours = Table([index_list, flux_list, mag_sep_list, mRA_pix_list, mDEC_pix_list, ecc_list], 
-                names=('index', 'flux', 'mag', 'RA', 'DEC', 'ecc'))
+    good_neighbours = Table([index_list, flux_list, mag_sep_list, x_list, y_list, mRA_pix_list, mDEC_pix_list, ecc_list], 
+                names=('index', 'flux', 'mag', 'x', 'y', 'RA', 'DEC', 'ecc'))
                 
     print good_neighbours
     
@@ -389,6 +398,143 @@ def iden_object(good_neighbours, mean):
             the_object = objects
     print the_object
     return the_object     
+    
+def daophot_revised(hdulist, table, ap, sky, swidth, apcor, maxcount, exptime, zmag):
+    """
+    Compute the centroids and magnitudes of a bunch sources detected on CFHT-MEGAPRIME images.
+    Args:
+      fits_filename: str  -- The name of the file containing the image to be processed.
+    Returns:
+      a MOPfiles data structure.
+    """
+        
+    x_in = table['x']
+    y_in = table['y']
+    filter = hdulist[0].header.get('FILTER', 'DEFAULT')
+
+    zeropoints = {"I": 25.77,
+                  "R": 26.07,
+                  "V": 26.07,
+                  "B": 25.92,
+                  "DEFAULT": 26.0,
+                  "g.MP9401": 26.4}
+
+    photzp = hdulist[0].header.get('PHOTZP', zeropoints.get(filter, zeropoints["DEFAULT"]))
+    if zmag is None:
+        zmag = hdulist[0].header.get('PHOTZP', zeropoints[filter])
+
+    if zmag != photzp:
+        logger.warning("ZEROPOINT {} used in DAOPHOT doesn't match PHOTZP {} in header".format(zmag, photzp))
+
+    # setup IRAF to do the magnitude/centroid measurements
+    iraf.set(uparm="./")
+    iraf.digiphot()
+    iraf.apphot()
+    iraf.daophot(_doprint=0)
+
+    iraf.photpars.apertures = aperture
+    iraf.photpars.zmag = zmag
+    iraf.datapars.datamin = 0
+    iraf.datapars.datamax = maxcount
+    iraf.datapars.exposur = ""
+    iraf.datapars.itime = exptime
+    iraf.fitskypars.annulus = sky
+    iraf.fitskypars.dannulus = swidth
+    iraf.fitskypars.salgorithm = "mode"
+    iraf.fitskypars.sloclip = 5.0
+    iraf.fitskypars.shiclip = 5.0
+    iraf.centerpars.calgori = "centroid"
+    iraf.centerpars.cbox = 5.
+    iraf.centerpars.cthreshold = 0.
+    iraf.centerpars.maxshift = 2.
+    iraf.centerpars.clean = 'no'
+    iraf.phot.update = 'no'
+    iraf.phot.verbose = 'no'
+    iraf.phot.verify = 'no'
+    iraf.phot.interactive = 'no'
+
+    # Used for passing the input coordinates
+    coofile = tempfile.NamedTemporaryFile(suffix=".coo", delete=False)
+    coofile.write("%f %f \n" % (x_in, y_in))
+
+    # Used for receiving the results of the task
+    # mag_fd, mag_path = tempfile.mkstemp(suffix=".mag")
+    magfile = tempfile.NamedTemporaryFile(suffix=".mag", delete=False)
+
+    # Close the temp files before sending to IRAF due to docstring:
+    # "Whether the name can be used to open the file a second time, while
+    # the named temporary file is still open, varies across platforms"
+    coofile.close()
+    magfile.close()
+    os.remove(magfile.name)
+
+    iraf.phot(fits_filename, coofile.name, magfile.name)
+
+    # TODO: Move this filtering downstream to the user.
+    phot_filter = "PIER==0 && CIER==0 && SIER==0"
+
+    pdump_out = iraf.pdump(magfile.name, "XCENTER,YCENTER,MAG,MERR,ID,XSHIFT,YSHIFT,LID",
+                           phot_filter, header='no', parameters='yes',
+                           Stdout=1)
+
+    if not len(pdump_out) > 0:
+        mag_content = open(magfile.name).read()
+        raise TaskError("photometry failed. {}".format(mag_content))
+
+    os.remove(coofile.name)
+    os.remove(magfile.name)
+
+    ### setup the mop output file structure
+    hdu = {}
+    hdu['header'] = {'image': input_hdulist,
+                     'aper': aperture,
+                     's_aper': sky,
+                     'd_s_aper': swidth,
+                     'aper_cor': apcor,
+                     'zeropoint': zmag}
+    hdu['order'] = ['X', 'Y', 'MAG', 'MERR', 'ID', 'XSHIFT', 'YSHIFT', 'LID']
+    hdu['format'] = {'X': '%10.2f',
+                     'Y': '%10.2f',
+                     'MAG': '%10.2f',
+                     'MERR': '%10.2f',
+                     'ID': '%8d',
+                     'XSHIFT': '%10.2f',
+                     'YSHIFT': '%10.2f',
+                     'LID': '%8d'}
+    hdu['data'] = {}
+    for col in hdu['order']:
+        hdu['data'][col] = []
+
+    for line in pdump_out:
+        values = line.split()
+        for col in hdu['order']:
+            if re.match('\%.*f', hdu['format'][col]):
+                if col == 'MAG':
+                    values[0] = float(values[0]) - float(apcor)
+                hdu['data'][col].append(float(values.pop(0)))
+            elif re.match('\%.*d', hdu['format'][col]):
+                hdu['data'][col].append(int(values.pop(0)))
+            else:
+                hdu['data'][col].append(values.pop(0))
+
+    # Clean up temporary files generated by IRAF
+    os.remove("datistabe.par")
+    os.remove("datpdump.par")
+
+    return hdu
+
+
+def phot_mag(*args, **kwargs):
+    """Wrapper around phot which only returns the computed magnitude directly."""
+    hdu = phot(*args, **kwargs)
+
+    try:
+        return hdu["data"]["X"][0], hdu["data"]["Y"][0], hdu["data"]["MAG"][0], hdu["data"]["MERR"][0],
+    except IndexError:
+        raise TaskError("Photometry cannot be performed.  "+str(hdu))
+
+        
+    
         
 def init_dirs(familyname, objectname):
     global imageinfo
@@ -414,9 +560,7 @@ def init_dirs(familyname, objectname):
 def main(): 
     
     parser = argparse.ArgumentParser(
-                        description='For an object in an asteroid family, parses AstDys for a list of members, \
-                        parses MPC for images of those objects from CFHT/MegaCam in specific filter and exposure time,\
-                        cuts out postage stamps images of given radius (should eventually be uncertainty ellipse), \
+                        description='For a given set of fits images, \
                          preforms photometry on a specified object given an aperture size and threshold, \
                         and then selects the object in the image from the predicted coordinates, magnitude, and eventually shape')
     parser.add_argument("--family", '-f',

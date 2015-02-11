@@ -25,7 +25,6 @@ from ossos_scripts import mpc
 from ossos_scripts import util
 
 import numpy as np
-import pandas as pd
 from astropy.table import Table, Column
 
 BASEURL = "http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/vospace/auth/synctrans"
@@ -62,8 +61,7 @@ def get_stamps(familyname, radius):
             cutout(objectname, expnum, RA, DEC, radius, username, password, familyname)
 	
 def cutout(objectname, image, RA, DEC, radius, username, password, familyname):
-
-# CUT OUT (image, RA, DEC, radius, CADC permissions)
+    # CUT OUT (image, RA, DEC, radius, CADC permissions)
 	# for each attribute in mpc_observations:
 		# storage.vospace.fixURI and 
 			# storage.get_uri (Build the uri for an OSSOS image stored in the dbimages containerNode)
@@ -97,14 +95,17 @@ def cutout(objectname, image, RA, DEC, radius, username, password, familyname):
     r = requests.get(BASEURL, params=params, auth=(username, password))
     r.raise_for_status()  # confirm the connection worked as hoped
     postage_stamp_filename = "{}_{}_{:8f}_{:8f}.fits".format(objectname, image, RA, DEC)
+    
+    '''
     with open('{}/{}'.format(output_dir, postage_stamp_filename), 'w') as tmp_file:
         tmp_file.write(r.content)
         storage.copy(postage_stamp_filename, 'kawebb/{}/{}'.format(output_dir, postage_stamp_filename))
     os.unlink(postage_stamp_filename)  # easier not to have them hanging around
+    '''
     
 def main():
     
-# PARSE INFORMATION INPUTTED FROM THE COMMAND LINE
+    # PARSE INFORMATION INPUTTED FROM THE COMMAND LINE
 	# VERSION - OSSOS DATA RELEASE VERSION THE STAMPS ARE TO BE ASSIGNED TO
 	# INPUT FILE
 	# RADIUS - SIZE OF CIRCULAR CUTOUT

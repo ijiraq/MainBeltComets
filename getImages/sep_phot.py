@@ -18,7 +18,7 @@ sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
 
 import ossos_scripts.wcs as wcs
 from ossos_scripts.storage import get_astheader
-from getImages import get_image_info
+from get_images import get_image_info
 
 ''' 
 Preforms photometry on .fits files given an input of family name and object name
@@ -36,11 +36,17 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
         objectname = image_list[0]
         print "WARNING: Object name not specified, searching for {}".format(objectname)
     
+    # From the given input, identify the desired filter and rename appropriately
+    if filtertype.lower().__contains__('r'):
+        filtertype = 'r.MP9601'  # this is the old (standard) r filter for MegaCam
+    if filtertype.lower().__contains__('u'):
+        filtertype = 'u.MP9301'
+    
     # initiate directories
     family_dir, object_dir, output_dir = init_dirs(familyname, objectname)
 
     with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'w') as outfile:
-        outfile.write("{:>3s} {:>5s} {:>17s} {:>10s} {:>17s} {:>10s} {:>17s}\n".format(
+        outfile.write("{:>3s} {:>5s} {:>17s} {:>10s} {:>17s} {:>10s}\n".format(
             "Image", 'flux', 'mag', 'RA', 'DEC', 'ecc'))        
 
     # get range of magnitudes of object over time span that the images were taken
@@ -60,6 +66,7 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
                 if hdulist[0].data is None: # what if more than 2ccd mosaic? could just be aperture values?
                     try:
                         zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 1)
+                        exptime = fits.getval('{}/{}'.format(object_dir, file), 'EXPTIME', 1)
                         table1 = sep_phot(hdulist[1].data, ap, th)
                         table2 = sep_phot(hdulist[2].data, ap, th)
                         table = vstack([table1, table2])
@@ -71,6 +78,7 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
                 else:
                     try:
                         zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 0)
+                        exptime = fits.getval('{}/{}'.format(object_dir, file), 'EXPTIME', 0)
                         table = sep_phot(hdulist[0].data, ap, th)
                         astheader = hdulist[0].header
                         ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
@@ -81,7 +89,8 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
                 i_list = find_neighbours(table, expnum_p, pvwcs)
                 good_neighbours, mean = iden_good_neighbours(i_list, table, zeropt, mag_list_jpl, elim, pvwcs)
                 object_data = iden_object(good_neighbours, mean)
-                thingy = daophot_revised(hdulist, table, ap, sky=20, swidth=10, apcor=0.3, maxcount=30000.0, exptime=1.0, zmag=None)
+                
+                thingy = daophot_revised(hdulist, zeropt, filtertype, exptime, table, ap, sky=20, swidth=10, apcor=0.3, maxcount=30000.0)
                 
                 if object_data == None:
                     print "WARNING: Could not identify object {} in image".format(objectname, expnum_p)
@@ -378,13 +387,14 @@ def iden_good_neighbours(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
         #print "   Flux, mag: {}, {}".format(flux, mag_sep)     
         mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
         #print " Measured RA and DEC: {}  {}".format(mRA, mDEC)
-        print "  Coordinates: {} {}".format(mRA_pix, mDEC_pix)
+        #print "  Coordinates: {} {}".format(mRA_pix, mDEC_pix)
         #print " Difference: {} {}".format(mRA - pRA, mDEC - pDEC)
         
         return good_neighbours, mean 
         
 def iden_object(good_neighbours, mean):
     
+    '''
     mag_diff = []
     for objects in good_neighbours:
         mag = objects[2]
@@ -396,10 +406,12 @@ def iden_object(good_neighbours, mean):
         mag = objects[2]
         if mag == (mean - min_mag):
             the_object = objects
-    print the_object
+    #print the_object
+    '''
+    the_object = good_neighbours[0]
     return the_object     
     
-def daophot_revised(hdulist, table, ap, sky, swidth, apcor, maxcount, exptime, zmag):
+def daophot_revised(fits_filename, zeropt, filtertype, exptime, table, ap, sky, swidth, apcor, maxcount):
     """
     Compute the centroids and magnitudes of a bunch sources detected on CFHT-MEGAPRIME images.
     Args:
@@ -407,24 +419,9 @@ def daophot_revised(hdulist, table, ap, sky, swidth, apcor, maxcount, exptime, z
     Returns:
       a MOPfiles data structure.
     """
-        
+          
     x_in = table['x']
     y_in = table['y']
-    filter = hdulist[0].header.get('FILTER', 'DEFAULT')
-
-    zeropoints = {"I": 25.77,
-                  "R": 26.07,
-                  "V": 26.07,
-                  "B": 25.92,
-                  "DEFAULT": 26.0,
-                  "g.MP9401": 26.4}
-
-    photzp = hdulist[0].header.get('PHOTZP', zeropoints.get(filter, zeropoints["DEFAULT"]))
-    if zmag is None:
-        zmag = hdulist[0].header.get('PHOTZP', zeropoints[filter])
-
-    if zmag != photzp:
-        logger.warning("ZEROPOINT {} used in DAOPHOT doesn't match PHOTZP {} in header".format(zmag, photzp))
 
     # setup IRAF to do the magnitude/centroid measurements
     iraf.set(uparm="./")
@@ -432,8 +429,8 @@ def daophot_revised(hdulist, table, ap, sky, swidth, apcor, maxcount, exptime, z
     iraf.apphot()
     iraf.daophot(_doprint=0)
 
-    iraf.photpars.apertures = aperture
-    iraf.photpars.zmag = zmag
+    iraf.photpars.apertures = ap
+    iraf.photpars.zmag = zeropt
     iraf.datapars.datamin = 0
     iraf.datapars.datamax = maxcount
     iraf.datapars.exposur = ""
@@ -455,15 +452,14 @@ def daophot_revised(hdulist, table, ap, sky, swidth, apcor, maxcount, exptime, z
 
     # Used for passing the input coordinates
     coofile = tempfile.NamedTemporaryFile(suffix=".coo", delete=False)
-    coofile.write("%f %f \n" % (x_in, y_in))
+    coofile.write('{} {}\n'.format(x_in, y_in))
 
     # Used for receiving the results of the task
     # mag_fd, mag_path = tempfile.mkstemp(suffix=".mag")
     magfile = tempfile.NamedTemporaryFile(suffix=".mag", delete=False)
 
     # Close the temp files before sending to IRAF due to docstring:
-    # "Whether the name can be used to open the file a second time, while
-    # the named temporary file is still open, varies across platforms"
+        # "Whether the name can be used to open the file a second time, while the named temporary file is still open, varies across platforms"
     coofile.close()
     magfile.close()
     os.remove(magfile.name)
@@ -484,14 +480,14 @@ def daophot_revised(hdulist, table, ap, sky, swidth, apcor, maxcount, exptime, z
     os.remove(coofile.name)
     os.remove(magfile.name)
 
-    ### setup the mop output file structure
+    # setup the mop output file structure
     hdu = {}
-    hdu['header'] = {'image': input_hdulist,
-                     'aper': aperture,
+    hdu['header'] = {'image': fits_filename,
+                     'aper': ap,
                      's_aper': sky,
                      'd_s_aper': swidth,
                      'aper_cor': apcor,
-                     'zeropoint': zmag}
+                     'zeropoint': zeropt}
     hdu['order'] = ['X', 'Y', 'MAG', 'MERR', 'ID', 'XSHIFT', 'YSHIFT', 'LID']
     hdu['format'] = {'X': '%10.2f',
                      'Y': '%10.2f',

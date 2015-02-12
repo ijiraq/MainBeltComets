@@ -29,6 +29,17 @@ dir_path_base/familyname/familyname_objectname/*.fits       - images to do photo
 dir_path_base/familyname/*_images.txt                       - list of image exposures, predicted RA and DEC, dates etc.
 '''
 
+'''
+NOTES, to do:
+    - read in files from VOSpace - NOT WORKING
+    - add in psf.py to get PSF
+    - find uncertianty of predicted coordinates and use that as nearest neighbour ball search
+    - reformat list appending
+    - get rid of images with incorrect WCS
+    - go through all objects for a family
+'''
+
+
 def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertype='r', imagetype='p', elim=0.3):
     
     if objectname == None:
@@ -43,9 +54,10 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
         filtertype = 'u.MP9301'
     
     # initiate directories
-    family_dir, object_dir, output_dir = init_dirs(familyname, objectname)
+    init_dirs(familyname, objectname)
+    out_filename = '{}_r{}_t{}_output.txt'.format(objectname, ap, th)
 
-    with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'w') as outfile:
+    with open('{}/{}'.format(object_dir, out_filename), 'w') as outfile:
         outfile.write("{:>3s} {:>5s} {:>17s} {:>10s} {:>17s} {:>10s}\n".format(
             "Image", 'flux', 'mag', 'RA', 'DEC', 'ecc'))        
 
@@ -56,53 +68,62 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
     
     # preform the photometry and identify object
     print "----- Preforming photometry on all images of {} in family {} -----".format(objectname, familyname)
-    for file in os.listdir('{}'.format(object_dir)):
+    
+    #for file in os.listdir('{}'.format(family_dir_vos)):
+    for file in os.listdir(object_dir):
         if file.endswith('.fits') == True:
-            expnum_p = file.split('_')[1]
+            objectname_file = file.split('_')[0]
+            if objectname_file == objectname:
+            # images named with convention: object_expnum_RA_DEC.fits
+                expnum_p = file.split('_')[1]
 
-            with fits.open('{}/{}'.format(object_dir, file)) as hdulist:
-                print " Preforming photometry on image {} ".format(expnum_p)
+                with fits.open('{}/{}'.format(object_dir, file)) as hdulist:
+                    print " Preforming photometry on image {} ".format(expnum_p)
                 
-                if hdulist[0].data is None: # what if more than 2ccd mosaic? could just be aperture values?
-                    try:
-                        zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 1)
-                        exptime = fits.getval('{}/{}'.format(object_dir, file), 'EXPTIME', 1)
-                        table1 = sep_phot(hdulist[1].data, ap, th)
-                        table2 = sep_phot(hdulist[2].data, ap, th)
-                        table = vstack([table1, table2])
-                        #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
-                        astheader = hdulist[0].header
-                    except LookupError: # maybe not correct error type?
-                        print "ERROR: no PHOTZP in header, skipping image "
-                    
-                else:
-                    try:
-                        zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 0)
-                        exptime = fits.getval('{}/{}'.format(object_dir, file), 'EXPTIME', 0)
-                        table = sep_phot(hdulist[0].data, ap, th)
-                        astheader = hdulist[0].header
-                        ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
-                    except LookupError:
-                        print "ERROR: no PHOTZP in header, skipping image "
-                
-                pvwcs = wcs.WCS(astheader)
-                i_list = find_neighbours(table, expnum_p, pvwcs)
-                good_neighbours, mean = iden_good_neighbours(i_list, table, zeropt, mag_list_jpl, elim, pvwcs)
-                object_data = iden_object(good_neighbours, mean)
-                
-                thingy = daophot_revised(hdulist, zeropt, filtertype, exptime, table, ap, sky=20, swidth=10, apcor=0.3, maxcount=30000.0)
-                
-                if object_data == None:
-                    print "WARNING: Could not identify object {} in image".format(objectname, expnum_p)
-                else:
-                    with open('{}/{}_r{}_t{}_output.txt'.format(object_dir, objectname, ap, th), 'a') as outfile:
+                    if hdulist[0].data is None: # what if more than 2ccd mosaic? could just be aperture values?
                         try:
-                            outfile.write('{} {} {} {} {} {}\n'.format(
-                                      expnum_p, object_data[1], object_data[2], object_data[5], object_data[6], 
-                                      object_data[7]))
-                        except:
-                            print "ERROR: cannot write to outfile"
-
+                            zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 1)
+                            exptime = fits.getval('{}/{}'.format(object_dir, file), 'EXPTIME', 1)
+                            table1 = sep_phot(hdulist[1].data, ap, th)
+                            table2 = sep_phot(hdulist[2].data, ap, th)
+                            table = vstack([table1, table2])
+                            #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
+                            astheader = hdulist[0].header
+                        except LookupError: # maybe not correct error type?
+                            print "ERROR: no PHOTZP in header, skipping image "
+                    
+                    else:
+                        try:
+                            zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 0)
+                            exptime = fits.getval('{}/{}'.format(object_dir, file), 'EXPTIME', 0)
+                            table = sep_phot(hdulist[0].data, ap, th)
+                            astheader = hdulist[0].header
+                            #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
+                        except LookupError:
+                            print "ERROR: no PHOTZP in header, skipping image "
+                
+                    pvwcs = wcs.WCS(astheader)
+                    i_list = find_neighbours(table, expnum_p, pvwcs)
+                    good_neighbours, mean = iden_good_neighbours(i_list, table, zeropt, mag_list_jpl, elim, pvwcs)
+                    print good_neighbours
+                    
+                    thingy = daophot_revised(hdulist, zeropt, filtertype, exptime, good_neighbours, ap, swidth=10, apcor=0.3, maxcount=30000.0)
+                    
+                    '''
+                    object_data = iden_object(good_neighbours, mean)
+                
+                    if object_data == None:
+                        print "WARNING: Could not identify object {} in image".format(objectname, expnum_p)
+                    else:
+                        with open('{}/{}'.format(object_dir, out_filename), 'a') as outfile:
+                            try:
+                                outfile.write('{} {} {} {} {} {}\n'.format(
+                                          expnum_p, object_data[1], object_data[2], object_data[5], object_data[6], 
+                                          object_data[7]))
+                            except:
+                                print "ERROR: cannot write to outfile"
+                    '''
+                
 def query_jpl(objectname, step=1, su='d'):
     '''
     Constructs a URL to query JPL Horizon's for apparent magnitude in a date range
@@ -114,6 +135,9 @@ def query_jpl(objectname, step=1, su='d'):
             assert len(line.split()) > 0
             if objectname == line.split()[0]:
                 date_range.append(float(line.split()[5]))
+                
+    if len(date_range) == 0:
+        print "WARNING: No images of this object exist"
     date_range_t = Time(date_range, format='mjd', scale='utc')
     assert  len(date_range_t.iso) > 0
     time_start = ((date_range_t.iso[0]).split())[0] + ' 00:00:00.0'
@@ -279,6 +303,10 @@ def find_neighbours(septable, expnum_p, pvwcs):
     '''
     Computes the nearest neighbours to predicted coordinates, should eventually find all those in uncertainty ellipse
     '''
+    num_neighbours = 25
+    if num_neighbours > len(septable):
+        num_neighbours = len(septable)
+    
     tree = cKDTree(zip((np.array(septable['x'])).ravel(), (np.array(septable['y'])).ravel()))
     
     with open('{}/{}'.format(family_dir, imageinfo)) as infile:
@@ -299,7 +327,7 @@ def find_neighbours(septable, expnum_p, pvwcs):
                 
                 # parse through table and get RA and DEC closest to predicted coordinates (in pixels)
                 coords = np.array([pRA_pix, pDEC_pix])
-                d_list, i_list = tree.query(coords, k=25)
+                d_list, i_list = tree.query(coords, num_neighbours)
                 
                 return i_list
 
@@ -313,6 +341,7 @@ def iden_good_neighbours(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
     
     mRA_pix = None
     mag_sep_list = []
+    all_mag = []
     index_list = []
     flux_list = []
     mRA_pix_list = []
@@ -320,7 +349,7 @@ def iden_good_neighbours(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
     ecc_list = []
     x_list = []
     y_list = []
-    
+        
     for i in i_list:
         flux = septable[i][2]
         x = septable[i][0]
@@ -334,9 +363,10 @@ def iden_good_neighbours(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
             mean = np.mean(mag_list_jpl)
             maxmag = np.amax(mag_list_jpl)
             minmag = np.amin(mag_list_jpl)
+            all_mag.append(mag_sep)
         
-            if ( 1 > maxmag - minmag):
-                magrange = 1
+            if ( 2 > maxmag - minmag):
+                magrange = 2
             else:
                 magrange = maxmag - minmag
                     
@@ -376,13 +406,12 @@ def iden_good_neighbours(i_list, septable, zeropt, mag_list_jpl, elim, pvwcs):
     # write to ascii table
     good_neighbours = Table([index_list, flux_list, mag_sep_list, x_list, y_list, mRA_pix_list, mDEC_pix_list, ecc_list], 
                 names=('index', 'flux', 'mag', 'x', 'y', 'RA', 'DEC', 'ecc'))
-                
-    print good_neighbours
-    
+                    
     if mRA_pix == None:
         print "WARNING: Magnitude condition could not be satisfied"
-        print i_list
-        print "  {} {} {}".format(i, mean, mag_sep_list)
+        print '  {}'.format(i_list)
+        print "  {} {} {}".format(i, mean, all_mag)
+        
     else: 
         #print "   Flux, mag: {}, {}".format(flux, mag_sep)     
         mRA, mDEC = pvwcs.xy2sky(mRA_pix, mDEC_pix) # convert from pixels to WCS
@@ -411,7 +440,7 @@ def iden_object(good_neighbours, mean):
     the_object = good_neighbours[0]
     return the_object     
     
-def daophot_revised(fits_filename, zeropt, filtertype, exptime, table, ap, sky, swidth, apcor, maxcount):
+def daophot_revised(fits_filename, zeropt, filtertype, exptime, good_neighbours, ap, swidth, apcor, maxcount):
     """
     Compute the centroids and magnitudes of a bunch sources detected on CFHT-MEGAPRIME images.
     Args:
@@ -420,8 +449,8 @@ def daophot_revised(fits_filename, zeropt, filtertype, exptime, table, ap, sky, 
       a MOPfiles data structure.
     """
           
-    x_in = table['x']
-    y_in = table['y']
+    x_in = good_neighbours['x'][0]
+    y_in = good_neighbours['y'][0]
 
     # setup IRAF to do the magnitude/centroid measurements
     iraf.set(uparm="./")
@@ -435,7 +464,7 @@ def daophot_revised(fits_filename, zeropt, filtertype, exptime, table, ap, sky, 
     iraf.datapars.datamax = maxcount
     iraf.datapars.exposur = ""
     iraf.datapars.itime = exptime
-    iraf.fitskypars.annulus = sky
+    iraf.fitskypars.annulus = ap + 5
     iraf.fitskypars.dannulus = swidth
     iraf.fitskypars.salgorithm = "mode"
     iraf.fitskypars.sloclip = 5.0
@@ -443,7 +472,7 @@ def daophot_revised(fits_filename, zeropt, filtertype, exptime, table, ap, sky, 
     iraf.centerpars.calgori = "centroid"
     iraf.centerpars.cbox = 5.
     iraf.centerpars.cthreshold = 0.
-    iraf.centerpars.maxshift = 2.
+    iraf.centerpars.maxshift = 3.
     iraf.centerpars.clean = 'no'
     iraf.phot.update = 'no'
     iraf.phot.verbose = 'no'
@@ -529,29 +558,40 @@ def phot_mag(*args, **kwargs):
     except IndexError:
         raise TaskError("Photometry cannot be performed.  "+str(hdu))
 
-        
     
-        
+
 def init_dirs(familyname, objectname):
+    
     global imageinfo
     imageinfo = familyname+'_images.txt'
     
-    # would like dir_path_base to be specified
-    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
+    '''
+    # initiate vos directories 
+    global family_dir_vos
+    family_dir_vos = 'vos:kawebb/postage_stamps/{}/'.format(familyname)
+    print family_dir_vos
+    assert os.path.exists(family_dir_vos)
+    '''
+    
+    # initiate local directories
+    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/asteroid_families'
     global family_dir
     family_dir = os.path.join(dir_path_base, familyname)
     if os.path.isdir(family_dir) == False:
         print "Invalid family name"
     stamps_dir = os.path.join(family_dir, familyname+'_stamps')
+    global object_dir
     object_dir = os.path.join(family_dir, familyname+'_'+objectname)
     if os.path.isdir(object_dir) == False:
         print "Invalid object name or object directory does not exist, searching through {}/{}_stamps instead".format(familyname, familyname)
         object_dir = stamps_dir
+    
+    global output_dir
     output_dir = os.path.join(object_dir, 'sep_phot_output')
     if os.path.isdir(output_dir) == False:
         os.makedirs(output_dir)
     
-    return family_dir, object_dir, output_dir
+    return family_dir, object_dir, output_dir #, family_dir_vos
 
 def main(): 
     
@@ -563,7 +603,7 @@ def main():
                         action="store",
                         default="3330",
                         help="Asteroid family name. Usually the asteroid number of the largest member.")
-    parser.add_argument("--aperture", '-a',
+    parser.add_argument("--aperture", '-ap',
                         action='store',
                         default=10.0,
                         help='aperture (degree) of circle for photometry.')

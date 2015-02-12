@@ -40,7 +40,7 @@ def get_image_info(familyname, filtertype='r', imagetype='p'):
     filter, exposure time, and telescopy instrument
     '''
     
-    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
+    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/asteroid_families'
     family_dir = os.path.join(dir_path_base, familyname)
     if os.path.isdir(family_dir) == False:
         print "Invalid family name or directory does not exist"
@@ -64,7 +64,7 @@ def get_image_info(familyname, filtertype='r', imagetype='p'):
     search_end_date=Time('2017-01-01', scale='utc')     # epoch2=2017+1+1
         
     # Setup output, label columns
-    with open('{}/{}_images.txt'.format(family_dir, familyname), 'w') as outfile:
+    with open('{}/{}_images4.txt'.format(family_dir, familyname), 'w') as outfile:
         outfile.write("{:>10s} {:>10s} {:>10s} {:>16s} {:>16s} {:>16s} {:>12s}\n".format(
             "Object", "Image", "Exp_time", "RA", "DEC", "time", "filter"))
 
@@ -77,7 +77,7 @@ def get_image_info(familyname, filtertype='r', imagetype='p'):
     print " with filter {} and exposure time of 287, 387, 500 seconds (OSSOS data) \n--------------------".format(filtertype)
         
     image_list = []
-    for object_name in object_list[:len(object_list)-1]:
+    for object_name in object_list[2171:len(object_list)-1]:
         query = Query(object_name, search_start_date=search_start_date, search_end_date=search_end_date)
 
         # GET/REVIEW THE DATA RETURNED FROM THE SEARCH
@@ -87,7 +87,7 @@ def get_image_info(familyname, filtertype='r', imagetype='p'):
 
         # output the data is previously initiated output file
         if len(obs_in_filter) > 0:
-            with open('{}/{}_images.txt'.format(family_dir, familyname), 'a') as outfile:
+            with open('{}/{}_images4.txt'.format(family_dir, familyname), 'a') as outfile:
                 for line in obs_in_filter:
                     image_list.append(object_name)
                     try:
@@ -109,7 +109,7 @@ def parse_ssois_return(ssois_return, object_name, imagetype, camera_filter='r.MP
     bad_table = 0
 
     table_reader = ascii.get_reader(Reader=ascii.Basic)
-    table_reader.inconsistent_handler = _skip_missing_data
+    #table_reader.inconsistent_handler = _skip_missing_data
     table_reader.header.splitter.delimiter = '\t'
     table_reader.data.splitter.delimiter = '\t'
     table = table_reader.read(ssois_return)

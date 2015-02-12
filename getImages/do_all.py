@@ -1,8 +1,10 @@
 import argparse
+import os
 
 from find_family import find_family_members
-from getImages import get_image_info
-from getStamps import get_stamps
+from find_family import get_all_families_list
+from get_images import get_image_info
+from get_stamps import get_stamps
 from sep_phot import find_objects_by_phot
 
 from ossos_scripts import storage
@@ -11,6 +13,34 @@ import ossos_scripts.mpc
 import ossos_scripts.util
 
 
+
+def do_all_things(familyname, objectname=None, filtertype='r', imagetype='p', radius=0.005, aperture=10.0, thresh=5.0):
+   
+    family_list_path = 'asteroid_families/{}/{}_family.txt'.format(familyname, familyname)
+    if  os.path.exists(family_list_path):
+        print "----- List of objects in family {} exists already -----".format(familyname)
+        with open(family_list_path) as infile:
+            filestr = infile.read()
+            asteroid_list = filestr.split('\n')
+    else:    
+        asteroid_list = find_family_members(familyname)
+
+    '''image_list_path = 'asteroid_families/{}/{}_images.txt'.format(familyname, familyname)  
+    if  os.path.exists(image_list_path):
+        print "----- List of images in family {} exists already -----".format(familyname)
+        with open(image_list_path) as infile:
+            filestr = infile.read()
+            image_list = filestr.split('\n')
+    else:'''    
+    image_list = get_image_info(familyname, filtertype, imagetype)       
+    
+    if objectname == None:
+        objectname = image_list[0]
+
+    get_stamps(familyname, radius)
+                
+    #find_objects_by_phot(familyname, objectname, aperture, thresh)    
+              
 def main():
     """
     Input asteroid family name and an asteroid number and get out photometry values
@@ -29,9 +59,9 @@ def main():
                     dest="filter",
                     choices=['r', 'u'],
                     help="passband: default is r'")
-    parser.add_argument("--family",
+    parser.add_argument("--family", '-f',
                     action="store",
-                    default="3330",
+                    default=None,
                     help='list of objects to query')
     parser.add_argument('--type',
                     default='p',
@@ -39,7 +69,7 @@ def main():
                     help="restrict type of image (unprocessed, reduced, calibrated)")
     parser.add_argument("--radius", '-r',
                     action='store',
-                    default=0.02,
+                    default=0.005,
                     help='Radius (degree) of circle of cutout postage stamp.')
     parser.add_argument("--aperture", '-a',
                     action='store',
@@ -56,33 +86,21 @@ def main():
                             
     args = parser.parse_args()
     
-    do_all_things(args.family, args.object, args.filter, args.type, args.radius, args.aperture, args.thresh)
-
-def do_all_things(familyname, objectname=None, filtertype='r', imagetype='p', radius=0.02, aperture=10.0, thresh=5.0):
-   
-    # find_family.py - family name
-        # find_family_members()
-        # get list of asteroids in a family
-    #asteroid_list = find_family_members(familyname)
+    allfamily_list_path = 'asteroid_families/all_families.txt'
+    if args.family == None: 
+        if os.path.exists(allfamily_list_path):
+            print "----- List of all family names exists already -----"
+            with open(allfamily_list_path) as infile:
+                filestr = infile.read()
+                families_list = filestr.split('\n')
+        else:    
+            families_list = get_all_families_list()
     
-    # getImages.py - family name, filter, type
-        # get_image_info()
-        # get images information from SSOIS
-    image_list = get_image_info(familyname, filtertype, imagetype)
+        for familyname in families_list:
+            do_all_things(familyname, args.object, args.filter, args.type, args.radius, args.aperture, args.thresh)
     
-    if objectname == None:
-        objectname = image_list[0]
-        
-    # getStamps.py - family name, radius of cutout
-        # get_stamps()
-        # cutout a piece of each image with object in it
-    get_stamps(familyname, radius)
-        
-    # sep_phot.py - family name, object name, aperture, threshold
-        # find_objects_by_phot()
-        # identify objects in image by photometry values and coordinates                
-    find_objects_by_phot(familyname, objectname, aperture, thresh)                    
-                        
+    else:
+        do_all_things(args.family, args.object, args.filter, args.type, args.radius, args.aperture, args.thresh)
                         
 if __name__ == '__main__':
     main()                        

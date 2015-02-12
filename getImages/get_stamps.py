@@ -44,7 +44,7 @@ def get_stamps(familyname, radius):
         # CUT OUT IMAGE
 	        # PASS: object, directory, radius, CADC permissions                    
     
-    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/'
+    dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/asteroid_families'
     family_dir = os.path.join(dir_path_base, familyname)
     if os.path.isdir(family_dir) == False:
         print "Invalid family name or directory does not exist"
@@ -58,9 +58,15 @@ def get_stamps(familyname, radius):
             expnum = line.split()[1]
             RA = float(line.split()[3])   
             DEC = float(line.split()[4])
-            cutout(objectname, expnum, RA, DEC, radius, username, password, familyname)
+            
+            obj_dir = 'vos:kawebb/postage_stamps/{}'.format(familyname)
+            if not storage.exists(obj_dir, force=True):
+                storage.mkdir(obj_dir)
+            #assert storage.exists(obj_dir, force=True)
+
+            cutout(objectname, expnum, RA, DEC, radius, username, password, familyname, obj_dir)
 	
-def cutout(objectname, image, RA, DEC, radius, username, password, familyname):
+def cutout(objectname, image, RA, DEC, radius, username, password, familyname, obj_dir):
     # CUT OUT (image, RA, DEC, radius, CADC permissions)
 	# for each attribute in mpc_observations:
 		# storage.vospace.fixURI and 
@@ -75,7 +81,7 @@ def cutout(objectname, image, RA, DEC, radius, username, password, familyname):
     DEC = 11.8697277778
     '''
     
-    output_dir = '{}/{}_stamps'.format(familyname, familyname)
+    output_dir = 'asteroid_families/{}/{}_stamps'.format(familyname, familyname)
     if os.path.isdir(output_dir) == False:
             os.makedirs(output_dir)
         
@@ -96,12 +102,13 @@ def cutout(objectname, image, RA, DEC, radius, username, password, familyname):
     r.raise_for_status()  # confirm the connection worked as hoped
     postage_stamp_filename = "{}_{}_{:8f}_{:8f}.fits".format(objectname, image, RA, DEC)
     
-    '''
     with open('{}/{}'.format(output_dir, postage_stamp_filename), 'w') as tmp_file:
+        object_dir = 'asteroid_families/{}/{}_stamps/{}'.format(familyname, familyname, postage_stamp_filename)
+        assert os.path.exists(object_dir)
         tmp_file.write(r.content)
-        storage.copy(postage_stamp_filename, 'kawebb/{}/{}'.format(output_dir, postage_stamp_filename))
-    os.unlink(postage_stamp_filename)  # easier not to have them hanging around
-    '''
+        storage.copy(object_dir, '{}/{}'.format(obj_dir, postage_stamp_filename))
+    #os.unlink(object_dir)  # easier not to have them hanging around
+    
     
 def main():
     
@@ -117,13 +124,13 @@ def main():
         description='Parse an obects.txt input file (find_family.py output) and create links in the postage stamp directory '
                     'that allow retrieval of cutouts of the FITS images associated with the CHT/MegaCam detections. '
                     'Cutouts are defined on the WCS RA/DEC of the object position.')
-    parser.add_argument("--family",
+    parser.add_argument("--family", '-f',
                         action="store",
                         default="lixImages.txt",
                         help="The input .txt files of astrometry/photometry measurements.")
     parser.add_argument("--radius", '-r',
                         action='store',
-                        default=0.02,
+                        default=0.005,
                         help='Radius (degree) of circle of cutout postage stamp.')
     
     args = parser.parse_args()

@@ -1,6 +1,7 @@
 import os
 import sep
 import re
+import vos
 import tempfile
 import urllib2 as url
 import numpy as np
@@ -13,11 +14,14 @@ from scipy.spatial import cKDTree
 import math
 from pyraf import iraf
 
+client = vos.Client()
+
 import sys
 sys.path.append('/Users/admin/Desktop/MainBeltComets/getImages/ossos_scripts/')
 
+from ossos_scripts import storage
 import ossos_scripts.wcs as wcs
-from ossos_scripts.storage import get_astheader
+from ossos_scripts.storage import get_astheader, exists
 from get_images import get_image_info
 
 ''' 
@@ -57,7 +61,7 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
     init_dirs(familyname, objectname)
     out_filename = '{}_r{}_t{}_output.txt'.format(objectname, ap, th)
 
-    with open('{}/{}'.format(object_dir, out_filename), 'w') as outfile:
+    with open('{}/{}'.format(stamps_dir, out_filename), 'w') as outfile:
         outfile.write("{:>3s} {:>5s} {:>17s} {:>10s} {:>17s} {:>10s}\n".format(
             "Image", 'flux', 'mag', 'RA', 'DEC', 'ecc'))        
 
@@ -69,36 +73,39 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
     # preform the photometry and identify object
     print "----- Preforming photometry on all images of {} in family {} -----".format(objectname, familyname)
     
-    #for file in os.listdir('{}'.format(family_dir_vos)):
-    for file in os.listdir(object_dir):
+    for file in client.listdir(vos_dir):
+    #for file in os.listdir(stamps_dir):
         if file.endswith('.fits') == True:
             objectname_file = file.split('_')[0]
             if objectname_file == objectname:
             # images named with convention: object_expnum_RA_DEC.fits
                 expnum_p = file.split('_')[1]
 
-                with fits.open('{}/{}'.format(object_dir, file)) as hdulist:
+                storage.copy('{}/{}'.format(vos_dir, file), '{}/{}'.format(stamps_dir, file))
+                #assert os.path.exists('{}/{}'.format(vos_dir, file))
+                #with fits.open('{}/{}'.format(vos_dir, file)) as hdulist:
+                with fits.open('{}/{}'.format(stamps_dir, file)) as hdulist:    
                     print " Preforming photometry on image {} ".format(expnum_p)
                 
                     if hdulist[0].data is None: # what if more than 2ccd mosaic? could just be aperture values?
                         try:
-                            zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 1)
-                            exptime = fits.getval('{}/{}'.format(object_dir, file), 'EXPTIME', 1)
+                            zeropt = fits.getval('{}/{}'.format(stamps_dir, file), 'PHOTZP', 1)
+                            exptime = fits.getval('{}/{}'.format(stamps_dir, file), 'EXPTIME', 1)
                             table1 = sep_phot(hdulist[1].data, ap, th)
                             table2 = sep_phot(hdulist[2].data, ap, th)
                             table = vstack([table1, table2])
-                            #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
+                            #ascii.write(table, os.path.join(stamps_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
                             astheader = hdulist[0].header
                         except LookupError: # maybe not correct error type?
                             print "ERROR: no PHOTZP in header, skipping image "
                     
                     else:
                         try:
-                            zeropt = fits.getval('{}/{}'.format(object_dir, file), 'PHOTZP', 0)
-                            exptime = fits.getval('{}/{}'.format(object_dir, file), 'EXPTIME', 0)
+                            zeropt = fits.getval('{}/{}'.format(stamps_dir, file), 'PHOTZP', 0)
+                            exptime = fits.getval('{}/{}'.format(stamps_dir, file), 'EXPTIME', 0)
                             table = sep_phot(hdulist[0].data, ap, th)
                             astheader = hdulist[0].header
-                            #ascii.write(table, os.path.join(output_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
+                            #ascii.write(table, os.path.join(stamps_dir, '{}_phot.txt'.format(expnum_p))) # write all phot data to file in directory familyname/famlyname_objectname/sep_phot_output
                         except LookupError:
                             print "ERROR: no PHOTZP in header, skipping image "
                 
@@ -107,15 +114,16 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
                     good_neighbours, mean = iden_good_neighbours(i_list, table, zeropt, mag_list_jpl, elim, pvwcs)
                     print good_neighbours
                     
+                    '''
                     thingy = daophot_revised(hdulist, zeropt, filtertype, exptime, good_neighbours, ap, swidth=10, apcor=0.3, maxcount=30000.0)
                     
-                    '''
+                    
                     object_data = iden_object(good_neighbours, mean)
                 
                     if object_data == None:
                         print "WARNING: Could not identify object {} in image".format(objectname, expnum_p)
                     else:
-                        with open('{}/{}'.format(object_dir, out_filename), 'a') as outfile:
+                        with open('{}/{}'.format(stamps_dir, out_filename), 'a') as outfile:
                             try:
                                 outfile.write('{} {} {} {} {} {}\n'.format(
                                           expnum_p, object_data[1], object_data[2], object_data[5], object_data[6], 
@@ -123,6 +131,8 @@ def find_objects_by_phot(familyname, objectname=None, ap=10.0, th=5.0, filtertyp
                             except:
                                 print "ERROR: cannot write to outfile"
                     '''
+               
+                    os.unlink('{}/{}'.format(stamps_dir, file))
                 
 def query_jpl(objectname, step=1, su='d'):
     '''
@@ -138,20 +148,15 @@ def query_jpl(objectname, step=1, su='d'):
                 
     if len(date_range) == 0:
         print "WARNING: No images of this object exist"
+        assert len(date_range) != 0
+        
     date_range_t = Time(date_range, format='mjd', scale='utc')
     assert  len(date_range_t.iso) > 0
     time_start = ((date_range_t.iso[0]).split())[0] + ' 00:00:00.0'
     time_end = ((date_range_t.iso[-1]).split())[0] + ' 00:00:00.0'
     
     if time_start == time_end:
-        print "WARNING: only searching for one day"
-        time_end_date = (((date_range_t.iso[-1]).split())[0]).split('-')
-        day_add_one = int(time_end_date[2])+1
-        if day_add_one < 10:
-            day = '0{}'.format(day_add_one)
-        else:
-            day = day_add_one
-        time_end = '{}-{}-{} 00:00:00.0'.format(time_end_date[0], time_end_date[1], day)
+        time_end = add_day(time_end, date_range_t)
     
     print " Date range in query: {} -- {}".format(time_start, time_end)
     
@@ -565,13 +570,13 @@ def init_dirs(familyname, objectname):
     global imageinfo
     imageinfo = familyname+'_images.txt'
     
-    '''
+    
     # initiate vos directories 
-    global family_dir_vos
-    family_dir_vos = 'vos:kawebb/postage_stamps/{}/'.format(familyname)
-    print family_dir_vos
-    assert os.path.exists(family_dir_vos)
-    '''
+    global vos_dir
+    vos_dir = 'vos:kawebb/postage_stamps/{}'.format(familyname)
+    print vos_dir
+    assert exists(vos_dir, force=True)
+
     
     # initiate local directories
     dir_path_base = '/Users/admin/Desktop/MainBeltComets/getImages/asteroid_families'
@@ -579,20 +584,30 @@ def init_dirs(familyname, objectname):
     family_dir = os.path.join(dir_path_base, familyname)
     if os.path.isdir(family_dir) == False:
         print "Invalid family name"
+    global stamps_dir
     stamps_dir = os.path.join(family_dir, familyname+'_stamps')
-    global object_dir
-    object_dir = os.path.join(family_dir, familyname+'_'+objectname)
-    if os.path.isdir(object_dir) == False:
-        print "Invalid object name or object directory does not exist, searching through {}/{}_stamps instead".format(familyname, familyname)
-        object_dir = stamps_dir
-    
-    global output_dir
-    output_dir = os.path.join(object_dir, 'sep_phot_output')
-    if os.path.isdir(output_dir) == False:
-        os.makedirs(output_dir)
-    
-    return family_dir, object_dir, output_dir #, family_dir_vos
+    if os.path.isdir(stamps_dir) == False:
+        os.makedirs(stamps_dir)
 
+        
+    assert os.path.exists('{}/{}'.format(family_dir, imageinfo))
+    
+    return family_dir, stamps_dir, vos_dir
+
+
+def add_day(time_end, date_range_t):
+        print "WARNING: only searching for one day"
+        time_end_date = (((date_range_t.iso[-1]).split())[0]).split('-')
+        day_add_one = int(time_end_date[2])+1
+        if day_add_one < 10:
+            day = '0{}'.format(day_add_one)
+        else:
+            day = day_add_one
+        time_end = '{}-{}-{} 00:00:00.0'.format(time_end_date[0], time_end_date[1], day)
+        
+        return time_end
+        
+        
 def main(): 
     
     parser = argparse.ArgumentParser(

@@ -1,0 +1,831 @@
+SIMPLE  =                    T / file does conform to FITS standard             BITPIX  =                   16 / number of bits per data pixel                  NAXIS   =                    2 / number of data axes                            NAXIS1  =                  197 / length of data axis 1                          NAXIS2  =                  197 / length of data axis 2                          EXTEND  =                    T / FITS dataset may contain extensions            COMMENT   FITS (Flexible Image Transport System) format is defined in 'AstronomyCOMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H COMMENT                                                                         COMMENT Observation Summary                                                     COMMENT -------------------                                                     CMMTOBS = 'N/A     '                                                            CMMTSEQ = 'North[1/1] - Ref + [0.0 90.0]'                                       OBJECT  = '13BH-3+0'                                                            OBSERVER= 'QSO Team'                                                            PI_NAME = 'Brett Gladman'                                                       RUNID   = '13BP05  '                                                            FILENAME= '1651375o'           / Base filename at acquisition                   PATHNAME= '/data/niele/megacam/13BQ03-Sep01' / Original directory name at acquisEXTNAME = 'ccd28   '           / CCD number in the mosaic                       EXTVER  =                   28 / Now matches the CCD number in the mosaic       DATE    = '2013-09-02T13:54:56' / UTC Date of file creation                     HSTTIME = 'Mon Sep 02 03:54:56 HST 2013' / Local time in Hawaii                 IMAGESWV= 'CFHT DetCom v4.44 (Nov 18 2011)' / Image creation software version   COMMENT file 1651375o56, raster FULL, etype OBJECT, etime 287, filter filter_namCOMMENT                                                                         COMMENT                                                                         COMMENT Unique amplifier IDs for MegaCam:                                       COMMENT                                                                         COMMENT -- -- 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 -- --       COMMENT 72 73 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 74 75       COMMENT 76 77 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 78 79       COMMENT -- -- 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 -- --       COMMENT                                                                         COMMENT                                                                         COMMENT Detector                                                                COMMENT --------                                                                DETECTOR= 'MegaCam '                                                            DETSIZE = '[1:23219,1:19354]'  / Total data pixels in full mosaic               RASTER  = 'FULL    '           / Active raster description                      CCDSUM  = '1 1     '           / Binning factors                                CCDBIN1 =                    1 / Binning factor along first axis                CCDBIN2 =                    1 / Binning factor along second axis               PIXSIZE1=                 13.5 / Pixel size for axis 1 (microns)                PIXSIZE2=                 13.5 / Pixel size for axis 2 (microns)                PIXSCAL1=               0.1850 / Pixel scale for axis 1 (arcsec/pixel)          PIXSCAL2=               0.1850 / Pixel scale for axis 2 (arcsec/pixel)          AMPNAME = '28a + 28b'          / List of amplifiers names for this image        AMPLIST = 'A B     '           / List of amplifiers for this CCD                CCDSIZE = '[1:2048,1:4612]'    / Detector imaging area size                     DETSEC  = '[4230:6277,13:4624]' / Mosaic area of the entire readout             DETSECA = '[4230:5253,13:4624]' / Mosaic area of the A readout                  DETSECB = '[6277:5254,13:4624]' / Mosaic area of the B readout                  DATASEC = '[33:2080,1:4612]'   / Imaging area of the entire CCD in raw frame    ASECA   = '[1:1056,1:4612]'    / Section by A amplifier in raw frame            DSECA   = '[33:1056,1:4612]'   / Image area of A amplifier in raw frame         TSECA   = '[33:1056,1:4612]'   / Trim section of A amplifier = DSECA            BSECA   = '[1:32,1:4644]'      / Overscan of A amplifier in raw frame           CSECA   = '[1:1024,1:4612]'    / Section in full CCD after BSECA cut out        ASECB   = '[1057:2112,1:4612]' / Section by B amplifier in raw frame            DSECB   = '[1057:2080,1:4612]' / Image area of B amplifier in raw frame         TSECB   = '[1057:2080,1:4612]' / Trim section of B amplifier = DSECB            BSECB   = '[2081:2112,1:4644]' / Overscan of B amplifier in raw frame           CSECB   = '[1025:2048,1:4612]' / Section in full CCD after BSECB cut out        CCD     = 'Marconi/EEV CCD42-90'                                                CCDNAME = '7432-3-3'           / Name of the CCD (manufacturer reference)       CCDNICK = 'Prisca  '           / Nickname of the CCD                            MAXLIN  =                65535 / Level at 1% linearity departure (ADU) = AverageMAXLINA =                65535 / Level at 1% linearity departure (ADU) A amp    MAXLINB =                65535 / Level at 1% linearity departure (ADU) B amp    SATURATE=                65535 / Saturation value (ADU)                         GAIN    =               1.6350 / Converting gain (e-/ADU) = Average [A,B] amps  GAINA   =               1.6300 / Converting gain of A amplifier (e-/ADU)        GAINB   =               1.6400 / Converting gain of B amplifier (e-/ADU)        RDNOISE =                    4 / Read noise (electrons) = Average [A,B] amps    RDNOISEA=                    4 / Read noise (electrons) A amplifier             RDNOISEB=                    5 / Read noise (electrons) B amplifier             DARKCUR =                  2.7 / Dark current (e-/pixel/hour)                   QEPOINTS= '48%@350 86%@450 83%@550 78%@650 62%@750 38%@850 12%@950' / QE%@waveleCONSWV  = 'Not implemented'    / Controller software DSPID and SERNO versions   DETSTAT = 'temp_status'        / temp_status_comment                            DETTEM  =              -133.20 / Temp. Cold Plate (C)                           INHERIT =                    F / No need to inherit global headers              TIMESYS = 'UTC     '           / Time System for DATExxxx and TIMExxxx          OBSTYPE = 'OBJECT  '           / Observation/ Exposure type                     EXPTYPE = 'OBJECT  '           / OBSTYPE is the new name for this               EXPNUM  =              1651375 / CFHT odometer number                           OBSID   =              1651375 / CFHT odometer number                           EXPTIME =              287.127 / Measured integration time (seconds)            EXPREQ  =                287.0 / Requested integration time (seconds)           EXPMEAS =              287.127 / Measured shutter time (seconds)                DARKTIME=               287.00 / Dark current time (seconds)                    ORIGIN  = 'CFHT    '           / Canada-France-Hawaii Telescope                 INSTRUME= 'MegaPrime'                                                           INSTMODE= 'Normal  '           / Instrument Mode                                REGMODE = 'Normal  '           / Registration Mode                              RAOFF   =                  0.0 / Right ascension compensation                   DECOFF  =                  0.0 / Declination compensation                       BIASSEC = '[0:0,0:0]'          / Dual amplifiers readout - see BSECA & BSECB    SHUTOPEN=               0.0000 / Shutter blade opening time (msec)              SHUTCLOS=               0.0000 / Shutter blade closing time (msec)              FILTER  = 'r.MP9601'           / Name of filter in position                     FILTERID=                 1305 / Holder ID (see also FILTER)                    TESTSPHE=                  2.8 /    temp, surface, telescope spider w/He deg C  QRUNID  = '13BQ03  '           / Q RunID                                        QOBSERVE= 'Lisa Wells'         / Name of Q Observer                             QCOORD  = 'Todd Burdullis'     / Name of Q Coordinator                          QID     = 55150500000000034649                                                  QOBSEQID= 55001400000000119842                                                  QICSEQID= 55051200000000143548                                                  QOBITER =                    1                                                  QOFFID  = 40000200000000005425                                                  REL_DATE= '2015-02-28T00:00:00' / UTC Release Date                              QOGLABEL= 'OG42    '                                                            QOBLABEL= 'OB50    '                                                            QICLABEL= 'IC2     '                                                            TELESCOP= 'CFHT 3.6m'          / Hawaii Big Island, Mauna Kea                   LATITUDE=            19.825252 / Latitude (degrees N)                           LONGITUD=          -155.468876 / Longitude (degrees E)                          TELSTAT = 'auto_guide'         / Telescope Control System status                DATE-OBS= '2013-09-02'         / Date at start of observation (UTC)             UTIME   = '13:50:02.62'        / Time at start of observation (UTC)             UTC-OBS = '13:50:02.62'        / Time at start of observation (UTC)             MJDATE  =        56537.5764192 / Modified Julian Date at start of observation   MJD-OBS =        56537.5764192 / Modified Julian Date at start of observation   SIDTIME = '2:15:39.67'         / Sidereal time at start of observation          LST-OBS = '2:15:39.67'         / Sidereal time at start of exposure             DATEEND = '2013-09-02'         / Date at end of observation (UTC)               UTCEND  = '13:55:36.55'        / Time at end of observation (UTC)               MJDEND  =        56537.5802842 / Modified Julian Date at end of observation     LSTEND  = '2:21:14.52'         / Sidereal time at end of exposure               EQUINOX =               2000.0 / Equinox of coordinates                         RADECSYS= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  RA      = '1:20:24.93'         / Telescope right ascension                      DEC     = '12:05:36.1'         / Telescope declination                          HA      = '0:55:14.74'         / Telescope hour angle at start of exposure      HAEND   = '1:00:49.59'         / Telescope hour angle at end of exposure        INSTZRA =                15.00 / Instrument zero for RA in arc seconds          INSTZDEC=                15.00 / Instrument zero for Dec in arc seconds         RA_DEG  =            20.103875 / Telescope right ascension in degrees           DEC_DEG =            12.093361 / Telescope declination in degrees               OBJNAME = '13BH-3+0'           / Target name                                    OBJMAG  =                  0.0 / Target magnitude                               OBJEQUIN=               2000.0 / Target equinox                                 OBJRADEC= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  OBJRA   = '1:20:24.94'         / Target right ascension                         OBJDEC  = '12:05:36.0'         / Target declination                             OBJRAPM =                 0.00 / Target right ascension proper motion in as/yr  OBJDECPM=                 0.00 / Target declination proper motion in as/yr      NGUIDER =                    2 / TCS Number of guiders                          NGUISTAR=                    2 / TCS number of guide stars/probes in use        GUINAME = 'South field guider (North probe)' / TCS guider name                  GUIEQUIN=               2000.0 / TCS guider equinox                             GUIRADEC= 'FK5     '           / TCS guider system for equinox                  GUIRA   = '01:20:52.60'        / TCS guider right ascension                     GUIDEC  = '11:27:21.3'         / TCS guider declination                         GUIRAPM =                 0.00 / TCS guider right ascension proper motion arcsecGUIDECPM=                 0.00 / TCS guider declination proper motion arcsec    GUIOBJN = 'auto GSC: 0'        / TCS guider object name                         GUIMAGN =                 10.2 / TCS guider object magnitude                    XPROBE  =               31.330 / Telescope bonnette guide probe X position      YPROBE  =                9.305 / Telescope bonnette guide probe Y position      ZPROBE  =              -12.290 / Telescope bonnette guide probe Z position      GUIFLUX =                -9999 / TCS guider flux                                GUIFWHX =              -9999.9 / TCS guider average x FWHM in pixels            GUIFWHY =              -9999.9 / TCS guider average y FWHM in pixels            SKYFLUX =                    0 / TCS total sky flux                             GUINAME1= 'North field guider (South probe)' / TCS guider #1 identification     GUIEQUI1=               2000.0 / TCS guider #1 equinox                          GUIRADE1= 'FK5     '           / TCS guider #1 system for equinox               GUIRA1  = '01:20:58.09'        / TCS guider #1 right ascension                  GUIDEC1 = '12:45:06.8'         / TCS guider #1 declination                      GUIRAPM1=                 0.00 / TCS guider #1 right ascen proper motion arcsec GUIDEPM1=                 0.00 / TCS guider #1 declination proper motion arcsec GUIOBJN1= 'auto GSC: 0'        / TCS guider #1 object name                      GUIMAGN1=                 13.3 / TCS guider #1 object magnitude                 GUIPOSX1=               37.062 / TCS guider #1 probe x position                 GUIPOSY1=               12.686 / TCS guider #1 probe y position                 GUIPOSZ1=              -12.318 / TCS guider #1 probe z position                 GUIFLUX1=                -9999 / TCS guider #1 flux                             GUIFWHX1=              -9999.9 / TCS guider #1 average x FWHM in pixels         GUIFWHY1=              -9999.9 / TCS guider #1 average y FWHM in pixels         GUINAME2= 'South field guider (North probe)' / TCS guider #2 identification     GUIEQUI2=               2000.0 / TCS guider #2 equinox                          GUIRADE2= 'FK5     '           / TCS guider #2 system for equinox               GUIRA2  = '01:20:52.60'        / TCS guider #2 right ascension                  GUIDEC2 = '11:27:21.3'         / TCS guider #2 declination                      GUIRAPM2=                 0.00 / TCS guider #2 right ascen proper motion arcsec GUIDEPM2=                 0.00 / TCS guider #2 declination proper motion arcsec GUIOBJN2= 'auto GSC: 0'        / TCS guider #2 object name                      GUIMAGN2=                 10.2 / TCS guider #2 object magnitude                 GUIPOSX2=               31.330 / TCS guider #2 probe x position                 GUIPOSY2=                9.305 / TCS guider #2 probe y position                 GUIPOSZ2=              -12.290 / TCS guider #2 probe z position                 GUIFLUX2=                -9999 / TCS guider #2 flux                             GUIFWHX2=              -9999.9 / TCS guider #2 average x FWHM in pixels         GUIFWHY2=              -9999.9 / TCS guider #2 average y FWHM in pixels         AIRMASS =                1.036 / Airmass at start of observation                TELALT  =              74.7414 / Telescope altitude at start of observation, degTELAZ   =             241.8195 / Telescope azimuth at start, deg, 0=N 90=E 270=WDOMEAZ  =                235.1 / Dome azimuth at start, deg, 0=N 90=E 270=W     MOONANGL=               104.80 / Angle from object to moon at start in degrees  MOONPHAS=                -0.04 / Moon phase @ 0 HST, 0..1 new>full, -1..0 >new  MOONUP  = 'False   '           / Moon up? True or False                         MOONALT =                -0.30 / Moon altitude at start in degrees              MOONAZ  =                75.70 / Moon azimuth at start in deg, 0=N 90=E 270=W   FOCUSID = 'MegaPrime'          / Telescope focus in use                         TELCONF = 'MegaPrime'          / Telescope focus in use                         CALFOCUS=               -3.996 / Telescope focus calculated from model in mm    DEFOCUS =                0.000 / Telescope defocus from calculated in mm        FOCUSPOS=                -4025 / Telescope focus encoder readout                TELFOCUS=                -4025 / Telescope focus encoder readout                BONANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ROTANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ISUGAIN =                 0.30 / Instrument Stabilization Unit control gain     ISURATE =                50.00 / ISU control rate in Hz                         ISUTCSOR=                 1.00 / ISU offload rate in Hz to telescope position   ISUSTATE= 'Full    '           / ISU control state (Off/Only/TCS/Full/Frozen)   ISUSTDVX=                 0.00 / ISU most recent minute std dev in x in arcsec  ISUSTDVY=                 0.00 / ISU most recent minute std dev in y in arcsec  FSAGAIN =                 0.00 / Focus Stage Assembly movement control gain     FSARATE =                 3.33 / FSA control rate in Hz                         FSATHRES=                5.000 / FSA movement threshold in mm                   FSASTATE= 'Pause   '           / FSA control state (Off/On/Paused)              FSANMOVE=                    0 / FSA number of actual moves in last 10 minutes  FSAMINZ =                0.000 / FSA minimum position in last 10 minutes        FSAMAXZ =                0.000 / FSA maximum position in last 10 minutes        FSAMEANZ=                0.000 / FSA mean position in last 10 minutes           FSASTDVZ=                0.000 / FSA position std dev in last 10 minutes        TCSGPSBC= '0245 13:49:48.194198' / TCS GPS read out in BCD                      TCSGPSTM=             13.83005 / TCS GPS clock time in decimal hours            TCSRBUSS= '18:37:10.000'       / TCS RBUSS clock time                           TCSEPICS= '20130902 13:49:36.199' / TCS EPICS clock time                        TCSAMODE= 'G       '           / TCS acquire mode - T/O/G/g/P for t/o/g coords  TCSMJD  =        56537.5762520 / TCS MJD                                        TCSLST  =              2.25700 / TCS LST in decimal hours                       TCSAPHA =             13.56264 / TCS apparent hour angle in degrees             TCSAPDEC=             12.16676 / TCS apparent declination in degrees            TCSOBHA =             13.56012 / TCS observed hour angle in degrees             TCSOBDEC=             12.16822 / TCS observed declination in degrees            TCSENHA =                49548 / TCS hour angle absolute encoder in bits        TCSENDEC=                32690 / TCS declination absolute encoder in bits       TCSEDHA =             13.66840 / TCS hour angle absolute encoder in degrees     TCSEDDEC=             12.14523 / TCS declination absolute encoder in degrees    TCSINHA =                    0 / TCS hour angle incremental encoder in bits     TCSINDEC=                    0 / TCS declination incremental encoder in bits    TCSSEHA =                -0.05 / TCS hour angle servo error in arcsec           TCSSEDEC=                 0.06 / TCS declination servo error in arcsec          TCSGEHA =                 0.00 / TCS hour angle guider error in arcsec          TCSGEDEC=                 0.00 / TCS declination guider error in arcsec         TCSMVX  =            -9999.900 / TCS secondary guider acquisition x move in mm  TCSMVY  =            -9999.900 / TCS secondary guider acquisition y move in mm  TCSMVRA =              -2.4900 / TCS right ascension acquisition move in arcsec TCSMVDEC=              -5.1200 / TCS declination acquisition move in arcsec     TESPMIRE=                 0.30 / 03 temp, surface, primary mirror east deg C    TESPMIRW=                 4.40 / 02 temp, surface, primary mirror west deg C    TESPMIRS=                 4.41 / 01 temp, surface, primary mirror west side degCTEAPMCLW=                 3.60 / 54 temp, air, primary mirror cell west deg C   TEAMIRCI=                 3.39 / 58 temp, air, mirror cooling in at unit deg C  TEAMIRCO=                 3.80 / 27 temp, air, mirror cooling out at cell deg C TEAPMSPN=             -9999.90 / 65 temp, air, mirror spigot north cass deg C   TEAPMSPS=                 5.56 / 64 temp, air, mirror spigot nouth M3 deg C     TEATRNGE=                 3.50 / 23 temp, air, top ring east deg C              TEATRNGW=                 3.18 / 06 temp, air, top ring west deg C              TEANRLSB=                13.76 / 19 temp, air, north rail support beam deg C    TESHRSET=                34.89 / 08 temp, surface, horseshoe east top deg C     TESTTRSH=                 3.17 / 97 temp, surface, telescope truss S high deg C TESTTRNM=                 4.04 / 94 temp, surface, telescope truss N mid deg C  TESTTREM=                 3.43 / 95 temp, surface, telescope truss E mid deg C  TESTTRWM=                 3.36 / 96 temp, surface, telescope truss W mid deg C  TESTTRSL=                 3.46 / 98 temp, surface, telescope truss S low deg C  TESTTRSE=                 4.12 / 69 temp, surface, telescope truss SE lower degCTEALOWWS=                 2.10 / 38 temp, air, dome lower weather stat side degCTEATOPWS=                 0.00 / 36 temp, air, dome top weather stat side deg C TEATOPOP=                -3.50 / 37 temp, air, dome top opposite weath side degCTEA2INCH=                 3.99 / 45 temp, air, two inches above fifth floor degCTEA2INEB=                 4.00 / 53 temp, air, two inches up by electronics degCTEA6FOOT=                 3.83 / 43 temp, air, six feet above fifth floor deg C TESCONRM=                 5.35 / 61 temp, surface, floor above control room degCTESPIERN=                 5.60 / 59 temp, surface, floor by north pier deg C    TESPIERS=                 5.60 / 60 temp, surface, floor by south pier deg C    TEAWTHRT=                 4.30 / 35 temp, air, weathertron deg C                TEMPERAT=                 2.73 / 86 temp, air, weather tower deg C              WINDSPED=                15.93 / 84 wind speed, weather tower knots             WINDDIR =                92.22 / 85 wind direction, weather tower deg (N=0 E=90)RELHUMID=                13.84 / 87 relative humidity, weather tower %          PRESSURE=               617.70 / 31 barometric pressure, control room mb        DDSEEMEN=                 0.66 / Dome DIMM mean seeing, arc seconds             DDSEEMED=                 0.66 / Dome DIMM median seeing, arc seconds           DDSEEMOD=                 0.51 / Dome DIMM mode seeing, arc seconds             DDSEESTD=                 0.11 / Dome DIMM seeing deviation, arc seconds        WMSEEMEN=                 0.33 / Weather tower MASS mean seeing, arc seconds    WMSEEMED=                 0.33 / Weather tower MASS median seeing, arc seconds  WMSEEMOD=                 0.33 / Weather tower MASS mode seeing, arc seconds    WMSEESTD=                 0.00 / Weather tower MASS seeing deviation, arc secondWDSEEMEN=                 0.76 / Weather tower DIMM mean seeing, arc seconds    WDSEEMED=                 0.76 / Weather tower DIMM median seeing, arc seconds  WDSEEMOD=                 0.76 / Weather tower DIMM mode seeing, arc seconds    WDSEESTD=                 0.00 / Weather tower DIMM seeing deviation, arc secondSPOZPMEN=                 0.09 / SkyProbe (orig) mean absorption, magnitude     SPOZPMED=                 0.04 / SkyProbe (orig) median absorption, magnitude   SPOZPMOD=                 0.03 / SkyProbe (orig) mode absorption, magnitude     SPOZPSTD=                 0.13 / SkyProbe (orig) absorption deviation, magnitudeCRUNID  = '13Bm02  '           / Elixir camera run ID                           BIAS0   =     1100.61643538595 / Mean bias level                                BIAS1   =    1192.322311361665 / Mean bias level                                FLAT    = '13AQ05_r_flat.fits' / Flat Image                                     CADCPROC=                  2.0 / Version of cadcproc                            BZERO   =                32768                                                  HISTORY imsplice: FLIPS ver 3.0 - Elixir by CFHT - Mon Sep 2 2013 -  3:56:05    HISTORY imsplice: Splicing the two readouts (A&B) per CCD into a unique image   HISTORY imsplice: Splicing results in all detectors as if read from A amplifier HISTORY imsplice: NEXTEND keyword updated (/2) = number of CCDs vs. amplifiers  HISTORY imsplice: EXTNAME keyword becomes `ccdxx` instead of `ampxx`            HISTORY imsplice: AMPNAME keyword now covers both amplifiers (eg `29a + 29b')   HISTORY imsplice: keyword {GAIN, RDNOISE, MAXLIN} replaced by two keywords [A,B]HISTORY imsplice: DATASEC and DETSEC keywords now reflect the entire CCD        HISTORY imsplice: BIASSEC becomes irrelevant -> replaced by BSECA & BSECB       HISTORY imsplice: New keywords are DETSECA, DETSECB, DSECA, DSECB, TSECA, TSECB HISTORY imsplice: New keywords are ASECA, ASECB, CSECA, CSECB                   COMMENT Unique detector IDs for MegaCam (North on top, East to the left)        COMMENT    --------------------------                                           COMMENT    ba ba ba ba ba ba ba ba ba                                           COMMENT    00 01 02 03 04 05 06 07 08                                           COMMENT --------------------------------                                        COMMENT ba ba ba ba ba ba ba ba ba ba ba                                        COMMENT 36 09 10 11 12 13 14 15 16 17 37                                        COMMENT --------------------------------                                        COMMENT 38 18 19 20 21 22 23 24 25 26 39                                        COMMENT ab ab ab ab ab ab ab ab ab ab ab                                        COMMENT --------------------------------                                        COMMENT    27 28 29 30 31 32 33 34 35                                           COMMENT    ab ab ab ab ab ab ab ab ab                                           COMMENT    __________________________                                           COMMENT The two upper rows of CCDs are flipped, a=A amp, b=B amp                HISTORY = AstroGwyn: Run on 2014-12-10 15:41:06 (UTC)                           NORDFIT =                    3 / Order of fit                                   NSTARS  =                  388 / Number of stars in final match                 ASTERR  =               0.0673 / 68%-tile of Residuals                          ASTCAT  = 'Hast.swarp.rdm.relev' / Reference catalogue                          CTYPE1  = 'RA---TAN'           / Coordinate type                                CTYPE2  = 'DEC--TAN'           / Coordinate type                                CRVAL1  =    20.1038700000     / Tangent point RA, degrees                      CRVAL2  =    12.0933600000     / Tangent point Dec, degrees                     CRPIX1  = 6.006234675800000E+03 / Tangent point x, pixels                       CRPIX2  = 8.329732270189999E+03 / Tangent point y, pixels                       CD1_1   =  -5.139379632296E-05                                                  CD1_2   =   2.123092209688E-07                                                  CD2_1   =  -4.104521548390E-07                                                  CD2_2   =   5.129203963010E-05                                                  PV1_0   =  -3.862175516020E-03 / xi =   PV1_0                                   PV1_1   =    1.01127107531     /      + PV1_1 * x                               PV1_2   =  -6.000672376339E-03 /      + PV1_2 * y                               PV1_3   =    0.00000000000     /      + PV1_3 * sqrt(x**2 + y**2)               PV1_4   =  -2.284408247642E-04 /      + PV1_4 * x**2                            PV1_5   =   3.733529959581E-04 /      + PV1_5 * x*y                             PV1_6   =  -2.028807966094E-04 /      + PV1_6 * y**2                            PV1_7   =  -2.358922214440E-02 /      + PV1_7 * x**3                            PV1_8   =   8.810250506315E-05 /      + PV1_8 * x**2 * y                        PV1_9   =  -2.358809046151E-02 /      + PV1_9 * x * y**2                        PV1_10  =  -6.500665157711E-05 /      + PV1_10* y**3                            PV2_0   =   4.404947922285E-03 / eta =  PV2_0                                   PV2_1   =    1.01305604718     /      + PV2_1 * y                               PV2_2   =  -5.998741356502E-03 /      + PV2_2 * x                               PV2_3   =    0.00000000000     /      + PV2_3 * sqrt(x**2 + y**2)               PV2_4   =   3.142220201726E-04 /      + PV2_4 * y**2                            PV2_5   =  -4.073829264060E-04 /      + PV2_5 * y*x                             PV2_6   =   1.857982815805E-04 /      + PV2_6 * x**2                            PV2_7   =  -2.359449968344E-02 /      + PV2_7 * y**3                            PV2_8   =   7.719063038571E-05 /      + PV2_8 * y**2 * x                        PV2_9   =  -2.354498766818E-02 /      + PV2_9 * y * x**2                        PV2_10  =  -6.219830925574E-05 /      + PV2_10* x**3                            ASTLEVEL=                    3 / Astrometry quality level                       HISTORY = PhotGwyn: Run on 2014-12-10 23:41:16 (UTC)                            ZPO     =               32.142 / Original zeropoint from Elixir                 PHOTZP  =               31.869 / Best estimate zeropoint                        PHOTZPS =                0.002 / Uncertainty on PHOTZP (random only)            PHOTZPN =                   32 / Number of usuable calibration stars            ZPD     =               30.000 / Desired, post-SWarp zeropoint                  ZPR     =                1.869 / zeropoint shift PHOTZP-ZPD                     FSCALE  =             0.178822 / Scaling factor to get this zeropoint shift     PHOTREF =   'previous MegaCam' / Source: Hast.photcat                           COMMENT   PhotGwyn: ZPO = 2.5*log10(EXPTIME) + PHOT_C + PHOT_K*(AIRMASS-1)      COMMENT   PhotGwyn: ZPO only valid if image taken under photometric conditions  HISTORY = PhotGwyn: PHOTZP derived from previous MegaCam data for this CCD only COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ý‚ ‚‚%‚‚ò‚ú‚"‚‚‚‚‚-‚‚‚‚‚
+‚‚‚‚ ‚ÿ‚#‚‚&‚%‚.‚#‚1‚D‚‚Q‚_‚s‚£‚Â‚çƒƒ2ƒƒ&‚ã‚Ô‚•‚n‚:‚4‚G‚Aû‚0‚!‚#‚‚‚(‚ï‚‚ø‚‚‚ô‚‚‚‚‚ ‚‚ ‚‚ö‚‚3‚‚‚ø‚1ù‚)‚‚‚‚‚‚‚‚
+‚‚‚‚ôý‚‚‚5‚*‚‚ ‚#‚‚‚÷‚‚‚í‚‚‚ë‚‚
+‚ñê‚'‚‚‚ù‚‚‚L‚ø‚‚‚‚‚‚‚÷‚‚!‚‚"‚‚‚‚‚‚%‚‚ ‚D‚1‚‚.‚/‚2‚‚‚#ú‚‚ ‚.‚)‚%‚#‚1‚/‚‚'‚#‚"ÿ‚‚‚‚%‚"‚‚&‚‚&‚ê‚'î‚‚‚‚	‚‚‚‚‚ý‚‚í‚/ïð‚‚‚	‚‚2‚‚þ‚‚‚"ÿ‚‚‚öâ‚3ÿ‚"‚‚ ‚8‚>‚[‚G‚Z‚‚š‚¡‚±‚½‚º‚¿‚±‚Y‚m‚i‚A‚%‚)‚,‚3‚#‚!‚‚‚‚(‚ ‚‚‚‚	‚‚‚‚	é‚‚‚(ÿï‚‚‚ï‚‚‚í‚‚‚‚‚
+‚#‚ ‚‚‚ý‚‚‚‚‚‚‚
+‚‚ï‚ÿ‚ ‚‚í‚ì‚‚
+‚‚‚‚‚‚‚ ‚è‚‚‚‚ñ‚ ‚ó‚‚‚‚‚‚ö‚‚‚‚ ‚‚‚ö‚‚‚‚<‚%‚‚‚‚
+‚J‚,‚D‚P‚;‚*‚‚‚=‚‚-‚<‚‚P‚‚(‚-‚;‚!‚%‚I‚‚>‚‚‚‚‚‚B‚‚‚!‚+‚‚‚#‚*‚.‚‚‚$‚-‚‚‚‚ÿ‚‚‚!‚‚ì‚
+õ‚ùû‚‚3ë‚‚‚‚‚‚‚‚‚‚‚‚0ý‚‚5‚‚F‚;‚X‚Q‚K‚v‚€‚s‚‚k‚Z‚q‚J‚6‚0‚‚‚"‚A‚@‚&‚&‚/‚‚"û‚‚ý‚‚(‚‚
+‚ö‚‚‚6‚	‚+‚‚‚‚ó‚‚‚ü‚‚‚‚‚	‚‚‚è‚è‚‚	ù‚6ýù‚"‚‚‚ôð‚ÿ‚+‚‚"‚‚ý‚‚ø‚‚$‚ø‚‚û‚*‚ýú‚‚‚‚‚ý‚ô‚‚‚ó‚ ûð‚÷‚þ‚‚‚‚‚‚‚‚.‚‚H‚7‚,‚!‚#‚>‚@‚‚H‚I‚M‚/‚‚‚7‚ø‚‚4‚,‚ ‚#‚'‚‚‚‚‚‚‚
+ú‚‚‚õ‚‚ý‚‚$ùðÿ‚‚‚‚‚$ýý‚ ‚ ‚‚H‚‚‚‚‚‚-‚‚‚‚‚‚‚$‚ ‚þ‚‚	‚‚-‚)‚J‚@‚9‚B‚6‚W‚7‚{‚8‚`‚F‚/‚‚+‚;‚/‚8‚)‚‚‚‚‚ø‚‚‚‚‚‚%‚‚#ú‚‚‚‚‚ä‚‚‚‚êúé‚‚ÿ‚‚‚ø‚éý‚‚‚"‚‚ù‚ó‚þ‚5öú‚åóò‚‚‚‚‚‚‚‚‚‚-‚ó‚‚óö‚/‚‚‚ å‚ïå‚ úìûùÚïò‚÷‚‚‚ ‚‚‚%‚ù‚‚	ü‚%‚"‚/‚Y‚(‚Q‚‚‚-‚9‚‚H‚]‚C‚Y‚!‚B‚‚#‚L‚F‚‚
+‚$‚<‚‚‚ ‚‚
+þ‚‚ ‚‚‚1‚‚‚‚‚‚‚
+‚‚‚å‚‚í‚(í‚‚‚‚î‚‚ô‚‚ð‚ü‚‚‚þ‚‚"‚‚‚"‚‚!‚,‚$‚‚!‚5‚0‚5‚A‚-‚0‚V‚X‚M‚R‚"‚!‚/‚!‚6‚)‚‚‚0‚ù‚‚ö‚‚‚‚‚û‚ò‚!‚‚	‚9‚!‚‚‚	‚‚î‚ÿ‚‚‚ø‚‚‚‚‚‚ç‚	‚‚‚‚
+‚‚‚‚‚õ‚‚‚‚	‚‚	‚ý‚òö‚ä‚‚‚‚‚‚‚‚‚ü‚/‚‚‚ ‚‚ý‚ ‚‚þ‚ ‚ý‚‚‚‚9‚"ñýè‚‚ ‚‚‚‚‚‚?‚>‚X‚A‚3‚>‚)‚!‚M‚6‚4‚I‚I‚?‚I‚A‚7‚‚#‚0‚1‚‚"‚6‚ô‚‚‚ ‚‚‚%‚2‚2‚‚‚û‚.ö‚‚'û‚‚‚èü‚‚‚!‚‚&‚%‚‚'ñ‚‚‚û‚,‚‚H‚
+‚‚#‚‚ô‚‚‚‚ýô‚ ‚ù‚‚‚‚5‚+‚‚‚;‚1‚‚%‚‚&‚&‚‚5‚‚‚‚‚‚‚‚‚+‚ê‚‚‚ ðö‚1‚‚í‚‚$‚ ‚ãî‚0‚‚û‚,âó÷‚‚‚‚‚‚‚ìøó‚‚æöü‚‚$‚ö‚õ‚åø‚þþ÷ú‚‚‚ñ‚‚‚‚‚‚‚‚‚‚è‚ù‚‚þÿ‚‚‚‚$‚
+‚ø‚‚‚‚ò‚‚‚‚‚	‚‚)‚N‚?‚-‚5‚;‚C‚>‚D‚N‚q‚a‚{‚N‚=‚9‚P‚)‚#‚<‚0‚‚+‚=‚‚,þ‚‚
+‚
+‚‚òý‚þ‚‚‚"‚+‚‚‚ ‚‚‚ ‚‚!‚ ÿ‚‚
+æúï‚‚;‚*‚‚‚‚‚þ‚‚ ‚‚)‚‚‚1þ‚‚‚‚‚‚‚‚"‚‚.‚‚&‚'‚‚‚)‚‚‚‚‚‚
+‚(‚+‚ ‚
+ðýá‚‚&æ‚íþ‚‚ë‚‚÷‚óî‚‚)‚‚"‚+‚%‚‚ ‚4‚‚‚‚‚‚‚ù‚‚*‚ ö‚‚"‚‚!‚‚‚‚‚‚ùõ‚‚‚÷û‚þ‚‚‚‚Õ‚‚‚‚‚‚õþ‚8‚‚‚ýý÷ú‚‚‚‚ð‚þø‚‚‚‚‚‚‚‚‚‚‚‚#‚3‚H‚5‚O‚;‚_‚u‚P‚a‚o‚Œ‚Œ‚w‚n‚G‚_‚a‚'‚K‚5‚‚%‚‚‚‚‚
+‚‚‚&‚-‚"‚ú‚‚‚‚ùû‚‚üö‚ õ‚‚‚	‚‚	‚‚8‚‚úõÿ‚‚-‚‚‚üè‚‚>‚
+ðü‚ü‚ìõ‚!‚‚
+‚‚F‚.‚"‚@‚#‚'‚+‚‚‚‚8‚‚‚ ‚
+‚‚‚;‚‚(‚ú‚‚ô‚‚‚‚‚ é‚‚‚"òü‚‚‚‚%‚ø‚‚ú‚ä‚7‚‚üá‚‚ ‚
+ÿ‚"‚‚‚	÷‚‚‚å‚!‚‚%‚‚‚‚‚‚"‚Û‚
+‚ö‚þ‚‚ó‚‚æñ‚‚
+‚‚*‚‚‚‚‚‚ü‚‚‚î‚‚‚ ‚‚‚*‚‚‚‚‚õ‚‚$‚‚9‚B‚>‚P‚?‚_‚G‚f‚~‚‚¯‚ª‚ˆ‚ˆ‚‚‚g‚A‚>‚_‚6‚4‚$‚‚-‚	‚5‚'ò‚‚‚‚
+‚‚‚-‚‚‚#þ‚‚‚‚#‚*ûôù‚‚ ‚ú‚‚ ‚‚‚*‚%êô÷‚‚‚‚‚ ‚‚‚‚‚ù‚#‚‚ù‚‚‚&‚-‚*‚‚‚&‚‚#‚9‚,‚‚‚4‚õ‚‚‚&‚ú‚*‚‚‚/óýö‚‚ì‚
+‚‚‚‚‚ÿ‚‚‚‚*‚ò‚‚"‚ ‚‚‚‚‚‚#‚ý‚‚%‚‚‚	‚
+‚‚3‚‚‚‚‚‚‚‚‚‚‚$‚‚‚‚‚‚ý‚‚	‚‚
+‚‚‚)ý‚%‚‚‚‚‚‚‚‚‚:‚ö‚
+ù‚ ‚ùõ‚ò‚'‚ÿ‚!‚‚‚‚‚‚‚!‚Jý‚>‚9‚B‚‚‚‡‚˜‚ž‚œ‚Ã‚Ù‚Ð‚»‚„‚‚–‚r‚p‚[‚<‚?‚*‚2‚4‚ÿ‚‚ ‚‚
+ó‚‚‚‚‚‚‚‚õý‚êî‚0ãë‚
+‚ ‚‚ïð‚‚‚‚‚‚‚‚ ‚
+‚‚
+‚‚#‚‚‚+‚‚‚&‚‚$‚‚ ‚‚‚ ‚*‚‚ ‚‚‚‚'‚‚$‚,‚‚‚‚/‚‚‚‚‚ÿû‚þ‚(‚‚‚‚ ‚‚ô‚ô‚‚	‚‚‚‚
+‚‚‚‚6‚ù‚1‚‚‚‚ô‚‚‚‚÷‚‚óíìò‚ÿ‚!‚‚‚‚÷þ‚ ‚ð‚‚
+‚‚ÿþ‚‚
+‚þ‚‚‚‚
+‚‚‚*û‚‚‚$ýî‚&õ‚ ‚õ‚
+‚‚äø‚%‚ö‚ÿ‚‚‚‚.‚B‚3‚K‚A‚S‚U‚u‚€‚¬‚Â‚Â‚ºƒ‚Ñ‚ë‚Ö‚Å‚‹‚r‚d‚n‚E‚H‚D‚%‚‚‚4÷þ‚‚‚"‚6‚‚‚‚‚ ÿ‚‚ ‚ ó‚‚ï‚‚
+‚‚÷ñü‚‚‚)ø‚#ü‚‚ï‚;‚‚'‚‚!‚#ü‚õ‚ü‚û‚‚‚‚‚‚‚‚‚‚‚‚)úü‚‚‚"ý‚<‚‚'‚‚‚	‚‚ ‚‚ ‚‚ä‚2‚‚	‚üôé‚‚ð‚1‚	‚!ø‚*‚‚ ‚‚øý‚'‚"‚‚+‚‚÷‚ ‚‚ ‚"‚	ú‚(‚ô‚ö÷‚‚‚‚‚
+‚‚
+‚‚‚‚‚‚üè‚‚‚‚ü‚‚‚‚‚$‚
+ÿéû‚
+‚‚‚&‚‚ ‚‚(ð‚&ø‚
+‚+ý‚‚‚ø‚‚5‚=‚'‚S‚9‚;‚m‚_‚d‚…‚£‚¿‚Ôƒƒ#‚ö‚Þ‚Ä‚¿‚Ž‚m‚V‚\‚L‚4‚Q‚N‚‚"‚ ‚‚‚‚ù‚	‚%‚‚ÿ‚ø‚ ‚‚‚‚ö‚‚$‚‚%‚‚$‚‚‚'ôü‚‚	‚‚‚	‚‚öï‚òû‚‚	‚(õ‚ÿõï‚‚ ‚‚
+ø‚‚‚‚‚‚ ‚‚ ú‚þ‚ ‚&‚‚‚‚9‚"‚‚‚‚E‚‚÷‚ô‚2û‚ô‚‚	‚ù‚ð‚ý‚‚‚í‚‚‚÷‚û÷‚ÿ‚‚‚‚ú‚í‚‚ ‚‚‚‚‚"‚$‚
+‚‚é‚ ‚‚‚ñ‚"÷‚ð‚‚‚ûô‚"‚ú‚ù‚þ‚&‚)‚‚(‚ü‚‚ÿ‚‚ú‚-÷‚‚$‚‚"‚*‚'‚‚‚‚)‚X‚=‚X‚ƒ‚n‚‚©‚´‚Ñƒ(ƒƒvƒ(‚ó‚´‚«‚”‚x‚j‚N‚P‚4‚‚J‚-‚‚3‚*‚ ‚‚‚Þ‚‚2‚‚‚1‚‚)‚ ‚‚‚ô‚‚‚	‚‚	‚÷î‚ë‚‚‚‚‚‚+‚ò‚þÿýý‚‚ì‚‚>ÿô‚‚‚‚ û‚‚‚'‚	‚‚‚‚‚‚‚‚õ‚"‚%‚‚‚‚‚‚‚ü‚‚‚‚‚‚‚û‚‚‚‚‚‚‚‚‚ ó‚‚‚	‚‚ù‚‚ õ‚‚‚õ‚(ø‚(‚‚‚‚ü‚‚ ‚‚‚*‚øæÿõ‚‚‚	‚ÿ‚‚‚‚‚‚ ö‚-‚‚õ‚‚ ‚ ð‚‚‚/‚ø‚ï‚‚‚‚‚"þ‚"‚ü‚ ‚‚	‚'û‚#‚‚‚3‚ ‚C‚F‚d‚q‚“‚¶‚À‚êƒƒBƒƒ]ƒ+‚ð‚²‚S‚‡‚‚p‚U‚H‚J‚&‚7‚-‚ï‚
+‚‚‚ ‚-‚‚‚‚‚‚‚‚‚õ‚úìþ‚‚é‚÷‚‚*ø‚‚-‚‚à‚‚ï‚
+ü‚‚‚‚	‚‚ÿùþ‚‚‚í‚‚ þü÷‚‚‚ñ‚‚‚‚ ‚þ‚	‚‚‚	ñõ‚‚*‚ôèù‚ù‚û‚ù‚*‚ü‚‚‚+‚'‚‚‚‚-‚ì‚‚‚‚‚‚‚‚ ‚ç‚‚‚ù‚‚÷‚þ‚ó‚
+‚‚ùÿ‚‚‚ÿ‚‚ùä‚þ‚‚‚#‚ ‚‚é‚‚þ‚‚‚‚‚‚‚ý‚ú‚‚7‚ó‚‚‚‚
+‚‚‚‚‚ö‚‚1‚8‚*‚g‚{‚g‚‚·‚¦‚É‚Ûƒ(ƒqƒBƒ†ƒ‚ä‚¼‚§‚~‚u‚Q‚S‚<‚5‚;‚ø‚$‚‚‚‚0‚þ‚ô‚‚
+‚‚‚	‚‚6‚‚‚‚‚ëüû‚èñí‚
+‚‚‚‚)‚ö÷‚*‚‚‚ö‚‚‚‚ò‚‚‚	‚û‚ ‚‚(‚þ‚$‚‚‚‚‚!‚‚ ‚‚þ‚"‚‚‚û‚‚‚‚‚‚	‚ì‚‚å‚óõ‚ýû‚‚!ï‚*‚‚‚‚‚‚ ÷ù‚ùü‚‚‚
+‚‚%‚‚‚ç‚‚‚ ö‚‚Û‚ñ‚‚øþ‚ù‚ýê‚&‚‚(‚‚ü‚‚ ð‚.ù‚6‚
+‚
+‚"ø÷‚‚ð‚6‚‚‚ ‚‚ä‚‚‚‚‚‚‚ù‚‚‚‚Q‚N‚P‚k‚a‚n‚€‚n‚µ‚¡‚Ðƒƒ>ƒ;ƒg‚ð‚Þ‚©‚†‚f‚d‚r‚Y‚X‚B‚%‚,‚‚(‚‚‚ô‚.‚‚"Ù‚ü‚‚‚ú‚‚‚‚Ú‚%è‚‚èó‚‚‚
+‚ñ‚‚‚‚$‚‚‚ü‚‚‚‚‚ ‚‚‚‚‚õõ‚‚‚‚ÿî‚‚‚ô‚‚‚3ÿ‚‚ë‚'‚‚‚‚‚
+‚	‚‚	æ÷‚‚‚ ë‚%‚‚‚‚Öù‚‚‚‚‚ ‚ú‚!‚‚‚!‚‚ï‚‚õ‚‚
+ð‚‚‚ÿß‚‚‚‚þ‚‚ ê‚ö‚‚‚‚ûø‚ôæ‚û‚‚þë‚0‚‚‚ü‚‚‚ïù‚!‚‚‚‚ ‚1‚‚-‚‚ë‚ö‚‚ô‚*‚2‚‚L‚E‚Y‚z‚@‚m‚°‚™‚“‚’‚«‚âƒ‚î‚Ø‚ü‚—‚‚‚Œ‚v‚Œ‚]‚L‚=‚M‚‚8‚$‚‚‚&‚‚#‚‚‚ô‚ü‚‚ð‚%‚	‚ø‚‚‚
+‚‚‚ ‚ô‚õ‚‚‚‚‚&‚1‚ú‚‚	‚‚‚‚‚‚‚‚$‚÷‚‚‚‚‚ø‚‚+û‚ù‚ò‚‚‚‚ö‚‚‚	‚"õ‚*è‚K‚‚‚‚‚‚
+‚‚‚‚‚‚î‚‚‚ ‚‚‚ý‚ ‚‚ô‚‚‚'‚‚‚‚‚*‚‚‚‚ñô‚úû‚‚øü‚
+üð‚ü‚&‚õ‚‚õ‚‚‚‚
+è‚‚ð‚"‚‚‚‚‚‚9ì‚‚‚$‚#ú‚‚ù‚‚/ü‚ì‚‚‚‚ø‚õ‚‚‚$‚‚`‚Q‚e‚™‚d‚…‚–‚²‚§‚ª‚µ‚Ö‚Ð‚Ñ‚ ‚È‚ž‚N‚i‚n‚a‚`‚j‚I‚f‚F‚-‚
+‚‚/‚‚5ç‚‚‚#‚‚)‚‚‚‚õõ‚ú‚)‚‚‚‚‚ü‚‚‚	æ‚#‚ý‚÷‚‚‚û‚ð‚‚‚‚‚‚þ‚ÿ‚#í‚‚‚/‚%‚‚‚	‚üû‚#êþ‚‚‚‚!‚î‚"÷‚	‚‚‚ù‚‚‚‚‚‚‚‚‚‚õù‚‚‚×‚‚ þ‚÷‚‚#‚‚‚û‚‚‚‚÷‚B‚‚‚‚
+ý‚‚"ù‚û‚‚(ú‚‚‚‚‚)‚‚	ÿø‚‚‚&‚1‚‚‚‚‚‚-ý‚‚#‚,è÷î‚ ‚‚‚ðø‚‚Üû‚‚ú‚ ý‚‚‚‚8‚+‚5‚S‚P‚[‚d‚Ž‚Ÿ‚…‚‚—‚¢‚«‚¥‚¡‚Ž‚c‚q‚r‚n‚z‚l‚U‚j‚@‚C‚B‚‚A‚‚
+‚þ‚(‚ü‚‚!‚ ÿ‚‚#ë‚‚
+‚÷‚(‚‚‚‚‚÷‚ó‚‚‚‚ïç÷è‚‚‚‚‚‚ õ‚‚-‚‚‚‚#‚‚‚‚÷þ‚-õî‚‚ý‚‚÷‚‚‚‚‚‚‚‚‚.ÿ‚‚‚‚‚‚‚ý‚‚‚‚"û‚‚‚4è‚‚,ô‚1ï‚‚"õ‚‚‚‚ à‚&‚‚&ö‚‚ù‚‚‚‚‚ ÿï‚(‚ ‚0î‚$ú‚&‚
+‚!‚‚ ÷‚‚‚ô‚
+‚‚/‚‚"‚‚;‚‚‚‚‚é‚‚‚	‚‚0ø‚‚‚‚‚‚;‚‚Aúý‚%ù‚‚‚&‚:‚‚7‚W‚S‚Z‚o‚|‚m‚k‚{‚„‚Œ‚‘‚‚w‚U‚H‚J‚q‚@‚^‚b‚s‚`‚`‚+‚1‚8û‚	‚"‚%‚‚ú‚‚!‚‚‚í‚‚‚‚ ‚‚ êôø‚‚‚þ‚!á‚
+‚
+‚‚‚‚‚
+‚ï‚	ì‚‚$‚‚"‚‚‚‚‚‚‚‚‚þ‚ê‚ ‚‚‚‚)‚‚‚‚‚&‚
+‚‚‚‚â‚ú‚@ó‚+ýø‚‚ù‚ýú‚í‚‚ÿ‚‚‚‚‚‚‚0‚‚‚3ð‚
+‚‚!‚ïüû‚!‚‚õô‚öùñ‚	÷÷‚	ó‚
+‚	í÷‚!‚‚‚‚'ñû‚‚.‚‚‚"‚%‚‚‚‚!‚
+‚‚‚‚‚‚$‚‚‚‚ú‚‚‚‚‚5‚‚!‚ö‚ÿ‚‚.ñÿ‚1‚‚B‚3‚q‚O‚U‚O‚Q‚c‚h‚v‚Z‚Z‚[‚a‚Z‚C‚N‚?‚V‚L‚w‚Y‚R‚>‚‚!‚‚‚‚1‚9‚‚!‚ù‚‚‚î‚‚‚‚'ö‚‚ó‚‚‚
+‚‚4öû‚‚‚!‚ô‚	ÿ‚%‚‚‚‚‚‚%‚‚‚)‚‚‚ì‚‚ñ‚ ‚‚‚ ‚‚	‚‚ùõüÿ‚‚‚&î‚‚‚‚9‚-‚‚‚‚‚.‚(‚‚ü‚ù‚øÛÿûë‚â‚'þ‚óù‚‚‚‚‚ÿ‚*‚ù‚‚‚‚‚‚‚‚‚‚"‚‚‚î‚‚‚ú‚‚ô‚‚‚‚‚‚‚#‚‚‚‚‚6‚8‚6‚‚#‚
+‚‚‚‚‚ðò‚‚"‚‚‚äêó‚‚‚î‚
+‚‚‚&‚ ‚1û‚‚&‚8‚F‚;‚d‚a‚)‚k‚^‚h‚}‚U‚_‚4‚\‚L‚?‚G‚<‚+‚U‚F‚:‚=‚U‚‚>‚‚‚*‚!‚‚!‚‚‚‚‚!‚÷û‚‚‚	‚‚‚‚	‚‚ ‚‚‚ ‚‚
+ó‚í‚,÷‚ ‚%‚‚ý‚‚‚‚‚û‚‚ö‚‚‚‚ ‚‚
+‚.ïï‚
+ð‚!‚‚‚‚‚#û‚ò‚‚,‚‚‚‚‚‚ýî‚‚ñíóö‚‚(‚
+‚%þû‚‚‚‚î‚‚‚‚‚‚"‚,‚Ý‚‚ þ÷‚öÿñ‚÷‚‚$‚‚	‚ÿ‚‚ ‚‚ ‚‚‚‚(‚‚‚ ‚‚	‚‚‚0‚ ‚(‚‚N‚‚)‚=õ‚‚!‚"þ‚‚ú‚‚ ‚‚%‚N‚‚ ‚‚í‚ ÿ‚0‚‚‚‚‚-‚"ü‚(‚(‚,‚I‚7‚E‚[‚l‚?‚k‚Q‚m‚P‚5‚F‚M‚P‚P‚f‚Q‚D‚)‚P‚1‚?‚>‚.‚‚‚‚$‚‚õ‚"‚‚‚!‚‚‚ø‚‚ù‚‚Ñ‚"‚‚‚.ò‚‚‚õòþê‚8‚üü‚‚‚úú‚‚‚$‚‚
+‚‚‚‚û‚‚ç‚‚‚‚‚‚‚‚‚‚‚ ø‚‚‚!‚	ñ‚‚‚úò‚ÿ‚‚‚÷‚‚ðö‚‚‚‚×ôæ‚ë‚‚‚%‚ê‚)‚û‚ê‚‚‚‚‚‚‚ö‚#ïë‚'‚"‚)‚‚‚ö‚‚ ‚ü‚æ‚‚‚þ‚‚#‚H‚$‚j‚7‚‚/‚‚3‚‚‚ø‚!‚‚‚‚"‚	‚‚ûé‚ø‚ó‚‚‚û‚‚‚ ‚6‚‚6‚‚8‚E‚H‚Y‚O‚k‚H‚f‚>‚0‚F‚X‚I‚5‚.‚K‚B‚l‚J‚‚/‚.‚*‚$‚‚‚‚‚‚!‚"‚‚‚ó‚‚‚‚‚ø‚'‚û‚‚ø‚ø‚úç‚‚;‚‚%‚‚‚û‚	‚ ‚‚‚‚,‚þô‚‚‚‚‚úúû‚'ó‚‚‚ýü‚‚‚‚"‚øù‚‚+‚öð‚/‚‚‚ ‚‚‚&ê‚"‚‚ëó‚-‚‚#÷‚‚‚‚‚+‚ÿ‚‚‚‚ý‚‚‚ó‚þçù‚‚%‚øãõ‚‚‚‚‚î‚ ‚‚‚ù‚‚(‚‚‚‚!ð‚‚‚‚#‚-‚‚=‚.‚=‚‚
+‚	ÿ‚‚‚A‚‚ä‚‚‚‚õ‚‚ñ‚‚þ‚‚‚‚"ø‚ÿ‚5‚.‚7‚%‚‚C‚f‚†‚b‚d‚=‚b‚H‚X‚X‚;‚&‚B‚=‚<‚+‚$‚Q‚,‚'‚‚
+‚‚ ‚‚‚‚õ‚‚‚ ‚‚‚$ëþ‚‚‚‚‚‚‚$‚‚)‚ù‚‚‚õ‚
+‚‚‚	‚
+‚ø‚7‚‚‚‚8ýï‚‚4‚‚‚9‚H‚.‚‚ú÷‚‚‚‚%‚8ï‚‚‚ý‚!‚‚!‚‚ú‚‚ý‚ÿ‚‚‚ü‚‚‚‚	íú‚	‚‚‚'‚‚-ÿññ‚ ÿ‚úþô‚ú÷ø‚‚ ó‚	‚‚ ß‚‚‚‚‚‚‚‚‚‚-‚‚	‚‚‚‚‚‚ð‚‚‚‚‚‚‚‚&‚‚$‚‚-ö‚
+‚‚/‚ ‚%‚‚‚‚'‚
+ó‚ê‚‚ù‚
+ï‚‚‚ô‚‚‚"÷‚‚‚‚.‚(‚3‚u‚X‚h‚X‚C‚&‚‚E‚X‚N‚)‚]‚=‚$‚'‚>‚D‚‚‚ë‚‚2‚‚$‚‚‚%‚‚‚8‚'‚‚
+‚‚‚%‚‚‚þ‚‚7‚‚‚)ëô‚$ø÷‚‚‚‚‚-‚‚‚‚‚þ‚ ‚‚‚‚‚‚‚ ‚‚‚	‚ ‚'ì‚þ‚‚‚'þ‚‚'‚‚*‚‚û‚#‚+‚‚‚‚‚‚‚‚‚"‚ý‚‚ ‚*‚$‚‚‚‚ú‚‚‚‚ñáø‚‚‚‚ÿ‚ù‚‚û‚ô‚‚!‚‚î‚‚‚‚‚‚‚!‚ý‚ý‚#‚Ü‚
+ÿò‚	öõû‚J‚0‚#‚‚‚‚‚÷‚7ý‚‚î‚‚1‚û‚‚ù‚‚
+‚‚‚‚!î‚‚‚‚‚‚"‚1‚,‚L‚‚M‚9‚;‚Y‚X‚X‚K‚b‚V‚3‚0‚b‚P‚F‚=‚6‚0‚E‚4‚)‚‚,‚)‚%‚,‚‚‚‚ì‚0‚*‚	‚‚‚‚6‚ú‚.‚‚%‚‚‚‚‚‚‚‚%‚‚	‚ö‚‚‚‚‚ñ‚ÿ‚0‚‚‚‚&‚‚
+ëí‚‚‚4û‚	‚‚‚‚‚Ø‚8ö‚‚+‚‚‚/‚ ø‚ë‚ü‚‚1‚"‚ã‚‚‚	‚
+‚õ‚‚‚úìæ‚ ü‚‚‚‚‚'ê‚é‚&ð‚‚"÷ù‚‚‚‚‚‚$í‚,‚6ï‚‚‚ö‚í‚‚‚í‚þ÷‚‚‚‚(ñú‚‚‚‚
+‚$‚‚‚9‚‚‚"þ‚.‚‚ä‚‚
+û‚&‚‚‚‚‚‚‚‚‚èò‚!‚‚)÷‚‚‚‚‚!‚8‚"‚K‚-‚A‚H‚A‚!‚B‚$‚%‚F‚M‚H‚i‚^‚0‚
+‚'‚"‚+‚%‚	‚%‚	‚‚‚‚÷‚‚ ý‚!ö‚	‚‚‚‚‚õ‚Ú‚%‚‚ ‚ø‚‚ö‚‚‚‚ò‚ûå‚(‚‚‚$‚‚ø‚‚‚‚‚1‚‚‚‚‚‚(‚‚‚‚‚ê‚‚‚2‚ ‚&‚‚ ‚$‚‚þúð‚‚‚$à‚‚‚&‚ø‚‚‚‚7‚‚‚
+‚þ‚‚‚‚‚‚ú‚+‚‚úø‚‚
+‚%‚‚‚
+‚‚‚‚‚‚í‚/‚#‚û‚‚‚‚ü‚ÿù‚	‚‚‚‚‚%‚ë‚	‚<‚‚	‚‚‚'‚‚‚‚‚1‚$‚‚ ‚ø‚‚ä‚‚‚ ‚#ûý‚!‚‚3‚ö‚‚‚ ‚þ‚/‚‚'‚6‚5‚6‚%‚=‚B‚=‚$‚%‚2‚.‚‚
+‚‚‚‚!‚%‚
+‚‚:‚í‚(‚‚‚‚D‚‚/‚‚
+‚‚õ‚ ‚
+‚‚ó‚‚‚	‚‚-‚‚ÿí‚+‚‚ ‚ ‚úý‚)‚F‚ì‚‚‚+‚‚
+‚‚
+‚ôøö÷ÿ÷‚‚ ‚$‚‚!êä‚÷‚#‚‚‚6‚‚ú‚3‚$‚‚‚òü‚"‚"‚é‚‚ýö‚‚‚,‚‚‚‚‚.‚‚‚‚‚‚‚‚‚;‚>‚	‚	é‚*ù‚ ‚‚	‚‚‚‚‚‚þá‚‚‚‚‚‚
+‚‚‚
+‚
+‚ä÷‚‚‚	‚‚ û‚‚‚‚/‚‚‚‚	ó‚	‚‚‚ï‚‚‚‚øêïø‚‚‚þ‚ä‚*‚‚,‚û‚‚‚‚(‚‚(‚#‚2‚'‚ ‚‚‚=‚-‚'ò‚'‚'‚‚9‚‚"‚‚‚‚‚‚‚‚ù‚‚‚‚+‚!å‚ô‚‚‚‚‚‚é‚‚ÿ‚ç‚‚$ö‚ý‚øøî‚‚‚‚
+ò÷ü‚ü‚ø‚ï‚‚‚‚
+‚ý‚ í‚‚‚‚‚‚*‚ô‚‚‚þ‚‚‚‚‚‚‚‚ö‚‚ú‚ú‚!‚&‚ð‚‚‚	‚"‚3‚ôö‚‚%‚‚‚ ‚ï‚‚‚ ‚‚‚‚‚‚5‚÷‚
+û‚‚#‚à‚óù‚‚þú‚ô‚	‚ý‚‚ú‚‚‚‚‚æ‚‚åöþ‚#‚‚‚‚$‚‚‚‚‚ø‚‚*ÿ‚‚ø‚ú‚ûê‚‚-‚‚ø‚ö‚ö‚‚0ý‚‚‚5‚‚!‚:‚/‚#‚!‚‚ ‚‚‚‚ô‚‚'ð‚<‚‚‚ ‚‚ ‚#ñïíè‚ÿïð‚‚þ‚‚ý‚%‚ì‚‚ý‚‚ûë‚‚é‚‚ ‚‚‚‚ý‚ÿô‚‚‚‚6úè‚ÿó‚‚!‚‚‚‚‚
+û‚‚2ò‚‚ ‚!‚‚/ú‚õ‚ ‚‚ö‚‚#‚‚ð‚!‚‚‚ù‚
+ÿ‚‚‚$â‚õ‚ÿø‚‚&‚‚5‚‚ å‚
+‚‚‚‚ü‚úí‚‚‚‚‚‚‚0ÿùþ÷‚‚ô‚ô‚‚ü‚‚üõ‚‚‚ öó‚‚‚÷‚‚‚÷ÿ‚‚-‚øò‚‚‚"‚1‚‚‚$‚$ö‚ý‚‚,‚‚õ‚ö‚"ù‚*÷‚‚‚<‚‚‚D‚2‚‚‚‚‚‚‚	‚1‚%‚‚‚%þ‚ò‚‚‚‚+‚÷‚‚‚#‚þ‚þ‚‚áî‚ÿ‚8‚÷‚‚õ‚‚‚!‚ø‚ÿ‚‚*‚‚"‚‚‚‚2‚‚"‚‚÷‚‚$üþ‚
+ôø‚‚‚‚‚ì‚‚ø‚÷‚‚‚!‚
+‚#õ‚#‚þ÷‚-‚‚‚‚
+ç‚ÿ‚þ‚
+‚'‚÷ô‚û‚+‚	‚‚	‚ ‚7‚‚‚‚‚‚‚‚‚‚%‚ÿë‚ ‚ü‚ò‚ø÷÷‚‚óú‚ù‚þ‚‚
+Þ‚‚ô‚‚	‚$ù‚‚ôþë‚‚
+‚‚ë‚2‚ ‚û‚‚‚‚*‚‚‚‚‚"‚‚‚‚&‚í‚5‚‚üø‚‚‚ ‚‚‚‚ü‚‚8‚ ‚‚/‚‚‚ü÷‚‚&‚‚‚+‚‚‚ ‚‚ ‚
+ø‚ ‚$‚‚‚‚ö‚‚ñÿö‚ü‚‚‚‚‚‚‚ ‚è‚‚ê‚‚‚‚@‚‚ë‚‚‚	‚‚‚‚‚>é‚:‚‚‚‚ø‚‚‚‚ ø‚ñ‚‚"‚‚õõ‚‚ú‚ï‚î‚‚‚ñæ‚‚þ‚‚ð‚‚÷‚ÿô‚ÿ‚ù‚‚‚‚‚‚>‚‚'þï‚ú‚ ‚‚	‚,‚‚‚øøÿõ‚‚ê‚	‚‚‚	‚)÷‚ù‚‚‚‚‚‚	ä‚‚‚ó‚‚‚‚7‚‚‚‚‚ý‚‚‚ø‚,‚‚ýþ‚‚‚‚ý‚‚õé‚‚ù‚‚‚%‚‚C‚‚‚‚‚‚‚‚‚%‚‚#‚	‚‚+‚‚$‚‚‚*‚!‚ò‚ù‚‚ü‚"‚‚&‚‚‚ ‚‚‚‚‚‚‚)ù‚ù‚‚*ü‚ò‚$‚‚‚‚‚#‚‚*‚‚1‚‚‚‚‚‚‚.ýöö‚ ‚‚‚‚‚‚‚"‚(þ‚ ‚÷‚‚‚‚ö‚‚#‚‚ ‚‚‚‚ýñõ‚‚0‚ý‚‚
+ÿ‚‚‚‚‚ý‚‚‚‚î‚‚‚ôó‚‚'‚‚‚‚‚‚‚‚‚‚‚÷‚ýð‚ô‚‚-ôø‚‚‚‚ñé÷‚	‚ü‚‚$ë‚(‚‚ë‚,ó‚‚‚‚&‚‚‚‚‚‚3‚ øô‚ÿôô‚"‚‚üõ‚‚ ‚‚&‚‚6‚‚‚&‚‚!‚‚$‚C‚‚0ð‚ô‚!‚6‚,‚‚‚‚‚	‚*‚‚ã‚‚‚‚‚‚"‚‚‚	‚‚øò‚‚‚ý‚ ‚‚‚ô‚ü‚‚ú‚‚ø‚#‚‚‚‚/‚‚‚‚æ‚‚‚‚‚õ‚‚‚&‚
+‚	òúÿ‚‚‚‚!‚ñô‚‚-‚‚‚)‚‚‚ì‚‚‚‚‚‚‚$‚"‚‚‚,‚ì‚‚‚	‚‚ì‚ï‚ô‚‚ù‚þ‚‚‚$‚
+‚ ‚2‚‚$þ‚‚%‚‚ö‚‚‚‚
+‚‚‚‚‚‚‚#‚%‚Ö‚‚‚	û‚+‚‚‚ö‚‚‚‚!‚	‚‚(‚"‚ûñ‚‚‚	û‚ó‚
+‚‚#‚þþ‚$‚#ô‚%‚‚‚#÷‚'‚‚3‚‚4ýü‚‚‚‚‚‚;‚4‚-ÿ‚‚‚‚‚‚‚#‚+‚‚‚‚"‚‚3‚‚þ‚%‚þä‚‚‚‚'‚ ÿ‚‚‚ý‚0‚‚‚ñ‚ó‚‚‚&‚
+‚
+‚‚‚‚‚#‚+î‚‚‚‚‚‚‚åè‚
+‚‚‚‚‚‚‚#‚ ‚‚ú‚ ‚‚‚
+‚‚(‚ö‚ÿ‚‚‚‚!øö‚	‚éý‚‚‚‚‚‚‚	óÿý‚ý÷‚‚<þü‚‚‚‚‚+‚‚ ‚‚‚‚+ø‚‚	‚
+‚$‚‚‚‚
+‚õ‚þ‚ñ‚‚‚'‚‚‚‚‚‚‚úø‚ñô‚	‚‚‚‚)‚‚
+õ‚‚‚‚‚‚‚-‚
+‚‚‚	þú‚%‚‚'ö‚!‚%‚‚-‚‚+‚	‚‚‚=‚,‚‚‚‚‚‚$‚‚%‚‚/‚‚(‚
+‚‚‚‚‚‚!‚;‚‚'‚‚0õ‚‚‚2‚‚3‚‚T‚‚è‚+‚‚‚‚‚÷‚&‚‚"‚ ‚‚ÿ‚$ûï‚‚ñ‚ö‚‚‚‚‚‚‚‚‚ ‚û‚ ü‚‚5ö‚‚‚æ‚‚õ‚‚‚‚‚‚*‚ ü‚‚ûãí‚
+ü‚‚ç‚‚‚ ‚‚‚‚‚ýø‚ó‚‚‚"‚ ‚‚ó‚îé‚‚ï‚.‚‚‚øüê‚‚è‚þ‚ñ‚ÿ‚‚‚(‚éð‚‚‚(ü‚‚!‚‚ÿã‚‚‚‚‚‚ò‚‚‚‚‚ýð‚%‚ ‚‚"‚"÷‚‚ÿ‚"‚ù‚=ý‚4‚/‚‚‚,‚ ‚‚‚‚H‚‚?‚2‚,‚0‚&‚/‚‚‚‚*‚A‚8‚*‚A‚ÿ‚/‚‚‚ÿ‚%‚!‚‚‚$‚à‚‚ ý‚þ‚.‚ø‚ýóú‚‚‚‚‚‚‚ùð‚$‚<‚‚‚‚ñú‚ó‚‚‚‚‚‚‚‚&‚‚ìæ‚‚ÿ‚ÿ‚‚‚/‚÷‚‚‚‚‚‚‚9ýõøþ‚÷÷ø‚‚÷‚‚‚ÿû‚‚‚‚‚‚‚0ü‚ÿ‚!òï‚ðô‚‚‚ÿ‚ù‚‚‚‚ò‚!‚
+‚+‚‚‚‚‚‚ò‚‚ÿ‚ ‚‚0‚â‚‚‚(÷‚‚íüô‚‚‚$‚3‚‚‚‚‚1‚,‚é‚öè‚‚‚‚!‚&‚
+‚‚‚	ü‚‚‚‚‚!ù‚‚‚#õ‚*‚‚‚#‚7‚0‚#‚‚#‚‚ù‚‚‚‚0‚ÿþ‚.‚‚*‚‚	‚7‚‚‚üö‚ó‚‚)‚1‚‚‚‚‚#‚‚‚‚	‚)þ‚‚ïî‚î‚‚‚‚ø‚ü‚‚‚‚"‚‚ùùõ‚‚û‚"í‚‚‚ ‚‚‚ñ‚)þ‚ ‚‚‚‚ý‚‚/ý‚	‚‚#‚‚‚ åò‚‚‚‚‚ ‚ý‚‚!‚1‚í‚‚$ü‚ýëì‚	‚î‚ú‚‚‚‚8î‚‚‚‚ ‚‚ ‚ë‚‚ ‚&‚	ñ‚
+ýÜì‚‚‚óø‚
+‚ü‚‚	‚‚ùêê‚î‚‚
+èø‚‚‚‚ ‚‚‚	‚‚ÿ‚‚üü‚‚‚Îå‚ú‚‚‚‚‚‚‚‚ÿ‚‚‚'‚‚‚‚;‚‚‚7‚‚‚‚‚	‚‚‚ð‚$‚‚‚‚‚‚‚‚ ‚‚ÿ‚‚‚‚‚‚‚‚‚‚‚ó‚‚‚‚‚‚‚‚ü‚7‚
+‚	‚!î‚‚ø‚‚ý‚‚áö‚‚‚ì‚‚‚‚‚‚‚‚‚‚‚ð‚õí‚‚‚ÿ‚%‚‚‚	‚‚ ‚‚	‚‚‚‚ ÿ‚ù‚	þ‚#ú‚‚/‚‚‚ú‚‚‚‚8‚‚‚ù‚ý‚ð‚M‚‚ê‚þ‚‚û‚(û‚‚‚&‚‚$‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚(‚‚‚õ‚ú‚ ‚‚‚ò‚1å‚ù‚‚‚!ó‚2úý‚ÿ‚‚(î‚‚"‚‚‚‚‚5ï‚‚‚‚"‚‚‚"‚#‚‚B‚%ø‚ý‚$‚‚‚‚ ‚3‚‚ý‚	‚‚'‚‚$‚‚ô‚‚õ‚
+‚‚‚‚‚‚‚ë‚‚0â‚‚!‚‚õ‚‚‚(‚
+‚‚‚F‚ ãþ‚‚îó‚+‚‚!þø‚
+‚(þ‚'‚!‚‚‚‚‚ó‚‚‚‚
+‚‚ø‚‚‚5‚‚‚õþ‚ñ‚‚‚#‚‚ ï‚‚'‚‚	â‚‚‚'‚‚ ‚‚4‚
+ù‚ú‚‚!‚ï‚+‚(‚/‚‚ ‚‚‚ò‚ù‚‚‚,‚‚‚ûö‚‚‚úûà‚‚‚ý‚‚‚‚‚‚õ‚‚‚‚(‚‚êÿ‚‚‚‚‚‚!‚'‚ ‚‚‚ ‚ ‚‚‚‚‚‚‚ò‚ë‚‚‚‚ ‚‚‚‚ ‚ ‚
+‚‚$‚‚5‚‚ú‚‚‚‚‚‚‚÷‚‚ïþ‚‚‚‚‚ÿñ‚	‚‚'ÿ‚‚‚‚ ‚!‚üý‚‚‚‚Ý‚6‚‚‚‚‚	‚
+ú‚‚‚‚‚%‚ü‚‚‚ò‚‚‚‚	‚‚ñ‚5‚‚‚‚ú‚‚‚‚ ‚õ‚
+‚ö‚‚õ‚‚‚
+‚(‚
+‚‚ ‚‚‚ ‚‚‚÷÷‚‚ñÿ‚‚‚ ‚‚‚‚ì‚
+í‚‚ Ùñ‚'‚‚‚þ‚‚‚‚ ‚=ø‚ä‚‚ñ‚#‚
+‚‚‚‚Ý‚‚!‚‚%‚‚‚‚(‚$‚‚ú‚‚‚ø‚"ò‚‚"‚ö‚‚	õ‚‚þ‚‚‚‚‚ñ‚‚‚ì‚-ÿ‚‚.‚<‚‚"‚‚‚‚æ‚
+‚ ôÿ‚‚ ÿ‚ ‚‚%‚!‚&‚4‚‚‚‚‚&‚ý‚,‚ñ‚‚ï‚<‚
+ý‚ñ‚‚@‚‚‚‚‚‚'‚þ‚‚‚‚‚û‚‚	‚.‚"èò‚‚‚‚2‚‚‚‚çÿû‚
+‚×‚ûÿìú‚‚‚‚
+‚ ‚‚.û‚‚
+‚‚‚ô‚‚"‚ê‚‚ è‚!‚‚
+‚ü‚‚‚õ‚‚‚$‚õýü‚Ïõ‚þý‚‚‚ýß‚‚‚‚þý‚‚‚ò‚ð‚‚‚ò‚ó‚‚*‚‚ ‚ñü‚‚Ú‚ù‚‚‚‚‚‚‚‚‚‚*‚%‚ü‚‚‚‚,‚
+‚ø‚	‚‚ ‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚ ‚‚‚.‚-‚þùôý‚‚‚*‚6‚‚ ‚$‚‚‚6‚/‚3‚ò‚	‚‚ ‚‚ù‚‚‚‚‚‚‚Þ‚ú‚‚‚‚‚‚‚‚‚‚9‚$‚‚þ‚‚‚‚‚‚
+‚‚þï‚õ‚‚þ‚‚‚÷‚‚$‚&ü‚‚‚‚0‚õ‚ ‚‚0ÿë‚ù‚	‚‚þ‚‚0‚‚‚ó‚‚‚‚‚ùââ‚‚öÿ‚0‚‚‚"‚ ä‚ ‚-‚‚
+‚#‚)‚&‚ø‚î‚	å‚‚ú‚ ‚‚êú‚‚*‚ó‚‚‚‚áõ‚áúô‚	‚%‚‚‚‚‚ý‚ö‚'‚‚‚‚‚<‚‚ýç‚‚‚‚ü‚óñ‚‚%ð‚‚‚*‚ú‚‚‚‚‚%ûèó‚‚‚‚ì‚÷‚‚‚ý‚$‚‚ ‚7‚$‚‚'‚ë‚3‚‚	‚ú‚	‚
+‚ò‚‚‚‚‚‚‚ß‚3‚‚‚‚‚‚‚‚‚‚!‚‚‚
+‚‚Düùüø‚‚‚‚‚‚#ð‚‚í‚ù‚‚‚‚‚‚‚‚‚‚‚ø‚ÿ‚"‚‚‚ñ‚‚‚,ö‚
+ü‚#‚‚ü‚‚‚‚‚&‚ô‚‚&‚‚‚‚‚‚‚‚	öï‚‚‚‚‚0‚‚ ‚‚‚âþ‚‚‚‚ò‚)‚	‚‚&‚'‚‚ ‚‚ô‚	‚+‚‚ù‚‚‚6‚‚ï‚'‚
+‚üú‚ð‚*‚)‚‚ ‚,‚	ï‚
+‚‚	‚‚‚'í‚‚‚‚‚‚	‚ê‚	‚‚ ‚‚ëüïû‚#‚	‚‚‚‚‚ñ‚‚-îù‚	ÿ‚	‚‚)‚‚‚‚þ‚‚$‚‚‚‚ù‚Ù‚
+‚‚‚‚‚‚#‚/ö‚‚‚‚‚‚î‚‚'‚-ø‚‚ ûÿöíù‚‚&‚‚‚"‚!‚‚‚3ÿÿ‚‚‚î‚"‚%‚‚‚õ‚
+‚‚$‚‚‚‚ä‚‚‚‚ ‚"‚‚ú‚‚‚‚‚‚í‚‚	ï‚üð‚ö‚‚‚‚‚üæ‚‚‚‚'óù‚‚$‚ü‚‚‚ý‚‚ü‚$‚‚‚‚‚ü‚
+‚ý‚	ùÿ‚‚;‚õþûý‚	‚"‚&‚ô÷‚	õ‚ ‚ ‚#‚‚7‚
+‚‚"‚ó‚‚ï‚Þ‚‚‚‚‚‚‚-‚‚‚‚‚‚‚‚ü‚‚‚‚-öð‚ù‚‚‚‚ìê‚
+ç‚%ÿ‚‚‚‚#ð‚‚‚,‚%ôý‚‚‚ ‚‚‚ýþ‚ö‚ÿ‚‚‚&‚	øý‚‚)ø‚	‚"îÿ‚ó‚‚‚‚"‚‚(ø‚ ‚ì‚úþ‚‚ ‚*ý‚‚‚÷‚‚‚‚÷úû‚ú‚"‚‚‚ô‚‚Þ‚‚‚üü‚	‚ó‚‚"‚÷‚0‚òõ‚.‚ÿ‚ûúû‚î‚ ÿ‚í‚ý‚‚‚‚ýí‚‚ù‚õù‚÷‚‚‚‚è‚‚ÿõú‚ ‚‚"‚	‚ü‚ñ‚‚‚‚"‚‚‚	‚‚	‚‚û‚÷ø‚‚	‚&‚‚‚‚ýû‚&è‚‚	‚!ù‚‚‚‚‚‚‚‚‚‚6èþ‚‚‚‚%‚ú‚‚û‚‚‚‚‚ô‚‚‚0‚‚!‚úþ‚îùþ‚‚‚ïô‚‚‚‚‚$‚)‚û‚'‚‚þ‚õ‚‚‚8‚‚‚û‚ñ‚ÿ‚)‚‚‚‚&‚‚‚‚‚‚‚‚þ‚‚‚
+‚‚‚‚‚‚(‚&‚!‚ñ‚ò‚‚	‚‚‚ñ‚‚.ôø‚,‚!‚‚‚‚‚‚õ‚ó‚‚‚‚‚‚
+‚í‚‚ÿö‚ûþçé‚‚‚‚‚ø‚	‚‚‚#‚
+‚ñ‚‚‚‚öÝ‚ó‚‚
+‚ö‚‚‚‚þ‚‚‚‚‚‚øÿ‚‚	ÿ‚.‚‚í‚	ù‚üô‚‚ï‚‚‚‚‚)ì‚‚‚ðô‚‚ ‚‚õ‚‚‚‚‚ ‚
+‚	‚‚‚&‚‚‚‚‚ü‚‚ò‚ëó‚&‚ù‚‚‚‚ ‚ ú‚ú‚'ø‚‚#‚‚‚‚ ‚‚ ‚ü‚$û‚ü‚(‚ ‚"ý‚‚+‚ùýè‚‚‚è‚‚‚	‚‚
+‚!‚‚6ò‚"‚‚‚	ô‚‚ ‚‚6ýù‚‚‚‚‚‚‚
+‚:‚‚‚,‚‚%‚0è‚‚‚ ô‚÷‚‚	‚ú‚‚‚ð‚‚&‚‚*‚'‚íö‚)‚!‚‚‚á‚#‚‚
+‚‚‚‚è‚ð‚‚ì‚‚ü‚‚
+‚‚ÿ‚‚ ‚çí‚'ò‚‚"‚‚‚&‚‚ôô‚‚‚!‚‚‚‚þ‚‚‚ý‚‚0‚	‚‚,÷‚‚‚ ‚þý÷‚	‚‚‚‚‚‚‚ö‚2ý‚
+‚ù‚‚(‚ôýð‚‚‚‚
+‚‚ê‚ú‚‚‚ ‚‚
+‚‚3‚
+‚‚øç‚õ‚$‚‚ù‚!‚:ò‚‚‚ÿù‚þ‚ ‚‚%‚‚ÿ‚‚‚‚‚‚‚‚‚ ‚øþ‚‚‚‚ê‚‚‚‚‚/‚"‚‚+‚#‚ÿ‚ìû‚‚‚õó‚
+‚‚úþ‚‚‚‚üûï‚‚ø‚û‚‚‚‚ÿú‚‚ ü‚‚‚‚ý‚‚‚0ïöñ‚‚ùö‚
+ï‚‚‚‚è‚‚ö‚û‚
+‚$‚‚‚ÿ‚‚û‚Þ‚û‚ñ‚'‚‚‚‚î‚ù‚"‚‚ø‚+‚‚‚‚‚‚
+‚/ý‚‚‚‚$‚‚ýïû‚"õ‚‚)‚‚
+ù‚‚û‚‚‚‚‚‚‚‚‚‚þ‚‚ð‚‚‚
+‚0‚‚ò‚*‚‚2‚þü‚‚‚ÿ‚‚‚‚÷‚‚øÕ‚ý‚‚‚‚‚!ó‚üð‚‚!‚ÿ‚‚‚‚‚‚‚ ï‚‚‚+÷þ‚&ð‚*‚ü‚‚‚‚ü‚
+‚1‚4‚‚ ‚‚ù‚‚‚‚ÿù‚:‚"‚-‚‚$‚‚ü‚‚‚‚è‚‚ð‚‚"‚‚‚ã‚‚‚‚ô‚
+‚ûÿ‚‚‚‚5‚‚‚	‚	‚‚‚ù‚‚‚
+‚‚ýç‚‚‚‚õùó‚‚‚‚‚‚ü‚ù‚‚ ‚ý‚‚‚ù‚‚
+ø‚ ‚‚‚	‚‚‚‚ÿ‚‚‚‚‚‚‚ ‚‚‚ ‚‚ù‚‚‚‚‚‚‚‚‚ò‚ô‚	‚‚;‚ ‚‚‚‚‚	‚-‚è÷‚øú‚‚ò‚‚‚õ‚‚‚)‚û‚0ÿ‚‚‚	‚‚‚‚‚ ‚1‚‚‚õ‚3ìñ‚ ‚!‚3‚%‚)‚ü‚ç‚‚‚‚ý‚‚0‚#‚‚‚‚%‚‚‚‚‚‚ñèî÷‚‚õ‚*‚!í‚ú‚&‚õ‚‚‚
+‚8ýè‚	öé‚ò‚	‚ó‚%ï‚	û‚‚‚‚‚‚ø‚‚-‚
+‚‚ÿ‚‚!‚$‚‚ ‚‚‚‚‚%ú‚þ‚‚$‚þ‚'‚‚ü‚%‚ û‚$ö‚#ý‚‚‚‚ÿ‚ÿ‚‚‚"úü‚ ‚&‚+‚‚‚‚Aÿ‚‚‚‚‚ó‚
+öüæ‚ ‚‚
+‚ÿ‚	‚‚2‚‚	‚	‚‚!‚ÿ‚‚‚ï‚‚ù‚ ‚‚‚üúèõ‚‚‚‚‚‚‚%‚é‚‚‚‚‚‚‚Û‚‚ô‚ á‚‚‚á‚‚-å‚ý‚‚ý‚&‚‚‚‚Þ‚3‚‚‚
+‚‚ûÿ‚‚	ó‚(‚‚$‚'‚‚(øÿ‚‚‚‚5ëþ‚‚‚!‚‚
+‚‚‚‚‚‚	åê‚	‚‚=‚‚!‚#‚‚‚‚‚‚‚‚‚‚‚ø‚‚î‚#‚‚‚‚‚‚‚‚7‚"û‚ô‚éé‚8‚ý‚‚'‚‚-‚‚‚ ‚.‚‚‚‚‚‚‚‚‚	ë‚‚-ö‚þ‚‚þ‚+÷‚þ‚öý‚‚#‚‚ó÷ù‚‚
+‚‚‚ÿ‚%‚‚
+‚‚‚ ‚‚‚‚ø‚‚#‚‚5‚üüì‚ì‚ø‚‚‚ ÿ‚‚	‚‚	‚*ñ‚*‚‚/â‚‚‚óý‚ÿ‚ó‚‚ú‚‚!‚‚‚&‚‚‚þ‚"‚‚ê‚‚‚øö‚ ‚‚‚#‚‚‚	‚ý‚ú‚8‚‚‚‚‚‚"‚‚‚‚ù‚‚‚‚‚!‚‚‚ ‚‚ýñ‚‚	‚‚õ‚‚‚$‚"ü‚ ‚ ‚‚‚‚%‚ ‚‚‚‚‚‚‚‚‚ú‚‚‚
+û‚‚‚‚‚÷‚2‚‚‚‚‚‚‚‚‚‚‚‚û‚è‚‚‚ú‚‚‚!‚ ‚‚è‚‚öö‚ ‚‚‚‚‚ ‚‚%‚‚‚‚‚þê‚ öõ‚‚ö‚‚‚‚'‚#‚‚î‚ÿ‚‚‚çß‚Ý‚‚‚‚‚‚þ‚(ñ‚‚‚‚ ý‚‚‚‚‚‚ö‚‚‚‚=‚.‚‚‚ý‚‚í÷‚ý‚‚‚‚	‚‚‚‚ù‚‚ú‚‚þ‚ý‚)‚‚‚‚‚	‚‚ö‚þ÷ÿ‚‚)‚‚ý‚‚ø‚‚2‚‚ø‚‚‚%‚‚‚‚‚‚ç‚ó‚‚‚‚é‚ ‚‚ê‚‚‚‚è‚ ‚ö‚
+‚‚ñ‚‚ù‚‚ÿ‚ÿ‚‚&ò÷‚*ÿÞ‚2‚3ú‚‚‚‚!‚‚‚þ‚‚‚‚‚ ‚‚‚‚‚‚‚÷‚‚‚	å‚‚‚þ‚4‚‚	‚	‚‚‚N‚‚$‚‚ ‚ ‚‚=‚ ‚ÿ‚'‚‚‚‚,‚‚îö‚‚‚ö‚‚‚‚‚‚ù‚‚‚ÿø‚‚‚ë‚õø‚þ‚ ÷ý‚‚‚‚‚‚‚ ‚‚‚‚ö‚$‚‚‚‚‚‚(‚‚û‚‚‚‚‚‚
+‚‚‚úð‚‚	‚‚û‚ùï‚ ‚;‚‚‚=‚ùä‚þø‚‚‚,ÿþ‚‚	ô‚üëè‚‚‚'‚%‚‚/‚'‚÷‚‚‚‚
+‚ü‚/‚‚
+‚‚	‚%‚‚ý‚‚ã‚‚
+‚‚ þ‚‚ñê‚‚ü‚ì‚1‚‚ÿ‚‚
+‚‚ ‚ÿ‚‚‚‚	‚0ì‚‚‚‚‚‚‚ÿ‚‚‚‚‚ô‚ûü‚ý‚-õ‚'ü‚‚1‚4ùû‚$‚‚þ‚+‚‚‚‚&‚‚
+‚‚‚‚ì‚‚‚öð‚‚‚é‚)‚$õ‚‚‚÷‚‚‚ý‚ ñ‚‚$‚îû‚‚í‚‚&‚
+ÿ‚‚‚‚‚‚óø‚‚‚‚öóâþ‚"ò‚
+‚‚‚(ý‚é‚ ‚‚‚‚‚ù‚‚‚ò‚	‚‚‚ ‚‚ÿ‚ þ‚‚ ‚‚‚‚‚Û‚‚‚‚ü‚‚#ö‚‚ï‚‚‚‚ö‚‚‚	‚÷‚‚‚‚‚‚‚ô‚‚û‚
+‚‚$‚‚‚
+÷‚‚‚‚ ‚íû‚úøû‚‚î‚	úøú‚ë‚‚ð‚ ‚‚‚ü‚‚
+‚ ‚‚‚ôï‚‚þ‚‚‚‚‚ ‚îè‚‚‚‚öÿ‚)‚7‚‚‚‚‚é‚‚‚0ö‚‚ý‚íøè‚‚+‚‚‚‚
+ý‚‚‚‚	‚‚ý‚‚‚ì‚‚‚‚‚‚ô‚	‚‚ýú‚‚‚‚ø‚ ‚A‚ê‚!‚‚‚‚‚‚ù‚ ‚ë‚ÿ‚‚‚û‚‚‚‚ û‚ÿ‚ÿ‚‚
+‚‚ò‚‚‚ ‚‚‚‚‚‚‚‚‚‚ú‚‚‚‚ÿ‚ù‚.‚‚‚‚‚(‚‚!‚‚‚‚ þ‚‚‚‚‚ú‚à‚‚&‚ü‚‚‚ù‚‚‚ñ‚‚‚‚‚,‚‚‚‚‚‚‚‚÷‚êó‚‚4‚‚ ï‚ ‚‚‚‚‚‚ àë‚‚ ‚ú‚‚‚ý‚(‚‚‚‚‚‚ò‚ùþ‚	‚‚ö‚‚‚'ü‚8‚)‚ÿþ‚‚%‚ú‚‚ïç‚ö‚ ‚þ‚‚‚‚	ó‚&‚ ‚‚&þ‚&ù‚‚,‚(‚ ‚‚$‚
+‚"‚‚ý‚þ‚+‚‚‚‚ô‚	‚‚‚!‚,‚‚‚‚	‚‚‚‚ ‚‚+ú‚&þñ‚‚ ‚	‚‚
+‚‚‚‚ ‚‚‚‚‚ÿï‚ú‚‚ ‚‚‚‚‚‚‚
+ï‚÷û‚‚òÿ‚‚‚‚‚õ‚‚"‚‚	‚‚‚ýã‚'‚‚
+‚û÷‚‚ÿ‚ ý‚ê‚(ô‚‚‚	‚‚ ‚ï‚#î‚‚ý‚‚‚
+‚‚9þ‚‚‚#‚‚
+‚‚‚þ‚‚‚‚!ú‚‚ó‚‚‚ê‚÷ðý‚‚‚‚ñ‚,‚üúû‚‚ý‚ú‚ù‚þöôÿ‚*‚‚û‚ ‚‚ý‚÷ï‚÷à‚-‚:‚‚‚‚‚+‚!‚
+àý‚‚‚$‚‚	õ‚í‚!‚$‚4‚
+‚.‚+ÿÿ‚‚‚.‚‚‚‚‚$‚÷‚ö‚ ‚!‚‚‚‚‚‚‚‚õ‚	‚ëø‚‚ü‚‚ý‚
+ï‚.‚%ü‚þúð‚(‚‚‚‚‚‚‚
+‚ ‚‚‚‚‚þ‚‚‚3‚‚‚‚ûõþú‚è‚(‚%‚‚
+‚ÿ‚‚‚‚‚øû‚&‚‚‚ö‚‚‚‚ê‚BõÜ‚‚‚#‚‚ãí‚‚ÿ‚‚‚‚‚‚‚‚‚‚þ‚û‚‚
+‚‚	ï‚÷‚ùù‚!û‚ö‚‚ ó‚‚ô‚å‚‚‚‚‚"ö‚‚‚‚	‚‚‚"þ‚‚	ñ‚Ûøí‚4ô‚ÿ‚ù‚ý‚‚‚
+‚ø‚&‚‚÷Úï‚‚‚òè‚‚‚‚ú‚‚‚0‚‚‚‚‚‚î‚&‚‚‚‚	ò‚ô‚þâú‚‚þ‚‚‚&øñ‚ú‚þ‚‚ú‚ø‚ö‚‚‚!üû‚%‚+‚‚‚í‚4‚‚‚.‚‚‚‚ò‚‚(‚!ò‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚
+‚‚‚è‚‚/‚‚‚‚3ùüô‚
+‚‚‚‚‚#‚‚‚ñ‚è‚	‚>ö‚ó‚L‚&ÿ‚‚ý‚‚/‚‚‚)‚‚#‚&‚‚‚‚‚ñéöè‚"‚%ø‚‚‚	öí‚‚ ‚$‚ôð‚‚‚)‚‚‚‚‚ ‚
+‚)ñ‚‚‚‚ø‚û‚‚ì‚þ‚õ÷‚ð‚‚î÷‚‚ø‚‚‚‚‚‚‚ ü‚0î‚ÿ‚õù‚‚2‚‚&‚ ‚‚‚‚‚‚‚‚‚õ‚‚ ‚‚‚+‚	‚‚3‚‚)‚‚
+‚‚‚‚‚‚ú‚‚‚‚‚ÿù‚ö‚‚ý‚$í‚/‚‚òý‚‚‚‚ç‚‚‚*‚ò‚‚‚"üù‚‚‚‚‚‚÷‚‚:‚Þ‚$‚ýó‚
+ûÿô‚‚î‚ÿ‚‚
+‚‚	‚+‚‚‚ûû‚ù‚öû‚‚û‚‚ ‚‚‚ ÷‚‚+‚	ÿ‚#‚<‚‚	öä‚‚í‚ò‚‚‚‚
+‚‚‚‚‚-‚ø‚‚‚-‚‚‚ê‚õ‚‚‚þ‚‚ÿ‚‚‚‚(‚‚#é×ò‚‚‚í‚‚?ò‚
+‚ìî‚óôý‚+‚‚ó‚þô‚ø‚‚‚‚‚‚<þ‚‚‚
+‚‚‚ ‚‚	‚‚‚‚ÿ‚‚‚‚‚‚õú‚‚‚‚‚‚‚ý‚ü‚"ëíú‚öý‚‚‚ ‚‚‚‚‚ûþ‚
+òò‚ ‚4‚êô‚0á‚ ö‚‚‚‚‚‚‚‚‚‚÷‚"â‚üú‚#õ‚‚‚0‚‚‚‚‚öü‚‚õ‚þ‚‚‚‚‚‚‚‚
+ú‚&‚ò‚‚‚‚"ïêü‚ íü‚‚‚‚‚‚‚ê‚$ò‚‚ ‚‚ø‚åûõ‚‚‚‚÷‚‚‚‚ë‚/‚‚‚‚ûòðó‚‚‚‚ý‚ ‚‚ïó‚‚‚‚"‚!‚‚‚5‚‚á‚ï‚‚!ý‚‚"ê‚‚‚‚‚ñ‚‚/‚&úúú‚‚(‚‚‚=‚‚ ‚'‚‚‚‚÷þ‚$‚ùô‚+ù‚‚ðûë‚‚‚'‚‚+‚þ‚ù‚‚å‚ø‚‚ ‚ù‚"‚‚'‚‚ù‚ÿð‚ô‚‚‚÷ûüï‚@‚‚
+‚	Ù‚‚‚%‚ Þ‚‚á‚%‚‚,‚ÿ‚ùóû‚‚	‚‚ ‚‚‚
+‚‚‚‚‚‚ý‚‚*‚	‚‚%‚‚‚%û‚!‚‚-‚‚‚
+‚‚3æ‚‚‚‚)‚‚‚î‚‚‚‚‚	ûõ÷÷‚ðñ‚‚‚&‚"ð‚ö‚‚‚‚‚"‚‚4‚‚‚<‚‚‚‚*þ‚ï‚ ‚ï‚‚	‚‚‚‚‚‚‚‚÷‚ûø‚‚‚‚‚	‚#õ‚Þ‚‚‚ì‚‚û‚ð‚‚!‚‚2‚‚-‚;‚(‚‚‚‚‚9‚"‚‚‚!‚‚	êæ‚!‚
+‚ò‚	‚‚‚ì÷‚‚	ûéüæ‚‚(‚û‚*ô‚,‚‚‚#‚2‚"ü‚‚‚‚‚‚)‚‚
+‚ þ‚ùú‚‚‚‚‚‚
+‚‚‚‚
+í‚‚‚‚‚‚-‚‚‚‚‚‚þö‚2‚‚‚‚‚‚"ô‚&ýÿà‚‚ øÿ‚‚‚ë‚ñ‚‚‚	‚$‚‚1í‚‚‚‚ë‚‚‚‚ê‚ô‚‚‚‚‚0í‚‚‚‚	‚øõ‚ö‚'ý‚5‚‚‚#‚A‚ö‚‚‚*‚
+‚.‚‚ã‚‚ñí‚‚‚‚‚!þ‚ ‚‚ÿâû‚‚‚-øÿç‚ ëõõòì‚ù‚‚
+‚‚‚ÿ‚/‚-‚"‚ ‚&‚‚4‚,‚‚‚‚"ø‚ö‚‚‚ ‚ý‚‚‚$ø‚õ‚ïí‚+‚‚‚‚û‚Ôóý‚‚$‚‚	‚ë‚ü‚øô‚%‚î‚‚
+‚‚‚‚î‚‚‚#‚‚@‚‚-‚ñ‚‚9ù‚‚‚ö‚‚‚)Ü‚'‚‚ì‚‚‚ñ‚øÿ‚‚‚‚‚‚‚‚
+‚çÜ‚ ð‚æ‚‚,‚‚‚‚þ‚‚#‚‚ ‚+‚%‚‚öî‚‚‚‚‚‚ ‚
+‚ö‚*‚‚ ‚øô‚‚‚‚‚*ú‚‚‚7‚4‚Z‚ ‚'‚'‚/‚‚‚?‚‚‚‚‚'â‚‚‚‚ñ‚‚‚‚‚‚$‚ùø÷‚ð‚‚‚‚ ò‚‚‚-‚‚‚‚‚‚
+‚‚‚‚ ‚‚"‚*‚‚.‚?‚D‚=‚‚:‚5‚‚+‚	‚‚ ‚ ‚‚‚‚	‚‚‚&é÷‚‚‚úú‚‚ó‚ï‚‚‚‚,‚%‚‚‚	÷å‚‚‚‚‚ñ‚äû‚‚‚'‚	ü‚ò‚‚‚
+ö‚"êì‚0Ô‚‚‚‚‚ ‚‚$‚‚‚‚
+æ‚‚‚‚‚‚‚‚‚ï‚)‚‚0‚‚‚‚‚‚.‚‚%‚	‚
+‚‚‚‚‚‚‚‚‚î‚‚ÿ‚‚èö÷ö‚‚é‚‚1ýï‚‚'ù‚‚‚‚‚ÿ‚‚‚/‚ ú‚!‚%‚>‚@‚D‚!‚.ñ‚2‚‚øüû‚‚
+‚'‚ ‚‚ÿ‚‚‚ù‚‚‚‚‚‚‚‚
+‚#‚‚(‚í‚‚
+‚‚.‚‚ý‚‚(‚‚î‚(‚úûå‚L‚3‚<‚3‚5‚(‚C‚‚#‚‚1ú‚)‚,‚‚‚‚è‚‚‚‚$ú‚‚ç÷‚‚‚ý‚‚+ü÷ø‚û‚‚$‚‚‚.‚ï‚#‚ ‚‚‚õ‚‚‚‚.‚ý‚.‚ð‚‚	óü‚‚‚‚‚ ý‚#‚‚‚ ‚‚ú‚‚!‚ø‚‚&‚‚ì‚÷‚‚‚‚‚ ‚<þê‚‚þñüûñòó‚‚‚'‚‚‚‚‚
+‚‚&‚‚‚‚‚ì‚åéó‚‚‚!‚‚öüô‚‚‚&‚ ‚)‚8‚‚‚E‚@‚;‚=‚E‚‚‚D‚‚‚ÿ‚‚ ‚
+‚ãò‚ù‚‚‚
+‚7‚‚‚ ‚‚õ‚	÷‚‚‚‚ ‚
+‚þ‚òþ‚‚‚õ‚‚‚‚‚‚‚‚‚‚‚‚‚%‚‚‚‚*‚%‚`‚‚4‚'‚‚.‚+‚‚&þ‚‚‚‚‚(‚‚‚‚#òÿ‚ï‚ú‚‚‚#‚‚‚‚‚ö‚)‚‚‚‚‚‚‚‚‚.‚‚‚3‚'‚‚‚‚þû‚‚!‚‚‚‚‚‚
+‚(÷‚ê‚	ù‚‚‚ü‚‚ü‚%ë‚‚õóõ‚(‚‚‚‚‚ü‚$‚'ø‚‚!‚‚‚‚‚‚8‚ûÿ‚ù‚‚%‚#‚êñ‚‚‚(‚‚‚‚‚‚‚‚‚"úù‚‚&‚,õö‚‚	‚'‚"‚Z‚[‚I‚E‚<‚<‚!‚ø‚‚9‚‚‚þ‚#‚‚‚#‚‚ïü‚"‚‚þ‚ïð‚‚#‚‚‚6‚‚‚‚ ‚
+ü‚‚ñ‚‚‚‚‚ö‚‚‚‚‚‚3‚‚‚(‚‚0‚=‚c‚?‚^‚@‚&‚0‚‚‚‚‚‚‚‚‚&ì‚î‚&‚ ‚=‚‚‚‚‚/‚þý‚‚û‚‚4‚‚
+ü‚‚øý‚ ‚î‚‚‚‚îò‚&‚‚‚‚‚‚‚‚‚‚‚1‚ ‚‚‚‚‚#÷ýã‚‚‚‚õ‚&‚‚‚‚+‚‚‚	‚‚6óë‚‚‚ñò‚‚‚‚%ý‚ì‚
+‚‚‚‚ ‚‚
+ýÿ‚‚‚‚ÿù‚‚‚‚‚û‚‚ûø‚‚‚‚‚*‚é‚‚>‚1‚X‚M‚U‚G‚O‚‚‚*ö‚û‚‚‚‚‚öý‚
+õ‚*‚þ‚‚í‚"‚å‚‚‚‚‚‚‚þ‚‚ ‚'‚ô‚ð‚‚‚‚‚0‚‚ ‚‚‚!‚‚‚‚‚‚>‚D‚C‚f‚_‚H‚J‚3‚?‚-‚
+‚‚#÷‚ÿæøÿü‚#ð÷‚‚ð‚
+‚ì‚‚ì‚‚‚‚‚ò‚‚ø‚‚)öø‚	ý‚ ‚‚#‚‚‚‚ô‚ï‚‚‚‚ ‚?‚‚‚‚‚‚)‚	á‚‚‚‚!‚‚‚‚)‚6‚‚ïø‚‚‚‚‚þå‚ø‚ü‚õ‚	‚ð‚ûâ‚‚‚‚÷ü‚%‚ öý‚‚ý‚‚ó‚!‚	þä‚‚‚‚‚úñ‚ ‚ì‚‚‚‚‚>‚F‚R‚d‚\‚#‚;‚K‚=‚þ‚&æ‚‚‚$‚	‚‚òáþ‚‚÷‚‚‚‚‚‚‚‚ðæ‚ü‚ô‚‚ ï‚ø‚‚‚‚'‚‚‚ö‚
+‚
+‚
+‚‚‚‚‚‚‚‚M‚@‚†‚€‚v‚L‚;‚K‚3‚0‚‚þ‚‚;‚‚‚ ú‚‚‚ ‚‚÷‚‚&‚‚õ‚‚ý‚3‚#‚)ôúì‚‚#‚	ý‚‚‚*‚‚‚‚‚‚‚
+‚ ù‚‚‚‚	ý‚ó‚‚‚ï‚‚*‚‚‚‚‚þ‚‚"‚*‚ÿü‚&‚‚ð‚ô‚%‚×ú‚‚‚
+ý‚‚ø‚‚‚+à‚$‚*‚-‚‚‚‚‚‚‚‚ û‚ÿ‚÷‚‚ó‚‚ý‚‚ý‚‚þ‚‚‚!‚ ÿ‚	‚'‚‚‚&‚9‚:‚2‚‚/æ‚‚	‚(‚‚‚‚‚‚ ‚
+‚‚‚‚#‚‚ý‚‚‚*‚%‚‚î‚â‚‚‚‚‚ù‚ÿ‚‚ î‚‚"‚"ö‚‚‚‚‚‚õ‚‚‚‚%‚?‚d‚g‚„‚œ‚q‚N‚‚‚6‚‚4ö‚%Õ‚*‚úó‚‚‚‚‚‚þ‚‚‚+‚#‚û‚‚%‚õæ‚‚÷‚‚ú‚‚‚ý‚1‚.‚	‚‚‚‚‚ ‚‚ø‚ ‚ýòôç‚ôù‚‚þ‚‚‚‚‚ ‚‚‚ýþ‚‚‚ü‚4õðó‚‚	ó‚‚‚<‚ ò‚8î‚û‚)û‚‚õ‚÷ñ‚‚ÿ‚‚
+‚‚ù‚‚‚‚‚‚‚"‚	ë‚ïÿ‚‚‚ð‚‚‚'‚‚!‚‚‚-‚-‚‚‚‚"‚‚2‚‚‚‚$‚)‚&‚‚.ã÷‚‚‚û‚)‚‚2‚óýøë‚ ‚‚‚ÿë‚ è‚‚‚îõý‚üý‚.‚ó‚ ‚#ð‚‚‚‚‚A‚<‚l‚¤‚®‚‚{‚Z‚'‚‚%‚"ð‚!‚&‚%ø‚þ‚ ý‚‚%‚ó‚‚‚‚)‚‚‚‚#ú×ü‚ì‚‚$‚‚ ‚‚÷‚*‚9‚‚‚&‚‚6‚ì‚þ‚‚‚òô‚ ‚ý‚‚,‚‚ö‚‚	þ‚‚‚‚û‚‚‚‚*‚ö‚ ‚$‚6‚,‚"÷‚ê‚,üüô‚ý‚‚‚$‚‚‚‚‚ê‚!ü‚‚‚‚÷‚‚‚ÿ‚ò‚‚ë‚
+‚‚	‚‚4‚'‚‚,‚‚ü‚‚‚‚‚&‚‚/‚
+‚5‚‚ì‚‚‚‚:‚%‚‚&‚7‚3‚‚‚‚‚ ‚‚þ‚èý‚
+ö‚	‚‚‚ó‚û‚‚‚‚‚‚‚*‚‚‚‚ñù‚‚‚‚‚!‚‚‚‚‚‚‚9‚N‚w‚œ‚…‚_‚‚-‚)‚‚‚‚5ü‚‚ ý‚‚	‚&ðç‚‚‚‚ÿú‚ùþ‚‚‚ôö‚‚‚2ï‚‚‚"‚‚4‚1÷‚$‚	ö‚‚#ÿ‚ü‚%‚‚ø‚‚,ì‚‚‚‚êý‚‚ ‚‚
+‚‚‚'‚ñ‚)‚í‚!‚‚'ú‚ÿ‚	‚‚û‚ ‚ý‚‚‚‚‚ý‚‚ ‚‚ü‚‚‚ù‚‚"‚(‚ý‚‚‚÷‚‚‚‚‚‚â‚1‚‚‚	ð‚!‚ô‚%ü‚÷‚‚‚‚‚‚4‚‚‚5‚‚‚‚)‚-‚‚8‚‚!‚+‚‚*‚‚‚‚‚‚‚‚‚‚‚
+‚ú‚‚	‚ý‚‚õ‚‚‚ý‚#‚‚$ö‚‚‚%ú‚ûþ‚‚ø‚‚‚'‚ ‚H‚M‚k‚2‚(‚‚‚‚‚	‚‚‚ò‚
+‚‚‚‚	‚‚üï‚+‚‚ñ‚ ‚(õö‚ç‚ò‚ú‚‚/‚‚‚û‚(‚(‚þ‚‚ ‚ö‚‚
+‚ù‚‚÷‚ ‚!û‚‚‚‚‚‚‚‚þï‚	‚ð‚óõú‚‚÷‚ù‚þìü‚‚Ú‚‚&ü‚‚‚‚‚(‚:‚‚‚‚‚úû‚‚‚‚‚‚‚‚‚‚‚"‚!‚‚ ‚‚‚‚‚‚‚‚ø‚‚‚‚‚‚‚‚‚‚
+‚
+‚'‚‚‚‚‚‚"‚‚3‚*‚‚&ü‚‚
+‚ò‚ô‚‚*‚‚ü‚‚ú‚‚ý‚ÿø‚‚ý‚
+‚‚ï‚‚‚‚‚‚ëú‚î‚<ö‚‚‚
+‚‚9‚@‚&‚@‚4‚‚%‚1‚ô‚"‚‚ÿ‚é‚‚1‚ÿ‚'‚‚ø‚
+ÿ‚‚‚‚‚‚ø‚‚‚‚"‚‚‚‚‚‚
+‚þþ‚‚‚‚‚	‚/‚‚ýø‚)‚‚0‚‚‚‚+‚‚*‚‚%‚‚ ‚üý‚F‚!ÿ‚‚	‚ö‚!‚‚‚‚
+‚	ÿ‚‚0‚‚‚û‚ù‚ø‚ð‚‚‚øüÿïï‚
+‚‚
+‚‚‚!‚‚ù‚‚‚‚‚éÿöè‚‚‚å‚‚‚‚æ‚‚‚!‚‚$ü‚‚ù‚‚‚õ‚‚	‚‚‚‚#‚(‚ÿ‚0ÿëà‚ã‚‚	‚0ä‚ÿü‚ ‚‚‚4‚‚	‚ ô‚‚ÿóüð‚‚&øõö‚‚‚‚‚‚‚‚‚‚‚8‚
+‚>‚*‚‚1‚‚‚‚‚9÷÷‚‚ùô‚ôé‚‚‚ ‚‚‚÷‚‚ ‚‚(‚‚‚‚‚‚#ò‚‚‚
+‚
+úýèï‚‚‚ï‚"ïþþ‚ ‚þ‚+â‚	‚‚‚‚‚‚ý‚ï‚‚‚‚&‚‚+‚ûî‚‚ ‚ê‚!‚û‚ä‚‚‚‚‚ÿö‚‚‚‚‚‚ ‚‚çé‚#‚á‚'‚&ú‚‚÷‚‚‚‚‚õé‚‚ø‚$‚‚‚2‚(‚‚‚"ù‚‚û÷‚‚óñ‚‚ï÷‚ û‚*‚‚‚1‚&‚‚‚ ‚‚%ñ‚‚‚‚,‚ó‚‚‚ñ‚ÿ‚ôêñ‚‚‚÷‚‚‚î‚‚‚ø‚þü‚‚ö‚‚‚‚‚'‚+‚$‚&‚*‚‚‚ð‚‚ø‚‚‚ìþþ‚‚‚‚‚‚‚ô‚þ‚‚‚í‚‚î‚ä‚‚‚‚ê‚)‚ï‚‚é‚‚
+‚‚‚ð‚‚*‚þ‚‚‚‚‚ï‚‚‚,‚‚‚!‚‚‚‚‚‚‚øóô‚‚‚‚‚ï‚"ùð‚
+ü‚‚‚ô‚þùú‚õæþ‚ù‚ó‚ ‚û‚‚‚$‚ø‚‚‚‚üú‚#‚#‚ú‚"‚ùþ‚‚,‚‚‚‚‚‚ø‚ù÷‚‚é‚ö‚‚‚	‚1‚‚ù‚÷‚‚å‚‚%‚ü‚‚‚(‚ ö‚-‚‚‚‚‚
+‚	ø‚8‚ý‚ð‚ò‚‚êÿ‚	‚‚‚Õ‚ ûÿ‚‚‚ÿ÷‚‚‚‚‚"‚‚-‚‚‚Þ‚‚ùø÷ï÷‚‚‚	ëê‚‚ö‚ï‚‚‚‚û‚*‚ü‚‚‚
+‚ä‚/‚öø‚	‚‚‚‚‚0ùù‚‚ç‚ý‚+‚‚‚‚‚‚‚‚‚‚‚"‚‚‚ ‚î‚î‚ð‚‚&‚‚‚‚ñ‚
+ç‚‚‚‚ø‚‚ÿ‚‚‚%‚‚ ‚9‚‚‚'‚%‚
+î‚‚‚#‚‚ëé‚‚‚‚‚‚‚û‚,‚‚‚4‚‚.‚‚‚‚‚‚‚‚	‚‚‚‚æ‚ý‚‚‚‚‚
+ù‚‚‚‚‚‚‚ø‚‚‚‚‚
+ðïû‚‚‚‚‚‚	ÿ‚îóô‚ÿ‚'‚
+‚‚)‚þ‚‚‚(‚í‚‚$‚‚ÿ‚‚‚‚‚‚‚‚‚‚‚‚‚òòï‚æ‚ä‚‚
+æ‚é‚‚‚‚‚‚!‚‚‚‚ö‚ü‚
+‚è‚$‚‚‚‚þùì‚"‚‚‚9‚‚î‚‚
+þâ‚÷‚‚"‚‚$ò‚‚(‚‚‚‚"‚ì‚‚ ‚%þ‚‚‚öýþýô‚%î‚‚‚‚‚‚1‚‚ùóþ‚‚‚‚ã‚‚‚ý‚ öþ‚‚‚‚‚‚‚
+‚‚&‚‚‚!‚‚‚‚‚ó‚‚‚‚‚!ó‚‚'‚‚(‚‚=‚‚‚‚‚‚)‚‚‚ô‚ ‚‚‚"å‚‚‚î‚‚‚ý‚‚'‚‚ó‚òþë‚ïïù‚+‚õñù‚ø‚‚‚5‚‚‚‚‚ õó‚‚‚‚‚%‚‚ ‚ ‚‚3ï‚.‚‚ü‚)ï‚#‚í‚
+÷Û‚‚‚‚û‚‚‚
+‚ñù‚‚‚‚)‚ò‚ð‚/ûöóý‚‚û‚ý‚‚þ‚‚è‚	‚‚	‚!‚‚‚‚‚‚‚‚ú‚
+î‚$ã÷÷ùç‚‚‚‚üû‚÷‚ð‚‚‚ð‚÷ý‚‚‚‚þ‚0‚‚‚ó‚ùù‚‚‚â‚‚‚%‚#‚ÿ‚‚ýñî‚‚"û‚-‚‚!‚ý‚
+ò‚ù‚‚‚‚‚ï‚‚ù‚	‚‚ø‚‚‚%ü‚ðÖ‚‚‚‚.‚ó‚	ûò‚ø‚‚ë‚‚‚‚î‚‚$‚‚5‚ï‚‚‚‚‚	‚(éñ‚‚(‚ü‚‚‚‚E‚‚‚&‚û‚+‚‚
+‚û‚ ‚‚‚‚!‚þìÿ‚ý‚‚ä‚‚‚‚‚‚‚‚‚Û‚×‚‚‚%é‚+‚‚‚‚‚‚ó‚4å‚‚‚é‚‚‚‚þ‚‚‚ý‚‚‚'‚‚‚‚‚‚‚ô‚‚ü‚‚ÿ‚ý‚ú‚÷‚‚-‚‚"û‚‚‚‚‚‚*‚(ú‚‚9‚ý‚‚‚‚
+‚‚‚‚‚‚‚ ‚‚‚‚/‚‚"ö‚‚‚‚‚,‚‚‚‚
+‚‚‚‚)øÿõ‚‚‚ö‚þ‚'‚‚ ý‚ýì‚‚‚‚õ‚ì‚ü‚÷‚‚ý‚‚ê÷ñ‚‚‚óóó‚ ûêþ‚‚$‚‚‚‚‚‚‚‚‚‚ø‚‚/òÿ‚‚‚ø‚
+‚ó‚9‚‚‚‚‚‚	‚	‚‚‚‚‚
+ûò‚‚‚‚!ú‚‚‚‚‚‚4â‚‚‚ ‚‚‚‚‚‚‚‚‚.‚‚‚ð‚-‚‚ûè‚‚‚ý‚‚‚ÿ‚ô‚	‚!‚üàú‚
+‚‚‚‚‚‚‚‚õ‚‚ëü‚ýé‚‚	‚!‚‚ ‚þþ‚‚Ùý‚‚‚‚‚ëÿ‚ïçê‚‚‚ùÿ‚‚‚
+‚ùï‚ö‚‚ü‚‚%‚‚à‚‚"‚0‚‚#ú‚‚‚"‚‚úó‚‚‚‚õ‚‚û‚‚‚ ÿ‚û‚‚‚"þò‚‚‚÷‚‚ ‚ñôû‚#‚‚‚‚‚‚‚‚‚úýû‚‚‚‚‚‚û‚‚‚‚‚‚‚‚‚ ‚õ‚ê‚‚‚‚‚‚ú‚‚òø‚‚øÿ‚í‚‚‚‚‚‚‚ ‚‚ ‚+‚‚3‚ÿúöüþ‚þ‚‚‚‚
+úô‚‚‚
+‚ ‚*‚‚ù‚‚+‚#‚‚‚Û‚‚%‚‚‚‚‚‚‚ø‚‚þùê‚‚+‚‚üú‚‚ÿú‚‚‚ú‚	‚‚‚‚)ø‚ ‚	‚‚‚‚‚‚	‚‚‚‚‚ùøÿ‚ø‚!‚ú‚"‚ýð‚	‚‚
+‚=‚‚‚‚	‚ ‚‚6‚‚‚ôÿ‚‚	ö‚‚	‚‚‚í‚!‚
+‚‚‚õ‚,Ù‚	ú‚ ‚‚4‚‚ùÿ‚ù‚‚‚‚‚‚ü‚ ‚‚0î‚þ‚‚‚‚ ‚‚
+ø‚‚'‚‚ð‚‚‚ü‚‚‚‚‚‚à‚	‚‚‚‚‚þ‚ü‚	‚ýøó‚‚‚‚‚‚‚‚‚#‚1‚‚‚‚‚‚#‚‚‚‚&‚0ï‚‚!‚‚-‚‚‚
+‚‚‚‚#ò‚‚‚Cúò‚þ‚‚'‚‚‚‚úû‚‚‚ þ‚‚‚	þ÷‚ã‚‚‚‚/‚‚2øúòá‚ ‚ ‚‚‚‚õ÷‚‚‚‚‚"õ‚‚‚‚üê‚‚‚	ëù‚
+‚‚‚‚‚‚
+‚ ‚!‚‚‚&‚%‚ó‚ú‚‚‚‚
+‚
+ñõ‚
+‚‚ö‚‚ø‚‚‚ï‚ éý‚‚ë‚‚8ó‚/‚
+‚‚‚‚ú‚ïâ‚ù‚‚ ‚	‚‚$‚ûø‚Õ‚‚þ‚ ‚‚‚þ‚Ú‚‚ ‚õü‚‚ò‚‚(‚ ‚‚ð‚ä‚‚ö‚'‚û‚á‚öî‚ù‚$‚ ‚ú÷‚ ‚èóú‚‚û‚	‚‚‚‚ ‚ü‚‚.ÿ‚‚‚ ‚‚ÿ‚‚‚ý‚è‚ø‚ ‚.‚	‚ ‚‚%ñ‚$‚‚‚!‚	‚‚‚‚*‚Ü‚‚ûò‚‚øòû‚õ‚‚üó‚ú‚ÿ‚‚!ð‚(å‚à‚‚;‚ÿ‚1ç‚‚‚%‚"‚‚‚÷‚‚+‚‚‚ ú÷‚þ‚	‚‚
+ù‚‚‚*ø‚‚!þ‚
+‚ú‚	î‚ ‚‚!ò‚í‚‚+‚5‚%‚	‚%‚‚‚‚‚÷ó‚ý‚‚	‚&û‚‚‚$‚‚,ÿ÷ÿ‚(‚&ÿ‚‚.‚/‚ ‚.Ô‚‚‚(‚ú‚‚	‚‚õ‚÷‚'‚‚‚‚‚	‚‚þý‚‚‚‚%‚ ‚'‚ÿ‚ô‚‚øü‚
+ð‚‚$‚‚‚ ‚(‚‚‚ýñ‚‚&‚þ‚‚‚‚ ï‚‚‚!ö‚‚'‚
+‚‚5‚‚þû‚ü‚ý‚íôû‚‚‚
+õ‚.û‚
+‚‚ïù‚‚$‚ûåú‚‚‚‚‚	‚‚‚"ñ‚‚‚‚ëö‚ç‚‚‚‚‚
+‚‚‚‚ü‚‚‚‚‚ï‚ ‚‚‚‚‚ø‚î‚‚‚‚‚*‚‚‚4‚1‚í‚‚‚3‚‚‚ø‚‚4‚	‚‚‚ ‚‚ö‚%‚ú‚‚‚‚ðÿ‚	‚‚‚öøü‚ ü‚‚/ù‚‚‚‚é‚‚‚‚îô‚5‚‚þò‚‚‚	âû‚‚‚‚‚‚‚í‚ý‚öõù‚;‚‚û‚
+‚
+‚‚ÿ‚ñÿ‚!÷‚‚‚$úü‚‚‚‚ò‚‚‚þãó‚‚‚‚
+öÙý÷‚‚‚‚þ‚‚ ‚$‚‚ü‚.‚‚‚ó‚
+‚é‚‚ñ‚ô‚‚óþ‚‚‚‚‚‚6‚÷‚‚‚‚ø‚&‚‚*‚‚
+ö‚‚‚‚-‚‚‚‚‚‚‚=‚‚‚‚ü‚û‚÷‚í‚‚‚‚‚‚‚ý‚‚‚'‚‚,‚/‚$‚‚‚H‚‚÷‚‚ò‚	ç‚‚‚‚	‚
+ô‚‚‚‚)‚‚ ‚3‚û‚ú‚‚ÿû‚ù‚(‚‚‚‚‚‚‚÷ú‚ êÿ‚‚‚‚‚‚‚‚ú‚$÷‚$‚ûñÛ‚‚‚‚ùÿ‚‚‚‚‚‚.‚
+‚:‚‚‚‚‚+‚‚‚)‚‚‚‚ë‚‚‚‚‚‚‚	‚‚‚‚‚#‚‚‚‚‚‚‚‚ø‚‚+‚ÿ‚‚!‚*‚'‚÷õ‚‚ ‚ê‚‚‚‚‚õ‚‚è‚ö‚‚‚‚‚‚‚$‚‚ö‚ì‚ï‚‚‚,‚û‚‚‚þ‚ ‚‚‚‚‚‚3‚‚‚‚û‚‚‚
+í‚÷‚ø‚‚‚úö‚7‚‚%ô‚ ‚3‚"‚‚‚2‚‚‚!‚‚‚‚‚7‚‚‚‚û‚‚‚ï‚‚‚ù‚‚ó‚‚ú‚‚‚‚(ù‚‚ø‚‚‚øõ‚‚&û‚3‚î‚‚‚‚
+‚
+‚‚öï‚é‚‚‚éû‚‚‚‚
+‚
+‚‚‚öú‚‚‚‚‚‚û‚ù‚‚‚‚ü‚&úõ‚ö‚ý‚
+û‚ã‚ø‚#‚‚‚‚‚‚‚ û‚‚å‚æ‚‚
+‚	‚‚‚‚)ò‚‚‚û‚‚4‚(êò‚
+îöùû‚‚ø‚‚‚‚‚	‚þ‚‚
+ù‚	‚‚ü‚‚‚‚1‚‚$‚‚‚‚‚"ÿ‚ó‚ùñï‚‚‚‚‚	‚‚$‚‚‚"û‚‚ê‚‚‚‚‚‚‚å‚‚‚‚-‚$‚$‚‚3þîôê‚‚ ‚9‚!‚‚%ÿ‚ýþè‚-‚‚‚%‚'‚‚‚‚‚‚‚,ýÝô‚‚ôð‚ ô‚	ï‚	ý‚
+‚ ‚‚‚‚%î‚‚‚‚ôæ‚î‚‚‚‚ñ‚‚%‚è‚ ‚‚õ‚ò‚‚‚‚‚ú‚ëîÿó‚'‚ùâðò‚‚ù‚‚‚)‚"‚‚‚‚û‚‚‚‚
+‚	‚‚3‚‚‚‚!‚‚!úð‚‚þ‚‚‚ ‚ï‚‚	‚‚‚‚üë‚	‚‚"‚‚‚‚‚‚%ü‚	ç‚‚‚‚‚
+ù‚ö‚áè‚‚‚‚‚'‚ ‚ü‚%‚‚‚)‚2ñ‚‚‚‚û‚þ‚‚‚þ‚ø‚‚‚‚‚‚‚!‚ìëý‚‚‚‚-ÿø‚	‚‚1‚‚‚‚í‚‚‚ù‚$‚‚&þ‚?‚‚‚ü‚‚‚‚÷ÿ‚‚&ï‚#‚-‚	‚‚	‚‚‚‚‚‚ô‚
+úÝ‚î‚õøí‚‚‚‚‚	‚‚õï‚‚‚‚óù‚‚‚‚úóÿ‚‚‚‚5‚ð÷ÿô‚	‚‚"‚‚	‚‚‚‚‚ý‚‚‚ ‚‚‚‚‚0‚‚‚‚)‚
+‚‚‚‚‚.‚‚ñ‚‚‚‚‚îò‚‚‚!‚ ‚ôû‚$ú‚þ‚‚/‚ ‚"ü‚‚õ‚‚‚	ü‚ü‚‚‚‚‚û‚ë‚‚ë‚‚‚‚û‚‚á‚)‚(‚‚‚ ‚‚‚	ïþ‚)‚‚‚þþ‚
+‚‚ûû‚‚‚	‚3‚‚&‚&‚8‚-‚÷‚#‚‚‚&‚úý‚‚‚ÿ‚úüý‚‚‚ê‚!‚	ö‚‚‚å‚‚‚"‚‚‚4ç‚$ý‚‚,‚‚‚ ‚ ‚‚‚*‚‚‚!‚5‚ùú‚‚"‚!‚‚+‚&‚!ø‚ð‚‚‚ýý‚‚‚‚û‚‚
+‚þ‚!‚‚ÿ÷ôýû‚‚+‚!ú‚õû‚ý‚í‚‚‚‚‚5‚þ‚‚	þ‚öùÛù‚‚‚‚
+‚‚‚‚#‚‚‚‚)‚ü‚‚‚‚ü‚ã‚î‚ù‚‚
+‚‚,ü‚‚‚‚‚‚é‚‚ ‚
+ü‚‚‚
+‚‚‚‚'‚(‚‚‚1‚‚‚‚‚$‚‚øñü‚ å‚øò÷‚Òù‚‚ õ‚‚‚‚‚õ‚‚‚‚óó‚*‚.‚‚‚+‚‚	ï‚‚
+‚
+‚‚ÿ‚+‚‚‚‚‚ô‚‚æ‚!‚‚‚‚‚‚!‚‚‚‚.‚‚‚‚!‚ ÿ‚	Øõ‚‚$ôæÿþ‚õ‚	‚‚‚é‚‚ý‚‚.‚"‚‚‚‚%‚‚‚‚‚ñ‚‚‚ ø‚‚ý‚‚‚‚‚‚(‚‚‚#ð‚	ì‚‚‚‚8‚‚ ‚‚ö‚ ‚‚‚#‚!ô‚‚‚
+‚‚‚‚‚‚‚ë‚‚"‚ò‚÷þõ÷þ‚ ‚.‚‚‚‚#‚&ÿö‚‚%ý‚‚ø‚&‚‚‚‚)‚$û‚,ß‚
+‚‚‚‚‚‚‚‚ø‚ï‚‚‚‚‚ô‚‚!‚ý‚‚õè‚ ‚8÷ùó‚1‚ö‚‚‚ÿø‚‚‚‚‚‚‚2‚ü‚#‚(‚‚‚#‚‚‚ ‚ý‚$‚ÿ‚î‚4‚‚=‚‚øý‚‚)‚‚‚"ó‚‚úö‚öÿ‚‚
+×î÷‚‚‚‚
+‚üéý‚‚‚‚ö‚$ô‚&ùæ‚ò‚‚‚‚ü‚‚û‚þ‚	‚ö‚‚‚‚#‚‚ÿ‚‚‚‚‚ï‚‚ ïö‚‚ ‚ì‚‚‚‚"‚‚"‚öÿ‚ ‚
+‚‚‚ý‚Äï‚
+‚0‚‚ó‚4è‚‚‚‚‚‚‚ý‚ ‚$‚‚î‚"ÿ‚,í‚ý‚‚
+ü‚‚‚&‚‚óÜ‚‚!‚‚+ø‚‚‚‚#‚+‚‚‚‚‚‚ ‚‚‚
+÷‚‚‚‚þ‚‚‚‚‚!ø‚‚	‚‚ô‚ø‚‚‚‚‚‚‚‚ ‚!‚ü‚‚!ù‚‚#Ù‚‚‚‚‚÷‚‚ø‚ü‚ð‚‚‚,þ‚‚‚ý‚
+‚‚‚‚‚‚‚(‚ó‚‚‚‚‚‚âû‚	‚õ‚‚"‚‚í‚‚‚‚‚‚‚‚‚ù‚:‚‚‚‚‚ü‚‚‚‚‚	‚'‚‚
+‚ê÷‚õ‚
+‚ ‚-‚‚‚‚‚‚‚‚1‚‚
+‚ð‚‚‚û‚þ‚‚‚âð‚‚‚‚÷‚ÿ‚‚ÿ‚‚‚‚‚‚‚
+‚‚‚é‚+ýï‚‚ ‚‚‚‚ö‚/‚‚3ü‚‚‚‚0‚8‚‚‚‚‚ô‚	‚ö‚þ‚‚=‚‚@‚‚‚þþö‚û‚÷í‚‚ ‚‚‚‚÷‚‚õÝ‚)‚‚‚‚‚
+ù‚‚‚‚‚‚‚ö‚
+õ‚&‚õ‚ò‚‚‚‚ïú‚‚"‚!‚ ‚‚$‚ü‚‚6ÿ‚ôòð‚‚‚óþ‚‚‚‚‚‚‚ú‚‚÷‚‚õ‚ú‚‚‚‚-‚à‚
+‚	÷‚
+‚ç‚%‚ûê‚‚ù‚‚
+‚‚!‚‚/æ‚åã‚‚þ‚‚þñ‚‚‚*‚‚	‚‚#‚õ‚óù‚‚1‚‚‚‚‚‚ìý‚‚ ‚‚ ‚ìë‚ù‚‚‚‚‚‚‚‚(‚‚
+þï‚
+‚‚/‚
+‚‚!û‚‚‚‚	‚	ùë‚ ‚‚ ‚‚‚‚‚‚‚‚‚
+‚#éõ‚ì‚‚ þ‚‚ì‚‚þ‚%õ‚ ‚‚	û‚!‚‚‚ÿ‚‚‚‚‚‚‚
+‚‚)‚‚	‚‚‚5ó÷‚‚ö‚û‚‚‚‚‚‚ ó‚
+‚‚‚‚ü‚‚‚‚ùþ‚‚‚
+ü‚-‚‚‚	‚$é‚‚‚ùï‚è‚å‚÷‚þ‚‚‚	ý‚‚,‚
+‚‚C‚‚õ‚+‚‚ÿô‚‚‚‚‚‚ß‚‚õ‚‚þ‚‚‚ô‚‚‚'‚‚‚øúô‚‚ø‚‚‚‚‚ýüí‚‚‚	ÿ÷‚‚ú‚.ý‚‚ ‚‚‚‚	ø‚‚‚‚‚‚‚%Ü‚‚ù‚‚	‚ü÷ý‚ ‚ú‚ï‚‚óõóö‚‚‚‚8‚ ‚‚)‚‚‚‚ó‚‚ ‚‚õ‚ ñ‚ÿ‚‚(‚ý‚‚‚‚&ï‚/‚‚ø‚øÿ‚‚‚‚#‚ñ‚‚ý‚ê‚÷ü‚
+‚‚‚‚úð‚‚ý‚(‚õ‚õ‚‚‚‚‚‚è‚‚)‚<‚
+ê‚+÷‚‚‚‚÷‚‚‚‚‚‚,‚‚‚‚‚‚‚
+‚‚ìþ‚ø‚‚‚‚÷‚	‚5‚$þ‚‚ë‚‚ûä‚‚‚9‚‚÷‚ùûüÞø‚‚‚‚‚‚‚‚ ‚‚ÿ‚‚ï‚ìñý‚‚!‚þþþ‚ÿ‚‚&‚þê‚ ‚-‚‚î‚‚+‚‚÷‚‚‚‚‚‚‚-ù‚)‚‚‚‚‚‚ ‚'öù‚‚‚'‚ß‚‚	‚‚‚	‚‚‚‚‚ þ‚‚‚‚A‚‚ ‚‚"ÿø‚5‚‚‚‚‚‚ú‚#ø‚õ‚‚!‚‚‚#‚‚‚‚‚ú‚‚‚‚‚‚‚ë‚‚‚4ú÷ÿø‚‚ø‚‚ø‚‚‚‚‚‚‚!‚‚‚
+‚‚‚#‚‚ù‚öü‚‚ì‚ÿþõ‚ ‚#ðì‚‚‚ ñ‚û‚ù‚‚÷‚‚‚#ôýýû‚‚‚‚‚(‚ ‚
+‚‚ï‚‚‚%û‚!‚ÿ‚ ‚þ‚+‚ò‚‚‚%‚‚ûþÿ‚‚‚!‚‚‚0ï‚	‚‚ì‚+‚‚,‚ÿ‚þ‚þ÷‚‚
+‚‚‚‚‚‚#‚‚‚‚‚‚Ø‚ÿ‚öþ‚‚ä‚‚‚‚ þ‚‚‚ô‚ü‚‚þÿ‚ùùó‚‚	‚‚+‚õ‚ü‚‚ùù‚‚$‚è‚‚‚‚"‚‚ ‚‚ãÿú‚$‚"‚	‚-‚‚.‚‚	‚-‚ þ‚‚#‚‚‚‚	‚/‚‚%‚‚‚‚‚(‚å‚ùîî‚‚ó‚‚‚/‚ù‚.‚‚ ‚‚‚‚ö÷õ‚ò‚‚ì‚‚‚‚‚‚‚(‚ ‚‚‚á‚‚‚‚‚ä‚%‚‚‚	ù‚ø‚‚û‚÷‚ñüÿ‚‚‚ú‚ÿ‚‚‚‚(‚‚$‚#‚+‚‚‚‚‚‚‚‚‚4‚,‚	ýü‚‚‚‚‚ú‚‚‚û‚‚‚‚‚.‚‚‚‚îô‚‚‚‚‚‚‚‚:‚‚‚ ‚‚‚!‚ ‚#ö‚/‚ ‚‚ ‚ü‚,ì‚‚ø‚ ‚ñ‚ î‚	‚ÿ‚õòß‚‚‚þ‚‚‚‚è‚‚#‚‚‚ùý‚‚‚‚‚‚‚ï‚‚ú‚Ý‚‚ û‚‚÷‚‚"‚ë‚î‚‚‚‚"‚:‚ý‚‚‚‚*‚‚‚0é‚‚‚‚
+öúø‚î‚‚‚úú‚‚‚‚
+‚‚‚‚ô‚7ñ‚‚‚,ó‚û‚.‚‚‚‚‚‚‚‚òþ‚‚‚ú‚÷‚*‚‚‚î‚‚
+‚æ‚‚‚á‚ð‚ù‚‚‚‚ýÿ‚‚‚ó‚‚‚ûò‚	þ‚‚‚ý‚ä‚‚!‚‚æ‚
+á‚#‚‚‚‚$‚‚8‚‚‚-‚‚‚ úö‚#‚ü‚‚‚‚‚‚/‚)÷‚åÿ‚‚‚‚‚‚‚"‚‚ì‚‚‚‚‚ü‚$‚ø‚)‚‚+‚‚ù‚ ‚‚í‚
+ø‚‚‚‚‚óù‚í‚"ø‚‚‚ ‚‚ì‚‚‚‚‚ï‚#‚ùú‚,‚‚‚!‚‚‚‚õü‚!‚‚‚Þ‚‚	‚÷‚‚
+ú‚ÿü‚#‚õö‚‚‚‚‚(ý‚‚‚îð‚ý‚‚‚‚‚‚ ‚ù‚ÿ‚‚#‚‚‚‚‚ð‚‚þì‚
+‚"‚òþ‚öæí‚
+óô‚‚ ÿ‚‚‚ýâ‚‚ ‚‚‚ ‚‚÷þ‚‚‚ñ‚‚ ‚
+‚‚
+‚ô‚‚‚‚‚õô‚û‚‚‚ê‚‚‚ö‚‚‚‚‚‚ø‚‚‚:ì‚‚þ‚‚‚‚‚‚ü‚‚
+‚‚‚ô‚‚‚ø‚ ‚‚ó‚‚‚‚‚-‚‚‚‚‚ý‚‚	‚‚'‚ï‚‚ëú‚‚-ã‚ÿ‚öô‚8‚‚‚‚ û‚ù‚ÿ‚‚
+‚)‚ù‚"õ‚ûÿô‚
+‚‚‚‚	‚‚
+‚‚‚ý‚‚÷‚‚
+‚ó‚!‚‚‚ñ‚õ‚‚‚‚‚‚‚ð‚‚‚‚
+ÿý‚‚‚	ö‚‚‚‚ú‚îÿö‚‚‚ ‚‚‚‚‚‚ù‚	‚õ‚õë‚‚
+‚‚‚‚‚‚‚‚‚#÷‚‚‚‚‚
+‚‚ò‚ù‚ò‚üñ‚
+‚‚‚‚‚
+‚ ‚‚‚‚‚‚‚‚‚ýð‚‚‚)ò‚ò‚‚ñ‚	î‚‚,‚&‚‚‚þ‚‚‚‚‚ôþ‚‚	‚òý‚ ‚ÿÿ‚‚
+‚ ‚‚‚‚ù‚&‚‚‚â‚‚û‚‚ìðå‚‚÷‚ý‚	‚ìÐ‚‚‚‚#‚ ‚7ùõ‚‚	‚‚‚+‚‚‚ë‚‚û‚
+ø‚
+‚‚(‚‚ý‚ ÷ü‚'‚!îô‚ÿ‚"‚‚ø‚ý‚‚‚‚‚÷‚‚‚õ‚"‚‚‚‚‚‚‚‚‚ý‚‚Þß‚ûëÿ‚‚9‚‚‚
+‚‚‚ ‚ý‚‚ ‚ÿ‚‚5‚ø‚÷‚ô‚‚‚‚‚ ò‚ ‚‚‚&‚‚‚‚‚3‚‚2‚óù‚‚‚‚î‚‚‚4‚‚&‚+þùöüè‚‚‚2ù‚‚ó‚‚‚‚‚ú‚ð‚ø‚ ‚ð‚þ‚ó‚%ëù‚ ‚$‚ ‚‚ù‚‚‚‚‚
+‚‚‚û‚ ‚!õ‚#ý‚‚*‚ü‚úú‚‚‚ö‚‚‚‚‚‚‚‚ø‚!‚‚‚‚ ‚ëÿ‚‚	‚‚‚Ö‚$‚
+‚‚ü‚"‚ú‚&ñý‚	ù‚ð‚‚
+‚!‚î‚‚ö‚‚ñ‚ ‚‚‚‚‚õø‚'‚‚‚!‚‚ñ‚ü‚‚‚îÿ‚‚‚‚‚‚‚‚ó‚ú‚‚‚Þ‚‚‚'‚/‚ ç‚‚ïýøýþ‚‚‚‚‚‚‚*‚I‚.‚ñ‚‚ ‚(‚1‚,‚‚‚‚)‚ð‚‚‚ò‚+‚ ÷‚7ý‚(‚õî‚‚ú‚‚‚‚ì‚‚‚‚‚‚ò‚
+öô‚ß×‚	‚‚÷‚‚‚‚#‚‚‚þ‚ ‚‚	‚‚‚.þ‚‚õú‚‚‚‚‚‚‚	‚‚üô‚‚‚‚òô‚‚	‚ý‚‚ö‚2‚÷‚‚‚‚+îýô‚‚‚‚ü‚
+‚‚ù‚‚ ‚-‚‚
+ð‚ö‚
+‚‚þ‚!õ‚‚‚‚‚‚‚‚‚þ‚‚‚‚‚‚‚‚‚‚‚‚‚6‚‚
+‚‚‚ø‚èì‚ýíú‚	‚‚‚‚‚(‚!‚ëý‚‚‚‚‚-‚‚‚‚,ý‚‚(‚‚‚‚‚2÷‚ õ‚‚ë‚=‚%‚‚.‚8‚'‚>‚‚‚‚‚‚öÿ‚‚(‚‚‚‚‚‚ õ‚‚ ‚‚‚‚ú‚-‚‚9ý‚
+‚‚
+üä‚ý‚‚‚‚ÿò‚íùø‚‚‚‚&‚‚ð‚%‚‚õ‚ú‚‚ù‚"‚‚-‚û‚‚‚‚‚‚‚‚‚‚ý‚êó‚!ýúñ‚‚‚ø‚‚8ê‚‚é‚‚ûö‚‚:ù‚ýú‚‚‚)‚‚‚û‚‚'‚‚‚‚‚	‚‚‚ñ‚‚‚‚	‚‚‚‚‚ ‚7‚‚+‚‚‚î‚$õ‚þ‚&ù‚‚‚ ùü‚‚4‚‚‚‚‚ò‚‚!è‚ ‚"‚‚	þ‚‚$‚‚‚‚‚þ‚‚!ú‚ë‚ü‚Þ‚‚ ý‚‚þÿó‚‚‚‚0‚B‚r‚F‚\‚0‚5‚$‚ ‚E‚$‚‚‚%‚úý‚‚óõï‚‚ û‚‚‚ ‚‚‚‚‚ü‚î‚‚þ‚‚,‚‚‚‚‚‚‚‚
+‚ø‚‚‚5‚ ‚‚‚‚‚‚	‚$ôÿ‚‚ß‚‚(‚ð‚‚‚ü÷‚‚	‚‚ø‚)‚‚‚#‚‚‚‚û‚‚ú‚"‚‚‚'‚‚‚‚‚‚	‚?‚õ‚'ð‚‚ ‚‚‚%‚‚‚‚ü‚‚ ‚‚ýþ‚‚'‚à‚‚‚‚‚‚‚‚!‚‚‚‚"‚‚‚
+‚+‚‚ý‚‚"‚‚‚ ‚‚‚õûþ‚ ü‚	í‚‚‚‚î‚%‚)þ‚‚‚
+‚&‚	‚	‚ ‚‚	‚ ô‚‚‚‚‚	ò‚ô‚ó‚	÷‚‚‚
+‚‚>‚L‚j‚J‚A‚,‚#‚ù‚ý‚óá‚‚
+þ‚ û‚ý÷‚‚‚‚‚‚‚‚‚"‚‚‚‚ö‚‚
+ë‚û‚‚û‚‚‚‚‚‚‚‚‚‚
+‚ýÿ‚
+‚‚‚‚-‚‚‚‚‚øòú‚‚‚ð‚(‚‚(ýî‚‚&û‚
+‚‚	‚‚‚-‚‚‚*‚à‚;‚‚
+‚!ý‚‚‚‚
+‚ýþ‚‚ú‚"‚‚‚ü‚‚2‚‚‚ ‚öüü‚‚.‚$‚	ø‚@êç‚‚!‚&úú‚‚‚‚‚!‚‚‚‚‚‚‚	‚‚‚þòù‚øü‚
+‚‚‚‚*‚ÿ‚‚‚‚‚‚‚‚ß‚‚‚ð‚ôù‚ý‚ù‚‚‚ý‚ô‚)‚‚$‚‚÷‚‚‚/‚H‚a‚b‚C‚0‚2‚‚/‚$‚ ‚‚‚‚‚î‚‚
+éü‚‚$‚&‚ñ‚ÿ‚‚
+‚$û‚+‚ ‚‚‚‚‚ï‚‚‚‚â‚‚‚‚‚‚+‚ð‚‚‚õ‚‚Üý‚‚&‚‚ý‚6‚øü‚‚	‚"‚$‚‚,ùâ‚ ‚÷‚‚‚‚‚'‚ ‚‚÷‚‚þ‚‚ñ‚ ó‚þ‚þ‚‚ ‚‚ô‚‚‚)‚$‚‚‚‚‚‚‚ ‚û‚ ‚‚‚	‚‚‚‚	‚‚‚ ‚‚‚‚‚%‚‚E‚‚ü‚ ‚‚‚ú‚‚‚‚‚‚ú‚‚‚‚‚ýÿ‚‚ ‚ú‚ÿúý‚+‚‚‚‚"õ‚%‚/‚‚‚‚‚û‚*‚‚õ‚ô‚,‚	‚‚‚7‚‚‚%‚‚'‚D‚D‚S‚'‚!‚A‚‚‚'‚‚	‚‚‚‚‚‚‚‚‚‚‚‚‚ë‚ ‚/‚‚ øô‚‚ ‚òõ‚‚‚1ú‚&‚ìú‚(‚‚‚	‚‚‚'‚ù‚‚‚	‚ÿæ‚‚‚'î‚‚‚èïù‚‚‚üî‚
+‚‚‚‚‚‚‚ ‚‚
+‚‚‚‚'‚‚ý‚	‚‚‚‚‚
+‚ìþ÷‚‚‚÷‚)‚ú‚‚‚‚‚í‚‚ä‚ÿ‚‚‚þ‚‚õ‚ç‚"‚"‚î‚‚‚‚‚úé‚‚‚‚‚&‚‚"÷‚‚‚‚‚þ‚‚‚‚	ø‚!‚‚%èø‚ô‚þ‚‚$‚
+‚çö‚ö‚#ó‚‚	ô‚û‚‚
+‚ ‚‚-‚‚!õû‚‚‚	‚‚‚‚‚‚5‚;‚‚‚‚ ‚=‚‚‚‚‚õ‚‚‚‚ ‚+‚1‚ó‚	‚‚‚‚ý‚‚úè‚	‚‚‚)ú‚‚‚#‚‚‚ü‚‚ ‚ ‚‚û‚‚‚!‚‚ö‚þ‚ý‚‚‚î‚*üâøýþ‚‚ ‚‚ò‚‚à‚‚‚	‚‚‚‚‚	‚ÿ‚4‚‚ ÿó‚-úä‚‚‚‚	ùô‚‚û‚.‚û‚î‚ ‚ü‚‚‚5‚‚‚ù‚"‚‚‚‚*ò‚‚‚‚‚‚,‚‚ö‚#‚‚‚èü‚‚‚‚0ó‚
+‚‚‚‚1‚ ‚ï‚‚ú‚‚ûð‚‚‚‚‚$‚	‚‚õýý‚‚‚ú‚‚‚‚Oÿ‚#‚ì‚‚‚‚‚+‚,‚‚‚	‚‚‚6ø‚3‚A‚#‚‚‚‚‚'‚‚‚‚0‚ô‚û‚ñ‚‚4‚ú‚‚+ú‚üî‚-ù‚	‚‚!ý‚ò‚ö‚úúùìø‚ýÿ‚í‚‚ò‚‚‚2‚ ‚ìó‚"ö‚‚0ù‚ñò‚	û‚"ø‚‚‚‚‚‚‚'‚‚ ‚‚‚‚‚+‚4‚‚‚*‚‚û‚)é‚‚é‚‚%‚÷ô‚
+‚‚ý‚û‚‚(‚‚‚ò‚‚‚#ø‚‚‚	óèþ‚‚‚‚ ‚‚‚‚‚#ù‚‚ð‚!‚‚‚‚‚ôñ‚‚%‚‚ò‚3‚‚.‚ùó‚‚ü‚#‚ú‚‚‚‚‚‚6‚‚‚‚ëûùú‚÷‚‚û‚	‚.‚‚,õ‚÷ç‚'‚‚‚%‚‚‚‚‚‚2ý‚‚‚‚‚‚‚	‚ ‚ ‚í‚‚‚ô‚ö‚‚‚ ‚ïö‚ö‚‚ô‚‚-þÿ‚‚"‚ý‚‚à‚‚÷ýë‚‚‚‚	‚‚ ã‚‚‚‚/‚‚‚‚‚‚‚ûõ‚ï‚	‚!‚‚‚‚÷õ‚‚ð‚‚‚‚	‚ ‚‚#‚‚‚þ‚
+ý‚#ý‚ úí‚‚õ‚	ü‚	ø‚!õ‚‚‚5ÿ‚‚‚*‚ý‚,‚‚ ‚‚!‚‚%‚‚+‚‚‚‚$‚ ‚‚‚‚ þ‚	‚‚‚‚‚îþùä‚‚‚‚ö‚‚‚‚ö‚ð‚‚‚‚‚ ‚‚‚‚‚ ý‚#‚ö‚‚)‚‚	û‚	þþ‚‚ ‚"‚'ï‚‚î‚‚‚úîÿí‚ï‚*‚‚‚‚‚‚‚‚‚â‚‚‚‚þ‚ú‚‚‚"‚‚‚‚ýëñ‚öïõö‚‚ü‚‚‚þ‚‚‚‚‚‚‚‚‚&‚æú‚‚‚û‚‚‚‚‚ëó‚‚úî‚‚ ‚ôö‚‚‚ü‚û‚8‚‚'‚"‚*‚‚‚$‚‚&‚þ‚‚‚‚ùþ‚‚ü‚‚‚‚‚‚#‚‚ÿ‚é‚‚	‚Ú‚‚‚‚I‚
+‚‚‚,‚‚"‚‚ ‚ð‚‚ïþì‚)ï‚‚‚õ‚‚þ‚‚‚üõ‚‚‚&‚‚
+‚*‚‚‚‚‚‚‚û‚-ó‚‚‚‚‚‚‚‚‚‚‚‚î‚‚‚ý‚‚‚%ñ‚‚
+‚*‚ë‚ ö‚û‚‚ ÿÿ‚‚‚‚ôôõ‚Ü‚ô‚‚‚‚‚‚‚ì‚ ú‚!‚‚‚‚‚!‚‚‚‚#‚
+‚‚ò‚‚‚‚.‚‚‚ñè‚‚‚åþí‚
+‚‚‚
+‚‚,‚‚‚‚‚‚+êè‚
+‚áü‚ðû‚‚‚‚ ë‚‚‚‚ ‚ô‚‚‚‚‚)‚,‚‚ÿ‚‚øä‚‚‚‚ù‚ë‚
+ñ‚‚‚'‚û‚&‚‚‚‚‚ü‚‚‚‚+‚	‚#‚<‚‚‚‚‚ï‚‚ø‚‚ó‚ ý‚õõï‚ÿ‚"‚‚	ý‚‚‚‚‚‚‚‚úô‚‚'‚ò‚$ú‚òÿûþ‚‚/ñø‚(‚‚‚ì‚‚‚ ‚‚ï‚(‚‚‚‚‚‚‚‚‚‚‚‚ ‚ñ‚‚‚‚‚ ‚‚-‚ ‚üç‚‚‚óòù‚äÿø‚ï‚ ‚‚‚‚‚‚ùøú‚ü‚‚‚	‚:‚‚‚‚"‚ ‚‚‚‚çÜ‚‚‚
+‚‚ù‚‚‚	‚#‚ú‚‚‚‚‚ð‚‚ ‚ü‚	‚ø‚‚‚ü‚)‚‚‚	‚‚‚ ‚‚‚‚‚‚‚ þõ‚‚‚‚‚$â‚‚ï‚‚‚‚!‚‚‚‚‚)‚‚‚$‚3‚!‚1‚=‚*‚"‚‚‚‚‚ü‚ì‚‚‚,‚ú‚
+‚
+‚‚!‚þ‚"‚*‚î‚÷‚û‚!‚ø‚(‚$‚‚*‚ù‚‚‚*ëë‚‚‚ð‚üé‚‚‚ù‚‚ò‚‚‚‚"ü‚‚*ö‚‚‚‚‚
+‚÷‚ì‚‚‚ò‚‚‚%‚
+‚‚
+‚‚‚÷‚‚‚‚ ‚‚‚‚ó‚;‚ ‚‚‚3‚ý‚‚‚‚+‚‚	õõ‚‚‚‚‚ÿ‚‚‚éó‚‚.‚ý‚‚‚ò‚‚‚‚í÷‚	‚‚‚íë‚‚‚#ö‚þþ‚‚‚(‚‚
+‚ýþ‚‚‚
+‚‚‚‚‚‚‚%‚‚	ñ‚3‚‚/ÿ‚‚‚‚ü‚‚‚‚2‚‚‚‚;‚‚!‚‚5‚?‚o‚M‚O‚B‚2‚‚4ü‚	‚'‚ô‚þ‚‚‚‚#‚"‚‚‚‚"‚‚‚é‚‚‚‚ù‚‚‚	‚‚ó‚‚‚‚‚‚‚‚-‚‚ ‚ûåÿ‚ô‚‚ýû‚õæ‚ø‚/ÿó‚*‚‚þ‚	‚&‚‚!‚)‚‚ü‚‚‚‚‚û‚‚	‚‚‚‚‚
+‚‚)‚‚ù‚‚ùû‚	‚‚‚‚‚+‚‚
+þ‚
+þ‚‚‚
+‚‚‚÷ï‚%‚‚‚‚‚ó‚‚‚+‚ïö‚þã‚%‚‚‚î‚‚‚+‚‚‚	õ‚õ‚û‚ô‚
+‚‚‚‚‚‚#ƒ†ƒ–‚û‚,‚‚‚ ‚‚‚ù‚‚‚‚‚ ‚‚‚‚	‚‚‚%‚‚‚‚‚‚‚‚‚'‚*‚6‚G‚P‚k‚‹‚r‚O‚@‚)‚/÷‚‚
+‚‚‚‚:‚û‚‚‚!÷ï‚‚÷‚‚'Úó‚‚‚ ÷‚‚‚‚‚‚‚‚ôò‚‚‚'‚‚ô‚‚ìÿ‚‚%‚‚Úúñ‚(‚3ü‚‚ñ‚‚‚‚÷‚‚ÿ‚‚‚%í‚‚ýû‚	‚ù‚‚#‚ü‚üøê‚‚‚ö‚‚	‚#‚ö‚‚‚‚å‚‚‚ö‚þ‚‚4ê‚‚î‚‚‚‚'‚ñ‚‚‚‚‚‚
+ý‚‚
+‚þ‚ô‚‚ÿ‚‚"û‚ ë‚‚
+‚‚‚‚é‚‚øê‚‚4‚‚)†$‚˜‚ÿ‚úðøû‚îø‚ö‚#‚
+‚‚‚$‚þ‚!‚‚‚
+‚‚$û‚‚,‚‚ù‚6‚I‚m‚‚Ú‚ý‚È‚™‚i‚G‚/‚*‚*‚‚,ûøþú‚ë‚	‚‚‚ø‚‚‚‚‚‚ü‚‚íüðü‚ó‚ ‚+÷æ‚î‚‚4‚‚é‚3‚õÿñ‚‚‚#‚÷‚'‚&‚‚‚øù‚ùÿí‚‚"‚‚ÿ‚‚‚0ö‚üú‚ü‚‚‚+‚‚	‚‚	ñ‚þþ÷øæ‚‚úúê‚ô‚ú‚ø‚‚‚‚û‚‚‚‚‚‚‚ç‚‚%ã‚‚$‚‚‚‚‚‚‚ö‚‚
+‚‚‚‚ãýü‚‚‚‚ñîò‚"‚‚‚$‚	‚‚(‚ó‚‚0‚úñý‚‚‚$‚‚
+‚üñ‚‚#‚‚‚‚
+‚éö‚‚ï‚‚‚‚‚‚%‚‚3‚B‚m‚­ƒƒ¥ƒÅƒ–‚ò‚•‚C‚,‚4‚‚ ‚*‚‚'‚‚‚)‚õ‚‚‚‚‚‚ÿ‚‚‚‚‚‚ûùð‚û‚‚‚‚‚‚‚ðó‚)‚	‚‚B‚õ‚	‚‚‚‚)‚‚)‚‚&‚õ‚ ‚‚‚‚#‚‚‚ù‚úú‚‚‚‚‚
+‚‚ô‚‚‚‚‚‚	‚‚‚&‚‚‚‚‚‚!ë‚‚‚‚‚(‚!þ‚‚9‚þ‚‚ÿý‚ñ‚‚ðòÿ‚‚ß‚7‚‚‚‚‚‚3î‚‚ÿ‚‚ì‚$ñ‚ ‚
+‚
+‚‚'‚þûõò‚‚ëù‚‚‚
+ÿè‚‚‚ ‚‚èþ‚‚ò‚	‚‚‚1‚Ù‚&‚þ‚‚‚‚$‚-‚ÿö‚ ‚‚‚0‚‚‚D‚‚R‚„‚Õƒ©„½…N„Óƒ»‚ê‚q‚.‚#‚0‚‚‚‚(‚‚)õ‚‚‚ð‚.‚‚üý‚"‚#ÿ‚‚õ‚‚‚û‚‚%ý‚‚‚‚‚ý‚‚‚‚ü‚‚(ûîõ‚‚ü÷‚ÿ‚‚
+þ‚ù‚‚ ‚‚ ‚ ‚"‚‚"‚‚‚‚‚‚‚‚"‚‚û‚‚‚ö‚+‚‚‚	‚‚‚ù‚‚ü‚‚
+‚ëÙ‚2‚ç‚‚/ë‚‚üè‚
+÷‚û‚ïö‚(÷‚‚‚‚‚‚‚‚ò‚&‚‚‚‚ ‚‚‚ þï‚‚‚‚‚‚‚1÷÷‚ÿ‚
+‚‚õ‚‚‚‚‚‚ñèï‚‚ü‚‚‚‚ý‚‚‚‚
+‚‚%‚ó‚ ‚ ‚‚‚‚@‚‚(‚:‚‚P‚T‚“ƒG„……†^…™„Iƒ‚„‚]‚-‚'‚‚‚‚õñ‚‚‚ß‚‚‚î‚‚è‚	‚‚%‚ñç‚‚‚‚"‚‚‚‚âî‚"ÿ‚‚‚ ÷‚‚‚‚‚‚ö‚‚‚‚‚‚‚3‚"‚ý‚!ÿ‚'á‚ð‚4‚‚‚éîø‚‚‚"û‚ñ‚'‚‚‚‚‚ðê‚&‚‚‚	‚‚	‚‚ ‚ç‚;à‚
+‚‚‚‚!ã‚‚‚2‚ñ‚÷‚>‚	‚‚öü‚‚îå‚éñ‚‚‚‚‚ ë‚	ÿõ‚ ‚‚‚‚‚ä‚ò‚‚‚‚‚û‚	‚í‚‚ï‚
+‚þ÷‚‚‚	‚‚‚õþ‚‚‚‚‚‚"‚‚‚‚‚‚ìýþý‚‚#‚1‚‚?‚A‚´ƒT„`…é†£…“„2ƒ<‚‚,‚/‚ ÿ‚#‚‚þ‚#‚åõý‚‚û‚&÷øó‚"‚%à‚‚‚ý‚‚ ‚÷ù‚‚ø‚óó‚‚‚=‚‚‚‚‚‚‚‚&‚‚þ‚&×‚ ÷û‚‚‚‚ ‚õ‚‚%‚
+‚‚‚ü‚ã‚‚‚ø‚ö‚‚‚‚‚‚	‚‚ó‚‚‚õ‚‚‚‚‚‚‚	‚(ú‚ü‚‚‚‚
+‚‚‚'‚‚!‚	‚‚‚ ‚,ò‚þ‚‚ý‚1úö‚‚ò‚ð‚ ‚‚&‚‚‚‚‚‚‚	‚‚ô‚ ‚ëü‚ïú‚‚ñ‚ñþùüû‚‚‚&‚‚‚‚‚‚‚‚‚
+‚‚‚ýù‚‚‚‚ý‚‚%‚‚‚‚7‚O‚ÉƒD„h…_†…ƒÚ‚Ø‚Ÿ‚f‚‚‚B‚‚ ‚ú‚	ö‚÷‚(‚ ‚‚‚‚ð‚‚‚‚ü‚'‚÷‚@‚îí‚‚5‚‚‚‚
+‚‚‚‚‚û‚‚‚‚‚‚ úô‚‚‚‚#ë‚‚‚ ìî‚‚‚‚‚‚õúí‚$‚,‚ê‚ îý‚
+‚‚‚‚‚‚0‚‚‚‚ø‚
+ñ‚‚1‚‚‚'‚í‚‚‚ý‚öï‚‚‚‚‚‚ÿ‚ì‚)‚‚‚öø÷ú‚‚‚‚ êö‚8ë‚‚þ‚‚'‚ ‚‚‚%‚‚ì‚‚‚$þð‚‚‚ä‚*‚‚‚‚!‚‚ÿ‚‚‚ ‚‚‚õ‚ ì‚‚õ‚
+øù‚‚‚‚‚þ‚	‚é‚‚‚0‚+‚?‚¶ƒ0ƒâ„q„›„ƒY‚®‚G‚:‚'‚‚‚‚‚‚,‚#‚‚$‚	‚ûõþõøú‚'‚‚ó‚‚‚ ‚õëõ‚ÿò‚ ‚	‚‚	‚ì‚‚‚‚ö‚‚!‚‚$‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚ù‚õöø‚‚ôõ‚‚ó‚‚‚*‚‚"‚‚+û‚‚‚‚‚$þ‚ò‚‚‚‚‚ð‚ü‚‚-ñ‚‚‚ ‚‚‚‚òÎ‚‚‚‚ ‚Ï‚‚0ý‚
+ú‚ü‚‚þ‚
+ïóñ‚‚‚‚#‚‚)‚‚ï‚‚é÷‚‚üþü‚ ‚
+ó‚‚‚‚ ‚õýø‚‚ÿ‚‚‚ÿ‚"‚‚‚‚	‚‚‚‚(‚‚ ‚‚!‚‚‚û‚E‚y‚Çƒ#ƒ‡ƒ|ƒ,‚Ñ‚p‚X‚ ‚$‚‚‚ý‚!‚'‚+‚‚û‚ò‚‚‚‚
+ï‚õ‚‚‚	‚‚ôí‚*‚‚‚÷‚'Ü‚‚‚‚.õ‚‚‚ì‚‚‚‚3‚Ù‚%ÿ‚*‚‚‚	‚‚ò‚õ‚‚‚‚ð‚‚ê‚‚ï‚$‚ ‚‚(‚‚!‚ú‚úý‚‚‚'âù‚%‚þ‚‚‚ ‚‚ýä‚‚‚‚‚ã‚‚ ‚õ‚	‚‚‚"‚óøõ‚å‚‚
+‚‚‚‚‚‚‚‚‚‚î‚‚!ÿÿ‚'ó‚‚‚‚õ‚‚ç‚‚‚‚æ‚‚‚öñô‚	‚‚#‚4‚%‚‚ ‚‚ ð‚‚%ú‚‚‚!÷ø‚ó‚‚‚â‚'‚‚‚‚	‚3‚8‚ ‚K‚Š‚­‚Ñ‚Ø‚º‚~‚5‚(þ‚ ‚‚‚.‚	ö‚#Ý‚‚‚‚‚#‚	‚í‚‚‚è‚,‚‚õ‚‚*‚!‚‚‚‚‚þ‚‚‚+‚ ‚æý‚%ö‚‚&Üü‚û‚û‚‚!‚‚ÿ‚‚‚‚‚ó‚‚(‚‚‚‚ýÿ÷ÿüù‚ýþ‚‚‚‚ü‚ï‚‚‚‚#‚"‚ÿý‚‚	‚‚üÞ‚'‚‚'‚ü‚)‚‚‚‚%‚3‚‚‚ ‚úì‚‚‚‚‚‚ í‚ó‚‚‚$‚÷ÿ‚
+‚'‚*‚õ‚‚‚!øÿî‚ë‚!‚ûû‚‚‚ÿ‚‚‚%ý‚û‚ ‚‚ï‚‚êø‚
+õ‚‚'ïö‚&‚-ú‚‚4‚‚ö‚‚ï‚‚‚%‚‚2‚&‚n‚Z‚N‚L‚`‚0‚8‚‚/‚$‚‚ü‚ ‚‚ ó‚‚9‚‚‚ ‚&‚ ù‚‚‚
+‚‚ ø‚ÿ‚ú‚îÍÿú‚‚‚‚ý‚‚	ûï‚‚ÿß‚‚‚ù‚‚‚‚‚)‚
+‚ø‚
+‚ûÿ‚‚‚‚‚ÿý‚‚þ‚‚ý‚‚‚ü‚ ‚ ‚‚ñ‚‚‚‚ò‚÷‚ ‚‚‚%‚‚ý‚
+‚‚/‚‚‚‚‚‚‚‚‚‚C‚‚â‚‚‚ü‚#ù‚‚ìñ‚ýçúõÿô‚ ê‚‚ö‚‚ÿ‚‚‚á‚‚‚#‚‚ò‚‚‚á‚ ‚‚‚ þôû‚‚‚‚Ûüß‚‚ú‚‚‚‚)‚‚‚‚÷‚(‚ ÿü‚‚‚‚‚‚‚‚‚‚.‚*‚-‚<‚‚/‚‚
+‚%‚‚ú‚‚‚‚
+‚ðýï‚‚‚"‚ ‚‚‚%÷þ‚‚‚‚Þ‚÷ÿ‚.ûô‚‚‚	‚é‚‚‚ ‚ ‚‚"‚/‚‚‚
+‚ ‚‚‚,‚‚‚‚‚‚‚‚ë‚‚‚‚‚‚è‚‚‚‚ï‚‚ëâ‚‚á‚ ‚‚‚‚‚‚‚‚-‚
+‚‚%û‚ð‚‚‚	‚‚‚‚éÿ÷‚‚ç‚ ùõñ‚&‚‚ðú‚‚‚'‚þ‚êý‚‚þ‚ô‚ ‚‚‚‚
+‚
+‚‚Eõ‚‚A‚!‚1‚ñï‚‚òý‚‚*î‚‚ò‚‚ô‚‚‚‚‚ù‚‚
+‚	‚%‚ô‚ ‚/‚(ýúêñ‚‚‚‚‚‚‚+‚‚‚/‚‚‚‚ ‚3‚‚‚ ‚‚‚‚#‚íõõû‚ô‚‚‚$ø‚	‚‚‚‚‚"‚Bà‚‚‚çõ‚%‚‚æ‚‚‚"‚‚‚‚‚‚‚‚‚ó‚&æü‚‚‚‚‚‚‚0‚‚&‚×‚ü‚ü‚‚"‚‚‚‚ ßü‚(‚&ý‚‚‚‚‚‚ð‚‚‚ ‚‚ ù‚ø‚‚â‚'‚‚‚+‚‚û‚öü‚‚ûç‚‚þ‚ö‚‚ ö‚õøî‚‚!‚ù‚‚ú‚‚‚‚‚‚‚	‚‚‚ï‚"‚‚ø‚%ð‚û‚ð‚‚ô‚‚øä÷‚+‚‚‚ðü‚	ò‚	‚‚!‚+‚í‚‚"‚‚‚‚‚&ù‚!‚ò‚‚‚ñ‚‚‚ô‚6‚	‚$‚$‚,‚‚‚‚&ÿ‚	ý‚‚‚‚‚î‚íîñ‚‚‚‚	‚	‚‚‚‚‚ ‚ÿ‚%ÿ‚‚‚ÿ‚‚÷‚
+í‚‚‚ ý‚‚æ‚‚‚(‚	‚û‚‚‚‚ ÷ö‚	‚‚‚	ì‚‚‚‚‚5í‚‚‚þâô‚ö‚‚‚!‚‚â‚‚‚ù‚‚‚ìú‚ü‚‚ý‚‚	‚õý‚ ‚‚‚‚‚‚!ôó‚ûüÿöö‚(‚‚‚ùõ‚&‚
+‚‚‚‚/‚‚ý÷‚‚ò‚	‚ó÷û÷‚+ø‚!ðù‚‚‚
+‚ÿ‚‚ðü‚ü‚‚‚
+‚‚(‚êû‚‚"‚‚‚þò‚.‚‚‚4‚ýý‚þú‚‚‚‚‚	‚‚‚‚:‚‚'‚,‚‚‚‚û‚‚%‚&û‚‚‚‚4‚îÿ‚‚‚‚‚‚‚‚‚$‚‚‚‚‚ÿ‚ó‚$‚‚‚‚	þþô‚‚ó‚‚‚)‚‚,‚‚#üäà‚‚(ùõ‚‚‚‚ý‚‚‚‚û‚%‚‚‚û‚)‚)‚‚	‚þ‚‚,‚‚á‚ß‚‚‚!‚	‚‚‚‚‚‚3úý‚%ý‚ ‚‚ ‚‚‚(‚‚‚	‚
+‚‚‚,÷‚‚ö‚‚‚ ü‚‚‚‚ã‚‚‚û‚óÿ‚‚‚ü‚	‚‚ÿ‚üþ‚üý‚‚‚ôÿ‚'‚‚$‚‚$‚‚ù‚‚‚ý‚úç‚øþ‚5‚
+ü‚3‚‚‚‚4‚‚ÿü‚#í‚ ‚‚‚‚‚‚‚)‚‚‚‚‚ü‚‚ ü‚*‚‚‚‚‚‚‚‚ú‚‚‚7‚‚ ‚‚‚‚ù‚(‚‚‚‚)ú‚ñ‚‚‚÷‚‚÷‚ã‚'‚‚‚#‚òô‚‚‚þ‚‚èþ‚‚#‚‚‚‚ó‚"ûù‚‚‚‚‚	ß‚‚!‚$‚4‚‚3‚‚‚‚‚‚‚‚ôù‚!‚‚‚ô‚ÿ‚"‚‚ ‚‚‚‚‚‚$‚‚‚ø‚ï‚‚$‚‚ú‚‚‚‚‚(‚,‚‚2‚	‚	‚ýúë‚‚‚‚‚0ôã‚‚‚‚‚‚Ùÿð‚"‚‚úð‚í‚‚"‚çý‚
+‚‚‚ ‚‚‚‚‚‚‚1õ‚í‚‚‚‚‚‚‚&‚‚,‚‚‚ý÷‚ ‚	‚û‚‚‚
+‚ý‚ÿ‚‚‚‚,‚‚‚‚‚‚‚‚‚ý‚‚%øó‚ù‚‚‚‚‚‚‚í‚‚‚‚ûý‚ ‚&ý‚
+‚‚‚-‚‚$ü‚‚‚‚‚‚‚‚‚
+ù‚	‚,‚‚‚‚‚ýô‚$‚‚‚‚‚‚‚ÿ‚ÿ‚7‚‚‚ÿ‚‚‚ö‚‚ø÷‚‚‚‚‚‚"‚-þ‚‚	‚!‚‚ì‚‚‚'‚3‚‚‚1‚)‚‚	‚
+‚!‚ ‚‚(ç‚‚‚!ü‚‚‚/‚é‚
+ã‚‚‚	ò‚ÿû‚ý‚‚‚ã‚ûûõ‚‚‚‚'‚‚‚þü‚‚	ïòó‚ ÷‚
+þ÷‚	‚‚‚‚éù‚ú‚‚!ÿ‚‚ð‚
+çðð‚‚'‚ø‚þ‚‚‚‚é‚‚‚ó‚‚‚!‚
+ýþ‚‚‚
+‚òð‚‚?üõ‚‚ ‚‚‚ö‚÷‚%‚/‚‚‚ö‚‚	‚‚‚ ‚‚‚‚$þ‚‚ ð‚
+‚‚‚‚
+æö‚‚ ‚	‚‚ ‚‚
+‚(‚	‚‚6þû‚"‚ ‚‚‚‚÷‚‚‚‚‚"‚ ‚
+‚‚ü‚‚î‚ü‚‚(ø‚‚‚‚‚‚‚ý‚‚‚‚+‚‚ ó‚‚	‚‚‚#‚‚þù‚‚ ‚‚‚öõ‚ò‚‚ì‚
+û‚*‚‚‚ ‚øù‚‚1‚òã‚‚‚‚Û‚‚‚
+‚ÿ‚9‚‚ÿý‚éø‚‚‚í‚‚‚í‚ÿ‚‚‚‚‚ ‚‚‚ð‚‚‚ø‚
+ö×‚ö‚‚‚$ì‚‚‚‚‚‚‚ ‚‚	‚'‚"‚ú‚‚‚‚‚‚‚‚‚!‚‚û‚‚‚‚‚‚‚‚
+‚ëý‚‚#þëà‚ ‚Ö‚‚$‚‚‚‚	ï‚	‚‚ò‚‚‚‚‚‚‚ú‚8üó‚ö‚‚ ‚	ù‚‚û‚‚‚ î‚ó‚%‚‚‚×÷‚Þ‚‚ ‚‚‚‚ù‚‚‚‚ ‚‚!‚‚‚‚‚ ‚‚‚*‚‚‚‚÷‚‚‚‚óþ‚‚‚‚‚
+‚‚õ‚ ‚‚%‚‚‚ûù‚‚ï‚ ‚ ‚‚	‚
+ü‚‚‚ö‚å‚‚‚‚‚‚ ‚‚‚'‚‚‚‚‚‚‚õúÿþó‚‚‚ø‚‚‚‚‚‚‚‚‚‚+‚‚‚‚‚"ö‚0‚‚.‚ù‚ö‚‚ùï‚
+÷‚‚‚‚‚‚‚‚‚	‚‚‚
+‚	‚‚‚ðý‚‚	‚‚‚‚‚‚‚‚‚‚ö‚‚â‚‚‚‚þ‚6‚ü‚‚‚ÿñ‚%‚ý‚‚‚ù‚‚(‚
+‚‚üùùöÿ‚&õ‚!‚‚ô‚‚‚‚‚‚*‚8‚‚‚‚‚‚õ‚ÿ‚‚‚‚üÝ‚‚ÿ‚‚‚‚‚‚‚‚‚ÿÿ‚!‚-‚ ‚‚‚îü‚‚	úê‚‚‚‚‚ ‚‚‚‚‚‚	‚‚‚	‚‚"þ‚‚Ûü‚&ó‚‚‚/‚-‚‚Ü‚1þõ‚‚ÿÿ‚ýî‚6þ‚ú‚*ÿ‚=‚
+÷‚‚‚òü‚‚øõ‚ñ‚‚‚‚)‚ú‚%û‚ ‚ôù‚‚
+‚õ‚‚‚,‚‚‚‚
+‚‚ø‚‚
+‚	ø‚‚"‚ïóúé‚
+‚ù‚‚‚é‚ ï‚‚‚%‚ä‚	‚‚‚‚‚‚ó‚ê‚‚
+õ‚‚‚‚ö‚
+‚ ‚‚‚‚,‚ûò‚‚ë‚‚ ô‚‚‚‚‚
+‚‚‚ý‚‚‚‚‚ß‚‚‚ùæ÷‚‚‚‚	õ‚‚õ‚ø‚ð‚ ‚‚‚‚‚#‚‚‚‚ç‚‚‚‚‚ø‚-‚	‚‚‚‚‚9ÿ‚ù‚â‚‚‚‚#‚2ÿ‚÷èì‚‚þ‚ ç‚‚‚‚‚ ê‚‚ÿ‚‚	þ‚‚‚'õ‚‚‚ó‚&â‚‚‚ÿ‚#‚ö‚‚‚‚‚‚û‚‚‚ê‚ü‚ëý‚*ð‚ þ‚ýõ‚‚‚‚!‚7î‚‚‚#ó‚‚‚é‚÷úö‚‚‚‚%‚-‚‚‚‚‚þö‚‚‚‚‚3‚‚‚ê‚‚‚û‚‚ôö‚ê‚‚‚‚ ü‚‚‚ë‚ý‚‚‚‚‚ ‚ü‚‚‚‚þ‚‚!‚‚ê‚‚‚ô‚‚"‚ü‚4‚õ‚ë‚‚‚%‚‚öññ‚‚ê‚‚+‚
+‚û‚ô‚ý‚ã‚ç‚ô‚‚ ý‚‚‚‚&òû‚‚‚ó‚‚‚‚‚‚ÿ‚%‚‚‚ò‚‚ð‚‚‚‚‚‚‚ã‚‚ñ‚(‚ ‚ ÿý‚"ù‚‚‚‚‚øûö‚‚ð‚‚‚(‚øíù‚‚òú‚‚‚‚‚‚ ‚ùü‚(‚
+‚‚ ‚‚‚‚$‚àý‚	‚‚÷‚÷‚‚ ‚‚"‚‚	‚‚‚‚ý‚‚ ‚‚àë‚õ‚ âï‚	‚	ö‚ß‚‚‚)‚è‚‚‚õë‚‚‚‚‚‚‚‚‚"‚
+÷‚‚‚#é‚‚‚'‚ú‚‚ú‚
+‚‚ý‚ïë‚‚$û‚‚‚!‚ðù‚‚'‚-ü‚‚ ‚ô‚þ‚Ýñ‚‚ ‚‚‚úì‚‚‚	ü‚‚‚‚ç‚/‚)‚‚)‚!‚‚
+‚‚‚ú‚‚.ö‚ûþäü‚	þÿ‚	‚ öø‚‚&‚úß‚‚‚'ê‚‚‚‚‚‚‚‚‚‚,‚ô‚
+‚#‚.‚‚‚ ü‚‚!‚ ‚ ‚‚ ‚‚#‚ä‚ø‚ ‚‚û‚‚ óà‚à‚ö‚ø‚"‚ð‚‚	‚‚‚ ‚‚‚Þ‚í‚ï‚‚"‚‚3‚1‚*‚‚‚,‚‚‚.‚‚‚-‚ ‚ü‚‚6‚‚‚‚&‚ù‚&‚ö‚ý‚ß‚ø‚‚‚‚ ü‚û‚‚‚$ÿ‚‚ë‚,‚‚û‚‚‚‚‚‚"‚%‚‚‚ä‚å‚‚ÿ‚ ‚‚‚ù‚þ‚‚‚‚‚‚‚‚‚$‚‚‚ó‚!‚‚í‚ù‚‚!ö‚‚7ú‚‚:þ‚ öõ‚‚%‚)‚õ‚þ‚‚‚‚‚‚‚#‚‚‚ñÿ‚‚‚@‚èö‚‚‚‚	‚	ù‚
+‚‚‚‚‚‚‚&‚‚
+‚'ë‚'‚ ‚‚‚ ‚‚ø‚‚‚‚‚	‚.‚à‚	‚î‚‚‚æ‚þ‚‚å‚‚ô‚'ü‚ÿ‚‚‚‚‚‚‚‚‚*‚/‚‚‚‚‚‚'‚ï‚*‚‚(ç‚$‚‚Üø‚ÿ‚æ‚*‚ôð‚ú‚‚‚
+‚‚‚ ý‚	‚$ÿ‚ü‚‚‚ë‚‚
+‚
+û‚ ‚‚‚‚‚Þ‚ö‚‚‚ ‚ë‚ð÷‚ùâó‚‚‚‚‚‚‚‚$‚‚‚‚ø‚‚‚*‚ ‚‚ý‚"ð‚÷‚‚ ‚.û‚‚
+‚‚‚‚þ‚‚‚‚%‚‚‚‚ì‚î‚îùúá‚ï‚ ‚‚‚‚ø‚‚‚‚ï‚+‚‚åø‚‚‚‚‚‚&‚‚)‚ô‚#‚‚õ‚‚‚‚‚‚"‚‚ÿ‚‚‚ ‚×ý‚ü‚ù‚&‚$‚
+‚‚+‚'‚‚)‚	‚‚ÿ‚‚+óùð‚‚"‚‚	‚æ‚‚ð‚‚ ‚‚‚‚/‚‚‚‚ ‚‚	‚‚‚ü‚‚‚‚$‚‚‚‚ ùú‚‚‚ø‚‚
+ô‚‚‚$ö‚‚‚(õþ‚‚óù‚"‚;þ‚ìõ‚þ‚‚‚‚‚‚‚‚‚)÷ö‚‚"ø‚‚‚%‚‚‚ð‚‚‚‚‚.‚	î‚4‚‚‚öû‚‚!‚‚‚‚ ‚)‚þ‚0‚‚‚G‚‚7‚*ü‚*‚‚‚‚!‚
+ë‚-÷‚
+‚öý‚‚#‚‚ü‚‚‚ùñ‚‚‚ï‚‚‚‚‚,‚1ó‚ÿ‚‚ó‚ë‚þõ‚&þ‚‚‚-‚‚#‚)‚‚:î‚‚â‚%‚‚.‚‚÷‚‚‚‚‚‚‚‚ÿ‚"‚!‚‚ë‚‚‚‚‚‚‚ í‚
+ü‚-‚‚‚‚‚!‚)‚	‚	‚‚‚‚‚‚‚
+ï‚‚‚‚‚ë‚‚‚ø÷‚‚‚óí‚‚‚ ‚‚÷‚‚‚‚‚
+‚‚ ‚‚‚‚‚!‚‚é‚‚ÿ‚‚‚‚‚‚*‚*‚‚ø‚‚*‚‚‚ó‚ÿ‚úÝü‚‚è‚‚‚‚‚‚‚!ï‚þü‚$ö‚(‚	‚‚
+‚‚‚"‚‚ûù‚‚‚‚ùüç‚þ‚‚)‚÷‚ùÿ‚þ‚‚ñ‚‚‚
+‚‚$ññ‚‚‚‚á‚+‚‚‚‚ò‚‚‚‚‚‚‚'‚,‚‚ù‚‚í‚‚‚‚#‚‚‚.‚‚‚‚‚ý‚‚‚0‚‚ö‚‚'‚‚‚‚‚‚#‚‚‚"‚‚‚‚õ‚‚+‚‚‚‚‚‚‚‚‚	‚ûüú‚‚‚‚‚#íþ‚‚‚ú‚‚î‚‚
+‚‚'‚&‚‚‚‚‚$‚‚*‚‚‚‚‚‚‚	‚‚ ý‚$‚‚‚‚‚‚&æ‚‚‚‚
+‚ÿ‚‚	‚ü‚÷öë‚‚ôþö‚ø‚‚*‚‚‚"‚‚‚ü‚ ‚‚‚ ‚	‚‚
+‚‚ ‚‚‚ êÿ‚‚	ü‚í‚‚‚‚‚‚	‚‚‚þ‚‚
+ê‚	‚þí‚þô‚‚‚‚‚‚
+‚‚òé‚	‚‚ö‚ô‚ýì‚‚‚ÿþ‚‚‚‚‚‚	õ‚ÿ÷‚‚)Ô‚‚‚‚‚
+‚&ÿ÷‚‚ñ‚‚ý‚‚á‚'‚	‚	ù‚‚‚ö‚&þ‚‚‚Þ‚'‚ü‚‚‚
+‚ú‚ú‚‚‚‚‚‚ ‚‚‚‚‚‚%õ‚‚‚‚‚‚‚þ‚þ‚‚‚‚ê‚‚‚%ó‚‚ó‚‚‚ÿ‚"‚‚‚*‚‚‚‚‚1‚ó‚‚‚.‚)‚)‚&ñ‚‚‚‚‚î‚‚‚‚ü‚ý‚ÿ‚‚‚ï‚+Ù‚!ÿ‚‚‚‚$ô‚î‚‚ ‚9‚‚‚ ‚÷‚‚;‚‚‚!‚ ‚‚‚	‚
+è‚‚
+‚)ä‚‚ï‚‚ëý‚‚‚‚‚÷‚#‚ÿú‚	‚‚‚‚ù‚‚)‚ƒn‚‚
+çö‚‚ ‚‚‚‚‚#‚‚!‚‚‚÷‚‚‚üù‚‚0æ‚‚ÿ‚‚!‚‚‚÷Ê‚
+‚‚‚	‚‚‚ý‚ ‚‚#ë‚‚&‚‚‚‚‚‚	‚‚
+‚‚‚‚‚,‚‚‚‚øù‚ þ‚‚‚‚‚‚‚‚‚‚å‚‚‚‚%‚‚(û‚‚‚‚‚‚‚‚‚‚ ‚)‚)‚‚ ‚%‚‚
+ûü‚‚‚÷÷‚ö‚‚‚‚õüê‚‚‚þ‚‚‚ü‚‚ ð‚‚‚‚ý‚‚‚ö‚‚‚‚‚‚%‚‚ø‚üýÿ‚‚‚‚"éì‚‚0‚&‚ø‚#û‚‚é‚‚éîð‚-‚ý‚‚ïù‚÷‚‚î‚‚‚‚ô‚ú‚‚Çƒœ‚öüü‚‚%‚ ‚‚‚ø‚ööö‚‚‚Û‚ ‚‚$ü‚
+‚‚‚"‚‚‚‚ÿ‚þ‚"‚‚‚
+‚	‚‚‚ÿ‚(‚<‚
+‚
+‚‚‚‚øó‚ì‚û‚‚$‚'‚‚‚ãüû‚)ü‚‚‚üü‚
+‚‚‚‚‚ê‚	‚‚#‚‚‚%Ù‚‚‚%é‚‚‚‚‚‚‚‚,‚íòúñó‚‚(þ‚‚í‚ÿ‚	‚‚ò‚‚÷‚é‚ ‚‚‚‚%‚‚‚	‚ ‚úô‚‚‚-‚ û‚‚÷ã‚‚‚‚‚‚‚‚‚&‚)‚ýñ‚‚‚	‚‚‚"ñ‚#‚‚ùôõçùñ‚‚ý‚ ‚ü‚ÿ‚æ‚
+‚‚‚å‚%‚‚‚û‚'‚‚‚@ëü‚#‚‚ î‚õ‚‚þ‚‚‚à÷ø‚	ë‚ þ‚+‚#‚"‚‚‚‚$‚‚é‚1‚‚‚‚‚‚ò‚í‚‚‚‚þû‚ü‚‚‚ù‚òð‚ü‚	‚‚‚é‚ð‚	‚‚
+‚ûè‚‚)‚ò‚-‚ô‚‚ ‚ê‚ø‚‚‚/û‚‚‚ó‚‚‚‚‚‚‚‚"‚	‚"‚‚‚‚õë‚‚‚‚‚‚+‚‚‚‚‚ÿïî‚‚	ÿ‚ãÿ‚‚+‚ôü‚‚‚ ‚‚õ‚óü‚‚‚‚‚‚‚‚‚‚‚‚'‚‚‚	‚üø‚‚‚
+‚‚ø‚‚‚ý‚‚ÿ‚‚‚ÿ‚‚î‚‚ò‚‚‚‚‚þù‚+‚‚‚&‚‚é‚‚‚/‚ï‚*‚‚‚!ö‚‚‚ò‚ý‚‚
+þ‚#‚‚‚	‚‚ø‚6‚‚ ×‚‚‚‚‚ÿ‚‚‚+‚‚‚‚	ó‚ó‚‚‚‚‚‚%ö‚ú‚)‚
+‚‚ö‚ ‚
+‚/‚ ÿ‚‚ú‚+‚ ‚‚‚‚'‚‚‚‚‚	‚ç‚‚‚‚‚‚‚‚‚	‚óê‚ý‚
+‚B‚‚#‚$‚‚‚‚$‚)‚‚‚0‚‚	‚"‚‚‚úñú‚Ùô‚‚3‚ÿ‚‚÷‚‚‚‚	‚÷‚þ‚‚‚	íû‚ñ‚óö‚‚‚‚÷ü‚‚‚‚‚‚‚÷‚ ‚‚	‚
+‚úø‚ø‚ ‚‚‚$‚0‚"þ‚‚
+‚‚	‚öð‚‚ ‚‚	‚‚ø‚‚‚ü‚‚ì‚‚‚‚
+‚
+‚‚ÿ‚‚‚*‚ó‚‚!‚‚ì‚"‚%õ‚÷‚‚"‚‚‚ú‚%‚
+‚û‚ ‚‚þ÷‚‚‚9‚õ‚‚'‚Ú‚‚	ð‚‚‚ôïì‚'‚‚‚‚â‚‚ö‚‚ì‚‚‚ ‚	‚‚‚‚‚‚.‚‚ ‚‚ù‚‚‚‚!‚ö‚ó‚‚áú‚‚‚‚‚ê‚‚:‚‚ýú‚ú‚‚‚‚‚‚7û‚#‚÷‚"‚ò‚#‚‚‚"‚‚"‚‚‚û‚ú‚‚ó‚ù‚‚‚‚‚‚‚‚‚‚‚	‚‚	‚‚‚‚ÿÿ÷‚‚‚‚	‚‚‚‚.Ñ‚ÿ‚
+‚‚‚‚	‚‚‚!þý‚
+‚‚&‚‚‚û‚%ö‚‚ú‚‚ ‚ð‚1‚Þ‚ÿü‚‚&‚‚‚D‚‚‚ ð‚‚‚‚‚‚)õ‚7ëöÿõ‚‚	‚ì‚‚ð‚‚$‚‚‚‚
+‚‚‚ø‚‚‚‚‚"‚‚û‚!‚÷‚‚!‚‚ú‚ûôþ‚‚*‚ãè‚-‚$õ‚	í‚‚-‚‚‚‚ò÷‚‚=‚‚‚‚‚‚‚ø‚ ‚‚‚9‚‚‚(ÿ‚ô‚úó‚‚ùú‚‚‚	‚‚‚‚‚&‚û‚‚
+‚!‚‚!‚‚‚‚$‚‚‚6ÿ‚‚ê‚‚‚‚#í‚‚‚‚‚&‚‚‚‚‚,ü‚‚‚‚‚‚‚‚‚‚å‚0‚‚ô‚‚ ‚‚õ‚‚î‚‚	‚<ô‚‚‚
+û‚öö‚õö‚‚	‚8‚‚þ‚‚‚‚‚‚9‚ú‚
+øë‚‚‚ü‚‚ùñ‚*‚‚û‚ö‚âþ‚‚‚‚ ‚‚'û‚2ïô‚‚ ‚õ‚‚õ‚‚‚‚‚‚‚"‚‚"‚‚‚-‚
+íù‚‚‚÷ä‚ü‚ý‚‚#í‚‚ ü‚"‚ý‚‚#‚"‚‚ñ‚‚#‚‚ë‚ü‚ý‚‚‚!‚‚‚þ‚‚$û‚	ý‚ñî‚‚ ÿ‚‚ÿ‚ÿ‚‚$‚‚‚‚(‚ð‚‚‚3ù‚(õ‚ý‚‚‚8‚‚‚‚#‚‚‚‚‚‚ý‚‚ù‚ö‚‚‚ÿ‚*‚‚‚ý‚‚‚‚‚‚‚‚‚ÿ‚ñîñ‚ùÿî‚+ô‚‚ ‚	‚‚ï‚ù‚‚õç‚ú‚#ò‚ù‚‚‚‚*‚æô‚‚‚‚û‚ü‚‚‚‚ ‚ò‚ÿø‚‚ë‚‚‚
+‚‚‚
+‚+‚‚‚‚‚‚/‚‚‚	þ‚ ô‚‚#‚2‚÷‚‚‚‚‚÷‚‚'‚‚‚‚‚'ÿ‚‚	‚ð‚ô‚
+‚	‚‚‚‚‚‚‚‚‚‚‚‚
+ùÿ‚‚ ë‚
+ó‚‚ ‚‚‚‚‚×ò‚‚‚‚‚ý÷ü‚‚û‚ô‚‚ý‚!÷‚‚‚‚ìùþ‚ë‚‚ÿù‚.‚ë‚ä‚ò‚‚
+‚'‚‚‚ô‚‚ï‚‚ ê‚‚‚!‚‚‚‚öé‚‚‚‚‚%ù‚‚‚‚-‚ü‚ö‚þ‚&‚‚‚‚%‚‚‚‚û‚	‚Í‚‚'‚‚‚‚ ø‚%þ‚øï‚&‚*‚)çÿ‚‚‚‚)‚ÿ‚‚‚ ‚ý‚‚ûÿ‚!‚‚‚‚ò‚ó‚‚!æ‚‚‚‚‚‚*‚‚!‚‚ ‚‚‚‚‚ò‚‚æ‚‚‚"‚‚‚‚‚ù‚2óùô‚#ô‚‚‚‚‚(î‚‚‚î‚ø‚‚ð‚‚ ‚ý‚
+‚î‚‚‚þ‚î‚
+‚û‚,öéé‚ñ‚‚'‚‚‚!‚î‚‚‚	ø‚‚$‚ ð‚õ‚	‚‚‚‚&‚ñ‚‚‚‚ûý‚‚‚0‚ ‚þ‚ñ‚‚‚5‚‚ß‚‚#‚‚‚‚‚‚‚‚‚‚‚4‚‚‚ý‚‚‚‚‚ê‚‚‚'‚‚
+‚‚‚‚ æ‚íò‚÷‚/‚‚üã‚õñ‚
+û‚‚‚‚‚í‚‚4‚"‚‚ó‚‚‚‚‚‚‚ ‚‚	‚‚÷‚‚ú‚‚Ö‚ ‚‚ ‚‚‚‚‚‚‚ñ‚öô‚áø‚ ‚0þ‚‚‚‚#‚‚!‚8‚‚‚‚&‚ý‚‚ô‚÷‚‚û‚ñù‚å‚ÿ‚‚"‚ù‚è‚
+‚!‚‚(‚‚é‚ü‚!‚‚‚ö‚‚‚
+‚‚‚‚1‚‚‚‚‚‚‚6õ‚$‚þ‚ë‚ò‚ê÷ð‚‚‚‚‚'‚‚‚‚‚ô‚
+ú‚þ‚‚‚/ñ‚ð‚óù‚‚‚‚‚ ‚‚$‚‚.‚‚‚ÿ‚ý‚‚ü‚‚‚‚‚ó‚‚	ð‚‚‚‚‚‚ çý‚‚
+‚ð÷‚‚‚	‚‚‚‚‚ ‚‚7‚ñ‚:‚‚ø‚‚‚%‚
+‚‚ý‚òõ‚ ì‚‚‚‚‚‚‚‚‚ù‚ ‚‚þûÿÿ‚‚ýò‚‚‚+ú‚þ‚ôñ‚ ‚8‚'‚‚‚‚(õ‚!÷‚þüóý‚‚‚3íïñ‚‚ ‚âòçþÿ‚‚'‚5û‚÷‚ø‚	õ‚‚‚‚‚‚
+î‚‚‚‚‚ò‚‚üô‚
+‚ÿ‚þ‚
+ç‚‚‚þ‚‚‚‚‚"‚‚‚‚
+‚ô‚‚!‚‚ ‚÷þ‚‚‚'‚‚
+‚ ‚‚'‚‚þ‚‚	‚‚‚‚‚ù‚‚8‚	‚‚‚ ‚ø‚0‚óúòôê‚ÿ‚#‚‚ ‚‚‚‚‚‚‚‚+èø‚‚0é‚‚è‚L‚!‚‚‚‚‚‚‚ ‚î‚‚ÿ‚‚‚‚‚ý‚‚‚ð‚#‚‚9ü‚‚‚‚*‚û‚ é‚4‚
+‚‚ü‚ ÷ú‚"ó‚0óû‚
+‚-û‚ýê÷‚/‚#‚‚#‚	‚‚‚‚‚ã‚‚ü‚ü÷‚‚ý‚/‚‚‚‚‚‚‚'‚î‚‚	‚ô‚‚ýî‚‚‚ ‚‚6‚‚‚‚û‚‚&‚ö‚‚‚‚‚‚$‚‚‚-‚ù‚‚‚‚‚ã‚ ‚"‚	‚‚‚
+‚/‚ÿ‚	‚,‚‚)‚‚úø‚‚‚.‚‚úÿ‚‚û‚‚‚‚%‚(‚‚	æ‚(‚‚ú‚‚‚‚ü‚ÿý‚‚‚+ð‚‚ñ‚ì‚	‚‚‚‚‚‚‚‚ö‚è‚
+‚‚"‚‚‚òó‚‚‚‚íì‚ï‚-ò‚#ú‚þ‚‚‚%‚
+‚‚ÿ‚‚(‚ÿô‚ð‚	‚ì‚‚‚0ù‚0‚ ‚‚‚‚‚
+‚ï‚‚‚‚9‚‚&‚‚‚÷ò‚þ‚‚ ‚‚!‚‚
+ùü‚øý‚
+‚B‚‚‚6‚‚+ÿ‚‚ûö‚‚	‚‚‚‚	‚‚2‚&‚@‚ ö‚	‚(‚ó‚‚‚‚'‚ê‚‚‚‚!‚‚#ô‚‚ ‚ú‚ô‚#ó‚‚.‚‚ûø‚‚#í‚‚‚‚‚ ‚íõ‚ú‚‚‚‚‚!‚
+‚
+‚'‚‚‚‚‚ü‚‚÷þ‚
+‚&‚%‚öüùÿ‚‚þ‚‚
+ò‚‚‚	‚‚‚‚'‚‚‚	‚ó‚*ôñ‚‚ù‚éç‚‚‚‚ùÿòë‚‚ ‚õ‚‚‚‚‚‚	‚‚‚öþ‚á‚ ‚þì‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚ ‚%÷‚‚õ‚‚‚‚‚‚‚ ‚‚÷ö‚ï‚‚*‚"û‚'þù÷‚‚‚‚ö‚‚‚‚'‚‚	‚.‚‚/‚‚,þ‚‚‚‚‚	‚ é‚‚)‚‚‚ú‚‚‚‚‚(ú‚ë‚‚öý‚‚‚)ü‚ü‚ù‚‚	‚‚)ñ‚/ú‚ñ÷‚‚‚4ü‚ú‚åê‚ ‚‚‚#‚‚0‚‚ñ‚‚‚‚‚‚ç‚Ü‚‚‚&‚‚‚ ‚‚‚‚ñ‚ÿ‚)‚‚.‚ð‚'‚‚6‚‚‚‚	‚‚‚‚‚‚‚‚
+‚#‚ø‚	‚3ç‚	‚/‚‚
+ú‚‚‚‚‚ÿ‚'î‚‚‚‚‚ÿ‚‚‚‚‚ñð‚‚‚#þüú‚ ‚ýû‚‚‚+‚‚‚‚Þ÷‚ ‚	‚‚‚‚‚‚òû‚‚ÿ‚‚÷ò‚‚‚‚‚
+‚‚‚‚ö‚‚ ‚‚‚ÿ‚‚	‚ ‚‚‚‚‚ê‚‚‚‚‚&û‚‚è‚‚
+‚‚‚	‚‚!‚‚	‚‚‚‚,‚-‚‚/‚ý‚ ‚‚‚‚;ü‚$‚‚û‚!‚‚‚ý‚‚‚‚‚‚?‚‚‚‚‚%‚‚‚îùû‚äü‚
+‚ÿ‚
+‚‚‚‚‚	äî‚‚‚‚÷‚	ú‚ ôò‚ÿ‚1‚‚"ñ‚ë‚(‚‚‚‚‚‚$õ‚	‚ö‚ô‚‚ÿ‚‚‚‚‚*‚ç‚‚‚‚‚‚‚‚<‚ö‚ éù‚ø‚‚‚	ÿ‚ ö‚‚‚ý‚ ‚-‚‚‚‚ñ‚‚‚‚(‚‚‚‚ã‚ò‚‚
+‚‚‚ò‚‚
+‚‚‚ ‚‚8‚Ô‚‚
+‚‚‚ù‚é‚þ‚‚õ‚‚‚ýè‚!‚‚‚‚ô‚‚‚#â‚!‚ ù÷‚&‚ûÕ‚‚‚‚‚	ú‚‚,‚‚æ‚‚"‚$ü‚‚‚‚)‚‚
+‚ú‚‚‚‚ü‚‚‚‚‚ ‚‚‚õ‚#‚
+‚‚ù‚‚1‚ñøí‚‚óò‚û‚‚‚‚åýì‚ûûëöä‚‚ ‚‚
+‚‚‚‚‚‚Ú‚‚ú‚‚%‚‚ ‚	‚(‚<‚ ‚‚‚‚	‚‚î‚‚õò‚‚.‚‚‚óÍ‚ñ‚ð‚	ú‚‚‚‚ö‚‚‚‚‚‚‚‚$‚‚‚è‚‚é‚‚‚‚‚‚‚$û‚‚‚-‚	‚‚‚‚&‚‚‚Ô‚‚	û‚‚ù‚‚‚‚ÿÿ‚‚‚
+‚‚ ÿ‚‚‚‚‚ úç‚‚‚‚‚óó‚‚‚‚‚"ìñ‚	‚'‚‚ó‚‚
+ú‚‚ñ‚‚ÿ‚ú‚	‚‚‚‚
+‚‚‚‚‚‚‚&‚
+‚ÿ‚‚‚‚#‚‚öã‚‚ í‚þ‚	‚)‚‚‚óþ‚‚‚$‚‚‚‚&‚(‚‚)‚‚$ü‚÷‚‚‚2ù‚‚‚)û‚‚‚%‚ëøÿ‚‚‚#‚&‚‚‚‚5‚'‚2‚+‚‚/‚‚ìõÿ‚$ÿñ‚‚"‚‚ú‚‚‚‚ð‚!‚
+ó‚õ‚‚ë‚‚‚
+ü‚‚‚ë‚‚‚‚‚	‚‚/‚þ‚ ‚ë‚ÿ‚$‚‚‚-‚þ‚‚‚‚‚‚‚ÿ‚ïøüå‚ð‚ø‚‚‚ë‚‚‚‚‚‚
+‚‚‚‚
+‚‚ý‚‚‚û‚‚‚‚	‚‚ÿû‚%‚‚‚‚ÿøì‚‚‚‚‚+í‚‚ù‚ù‚%‚‚&÷‚"‚‚+‚‚‚‚ü‚(ú‚‚ð‚‚‚‚‚/‚‚‚
+‚‚‚ñ‚ ‚‚4‚‚ò‚‚‚‚
+ó‚‚ ‚ü‚‚‚)î‚‚‚ ‚‚‚	‚êú‚ ‚‚‚‚‚í‚‚‚‚	‚	‚‚‚ö‚,‚A‚‚‚9‚‚‚.õ‚
+‚"‚	ø‚‚‚ï‚‚ì‚‚ý‚ü‚)ó‚‚‚ö‚ ö‚‚‚*‚‚‚‚‚‚‚ä‚‚úú‚‚õýô‚‚-ûì‚7‚‚ö‚‚%‚‚‚,‚‚‚!‚‚‚‚ ‚úâ‚‚‚‚‚‚‚ú÷‚‚‚ó‚%‚þ‚!‚,‚‚‚‚	‚	îÖûý‚‚‚‚‚#‚ ‚‚‚%é‚ÿ÷‚ðÿ‚ü‚	‚‚û‚‚ ‚‚H‚‚‚ ü‚‚‚ý÷‚‚‚‚‚‚‚‚3‚‚‚ô‚‚‚‚'‚‚‚+‚‚‚‚‚‚	‚‚‚(‚$÷‚‚ü‚=‚‚	‚!‚üü‚%‚*‚‚‚‚‚‚‚‚‚‚ô‚‚‚à‚‚‚%‚H‚$‚)‚‚+‚‚‚‚‚‚‚‚‚‚‚‚‚‚‚ô‚‚ô‚‚
+‚‚õ‚‚(‚‚Óÿ‚‚ý‚ñøû÷‚‚‚‚‚‚‚/þ‚‚‚‚‚ë‚
+‚ÿï‚	÷ì‚$‚‚ö‚!‚‚
+þ‚ ‚2‚èþ‚‚‚‚ ‚
+ü‚‚‚‚ã‚‚&÷‚÷‚‚‚õ‚‚‚‚ ‚‚‚‚
+ù‚‚‚‚ü‚‚#ûóûõï‚‚‚‚‚ûÿ‚‚6‚‚‚‚‚‚‚ ‚ ÿ‚‚‚(õý‚‚2‚‚ãý‚‚)ë‚‚‚‚‚&‚‚‚‚‚+‚‚
+‚‚‚ò‚‚‚$‚	ÿñü‚,‚‚B‚‚ø‚ ‚‚‚ ‚á‚‚ÿ‚ë‚+‚‚
+þ‚‚‚L‚;‚‚5‚‚4ï‚!‚ñò‚ú‚	‚‚ù‚ö‚%‚‚ýö‚‚‚<‚Ûñ‚‚‚ý‚.íå‚ù‚ë‚ ‚‚	‚‚‚‚÷î‚‚)û‚‚‚‚ó‚÷‚,÷‚‚ ‚‚û‚ ‚‚‚‚‚ê‚
+‚‚%ö‚‚‚ÿ÷ð‚%‚û‚
+‚ÿ‚‚‚ ‚0‚ý‚‚‚D‚à‚‚þ‚÷‚‚‚$ë‚+ö‚-‚'‚‚ù‚ó‚îö‚)‚‚‚‚‚!‚ù‚ô‚‚‚‚ô‚
+‚‚‚	‚	‚‚ ø‚ò‚‚‚‚	‚ùþ‚‚‚‚‚‚÷ï‚*‚‚	‚‚&‚ûò‚	ü‚û‚!‚
+‚‚‚‚û‚‚‚‚‚%‚‚ø‚‚‚‚‚
+‚‚‚3‚‚!‚4‚$‚‚>‚‚‚'‚ì÷‚‚$ò‚‚ í‚ø‚‚‚‚Ôö‚‚‚1ò‚
+‚‚‚-‚‚‚	‚‚
+âü‚í‚‚$ô‚‚ÿó÷‚&‚‚&‚ìôûü‚‚‚‚ú‚‚‚‚ù‚‚÷‚‚Éð‚‚‚ø‚(‚‚þ‚‚ý‚‚)‚‚‚‚‚‚‚‚é‚‚‚‚ü‚ý‚ÿü‚$þ‚"‚ ‚-‚‚‚ö‚‚‚
+‚‚	þ‚‚‚êõú‚&‚‚‚ ‚	÷‚‚‚‚‚‚‚+þ÷‚‚‚,æ‚‚‚ú‚‚‚‚‚‚‚‚‚äÿ‚,‚‚‚
+‚‚‚
+þ‚‚‚/ä‚‚‚‚‚‚ù‚$‚‚ úÿùÚ‚‚‚‚2‚ ‚"‚‚+‚‚‚#‚@‚;‚	ô‚‚‚Û‚‚‚‚ü‚‚!÷‚‚õ‚‚2‚õ‚‚#‚‚(‚&÷ÿ‚‚‚
+‚‚%‚ì‚$ì‚ùþ‚$‚‚
+è‚÷‚$ô‚‚‚‚‚Ý‚ü‚&‚‚ø‚	‚3‚,‚‚‚	‚
+‚!‚‚‚ó‚â‚
+‚‚ùÝ‚‚‚‚‚‚‚‚ö‚2Ó‚‚ü‚‚‚ÿì‚‚‚‚‚‚‚.‚‚‚ ü‚‚‚‚	î‚ïü‚úí‚%‚‚‚û‚‚‚‚"‚.ûþ‚îö‚‚‚‚‚÷‚þ‚+ùãë‚,‚ð‚‚‚‚‚‚‚2‚
+‚‚ÿ‚‚úù‚7ó‚/‚-‚‚$‚(‚	‚þ‚)ì‚$‚(‚‚‚‚‚‚‚
+‚‚-‚‚‚‚ ñ‚ó‚‚‚‚û‚ù‚‚ù‚ìü‚ ‚‚ö„‚þò‚‚‚'öÿô‚ ö‚#‚ ô‚ý‚ ÿæí‚‚'‚ãüó‚‚‚ü‚‚‚	þùù‚ ‚ ‚‚‚\ƒNˆù‚%‚‚æ‚‚‚þ‚‚
+‚ÿ‚ÿ‚ø‚ú‚‚‚,ü‚‚ ô‚"‚‚‚	‚0‚ù‚‚‚'ö‚‚÷‚ö‚‚‚‚‚ù‚ÿ‚(‚ã‚‚‚‚ ‚‚‚(‚‚ûýè‚‚‚ü‚áò‚+‚%‚‚
+‚‚ü‚‚‚‚"‚‚ ‚‚‚‚‚‚õ‚‚‚#ÿ‚÷‚‚‚ü‚‚ï‚‚<ü‚‚‚‚3‚÷÷‚æ‚‚ú‚‚‚‚‚‚‚‚‚‚‚ýì‚ ‚‚7‚‚$‚‚‚÷‚	‚ ‚‚%‚‚0‚2Ý‚ó‚Lƒn‚ý‚	‚þý‚íàø‚‚‚‚)‚‚2‚õ‚‚‚‚!è‚ÿ‚ù‚ö‚/‚7‚‚þâ‚êöþ‚‚‚8‚}‚*‚3‚‚‚‚ ‚-þíïõ‚æ‚ü‚‚"‚‚óé‚%‚‚‚‚‚-‚)‚ý‚è‚‚ì‚‚‚‚‚‚&øòö‚‚	‚ô‚‚ þ‚ ð‚‚‚‚‚,‚#‚‚‚‚‚‚‚‚‚‚!‚‚ò‚
+‚ þ‚‚‚ô‚‚&‚‚.‚(‚õý‚‚ëò‚/‚‚‚ð‚‚&‚‚‚í‚‚$‚‚"‚‚‚
+‚‚‚4‚‚	‚‚ú‚‚
+‚‚û‚‚‚ô‚‚%‚‚‚‚ ‚
+‚&‚ø‚	‚‚‚‚‚#‚8‚	‚‚é‚‚þ‚‚‚‚‚3‚ú‚‚‚‚þþ‚‚‚‚
+‚ðð÷Ý‚‚ ñ‚ó‚‚‚‚‚û‚ô‚ýì‚‚‚‚
+‚!Þ÷ò‚‚%‚
+ôø‚‚‚‚0‚7‚#ô‚!‚‚‚‚
+‚‚	‚üò‚‚ý‚‚‚ú‚‚ûþ‚ô‚‚‚‚‚‚‚&‚
+‚ó‚‚‚‚‚öê‚øþéõþô‚-‚‚;‚‚‚éæ‚ù‚=‚!‚‚‚î‚‚	‚&‚‚$‚‚‚‚‚ ‚‚'‚‚þ‚‚‚#‚'ëûñ‚‚
+ÿ‚êñ‚1ý‚÷‚‚ù‚‚õ‚ý‚ý‚ ‚‚‚‚‚‚é‚‚‚‚'ò‚=‚‚‚òìÜ‚‚*‚û‚‚ ‚ ‚‚‚1‚‚‚‚‚‚‚ý‚‚‚	‚‚‚‚ ‚‚é‚‚øø‚‚!‚‚‚‚‚‚K‚‚‚‚‚þüï‚*‚(‚‚ýø‚û‚"‚	‚)õï‚‚‚‚‚‚‚‚ô‚"‚‚‚‚‚*‚‚‚3ï‚#û‚‚ôø‚&‚ÿ‚à‚ðù‚,þ‚‚‚%‚!‚‚.‚‚‚æ‚‚‚#ÿ‚‚‚‚ ‚‚‚‚	û‚‚üõæ‚‚!‚	‚‚‚$÷‚õ‚*‚	‚ó‚‚1‚‚&‚ ‚2‚$‚/‚-‚-‚‚!‚ö‚‚‚ýÝ‚‚‚&‚)‚‚‚‚
+ò‚÷þ‚‚‚‚,‚	‚‚‚úó‚‚ú‚‚‚Ú‚'‚-‚‚ù‚*õ‚‚‚+‚þ‚‚‚‚ü‚ ‚‚ú‚‚‚ê‚‚ù‚#è‚‚	þ‚‚ û‚‚‚‚ôú‚‚÷í‚‚‚‚‚‚‚!÷þ‚úý‚"‚þ‚‚‚‚
+‚‚‚‚‚	‚‚ú‚æ‚‚+‚‚û‚$ÿ‚‚‚ìöï‚‚‚÷‚	‚‚‚‚ ‚‚‚ø‚‚‚‚‚‚‚‚‚‚‚‚÷‚
+ø‚‚
+‚	îè‚‚ëò‚‚ü‚ß‚‚àø‚ø‚‚‚ý‚
+‚‚ù‚‚/‚‚!‚õ‚‚7‚ ‚'‚‚ ‚'‚=‚ý‚‚ø‚‚‚‚‚å‚ý‚‚/‚úÓ‚ î‚ÿ‚‚ö‚‚)‚‚
+‚‚þ‚‚‚ú‚/‚ó‚ûé‚‚‚‚í‚‚‚"‚úð‚ ‚ÿ‚÷ý‚‚‚-‚%‚ì‚‚ ‚‚‚‚æ‚‚	‚!‚þú‚‚‚‚‚$‚'‚‚!‚"‚‚‚‚!‚%úõâ‚‚
+‚ó‚ ‚‚þë‚‚‚‚‚‚ö‚‚&‚‚	‚‚ ‚ÿã‚(‚ø‚öø‚‚‚‚‚‚‚‚‚‚çòû‚(‚‚‚‚+û‚‚‚ö‚‚ô‚‚‚"‚8‚‚‚‚‚‚öÿ‚
+‚‚‚ç‚‚É‚ñ‚‚‚‚‚‚‚‚þ‚7‚‚‚‚‚/‚)û‚‚?‚
+‚‚‚3‚‚‚ü‚‚‚ý‚‚‚‚)‚9‚	Ñõ‚‚	‚‚‚ï‚‚û÷‚õþ‚‚‚‚‚‚‚‚‚0‚
+‚‚‚‚ü‚	÷‚	‚‚êî‚öù‚‚‚‚‚‚‚ ‚ ‚
+ÿ‚‚‚ø‚‚á‚‚ó‚ýíþÛçóì‚‚æ‚òô‚ùõ‚	‚‚ä‚‚+‚î‚1ø‚‚,‚‚
+‚‚‚*‚ß‚‚ ‚‚ñ‚‚‚‚‚‚‚,‚‚‚ö‚%þ‚‚àý‚
+ó‚ä‚ ‚$‚#ú‚‚‚‚‚ó÷ý‚ò‚‚ÿ‚3‚þ‚‚&‚	‚õ‚(‚&‚‚‚*‚ç‚‚÷‚ð‚þ‚‚$‚‚.‚+‚õ‚ì‚&‚+‚‚‚‚,‚‚‚‚!‚‚,‚‚	‚é‚‚*‚‚‚‚*‚þ‚‚ø‚‚‚‚ú‚‚$‚ûù‚	‚‚
+‚
+‚‚‚‚‚‚ö‚‚‚õ‚‚‚‚‚þ‚ó‚‚‚#ô‚‚‚é‚,ýè‚‚þø‚í‚‚‚‚‚‚‚‚ö‚‚‚‚.ù‚"ðò‚úû‚‚	‚‚‚‚‚‚úüþ‚‚‚ ‚‚‚úÿ‚‚ù‚‚	Þ‚ó‚/‚‚‚‚‚	‚ú‚‚ý‚‚‚?‚õ‚‚‚ü‚‚(‚‚‚‚‚‚þ‚ò‚‚ò‚ ‚‚ý‚÷‚‚‚‚‚‚ü‚ô‚‚‚‚‚‚‚‚ÿ‚‚‚ç‚ÿò‚ ‚î‚‚‚
+‚‚‚é‚‚‚‚‚‚6‚‚‚‚‚!‚‚‚ æ‚
+‚‚‚‚‚,î‚‚ý‚‚‚"‚üå‚‚‚
+ý‚‚‚‚û‚‚øÿ‚ð‚‚‚‚‚û‚‚ô‚‚4å‚ÿû‚‚-‚ü‚-‚‚)ö‚/‚ü‚‚ ïíû‚ôù‚‚‚
+ûñ‚‚ÿ‚‚‚‚‚ ‚‚ìü‚‚"‚‚ú‚‚‚‚‚ó‚‚‚‚ú‚"‚‚$ö‚ú‚‚‚‚õù‚‚‚‚ô‚‚‚ü‚‚‚ ‚‚‚öëö‚‚÷ý‚‚0‚ÿ‚‚‚‚'‚‚‚!ö‚ ‚ ‚‚ú÷‚&‚2‚‚‚#‚‚‚%‚‚ è‚+‚‚‚‚ ‚
+‚‚	ì‚
+‚ ‚‚ú‚ ‚‚‚!‚‚)‚ö‚‚*‚#ü‚#‚&‚ù‚6‚‚‚1‚‚ ýõ‚‚-‚‚‚‚ñ‚ý‚‚‚‚‚‚ñý‚ê‚‚‚3‚‚‚‚%‚ ‚‚ó‚ ‚
+‚‚‚‚‚	èÞ‚‚ññ‚‚‚‚‚ ‚ Ùò‚‚
+ý‚,÷‚‚‚	‚‚ñûûþ‚Ý‚‚ï‚2‚ûï‚‚‚‚ ‚ö‚)‚òü‚‚‚‚‚
+ã‚‚÷‚‚ð‚‚‚‚	‚‚‚‚‚‚‚)‚‚ û‚ ‚‚‚‚
+‚‚‚‚#‚‚‚‚%‚#‚+‚	‚‚$ù‚‚‚‚
+ÿ‚‚‚ö‚‚ ‚û‚‚$þÿ‚‚
+‚ù‚ô‚ÿõ‚‚‚‚*‚‚3‚ ‚‚íúü‚‚‚‚	‚)‚‚ïò‚ö‚‚‚/‚‚ô‚#‚‚‚	‚‚þ‚0‚ë‚‚‚‚!ó‚
+û‚ý‚ñ‚ó‚‚‚â‚%‚ä‚‚‚â‚‚ù‚‚‚‚
+‚ü‚
+þê‚‚‚‚‚‚‚‚‚)õ‚‚‚÷‚
+ä‚‚ê‚‚‚‚‚
+ç‚‚óööò÷ó‚‚	‚ ã‚ö‚Þ‚õôð‚‚òñ‚‚‚õ‚	‚‚1‚*‚öû‚‚'‚‚
+‚‚"‚‚‚"‚þè‚ò‚#‚‚‚(‚‚‚#‚‚æ‚ú‚‚	‚‚‚üý‚ÿ‚‚	ú‚‚‚‚ðßÞöå‚‚,‚‚‚‚‚‚ý‚+þè‚$‚&‚‚‚‚%õ‚ê‚‚‚‚‚‚‚‚ì‚‚‚‚‚‚þúþû‚‚
+‚‚	‚ò‚/‚‚‚ ‚!‚í‚‚‚‚‚‚
+‚ý‚ô‚!‚ å‚î‚‚‚æ‚õø‚‚ð‚‚þ‚
+ï‚ ‚þ‚‚‚‚ú‚õ‚‚‚ýö‚‚‚‚&ÿÿ‚‚‚ ‚
+‚	‚‚‚ø‚"‚‚‚‚‚‚‚‚ö‚
+‚‚‚	þ‚÷‚‚ôù‚ ø‚‚‚èúù‚‚-å‚
+‚‚‚'‚3‚‚‚‚‚‚‚	‚#ÿ‚ ‚‚‚‚‚‚‚‚"ÿ‚‚ö‚‚‚‚÷‚þ‚øþ‚‚ö‚‚‚æ‚ãë‚
+‚‚‚ø‚òø‚	‚ò‚ ‚ ‚
+‚ùû‚õî‚	‚ ÷ñ‚ ‚,‚ÿòè‚‚‚‚6ò‚‚‚‚‚‚‚þ‚‚‚‚‚‚&ù‚"‚‚‚‚‚ÿ‚‚‚‚(ü‚‚‚‚ï‚	‚,‚‚/‚‚‚"‚ú‚*ó‚ð‚ ù‚ø‚‚ùõ‚	‚1‚á‚‚‚%ýêø‚é‚‚‚‚3‚‚û‚!‚‚‚‚‚‚‚‚	ó‚õ‚‚‚,‚‚‚‚‚‚‚‚óþç‚‚‚‚‚‚‚#‚‚(‚ó‚	‚‚‚‚‚ò‚ñ‚$‚ð‚‚òÿð‚ þ‚‚é‚ü‚‚‚ø‚+æð‚ ‚á‚!‚ä‚÷‚‚í‚‚‚)‚
+ø‚‚!‚‚‚!‚	ý‚"‚‚
+‚ ‚ö‚ê‚‚‚‚þ÷‚"‚‚‚‚ ô‚‚ç‚‚‚‚‚ê‚‚ ‚ÿ‚‚‚‚‚‚ä‚
+ö‚‚‚õð‚‚ ûù‚‚‚#‚õ‚‚‚á‚‚-‚‚‚çö‚õ‚‚ ‚‚‚ï‚‚‚‚)‚÷þ‚‚	ðýó‚‚‚,‚'‚‚)ì‚‚‚‚ùö‚‚‚ ‚‚!ù‚	û‚	‚ýô‚‚‚öýò‚
+‚‚‚‚ô‚#‚
+‚.‚ù‚‚÷‚ùõ‚‚ù‚Õ‚‚‚‚
+‚‚
+â‚‚(‚í‚‚‚ö‚ãüþ‚9è‚ó‚‚ù‚ø‚:‚#‚‚#ù÷ßñ‚üð‚‚‚‚‚‚‚'û‚	‚‚‚‚‚‚‚‚	ó‚,‚‚ ‚í‚ð‚‚‚"‚
+ï‚ÿôÞå‚‚‚‚‚‚‚‚‚‚ ‚‚‚$ó‚‚ûù‚‚&‚‚ ‚‚‚‚+‚‚öôþý‚‚ý‚‚‚‚‚‚ó‚‚&‚‚‚‚"‚‚&‚‚÷‚‚&‚ö‚ ‚ÿð‚‚‚‚‚4‚'‚ ‚‚9þ‚/‚!‚ íÿ‚‚î‚‚ ‚åì‚‚‚þý‚‚‚‚‚‚‚‚‚	ý‚óöñï‚‚ óï‚‚"‚‚+‚ ‚‚‚ ‚‚ ‚‚÷‚‚üòÿð‚‚
+‚‚	ó‚‚‚‚%î‚ü‚‚þé÷‚‚æ‚‚8‚+‚ä‚ë‚ó‚‚‚%‚º‚4‚‚ã‚ ‚‚ø‚‚)‚‚	Ü‚"‚
+‚%‚‚‚‚
+ù‚‚‚ü‚‚ý‚‚	ñ‚ùè‚‚‚*‚*‚'‚-‚‚‚ý‚!‚úÿ‚
+‚‚î‚ ‚‚‚‚‚‚‚‚‚&‚‚‚‚‚÷‚ ò‚7‚)‚‚‚ö‚-ô‚‚‚þ‚ý‚‚‚ ‚‚6‚‚‚ð‚þ‚‚ò‚ë‚û‚‚ý‚‚‚‚$‚
+ð‚‚:ñ‚‚è‚‚‚‚‚!ñ‚%‚"‚‚‚‚ ‚‚
+‚ð‚ ‚ø‚ø‚
+‚‚þë‚‚‚	‚ô‚‚‚‚‚‚‚‚	óÿø‚‚!‚)‚‚
+‚.‚óþý‚‚‚
+ÿ‚0ýî‚‚;‚ò‚üî‚‚‚‚‚‚‚‚‚‚)‚‚‚*‚´…*†z‚}ÿö‚‚‚ü‚‚‚
+‚äü‚‚‚‚‚‚‚	‚‚:ô‚	‚‚*‚ð‚‚ó‚	ò‚ö‚‚‚ ‚‚÷‚û‚û‚òë‚‚‚ê‚÷‚‚ûú‚‚ôëð‚‚‚‚‚ ‚!‚‚
+‚‚ã‚‚‚‚‚ü‚‚ ‚û‚‚‚ó‚‚ö÷‚‚$‚‚‚‚‚þ‚‚‚/‚1‚‚‚ý‚<‚‚÷‚‚.‚	‚ý‚#‚ ‚!‚‚ý‚‚‚‚!öêùõ‚‚‚‚ ö‚ùòò‚‚)Û‚3‚ûý‚‚ùþ‚‚‚‚‚P‚#‚‚‚‚‚ í‚‚‚‚‚ð‚‚‚6‚	‚!‚‚&‚‚‚ôï‚
+‚‚‚#‚)ð‚‚‚‚‚‚(öüï‚‚‚	‚‚‚‚‚÷ú‚÷‚ó‚‚)‚‚‚‚‚:‚‚
+‚
+‚‚!‚‚úöþ‚‚òòõ‚‚‚‚‚‚‚‚'Ú‚‚‚‚4‚ û‚û‚-‚‚)‚‚‚‚‚‚ê‚û‚ýûñ‚‚ ‚‚‚‚
+ö‚úì‚‚‚‚‚!‚‚‚‚
+þ‚‚)‚ ‚‚á‚2‚‚‚‚‚‚‚ù‚#‚þ‚
+úü‚‚‚
+‚‚,‚‚$ãû‚‚‚‚‚‚‚(‚ ‚‚û‚‚‚‚‚,‚#‚.‚‚‚‚ ‚ð‚‚‚
+‚‚‚õû‚‚‚‚‚ÿ‚‚ ‚ë‚‚ ‚2ø‚‚‚‚‚‚‚‚‚‚$‚!‚+‚‚‚‚ÿ‚‚‚‚‚‚‚ýò‚‚‚‚&‚‚0‚‚‚‚ðþãÞ‚‚õ‚%ð‚û‚	‚‚‚‚üò‚)ý‚ ‚/‚ ‚"ñ‚‚#‚/ë‚ô‚‚‚	‚‚õ‚‚ ‚‚
+‚#ù‚è‚‚-‚ò‚‚‚î‚‚‚‚‚‚õ‚‚4þ‚‚‚‚‚‚‚‚ÿ‚‚‚‚äÿ‚÷ïý‚‚‚æ‚‚‚‚þ‚(ÿò‚
+åú‚‚ ‚"‚íõê‚‚‚$‚úð‚ù‚‚‚‚ó‚ÿã‚ï‚‚‚)þ‚ûû‚ï‚‚‚ûþ‚?‚0‚‚‚‚ð‚‚‚‚ø‚ý‚‚	ý‚é‚‚‚7ã‚(‚‚
+‚"‚ü‚‚ ‚‚ýê÷û‚‚‚"ûÞþ‚	ï‚‚û‚á‚‚‚‚ÿ‚!‚‚‚‚ö‚‚3ñ‚‚öù‚%þ‚÷‚‚)‚‚
+ÿ‚úø‚
+Ò‚ö‚ëõ‚û‚*‚ã‚Ù‚‚‚‚‚‚)‚‚‚‚!‚‚‚‚
+ù‚‚‚‚3ú‚ü‚,‚‚û‚‚‚	‚‚&‚‚‚‚þúê‚,‚‚‚‚‚‚'‚‚‚‚‚‚*‚‚‚&‚‚‚ô‚ ‚‚‚‚‚
+‚	‚‚‚	‚+ü‚ý‚.‚‚%‚‚4üþ‚ð‚ìÿ‚	‚‚‚"‚‚‚$‚	ö‚‚‚‚õßû‚ù‚!‚
+þ‚ýé‚‚ù‚‚%‚ûú÷‚ý‚‚‚‚öüñ‚ú‚)‚‚(÷‚‚(‚‚‚‚	‚÷‚+‚ÿ‚‚ëö‚û‚
+‚‚ñ‚‚â‚‚‚‚)‚‚‚‚‚‚‚ûý‚!‚‚#‚ ÿ‚‚‚‚ë‚!ÿ‚ÿçíø‚‚‚ö‚1‚	‚ßô‚‚‚‚‚‚‚‚ð‚‚ù‚‚‚ñ‚‚(‚
+‚‚‚"‚â‚‚‚ì‚‚$‚ö‚‚‚‚ô‚‚‚‚‚‚‚ß‚‚‚ô‚‚‚ü‚í‚‚‚ì‚‚‚‚‚‚‚‚÷‚#üû‚‚‚‚
+ý‚‚‚‚ó‚‚þ‚÷‚‚‚	‚‚/ô‚ü‚)ê‚‚ ø‚‚&‚ ‚
+úð‚‚‚‚ïÿþ‚ð‚
+û‚	‚‚çû‚‚û‚#ì‚‚‚%ûú‚‚‚‚‚#ÿò‚(ý‚6í‚‚‚‚‚‚'‚‚‚‚ó‚ó‚ø‚‚‚‚&‚ôú‚ïú‚‚‚‚‚ø‚!‚‚ü÷‚üöúþù‚‚‚‚í‚2‚‚‚ÿ‚ó‚þú‚*å‚ ‚
+ñ‚ ‚ ‚‚‚‚ó‚ý‚ñ‚‚‚%‚‚	ø‚‚ç‚@‚‚ç‚‚‚‚ ú‚‚‚
+‚‚‚ ‚‚‚ò‚‚
+÷‚‚"ì‚‚ù‚‚‚ ‚î‚‚üþ‚‚‚‚	‚‚1‚ú‚‚‚‚‚å‚‚‚ô‚÷‚‚þ‚‚)‚#‚‚‚‚‚‚‚ý‚ ‚þù‚Þü‚‚‚ã‚÷‚$ú‚
+‚‚‚‚‚‚‚‚ë‚
+‚þ‚‚ÿ‚9‚ù‚‚‚ðøî‚ß‚‚ô‚‚!÷ôþ‚‚‚ôõ‚‚!‚‚'‚øëü‚‚‚‚"ý‚‚‚‚‚‚6‚‚‚û‚‚‚‚	‚‚‚‚‚
+ñ÷‚‚+‚‚‚*‚(ò‚‚
+‚ ó‚‚‚
+‚ù‚‚*‚‚‚ ‚(‚‚ð‚‚‚õì‚â‚‚‚
+‚$‚‚ ‚‚‚‚øüïã‚%‚‚‚þ‚ì‚	‚ú‚‚‚‚‚‚'‚üì‚‚‚‚ ‚üó‚	ûì‚#êù‚û‚‚‚‚‚ í‚‚(þ‚‚þ‚‚‚úü‚‚‚‚‚‚‚
+‚ý‚‚
+ÿ‚‚ þ‚ü‚÷‚‚‚‚‚‚‚å‚‚$‚‚óè‚ ‚‚5‚‚‚‚‚õ‚‚‚$‚ý‚
+‚ï‚‚‚þ‚‚‚‚‚‚ ‚#‚ ‚÷‚)‚‚Üß‚ó‚‚‚.‚ ‚‚õ‚‚‚àý‚‚þ‚	þ‚‚+‚"‚‚‚‚ö‚‚ñí‚ ‚‚	‚‚‚ïó‚ý‚‚‚‚‚$ÿ‚‚‚‚!‚/‚‚‚ ÿÿÿ‚‚‚$‚‚‚	‚ùù‚1‚‚‚‚‚.‚‚‚‚‚ ‚÷‚‚‚‚‚‚‚
+‚‚‚ ‚‚‚	‚‚ÿ‚‚&‚‚ø‚5‚‚ ‚4‚‚ó‚ ü‚-‚
+‚-‚‚‚‚‚‚þ‚‚‚þ‚‚ê‚‚(ë‚(ø‚ú÷‚ó‚‚‚‚‚	‚‚ ‚ ö‚ì‚‚‚
+‚‚‚‚(‚‚‚‚ø‚ùñöß‚(‚
+‚‚‚‚‚‚‚	ô‚‚ú‚.ùùû‚+‚‚ ‚)‚ô‚$‚‚‚‚ï‚
+ý‚‚ÿ‚
+‚‚‚‚‚ ‚‚‚6‚õ‚‚‚‚‚‚úî‚	‚'‚‚ø‚‚‚ ‚#þ‚‚‚ì‚ý‚ þùþü‚%‚â‚û‚â‚‚‚‚"öÙ‚.‚‚‚‚‚‚2‚‚!‚‚)‚‚ý‚‚õ‚‚‚‚‚‚þ‚þë‚
+÷‚‚‚‚ô‚ø‚‚‚‚‚‚‚ ð‚‚‚(‚‚#ÿ‚$é‚‚ùã‚‚‚‚ã‚‚(‚‚‚‚‚‚‚‚ýøø‚‚‚"‚ë‚ú‚&‚‚‚‚ÿ‚‚‚‚&‚‚‚‚ ‚ùô‚#‚‚‚‚
+‚
+ù‚ ‚‚‚‚ø‚‚#‚‚‚Þ‚ ‚‚‚‚	‚‚õ÷‚‚ü‚%‚(‚‚	ö‚‚þ‚‚‚
+‚‚‚‚‚û‚÷‚‚‚‚‚‚	‚‚*‚þ‚ü‚‚þ‚þõú‚‚%õú‚‚$ù‚‚‚‚‚(‚ þ‚ ü‚‚
+ã‚‚‚‚
+‚‚‚ ‚‚‚	õú‚‚‚‚‚‚‚&‚þ‚1‚ð‚‚‚$‚‚þ‚‚‚ö‚‚$‚‚‚‚‚ö‚	öû‚‚‚ õ‚‚'‚‚û‚&‚!‚÷ü‚‚ê‚!þñô‚‚ô‚ ‚‚öæý‚‚‚å‚‚‚‚‚ ‚‚
+‚‚‚‚‚‚þ‚‚‚/‚ ‚‚ú‚2ø‚öú‚‚‚(é‚‚‚î‚$‚‚ú‚‚‚‚ê‚!‚‚	‚ý‚2‚‚ò‚%‚ ê÷‚‚÷‚ü‚
+ë‚‚í‚ó‚ÿ‚ô‚‚
+‚‚Ã‚‚‚ÿ‚%û‚#‚*‚ü‚&î‚‚ò‚û‚‚‚‚ö‚‚‚‚‚‚‚‚‚ñû‚üü‚#‚)‚&òú‚‚ü‚ ‚ö‚‚
+‚ ‚‚‚%‚%‚ì‚‚‚í‚‚‚$‚
+‚‚ ‚‚ ‚‚‚‚9‚‚í‚‚‚$Ý‚	î‚‚
+‚9‚(ôû‚‚‚‚	‚‚+‚‚‚‚‚÷à‚‚
+‚‚&õ‚"‚ÿî‚‚ó‚‚‚ü‚‚‚è‚‚ï                                                                                                                                              

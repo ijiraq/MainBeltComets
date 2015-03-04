@@ -1,0 +1,586 @@
+SIMPLE  =                    T / file does conform to FITS standard             BITPIX  =                   16 / number of bits per data pixel                  NAXIS   =                    2 / number of data axes                            NAXIS1  =                  194 / length of data axis 1                          NAXIS2  =                  195 / length of data axis 2                          EXTEND  =                    T / FITS dataset may contain extensions            COMMENT   FITS (Flexible Image Transport System) format is defined in 'AstronomyCOMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H COMMENT                                                                         COMMENT Observation Summary                                                     COMMENT -------------------                                                     CMMTOBS = 'N/A     '                                                            CMMTSEQ = 'SINGLE[1/1] - Ref + [0.0 0.0]'                                       OBJECT  = 'O+2+0   '                                                            OBSERVER= 'QSO Team'                                                            PI_NAME = 'Brett Gladman'                                                       RUNID   = '13AP06  '                                                            FILENAME= '1630857o'           / Base filename at acquisition                   PATHNAME= '/data/niele/megacam/13AQ09-Jun05' / Original directory name at acqui EXTNAME = 'ccd21   '           / CCD number in the mosaic                       EXTVER  =                   21 / Now matches the CCD number in the mosaic       DATE    = '2013-06-06T08:16:54' / UTC Date of file creation                     HSTTIME = 'Wed Jun 05 22:16:54 HST 2013' / Local time in Hawaii                 IMAGESWV= 'CFHT DetCom v4.44 (Nov 18 2011)' / Image creation software version   COMMENT file 1630857o42, raster FULL, etype OBJECT, etime 287, filter filter_na COMMENT                                                                         COMMENT                                                                         COMMENT Unique amplifier IDs for MegaCam:                                       COMMENT                                                                         COMMENT -- -- 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 -- --       COMMENT 72 73 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 74 75       COMMENT 76 77 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 78 79       COMMENT -- -- 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 -- --       COMMENT                                                                         COMMENT                                                                         COMMENT Detector                                                                COMMENT --------                                                                DETECTOR= 'MegaCam '                                                            DETSIZE = '[1:23219,1:19354]'  / Total data pixels in full mosaic               RASTER  = 'FULL    '           / Active raster description                      CCDSUM  = '1 1     '           / Binning factors                                CCDBIN1 =                    1 / Binning factor along first axis                CCDBIN2 =                    1 / Binning factor along second axis               PIXSIZE1=                 13.5 / Pixel size for axis 1 (microns)                PIXSIZE2=                 13.5 / Pixel size for axis 2 (microns)                PIXSCAL1=               0.1850 / Pixel scale for axis 1 (arcsec/pixel)          PIXSCAL2=               0.1850 / Pixel scale for axis 2 (arcsec/pixel)          AMPNAME = '21a + 21b'          / List of amplifiers names for this image        AMPLIST = 'A B     '           / List of amplifiers for this CCD                CCDSIZE = '[1:2048,1:4612]'    / Detector imaging area size                     DETSEC  = '[8465:10512,5043:9654]' / Mosaic area of the entire readout          DETSECA = '[8465:9488,5043:9654]' / Mosaic area of the A readout                DETSECB = '[10512:9489,5043:9654]' / Mosaic area of the B readout               DATASEC = '[33:2080,1:4612]'   / Imaging area of the entire CCD in raw frame    ASECA   = '[1:1056,1:4612]'    / Section by A amplifier in raw frame            DSECA   = '[33:1056,1:4612]'   / Image area of A amplifier in raw frame         TSECA   = '[33:1056,1:4612]'   / Trim section of A amplifier = DSECA            BSECA   = '[1:32,1:4644]'      / Overscan of A amplifier in raw frame           CSECA   = '[1:1024,1:4612]'    / Section in full CCD after BSECA cut out        ASECB   = '[1057:2112,1:4612]' / Section by B amplifier in raw frame            DSECB   = '[1057:2080,1:4612]' / Image area of B amplifier in raw frame         TSECB   = '[1057:2080,1:4612]' / Trim section of B amplifier = DSECB            BSECB   = '[2081:2112,1:4644]' / Overscan of B amplifier in raw frame           CSECB   = '[1025:2048,1:4612]' / Section in full CCD after BSECB cut out        CCD     = 'Marconi/EEV CCD42-90'                                                CCDNAME = '8374-17-5'          / Name of the CCD (manufacturer reference)       CCDNICK = 'Armand  '           / Nickname of the CCD                            MAXLIN  =                65535 / Level at 1% linearity departure (ADU) = Averag MAXLINA =                65535 / Level at 1% linearity departure (ADU) A amp    MAXLINB =                65535 / Level at 1% linearity departure (ADU) B amp    SATURATE=                65535 / Saturation value (ADU)                         GAIN    =               1.5500 / Converting gain (e-/ADU) = Average [A,B] amps  GAINA   =               1.5400 / Converting gain of A amplifier (e-/ADU)        GAINB   =               1.5600 / Converting gain of B amplifier (e-/ADU)        RDNOISE =                    4 / Read noise (electrons) = Average [A,B] amps    RDNOISEA=                    4 / Read noise (electrons) A amplifier             RDNOISEB=                    5 / Read noise (electrons) B amplifier             DARKCUR =                  3.4 / Dark current (e-/pixel/hour)                   QEPOINTS= '48%@350 86%@450 83%@550 78%@650 62%@750 38%@850 12%@950' / QE%@wavel CONSWV  = 'Not implemented'    / Controller software DSPID and SERNO versions   DETSTAT = 'temp_status'        / temp_status_comment                            DETTEM  =              -133.20 / Temp. Cold Plate (C)                           INHERIT =                    F / No need to inherit global headers              TIMESYS = 'UTC     '           / Time System for DATExxxx and TIMExxxx          OBSTYPE = 'OBJECT  '           / Observation/ Exposure type                     EXPTYPE = 'OBJECT  '           / OBSTYPE is the new name for this               EXPNUM  =              1630857 / CFHT odometer number                           OBSID   =              1630857 / CFHT odometer number                           EXPTIME =              287.075 / Measured integration time (seconds)            EXPREQ  =                287.0 / Requested integration time (seconds)           EXPMEAS =              287.075 / Measured shutter time (seconds)                DARKTIME=               287.00 / Dark current time (seconds)                    ORIGIN  = 'CFHT    '           / Canada-France-Hawaii Telescope                 INSTRUME= 'MegaPrime'                                                           INSTMODE= 'Normal  '           / Instrument Mode                                REGMODE = 'Normal  '           / Registration Mode                              RAOFF   =                  0.0 / Right ascension compensation                   DECOFF  =                  0.0 / Declination compensation                       BIASSEC = '[0:0,0:0]'          / Dual amplifiers readout - see BSECA & BSECB    SHUTOPEN=               0.0000 / Shutter blade opening time (msec)              SHUTCLOS=               0.0000 / Shutter blade closing time (msec)              FILTER  = 'r.MP9601'           / Name of filter in position                     FILTERID=                 1305 / Holder ID (see also FILTER)                    TESTSPHE=                  0.0 /    temp, surface, telescope spider w/He deg C  QRUNID  = '13AQ09  '           / Q RunID                                        QOBSERVE= 'Peter Forshay'      / Name of Q Observer                             QCOORD  = 'Stephane Arnouts'   / Name of Q Coordinator                          QID     = 55150500000000033370                                                  QOBSEQID= 55001400000000109813                                                  QICSEQID= 55051200000000133224                                                  QOBITER =                    2                                                  QOFFID  = 10000000000000000001                                                  REL_DATE= '2014-02-28T00:00:00' / UTC Release Date                              QOGLABEL= 'OG9     '                                                            QOBLABEL= 'OB101   '                                                            QICLABEL= 'IC1     '                                                            TELESCOP= 'CFHT 3.6m'          / Hawaii Big Island, Mauna Kea                   LATITUDE=            19.825252 / Latitude (degrees N)                           LONGITUD=          -155.468876 / Longitude (degrees E)                          TELSTAT = 'auto_guide'         / Telescope Control System status                DATE-OBS= '2013-06-06'         / Date at start of observation (UTC)             UTIME   = '8:12:00.74'         / Time at start of observation (UTC)             UTC-OBS = '8:12:00.74'         / Time at start of observation (UTC)             MJDATE  =        56449.3416752 / Modified Julian Date at start of observation   MJD-OBS =        56449.3416752 / Modified Julian Date at start of observation   SIDTIME = '14:49:45.39'        / Sidereal time at start of observation          LST-OBS = '14:49:45.39'        / Sidereal time at start of exposure             DATEEND = '2013-06-06'         / Date at end of observation (UTC)               UTCEND  = '8:17:35.22'         / Time at end of observation (UTC)               MJDEND  =        56449.3455465 / Modified Julian Date at end of observation     LSTEND  = '14:55:20.78'        / Sidereal time at end of exposure               EQUINOX =               2000.0 / Equinox of coordinates                         RADECSYS= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  RA      = '16:04:15.86'        / Telescope right ascension                      DEC     = '-12:34:35.1'        / Telescope declination                          HA      = '-1:14:30.47'        / Telescope hour angle at start of exposure      HAEND   = '-1:08:55.08'        / Telescope hour angle at end of exposure        INSTZRA =                15.00 / Instrument zero for RA in arc seconds          INSTZDEC=                15.00 / Instrument zero for Dec in arc seconds         RA_DEG  =           241.066083 / Telescope right ascension in degrees           DEC_DEG =           -12.576417 / Telescope declination in degrees               OBJNAME = 'O+2+0   '           / Target name                                    OBJMAG  =                  0.0 / Target magnitude                               OBJEQUIN=               2000.0 / Target equinox                                 OBJRADEC= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  OBJRA   = '16:04:15.86'        / Target right ascension                         OBJDEC  = '-12:34:35.1'        / Target declination                             OBJRAPM =                 0.00 / Target right ascension proper motion in as/yr  OBJDECPM=                 0.00 / Target declination proper motion in as/yr      NGUIDER =                    2 / TCS Number of guiders                          NGUISTAR=                    2 / TCS number of guide stars/probes in use        GUINAME = 'South field guider (North probe)' / TCS guider name                  GUIEQUIN=               2000.0 / TCS guider equinox                             GUIRADEC= 'FK5     '           / TCS guider system for equinox                  GUIRA   = '16:04:35.16'        / TCS guider right ascension                     GUIDEC  = '-13:12:51.7'        / TCS guider declination                         GUIRAPM =                 0.00 / TCS guider right ascension proper motion arcse GUIDECPM=                 0.00 / TCS guider declination proper motion arcsec    GUIOBJN = 'auto GSC: 0'        / TCS guider object name                         GUIMAGN =                  9.6 / TCS guider object magnitude                    XPROBE  =               21.652 / Telescope bonnette guide probe X position      YPROBE  =                9.069 / Telescope bonnette guide probe Y position      ZPROBE  =              -12.285 / Telescope bonnette guide probe Z position      GUIFLUX =                -9999 / TCS guider flux                                GUIFWHX =              -9999.9 / TCS guider average x FWHM in pixels            GUIFWHY =              -9999.9 / TCS guider average y FWHM in pixels            SKYFLUX =                    0 / TCS total sky flux                             GUINAME1= 'North field guider (South probe)' / TCS guider #1 identification     GUIEQUI1=               2000.0 / TCS guider #1 equinox                          GUIRADE1= 'FK5     '           / TCS guider #1 system for equinox               GUIRA1  = '16:04:13.70'        / TCS guider #1 right ascension                  GUIDEC1 = '-11:55:07.9'        / TCS guider #1 declination                      GUIRAPM1=                 0.00 / TCS guider #1 right ascen proper motion arcsec GUIDEPM1=                 0.00 / TCS guider #1 declination proper motion arcsec GUIOBJN1= 'auto GSC: 0'        / TCS guider #1 object name                      GUIMAGN1=                 13.0 / TCS guider #1 object magnitude                 GUIPOSX1=               -0.166 / TCS guider #1 probe x position                 GUIPOSY1=               12.579 / TCS guider #1 probe y position                 GUIPOSZ1=              -12.298 / TCS guider #1 probe z position                 GUIFLUX1=                -9999 / TCS guider #1 flux                             GUIFWHX1=              -9999.9 / TCS guider #1 average x FWHM in pixels         GUIFWHY1=              -9999.9 / TCS guider #1 average y FWHM in pixels         GUINAME2= 'South field guider (North probe)' / TCS guider #2 identification     GUIEQUI2=               2000.0 / TCS guider #2 equinox                          GUIRADE2= 'FK5     '           / TCS guider #2 system for equinox               GUIRA2  = '16:04:35.16'        / TCS guider #2 right ascension                  GUIDEC2 = '-13:12:51.7'        / TCS guider #2 declination                      GUIRAPM2=                 0.00 / TCS guider #2 right ascen proper motion arcsec GUIDEPM2=                 0.00 / TCS guider #2 declination proper motion arcsec GUIOBJN2= 'auto GSC: 0'        / TCS guider #2 object name                      GUIMAGN2=                  9.6 / TCS guider #2 object magnitude                 GUIPOSX2=               21.652 / TCS guider #2 probe x position                 GUIPOSY2=                9.069 / TCS guider #2 probe y position                 GUIPOSZ2=              -12.285 / TCS guider #2 probe z position                 GUIFLUX2=                -9999 / TCS guider #2 flux                             GUIFWHX2=              -9999.9 / TCS guider #2 average x FWHM in pixels         GUIFWHY2=              -9999.9 / TCS guider #2 average y FWHM in pixels         AIRMASS =                1.258 / Airmass at start of observation                TELALT  =              52.6773 / Telescope altitude at start of observation, de TELAZ   =             148.9044 / Telescope azimuth at start, deg, 0=N 90=E 270= DOMEAZ  =                145.6 / Dome azimuth at start, deg, 0=N 90=E 270=W     MOONANGL=               166.40 / Angle from object to moon at start in degrees  MOONPHAS=                -0.04 / Moon phase @ 0 HST, 0..1 new>full, -1..0 >new  MOONUP  = 'False   '           / Moon up? True or False                         MOONALT =               -52.80 / Moon altitude at start in degrees              MOONAZ  =               351.00 / Moon azimuth at start in deg, 0=N 90=E 270=W   FOCUSID = 'MegaPrime'          / Telescope focus in use                         TELCONF = 'MegaPrime'          / Telescope focus in use                         CALFOCUS=               -3.222 / Telescope focus calculated from model in mm    DEFOCUS =                0.000 / Telescope defocus from calculated in mm        FOCUSPOS=                -3220 / Telescope focus encoder readout                TELFOCUS=                -3220 / Telescope focus encoder readout                BONANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ROTANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ISUGAIN =                 0.30 / Instrument Stabilization Unit control gain     ISURATE =                50.00 / ISU control rate in Hz                         ISUTCSOR=                 1.00 / ISU offload rate in Hz to telescope position   ISUSTATE= 'Full    '           / ISU control state (Off/Only/TCS/Full/Frozen)   ISUSTDVX=                 0.00 / ISU most recent minute std dev in x in arcsec  ISUSTDVY=                 0.00 / ISU most recent minute std dev in y in arcsec  FSAGAIN =                 0.00 / Focus Stage Assembly movement control gain     FSARATE =                 3.33 / FSA control rate in Hz                         FSATHRES=                5.000 / FSA movement threshold in mm                   FSASTATE= 'Pause   '           / FSA control state (Off/On/Paused)              FSANMOVE=                    0 / FSA number of actual moves in last 10 minutes  FSAMINZ =                0.000 / FSA minimum position in last 10 minutes        FSAMAXZ =                0.000 / FSA maximum position in last 10 minutes        FSAMEANZ=                0.000 / FSA mean position in last 10 minutes           FSASTDVZ=                0.000 / FSA position std dev in last 10 minutes        TCSGPSBC= '0157 08:11:58.960692' / TCS GPS read out in BCD                      TCSGPSTM=              8.19971 / TCS GPS clock time in decimal hours            TCSRBUSS= '20:26:00.000'       / TCS RBUSS clock time                           TCSEPICS= '20130606 08:11:32.966' / TCS EPICS clock time                        TCSAMODE= 'G       '           / TCS acquire mode - T/O/G/g/P for t/o/g coords  TCSMJD  =        56449.3416544 / TCS MJD                                        TCSLST  =             14.82877 / TCS LST in decimal hours                       TCSAPHA =            -18.83020 / TCS apparent hour angle in degrees             TCSAPDEC=            -12.61227 / TCS apparent declination in degrees            TCSOBHA =            -18.82624 / TCS observed hour angle in degrees             TCSOBDEC=            -12.60551 / TCS observed declination in degrees            TCSENHA =               -68387 / TCS hour angle absolute encoder in bits        TCSENDEC=               -34953 / TCS declination absolute encoder in bits       TCSEDHA =            -18.72341 / TCS hour angle absolute encoder in degrees     TCSEDDEC=            -12.62394 / TCS declination absolute encoder in degrees    TCSINHA =                    0 / TCS hour angle incremental encoder in bits     TCSINDEC=                    0 / TCS declination incremental encoder in bits    TCSSEHA =                -0.03 / TCS hour angle servo error in arcsec           TCSSEDEC=                -0.04 / TCS declination servo error in arcsec          TCSGEHA =                 0.00 / TCS hour angle guider error in arcsec          TCSGEDEC=                 0.00 / TCS declination guider error in arcsec         TCSMVX  =            -9999.900 / TCS secondary guider acquisition x move in mm  TCSMVY  =            -9999.900 / TCS secondary guider acquisition y move in mm  TCSMVRA =              -2.7800 / TCS right ascension acquisition move in arcsec TCSMVDEC=             -27.8300 / TCS declination acquisition move in arcsec     TESPMIRE=                -2.80 / 03 temp, surface, primary mirror east deg C    TESPMIRW=                 1.50 / 02 temp, surface, primary mirror west deg C    TESPMIRS=                 1.61 / 01 temp, surface, primary mirror west side deg TEAPMCLW=                 0.80 / 54 temp, air, primary mirror cell west deg C   TEAMIRCI=                 0.19 / 58 temp, air, mirror cooling in at unit deg C  TEAMIRCO=                 1.00 / 27 temp, air, mirror cooling out at cell deg C TEAPMSPN=             -9999.90 / 65 temp, air, mirror spigot north cass deg C   TEAPMSPS=                 2.96 / 64 temp, air, mirror spigot nouth M3 deg C     TEATRNGE=                 0.70 / 23 temp, air, top ring east deg C              TEATRNGW=                 0.08 / 06 temp, air, top ring west deg C              TEANRLSB=                 9.26 / 19 temp, air, north rail support beam deg C    TESHRSET=                 9.29 / 08 temp, surface, horseshoe east top deg C     TESTTRSH=                 0.20 / 97 temp, surface, telescope truss S high deg C TESTTRNM=                 0.83 / 94 temp, surface, telescope truss N mid deg C  TESTTREM=                 0.22 / 95 temp, surface, telescope truss E mid deg C  TESTTRWM=                 0.46 / 96 temp, surface, telescope truss W mid deg C  TESTTRSL=                 0.61 / 98 temp, surface, telescope truss S low deg C  TESTTRSE=                 1.03 / 69 temp, surface, telescope truss SE lower deg TEALOWWS=                -1.40 / 38 temp, air, dome lower weather stat side deg TEATOPWS=                 4.00 / 36 temp, air, dome top weather stat side deg C TEATOPOP=               -20.90 / 37 temp, air, dome top opposite weath side deg TEA2INCH=                 0.99 / 45 temp, air, two inches above fifth floor deg TEA2INEB=                 1.60 / 53 temp, air, two inches up by electronics deg TEA6FOOT=                 0.53 / 43 temp, air, six feet above fifth floor deg C TESCONRM=                 3.05 / 61 temp, surface, floor above control room deg TESPIERN=                 2.90 / 59 temp, surface, floor by north pier deg C    TESPIERS=                 2.30 / 60 temp, surface, floor by south pier deg C    TEAWTHRT=                 0.60 / 35 temp, air, weathertron deg C                TEMPERAT=                 0.01 / 86 temp, air, weather tower deg C              WINDSPED=                24.49 / 84 wind speed, weather tower knots             WINDDIR =                82.16 / 85 wind direction, weather tower deg (N=0 E=90 RELHUMID=                15.24 / 87 relative humidity, weather tower %          PRESSURE=               617.78 / 31 barometric pressure, control room mb        DDSEEMEN=                 0.86 / Dome DIMM mean seeing, arc seconds             DDSEEMED=                 0.86 / Dome DIMM median seeing, arc seconds           DDSEEMOD=                 0.86 / Dome DIMM mode seeing, arc seconds             DDSEESTD=                 0.00 / Dome DIMM seeing deviation, arc seconds        WMSEEMEN=                 0.25 / Weather tower MASS mean seeing, arc seconds    WMSEEMED=                 0.25 / Weather tower MASS median seeing, arc seconds  WMSEEMOD=                 0.24 / Weather tower MASS mode seeing, arc seconds    WMSEESTD=                 0.04 / Weather tower MASS seeing deviation, arc secon WDSEEMEN=                 0.64 / Weather tower DIMM mean seeing, arc seconds    WDSEEMED=                 0.63 / Weather tower DIMM median seeing, arc seconds  WDSEEMOD=                 0.62 / Weather tower DIMM mode seeing, arc seconds    WDSEESTD=                 0.03 / Weather tower DIMM seeing deviation, arc secon SPOZPMEN=                 0.32 / SkyProbe (orig) mean absorption, magnitude     SPOZPMED=                 0.12 / SkyProbe (orig) median absorption, magnitude   SPOZPMOD=                 0.12 / SkyProbe (orig) mode absorption, magnitude     SPOZPSTD=                 0.44 / SkyProbe (orig) absorption deviation, magnitud CRUNID  = '13Am05  '           / Elixir camera run ID                           BIAS0   =    992.5810928013877 / Mean bias level                                BIAS1   =    1057.637467476149 / Mean bias level                                FLAT    = '13AQ05_r_flat.fits' / Flat Image                                     CADCPROC=                  2.0 / Version of cadcproc                            BZERO   =                32768                                                  HISTORY imsplice: FLIPS ver 3.0 - Elixir by CFHT - Wed Jun 5 2013 - 22:18:41    HISTORY imsplice: Splicing the two readouts (A&B) per CCD into a unique image   HISTORY imsplice: Splicing results in all detectors as if read from A amplifier HISTORY imsplice: NEXTEND keyword updated (/2) = number of CCDs vs. amplifiers  HISTORY imsplice: EXTNAME keyword becomes `ccdxx` instead of `ampxx`            HISTORY imsplice: AMPNAME keyword now covers both amplifiers (eg `29a + 29b')   HISTORY imsplice: keyword {GAIN, RDNOISE, MAXLIN} replaced by two keywords [A,B HISTORY imsplice: DATASEC and DETSEC keywords now reflect the entire CCD        HISTORY imsplice: BIASSEC becomes irrelevant -> replaced by BSECA & BSECB       HISTORY imsplice: New keywords are DETSECA, DETSECB, DSECA, DSECB, TSECA, TSECB HISTORY imsplice: New keywords are ASECA, ASECB, CSECA, CSECB                   COMMENT Unique detector IDs for MegaCam (North on top, East to the left)        COMMENT    --------------------------                                           COMMENT    ba ba ba ba ba ba ba ba ba                                           COMMENT    00 01 02 03 04 05 06 07 08                                           COMMENT --------------------------------                                        COMMENT ba ba ba ba ba ba ba ba ba ba ba                                        COMMENT 36 09 10 11 12 13 14 15 16 17 37                                        COMMENT --------------------------------                                        COMMENT 38 18 19 20 21 22 23 24 25 26 39                                        COMMENT ab ab ab ab ab ab ab ab ab ab ab                                        COMMENT --------------------------------                                        COMMENT    27 28 29 30 31 32 33 34 35                                           COMMENT    ab ab ab ab ab ab ab ab ab                                           COMMENT    __________________________                                           COMMENT The two upper rows of CCDs are flipped, a=A amp, b=B amp                COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  HISTORY = AstroGwyn: Run on 2013-11-29 15:16:19 (UTC)                           NORDFIT =                    3 / Order of fit                                   NSTARS  =                  455 / Number of stars in final match                 ASTERR  =               0.0356 / 68%-tile of Residuals                          ASTCAT  = 'Oall.swarp.rdm.relev' / Reference catalogue                          CTYPE1  = 'RA---TAN'           / Coordinate type                                CTYPE2  = 'DEC--TAN'           / Coordinate type                                CRVAL1  =    241.066080000     / Tangent point RA, degrees                      CRVAL2  =   -12.5764200000     / Tangent point Dec, degrees                     CRPIX1  = 2.846929650100000E+03 / Tangent point x, pixels                       CRPIX2  = 4.254278719260000E+03 / Tangent point y, pixels                       CD1_1   =  -5.192396207431E-05                                                  CD1_2   =  -1.695462696165E-07                                                  CD2_1   =  -2.154818616905E-07                                                  CD2_2   =   5.190219999346E-05                                                  PV1_0   =  -1.191671105342E-04 / xi =   PV1_0                                   PV1_1   =    1.00126160100     /      + PV1_1 * x                               PV1_2   =  -5.708870931172E-04 /      + PV1_2 * y                               PV1_3   =    0.00000000000     /      + PV1_3 * sqrt(x**2 + y**2)               PV1_4   =   3.329186953541E-05 /      + PV1_4 * x**2                            PV1_5   =  -3.137000535481E-05 /      + PV1_5 * x*y                             PV1_6   =   1.593657533766E-05 /      + PV1_6 * y**2                            PV1_7   =  -2.304295015782E-02 /      + PV1_7 * x**3                            PV1_8   =   1.559400192252E-04 /      + PV1_8 * x**2 * y                        PV1_9   =  -2.305794461625E-02 /      + PV1_9 * x * y**2                        PV1_10  =   4.313635758893E-05 /      + PV1_10* y**3                            PV2_0   =   1.167254025789E-04 / eta =  PV2_0                                   PV2_1   =    1.00144146764     /      + PV2_1 * y                               PV2_2   =  -5.712284179256E-04 /      + PV2_2 * x                               PV2_3   =    0.00000000000     /      + PV2_3 * sqrt(x**2 + y**2)               PV2_4   =  -3.572398850991E-05 /      + PV2_4 * y**2                            PV2_5   =   3.203622347441E-05 /      + PV2_5 * y*x                             PV2_6   =  -1.508250392229E-05 /      + PV2_6 * x**2                            PV2_7   =  -2.306915824692E-02 /      + PV2_7 * y**3                            PV2_8   =   1.556346955893E-04 /      + PV2_8 * y**2 * x                        PV2_9   =  -2.305621302031E-02 /      + PV2_9 * y * x**2                        PV2_10  =   4.297243340588E-05 /      + PV2_10* x**3                            HISTORY = PhotGwyn: Run on 2013-11-29 23:16:39 (UTC)                            ZPO     =               32.119 / Original zeropoint from Elixir                 PHOTZP  =               31.992 / Best estimate zeropoint                        PHOTZPS =                0.002 / Uncertainty on PHOTZP (random only)            PHOTZPN =                  209 / Number of usuable calibration stars            ZPD     =               30.000 / Desired, post-SWarp zeropoint                  ZPR     =                1.992 / zeropoint shift PHOTZP-ZPD                     FSCALE  =             0.159661 / Scaling factor to get this zeropoint shift     PHOTREF =   'previous MegaCam' / Source: Oall.photcat                           COMMENT   PhotGwyn: ZPO = 2.5*log10(EXPTIME) + PHOT_C + PHOT_K*(AIRMASS-1)      COMMENT   PhotGwyn: ZPO only valid if image taken under photometric conditions  HISTORY = PhotGwyn: PHOTZP derived from previous MegaCam data for this CCD only COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ‚åƒƒ(ƒ	‚óƒƒ1ƒ‚óƒƒƒ‚ñƒ!ƒƒƒ#ƒ+‚ô‚ðƒ ‚ÿƒƒƒƒƒ,ƒƒ‚þƒƒ#ƒƒ	ƒ2ƒ5ƒƒƒ-‚úƒ+ƒ4ƒ8ƒƒƒ2‚òƒ ƒƒ,ƒ4ƒ$ƒƒƒ ƒƒ-ƒ
+ƒƒBƒ‚ÿƒ<ƒƒƒƒƒ.ƒƒ+ƒ4‚ûƒDƒ ‚õƒƒƒ‚íƒ6ƒƒƒ5ƒƒ‚ÿƒ6ƒƒƒƒƒ7‚÷ƒJƒ ‚óƒ&ƒƒ3ƒƒ‚ðƒƒƒƒ+ƒ(ƒƒƒƒ‚ÿƒƒƒ-ƒƒDƒ8ƒƒ'‚ßƒ$ƒ1‚ÿƒ4ƒ<ƒƒƒƒ'ƒ"‚ðƒƒ6‚ñ‚Þƒ	ƒƒƒ‚îƒƒƒƒ‚ý‚õƒ#ƒ-ƒƒƒƒEƒ$ƒ	ƒ‚ûƒ ‚ô‚õ‚ñ‚ðƒƒ>ƒ&ƒƒƒ	ƒ‚ôƒƒƒƒ*ƒdƒéƒëƒÂƒ_ƒƒ)ƒ'ƒ‚ùƒ ƒƒƒ%ƒ"‚æƒRƒƒ ‚úƒ)ƒ*ƒƒ‚üƒ‚óƒƒ
+ƒƒ$ƒƒƒ%‚öƒƒƒ'ƒ$ƒ#‚øƒƒ-ƒ"‚ùƒ‚Ýƒ!ƒ.ƒƒ
+ƒƒƒƒ/ƒƒHƒƒ#ƒƒ!ƒ!ƒƒ:ƒ!‚úƒƒƒƒƒƒƒ‚ðƒƒƒ5ƒJƒCƒ/ƒƒƒ:ƒ!‚í‚ÿƒƒƒ/ƒ5ƒ‚ÿ‚ñ‚õƒƒ%ƒƒƒƒ8ƒ0ƒ(ƒƒ'ƒƒ&ƒ-ƒ‚úƒƒ$ƒ‚Öƒ#ƒ3ƒ#‚ÿƒ$‚ÿƒ6ƒƒ;ƒƒ3ƒƒ‚åƒƒ+ƒ'ƒ‚ëƒƒƒƒ ƒƒƒƒ‚óƒƒƒ!‚êƒ,‚ÿƒƒƒ+ƒ&ƒƒƒ ‚èƒƒ2ƒ-ƒ8ƒ)ƒ&ƒƒ'ƒƒ	ƒƒ*ƒ&ƒƒ?‚þ‚ôƒ‚óƒƒƒ$ƒVƒ	‚Õƒƒ+ƒƒƒ&ƒƒ ƒƒƒ,ƒƒ%ƒƒCƒƒö„ƒÊƒ`ƒƒƒ@ƒ6ƒƒ%‚ñ‚äƒƒƒƒƒ1ƒƒ1ƒ?ƒƒ*ƒ"‚è‚ùƒƒƒSƒ,ƒƒƒ*ƒƒ6ƒ4ƒƒƒƒ@‚üƒƒ-ƒ0ƒƒƒƒƒƒ*ƒƒ*ƒ0ƒ$ƒ ƒ>ƒ(ƒ*ƒ ‚ùƒƒ(ƒƒ
+ƒ‚èƒ)ƒ‚ûƒ6ƒ6ƒ‚û‚ö‚ýƒƒƒƒB‚è‚Ûƒ	ƒƒ ƒƒ8ƒƒƒ&‚öƒ1ƒ‚ò‚Òƒƒ‚ü‚ë‚Ôƒ@ƒƒ‚ü‚Þƒƒ#ƒƒ	‚úƒƒƒ(ƒƒƒ/ƒSƒ‚öƒ8ƒ(ƒƒƒƒƒ
+ƒƒ5ƒ‚ìƒ	ƒƒ ‚ôƒ‚ý‚æƒƒƒ‚ûƒ!ƒ6ƒƒƒ ƒ:ƒ-ƒ=ƒ7ƒƒƒ
+ƒ:ƒ?ƒ-‚ò‚ü‚çƒ
+‚ö‚òƒƒƒ
+ƒƒ<ƒ4ƒƒƒƒƒƒƒƒƒƒƒ‚úƒA‚Øƒ"ƒƒ!ƒ/ƒ0‚å‚Ýƒ"ƒ'ƒƒƒƒXƒbƒ¼ƒƒƒvƒƒ6ƒ-ƒƒ(‚úƒƒ,ƒƒ	‚èƒ'ƒƒ"ƒ%ƒƒ(ƒƒ&ƒƒƒƒ'ƒ!ƒƒƒ*ƒ#ƒƒ(ƒƒƒ&‚ãƒƒ‚ñƒ'‚ý‚óƒ"ƒE‚þƒBƒƒCƒ(ƒ4ƒ5ƒ9ƒ<ƒ=ƒƒ%ƒƒ$ƒBƒƒ‚ü‚Þƒƒ#ƒƒ‚ÿƒ,ƒ'ƒ ƒƒƒƒ4‚úƒƒ6ƒ5ƒIƒƒ‚þ‚ðƒƒ*ƒƒƒ/‚î‚÷ƒ-ƒ!ƒCƒ ƒ*ƒƒƒƒƒƒ;ƒƒƒ‚ù‚ìƒ<‚èƒ‚ÿƒ"‚ìƒƒ
+‚íƒ‚ýƒƒƒƒƒDƒƒBƒ'ƒƒƒƒƒ(‚Þƒ@ƒƒƒSƒ?ƒƒ‚âƒƒƒƒ ‚õƒƒƒƒƒƒ‚ú‚þƒƒ;ƒ2‚ï‚íƒ!ƒ9ƒƒ.ƒ$ƒ%ƒƒƒƒ/ƒƒƒ$ƒ(ƒƒ‚É‚×ƒƒƒ!ƒ-ƒ‚óƒ ‚üƒ	‚þƒƒ3‚Üƒ1ƒƒ;ƒ2ƒ@ƒDƒMƒ<ƒ ƒ
+ƒ$ƒLƒƒƒ/ƒ0ƒ‚ûƒ'ƒ8‚ù‚ÿ‚øƒCƒ*ƒ%ƒƒƒ*ƒƒƒƒ
+ƒƒ‚Öƒ‚÷‚îƒƒ<ƒ?ƒ%ƒƒƒƒƒƒ
+ƒƒƒ4ƒ)ƒƒBƒƒƒƒ'ƒBƒ;ƒ+ƒ!ƒ/ƒ*ƒƒƒ$‚ý‚þƒ6‚æƒ
+ƒ*ƒ'ƒ‚öƒƒ‚÷ƒƒƒƒƒ.‚ëƒEƒƒƒƒFƒ5ƒƒ)ƒ‚ýƒƒE‚ãƒƒ"ƒƒAƒ$ƒƒ	ƒ>ƒ
+ƒ‚Þƒ‚òƒ5‚çƒ‚åƒ‚é‚ñƒƒ"ƒƒ ƒƒƒ<ƒ'ƒ8‚ýƒƒ‚óƒ2ƒƒ‚ìƒ‚åƒƒ+ƒ‚øƒƒ7ƒƒ‚üƒ
+ƒƒ‚ê‚ðƒƒ‚çƒƒ	ƒƒ(ƒ#ƒƒQ‚ýƒ#ƒƒ&‚åƒ&ƒ7ƒƒƒ‚ò‚Ýƒ‚æƒ ƒ8ƒ ƒ)ƒ‚ë‚öƒ‚ìƒ‚þ‚þƒƒ(‚éƒƒƒƒ
+ƒƒƒ9ƒƒƒ>ƒƒƒƒƒƒ"‚ìƒ$‚ý‚ûƒ)‚þƒ‚ÿƒM‚ûƒ(ƒƒ1ƒƒ‚öƒƒ$ƒ‚ôƒ%ƒ0ƒ"ƒ2ƒ‚ûƒƒƒƒ‚ìƒ	ƒ:‚ôƒ;ƒƒ&ƒWƒƒ:ƒ>ƒƒDƒSƒSƒ4ƒƒƒ9ƒ&ƒ%ƒRƒ‚ñ‚ûƒ"ƒƒƒ1ƒƒ‚üƒ!ƒ ƒ"ƒ&ƒƒƒƒƒ5ƒƒ(‚ÿƒ"ƒƒ
+ƒ%ƒ‚û‚üƒƒƒ?‚ø‚ñ‚ô‚íƒ‚ÿƒƒƒƒƒƒƒ‚ýƒƒCƒ)ƒƒ ƒƒ0ƒƒ‚Óƒƒƒƒ'‚üƒƒƒƒ0ƒ4ƒƒ.‚ôƒƒƒƒƒƒƒ‚ûƒƒƒƒƒ‚ðƒ0‚øƒ‚çƒ6ƒƒ3ƒƒƒ(ƒ‚ÿƒ‚ñƒƒƒ4ƒ‚ùƒ%ƒƒƒ!ƒ ƒK‚ãƒƒƒ)‚äƒƒƒ7‚þƒ:ƒƒ,ƒƒ.ƒAƒ$ƒƒ4ƒDƒƒƒ‚ö‚ýƒ(ƒHƒƒƒS‚ÿƒƒ+ƒƒ&‚ñƒ6ƒ2ƒƒƒƒ3ƒƒƒƒ‚óƒ‚é‚þƒ0‚ôƒƒƒƒƒƒ-‚ùƒƒ
+ƒ'ƒƒƒƒƒ ƒ‚ùƒƒƒƒEƒ;ƒ3ƒTƒQƒ ƒ@ƒBƒ"ƒ>ƒ=ƒ[ƒ+ƒƒ0ƒƒƒ)ƒE‚ÿƒ&ƒƒƒ#ƒƒ‚üƒƒƒ‚þƒ*ƒ!ƒƒ.ƒƒƒƒƒƒƒƒƒƒƒ‚ìƒ$ƒƒƒ7ƒƒƒ‚÷ƒƒ1ƒƒƒ‚þƒƒ	‚ù‚ó‚áƒ‚ïƒ
+ƒ<‚ûƒƒ#ƒ‚øƒƒMƒ?ƒƒ?ƒƒ‚õƒ.ƒƒ"…ƒAƒ(ƒ7‚å‚ëƒƒƒ/ƒ2ƒ+ƒ.‚ùƒ%ƒƒ ƒ‚üƒ*ƒƒƒƒ‚þƒƒƒƒ0ƒƒ‚éƒ‚ïƒ!‚þƒƒ!‚Øƒ‚ý‚î‚þƒ"ƒ6ƒ"‚ïƒ"ƒƒƒ'‚í‚ýƒƒ,ƒ3ƒ3ƒ)‚ýƒ	‚ý‚ùƒƒ7ƒ"ƒ1‚ø‚ðƒƒ!ƒƒ-ƒ7ƒ	ƒ'ƒ
+ƒ+ƒ‚õƒƒ4‚óƒƒ#ƒ‚ü‚ýƒ$ƒƒ?‚óƒ%ƒƒ-ƒ
+‚ûƒ)ƒ,ƒƒ+ƒ)ƒ7ƒƒ	ƒƒ:ƒƒ1ƒ!ƒƒGƒ[ƒCƒVƒPƒƒ5ƒeƒ8ƒƒ%ƒƒUƒ*ƒƒƒDƒLƒ‚ùƒƒƒ‚ëƒƒ‚úƒ‚óƒ?‚ûƒ8ƒ>ƒƒ,ƒƒƒ‚ñƒ)ƒ‚Þƒƒ‚à‚îƒ‚øƒƒƒƒƒ&‚çƒƒ‚öƒMƒ,ƒ‚ë‚Þƒ‚úƒ,ƒ'ƒ0‚âƒƒ"ƒ&ƒ‚áƒ(‚öƒ5ƒ‚úƒƒƒƒ.‚ýƒƒ…8ƒYƒƒƒ,ƒƒ%ƒ#ƒƒ!ƒƒƒ‚ýƒƒƒ$ƒ‚óƒƒ‚ãƒ)ƒ‚ÿƒƒ	‚ùƒƒƒƒ-‚çƒ4ƒ‚×ƒ‚ùƒ(‚ô‚õƒ4ƒƒ ‚ýƒ"ƒƒ!ƒƒ%‚ûƒVƒƒ,‚êƒƒ!‚Îƒƒ'ƒ(ƒƒ‚íƒ&ƒ
+ƒƒƒƒƒ"‚ýƒ;ƒUƒ+ƒ	‚øƒ<‚þƒƒ‚óƒƒ@ƒƒ4ƒ-ƒ‚çƒ‚êƒ&ƒƒ‚ñ‚øƒƒƒ)ƒ(ƒƒ ‚øƒƒƒ1ƒƒTƒ9ƒ^ƒSƒŠƒxƒ{ƒ_ƒCƒ†ƒKƒ9ƒ8ƒEƒ$ƒ'‚ÿƒƒƒƒ ƒ!ƒƒ#ƒƒƒƒ'‚ðƒƒ+ƒ‚ì‚þƒ#ƒ	ƒƒ?ƒƒ$ƒ6ƒƒ#ƒ-ƒƒ‚ù‚õƒ:ƒƒƒ
+ƒ,‚Ýƒ(ƒƒƒƒƒƒƒ	ƒ*‚ôƒƒ‚üƒƒƒƒ+ƒ0ƒBƒƒ8ƒ‚þƒ‚ûƒ#ƒƒ‚íƒ1ƒ‚ÞƒƒšƒÌƒ$ƒƒƒ&ƒƒ&ƒƒƒƒƒƒ!ƒ‚ö‚ùƒƒ+‚ñƒ6‚æƒ;ƒƒƒƒ1ƒ+ƒ$‚ëƒAƒCƒƒ‚üƒƒƒƒƒ‚ñ‚òƒ#‚ôƒ/ƒ.ƒƒƒƒƒ9ƒ.ƒƒƒƒƒEƒ*ƒƒƒƒ	ƒƒƒ‚øƒ ƒƒ,‚Þ‚ñƒ2ƒ%ƒƒ‚öƒƒ$ƒƒ+ƒƒƒ#ƒƒ0‚íƒ/ƒ>ƒƒ-ƒ
+ƒ‚îƒ‚ûƒ*ƒJ‚ä‚òƒƒƒ‚óƒAƒ9ƒHƒ$ƒmƒ,ƒ?ƒƒnƒ²ƒzƒuƒTƒ^ƒqƒmƒHƒƒMƒfƒƒXƒ7ƒ	ƒQƒƒ)ƒ-ƒƒƒ‚øƒEƒ.ƒH‚ÿƒ	ƒƒ ƒRƒ‚ÿƒ‚ò‚éƒFƒƒ‚þƒ"‚ûƒƒ‚îƒƒ‚ùƒ'ƒAƒ$ƒ:ƒƒ&ƒBƒ0ƒƒ‚ýƒƒ‚ðƒƒƒƒ9‚èƒƒƒƒ!ƒ9ƒ#ƒ/ƒ	ƒƒƒƒƒ>ƒOƒ1ƒHƒmƒƒ ƒ
+‚óƒ6ƒ‚ùƒƒƒƒƒ ƒƒƒVƒ%‚òƒƒƒ‚ùƒƒ)ƒ#ƒ0ƒ"ƒ8ƒƒ ‚òƒ-‚ýƒ6ƒ=ƒ ‚Øƒ0ƒƒƒ ƒ‚çƒƒƒƒƒƒ$ƒ=ƒ‚øƒƒ<‚öƒƒ%ƒƒƒƒƒ@‚ôƒƒƒƒƒ1ƒƒ!ƒƒƒEƒƒ4ƒƒƒ‚á‚óƒ0ƒ‚Ïƒƒ=ƒƒ ƒ&ƒƒƒ&ƒƒƒ:ƒ ƒƒ‚óƒƒ-ƒƒƒ.ƒƒ=ƒgƒ+ƒ'ƒ8ƒƒ‘ƒƒuƒcƒYƒVƒPƒ:ƒ*ƒ)ƒ'ƒ-ƒ6ƒ[ƒƒ"‚úƒƒƒƒ)ƒƒ#ƒ!ƒ	ƒ ƒƒƒ)ƒƒƒ!‚ø‚îƒƒ*ƒƒƒƒ*ƒ4‚ûƒ$‚ìƒ6ƒ?ƒ#ƒ*ƒƒ ƒƒƒ9ƒƒ‚êƒ'ƒƒƒ‚üƒ'ƒƒ
+ƒ&‚öƒƒ|‚ù‚ïƒƒ"ƒ‚ùƒ.ƒ#‚ýƒƒ#ƒ<‚ï‚ÿƒƒƒ;ƒƒ‚ü‚ôƒ‚þƒ#ƒƒ‚éƒ‚çƒƒƒ>‚ÿƒƒƒ;ƒ‚å‚úƒƒƒƒ*ƒ)‚õƒƒ ‚Þƒ	ƒ!ƒ!ƒ0ƒƒƒJƒ‚éƒƒ%ƒƒƒƒƒƒƒƒƒ‚î‚øƒƒƒƒƒƒƒ9ƒƒ	ƒƒƒƒ.ƒ/ƒƒƒƒƒ;‚åƒYƒƒƒ1‚æƒƒƒ+ƒPƒƒ ƒ‚óƒ2‚øƒ8ƒ‚ëƒƒƒƒƒZƒ0ƒƒƒ0ƒƒƒ'ƒLƒdƒNƒ7ƒVƒjƒ_ƒWƒTƒƒpƒuƒ5ƒ!ƒ2ƒ^ƒHƒ1ƒ=ƒ.ƒƒƒDƒ‚þƒƒ ƒƒƒ5ƒ.ƒƒƒƒƒ ƒƒ‚ùƒ"ƒƒ8ƒ9ƒ‚ÿ‚ãƒƒƒE‚ÿƒ‚úƒƒLƒ.ƒƒ'ƒƒƒƒƒƒVƒƒ$ƒƒƒ3ƒ‚ô‚þƒƒƒƒƒ@ƒHƒƒ!ƒ'ƒƒ-ƒGƒCƒƒ*‚òƒ1ƒ>ƒFƒƒ)ƒ#ƒ$ƒƒ‚úƒƒ!ƒƒ ƒƒ#ƒ‚óƒ5ƒƒƒƒƒ ‚þƒ'‚âƒƒƒƒ!ƒƒƒ/ƒ!ƒ‚òƒƒƒ
+ƒ)‚êƒƒ*ƒ$‚ð‚õƒ(‚íƒƒ‚û‚øƒ‚Õƒ+ƒ?‚ó‚óƒ‚ôƒ‚úƒƒƒ‚ðƒ!‚ýƒƒƒ*‚óƒƒFƒ‚ò‚ö‚×‚úƒƒƒ4‚èƒƒ8ƒ#‚þƒƒ‚êƒƒƒƒƒ ‚öƒ4ƒ%ƒƒƒ+ƒ0‚óƒƒƒEƒ!ƒIƒƒ1ƒ:ƒbƒNƒ>ƒNƒgƒrƒ7ƒYƒCƒ5ƒ ƒƒiƒ$‚ûƒ'ƒ!ƒƒƒƒƒƒƒƒƒ*‚êƒ$ƒƒƒƒAƒƒƒƒ"ƒB‚úƒ,ƒDƒ3‚òƒ/ƒƒ	‚ðƒ!‚÷ƒƒ'‚ýƒƒ0ƒƒƒ5ƒƒƒ@ƒƒ‚öƒƒ#‚ë‚éƒ$ƒƒ‚þƒ ƒƒ‚ôƒƒƒ	ƒƒ-‚þƒƒƒƒƒ	‚óƒ‚îƒƒ"ƒ-ƒ?ƒƒƒ‚ÿƒƒ7ƒƒ‚ñƒƒƒƒ&‚ô‚ü‚ýƒGƒƒƒ ƒƒAƒƒ‚úƒ6ƒƒ!‚Þƒƒƒƒƒ#‚ôƒƒƒ9ƒƒƒ"‚ù‚ûƒ‚ãƒƒPƒ‚ãƒ!ƒDƒƒ-‚çƒƒ ‚àƒƒƒ‚ßƒ"‚íƒ
+ƒƒ$‚å‚þ‚úƒƒ3ƒ&ƒƒ*ƒƒ1‚ïƒ$ƒ@ƒƒ<‚ó‚ÿƒ$‚î‚ôƒ ƒƒ4ƒ!ƒ‚ÿƒƒ<ƒƒƒ‚ýƒ<ƒBƒ[ƒGƒ#ƒxƒFƒ^ƒ`ƒ:ƒ4ƒƒYƒ*ƒJƒ<‚þƒ.ƒ/‚ôƒ ‚ñƒƒƒƒ‚ÿƒƒ‚çƒ‚ÿƒ+ƒFƒƒ‚ùƒƒ0ƒƒ!ƒƒ+ƒUƒ‚Ûƒƒ(ƒ-ƒ
+ƒƒƒƒƒ‚Úƒ7ƒ1ƒ‚úƒ‚ÿƒƒ
+ƒ1‚Õƒ$ƒ ‚ýƒƒƒƒ'ƒ2ƒ1ƒ/ƒHƒUƒFƒ-ƒƒƒƒƒƒ.ƒƒ%‚û‚û‚õƒƒ-‚ýƒƒA‚ðƒƒ,ƒ(ƒ‚þ‚÷ƒƒƒ(ƒ1‚ü‚ïƒ!‚Øƒ7ƒƒ!ƒ,ƒƒƒƒ2‚ýƒƒ(ƒƒ5‚øƒƒ	‚ðƒ!ƒ‚íƒ
+ƒƒ$ƒƒ‚øƒ'‚ý‚ø‚íƒ‚ú‚ýƒ‚ðƒ0ƒƒ!‚ò‚Õƒƒƒƒ‚á‚ö‚öƒ#‚ôƒƒƒƒ;ƒ	ƒ‚üƒ&ƒƒƒƒ8‚ûƒƒ1ƒƒ	ƒ	ƒƒ#ƒ!ƒ'‚ü‚ëƒƒ
+ƒIƒ3‚üƒ!ƒ)‚øƒƒCƒQƒ!ƒ-ƒIƒTƒmƒAƒ{ƒaƒ+ƒƒ2ƒ:ƒƒOƒ>ƒDƒ‚øƒ7ƒƒ/ƒ&ƒ4ƒ$ƒƒ*‚æƒ(ƒ;ƒƒ2ƒƒƒ-ƒ‚÷‚áƒƒTƒƒFƒƒƒ‚ñ‚ëƒ@‚äƒo‚çƒƒƒƒ&ƒ+‚ùƒƒ‚öƒƒƒƒƒ7ƒ.ƒ‚÷‚ýƒƒZ‚ðƒƒƒ0ƒS‚ýƒBƒƒƒƒGƒ‚ö‚éƒ,ƒƒƒ9ƒLƒƒƒ‚ûƒƒ‚îƒƒ‚ãƒ&ƒƒƒƒƒ
+ƒƒƒ
+‚óƒƒ ƒ‚ñ‚ÿ‚ô‚ìƒ"ƒ+ƒB‚ùƒ‚îƒƒ.ƒƒ3‚öƒƒ
+ƒ ƒ‚óƒƒƒƒƒƒƒ8ƒ3ƒ#ƒ‚üƒƒƒ&ƒ"ƒ‚øƒƒƒ	ƒ(ƒ!‚çƒ%ƒƒƒ ƒ	‚á‚úƒ‚úƒƒ9ƒƒƒ,ƒ)‚üƒƒ@ƒ‚òƒ'ƒƒ)ƒ ƒGƒƒ)ƒ%ƒƒ0ƒ1ƒ3ƒ/ƒƒƒƒƒƒ6ƒ.ƒmƒRƒ~ƒhƒfƒVƒ>ƒIƒKƒ.ƒ*ƒDƒ%ƒDƒ‚ãƒƒƒƒƒƒƒ‚ðƒƒƒƒƒ"ƒƒ?ƒƒ@ƒ2ƒ‚ìƒ5ƒ8‚íƒƒƒƒ ƒ'ƒƒƒ%ƒ"‚óƒ8‚ùƒƒ‚ßƒƒƒƒ'ƒ1ƒ
+ƒ7ƒ"ƒ"ƒƒƒƒ‚ôƒ ƒƒHƒƒ6ƒ6ƒbƒ8ƒƒ7ƒEƒƒ(ƒƒ‚íƒƒƒ&ƒ>ƒƒ!‚ìƒƒƒ‚ýƒ%‚ýƒ‚ùƒ ‚ûƒƒ4‚öƒƒ0ƒ‚ÿƒ"ƒ6‚ôƒ)‚ÿƒDƒƒƒ2ƒ8ƒ*ƒƒƒE‚àƒ0ƒ,‚ò‚ù‚þƒ‚ùƒ*ƒƒƒ
+ƒƒ$ƒ#ƒ/ƒƒ‚ÚƒEƒ$ƒ‚ÿƒƒƒ/‚õƒƒƒƒƒƒ2ƒ!ƒƒ‚÷ƒƒƒƒƒ
+‚×ƒ	ƒ$ƒ)ƒƒ%‚ôƒƒJƒƒƒ.ƒ ƒƒƒ-ƒƒ#ƒ!ƒ‚üƒ>ƒƒƒƒ-ƒ%ƒ4ƒ'ƒ&ƒ5ƒ:ƒ/ƒƒƒƒ2ƒ[ƒIƒ ƒ,ƒIƒ<ƒO‚éƒ)ƒƒ-ƒ*ƒƒ$ƒ;ƒƒFƒ3‚Ýƒ6ƒ7ƒƒ‚÷ƒƒ4ƒƒƒƒƒ=ƒ‚ßƒƒ ‚þ‚õƒ4ƒƒ ƒƒƒ1ƒ>ƒƒƒƒ'ƒƒ‚ìƒ‚÷ƒƒ*‚Þƒ	ƒƒƒƒ0ƒGƒƒƒ<ƒ?ƒJƒ3ƒ/ƒƒ)‚òƒ%ƒ"ƒ
+ƒV‚ü‚íƒƒƒ2ƒƒƒ ƒƒ:‚ê‚ÿƒƒ	ƒN‚áƒ ƒƒ#ƒƒƒƒƒ'ƒ
+‚úƒ?ƒ	ƒ'ƒƒ5ƒ‚û‚õƒƒ#ƒƒ
+‚þƒ#‚èƒƒƒƒƒƒƒ‚ô‚÷‚ÿƒ"ƒ7ƒ
+ƒ2ƒ ƒ$‚ý‚çƒ!ƒ,‚à‚úƒ‚æƒ
+‚Øƒƒƒ)ƒƒƒƒƒ6‚ñƒ
+ƒ ƒ‚ò‚ñ‚ýƒƒ(ƒ(ƒƒ.ƒ'ƒ‚òƒƒƒƒƒBƒ‚ÿƒƒ'ƒ‚Ôƒ‚ñƒ8‚ÿƒƒ"ƒ7‚ÿƒ2ƒ2‚üƒOƒ'ƒ0ƒ ƒ+ƒƒ*ƒ3ƒƒ9ƒƒ	ƒ7ƒ=ƒƒ	ƒƒƒ.ƒƒ%ƒƒLƒ?ƒƒƒƒ#ƒƒƒƒ(ƒƒ2ƒƒ;‚÷ƒ"ƒƒ$ƒƒƒƒƒ&ƒƒ‚ú‚ú‚éƒƒƒƒƒ
+ƒƒOƒ+ƒƒƒ‚÷ƒƒƒƒƒ(‚úƒƒLƒ'ƒ3ƒ‚þƒƒƒ(ƒƒ	ƒƒ.ƒ$ƒDƒ8ƒƒ‚ìƒƒƒƒƒ$ƒ/‚æƒƒ,ƒƒ‚î‚ü‚ûƒ‚ýƒƒƒƒƒ#‚ÿ‚úƒ$ƒ9‚ë‚òƒƒ4ƒ‚öƒ$‚Ø‚èƒƒƒƒƒ‚ã‚ð‚èƒ‚û‚þƒ‚òƒƒƒ‚üƒHƒƒ2ƒƒƒƒƒƒ:ƒ2ƒƒ!‚òƒƒƒ7ƒ.‚ìƒ
+ƒƒ$‚öƒƒ‚ô‚ãƒ‚ëƒ‚øƒƒƒ	ƒƒƒ‚÷ƒ2ƒ$ƒ5ƒ!ƒ+‚úƒƒƒ'ƒ-ƒ)ƒƒƒ)ƒƒƒƒ$ƒsƒZƒTƒ#ƒFƒ#ƒ;ƒƒƒ;ƒ ƒ ƒ/ƒFƒƒ+‚øƒAƒƒƒƒ.‚öƒƒƒ‚øƒ"ƒƒ
+ƒƒ*ƒƒ.ƒ ƒ?ƒ‚ðƒ‚öƒ9ƒƒ6ƒ‚ýƒ	ƒƒ"ƒƒƒƒ‚î‚øƒ!ƒƒ ƒƒ8ƒ‚éƒ,ƒƒ‚çƒƒ#ƒ)ƒ;ƒƒ0ƒ‚ùƒ:ƒƒƒ#ƒƒ*ƒ ƒ#ƒƒ$ƒƒ!ƒƒƒƒ'ƒƒƒƒ‚ñƒƒ&ƒ?ƒƒƒ‚ôƒEƒ‚ãƒ‚ëƒ*‚ëƒƒƒƒƒƒ/ƒ‚öƒ@ƒƒ%ƒƒ%ƒ+ƒƒƒ‚òƒƒƒ‚íƒƒ	ƒƒ+ƒ‚Ôƒ‚úƒƒƒR‚÷‚ô‚ÿƒ1ƒ1ƒ!‚ûƒ‚þƒ1‚òƒ=ƒ‚ýƒƒƒ
+ƒƒƒƒƒ&ƒ ƒ%ƒƒƒƒƒƒƒ‚ôƒƒƒƒƒƒ%ƒ‚äƒ‚ÿƒ*ƒƒƒ‚ô‚ûƒƒƒ"ƒ3ƒ-ƒ?ƒ$ƒƒƒ!ƒaƒƒ!ƒƒƒ ƒAƒ2‚üƒ#ƒƒ‚ùƒ,ƒƒƒƒƒ‚ÿ‚ñƒ3ƒƒ‚ö‚îƒƒ8ƒƒ
+ƒƒƒ-ƒ‚úƒ%ƒ‚øƒ3ƒƒƒƒƒ‚úƒƒƒƒ‚ÿƒ.‚÷‚öƒ	ƒƒHƒ0‚ÿƒ	ƒƒƒƒ ƒ!ƒƒƒ,‚úƒ‚Õƒƒ#ƒƒƒƒƒ‚öƒ	ƒ+ƒ2ƒƒƒƒƒ>‚óƒƒ‚÷ƒƒ'ƒ(ƒ0ƒ	‚ÿƒƒ‚ýƒƒƒ.ƒ0ƒ‚øƒƒƒ+‚ø‚óƒƒ‚óƒ*ƒ0ƒƒ;ƒ ƒƒ(‚úƒ‚þƒƒƒ'ƒ)‚÷ƒ%‚øƒ ƒƒ ƒ4‚úƒG‚õƒ‚ýƒƒ ƒ‚ÿƒƒ#ƒƒ
+ƒƒ0ƒƒ‚úƒƒƒ‚ò‚î‚ãƒ$ƒOƒ‚ûƒƒ‚úƒ‚ðƒ ƒ‚ðƒƒƒ*ƒƒƒƒ"ƒƒƒƒ‚ýƒƒƒƒ1ƒ%ƒ ƒ/ƒRƒƒƒ
+ƒƒG‚êƒƒƒ ‚ò‚îƒ‚õƒƒ,ƒƒƒ,ƒƒ0ƒ*ƒ‚ïƒ ƒƒƒ‚üƒFƒƒƒ7ƒ‚ëƒƒƒ'ƒƒ"ƒƒ1ƒ‚ýƒ7ƒƒ&ƒƒ‚ûƒ(‚ûƒƒ!ƒ'ƒƒ$‚éƒƒƒ ‚ñƒƒ3‚ùƒ‚÷ƒƒƒ‚ûƒ#ƒ-‚áƒ,‚ìƒ)ƒ‚õƒƒƒ&‚ýƒ"ƒ,ƒ*ƒ5ƒ ƒ)‚ýƒ ƒ%‚çƒ5ƒ‚ûƒLƒ‚Ûƒƒ ‚ö‚ûƒƒƒ'ƒ	ƒƒ‚ÖƒƒC‚êƒƒƒ)ƒƒ	ƒ'ƒƒ"‚ùƒHƒƒ‚ùƒƒ3ƒ!ƒƒƒƒCƒƒ>ƒ#ƒƒƒ7‚õƒ ƒKƒ*ƒƒƒ‚÷ƒ‚óƒƒ ƒ6ƒGƒ‚ûƒ-ƒ0ƒƒ)ƒ)ƒ‚þ‚éƒƒƒ6‚ïƒ(ƒ‚ìƒƒ ƒ	ƒ!‚úƒƒƒ$ƒƒƒ‚øƒ#ƒ ƒ ‚ùƒƒ4ƒƒ‚õƒƒƒƒƒƒ#ƒ.ƒ6ƒF‚Úƒ5ƒ<ƒƒCƒ
+ƒƒ!ƒƒƒ ƒ&ƒ#ƒƒ"ƒ‚ôƒ7ƒ>‚ôƒ.ƒƒƒ.ƒƒƒNƒƒ;ƒ‚ò‚úƒƒƒ‚éƒ&ƒFƒƒ‚üƒƒƒƒ‚îƒ3ƒ
+‚ýƒƒ1‚íƒ4‚ëƒƒƒƒƒ)ƒ+ƒƒƒMƒ‚þƒƒƒƒƒ‚ùƒ-‚ð‚ûƒ‚ÿƒ‚çƒƒƒƒƒƒ ƒƒƒ‚ëƒ ƒ-‚âƒƒƒ4‚ãƒƒIƒƒƒƒ‚Üƒƒƒƒ8ƒƒƒƒHƒB‚õƒƒƒ	‚ðƒƒ*ƒ.ƒƒ.ƒ'ƒ‚ìƒƒ7ƒƒ&‚öƒƒ(ƒƒ1ƒ	ƒƒƒMƒ,‚øƒ(ƒ5ƒƒ ƒƒƒ ƒƒ‚ýƒƒƒƒ	ƒƒƒƒ"ƒƒƒ!ƒƒƒ%ƒ$ƒ	ƒ‚þƒƒ
+ƒ(ƒDƒƒ"ƒ4ƒ ƒ‚öƒƒƒƒ5ƒƒ,ƒƒ"ƒ0ƒ5ƒƒƒ*ƒ?ƒ5ƒƒƒ ƒSƒBƒ4ƒƒƒƒƒ)ƒ&ƒƒƒ‚ñƒƒ0ƒNƒUƒ7ƒ‚ÿƒƒƒ<ƒƒ&ƒƒƒ,ƒ	ƒƒ)ƒƒƒƒ*ƒ5ƒ‚åƒ*ƒƒ)ƒƒ6‚ùƒ'‚úƒ‚þƒ‚û‚ôƒƒ%ƒKƒ8ƒ‚òƒCƒƒ"‚Üƒ2ƒƒƒ#ƒ0‚ÿƒ"ƒ)‚Þ‚Õƒƒ0ƒ‚þƒ‚ÿƒƒ(ƒ&ƒƒƒ‚ýƒ‚ÿƒƒ,ƒƒƒ/‚ùƒ,ƒ%ƒ6‚ìƒGƒ%ƒƒ‚õ‚òƒƒƒ‚ïƒƒ!ƒ‚ûƒ&ƒ#ƒƒ(ƒ+ƒƒ!‚êƒ ƒ
+‚ðƒ:ƒ ƒƒƒ)‚øƒƒ!ƒƒƒ	ƒ!ƒƒ#ƒ‚í‚æ‚ñƒ/ƒ$‚üƒƒƒƒBƒ,ƒƒ!‚øƒƒƒƒ/‚þƒ	ƒ%ƒJƒ5ƒƒ&ƒ3ƒ.ƒ‚þƒ
+ƒƒƒƒ'ƒƒ"ƒ'ƒ>ƒƒƒQƒ*ƒƒƒƒ ƒƒ<ƒ‚ôƒ‚øƒ&ƒ!ƒ+ƒƒ‚ðƒ‚ãƒ)‚õƒƒ.‚ñƒƒDƒ(‚ùƒƒAƒƒ-ƒOƒ9ƒNƒfƒ-ƒƒ;ƒƒƒƒƒƒƒ-‚õ‚ÿƒ3ƒ8ƒƒƒƒƒƒ$ƒ	ƒƒƒƒMƒ5ƒ!ƒƒƒ"ƒ(ƒƒƒƒ ‚ñƒ<ƒƒƒƒCƒ*ƒƒ)‚ýƒƒƒ‚ñ‚þ‚üƒ‚ñƒ%ƒ$ƒ0ƒƒ‚õ‚×‚íƒƒƒ‚ò‚ùƒ‚Ê‚ñƒƒ‚ÿƒBƒ‚üƒ#ƒƒƒƒƒ=ƒƒ0ƒƒƒ‚ü‚ûƒ:ƒƒ‚ÿƒƒ‚ñƒ,ƒ*ƒ	ƒƒ&‚ÿƒƒƒ!‚÷ƒHƒ$ƒ)ƒƒƒ*ƒ!ƒ‚ì‚âƒƒƒƒ'‚þ‚îƒ$‚îƒƒƒ‚õ‚ÿ‚úƒƒƒJƒƒƒƒ<ƒ'‚ÿƒƒƒƒƒƒƒ:ƒ-‚þƒƒƒ'ƒƒ‚ÿƒƒƒ"ƒ
+ƒ1ƒ&ƒ-ƒ‚÷ƒƒƒ‚Þ‚úƒ)ƒ ƒƒƒ‚úƒƒ#‚è‚Ïƒƒƒ4ƒ%ƒƒ‚òƒ0ƒ"ƒƒƒ,ƒQƒKƒHƒ2‚íƒƒ‚ð‚üƒ
+ƒBƒƒƒ$‚ôƒ&ƒ&ƒ‚ëƒ/ƒƒ‚úƒ.ƒ3ƒƒ=ƒHƒ"‚õƒ'ƒƒ"ƒ.ƒ+‚÷‚èƒ ƒƒ1‚ùƒƒ-ƒ ƒƒƒƒ	ƒƒ
+ƒ:ƒƒƒ ‚÷ƒ‚ÿƒƒ‚ÿƒ‚ø‚å‚þ‚óƒƒƒ	ƒƒƒƒƒ ƒ<ƒ4ƒƒ"ƒƒ‚ð‚è‚òƒ*ƒ&ƒ#ƒ ƒƒ‚÷‚üƒ‚ëƒƒƒƒƒ‚þƒƒƒ‚òƒ#ƒ0ƒ ‚ûƒƒ-‚þ‚øƒ&‚Ýƒ
+ƒƒƒƒ"‚ü‚óƒ(ƒ,ƒ)ƒ	ƒƒƒ+‚ùƒƒƒYƒƒ<‚ø‚êƒ‚òƒƒ!ƒƒ‚çƒ
+ƒƒ$ƒƒƒƒ2ƒ‚üƒƒ‚÷ƒƒƒ‚ëƒ"‚ñƒƒ'ƒ(ƒGƒDƒ.ƒƒGƒ
+ƒ ƒƒ1ƒ0ƒ‚öƒ4ƒƒƒƒ;ƒ5ƒƒ‚ôƒƒ5ƒ.ƒƒƒƒ;‚ûƒƒƒƒ5ƒ3ƒ=ƒ+ƒ@ƒ8ƒƒƒ7‚õƒ>‚õƒ>ƒƒ ƒƒ‚ùƒ5ƒ‚ëƒEƒƒ>ƒƒ+ƒƒIƒIƒƒ‚þ‚ûƒƒ>‚ëƒ,ƒ3ƒ(ƒƒGƒ ƒƒ-‚üƒƒ:‚ÿ‚ÿƒƒƒ,ƒ<‚ãƒƒ ƒ/ƒ(ƒ8ƒ‚ÝƒBƒ
+ƒ+ƒƒƒ‚õƒ0ƒJƒƒƒ(‚üƒ‚ùƒƒƒ,ƒƒƒ0ƒ‚øƒƒ7ƒ‚ú‚ôƒƒƒƒ%ƒ.ƒ#ƒ!ƒ‚å‚ôƒ‚ýƒƒƒ‚ûƒ‚÷ƒƒƒƒ9ƒƒ9ƒ(ƒƒ-‚ýƒƒ0ƒƒƒ0ƒ#ƒRƒ0‚ï‚ÿƒƒƒ‚úƒ‚ýƒ,ƒ-ƒ‚öƒ‚ðƒ‚üƒ‚óƒƒ4ƒ-‚î‚õ‚þƒ‚ûƒ+ƒ%ƒ‚îƒDƒƒƒ%ƒ%ƒ6ƒWƒƒ‚ó‚îƒ‚õƒƒƒƒ)ƒ	ƒƒƒ.‚öƒ;ƒƒ+ƒ	‚í‚ÿƒ-ƒ‚æƒƒƒ‚í‚ùƒFƒƒƒƒƒ-ƒ,ƒƒ
+ƒ#ƒ:ƒ'ƒƒƒ)ƒƒƒ‚ëƒƒƒ
+ƒƒƒ3ƒ:ƒƒIƒ[ƒXƒƒ_ƒ*ƒ&ƒ
+ƒ‚öƒ‚ïƒƒ*ƒ4ƒƒƒƒ‚ÿ‚üƒ<ƒ+ƒGƒ!ƒƒ$ƒ‚äƒƒ,ƒƒ&ƒƒƒ*ƒ#‚ó‚ûƒƒ
+ƒƒƒ‚éƒƒ"‚úƒ
+‚ëƒƒƒƒƒƒƒƒ2‚øƒ3ƒƒƒƒ(ƒƒƒ2ƒƒƒ‚üƒ‚øƒ"ƒƒ‚ûƒ‚öƒƒ,ƒ‚ðƒ'ƒƒNƒƒ‚÷‚ëƒƒƒ‚ñ‚õ‚þƒJƒƒƒ%ƒ,ƒ"ƒƒ7‚þ‚ÿ‚øƒ?‚ùƒ5ƒ
+‚ùƒƒƒƒ‚÷ƒ	ƒƒƒ‚ûƒ)‚óƒƒJƒƒƒ"ƒƒ‚ÿ‚üƒ‚úƒ!ƒ*ƒMƒƒ+‚òƒ1ƒ‚ùƒ,ƒƒƒƒ
+ƒ‚øƒƒ‚õ‚øƒ1ƒ+ƒƒƒ3‚ùƒ3ƒƒƒ(‚ÿƒƒƒ'ƒƒƒG‚þƒ ƒ/ƒƒ0ƒƒƒ@ƒ ƒ ƒƒƒ
+ƒƒ4ƒƒ3ƒ.ƒAƒƒ@ƒƒƒ/ƒCƒƒCƒ/ƒ&‚úƒ>ƒ1ƒƒƒƒ.‚úƒƒ$ƒ@ƒ)ƒ‚çƒ'ƒ#ƒCƒ6ƒƒ;ƒƒƒƒƒƒƒƒ,ƒ1ƒ‚ó‚ïƒ"ƒƒƒƒ‚ñƒƒ2ƒƒƒ ƒƒ0‚ÿƒƒTƒƒƒ%‚úƒ6ƒƒƒƒ‚Ú‚óƒƒ	‚ûƒƒ#‚Üƒ)ƒ‚ÿƒ(ƒƒƒƒ.ƒƒƒ_‚ñƒƒ5ƒ‚þƒ"ƒ)ƒ$ƒ‚üƒƒƒƒ/ƒ7ƒ‚÷ƒ<ƒ!ƒ ƒƒ)‚ùƒƒ‚æƒƒƒ5ƒƒ ƒ"ƒ6ƒ‚ëƒ0ƒ#ƒ.ƒƒƒƒ‚óƒ	ƒƒ&ƒ6ƒƒƒƒƒƒƒ(‚ýƒ:ƒƒƒ‚ÿ‚ú‚ýƒƒƒ‚øƒ%‚ù‚ÿƒ‚ùƒ=ƒ(ƒƒƒƒ#ƒ$ƒ:ƒ?ƒƒƒ‚ùƒ-ƒ'‚àƒ‚ßƒ5‚ëƒ$ƒƒDƒƒƒ?ƒƒ'ƒ@ƒIƒ0ƒHƒƒ#ƒƒƒƒ;ƒ&ƒƒ(ƒvƒ5ƒ9ƒHƒ8ƒƒ ƒ+ƒ ƒ5ƒ"ƒƒ ‚ü‚êƒ‚ñƒ"ƒ/ƒ ƒ‚õƒ*ƒ	‚ù‚øƒ ƒ$ƒƒIƒ%ƒƒƒ)ƒ[ƒB‚ðƒ‚ï‚öƒ‚òƒƒƒƒƒ‚úƒ‚èƒ
+ƒƒƒ ƒƒ.ƒ‚ä‚ëƒ0ƒƒƒƒƒ#ƒƒ‚éƒ+‚ÿƒ+ƒ‚íƒƒ1ƒ.ƒ!ƒ‚ûƒƒ>ƒƒƒƒƒ(ƒƒ#ƒƒƒ$ƒ‚üƒ<‚üƒ+ƒ+ƒƒ5ƒ#ƒƒ=‚úƒ*ƒƒ‚ñƒ2ƒ ƒƒ>‚þƒ%ƒ'‚øƒ$ƒ8‚ÿƒ+ƒ-‚Üƒƒ/‚úƒƒƒ&‚çƒ@ƒƒ‚ÿƒ ƒ$ƒ"ƒƒ	ƒƒ(ƒ=ƒƒƒ-ƒƒ‚ä‚÷‚ä‚ôƒ,ƒƒ6ƒ ƒƒ)ƒƒ-ƒƒ:ƒ"ƒ.ƒ ‚êƒ0ƒƒ‚ýƒ7ƒ$ƒ&ƒƒ(ƒ	‚ÿƒ ƒƒ'ƒƒ"ƒ"ƒƒƒ,ƒ=ƒƒ2ƒDƒƒ=ƒ>‚ýƒSƒBƒfƒ]ƒNƒ6ƒ1ƒ!ƒ;ƒ"ƒ$ƒ7ƒƒ‚öƒ.ƒ‚ûƒ)ƒƒƒEƒƒ#ƒ‚áƒƒƒ8‚ûƒ ƒ.ƒƒ
+ƒ-ƒJƒ&ƒcƒ3ƒƒƒ'ƒƒ*ƒ/ƒƒƒƒƒ"‚üƒƒƒ!‚ò‚þƒ#ƒ#ƒƒ‚ôƒJƒƒ	ƒ‚êƒƒ	ƒƒ‚ôƒƒƒ)ƒ&ƒƒ9ƒƒƒƒƒ‚ðƒ‚Ýƒƒƒ.ƒƒƒƒƒƒ.ƒD‚÷ƒƒƒ	ƒF‚úƒ‚ÿƒ	‚ùƒƒ$ƒƒ‚Öƒƒ ‚Ùƒ#ƒƒ6ƒƒ1ƒƒ%ƒ-ƒ)ƒ&ƒ	ƒ ƒ‚èƒ‚þƒ ‚úƒƒƒƒ>‚ïƒ‚ðƒƒƒƒ#‚Ó‚üƒ$ƒƒ!ƒƒ-ƒ<ƒ9ƒ%ƒƒƒƒƒ$‚ðƒ‚ïƒ‚þƒƒ"‚ô‚ý‚ÿƒƒ(ƒƒ*‚ïƒ‚çƒƒ8ƒ?ƒAƒ ƒƒ0ƒƒƒ)ƒƒ-ƒ.ƒ+ƒWƒ7ƒ#ƒ2ƒBƒHƒ)ƒ0ƒdƒYƒGƒOƒ+ƒƒƒ&ƒƒ$ƒƒ4ƒƒ&ƒ;ƒ"ƒ:ƒ‚ú‚ûƒ‚ùƒ$ƒ)ƒƒ4ƒƒƒƒ;‚ý‚úƒ-ƒ'ƒ5ƒ=ƒO‚õƒ(ƒƒƒ<‚ÿƒ‚ÿƒƒƒƒ8ƒ‚øƒ"ƒ ƒ‚ûƒ#ƒƒƒ1‚õƒƒ
+ƒ&‚úƒƒƒƒ ƒƒ	ƒ+‚ûƒ0ƒƒ‚øƒƒƒƒ"‚ÿ‚ÿƒ+ƒƒ‚ïƒMƒ1ƒ%ƒ%ƒ‚öƒ$‚ûƒ<‚ßƒ1ƒƒƒƒƒJ‚÷‚ïƒ'ƒƒ!‚÷ƒ ƒƒ ƒ,‚ý‚ûƒ ‚ûƒ,‚Øƒ‚ëƒƒƒ$ƒ ƒƒƒ6ƒ$‚è‚ø‚âƒƒƒƒ5‚é‚ìƒƒƒ‚Ôƒƒ)ƒƒƒƒƒ,ƒ‚æƒ‚õƒƒƒ/ƒƒ"ƒƒ ƒƒ$ƒ ƒ1ƒ‚þƒ‚ô‚ôƒƒ0ƒƒC‚ýƒ0ƒ)ƒƒƒ‚óƒZƒDƒƒ.ƒƒƒƒKƒ.ƒ6ƒ^ƒZƒ,ƒ;ƒ(ƒBƒ3ƒ:ƒHƒ7ƒ?ƒ‚ýƒ ƒ ƒ*ƒƒ#ƒƒƒ4ƒ0‚õƒƒƒƒ(ƒƒƒƒ ƒƒ9ƒ‚óƒ(ƒƒIƒƒ3ƒNƒƒNƒ/ƒ%ƒƒ‚ç‚üƒ"ƒ‚ô‚óƒƒƒƒƒƒƒƒ‚þƒ?‚ýƒƒƒƒ7ƒƒƒƒAƒ	ƒ‚üƒƒBƒ(ƒ9ƒ&ƒ+ƒ‚þƒƒ!‚úƒƒƒ8ƒ&ƒ‚èƒƒ‚óƒ0ƒƒ%ƒ#‚üƒ ‚ð‚Ýƒ'ƒ‚ñƒ:ƒ‚õƒ‚õƒƒ"‚íƒ
+ƒ%ƒƒƒ‚úƒƒ)ƒƒƒƒƒ ƒ$ƒD‚éƒ
+ƒƒ ƒƒ2ƒƒ
+‚üƒƒƒ‚ûƒ%ƒƒƒƒ:ƒƒ$ƒ8‚ûƒƒC‚úƒƒƒƒƒ‚øƒƒƒ‚üƒ(‚î‚ÿ‚ã‚üƒƒ!ƒ/ƒ‚Üƒ"ƒ	ƒ:ƒƒ>ƒ8ƒƒƒIƒFƒ_ƒƒƒ9ƒ ƒ<ƒUƒ+ƒMƒXƒ-ƒ"ƒCƒ9ƒ;ƒ<ƒjƒXƒ'ƒ?ƒ‚ù‚÷ƒ8ƒ'‚óƒ‚öƒ‚èƒƒ%ƒ1ƒƒHƒ3ƒƒƒ$ƒƒƒƒƒ!‚õƒ ƒDƒƒƒƒ!ƒ2ƒ2ƒ!ƒƒ%ƒƒƒƒƒ‚ïƒ$ƒƒOƒ3ƒ9ƒƒ,ƒƒ4ƒƒƒƒ ƒ.ƒƒƒƒƒ*ƒ$‚õƒ"ƒ*ƒ/ƒƒƒƒ*‚øƒ ‚òƒƒ(ƒƒƒ ƒƒ	ƒ	ƒ0ƒƒƒƒ$ƒ ƒ‚ýƒ‚ûƒ
+ƒ	ƒ1ƒƒ"ƒ ƒ3ƒƒ4ƒƒƒƒ‚ïƒBƒ‚ù‚íƒ3‚úƒ6ƒƒ-ƒGƒ.ƒƒƒƒ‚ãƒƒ<ƒ,ƒ,ƒ	ƒ)‚îƒ,ƒ‚ûƒ‚òƒ
+ƒƒ0‚üƒ5ƒƒƒ%‚ìƒƒ
+ƒƒƒƒ.ƒƒ!ƒ@ƒƒ;ƒ3‚ÿƒƒƒ‚ÿ‚þƒ#ƒƒ<ƒ#ƒƒƒ
+ƒ‚ûƒ"ƒƒ*ƒIƒ,ƒ'ƒJƒƒƒƒNƒdƒMƒ9ƒ4ƒBƒ6ƒƒeƒ8ƒƒ_ƒƒ8‚ãƒ ƒRƒƒƒ'ƒ(‚ûƒ#ƒ/ƒ&ƒƒƒ!ƒ(ƒ<ƒ+‚ÿƒ*ƒ‚öƒ4ƒ ‚ý‚ýƒƒƒ1ƒRƒƒƒ;ƒ#ƒƒƒ%ƒ0ƒ‚ûƒƒFƒ‚õƒƒ!ƒƒƒƒƒƒƒMƒ0ƒƒƒƒƒƒ‚øƒ‚ÿ‚ûƒ7‚ÿƒƒƒƒƒƒ‚úƒ*ƒƒƒƒƒ ƒ*ƒƒƒ‚ë‚þƒƒƒƒ(ƒ&ƒƒ*ƒƒƒ&ƒƒƒƒ1ƒ!ƒ@‚óƒƒ:ƒ
+ƒ‚õƒƒƒ9ƒ$‚üƒƒƒ!‚øƒ‚èƒƒ	ƒƒ#ƒ)‚ãƒƒ5ƒƒ<ƒ‚ñƒƒ:ƒ!ƒƒ ƒ/ƒ1ƒ"ƒ$ƒƒ*ƒƒƒƒ%ƒƒƒƒƒƒ(ƒƒ"ƒ‚ïƒƒƒƒƒƒ!‚ùƒƒƒƒ<ƒ8ƒLƒ ƒ
+ƒ3ƒƒƒ9ƒCƒ!ƒ*ƒ4‚úƒ#ƒYƒ_ƒtƒƒFƒ9ƒFƒGƒWƒVƒ†ƒnƒ&ƒ]ƒ>ƒ ƒ ‚üƒ$ƒ	ƒ ƒƒ(ƒ2ƒ#ƒ9ƒƒ5ƒ8ƒ/ƒƒ(ƒƒƒ%ƒ‚Ìƒƒƒƒƒ.ƒƒ-ƒƒ
+ƒƒƒ(ƒ	ƒƒ‚õƒƒ.ƒƒƒ$ƒ>‚ø‚õƒ‚ÿƒ‚ùƒ.ƒ6‚ýƒƒ8ƒƒƒ‚ëƒƒƒ#ƒƒIƒƒ2ƒƒƒ ‚ëƒƒƒ.ƒ:ƒ ƒ ƒ$ƒ4ƒ"ƒƒ#ƒ0ƒƒƒ‚ôƒƒ‚þ‚ö‚ø‚ü‚ñƒ/ƒƒ ‚õƒƒƒƒƒ!ƒƒƒ‚Üƒ,ƒƒDƒƒ ‚ýƒƒ$ƒƒ#ƒQƒƒFƒƒ1‚ãƒƒD‚ñƒ	ƒ1ƒ@ƒ#ƒ	ƒ&ƒƒ$ƒƒƒ ƒ‚óƒ"ƒ6ƒ,‚Ý‚öƒƒƒƒ6‚ë‚ä‚üƒƒƒ&ƒ	ƒ'ƒƒDƒ(‚êƒ*ƒƒ‚ûƒƒƒ&‚ûƒ ‚þƒƒƒƒEƒ(ƒAƒHƒ0ƒRƒ6ƒeƒ[ƒDƒƒƒXƒ,ƒDƒ5ƒYƒ˜ƒTƒKƒ;ƒ7ƒ.ƒ%‚çƒ‚÷ƒ"ƒ,ƒ‚ì‚õ‚ÿƒ-ƒ6ƒƒƒƒ5ƒ!ƒ"ƒƒ‚û‚üƒƒƒ5ƒƒƒ ƒ/ƒƒƒƒƒ$ƒ‚éƒ	ƒ'‚óƒƒƒƒƒ"ƒ:ƒƒ
+ƒ‚úƒƒƒƒƒƒ‚èƒƒƒƒƒƒ(ƒƒQƒ	ƒ	‚ñƒƒƒƒ)ƒ&ƒ0ƒ,ƒƒƒƒ,ƒ(ƒƒ‚îƒƒƒ‚ñƒƒ9ƒƒ‚üƒ‚èƒƒJƒƒ‚ßƒ‚ìƒ)ƒ=ƒƒ2ƒ)‚þƒ ƒƒ/‚ø‚èƒ‚óƒ"ƒƒ‚ö‚óƒƒƒ*ƒƒ(ƒ!ƒƒƒƒƒƒƒ ƒ,ƒ	ƒƒƒƒ	ƒ$ƒ,ƒƒƒ‚þƒ2ƒ%ƒƒ%‚ü‚ô‚Óƒƒ‚óƒ(ƒ
+ƒ&ƒ:ƒƒƒ‚êƒ'ƒLƒ
+ƒ
+ƒ!‚õƒƒ-ƒ(ƒƒ!ƒƒHƒJƒ!ƒ>ƒ-ƒQƒ`ƒKƒVƒsƒ{ƒXƒgƒYƒ›ƒiƒ‰ƒkƒ:ƒ4ƒ,ƒ;ƒ#ƒƒ ƒ+ƒƒ1ƒƒ#‚øƒƒƒƒ1ƒ)ƒ$ƒƒƒƒ%ƒƒ‚äƒ&ƒƒ‚ùƒƒ‚øƒ4ƒƒ)ƒ
+ƒ3‚ýƒ+ƒ*ƒƒƒƒƒƒ-ƒ/ƒ‚âƒ2‚ïƒ	ƒƒƒ‚ýƒƒƒƒ#‚ôƒƒƒ2ƒƒƒƒƒƒ'ƒ‚ïƒƒƒ"ƒ0ƒ ƒƒE‚øƒ!‚èƒƒ'ƒƒR‚ó‚ã‚ôƒ(ƒ%ƒ/ƒƒƒ:ƒ:ƒRƒƒƒƒ‚ïƒVƒ‚îƒƒƒH‚üƒƒ
+ƒ0ƒ
+ƒƒ	ƒ‚ý‚àƒƒ‚ûƒ-ƒƒ+‚ÿƒƒ‚öƒ)ƒ#‚ýƒ#‚ï‚Ý‚ôƒƒ1ƒ.ƒƒƒ(ƒ ƒƒ0ƒƒ
+ƒƒ	‚êƒ!ƒƒ‚÷ƒƒ8‚ÿƒB‚öƒ ƒƒ@ƒ‚îƒ9ƒƒSƒ9ƒ*ƒ#ƒ%ƒƒƒ:ƒ,ƒƒƒ	ƒ(ƒ4ƒNƒ;ƒUƒZƒ2ƒ”ƒbƒ”ƒƒ€ƒ†ƒkƒ]ƒ.ƒƒ6‚÷ƒ3ƒƒ7ƒ+ƒ6ƒ$ƒDƒ‚óƒC‚ôƒƒ(ƒ
+ƒ5‚îƒ*ƒ ƒ‚ó‚íƒƒƒ‚æƒ$ƒ<ƒ/‚ç‚ôƒ3ƒƒƒ‚âƒƒƒ7ƒ0ƒ‚ïƒ‚ýƒ ƒƒ=‚ó‚Þƒ5ƒ‚î‚õƒƒ/ƒ$‚ôƒ'ƒƒƒƒIƒ*‚÷ƒ1ƒƒƒƒ‚öƒƒƒƒƒƒƒ ƒ+ƒ+ƒƒƒ%‚îƒ‚òƒ‚üƒƒƒ%‚ãƒ‚ùƒƒ;ƒ ‚üƒƒƒ-‚ïƒƒ"ƒ‚ï‚òƒ.‚î‚ûƒ-ƒ‚äƒƒ&ƒ!‚öƒƒƒ%ƒ‚ý‚û‚ÿƒƒƒƒƒƒƒ0ƒ
+ƒ*ƒƒƒ2ƒƒƒ
+‚ýƒ$ƒ'ƒD‚í‚ûƒ ƒƒ‚öƒƒ3ƒ&ƒ*ƒ&ƒƒ‚þƒ'ƒ<ƒ?ƒ3ƒƒ2ƒ'ƒƒ-ƒZƒƒƒ*ƒƒƒ&ƒ ƒƒƒƒ?ƒƒMƒ"ƒ\ƒFƒqƒuƒÈƒ§ƒ¦ƒÙƒ¦ƒÇƒšƒjƒ9ƒƒ#ƒMƒEƒƒƒ!ƒƒƒ!ƒ&ƒƒ	ƒƒ0‚úƒ-ƒ7‚÷ƒƒƒƒƒƒ1ƒƒƒ	‚ýƒ ƒƒ‚ûƒƒ1ƒƒ(ƒ
+ƒƒ‚ë‚øƒ
+ƒƒƒƒ0ƒƒƒ%ƒ'ƒ>ƒ(ƒ3ƒ‚óƒ/ƒ‚ùƒ!ƒ7‚ðƒ‚ÿƒHƒ#ƒƒ6ƒ‚ûƒƒ"‚öƒƒ ‚÷‚ÿ‚þ‚ð‚Úƒƒƒ(ƒ:ƒ.ƒƒ>ƒ‚ö‚èƒƒ	ƒ=ƒ"ƒƒ	ƒ‚æ‚ùƒ ƒƒƒƒ‚þƒ)ƒ‚òƒMƒ‚þ‚ÿƒƒƒ‚ÿƒƒƒ,‚Ýƒƒ%ƒ ƒH‚ýƒƒƒƒƒ!ƒƒ)ƒ$ƒƒ‚ö‚æƒƒ)‚íƒ>ƒƒƒ ƒ?ƒ-ƒƒ%ƒƒƒ*ƒ ƒƒ;‚óƒ$ƒƒ1ƒƒ‚óƒ%‚õ‚ùƒƒ7ƒƒ"ƒ‚òƒ8ƒ,ƒƒƒ"ƒƒZƒ%ƒIƒ;ƒ-ƒJƒZƒcƒgƒ°ƒÙƒ÷„(ƒôƒáƒžƒ ƒqƒ6ƒ@ƒ"ƒ1ƒƒ‚ôƒGƒƒ.ƒƒƒƒ
+‚óƒƒ‚âƒƒƒƒ%ƒ*ƒ-‚üƒ"ƒ%ƒ?ƒ‚ûƒ/ƒ‚íƒ‚øƒ5ƒ1‚÷‚êƒ-ƒ‚âƒƒ%ƒ:‚ïƒ‚öƒƒ"‚õƒƒƒƒƒ	ƒ;ƒƒ"‚ÿƒƒ ‚þƒ-ƒƒƒ
+ƒ‚ñƒƒ$ƒ‚ìƒ7ƒƒ"‚òƒƒ<ƒ,ƒ-ƒƒ‚ßƒ ƒ?ƒ%ƒJƒ)‚Þƒƒ7‚üƒƒ'‚Óƒ6ƒ(ƒ:‚óƒƒ‚üƒƒ ƒƒ‚÷ƒƒƒ ƒƒƒƒƒƒƒƒ`ƒ‚ìƒƒ(‚ë‚üƒƒƒƒƒ8ƒ"ƒSƒ+ƒ	ƒ&ƒ)ƒ'ƒƒ=‚íƒƒƒƒ,ƒ"ƒ#ƒ‚üƒ
+‚ùƒ&ƒƒ-ƒ(‚ô‚ýƒƒƒ;ƒ)‚ûƒƒ	ƒ2ƒ	ƒ‚úƒƒ&ƒƒ"‚öƒƒ?ƒƒ2ƒƒ4ƒ ƒHƒƒMƒxƒmƒÉ„„[„é„ý„½„r„	ƒ ƒ|ƒOƒ<ƒ3ƒƒ$‚õƒ ƒƒS‚úƒ3ƒ#ƒ%‚òƒƒ	ƒƒƒ(ƒƒƒ*‚Úƒƒ%ƒ9‚ýƒ,ƒ,ƒ‚÷ƒ/ƒƒƒ%‚øƒ,ƒƒ
+ƒ2ƒ5ƒ‚ð‚ÇƒBƒƒ2ƒ$ƒ0ƒƒ‚ñƒ‚çƒ‚ù‚òƒ-ƒƒ*‚Þƒ‚èƒ‚ÿ‚öƒƒƒ‚ñƒƒBƒƒƒƒ	ƒ$ƒ‚ú‚ü‚ÿ‚ÿƒƒ8‚ÿƒ‚ø‚úƒ"‚þƒ-ƒƒ*ƒ%ƒƒ‚÷ƒ4‚Ùƒ#‚úƒƒ	ƒ%ƒƒ‚úƒ
+ƒ.ƒƒ0ƒGƒ/ƒ0ƒ	ƒƒƒ ƒƒ$ƒ%ƒ'ƒ*ƒ@‚ïƒƒƒ#ƒ ‚ù‚÷ƒ‚üƒƒ8ƒƒ]ƒƒƒƒ‚êƒƒ.ƒ)ƒ'ƒ+ƒ0ƒƒ$ƒƒƒ‚øƒ/ƒ/ƒ‚ê‚âƒ‚òƒAƒ!ƒEƒƒ‚äƒƒ"ƒTƒƒ$ƒƒ ‚þ‚ýƒ$ƒ$ƒ#ƒ@ƒ3ƒPƒŸƒ©„D„¢†	‡W‡¢†´…¥„¡ƒñƒ¢ƒyƒtƒgƒƒ,ƒ ƒ&ƒƒƒ@ƒƒƒ‚çƒƒ‚ùƒ@ƒ8ƒƒ)‚ü‚ï‚èƒƒ ƒ'‚ðƒ"ƒ-‚ùƒƒ#ƒ‚éƒ/ƒ ‚ùƒ$ƒ)ƒ‚ñƒƒƒ)ƒ#ƒƒ‚úƒƒƒ
+ƒƒƒƒƒ‚ì‚ÿ‚þƒ/ƒ5ƒƒ:ƒƒHƒƒ‚úƒ‚âƒƒƒ$ƒ%‚à‚øƒƒ‚öƒ0ƒƒƒ+ƒƒƒƒ ƒƒƒƒƒ4ƒƒƒ!ƒƒƒƒ‚ô‚üƒƒƒ)ƒ7ƒ.ƒƒ!ƒJƒ&‚èƒƒ‚ò‚óƒ‚þƒ)ƒƒƒ%ƒƒ ƒ‚ÍƒA‚éƒ<ƒ#ƒƒ‚ùƒ7‚èƒ‚ø‚øƒ.ƒ$ƒƒ-ƒƒƒ@‚ïƒƒ‚þƒ$ƒƒƒ=ƒƒ!ƒ2‚íƒƒƒƒƒƒ!ƒOƒ*ƒƒ‚øƒ%ƒ‚ç‚ûƒ'ƒ(ƒƒ.‚ýƒ	ƒƒ%ƒVƒjƒ–ƒþ„†m‰¶Ž([ŒºˆÜ…í„ªƒÆƒmƒ€ƒXƒ9ƒJƒ0ƒ*ƒ"ƒ?ƒ/ƒ)ƒ,‚ÿƒ"ƒ‚èƒ
+ƒ<‚þƒ ƒ:ƒƒ#ƒƒ‚ýƒƒƒ$ƒƒ‚úƒ!ƒƒ'ƒ"ƒ	ƒƒƒƒƒƒ0ƒ*ƒ&ƒƒ4‚û‚ôƒƒƒƒƒ>ƒƒ6ƒƒ‚òƒ ƒƒFƒƒ2ƒCƒ%ƒGƒƒ"ƒ9‚éƒƒ‚ÿ‚ýƒ=ƒBƒƒ4‚âƒƒƒJ‚ïƒƒ0ƒ"ƒ‚ö‚þƒƒ
+ƒ ƒ‚ü‚èƒ‚íƒ‚þƒ
+ƒƒ,‚ÿƒ‚úƒƒ3ƒƒƒ#‚ëƒƒ‚õƒƒƒ‚ëƒƒƒƒƒƒ*ƒƒ‚ï‚ò‚þ‚çƒ‚Òƒ7ƒƒ‚ôƒƒƒ9ƒƒƒ ƒ
+ƒƒ"ƒƒƒƒ;ƒƒ!ƒ&‚ùƒ	ƒ‚ûƒ(ƒ‚ûƒ ƒƒ1ƒ ƒƒ+ƒƒ&ƒƒ5ƒ!ƒƒ)ƒƒƒ$ƒƒƒ_ƒ9ƒƒRƒ˜„5…:ˆj÷œÿ¡^˜íŽq‡ƒ…7„+ƒžƒ…ƒmƒ]ƒƒƒƒ?ƒ=ƒ‚ßƒ*‚áƒ	ƒƒ1ƒ;ƒƒFƒƒƒƒ%ƒƒƒƒƒƒƒƒƒ‚÷ƒ‚èƒ ƒ ƒDƒ
+ƒ1ƒƒƒƒƒƒ'ƒƒƒƒƒ$‚ôƒƒKƒ&‚æ‚ô‚ö‚ïƒ(ƒ"ƒ‚ã‚ìƒ*ƒƒ'ƒƒ‚þƒ"ƒ ‚þƒ&ƒƒ
+‚ÿƒ@ƒ ‚ûƒEƒ
+ƒƒƒ‚øƒ*‚üƒGƒ‚ñƒƒ‚çƒ‚òƒ'ƒƒ*ƒ	ƒ#ƒ(ƒ‚úƒ.ƒR‚Ñ‚óƒ‚ö‚÷‚ûƒƒƒ‚ýƒ?ƒƒ‚þƒ+ƒAƒƒƒƒ‚ú‚üƒ	ƒ‚å‚îƒWƒ‚ÿƒƒƒ'ƒ*ƒƒ7ƒ‚þƒ"ƒƒƒ4ƒ&ƒ‚Çƒƒƒ;ƒHƒ	ƒ ƒƒƒ!ƒƒ‚ÿƒ‚ùƒƒ0ƒ*ƒƒƒEƒ
+ƒ"ƒƒ,ƒƒƒFƒ4ƒ&ƒLƒSƒtƒ¶„e…ÁŠ‰—Ê¬+³O¥“œ‰t…´„ƒ´ƒxƒ4ƒVƒ+ƒƒƒ-ƒCƒ(ƒ6ƒƒ‚íƒ5ƒ‚øƒ‚ñƒƒƒ/ƒ
+‚ãƒƒƒC‚ùƒƒ3‚âƒƒƒƒƒ"ƒ*ƒƒƒ.ƒFƒƒƒƒ/ƒƒ‚öƒAƒƒ ƒƒƒƒ ƒƒ"ƒ+ƒ#ƒƒƒƒƒƒ(ƒ@ƒ+ƒƒ-‚óƒƒ	‚êƒ!ƒƒƒ!ƒ+ƒƒ#ƒƒƒ‚îƒ$ƒ0ƒ/ƒ3‚õ‚ûƒƒ.ƒ‚åƒ ‚øƒ ‚ð‚ïƒƒƒƒ"ƒƒƒ&ƒ2ƒƒ6ƒƒƒƒ&ƒ)ƒ‚êƒ#ƒƒƒ(ƒƒ*ƒƒ#ƒ5ƒ)ƒR‚úƒCƒƒƒƒ/ƒƒ'ƒ+‚ñƒ‚þƒƒ)ƒƒƒƒ‚Øƒ‚ÿƒ‚ýƒƒƒ ƒƒ,ƒƒƒƒƒ/ƒƒ,ƒƒ?ƒƒƒ&‚øƒƒ8ƒƒƒƒƒƒƒƒƒlƒVƒƒƒ˜„5…Šf•r¦ì­Ú£’§‰:…‘„ƒ¬ƒJƒyƒG‚úƒƒƒHƒƒƒƒFƒƒ	ƒ‚ÿƒƒƒƒ‚ðƒ(‚ôƒ	ƒƒƒƒ1ƒ'ƒƒƒ‚ëƒƒƒ‚øƒ ƒƒƒƒƒƒ‚ù‚òƒƒƒ5ƒ‚÷ƒƒ'ƒ-ƒ>ƒ‚þƒƒƒƒƒ6ƒ ƒƒƒ(ƒ&ƒ<‚úƒ2ƒƒƒ5ƒƒƒƒƒ#ƒƒƒƒƒ>ƒƒ
+‚üƒ ƒƒ$ƒ‚åƒƒƒƒ1ƒƒƒ8ƒ‚õƒ<ƒ‚ÿƒƒ‚Ü‚ÿƒ‚ùƒƒ	ƒ)ƒƒ8ƒƒ‚æƒ‚è‚ù‚ç‚ïƒ0‚öƒƒCƒ2ƒƒƒ*‚úƒƒ$ƒ‚ôƒ‚ïƒ‚ìƒƒƒƒƒ2ƒ!‚ýƒƒ6ƒ@ƒƒ*‚úƒ‚úƒ*‚ô‚øƒƒ‚ýƒ;ƒ?‚éƒ"‚ûƒƒ.ƒ9ƒƒƒƒ
+ƒƒ2ƒ0ƒƒ/ƒ'ƒ1ƒƒƒ^ƒª„	„Ù‡•Ž•™™]”ÛŒ¯‡ˆ„øƒûƒ©ƒFƒ?ƒGƒƒ$ƒ%ƒƒ%ƒ‚ûƒƒƒHƒ‚çƒƒƒ&ƒƒ	ƒƒƒƒ3ƒ ‚ôƒƒ;ƒ/ƒƒ‚ö‚öƒ/ƒƒƒ!ƒƒ-‚õƒƒ"ƒ‚ô‚óƒƒƒ‚úƒQƒƒ,ƒ‚õƒAƒ"ƒƒ7‚ÿƒƒ ƒ)ƒƒƒƒƒ*ƒ‚ýƒ ƒƒƒƒƒ$ƒ%‚èƒ!ƒƒFƒƒ>ƒƒƒƒ0ƒƒƒƒƒƒƒ%‚üƒƒ‚øƒ.ƒƒƒ
+ƒ#ƒ/ƒ2ƒƒƒƒƒ]ƒƒ2ƒEƒ‚ý‚ïƒƒ+ƒƒJƒƒƒƒƒƒ
+ƒ‚ñƒ(ƒ	ƒƒ	ƒ‚îƒƒƒƒƒ‚òƒ/ƒEƒƒ.ƒ?ƒ/ƒQƒƒƒƒƒ	ƒ(ƒ"‚ðƒƒ	ƒƒ)ƒƒƒƒ)ƒ2ƒ‚ûƒ5ƒ‚ñƒƒ ‚ûƒ"ƒ.ƒ5ƒƒƒ>ƒFƒ#ƒ%ƒEƒ†ƒå„v…´‡íŠr‹’ŠÃ‡´…r„ƒ«ƒTƒyƒYƒ\ƒƒƒ‚ÿƒ"ƒ=ƒƒƒƒƒ,ƒƒƒ&ƒƒ0ƒ‚ûƒ‚ýƒƒ0‚í‚þƒƒ+ƒTƒ*ƒ	‚îƒ*ƒPƒƒƒƒƒƒƒƒƒ6ƒ‚×ƒƒƒƒƒƒ#ƒ/ƒ7ƒƒƒEƒ‚þƒƒ4ƒƒƒƒ
+ƒƒ‚óƒ"ƒ!ƒ!ƒƒƒ‚íƒ<ƒ'ƒ	ƒ‚úƒ‚ù‚äƒZ‚Öƒƒƒ	ƒ!ƒƒƒƒƒ/ƒƒ=ƒ*ƒ*ƒƒ
+ƒ&‚ñƒ(ƒƒƒ‚ïƒƒ‚û‚åƒ
+ƒƒ‚ñƒ‚óƒƒƒ6ƒƒ;ƒ;ƒƒƒ
+‚ùƒ‚ëƒƒ)‚ùƒƒ7ƒ&‚þƒ%ƒ0ƒ‚ûƒƒƒ=ƒ#ƒ‚í‚ÿƒ‚éƒ	‚øƒ6ƒ
+ƒƒƒƒƒ/ƒ‚ÿƒƒƒCƒƒ,ƒ8ƒƒ$ƒƒ$ƒƒƒƒLƒBƒƒ	ƒ	ƒƒ=ƒVƒ‘ƒ›ƒø„‰…Y…þ†¦†…/„Mƒúƒ¹ƒ]ƒ;ƒTƒ ƒ ƒƒ5ƒƒƒSƒƒ=ƒ	ƒ ƒƒ$ƒ)ƒ3ƒ9‚÷ƒ#ƒƒƒƒƒ
+ƒ<ƒ	ƒ#ƒƒ‚úƒƒ)ƒ;ƒƒƒƒ7ƒ	ƒƒƒ‚ü‚ú‚öƒ‚Þƒ)ƒƒƒƒ‚ýƒ8ƒ ƒƒƒƒƒ,ƒ3‚õƒ ƒƒƒ‚öƒ/‚éƒƒƒ4‚öƒƒƒ'ƒƒ'ƒƒ/ƒ‚þƒƒƒƒƒƒƒ4‚Óƒƒ,ƒ2ƒ‚óƒ%‚úƒƒƒƒ%‚ðƒƒ5ƒ*ƒ.ƒƒƒ‚üƒ‚åƒ'ƒ‚üƒ8‚ùƒƒ;ƒ;ƒ‚ÿƒ‚øƒ#ƒƒƒ	ƒBƒƒ3ƒ‚îƒ;ƒƒ&ƒ5ƒKƒƒƒ‚ý‚þƒ(ƒ ƒƒ<ƒFƒ,ƒƒ/ƒƒ	ƒ2ƒ	‚ýƒƒƒ	ƒ*ƒ‚÷ƒ	ƒ;‚ðƒ0ƒ6ƒ(ƒƒ ƒ+ƒƒƒƒ%ƒƒAƒHƒSƒVƒ7ƒjƒnƒ™ƒÜƒù„f„ø„U„)ƒëƒ•ƒ˜ƒSƒSƒCƒ!ƒ)ƒ(ƒ*ƒ‚îƒ(ƒ‚÷ƒ8ƒ8ƒ-ƒ8ƒ‚èƒIƒƒƒ@ƒƒƒ"ƒƒTƒƒƒƒ"ƒ	ƒ‚ûƒ	ƒ ƒƒƒGƒƒƒ@ƒ‚ðƒ#ƒ#‚û‚ïƒƒ‚øƒ‚óƒƒ‚éƒƒƒƒƒTƒ?‚õƒ.‚ø‚ÝƒHƒƒƒ4ƒƒƒƒ9ƒƒƒ5‚ëƒ8ƒƒƒ7ƒ‚Ëƒ
+ƒ-ƒƒƒƒƒ?ƒ(ƒ
+ƒƒ ƒ4ƒƒƒƒƒ.ƒ/ƒ‚ãƒƒ4ƒƒƒ	ƒƒ‚â‚óƒ ƒƒ1ƒ%ƒƒƒƒ
+ƒ
+‚ú‚ü‚Èƒ%ƒ ‚½ƒ(‚úƒƒƒƒ"ƒƒƒ,ƒ‚ûƒ9ƒ.ƒƒ
+ƒ‚ùƒƒ(ƒ‚î‚à‚Þƒƒƒ&ƒƒ0‚èƒIƒƒ:ƒƒƒ7ƒ‚êƒG‚ü‚û‚ôƒ&ƒ‚ðƒƒ&ƒCƒƒ0ƒ
+ƒƒ4ƒ*ƒ&ƒPƒ,ƒ|ƒƒƒÙ„ƒÊƒ”ƒ±ƒƒdƒ7ƒMƒ"ƒ/ƒƒ)‚ôƒ'‚ÿƒƒƒ%ƒƒƒ7ƒƒƒ'ƒƒƒ ƒƒ"ƒ6ƒƒ ƒ‚áƒƒ'ƒ‚èƒ#ƒ3ƒ‚üƒ ƒ‚æƒƒ9ƒ-‚ûƒƒƒƒƒJ‚÷ƒ
+‚ö‚ÿƒƒƒ‚ì‚ö‚þƒM‚ûƒƒƒ!ƒƒ‚å‚ÿ‚÷ƒƒ"ƒƒƒƒ3ƒ!ƒƒ!ƒƒ ƒƒ!ƒƒD‚þƒ1‚ùƒ0ƒ2‚ù‚ûƒ,‚þƒ‚ÿ‚ì‚ðƒ
+ƒ ‚ÿ‚÷‚ôƒ ƒ‚îƒ‚ìƒƒ‚øƒƒ	‚ûƒƒ.ƒ7ƒƒƒ7‚ñƒƒƒƒƒƒ+ƒ.ƒ&‚èƒ
+ƒLƒ<ƒƒ*ƒƒ8ƒ8ƒ#ƒ7ƒ2ƒƒ	ƒƒƒƒ2ƒ‚ñƒƒƒƒƒƒ7ƒ0ƒƒ/‚÷ƒƒ‚úƒƒ$ƒƒƒ2ƒƒƒ/ƒƒƒƒ(ƒƒƒ5ƒ<ƒ:‚øƒƒ+ƒ;ƒOƒ:ƒƒeƒ8ƒgƒ†ƒ{ƒµƒPƒCƒ)ƒgƒfƒƒ9ƒLƒ‚îƒ(‚þƒ)ƒ.‚ñƒ
+ƒ-ƒ,ƒƒJ‚ìƒƒƒ9ƒƒ	‚âƒ=ƒƒ/ƒ0ƒƒƒ+‚èƒƒ'ƒƒƒ#ƒRƒ‚òƒ7ƒƒ ƒZƒ+ƒƒkƒƒCƒ#‚ýƒƒƒ ƒ+ƒƒƒƒ?ƒƒƒ-ƒ)ƒ‚ïƒ
+‚ôƒ&ƒƒƒƒ!ƒ1ƒ‚éƒƒ)ƒƒ	ƒƒƒ*ƒƒƒƒDƒ!ƒ%ƒ)ƒ:ƒA‚öƒƒƒƒ/ƒƒ+‚÷ƒ3ƒƒ‚òƒƒƒƒ!ƒƒ#ƒƒ%‚ÿƒ‚þƒ"ƒ2ƒ-ƒ ƒƒK‚ñƒ.ƒ'ƒƒ ƒƒ6‚ýƒƒƒƒ&‚ü‚ìƒ ƒƒ*ƒƒƒ(ƒƒ&ƒƒ)ƒƒƒ(ƒƒƒƒƒ#ƒƒƒ)ƒ;ƒ2ƒƒ9ƒƒ&ƒƒ ƒ&ƒ‚üƒƒ ƒƒƒ6ƒƒƒƒƒƒ‚ÿƒƒ(ƒ:ƒ?ƒ$ƒƒ;ƒ5ƒ,ƒ`ƒGƒƒƒNƒ!ƒAƒ#ƒ:ƒƒQƒƒ‚ÿƒƒ'ƒ ƒ6ƒƒ‚þƒƒ$ƒBƒ‚ðƒ	ƒ#ƒ'ƒ,ƒƒ&ƒƒK‚ÿƒ(ƒ‚õ‚øƒ'‚ý‚Þƒ2ƒ‚ðƒ ƒƒƒX‚ëƒƒƒ'ƒƒ0ƒ=ƒQ‚ýƒ,ƒ!ƒ$ƒƒ2‚öƒƒ.ƒ0ƒƒƒƒ.ƒ.ƒ%ƒƒƒƒƒƒBƒ‚ðƒƒ‚Ý‚ìƒƒ.ƒƒ&ƒƒ.‚äƒƒƒƒ‚ûƒ!ƒƒ0ƒ ‚þƒ3ƒƒƒ*ƒ
+‚ùƒƒ?‚Öƒƒ‚ûƒƒ ƒ#ƒ	ƒƒƒ%‚ðƒ3ƒƒƒ-ƒƒ‚ë‚ýƒƒƒƒ1ƒ‚óƒƒ=ƒƒ	ƒƒ	ƒ	ƒƒ+ƒƒ7ƒƒƒƒ.ƒƒ8ƒDƒ/ƒ;‚ÿ‚ûƒ ƒƒƒ.‚çƒ%ƒ
+ƒƒƒ3ƒCƒ ƒƒƒƒ‚ð‚÷ƒ*ƒƒ
+ƒƒ,ƒ%‚Úƒ)ƒ‚Øƒƒ ƒƒƒ$ƒ#ƒ>ƒƒEƒ9ƒ/ƒ<ƒAƒGƒ8ƒ'ƒƒƒƒ%ƒƒ*ƒƒ4ƒAƒ"ƒ,ƒƒƒ‚ïƒ/ƒƒƒ=ƒBƒƒƒƒƒ,ƒ/ƒ:ƒ1ƒƒƒ4‚üƒ‚÷ƒƒ
+‚øƒƒƒ‚Ë‚ó‚ûƒ‚ùƒ ƒƒƒ/ƒƒƒ<ƒƒ2ƒƒƒƒ ƒƒ‚öƒ ‚þƒƒƒ"ƒ'ƒƒƒ9ƒCƒƒ2ƒ,ƒƒ0ƒƒ‚éƒƒ‚ðƒƒ‚øƒ4ƒ ƒ‚óƒƒƒ(ƒƒ.ƒ5ƒ‚ÿƒ+ƒ ƒƒƒ‚ûƒ‚ýƒ‚õƒƒ‚ï‚ëƒƒƒ+ƒ‚äƒƒ‚ö‚ù‚ëƒ
+ƒ‚þƒƒƒ7ƒJƒƒƒƒƒ!ƒ)ƒƒƒ8ƒƒƒƒƒƒDƒƒƒ%ƒƒƒƒ.ƒ‚õƒ‚êƒ0ƒƒƒ+ƒƒ7ƒ?ƒƒƒƒƒƒ2‚âƒ	ƒ
+ƒƒ/ƒƒƒ!ƒ/ƒƒƒƒ=‚þƒ=ƒ&ƒ.ƒ‚ÿƒ%ƒƒ!ƒƒƒFƒ*ƒƒ,ƒƒ)ƒAƒƒƒ+ƒ9ƒƒƒQƒƒƒ?ƒ)‚üƒƒ‚äƒ-ƒ
+ƒƒ.ƒ;ƒ	ƒ&ƒƒƒ&ƒƒƒ,‚îƒƒƒƒ ƒƒ
+ƒFƒƒƒƒ*ƒƒƒƒƒƒ6ƒ"ƒƒƒ4‚èƒ
+ƒƒ6ƒ-ƒ@ƒƒ%ƒ‚þƒ‚î‚êƒƒ+‚óƒƒ‚óƒ‚ô‚ßƒ ƒCƒ‚øƒ+ƒƒƒ7ƒƒ
+ƒCƒ‚ã‚Ú‚ðƒƒƒ‚ùƒ#‚þƒ ƒƒ‚õƒƒƒ?ƒƒƒ0ƒC‚üƒ*ƒ‚þƒ@ƒ\ƒƒ/ƒƒ)ƒ6‚òƒ‚úƒ‚îƒ
+ƒ$‚ú‚ò‚üƒ
+ƒ$ƒƒ‚î‚ìƒƒ0ƒ@ƒ$ƒEƒ:‚üƒƒ7ƒ#ƒƒ.‚òƒƒ-ƒ7ƒ0ƒ‚÷ƒƒ(‚ÿƒƒƒ,ƒƒƒ6ƒ;ƒ‚é‚úƒ-ƒƒ ƒ	ƒ,ƒ&ƒƒƒƒ2ƒƒƒ!ƒ$ƒƒ-ƒ"ƒƒ"ƒ0ƒ@ƒUƒ(ƒƒ.‚üƒ`ƒƒ9‚Þƒƒƒ ƒ‚þƒ ƒƒƒ"ƒƒ/ƒNƒƒ#‚öƒ‚ü‚ßƒƒƒ*‚ü‚Ö‚ýƒ/‚îƒƒ‚û‚ü‚ûƒƒ ƒ*ƒ3ƒƒ'ƒ)ƒ4ƒ	ƒƒRƒ+ƒƒƒƒƒ‚éƒ‚ñ‚ýƒ6‚ç‚þƒƒ
+ƒ$ƒ+ƒ+ƒ&ƒ‚óƒ+ƒƒƒƒ
+ƒ‚îƒƒƒ/ƒƒƒ"ƒƒƒ.ƒƒ3‚ü‚ðƒ:‚ñƒƒƒ%ƒƒ ‚ûƒƒƒƒƒƒ$ƒ‚îƒƒ$ƒƒƒ$ƒƒƒƒ?ƒ ƒAƒƒ2‚øƒ9ƒD‚õ‚Ãƒƒ‚þƒ@ƒ)ƒ	ƒ'ƒƒƒ-ƒƒ‚ûƒ"ƒƒAƒ)ƒƒ‚õƒMƒ‚õƒ:ƒ‚èƒ
+ƒ‚ü‚ôƒƒ‚ßƒƒ
+ƒƒƒƒƒ‚ÿƒ.ƒ,ƒ\‚Ñƒ*ƒƒƒƒ‚öƒƒƒ2‚ýƒ!ƒ1ƒ,ƒ
+‚þƒ	ƒƒƒ"ƒ‚òƒ?ƒ8ƒƒDƒDƒ%‚Õƒ5ƒOƒ%ƒƒ	ƒƒ)‚ÿƒ‚þ‚ê‚ÿƒ
+ƒƒƒƒ‚ý‚è‚þƒƒƒƒƒƒƒ#ƒƒ!ƒ+ƒ	ƒƒƒƒƒƒ‚ýƒ‚ðƒ'ƒƒ1ƒ1‚äƒƒƒƒƒƒƒƒƒƒƒ<ƒƒ1ƒƒƒƒ‚ô‚ý‚þƒƒ%ƒƒƒ2ƒƒ2ƒ7ƒ<ƒƒ+ƒ‚íƒƒƒƒ1ƒ‚þƒƒƒ8ƒƒ3ƒ ‚àƒ%ƒ8ƒƒ!‚ÿƒƒ‚ûƒ‚öƒNƒ#‚ü‚ÿ‚ïƒƒ	ƒƒ"‚Íƒ)‚ùƒ
+ƒ*ƒƒVƒƒ‚éƒƒƒƒƒƒƒ7ƒ,ƒƒƒ*ƒƒ
+‚ø‚Þƒƒƒ.ƒ+ƒƒ,ƒƒƒ	ƒ%ƒƒƒ
+‚ö‚öƒƒXƒƒ ƒƒƒ+‚ûƒƒ‚æƒƒCƒƒƒ(ƒƒ$ƒ"‚ü‚öƒƒƒƒ‚ú‚ä‚Ü‚ýƒƒ&ƒ
+ƒ<‚øƒƒƒ3ƒBƒƒ/ƒƒ-ƒ;ƒƒ ƒBƒƒƒƒ9ƒƒ‚ñƒ
+ƒƒƒƒƒ;ƒƒ-ƒ6ƒ6ƒƒ,ƒƒƒ,ƒ'‚óƒƒƒ,ƒ-‚ýƒƒ.ƒ/‚ëƒUƒ‚Ýƒƒƒƒ8ƒ9ƒ-ƒƒ3ƒƒ+‚éƒƒ
+ƒ"ƒƒ-ƒƒƒ‚þ‚ý‚þƒ.ƒƒ.ƒƒ	‚þƒ ƒCƒƒ;ƒƒƒƒ‚ó‚Øƒ‚ðƒƒƒƒƒƒ(ƒƒ%ƒƒQƒƒ+‚õƒ,ƒ)ƒƒ0ƒ(‚ýƒ4ƒ5ƒƒ8ƒƒƒ#ƒ%‚üƒ2‚õƒƒ‚úƒƒ1ƒ*ƒ,‚ú‚öƒ!ƒƒƒƒƒƒ*ƒ3ƒ
+ƒ(ƒ
+‚ÿƒ‚ôƒ0‚ó‚ý‚ø‚öƒƒƒƒGƒ‚þƒ‚öƒ+ƒƒ#ƒ0ƒƒ-ƒƒƒ*ƒƒ
+ƒƒƒƒ5ƒ$‚õ‚öƒ:ƒƒƒƒƒDƒ ƒƒƒƒƒƒƒ(ƒ%‚ðƒƒ0‚öƒ:ƒƒ‚ùƒƒ)ƒIƒ$ƒƒ#ƒƒ6ƒƒ+ƒ#ƒƒƒƒƒƒ!ƒƒ ƒ‚òƒƒ9ƒƒ‚ñƒ$‚ø‚âƒ‚òƒƒƒƒ=‚åƒƒ4‚ëƒ&ƒ%ƒƒƒ"ƒƒ‚ô‚òƒƒ‚ðƒ*ƒ
+‚òƒ1ƒ9ƒƒ%ƒI‚ùƒ‚ùƒ.ƒƒ'ƒ
+ƒƒ
+ƒ%‚ü‚ö‚ïƒƒ ƒ/‚ö‚ïƒ9ƒ2‚ìƒ‚òƒƒƒ,‚ùƒƒ ƒ‚ã‚ëƒƒƒ.‚óƒƒ+ƒ#ƒ8ƒAƒ)ƒƒƒ#ƒ ƒ4ƒ
+ƒ$ƒƒƒƒ'‚ÿƒƒ	ƒƒ!ƒƒ!ƒ)‚ûƒ8ƒƒƒ‚õƒ	ƒƒ‚ì‚Úƒƒ‚øƒƒƒƒ%ƒ#ƒ
+‚êƒ9ƒ9ƒƒ<ƒƒƒIƒJƒ5ƒ)ƒƒƒƒƒ4‚þƒ)ƒ;ƒ#ƒƒƒ‚ÿƒƒ‚úƒƒ4‚ûƒƒ-‚þƒ!ƒ)ƒƒƒ;ƒƒƒ+ƒ+ƒƒ$‚ëƒƒƒƒƒƒDƒ.ƒ)ƒ&ƒ,ƒ0ƒƒ)ƒƒ-‚üƒ:ƒCƒƒ#ƒdƒƒ‚õƒ‚ýƒƒƒƒ9‚êƒƒ‚úƒ$ƒƒ.ƒƒƒƒ4ƒ$ƒƒƒ
+ƒ-ƒƒƒ@ƒ9ƒ‚î‚ó‚ôƒƒƒƒƒƒƒ=ƒƒƒ&ƒ&ƒƒ-ƒƒ"ƒƒ2ƒƒ&ƒ8ƒKƒ‚äƒƒƒ"‚ç‚üƒƒƒƒ	ƒ#‚úƒƒ	ƒ.ƒƒ‚ûƒ‚èƒ ƒƒ‚ýƒƒƒ$ƒƒ*‚ö‚è‚ðƒ'ƒ‚íƒ'ƒ ‚ëƒƒ%‚æƒ
+ƒKƒGƒJƒ'ƒƒƒ)ƒ‚÷ƒ.ƒƒ‚íƒ!ƒƒƒ)ƒƒƒ+ƒ	ƒƒ‚úƒƒ/ƒ3ƒ(ƒƒ"ƒ%ƒ!ƒ$ƒƒ?ƒ5ƒƒ?ƒG‚èƒ/ƒLƒ(ƒƒƒ>‚ìƒ5ƒ,ƒ‚îƒƒƒƒ(‚ÿ‚êƒ‚ÿƒ‚Û‚¶ƒ*ƒ>ƒƒ-ƒƒƒƒƒ‚ýƒ‚Óƒƒƒƒƒƒƒƒƒ"ƒ#ƒE‚Ùƒ‚øƒƒ'‚ùƒƒ‚Òƒ-ƒ(ƒ‚Û‚ñƒ6‚ùƒ(ƒƒƒ2ƒƒ[ƒƒƒ‚ùƒƒ6ƒƒ7ƒ
+ƒƒƒ7‚ÿƒ‚ÿƒƒ‚ûƒƒ#ƒ‚Òƒ?ƒƒƒƒƒƒƒƒFƒƒƒ/ƒƒ3ƒƒ0‚Ü‚û‚ý‚èƒƒƒ5ƒ3ƒƒ‚ýƒ ƒƒ$ƒƒƒƒ#ƒƒƒ‚øƒƒ$ƒƒƒƒHƒ‚ÿƒ%ƒ9ƒƒ?‚ÿ‚õƒ$ƒ,ƒ=ƒƒƒƒ
+ƒ‚úƒ‚ïƒ‚îƒŠ9„Ìƒ‚çƒƒƒ‚ù‚ö‚ýƒ!ƒ
+‚ñ‚úƒƒ>ƒƒ%ƒƒ‚þƒ"‚ýƒƒƒ8ƒ8ƒ+ƒƒƒ#ƒ‚ûƒ!‚òƒ<ƒƒ ƒ$ƒ‚üƒ!ƒ"‚ûƒ)ƒ	ƒ!‚øƒ‚þƒƒƒƒ‚çƒ‚îƒƒ;‚âƒƒƒƒƒ"ƒ'ƒ0ƒ(ƒ$ƒ(ƒƒƒ
+ƒƒƒ%ƒ-ƒ
+ƒ$ƒ$ƒƒ4‚úƒƒ5ƒ*ƒƒ.ƒ9ƒƒ<ƒ"ƒ$ƒƒƒƒƒƒƒƒ6ƒ5ƒƒƒƒ*ƒHƒƒKƒƒƒƒƒƒ‚Ýƒƒƒ:‚àƒƒƒ6ƒƒƒ‚ãƒ#ƒ‚øƒ+‚ñƒ%ƒ0ƒƒ*ƒƒƒ#ƒ
+ƒƒ!ƒƒƒ	ƒƒ$ƒ ƒ(ƒƒ-‚ùƒƒ(ƒ/ƒƒ.ƒƒAƒG‚üƒƒ'‚úƒƒƒƒ‚óƒƒ0ƒƒ3ƒ1ƒƒƒ-ƒƒƒFƒƒƒ&ƒƒƒ ƒ	ƒ4‚ñ‚åƒƒ#ƒƒ,ƒ'ƒ
+ƒƒƒ‚ÿƒFƒ‚ýƒ+ƒ&‚éƒƒƒ‚æƒƒƒA‚ú‚÷ƒ1ƒƒƒ.ƒ	ƒƒƒ(ƒ ƒƒ0ƒƒ@‚æƒ‚íƒBƒƒƒƒ	ƒ"ƒƒ‚ýƒ0ƒ‚÷ƒƒ?ƒ ƒ-ƒƒƒƒƒ(‚þ‚óƒ?‚å‚øƒ ƒƒ	ƒ)ƒƒ,‚øƒƒƒ$ƒƒ!‚ãƒƒ&ƒƒ*ƒƒ.ƒƒƒ-ƒ‚ãƒ ‚ýƒƒ‚ÿƒ'‚éƒ‚êƒƒƒ<ƒ7ƒ!ƒƒ‚êƒ ƒƒ ƒƒƒ-‚÷ƒƒƒ/ƒ	ƒ+ƒ‚úƒƒƒƒ1‚ðƒ ƒƒ-ƒ‚ûƒ,ƒƒƒƒ‚ýƒAƒƒ(ƒƒ=ƒ)ƒƒ/ƒƒ'ƒ‚çƒ!ƒƒ ƒƒ,ƒƒƒ+ƒ)ƒ0ƒƒ'ƒ0ƒƒƒƒƒƒƒƒƒ‚øƒ‚öƒƒ‚úƒƒ#ƒƒƒ"ƒ7ƒ‚þƒ‚ÿƒHƒ:ƒ ‚ÿƒ‚ïƒ"‚ùƒƒƒ	ƒƒƒƒ ƒ"ƒƒƒ*ƒ*ƒƒ+ƒ‚Çƒ9ƒ*ƒƒ ƒ‚é‚ëƒ	ƒ+ƒ
+ƒ%‚øƒ‚âƒƒ+ƒ"ƒƒ-ƒ&ƒ/‚îƒ-‚ÿƒƒƒƒ‚úƒ!ƒƒ5‚ûƒ7‚ßƒ ƒ"ƒ‚ò‚ï‚ÿƒƒƒ‚ðƒ)‚Ïƒƒ"ƒ+ƒ1ƒ#ƒ"ƒ‚ûƒƒ'ƒ2ƒ,ƒƒƒ‚ýƒƒ9‚åƒ!‚î‚ñ‚òƒ‚ûƒ,ƒ&ƒ"ƒ‚Ýƒƒƒ,ƒƒ8ƒƒ	ƒƒ#ƒƒ&ƒ-‚÷ƒƒ$‚ýƒƒƒƒƒ!ƒ‚óƒ#‚øƒ&ƒ'ƒ&‚þƒ3ƒƒƒ‚è‚ìƒ7ƒƒƒ"‚òƒƒƒƒƒ(ƒ‚õ‚ðƒ%‚ðƒ$ƒƒƒ&ƒ%‚ùƒƒ,ƒƒƒ‚øƒƒ‚íƒƒ‚ûƒƒƒ,ƒ‚ù‚ö‚üƒ9ƒƒƒ*ƒƒRƒMƒ‚ÿ‚÷‚ðƒ3‚òƒƒƒ ƒ‚óƒ‚ê‚ôƒ0‚úƒƒƒƒ‚ó‚ÿƒ;ƒƒ‚ò‚ò‚ôƒ ‚æƒ‚ýƒ
+ƒƒ=ƒƒƒƒƒ,ƒMƒƒ6ƒ#ƒ8ƒ‚èƒ6ƒƒƒ	ƒ<ƒƒƒƒJ‚éƒƒ%ƒƒ@ƒƒƒƒƒAƒƒ;‚îƒƒ‚öƒ<ƒƒƒ$ƒ ƒ
+ƒƒ8ƒ$ƒƒ4ƒƒ‚ñƒƒ8‚Üƒ‚øƒ!‚÷ƒ‚ðƒ	ƒƒƒ/ƒ#ƒƒƒ
+ƒ+‚çƒƒƒƒ‚úƒJƒ8ƒƒ$‚ðƒ&ƒƒ ƒ$ƒ7ƒ‚õƒ
+ƒƒƒ ƒƒƒ2ƒ ƒƒ‚ë‚éƒ)ƒƒƒƒ‚õƒƒƒ!ƒ#ƒƒƒƒƒ-ƒƒ‚×ƒ!ƒ3ƒƒ‚úƒƒƒ ƒƒ*ƒ.‚÷ƒ%‚ý‚þƒƒTƒ2ƒƒ:ƒƒƒ‚íƒƒ*ƒƒƒ
+ƒ	ƒ*ƒCƒƒ=‚çƒƒƒ‚ï‚Þƒ‚õ‚ùƒ‚åƒƒƒƒƒNƒƒƒƒƒƒƒ$ƒ$ƒƒ+ƒ ‚èƒƒ‚þƒƒ‚ð‚ø‚Òƒ ƒƒ-‚÷ƒ‚þƒƒƒƒƒ ‚øƒ.ƒ8ƒ-ƒ.ƒ%‚ýƒƒ7ƒƒ0‚ô‚òƒ!‚ßƒƒ+ƒ‚íƒ'ƒƒƒL‚þƒ'ƒ7‚÷ƒƒ	‚èƒƒ	ƒ$ƒ‚Üƒƒ‚à‚þƒƒƒƒƒ‚öƒƒƒƒ!ƒ*ƒ‚ÿƒ*ƒƒ8‚ôƒ‚ùƒƒ8ƒƒƒƒƒƒ	ƒ‚ðƒ‚ôƒƒƒƒƒƒƒ>ƒ%ƒƒ$ƒƒA‚ëƒƒ%ƒƒƒ‚ûƒAƒ4‚ûƒ"ƒ>ƒ‚ñ‚ð‚ü‚ò‚úƒ‚õ‚þƒƒƒ#ƒƒƒ/ƒƒƒƒ;ƒƒ;‚þ‚öƒ6ƒ&‚îƒ"ƒƒƒƒƒDƒ2ƒƒ-ƒ5ƒKƒƒ<ƒ$ƒ:ƒƒ8ƒƒƒ.ƒƒƒ ƒƒƒ#ƒƒ$ƒƒƒƒCƒƒƒ'ƒ0ƒƒƒ	‚ýƒ&ƒ‚øƒƒƒƒƒ‚òƒ‚úƒƒ!ƒƒƒƒ6ƒƒƒ‚ñƒ/ƒƒ ƒ ‚û‚öƒ0ƒƒ#ƒ
+ƒƒ‚Ëƒƒ!ƒƒ;ƒ‚óƒƒƒ‚ôƒ‚üƒ0ƒƒ‚øƒƒ
+ƒƒTƒ@ƒƒ ‚ûƒƒƒƒ!ƒ/ƒ	ƒ0ƒƒƒƒ‚é‚õƒƒ‚ñƒ,ƒ#‚úƒƒ‚÷ƒƒ ƒ!ƒƒ2ƒ#ƒƒƒ‚èƒƒƒ1ƒƒ!ƒƒƒƒ$ƒ&‚ñƒ‚ñ‚ýƒ
+ƒƒƒ‚øƒ‚ô‚öƒƒ(ƒ%ƒƒƒ‚äƒ%ƒGƒ1ƒƒ‚ò‚üƒƒƒE‚îƒ-ƒ3ƒƒ‚ñƒ-ƒƒ4ƒƒJƒ ƒ$ƒƒƒƒƒ&‚è‚ñ‚÷ƒƒƒ'ƒ‚øƒƒƒ‚äƒ&‚äƒƒ/‚÷ƒ+ƒ#ƒGƒ:ƒƒ	ƒD‚ðƒƒƒ/ƒ"ƒƒ(ƒ+ƒ2ƒƒ$‚÷ƒ‚üƒ"ƒ
+ƒƒ#ƒ ‚ûƒƒ‚Ñƒ6‚øƒ‚úƒ	‚ýƒƒƒƒA‚ùƒƒ*ƒ1ƒ‚×ƒƒƒ'ƒ‚ÿƒ‚ôƒ‚åƒ9ƒƒƒƒ‚ðƒƒ‚úƒƒ	‚èƒƒ	ƒ1ƒ6ƒƒ+ƒƒƒƒƒ'ƒƒƒ-ƒƒ‚üƒ#ƒƒƒƒ)ƒ(‚òƒ%ƒƒ6‚õƒ‚úƒƒ
+ƒƒƒ(ƒƒƒ2ƒ‚÷ƒƒƒ,ƒ(‚ìƒƒ:ƒ‚ÿƒ‚üƒƒ3ƒƒ‚þƒ‚þƒ	ƒ‚ûƒ	‚çƒ	‚ùƒ&‚þ‚ñƒB‚ù‚àƒ:ƒ‚ýƒƒ@‚îƒ'ƒƒ1ƒƒƒƒƒƒƒ	‚þ‚øƒƒ3ƒ)ƒ%ƒƒƒƒƒƒƒ;ƒ
+ƒ3ƒƒ ƒƒ ƒ#ƒTƒ‚àƒƒƒƒ‚à‚÷ƒƒƒ7ƒ‚ÿ‚å‚ýƒ‚åƒƒƒƒƒcƒ5ƒƒ‚ýƒƒ8ƒƒƒƒƒ'ƒƒƒ+ƒƒƒ%ƒ/ƒ*‚ù‚ê‚å‚ëƒ!‚ýƒPƒƒ-ƒƒ"ƒƒt‚ó‚üƒƒ‚ûƒ!ƒ"ƒ‚êƒ-‚ü‚åƒ+ƒ2ƒƒƒ<‚÷‚õƒ ‚ú‚ùƒ:ƒ&ƒƒ&‚äƒ.ƒƒƒƒ‚èƒƒ+‚úƒƒƒƒ>ƒƒƒPƒGƒ3ƒ‚ÿƒ(ƒ‚à‚ëƒƒ9ƒ+ƒƒƒ0ƒ,ƒ‚×ƒ&ƒ#ƒƒC‚þƒƒ"ƒ‚ÿƒ‚øƒƒƒ(‚ÿƒ/ƒ‚åƒ‚èƒ'ƒ	‚üƒƒ‚ïƒƒƒ'ƒ!ƒƒƒƒ&‚óƒƒƒGƒƒƒ2‚úƒ:ƒ‚ðƒƒƒ0ƒ4ƒƒ)‚éƒ,ƒƒƒƒ"ƒ$ƒƒƒ(‚ÿƒƒ‚ðƒƒ‚ÿ‚þƒƒCƒ3‚úƒ	‚øƒ#‚öƒ‚ú‚ðƒ‚þƒ7ƒƒ ‚îƒƒ"ƒƒ$ƒƒ	ƒ2ƒ&ƒƒƒ7ƒ	ƒBƒ5ƒ7ƒƒLƒ5ƒƒ!ƒƒƒ‚ÿ‚Öƒ)‚÷‚ô‚ë‚üƒƒƒ*ƒƒ%ƒ‚öƒƒAƒ+ƒ7ƒ!‚îƒƒƒƒƒ.ƒƒƒƒƒƒƒƒ‚õƒƒ/ƒ‚Ýƒ‚ð‚÷ƒ)‚ÿƒƒ+ƒ8ƒƒƒ
+ƒ‚úƒ3‚ýƒ	ƒƒ,‚úƒ>ƒ8ƒ'ƒ9ƒƒAƒ‚ÿƒ4ƒ+‚ô‚Ì‚üƒ#ƒ3‚öƒ&ƒƒ!ƒ
+ƒ‚ì‚½ƒ‚íƒƒƒFƒƒ8ƒ3‚ýƒƒ$ƒ‚úƒƒ‚û‚ûƒƒƒ%‚þƒ)ƒƒ‚ýƒ'ƒƒ ƒ4ƒƒ‚ìƒ+ƒƒ5ƒ-ƒƒ"‚ýƒƒ‚äƒ"‚ÿƒ[ƒƒƒ‚úƒƒƒ!ƒ‚òƒƒ$ƒSƒ‚óƒƒƒ‚÷ƒƒ.ƒƒ!ƒ#ƒ‚ÿƒƒ(ƒ ƒƒ1ƒ+ƒ‚ú‚ìƒƒƒƒ‚ôƒ*ƒ6ƒ)ƒƒƒ;ƒPƒ‚þ‚÷ƒ8ƒ!ƒƒSƒ3‚ßƒƒƒ	ƒ#ƒƒƒƒ+ƒƒ2ƒ
+ƒ+ƒƒ8ƒ0ƒ?ƒƒ+‚ø‚öƒ‚æƒƒCƒƒ
+ƒƒ#ƒƒƒƒ$‚ÿƒƒƒ‚ûƒ%‚ô‚ÿƒ8ƒ	ƒƒƒƒ<ƒ1ƒ‚ó‚ýƒ#ƒƒƒ	ƒBƒƒ]ƒ*ƒƒƒ)ƒ>ƒƒ‚é‚þƒƒ<ƒ'ƒƒƒƒ‚îƒƒƒ3ƒ7ƒƒƒ#ƒ ƒƒ0ƒ&ƒ-ƒƒ‚î‚üƒ‚æƒƒƒƒƒ,‚ûƒ	ƒƒ‚÷ƒƒ	‚ìƒ2‚ù‚è‚üƒ‚ÿƒƒ(ƒƒƒ	ƒƒƒƒ+‚ÿƒ"ƒƒ8ƒƒ ‚èƒ‚ú‚ìƒƒ/ƒMƒƒƒƒƒ‚ö‚û‚óƒƒ2ƒƒ+ƒƒ‚çƒƒƒ'‚ö‚íƒƒ	ƒ
+ƒ?‚ÿƒƒ-‚ÿƒƒ(ƒƒƒƒƒ‚ÿƒ.ƒƒ	ƒ3ƒ‚ú‚ñ‚øƒƒƒ!ƒƒ%ƒ$ƒ&ƒƒ ƒ7‚çƒ
+ƒ.‚ò‚ìƒ(ƒ%ƒ‚âƒƒ‚ýƒ0ƒƒƒƒƒ/ƒ4ƒƒƒ9ƒ&ƒƒƒMƒƒ"ƒƒ‚õƒƒƒT‚üƒ1ƒƒƒ	ƒƒ#ƒ‚öƒƒ;ƒƒƒEƒ&‚÷ƒ)ƒ/ƒƒƒƒƒƒ‚ñƒ6‚ü‚ñ‚÷ƒƒ(ƒ‚Õƒ‚þƒƒ(ƒ%ƒƒƒƒ‚ôƒDƒƒƒ‚èƒƒEƒƒƒ	ƒ‚þ‚óƒ)ƒ,ƒƒƒ-‚ãƒ%ƒƒ‚ý‚é‚ýƒ‚ôƒƒ	ƒ'ƒ.ƒƒƒ;ƒƒ‚ðƒƒ	ƒ
+‚ñ‚ç‚ñ‚õƒƒ`ƒ‚ÿƒƒƒ7‚åƒƒ$ƒ$‚õƒƒƒ‚ý‚ûƒ,ƒƒ‚ðƒƒƒƒƒ‚ÿƒ‚Ò‚þ‚õƒƒƒ‚ûƒ*‚öƒ!ƒ+ƒƒ‚ðƒDƒƒƒ/ƒƒ ƒƒ
+ƒ'‚øƒƒƒƒƒ‚ô‚ñ‚ïƒ‚ûƒ"‚ùƒ‚ïƒƒ#‚ý‚õƒ ƒƒ ƒBƒ8ƒƒ%ƒ
+ƒ‚éƒƒƒƒ8ƒ&ƒƒ'ƒ)ƒƒ
+ƒ‚ùƒƒƒƒƒ!ƒ
+ƒƒƒ ƒƒ.ƒ,‚ø‚ðƒƒƒƒƒƒƒƒƒ5ƒƒ#ƒ#ƒƒ7ƒƒƒ‚öƒ‚íƒ	‚ü‚Ý‚óƒ7ƒƒ2‚ÿƒƒƒ ‚øƒ,ƒ2ƒƒƒƒQƒƒ.‚è‚üƒ2ƒ/ƒƒƒƒ‚ùƒƒ	‚ïƒ.ƒƒ0ƒ‚þƒ>ƒƒ%‚ôƒ>ƒƒ ƒ‚ü‚íƒƒƒ#‚þƒƒƒƒƒƒ)ƒƒ1ƒ&ƒ?‚øƒ9‚ô‚þƒ!‚óƒ.ƒƒ‚õƒƒ4ƒƒƒ‚ø‚îƒ ƒ"ƒ ‚ì‚èƒAƒƒƒƒƒ&ƒƒƒ,ƒƒ8ƒ.‚øƒƒ)ƒ<ƒƒ‚ñƒ
+ƒ‚ô‚ì‚èƒƒƒƒƒƒ‚ô‚ùƒ$ƒ‚þƒ/ƒ*‚ëƒƒ+ƒƒƒƒƒƒ‚ðƒƒƒ‚çƒƒƒƒ‚üƒƒ:ƒ‚øƒƒ'ƒ:ƒƒ
+ƒ ‚çƒƒ‚ùƒƒ ƒ)‚ýƒƒ6ƒ,‚öƒ
+ƒ‚îƒƒ ƒ#ƒ ƒƒƒƒ4ƒ-ƒ,ƒƒ‚ìƒ2‚ó‚ùƒƒ?‚ùƒƒ/‚ê‚ðƒ+ƒ:ƒ ƒ‚÷ƒ(ƒ"ƒ.ƒƒƒƒ'ƒMƒ)‚ÿƒƒ ƒ	ƒ5ƒ5ƒ&ƒ ƒ,‚ôƒ(‚ü‚ç‚òƒ-ƒƒ*‚üƒƒƒƒƒAƒƒBƒ?ƒ‚ðƒ6‚òƒ‚ÿ‚ôƒƒƒƒƒƒƒ&‚ûƒ‚êƒƒ)ƒ‚ó‚ïƒ#ƒ*‚þƒƒƒ1‚í‚øƒ5‚íƒ‚Öƒ2ƒƒƒƒƒƒ‚åƒƒƒ‚ýƒƒ
+‚ñƒ.ƒƒƒ'ƒ‚ïƒƒƒƒƒSƒ3ƒ.ƒƒ ƒ ƒ,ƒƒ$ƒ!ƒ‚óƒ‚èƒƒƒƒ‚íƒ.ƒƒ&‚æƒƒƒ0‚ðƒ&ƒƒ‚òƒ8‚îƒ:ƒƒ@ƒ3ƒƒ'ƒƒ6ƒ1‚ì‚íƒ+ƒ‚ç‚ëƒ ƒ$ƒ
+ƒƒ"‚éƒ#ƒƒƒ	ƒ>ƒƒƒƒ#‚ø‚ÿƒƒƒ+ƒƒƒƒ!ƒ3ƒ0ƒ/ƒƒƒNƒƒƒ/ƒ$ƒƒ!ƒ=ƒ ƒ!ƒƒ%ƒƒ ƒƒ=ƒ&‚í‚óƒ	ƒ ƒ:ƒƒ-ƒ0ƒ‚÷ƒ$ƒƒƒ-ƒƒƒ	ƒƒƒ3‚øƒƒ"ƒƒƒƒƒƒƒL‚ëƒ$ƒ/ƒ(‚õƒƒ%ƒ ƒƒƒƒƒ*ƒ'ƒD‚ãƒƒ+ƒ"‚ðƒƒ3ƒ ƒ"ƒ	‚ÿ‚ïƒƒƒB‚ó‚ÿ‚áƒ	‚ú‚ðƒ]ƒ%ƒƒ)ƒƒ&ƒƒƒƒƒ<ƒƒƒ+ƒƒ8‚ùƒ1ƒ7ƒƒ‚ýƒ
+‚ø‚æ‚ûƒ!ƒƒ‚Áƒƒ/ƒ	ƒƒƒƒ-‚Öƒ+‚çƒƒƒƒDƒ'‚ÿƒ$ƒ%ƒƒƒ‚þƒ2ƒ/ƒƒ	ƒƒ‚ï‚ëƒ"ƒƒƒƒ+ƒƒ8ƒ	ƒƒƒ(ƒƒ ƒƒƒ‚ôƒ‚ÿƒ$‚þƒ:‚úƒƒƒƒ0ƒ$‚ã‚÷ƒƒƒƒƒ‚÷ƒ)ƒ0ƒ=ƒ(‚û‚ð‚öƒƒ$ƒ
+ƒ6‚ôƒƒ	ƒ)ƒ$ƒ.ƒ‚ñƒƒƒ	‚òƒ.ƒ9ƒBƒf‚õƒƒƒƒ"ƒƒ‚í‚þƒƒƒƒƒƒ&‚ùƒƒ ƒƒ ƒƒ"‚ûƒƒƒƒƒ)ƒ‚ùƒ‚Õƒ;ƒƒƒƒ
+ƒ#ƒƒ!ƒ6ƒ>ƒƒƒ2‚Ù‚üƒ‚êƒ‚ý‚êƒƒƒ‚ôƒƒ%ƒƒƒ+ƒƒ ‚õƒ‚ùƒ‚Úƒ‚øƒ‚ôƒƒ‚ðƒ.‚ü‚ñƒGƒ$ƒ"ƒ3ƒ7ƒ‚òƒ‚ýƒƒƒ	ƒ9ƒKƒƒ ‚Îƒ‚ýƒNƒ	ƒ/ƒƒƒƒ9‚ã‚÷ƒƒ/ƒ3ƒ ƒ4ƒ ƒƒ!‚ïƒ%‚ùƒƒ8ƒ+ƒ*ƒ$‚êƒ‚ð‚ãƒƒƒNƒƒƒƒƒƒƒƒƒƒ"ƒƒ1ƒ‚÷‚ïƒCƒ;‚Üƒ/ƒ6ƒ‚ýƒ'‚ûƒƒƒƒ"ƒ#ƒ‚ûƒ@‚ï‚ûƒ/ƒƒ‚íƒCƒ6‚Ñƒ'ƒ(ƒ:ƒ‚þ‚Ûƒƒ3‚ôƒƒƒ‚âƒ)ƒ.ƒ,ƒCƒFƒ ƒ‚ûƒƒƒƒƒƒ‚û‚ó‚òƒƒƒƒƒ3ƒƒ‚÷ƒƒƒƒ‚çƒ ƒ
+ƒ
+ƒƒƒƒ‚øƒƒƒƒ‚úƒƒ‚ûƒ	ƒƒ+ƒ ƒ‚ÿƒ
+ƒƒ‚áƒƒƒƒ
+ƒ‚ò‚þƒ4‚øƒ'ƒƒƒƒ‚ú‚êƒ!ƒƒ0ƒ<ƒ(‚÷‚çƒ,ƒ‚ø‚ÿƒ>ƒƒ5ƒ‚úƒ&ƒ8ƒ%ƒƒ4ƒ‚ïƒƒ$ƒ8ƒ.‚õƒ	ƒ	‚ÿƒ‚÷‚úƒ5ƒ9ƒƒ ƒ
+ƒLƒƒƒƒƒ‚ç‚ò‚Ý‚ôƒ‚ó‚á‚ó‚ö‚õƒ;ƒƒ/‚ïƒƒƒ-ƒSƒ,ƒƒƒƒ‚éƒ7ƒ4ƒƒ-‚Úƒ&ƒ‚ðƒƒƒ,ƒ*‚ýƒƒƒ‚øƒ"‚ÿƒ‚÷ƒƒƒ.ƒƒƒƒƒƒ!ƒ‚úƒƒ#‚ðƒ‚õƒƒƒ‚öƒƒƒ ‚ûƒ<ƒ;ƒ‚îƒJƒ+ƒ$ƒ3ƒƒ‚÷ƒ4ƒ0ƒD‚ëƒ*ƒ3‚ýƒ1‚æƒƒƒƒ$ƒ2‚öƒƒ)ƒ!ƒƒƒ@‚óƒ‚þƒƒƒ.‚ï‚ÿƒƒƒ!‚ûƒƒƒƒ‚úƒ	ƒƒ&ƒ8ƒƒƒ#ƒ*‚ñƒ$ƒ%ƒƒA‚öƒ8ƒƒ ‚ã‚ä‚èƒƒƒ'ƒ'‚ìƒƒƒƒƒ&ƒƒƒƒ‚úƒƒƒ‚öƒƒƒƒƒ0ƒ5ƒƒƒƒƒ/ƒ1ƒƒ$ƒB‚íƒƒKƒ!‚ô‚ÿƒ#ƒƒ3‚þ‚ÿ‚áƒƒ‚üƒ>ƒ‚þ‚óƒƒƒƒ
+‚ýƒ)‚ûƒƒƒ!ƒƒƒ/‚ñƒ+ƒƒ ƒ
+ƒƒ ƒƒ6‚áƒ>ƒƒ$‚÷ƒƒ‚þƒ/ƒ‚ê‚ùƒ$ƒ*ƒƒ!ƒ ‚þ‚ßƒ6ƒ#ƒ
+ƒ'ƒ(ƒƒ!ƒ$ƒ‚ýƒ:ƒ!‚þƒƒ*ƒƒ*‚ñƒƒ‚ýƒƒƒ&ƒ(‚øƒƒ‚øƒ+ƒ"ƒ‚þ‚áƒƒƒ‚îƒ&ƒ'ƒƒƒbƒ/‚óƒƒ/‚ùƒƒ,ƒƒ‚üƒƒ(ƒƒ)ƒ*ƒ ƒƒƒ,‚úƒ‚ùƒ ƒƒƒƒ)ƒƒ'ƒ&ƒ#ƒ ƒƒ+ƒ+ƒƒ!ƒ ƒ*‚ýƒD‚øƒƒ)ƒNƒƒƒ	‚ó‚ø‚ÿƒƒƒƒ4ƒ"ƒƒ‚òƒƒ ‚åƒƒƒ/ƒ<ƒƒƒƒƒ7ƒƒƒƒ3‚ýƒ+ƒƒƒ!ƒƒ,ƒ+ƒ!ƒ1‚çƒƒ!ƒ!ƒƒ2‚øƒƒƒƒ%ƒ1‚ôƒ=ƒ*‚öƒ$‚ôƒƒ.ƒƒƒƒ3ƒƒƒƒƒ
+‚üƒƒƒƒ‚ÿƒLƒ2ƒ>ƒƒƒ‚¾ƒƒ‚ýƒƒƒƒƒ‚ÿƒ"ƒ7ƒ ƒ
+ƒ&ƒƒƒƒƒ	ƒ"ƒƒƒGƒ!ƒ‚ýƒƒƒ(‚ù‚þƒƒ
+‚îƒ+ƒ‚ÿ‚÷ƒ‚õƒ?ƒƒ0ƒO‚ìƒ,ƒ-‚ëƒƒ‚îƒ!‚àƒ'ƒƒ‚Òƒƒ#ƒ
+ƒ ‚ÿ‚þƒD‚Îƒƒƒ
+ƒƒ8ƒ
+ƒ,ƒƒƒƒ ƒƒƒƒ‚üƒƒƒƒ‚ð‚ìƒƒƒ'‚èƒƒƒƒ%ƒ‚úƒ*ƒƒƒ(ƒƒƒƒƒ"ƒƒ	ƒ‚ùƒ‚ðƒ‚õƒƒ(ƒƒ‚þƒƒƒƒ$ƒƒƒ$‚Åƒƒƒƒ ƒ'ƒaƒGƒƒ‚ùƒ/‚âƒ‚òƒ(ƒ$ƒƒƒƒƒ
+ƒ&ƒ4‚çƒƒ	ƒƒ	ƒƒ-ƒƒƒ	ƒ+ƒƒ8ƒ.ƒ‚÷‚îƒ‚éƒƒ,ƒ!ƒ3ƒEƒQƒ‚îƒƒƒ‚ù‚îƒƒ!ƒ‚ûƒ‚ÿƒƒƒƒƒ3‚þƒƒ!‚âƒƒƒ1ƒK‚úƒ‚âƒ‚þƒƒƒ'ƒ4ƒ	ƒ ƒƒƒ#ƒƒ?ƒ‚üƒ/‚þƒƒ"ƒƒ‚öƒ4ƒƒƒ‚ùƒ‚óƒƒ6ƒ%ƒ$ƒƒ=ƒ‚úƒ
+‚þƒ4ƒƒ*‚ñƒ.ƒ ƒ‚ùƒ,ƒ7ƒ+ƒƒ#ƒ'ƒƒƒƒƒNƒƒ:ƒ2ƒƒƒƒƒ$ƒƒƒƒ'‚ó‚ôƒ$ƒƒ%ƒƒƒƒ‚ä‚ú‚ÿ‚çƒƒƒƒƒ'ƒ‚Üƒƒƒ!ƒƒƒ'ƒƒƒ
+ƒ.ƒ/ƒ,ƒ‚ð‚òƒ^ƒ)ƒƒƒ‚ôƒƒ‚çƒ"‚îƒ<ƒƒ‚ðƒ.ƒƒƒ-ƒ'ƒ'‚õƒƒƒƒƒƒƒ‚òƒ9ƒ+ƒƒ‚îƒƒƒ&ƒƒƒ‚ïƒƒƒƒ,ƒƒ"ƒ	ƒƒƒƒƒƒ‚öƒƒƒ
+ƒƒƒƒ‚ôƒ,ƒƒ‚ñƒ&ƒ;ƒ‚þƒƒ!‚îƒƒƒƒ>ƒ4ƒƒƒƒƒƒƒƒ‚ö‚ìƒ;ƒ+‚ùƒƒƒ0ƒƒƒƒƒƒ‚ñƒ*ƒ ƒ8ƒ+ƒ‚ëƒ‚êƒFƒJ‚éƒ6‚ç‚Ûƒ‚¾ƒ‚áƒƒ1ƒ%‚äƒ‚ø‚üƒ	ƒ,ƒƒ9ƒƒ!ƒ'‚ïƒ	‚ÿƒƒ
+ƒƒ9ƒ"ƒƒA‚î‚þ‚ÿƒƒ‚þƒƒƒƒ‚úƒ;ƒƒ‚ëƒƒƒ'ƒ…W…ƒ2ƒ	ƒƒƒ&ƒ‚îƒ‚û‚ù‚ßƒ ƒ)ƒƒ‚åƒ4ƒƒ-ƒ‚÷ƒ,ƒƒƒƒ‚õƒƒƒƒƒ	ƒ<ƒƒ(ƒ#ƒ ƒ
+ƒ‚öƒƒ#‚ýƒƒƒ-‚ýƒƒƒƒƒ ƒƒƒƒ,ƒ‚ð‚ìƒƒ5ƒ‚ÿ‚ûƒƒ!ƒ3ƒƒƒE‚íƒ6ƒƒƒ>ƒ-‚ôƒƒƒƒ4ƒƒ1‚Öƒƒ‚öƒ,ƒƒƒ!ƒ'ƒ&ƒƒƒ:ƒ#ƒƒƒ‚ûƒƒ‚þƒƒƒƒƒ‚ÿƒ0ƒ ƒ/ƒƒƒƒƒ+‚üƒ‚úƒƒƒƒƒ!ƒƒ‚îƒƒ4ƒ)ƒ@ƒƒ4ƒƒ‚ñ‚Ýƒ"ƒ6ƒ	ƒ#‚íƒƒ	ƒƒ	ƒ(ƒ.‚éƒ"ƒ ‚ôƒƒ‚âƒƒƒƒAƒƒƒ‚úƒƒƒ ƒ7ƒƒ/‚÷ƒƒƒƒ;ƒ9ƒ@ƒ‚ú‚ìƒƒƒƒƒƒƒ,ƒƒ‚åƒƒ†Õƒ	ƒ‚âƒ‚ü‚íƒ0ƒ‚ùƒ‚þƒ0ƒ%ƒ.‚ìƒƒƒ‚ûƒƒFƒ‚ýƒƒ#‚ý‚ûƒ@ƒ1ƒƒ'‚Ýƒ8ƒ,ƒ/ƒƒ"‚æƒƒ%ƒ,ƒƒ.ƒ-ƒ0ƒ‚þ‚û‚îƒƒ ƒ(ƒƒƒGƒ$ƒƒƒ‚ù‚ýƒ
+ƒ!ƒ‚õ‚ýƒƒƒ	ƒ%ƒDƒƒƒƒ@ƒ@ƒ(ƒ ƒ‚ùƒ%ƒ	ƒ‚û‚ôƒ‚öƒ‚óƒ(ƒƒ)‚Öƒƒƒ
+ƒƒƒUƒƒƒ$ƒƒƒƒƒ-‚ÿƒƒ"ƒ%ƒ	ƒƒ‚þ‚üƒƒ8ƒƒƒ)‚ýƒ‚â‚öƒƒ%ƒ0ƒƒ
+‚ðƒƒƒ*ƒ$‚öƒ
+ƒƒ!ƒLƒƒƒ*ƒ7ƒƒƒƒƒ"ƒ+ƒ‚Ü‚ûƒ"ƒ0ƒƒ&ƒƒ5ƒ$‚ùƒ#ƒƒƒ'ƒƒƒƒƒƒ4‚ôƒƒƒ‚úƒƒ4ƒ!‚íƒƒ ƒƒƒ&ƒFƒƒƒ$ƒ'ƒ ƒƒ ƒi…iƒfƒƒ.ƒƒ*ƒƒƒ&ƒƒƒƒ‚ùƒ$ƒ ‚òƒ‚îƒ3ƒƒ$ƒƒ‚ú‚ùƒƒ4ƒƒ ƒ‚é‚üƒ ƒƒ-‚Þƒ0ƒ ƒƒ
+‚çƒ‚ó‚ñƒƒ7ƒ"‚øƒƒƒƒ‚Ù‚íƒ9ƒ(ƒ"ƒƒ"ƒ/ƒ@ƒ$ƒ8‚ýƒ ƒ0ƒ‚ýƒƒƒ‚óƒƒƒƒ;ƒƒ ƒ‚øƒ&ƒƒ9ƒ,ƒƒƒ(ƒ"‚ê‚òƒƒ*ƒƒ‚ïƒ!ƒ	ƒ!ƒƒƒ+ƒ+ƒƒƒƒ@ƒ/ƒƒƒƒ ƒ‚þƒƒ ƒ#‚×ƒƒ!ƒƒ,ƒ ƒƒ'ƒ]ƒ5ƒ7‚÷ƒ!ƒƒ/ƒ!‚ðƒ7‚ïƒ‚ÿƒƒ0ƒƒƒ1ƒƒC‚åƒƒ'ƒƒƒƒ:ƒ3ƒƒƒ$ƒ!ƒ;ƒ"ƒ$ƒƒ
+ƒƒ‚þƒƒ	ƒ!ƒ	ƒƒƒƒƒ,‚Æ‚ûƒ‚ÿƒ‚õƒ?ƒ"ƒƒƒ>‚ß‚ÿƒ7‚ëƒ:ƒƒƒƒƒw„Äƒ»ƒ-ƒƒƒƒ!ƒ‚úƒƒ‚õƒƒƒ=ƒƒƒ‚âƒƒ%ƒƒƒ‚þƒ‚æƒ‚ñƒƒ‚ÿ‚ðƒƒƒƒ9ƒ‚ðƒ@ƒ‚ôƒƒ‚ÿƒ/ƒƒƒ-ƒƒƒƒ,ƒ‚óƒƒƒ#‚öƒXƒƒƒO‚êƒƒhƒƒ ƒƒ-ƒ)ƒƒƒKƒKƒƒ$ƒƒƒ
+ƒ‚ðƒƒ‚ñ‚ÿƒƒƒƒ$ƒƒƒƒ&‚úƒƒ3‚ðƒ%ƒ%ƒ1ƒ ƒƒ&ƒƒƒƒ‚öƒƒƒƒ
+‚ùƒ?ƒ&ƒ&‚üƒƒ?ƒƒƒ
+ƒƒ ‚ÿƒ=ƒƒ!ƒƒ>ƒƒ
+‚óƒ%ƒƒ	ƒ,ƒƒWƒƒƒ%‚àƒ	ƒƒ$ƒ‚úƒ
+ƒ‚ò‚÷ƒ<‚äƒƒ"ƒƒ‚ûƒJƒƒƒ‚þƒ7ƒƒƒƒƒƒ
+ƒ ‚ðƒ:ƒ+ƒ"ƒIƒ‚ì‚Éƒ$‚üƒ-ƒ9ƒ‚çƒ‚ùƒƒ‚þƒƒƒx†„–ƒ_ƒƒƒ-ƒ‚÷ƒƒ‚øƒ‚öƒƒƒƒ-ƒ1‚×ƒ‚óƒƒBƒ4ƒ>‚äƒXƒƒƒƒ ƒ&ƒƒ!‚úƒ
+‚ôƒAƒ-ƒƒ9‚öƒƒ!‚øƒƒƒ/ƒ;ƒ	ƒ5ƒƒƒ‚ëƒƒ‚ôƒ‚þƒ$ƒƒƒ‚õƒ#ƒ=ƒ ƒƒƒ@ƒHƒ ƒƒ*ƒƒ-‚ýƒƒHƒ‚úƒ!ƒ‚Û‚ëƒƒƒ#ƒƒ;ƒƒ‚ÿƒ)ƒ	ƒƒƒ9ƒƒ2ƒ#ƒƒBƒƒ/ƒƒƒ-ƒ	ƒƒƒƒƒCƒƒƒƒƒƒƒ'ƒƒ!ƒƒ&ƒƒ‚ÿƒƒ#ƒ&ƒƒ'‚ûƒ%‚üƒ@ƒ,ƒƒƒ'ƒAƒƒƒƒƒƒƒ?ƒƒƒ-ƒ#ƒƒƒ,ƒƒ#‚øƒƒƒ‚ôƒƒƒ‚Úƒ!ƒ#ƒƒ7ƒ‚ó‚úƒ ƒƒ7ƒƒ‚ò‚æƒƒƒ$ƒƒƒ‚øƒ"‚çƒ6ƒƒ2„W…À„ßƒrƒ9ƒ6ƒ‚êƒƒƒ+ƒ‚üƒ7ƒ_ƒ"ƒ1ƒ	ƒƒƒ!ƒƒ ƒƒ0‚úƒƒƒ>ƒ#‚ÿƒ(ƒƒƒ.ƒƒƒƒF‚ôƒ‚í‚ÿ‚ÿƒ.ƒƒ5ƒƒƒ+‚ðƒƒƒƒƒƒ.ƒ7ƒpƒ-‚ÿƒ ƒ1ƒ.ƒƒƒƒƒƒ1ƒƒƒƒƒƒ4ƒ‚üƒ
+ƒ*ƒD‚âƒ‚üƒ'‚ûƒƒ)ƒƒƒƒƒ"ƒ)ƒƒ.ƒ ƒ&ƒƒ"‚øƒ‚ôƒƒ'ƒƒ‚ò‚ç‚þ‚øƒ/ƒ
+ƒƒ
+ƒƒ!ƒ%ƒƒ#ƒƒ@ƒƒ/ƒƒ!ƒI‚þƒ"ƒ‚üƒ7ƒƒEƒƒƒ	ƒƒ(ƒ‚ÿƒ$‚ú‚öƒƒƒƒ‚÷ƒ‚ðƒ=ƒƒ&ƒƒƒƒ
+ƒƒ‚÷ƒƒ‚óƒƒ,ƒ	ƒƒƒ.ƒ%‚ýƒ
+‚ðƒ/‚óƒƒ=ƒ(ƒƒ#‚óƒƒƒ‚öƒ%ƒ
+ƒ1‚üƒ#ƒƒƒƒƒWƒ¨†©„›‚èƒDƒƒ‚ìƒ/ƒƒ-ƒƒ
+ƒƒƒƒ ‚ñ‚þƒ@ƒƒƒƒ:ƒ ‚ùƒƒƒ
+ƒ$ƒƒƒƒƒ>ƒ'‚îƒƒƒƒ6ƒƒƒƒƒ%ƒ‚åƒbƒ	ƒƒGƒ*ƒ$ƒƒ7ƒƒEƒ#ƒ
+ƒ%ƒ/ƒƒƒ#ƒƒ2ƒ#ƒƒ@ƒƒ8ƒKƒƒ!ƒ"ƒƒ=ƒƒƒƒƒ!ƒ3ƒƒ*ƒ*‚îƒƒ‚úƒƒƒ8‚ä‚üƒ‚ýƒƒ ƒ‚Åƒ(‚öƒƒ)ƒ-‚é‚öƒƒ‚û‚æƒƒ8ƒ,ƒ-ƒƒƒCƒƒ<ƒ<ƒTƒƒƒƒ‚éƒ'ƒƒƒƒ$ƒƒƒƒƒ%ƒ?ƒƒƒ8ƒƒƒƒƒƒƒƒ2ƒ‚ë‚å‚ýƒ0‚ìƒ‚ñƒƒƒ4ƒ#‚ûƒAƒEƒ.ƒƒC‚ûƒƒ	ƒƒ.ƒƒGƒƒƒƒƒ‚éƒƒƒƒƒ‚ú‚ô‚ùƒ,ƒƒƒ+ƒ‚ä†éƒÖƒƒ0ƒ$ƒ)ƒƒ‚úƒ7ƒ ƒ‚å‚ù‚òƒƒƒ6ƒ‚Ýƒƒ‚æƒ‚ü‚÷ƒ8ƒƒƒƒƒ‚õ‚÷ƒƒ7ƒƒƒƒ5‚Þƒ ƒƒƒ‚úƒƒƒ<ƒ$ƒƒƒ
+ƒƒ‚ó‚þ‚øƒƒ%ƒƒƒƒ‚÷ƒƒ*ƒƒ1ƒ(‚üƒ.‚ûƒAƒƒƒƒ‚úƒ‚öƒ<ƒ	ƒƒ;ƒƒƒƒ(ƒ‚þƒ‚þƒƒƒ-ƒ‚úƒ'ƒA‚Îƒ‚ýƒ(ƒƒ	‚ñƒƒ3ƒ6ƒ.ƒƒ‚ûƒƒ5ƒTƒgƒZƒHƒVƒKƒ&ƒMƒMƒ%ƒ
+ƒSƒ‚îƒKƒQƒ‚ðƒ8‚ñƒƒ*ƒƒ"ƒƒƒƒ-ƒ7ƒƒ1ƒ ƒƒƒ@ƒ0ƒ2ƒ?ƒƒ2ƒ‚øƒƒ)ƒƒ1‚çƒMƒƒ"ƒ%ƒ!ƒƒ!ƒƒƒƒƒ!ƒ‚óƒƒƒ<ƒ
+ƒ	‚óƒ?ƒƒ'ƒƒƒƒƒƒ
+‚å‚à‚ùƒ‚ß‚êƒƒƒ0‚ÿƒ‚ûƒ
+ƒ#ƒ‚ê‚äƒ)ƒƒ9ƒ9ƒƒ>‚ÿƒ#ƒ-ƒƒ-ƒ!ƒ‚ú‚ý‚íƒƒ8ƒ7ƒƒ$ƒ1ƒ	ƒ‚úƒ3ƒƒ,ƒ&ƒƒ‚áƒ@ƒ+ƒ:ƒ#ƒ ƒƒ ƒƒ0ƒ8ƒ2ƒƒ4ƒAƒ<ƒƒƒƒƒƒ<ƒƒGƒ#ƒƒƒ=ƒƒƒ‚îƒ	ƒƒƒƒƒ.ƒƒ@ƒ.ƒƒ ƒ‚õ‚òƒƒƒƒƒ/ƒ!ƒ)‚úƒƒƒ?ƒƒ ‚ôƒƒƒ@ƒ,ƒ8ƒƒN‚þƒ;ƒ”ƒzƒ}ƒ´ƒÍƒ›ƒƒxƒµƒjƒ†ƒpƒDƒHƒ)ƒ ƒƒ ƒ ‚ý‚ïƒ‚þƒHƒƒƒ+ƒƒƒ9‚õƒ‚çƒ:ƒ‚êƒH‚úƒƒ'ƒƒƒ;ƒ*ƒ8ƒ%ƒƒ"ƒ+ƒ!ƒ%ƒ+ƒ?ƒ(ƒƒ‚úƒ1ƒ‚äƒƒ	ƒƒ‚ñ‚Ýƒƒ!ƒƒƒ1‚Ùƒƒƒ/ƒƒƒƒ#ƒ/‚ëƒƒƒƒ‚ëƒ.ƒ‚ûƒ"‚öƒ‚øƒ+‚üƒƒƒ‚òƒ1ƒ ƒƒƒƒ/ƒ	‚ïƒR‚ýƒƒ%ƒCƒ6‚þƒƒ&ƒE‚çƒ(ƒ‚üƒƒHƒƒƒ7ƒ$ƒƒAƒƒƒ:ƒ ƒ-ƒ	ƒƒƒƒ-‚ÿƒ1ƒ$ƒ5ƒ%ƒ:ƒJƒ_ƒ7ƒ.ƒ‚óƒƒƒƒ$‚þƒ+ƒƒƒƒ#‚ô‚ÿ‚ñƒƒƒ%‚ò‚ðƒ	ƒ?ƒ	‚ýƒƒƒƒ'ƒƒ"ƒƒ‚ú‚÷ƒƒ:ƒƒ‚ñ‚÷ƒ"‚Öƒ"ƒ8ƒ9ƒµ„„r„‡„|„O„`„@„+„ƒâƒ­ƒ ƒ9ƒ+ƒ9ƒ:ƒƒ ƒ)ƒƒ0ƒƒ‚ß‚èƒƒ!ƒ!‚öƒ‚ñƒƒƒ&ƒƒƒƒƒ&ƒ$‚òƒ;ƒƒƒ‚ûƒ‚Üƒƒ‚ùƒ ƒ	ƒ‚æƒƒ‚öƒƒ$ƒ"ƒ ƒƒƒƒ‚ûƒ‚ö‚ÿ‚íƒ ƒ5‚àƒ‚óƒ&ƒ)ƒ
+‚ûƒƒƒƒƒƒ!ƒ ‚úƒe‚úƒ‚ûƒƒ‚ûƒ2ƒƒƒ)‚ÿƒ‚ôƒƒƒ(ƒ0ƒ#ƒƒƒ/ƒNƒ&ƒƒƒ'ƒ
+ƒƒ0ƒƒ-ƒƒ‚ÿƒ;‚úƒ-ƒ.ƒ0ƒ(ƒ%ƒƒGƒ!ƒ3‚Ó‚Þƒ
+‚üƒƒ;ƒ'ƒ"ƒƒ1ƒ<ƒIƒ;ƒFƒ9ƒ!ƒG‚üƒ ‚ø‚öƒ,ƒƒƒƒ‚ïƒ‚ò‚ðƒ(ƒƒƒƒ5‚ÿ‚ÿ‚ïƒ&ƒƒƒ*ƒ&ƒ5ƒƒ‚õƒƒƒ&‚öƒƒƒƒ8ƒƒƒcƒz„$„¥…=………k…Â…m…e…….„„kƒãƒ”ƒzƒƒ4ƒƒ3ƒ1ƒ‚ÿƒƒƒ‚õƒƒƒ	ƒ)ƒ+ƒ4ƒ%ƒFƒ ƒ)ƒƒƒ‚îƒƒƒ&ƒƒ1‚êƒ‚ùƒ)ƒ1ƒ‚ÿƒ
+ƒ1‚Ö‚þƒJƒ3‚ëƒƒ‚ý‚Í‚Õ‚ú‚ìƒ ƒ‚ä‚üƒƒƒ,ƒƒ*ƒ%ƒ"ƒƒƒ!ƒƒƒ‚ö‚ùƒ‚ýƒ‚íƒ5ƒ!ƒ5ƒƒ‚÷ƒ3ƒ=‚þ‚úƒƒ'‚ô‚ðƒ#ƒƒ‚ûƒƒ%ƒƒ?ƒƒ'ƒ+ƒƒ0ƒ-ƒL‚èƒƒ0ƒ.ƒ+ƒVƒ,ƒ5ƒ7ƒIƒ7ƒ3ƒJƒcƒ1‚÷ƒL‚ùƒ6‚Üƒ*ƒ
+‚ïƒ6ƒƒƒ?ƒ+ƒ.ƒ6ƒTƒƒƒ'ƒ6ƒ(ƒ&ƒƒƒƒIƒƒ2‚êƒƒ"ƒ‚åƒ ƒ"ƒ*ƒ
+ƒ	‚ûƒ*ƒƒ7ƒƒ*ƒƒƒƒ‚÷ƒ2ƒ>‚ëƒƒƒ,ƒ‚ûƒ
+ƒ ƒJƒeƒî„_…9…0…u…t…Ð……Ý…H…J„×„nƒÕƒ|ƒPƒƒ	ƒ	ƒƒƒƒ/ƒ2ƒ"‚ûƒƒ$ƒ‚èƒƒƒƒƒIƒ'ƒƒ	ƒ‚óƒ	ƒƒƒ)‚öƒƒƒ4ƒ‚öƒ(‚úƒ!ƒ‚òƒƒ$ƒ‚þƒ‚üƒƒ3ƒƒƒƒ
+ƒ‚ûƒƒƒ-ƒ‚ìƒƒƒƒƒ
+ƒ<ƒƒ;ƒƒ"‚èƒ‚ßƒ(ƒ	ƒƒƒ"‚þƒƒ.‚óƒ:ƒ%ƒI‚þƒƒIƒ ƒ	ƒƒƒ'ƒƒ.ƒƒ@ƒUƒƒ.ƒ*ƒ:ƒi‚ÿƒƒ(ƒƒƒƒ)ƒ$ƒƒ4ƒqƒAƒzƒIƒrƒ<ƒƒƒƒKƒ+ƒ‚èƒ ƒƒ+ƒƒ'ƒJƒzƒ"ƒ.ƒ5ƒƒ2ƒ1ƒ ƒ(ƒƒƒƒƒ-ƒ&ƒƒƒ.‚øƒ.ƒ‚ÿƒƒ>ƒ.ƒ0ƒ	ƒ:ƒƒ ƒ!ƒ"ƒƒ5ƒƒƒƒ=ƒƒƒƒƒƒ&ƒƒƒPƒwƒ‰ƒø„„8„s„ƒ„¸„É„ô…„ï„É„xƒíƒƒƒ"‚àƒ)ƒ ƒƒƒƒ"ƒ‚ç‚õ‚ýƒƒƒƒƒ‚ú‚ûƒƒƒ:ƒ!ƒ
+ƒƒ'ƒƒ3‚ùƒƒ(ƒƒƒ-ƒƒƒƒ6ƒƒ‚éƒƒ+ƒƒ	ƒƒƒ‚÷ƒƒ‚àƒƒ5ƒƒ)ƒ‚ÿƒ‚üƒƒ+ƒƒƒƒƒƒƒƒ3ƒƒƒƒƒVƒƒƒ-ƒ‚ìƒƒ?ƒ&ƒƒ!ƒ%ƒƒ"ƒ‚èƒƒ3ƒƒ*ƒ ƒ7ƒƒ:ƒ9ƒ7ƒƒƒƒƒ%ƒƒ.ƒ#ƒVƒƒ:ƒƒ•ƒ|ƒ ƒKƒPƒ,ƒ&ƒ.ƒƒƒƒ"ƒƒ‚ÿƒLƒ-ƒ)ƒƒ`ƒaƒ6ƒ4ƒLƒ"ƒ*ƒƒ3ƒ"‚ûƒ‚ýƒ"‚ú‚ûƒƒƒ‚øƒƒ‚ûƒ#‚ýƒ ƒ0ƒƒ‚êƒ‚ôƒ*ƒD‚ì‚üƒ?ƒ1ƒƒ‚öƒ‚úƒƒ7ƒ;ƒ3ƒHƒzƒbƒ¬ƒŽƒ ƒ¾„ƒì„„7ƒêƒæƒ˜ƒVƒ.ƒ ƒ3‚íƒ,ƒ9ƒ+ƒ5ƒƒH‚÷ƒ(ƒ ƒ8ƒƒƒƒ‚þƒ'ƒ‚üƒ‚õ‚ý‚Þƒ!ƒ%ƒƒƒ/ƒƒ)ƒ)ƒƒƒ"ƒƒ%ƒ=ƒƒG‚úƒ‚ú‚ýƒƒƒ	ƒƒƒ(ƒ%ƒƒƒ"ƒƒ4‚ÿƒ‚öƒƒ&‚ìƒƒƒ4‚ýƒƒ&ƒƒ‚øƒƒ#ƒƒƒaƒ ‚ôƒƒJƒƒƒ$ƒ$ƒƒƒ(ƒ/ƒ3ƒ6ƒƒ9ƒƒ#ƒOƒ ƒ4ƒƒƒ=ƒ ƒƒ-ƒ)ƒMƒƒ6ƒƒ#ƒ7ƒpƒyƒÞƒyƒ¨ƒeƒ:ƒGƒEƒ<ƒ4ƒ?ƒƒCƒƒƒƒBƒ(ƒLƒKƒƒƒƒ5ƒƒ=ƒ0ƒƒƒ3ƒƒ5‚ÿƒƒƒ)ƒ ‚âƒ&ƒ%ƒ‚ÎƒƒGƒƒƒ‚ù‚ùƒQ‚ëƒ‚ø‚úƒ‚ýƒƒƒ=‚üƒƒƒƒ3ƒ>ƒ#ƒNƒ9ƒaƒlƒRƒWƒ}ƒrƒ~ƒƒ€ƒ–ƒvƒVƒ#‚ôƒ	ƒ$ƒ ƒ#ƒ.‚ûƒƒ,ƒ	ƒƒƒ4ƒƒ/ƒ‚þƒƒ‚þƒƒ%ƒ	ƒ*ƒ;ƒ0ƒ(ƒƒ‚õƒƒƒBƒƒƒƒ
+‚ó‚úƒ‚î‚æƒƒ5‚ù‚þƒ8ƒƒ.‚ìƒ‚ù‚âƒƒ	ƒ!ƒ‚üƒƒƒƒNƒƒƒƒƒ‚å‚ý‚ðƒ1‚ÿ‚øƒƒƒ;‚þƒƒ‚ðƒƒ ƒƒƒƒƒ,ƒ@ƒ4ƒ5ƒƒ@ƒ ƒ!‚ôƒ*ƒƒƒ-ƒ,ƒƒ5‚ÿƒ&ƒƒƒ	ƒ‚óƒƒEƒ,ƒVƒ©ƒµƒ’ƒ¢ƒ;ƒMƒƒƒ*‚ý‚øƒƒƒ!ƒ$‚ç‚ýƒEƒ:ƒƒEƒ0ƒ3ƒƒƒƒ/ƒƒƒƒƒ‚ùƒƒƒ1ƒ1ƒ%ƒ1ƒƒ.ƒƒ.ƒƒƒ‚üƒ"ƒƒƒƒ$ƒƒƒ!ƒƒƒ‚ê‚Ûƒ/ƒƒ ƒƒ)ƒ#ƒƒƒƒƒ)ƒ9ƒ4‚óƒGƒƒƒIƒsƒ0ƒ3ƒ(ƒ/ƒƒ,ƒ‚óƒ$ƒ%ƒƒƒ)ƒƒ	‚òƒƒ=ƒEƒ*ƒ"ƒƒ8ƒƒƒ‚øƒƒƒ)ƒ‚ïƒ
+‚ô‚úƒƒ)‚ïƒƒ‚üƒH‚ìƒƒƒƒ)ƒ ƒ?ƒƒ‚øƒƒƒƒ5ƒƒƒƒBƒƒ>ƒƒƒƒ@ƒƒ ƒ ƒƒ*ƒƒƒ$ƒƒEƒƒ%ƒƒ	ƒ&ƒƒƒ&ƒƒƒ/ƒ1ƒƒ‚îƒ
+ƒ(‚îƒƒ4‚ÿƒ8ƒ9ƒƒ‚Öƒ!‚þƒ-ƒƒ'ƒ&ƒƒƒƒƒOƒJƒfƒ€ƒ‰ƒ¤ƒ˜ƒƒ5ƒƒ*ƒ‚öƒƒ‚ýƒ'ƒ-‚æƒƒƒXƒ?ƒ#ƒxƒƒ!ƒƒ‚ýƒ;ƒƒƒƒ"ƒƒ6ƒ%ƒ+ƒ4ƒKƒ)ƒ‚øƒ‚ûƒƒƒ‚÷‚â‚õƒƒƒ6ƒ
+‚óƒ'ƒƒ"‚ýƒ#ƒ%ƒƒƒƒBƒ5ƒ6ƒ ƒ‚þ‚ûƒ
+ƒCƒƒ+ƒ9ƒƒ+ƒ*ƒ9ƒEƒƒƒƒƒ,ƒƒƒƒƒ!ƒƒ.ƒ.ƒƒ3‚äƒƒ"ƒ"ƒƒ#ƒƒ‚âƒƒƒ"‚îƒ ƒƒ"ƒ0‚ÿ‚õƒƒ<ƒ#ƒ‚Þƒƒ4ƒ‚ÿƒƒƒ‚Ñƒ#ƒƒƒƒƒƒDƒƒƒƒ'ƒ‚î‚üƒ‚îƒ6ƒ#ƒ0ƒƒ$ƒ'ƒ)‚ùƒƒƒ-ƒƒ5ƒ‚ÿƒ
+‚õƒƒƒ2ƒƒƒƒ1ƒƒ.‚ý‚úƒQƒƒ#ƒƒ‚ýƒH‚û‚óƒ7ƒƒƒƒ ƒ
+ƒƒ5‚Ûƒ>ƒ*ƒƒJƒ%ƒCƒ@ƒ\ƒgƒJƒ<ƒ5ƒ
+ƒƒƒ‚ùƒ ƒ ƒƒ"ƒ#‚çƒ‚ûƒ;ƒ*ƒLƒƒAƒƒ*ƒƒ‚ä‚þƒƒƒ"ƒƒƒƒƒ‚ú‚üƒ‚õƒ%ƒ ƒ*ƒ ƒƒƒ4ƒƒƒƒƒ‚ïƒƒ‚õƒ‚åƒƒƒƒ%ƒƒƒ(ƒƒƒ&ƒ-ƒ8ƒƒƒ/ƒ‚ùƒJƒ+ƒƒ'ƒƒƒƒƒ'ƒ-ƒƒƒƒƒ‚Ó‚åƒ‚þƒ&ƒGƒƒƒ*ƒ)ƒ‚ó‚óƒƒ‚Ñƒƒ-ƒƒ
+ƒ
+ƒƒƒƒ‚æƒ<ƒ1ƒƒ ‚éƒƒ‚øƒƒ'‚þƒƒƒ$‚ãƒƒƒƒƒ‚ýƒƒƒ	ƒ
+ƒ5ƒƒ‚þƒ‚ùƒ‚ïƒƒ+ƒƒƒƒƒ‚ëƒƒƒ6ƒ"ƒ,ƒƒ
+ƒƒƒ5ƒƒ*ƒ*ƒ
+ƒ7‚÷‚êƒƒ*‚øƒ1ƒƒƒƒ
+ƒ%‚ÍƒƒƒƒQƒIƒfƒ4ƒ6ƒMƒBƒ+ƒƒ+‚çƒ"ƒ6ƒƒ	ƒ'‚îƒ ƒ‚æƒ	ƒƒ-ƒAƒƒ>ƒƒDƒ2ƒ4ƒƒ!ƒƒƒ ƒƒƒƒ:‚þƒ.‚ùƒƒƒƒƒƒ
+‚éƒ8ƒƒƒƒ‚ãƒC‚ÿƒ ƒƒƒƒ‚æƒƒƒƒƒ0ƒ;ƒƒƒƒƒAƒ*‚ôƒƒƒ4ƒ	‚ôƒIƒƒ/ƒ&ƒƒƒƒƒ*ƒ(ƒHƒ‚ûƒƒƒƒ$ƒ8‚óƒƒ.ƒAƒ6ƒ-ƒ"‚èƒ#ƒ5ƒ‚ã‚üƒ
+ƒƒ<‚öƒƒƒ.ƒƒƒƒ
+ƒƒƒƒ‚ôƒƒƒ ƒƒ
+ƒƒGƒƒƒ‚ü‚úƒƒ&‚þ‚ùƒ1ƒ"ƒ0ƒƒL‚òƒƒ&ƒAƒƒ	ƒƒƒ9ƒƒƒƒƒ‚þƒƒƒ)ƒ/‚ìƒƒƒ)ƒƒ ‚üƒƒ+ƒ*ƒƒƒ#ƒ ƒ‚éƒ"ƒƒ(ƒ#ƒƒ‚þƒ&ƒƒ&ƒƒ‚ýƒƒ1ƒ+ƒƒZƒ(ƒ'ƒ ƒƒƒ2ƒƒ'ƒƒƒ#ƒ7ƒ2ƒƒ‚ìƒƒ
+ƒ9ƒƒGƒ:ƒƒCƒƒƒE‚üƒƒƒƒ#ƒƒ&ƒƒƒƒƒƒ	ƒ0ƒGƒ"ƒ#ƒƒƒ‚ÿƒ‚ûƒ‚êƒ ƒƒ3ƒƒ#‚þ‚ùƒ"‚òƒƒ-ƒ(ƒƒƒ%ƒƒ‚úƒ2ƒƒ>ƒ*ƒƒ#‚ýƒ5ƒƒR‚ÿƒ‚Óƒ$‚ÿƒƒƒƒ7‚ÿƒ!ƒ8ƒ(ƒ?ƒKƒCƒSƒƒ8ƒG‚áƒƒƒ‚ç‚öƒ‚îƒ'‚ùƒƒƒƒ ‚õƒ9ƒ	ƒ(ƒ)‚òƒƒ‚âƒ4‚öƒƒƒ‚Þƒ‚øƒƒ!ƒ,ƒƒ,ƒ ƒ'ƒƒƒƒ‚ÿƒ2‚ëƒƒ-ƒƒ ‚öƒƒƒAƒ‚òƒƒ ƒ‚äƒ‚ûƒƒ?ƒ"‚úƒ/ƒ4‚íƒƒƒ:ƒ ƒ(ƒƒ"ƒƒ"ƒƒƒ5‚ùƒ'ƒƒ‚éƒKƒ(ƒ#ƒƒNƒ+ƒ@‚öƒƒ@ƒƒ2ƒƒFƒ&ƒƒ)ƒ&ƒ!ƒ‚äƒƒƒƒƒ>‚öƒ‚ó‚ùƒ:ƒƒƒƒƒƒLƒ!‚ëƒƒ‚öƒ>ƒ)ƒ?ƒƒƒ-ƒƒƒ'ƒƒƒƒƒƒƒ‚úƒƒƒ-ƒƒƒ6ƒƒƒ/‚ùƒ'ƒƒƒƒƒ(ƒƒ‚þ‚ú‚öƒƒ‚ò‚ìƒ+ƒƒ‚öƒ(ƒƒ(‚ý‚áƒƒƒƒƒ
+ƒƒ
+ƒ1ƒ‚ÿƒ&ƒƒTƒ&ƒeƒ5‚ùƒBƒƒƒ,ƒƒƒƒƒ‚è‚üƒ0ƒƒƒƒ9ƒƒ‚ûƒ ƒƒƒ9ƒƒƒ
+ƒ-ƒ2‚ñƒ"ƒ‚ûƒ(ƒ*ƒ1ƒ-ƒ&ƒƒ,ƒ‚ô‚ýƒƒ"‚ùƒ,ƒ#ƒ"ƒ‚üƒ ƒƒ‚ÿ‚øƒƒ‚÷ƒƒƒ7‚õ‚öƒƒƒƒ.ƒ/ƒ2ƒƒ;ƒ=ƒƒƒƒƒƒƒ+‚ëƒ
+ƒƒ0ƒ!‚úƒ,ƒƒƒƒ9ƒƒ4ƒ!ƒ"ƒƒƒƒ"ƒ5ƒƒ!‚ýƒ6ƒ‚êƒ ƒ=ƒ$ƒ)ƒƒ&ƒƒƒ‚üƒ5ƒƒƒƒ#ƒ
+‚ûƒ‚úƒƒƒ,ƒ%ƒƒƒ(ƒƒ/ƒ%ƒƒƒ	ƒ:ƒ)ƒƒƒƒ,ƒƒƒƒ?ƒƒƒfƒƒFƒ/ƒƒ ƒƒ
+‚ù‚ýƒ‚þƒƒ^ƒƒƒƒ2ƒ ‚ç‚ÿƒ‚ûƒ	‚èƒƒOƒ0ƒƒ‚ãƒƒ‚ÿƒƒ‚òƒ*ƒƒƒ+ƒHƒ@‚þƒ‚ÞƒƒGƒƒ$ƒƒƒ ƒ	ƒƒ‚ý‚ÿƒƒ:‚ü‚íƒƒƒƒ)ƒ0ƒƒ#ƒ‚ýƒƒ‚ùƒ0ƒD‚ÿ‚ðƒƒ*ƒƒƒƒƒƒƒƒƒ/ƒ%ƒ$ƒƒƒ(‚ùƒ‚æƒ.ƒ1ƒAƒ‚õƒƒƒƒ ‚ç‚òƒƒƒ+‚ÿƒƒ8ƒƒƒ ƒ,ƒƒ.ƒƒ*ƒ‚Úƒ‚õƒ.ƒ=ƒ/ƒ	‚ú‚÷ƒ#ƒ-ƒƒ)ƒ5‚ßƒ'ƒ2ƒ‚ûƒ!ƒƒ
+ƒ‚ùƒƒ‚òƒ%ƒƒ
+ƒƒƒ,ƒƒ'ƒƒƒ ƒƒBƒ‚÷ƒƒ;ƒƒ=ƒI‚ýƒ	ƒƒ ƒƒ*ƒ!ƒƒƒƒƒ ‚ëƒ‚ûƒ<ƒƒƒ7ƒ‚üƒ ƒ#ƒ&ƒƒ#‚úƒ‚ýƒƒ#ƒ6‚ïƒƒƒƒGƒƒ0ƒ,ƒƒ*ƒ‚ùƒ%‚ÿƒƒƒƒ#ƒƒ
+ƒƒƒƒ‚ðƒ&‚ýƒ ‚úƒƒHƒQƒOƒƒƒ+ƒƒƒƒƒƒ‚íƒƒ‚óƒ"ƒƒ#ƒƒ ‚úƒƒ:‚úƒƒƒ*ƒ	‚ûƒƒƒ
+ƒ2‚ôƒ'ƒƒƒ%ƒƒƒƒƒ!ƒ'‚üƒƒƒƒƒƒ"ƒƒ‚Ýƒƒ$ƒ8‚ýƒ‚ð‚æƒƒ>ƒƒCƒƒ‚û‚ÿƒƒ‚äƒ‚ù‚è‚øƒƒ‚ý‚âƒ?‚Û‚Ñƒ
+ƒƒ ƒƒƒƒƒ4ƒ	‚üƒ‚þƒ(‚ÿƒ	ƒƒƒ‚üƒƒƒƒƒƒƒ/ƒ-ƒƒƒƒ%ƒƒ%‚þƒƒƒƒ&ƒ/ƒƒ
+ƒ ‚ÿƒƒI‚÷ƒƒƒƒƒƒ	ƒƒƒ3ƒƒƒ+ƒ8‚ÿ‚ßƒƒƒ‚ãƒƒ ƒƒƒ#‚ýƒ ƒƒ8ƒEƒƒ9ƒ5‚ïƒƒƒƒ2ƒƒƒbƒƒƒ'ƒƒ$‚â‚ãƒ ‚öƒƒƒ‚ýƒ*‚êƒ(ƒ5‚üƒ
+‚ôƒƒ‚ùƒƒƒ(ƒƒƒƒ?ƒ"ƒ]ƒƒƒƒ)‚ðƒ/ƒƒ‚úƒ,ƒƒƒƒ*ƒƒ@ƒ1ƒ9ƒƒƒ‚úƒ‚ôƒ1ƒ$‚öƒ ‚þƒ-ƒ0‚ñ‚ùƒ#‚úƒ+ƒƒ#ƒEƒ%ƒ‚þƒƒƒƒƒ'ƒƒƒ.ƒƒ6ƒ+ƒ&ƒ2ƒJƒ‚ñ‚æƒƒƒ1ƒƒ‚çƒ7ƒ(‚íƒ1‚öƒ3ƒ"ƒ9‚éƒ‚÷ƒ5‚õƒƒ&ƒ ‚ìƒ5‚ýƒ+‚þƒƒƒƒ<ƒ$ƒ!ƒ‚Ýƒƒƒ#ƒƒƒ‚ù‚ÿƒ:ƒ-‚éƒ/ƒƒ*ƒ	ƒ/ƒƒ‚ðƒƒ‚ùƒ%ƒ‚ñƒ%‚þ‚þƒL‚þƒ?ƒFƒƒ"ƒƒƒ ƒƒƒ,‚úƒ'ƒƒƒ‚ñƒ2ƒƒƒ	‚é‚þƒƒƒƒ6ƒ"ƒ!ƒƒ‚øƒ9‚ýƒƒ"‚öƒ1ƒƒƒ'ƒ	ƒ ƒ‚àƒƒ'ƒ‚÷‚æƒƒƒƒ‚úƒƒ*‚õƒƒEƒƒƒ‚ôƒ ‚ÿ‚÷ƒ‚þƒƒƒ7ƒ	ƒƒƒƒ‚Òƒ‚øƒ(ƒ‚þƒƒ‚èƒ#ƒƒ)ƒƒƒƒƒ&ƒ‚ÿƒ&ƒƒƒƒ,‚ýƒƒƒƒ‚÷ƒ/ƒ‚ôƒƒ	ƒ?ƒƒA‚æƒDƒ0ƒƒ‚þƒ3ƒ ƒ‚ëƒGƒƒƒ!ƒƒƒ#‚ïƒ0ƒ6‚ï‚òƒƒƒ:‚þƒƒƒ ƒ‚Üƒƒ$ƒ‚Ûƒ	ƒƒƒ.ƒ6ƒ"ƒƒ7ƒ(ƒ0ƒ&ƒƒ2ƒ‚ñ‚ùƒƒƒ"ƒ‚øƒ"‚Äƒ"ƒ%‚ðƒ%ƒƒƒ+‚÷ƒ‚ëƒƒƒƒƒƒ7ƒ*ƒƒƒƒƒ1ƒƒ(ƒƒFƒƒ#‚÷ƒ%‚ðƒ!ƒ!ƒƒƒ‚òƒ ƒƒ*ƒ^ƒ
+ƒƒƒƒƒƒ‚æƒ"ƒ(ƒƒ%ƒ%‚ñƒƒ
+ƒƒ.ƒDƒ$ƒ;ƒ&‚ýƒ<ƒ ƒ9ƒƒ‚ýƒ3ƒ
+ƒƒ‚Øƒƒƒƒ
+ƒ4ƒ‚î‚ð‚üƒƒƒƒ‚öƒ5‚øƒƒƒƒƒƒ‚ìƒƒƒ=ƒ.ƒƒ*‚ã‚ôƒ‚ÿƒ:ƒƒƒƒƒƒ ‚ÿƒ	ƒƒ$ƒEƒƒ‚÷ƒƒƒ‚Îƒƒ#ƒƒƒ%ƒ6‚Ýƒ8ƒƒƒJƒƒBƒ ‚ß‚ùƒ6‚ïƒƒ4‚ùƒ9ƒƒƒ ƒƒƒƒ<ƒƒ	‚îƒ ƒ%ƒƒƒ3‚öƒ
+ƒ‚þƒƒ‚÷ƒƒƒ ƒƒƒ
+ƒ‚ñƒ‚üƒ#ƒƒƒƒ ƒƒƒƒ,ƒ(ƒƒƒƒƒ ƒ/ƒHƒƒƒƒ ƒ ƒ
+‚ÿƒ%ƒƒ+ƒ#ƒƒƒYƒƒƒƒ‚øƒ‚úƒH‚ÿƒ‚óƒ"ƒ)ƒ!ƒƒ‚àƒƒƒƒƒƒƒ%‚ýƒƒ	ƒ#ƒ*ƒƒƒƒƒƒ3ƒƒ2ƒ8ƒ1ƒƒƒ&‚ø‚îƒ‚ùƒƒ7ƒƒ'‚Û‚ÿƒ ƒ)ƒ
+ƒ1ƒ.ƒ‚Üƒ.ƒƒƒ/ƒƒ	ƒƒƒ‚ôƒƒ0ƒ-ƒ-ƒ ƒ	ƒ‚þƒ‚óƒƒƒƒ ƒƒƒ,ƒ$‚ó‚ìƒ4ƒ‚úƒ$‚ø‚Üƒ‚óƒ‚øƒƒ2ƒ‚ðƒƒƒ!ƒƒƒƒ‚äƒƒƒƒ$‚ïƒ‚ñƒƒ8‚ù‚ùƒ‚íƒ	‚ýƒ‚ý‚øƒƒƒƒ,‚ûƒƒ&ƒƒ"ƒƒ.‚ñƒ3‚ÿƒƒƒ6ƒ ƒ$‚öƒAƒ1ƒBƒ‚ðƒƒƒƒ/ƒ/ƒƒ‚ýƒ4ƒ
+ƒ.ƒ,ƒƒƒ5ƒƒƒ.ƒƒƒ‚ôƒƒƒ ƒ7ƒBƒ ƒ0ƒ2ƒ)ƒ ƒ%ƒ4ƒƒ8ƒƒƒƒ0‚ûƒƒƒ#ƒƒ#‚ý‚úƒƒ)‚ôƒ;‚ÿƒƒ
+ƒ ƒƒ/ƒ"ƒ!ƒ‚øƒƒƒƒfƒƒƒ‚ãƒ3ƒƒ‚à‚ö‚áƒƒƒƒƒ&‚ûƒ=ƒ!ƒ2ƒ.ƒ&ƒ ‚úƒ‚õƒƒƒ‚áƒƒ,ƒƒƒƒ	ƒ+ƒ<ƒƒƒƒƒƒƒ!ƒ
+ƒ9ƒCƒƒI‚÷ƒƒ1ƒ‚þ‚â‚íƒ‚üƒ	ƒ
+ƒ‚ûƒƒ ƒƒƒ	‚î‚ô‚ùƒ‚üƒ
+ƒ2ƒƒ#ƒ!ƒ‚êƒ‚üƒƒ ƒ'ƒƒƒƒƒ‚æƒ.ƒƒ5ƒ8ƒƒƒƒƒƒƒ9ƒƒ‚ôƒ
+ƒƒ‚óƒ‚ñƒ‚îƒ‚óƒƒCƒƒ3ƒ(‚ìƒ6ƒƒ$‚ùƒ‚ø‚üƒƒƒ+ƒƒ!ƒƒƒƒƒ=ƒ-ƒƒƒ!ƒƒƒƒƒ(ƒ'ƒ:ƒƒƒ‚ûƒƒ"‚áƒ0ƒ2ƒ&ƒ9ƒ‚÷ƒƒƒƒ$‚á‚þƒƒƒ‚ùƒ*‚ôƒƒƒƒƒƒ#ƒ*ƒƒ"ƒ	‚þ‚îƒƒ‚ìƒƒƒ6ƒ"‚ú‚ûƒ"ƒ6ƒ.‚åƒƒƒ‚õ‚ìƒ)‚ü‚îƒ	ƒƒ‚Öƒ
+‚ýƒ!ƒ+ƒ‚úƒƒƒƒ-ƒ!ƒ‚ò‚üƒ!‚ëƒ ‚òƒ2ƒƒƒ‚ýƒƒ‚ùƒ-‚ÿƒ1ƒƒƒƒƒƒ!‚áƒƒ0ƒ,ƒ*‚þƒƒ‚Ûƒ‚üƒƒ*ƒ'ƒƒƒƒƒ ‚÷ƒ,ƒƒƒ"ƒ0ƒƒƒƒƒƒƒFƒƒƒ.ƒƒ4ƒ,ƒƒƒƒƒƒƒ‚ïƒƒƒ‚÷ƒƒ0ƒ'ƒƒJƒ‚ñƒƒƒƒ!‚ôƒ‚ÿƒ&ƒ‚Î‚ÿƒ;ƒƒƒ ƒ*ƒFƒƒ$ƒƒ*ƒAƒƒ3ƒ*ƒƒƒƒƒ1ƒDƒ7ƒƒCƒ‚Ö‚çƒOƒƒ	ƒƒƒ‚ü‚ù‚øƒ(ƒ ‚ðƒƒ)ƒ'ƒƒ"ƒƒ	ƒ	ƒ(ƒƒƒƒ‚ñ‚ó‚íƒƒ6ƒƒ'ƒƒƒ(‚ñƒ%ƒ2ƒƒ%ƒ&ƒ!‚øƒ‚òƒ‚ð‚äƒƒ
+‚íƒƒ	‚úƒƒƒ&ƒ=ƒƒƒ‚þƒ!ƒ!ƒƒƒƒƒƒ‚ýƒ,ƒPƒƒƒƒ'ƒ	ƒ‚éƒ8ƒ/ƒ6ƒƒƒ<ƒ
+‚ùƒƒƒ‚è‚ìƒ ƒƒ*‚ïƒƒƒƒƒ-‚óƒ-ƒ4ƒƒƒ ƒ$ƒRƒƒ9‚ûƒƒƒƒ
+ƒƒƒ‚àƒ ƒ$‚Úƒƒ$‚ê‚ü‚ðƒƒƒDƒ‚÷ƒƒƒƒƒ3ƒƒ9ƒ(ƒƒ‚âƒƒƒ7‚øƒƒ‚ãƒ	‚ýƒƒƒƒ‚ÿƒ ‚Ïƒƒ+ƒDƒ%ƒ‚üƒ‚ðƒƒ‚üƒƒXƒ>‚ó‚ü‚û‚ûƒ'ƒ‚ëƒ>ƒ-ƒ.ƒ.ƒƒƒƒ2ƒ‚þƒ5ƒƒƒƒ‚òƒƒƒ.ƒ'ƒƒƒƒƒ%ƒƒ+ƒƒ ƒƒƒ‚ïƒ7ƒƒ+‚üƒ1‚þƒ%ƒƒƒƒ#ƒƒ1ƒ*‚üƒƒ(ƒƒ ƒƒƒ%ƒƒ*ƒ%ƒƒ$ƒ‚ü‚ßƒ‚ßƒ‚÷ƒDƒ
+ƒ‚úƒ)‚èƒ‚õ‚÷ƒ‚ÿƒ"ƒƒƒ.ƒ:ƒ.ƒƒ!‚üƒ‚îƒƒƒ	ƒƒ)ƒ	ƒ(ƒƒ‚øƒ+ƒ)ƒ‚îƒ6ƒ2‚÷‚çƒ.ƒƒ,ƒƒƒƒƒƒ‚ë‚õ‚þƒ!ƒ,ƒƒ‚ôƒƒƒ.‚Úƒƒƒ=ƒ&ƒƒƒ ƒ1ƒ‚øƒ*ƒ(‚þƒ
+‚êƒ5ƒƒ.ƒ)‚ðƒ	ƒƒƒƒƒ(ƒ,ƒ,‚óƒ2ƒƒƒ‚ûƒƒ%ƒƒ‚òƒ‚ãƒ1ƒƒƒƒƒ#ƒ(ƒƒ‚ÿƒƒ=ƒƒƒƒPƒƒƒ ƒƒƒƒ?ƒƒ8‚þƒƒ)ƒ@‚ðƒ‚ùƒƒ‚úƒƒƒƒƒ?ƒƒ:‚ùƒ=ƒ)ƒ	ƒƒ‚îƒƒƒGƒƒƒƒ‚ö‚ûƒ	ƒƒ‚ïƒ‚õƒƒƒƒƒ(‚ßƒ(ƒC‚òƒƒƒ‚ïƒƒ"ƒ‚ç‚ý‚þƒƒ$ƒ
+ƒ;‚òƒƒƒ#ƒƒ ‚îƒƒƒƒ1ƒƒƒ(‚úƒ	ƒƒƒ*ƒ&‚æƒ+‚ý‚ú‚èƒ/ƒƒ‚î‚þƒ5ƒƒƒƒ‚×ƒ‚üƒ+‚öƒƒƒƒƒƒ$ƒ‚þ‚ê‚áƒƒƒ!ƒ,ƒ‚úƒƒƒ)‚øƒ
+‚èƒ‚÷‚ú‚ûƒƒ‚÷ƒƒ3ƒ)ƒƒ‚ûƒƒƒ$ƒ&ƒ1ƒF‚áƒƒƒ‚ïƒƒƒ8‚èƒ
+ƒƒƒƒƒƒ‚ú‚÷ƒDƒƒ‚÷‚ñƒƒ‚þƒ>‚Úƒ@ƒƒƒƒƒ
+ƒ‚Ûƒ	ƒ‚ùƒ5ƒƒƒ‚ø‚ûƒƒ	ƒƒEƒ'ƒƒƒƒ
+ƒƒƒƒƒ%ƒ‚ìƒ	‚÷‚ë‚ë‚ý‚÷ƒ‚õƒƒƒ"ƒƒ	‚êƒ‚øƒ‚ÿƒ‚ú‚ùƒ‚îƒ‚ì‚üƒ
+‚ýƒƒ‚ÿ‚ìƒ‚æƒ0ƒƒ ‚þƒ&ƒƒƒ$‚ÿ‚êƒƒ‚úƒƒ"ƒ2ƒ%ƒ ‚ýƒƒ‚ýƒ%ƒ‚úƒƒ1‚æƒ‚èƒƒ0ƒƒƒ(ƒ&ƒ1ƒƒƒ ƒ"‚èƒ(ƒ/ƒ#ƒ ƒ!ƒ*ƒ ƒƒƒƒ8ƒ+ƒƒƒ ‚Ñƒƒ+‚é‚ìƒ<ƒ ‚üƒ^ƒƒ*ƒ0ƒƒƒƒ(‚þƒƒƒƒƒƒ?‚óƒƒWƒ)ƒ ƒƒƒƒ;ƒƒ!‚ï‚þƒƒ2ƒI‚ù‚þƒXƒ$ƒƒƒ#‚çƒ‚ùƒ4‚ýƒ+ƒƒ"‚óƒƒƒƒ0‚òƒ‚üƒ ‚õƒ;ƒƒ"ƒ*ƒ,ƒ!‚îƒƒƒ-ƒ(ƒ(ƒ-ƒ0ƒƒ%ƒ%ƒ‚õƒ%ƒƒƒ,ƒMƒ7‚ù‚ðƒ‚ð‚ïƒ$ƒ-ƒ-ƒ+ƒƒƒ‚êƒ1ƒƒ
+ƒ>ƒ!ƒƒ)ƒ‚ë‚êƒDƒ(ƒƒ0ƒ‚ãƒƒƒ/ƒ ƒ'‚úƒ<ƒNƒƒƒƒ&ƒ(ƒ#ƒ$‚é‚óƒ.ƒ-ƒ4ƒ‚Úƒƒ‚õƒ‚ýƒ,ƒ7ƒ-‚úƒ3‚èƒƒƒƒ#ƒƒ‚ý‚þƒƒ ƒƒƒ1ƒ,ƒ5ƒ‚ýƒƒƒƒ*ƒJƒƒƒƒKƒ7ƒƒƒ,ƒƒƒ,ƒ.ƒƒƒ
+ƒ&ƒ‚ôƒ(ƒ2‚Öƒƒƒ‚ýƒƒƒ	ƒƒ‚ÿƒ‚ýƒ,ƒƒ6ƒ$ƒƒƒ"ƒ#ƒ:ƒƒƒ6ƒ‚÷ƒƒ#ƒ)ƒƒƒƒƒ‚þƒ$ƒ'ƒ'ƒƒ1‚ûƒ!ƒƒ‚ûƒ‚þƒ%‚öƒƒƒ ƒ$ƒ‚ûƒƒ
+ƒƒL‚ñƒƒ,ƒ>‚ÿƒ<ƒ0ƒ
+ƒ!ƒƒƒƒƒƒƒƒ-ƒƒ)ƒ&ƒ8ƒƒ!ƒƒƒƒ	ƒƒ0ƒ)ƒƒ(ƒƒƒ"ƒ*‚ú‚üƒ*ƒƒ@‚Ó‚õƒ^‚ßƒƒƒ&‚Øƒ-‚ç‚ø‚õƒ(ƒƒƒƒ	ƒƒƒ(ƒƒ+ƒƒƒ!ƒƒ‚áƒD‚ù‚ò‚èƒƒE‚ñ‚÷ƒƒƒ5‚îƒ.ƒ)ƒVƒƒƒƒ‚ïƒƒƒƒ‚øƒƒƒƒ‚÷ƒƒAƒ ƒ(ƒ(ƒ&‚þ‚ýƒƒƒJ‚ùƒMƒƒƒƒ"ƒ!ƒ&ƒ&ƒ‚úƒ‚ûƒƒ
+‚Ú‚íƒƒƒ$ƒ"ƒ(ƒ)ƒ=ƒƒƒ1ƒƒ ‚öƒ‚êƒƒƒ!ƒƒ*ƒ‚óƒƒƒƒƒƒ)ƒ+ƒƒƒ	‚õƒƒƒƒCƒƒ‚ÿƒ ‚îƒ:ƒƒƒ4ƒ%ƒƒƒƒ,ƒƒ ƒ‚çƒ2ƒƒ6ƒ3ƒ‚íƒ'ƒ	‚íƒ(ƒ#‚ç‚þƒƒƒ6ƒƒƒƒ5ƒ*ƒƒƒ‚ñƒ*ƒƒ(ƒ ƒƒ ƒƒ7‚ý‚òƒƒƒ*‚ïƒlƒ'ƒ)ƒ0ƒƒ!ƒƒ8ƒƒ'ƒVƒƒƒƒƒƒ‚üƒ‚úƒƒƒ#‚óƒƒƒ,ƒƒ‚î‚÷‚þƒ8ƒ ƒƒ ‚ô‚â‚ðƒƒ8ƒ&ƒƒ.ƒƒƒ‚ü‚öƒƒ‚úƒƒƒ‚ýƒ*ƒ&ƒƒ)ƒ
+ƒƒ ƒ1ƒ,‚÷ƒ‚ôƒ!‚ÿƒƒƒ?ƒƒƒ$ƒMƒ&ƒ/ƒ4ƒ(ƒƒ'ƒƒƒƒ‚òƒ-‚ñƒ'‚ù‚èƒ"ƒ+ƒ/ƒ
+ƒ&ƒƒƒƒ	‚ýƒƒ.ƒ‚úƒƒ$ƒƒƒƒ‚êƒ(‚îƒƒƒƒ%ƒƒ"ƒƒƒ‚ûƒƒƒ
+ƒƒƒƒƒƒƒƒƒ‚÷ƒƒ ‚û‚íƒ‚ôƒ‚ûƒƒƒ4ƒ'ƒƒƒ
+ƒƒƒ!ƒ&ƒ'ƒY‚ì‚Öƒ0ƒƒƒƒ1ƒ&ƒ ƒ$‚ûƒ‚ùƒƒƒ7ƒƒƒ<ƒ‚à‚î‚ùƒ2ƒ<ƒƒ%ƒƒƒƒƒ‚ûƒ
+ƒƒ2ƒ!‚üƒƒƒ‚îƒƒ(ƒƒƒIƒ+ƒ&‚øƒ<ƒ7ƒ1ƒ-ƒƒ‚ù‚ç‚ýƒƒ"ƒƒ.‚ùƒƒ(‚ûƒƒ+ƒ‚â‚ÿƒƒƒƒƒƒ2‚èƒ4ƒ*ƒ ƒ*ƒƒƒ‚íƒ
+‚þƒ,ƒƒ‚÷ƒ.ƒƒ
+ƒ8‚ùƒƒƒ1ƒƒ6ƒ$‚ñƒ*ƒƒ‚ÿ‚ýƒƒ'ƒƒ‚ûƒ/ƒƒ‚ïƒ#‚þƒGƒ8ƒ-‚ú‚ú‚öƒƒƒ"ƒ"ƒƒƒƒƒ<ƒƒƒƒ‚ñƒƒ,‚òƒƒ ƒƒ#ƒ‚é‚øƒƒ7‚Ìƒƒƒƒ‚üƒƒ‚üƒ#ƒ$ƒƒƒƒƒ‚øƒ?‚÷ƒƒ‚áƒƒƒ%ƒ‚ñƒƒƒ‚ÿ‚÷ƒ&ƒ%‚õƒ.ƒƒƒƒƒ‚ÿƒ!‚ð‚ü‚ûƒ ƒ‚êƒ‚ùƒ#ƒƒ‚ò‚ûƒƒ‚Ôƒƒ ƒƒƒƒƒƒ$ƒƒƒ ƒA‚ï‚äƒƒ%‚öƒ3‚õƒƒƒƒ‚Ðƒƒ'ƒƒ)ƒƒ@ƒƒ+ƒ‚òƒƒF‚õ‚òƒ7ƒ%ƒƒ"ƒƒ‚÷ƒƒ#ƒ*ƒƒƒ4ƒ.ƒ-ƒƒƒ‚û‚øƒ#ƒ‚úƒ‚üƒƒ‚ÿ‚óƒ‚üƒ#ƒ&‚îƒ‚ðƒƒ‚û‚ôƒ,ƒ
+ƒ‚Üƒ&‚÷ƒ/ƒƒƒƒ ƒ‚é‚üƒƒƒ2‚ÿƒƒƒ‚øƒƒƒƒƒ‚÷ƒ
+ƒ‚ø‚ìƒ#ƒƒ ƒƒƒƒƒ3‚âƒƒƒ‚ñ‚ò‚ô‚æƒ0‚ïƒ ƒ‚à‚ñƒ‚îƒƒ‚æƒ ‚þƒ@ƒ"ƒ!‚î‚ï‚îƒ	ƒ@ƒ0ƒ‚òƒ‚éƒ
+ƒƒ)ƒUƒ‚ëƒƒƒ'ƒCƒƒƒƒ(‚Ýƒ;‚øƒƒ*‚çƒ‚ö‚íƒ‚ïƒ&ƒ"ƒƒƒ‚á‚þƒƒƒƒ;‚ÿƒJƒ"ƒBƒƒ	ƒƒƒ)‚ù‚èƒƒ;ƒƒ ƒ?ƒƒƒƒ‚ëƒFƒ4ƒƒƒƒƒƒƒƒƒ&ƒƒƒ ƒ4‚å‚èƒƒ-ƒ‚òƒƒ ‚ýƒ4‚öƒ‚Ûƒƒƒƒƒƒ)ƒ0ƒƒƒƒƒ/ƒƒƒ"‚þƒƒCƒ‚íƒƒƒ9ƒ‚â‚þƒGƒƒ‚ûƒ(ƒƒƒ ‚ñƒ	ƒƒƒƒ	ƒƒƒ‚ûƒ&ƒƒƒ!ƒKƒƒ
+‚ùƒƒƒ,ƒ+ƒƒ‚üƒ1ƒƒƒ‚ÿƒƒƒN‚ýƒƒ‚÷ƒƒƒƒ6‚æƒ*‚ïƒƒƒ7ƒ‚Ýƒƒ‚÷ƒ*ƒ(ƒMƒƒƒƒƒƒ'ƒ‚ñ‚öƒ‚ðƒƒƒ-ƒ	ƒƒ%‚ßƒƒ5ƒƒƒ.ƒƒƒ	ƒƒ.ƒ-ƒƒ‚øƒƒ(ƒƒ%ƒ ƒ*ƒ‚Õƒƒƒƒ)‚÷‚ëƒ"ƒƒƒ ƒ/ƒƒ0ƒ‚úƒ<‚õ‚üƒ ƒ#ƒƒ ƒƒ(ƒ‚ÿƒ&ƒ ƒ-ƒƒƒƒƒ%ƒ ƒ ‚öƒƒƒƒƒƒ$ƒƒƒƒ#ƒƒƒ+ƒƒ#ƒ‚ûƒ@ƒ‚ð‚üƒ*ƒƒ0ƒ!ƒ-‚úƒ!ƒ<‚ÿ‚öƒƒ‚ôƒƒƒ+ƒƒƒ‚ð‚øƒ+ƒ‚û‚ùƒƒ#ƒ ‚çƒAƒ&‚ãƒƒ‚ëƒƒƒƒ"ƒƒƒƒƒ‚øƒ2‚ùƒ‚úƒƒƒ‚ôƒ5ƒƒ4ƒ/‚ïƒƒƒƒ‚þ‚þƒƒGƒCƒƒ-ƒ‚êƒƒƒ/‚÷ƒƒ2‚é‚î‚þƒ‚þƒƒƒƒ‚ãƒƒƒ'‚ð‚û‚õƒƒƒƒ/ƒ ƒƒ‚üƒ‚ÿ‚úƒƒƒ*ƒ ƒ‚üƒ@‚üƒƒ‚ûƒƒ'ƒƒƒƒƒ"ƒƒ‚û‚÷ƒ5ƒƒ‚ø‚öƒƒ	ƒƒ&‚íƒƒ ƒ‚ã‚ûƒ%ƒƒ3ƒ:ƒ ƒƒƒ&ƒ!ƒƒ‚Ûƒ'‚öƒ1ƒ<ƒ6ƒƒ-‚ü‚ú‚êƒƒƒƒ ƒƒ	ƒ@ƒ'ƒƒ>‚â‚ã‚þ‚û‚ýƒ‚Í‚Ùƒ)‚øƒƒ!ƒ	‚ü‚ÿƒƒƒ
+ƒ!ƒƒ
+‚þƒƒƒƒ
+ƒƒ5‚Ýƒƒ(ƒƒ'ƒƒƒƒƒƒ-ƒƒ ƒ$‚ýƒ ƒƒƒ‚üƒ‚øƒƒƒ'ƒ	‚ÿƒƒ+‚ù‚õ‚õƒƒƒ'ƒƒƒƒƒƒ‚ÿƒƒ#ƒ2ƒ/ƒ5ƒ ƒ"ƒA‚úƒƒ	ƒ<‚ë‚ÿƒƒƒ
+‚õ‚þƒ.ƒƒ	ƒ
+ƒƒƒƒ!ƒƒƒƒ‚îƒƒ	‚ýƒ&ƒ‚üƒ1ƒƒƒƒ‚î‚ùƒ‚çƒƒ"ƒƒƒ3ƒƒ‚ðƒ8ƒƒ ƒ‚úƒ‚ç‚ï‚ûƒ3‚øƒ‚ûƒ*ƒ8ƒ ƒ‚ëƒ	ƒ7ƒ.ƒ
+ƒƒ‚ùƒƒƒƒƒƒ(ƒ!ƒ.ƒƒ‚øƒ1‚óƒƒ‚ù‚úƒ‚÷ƒ(ƒ	ƒAƒ!ƒƒƒƒƒƒƒ)ƒ.ƒEƒƒƒƒ)‚îƒ"ƒƒ'ƒƒƒƒ.ƒ-ƒ*ƒ‚õ‚ÿƒ#ƒƒ0ƒ‚»ƒ%ƒ‚ù‚ÿƒ
+ƒƒƒƒ,‚÷‚Üƒ"ƒ
+‚üƒ!ƒ
+ƒ%ƒ8ƒƒ.‚ë‚å‚óƒƒ‚øƒ#‚ýƒ'ƒƒ‚õƒƒƒƒƒ(‚îƒ ƒƒ	‚þƒ!ƒƒ%ƒ$ƒ‚õƒ‚ôƒ‚äƒ>ƒƒ‚ÿƒƒ	‚îƒ
+‚ðƒ‚ö‚õƒ"‚ã‚å‚õ‚ê‚÷ƒƒ'ƒ4ƒƒƒƒ$ƒƒƒƒ5ƒ+ƒƒƒƒƒ2ƒƒƒ‚ÿƒƒƒ!‚ûƒ(ƒ‚õƒƒ7ƒƒ<ƒƒƒƒ‚û‚÷ƒƒƒ7ƒƒƒ1ƒƒ%ƒ‚ìƒ‚øƒƒ)ƒ>‚ñƒƒ5ƒƒ
+ƒ‚öƒƒ*ƒƒ)ƒƒ3‚Øƒƒƒƒ‚åƒ$‚þƒƒƒƒƒ#ƒ+ƒ)ƒ,‚éƒ.‚õƒƒ)ƒƒƒGƒƒ*ƒƒƒ&ƒ+ƒƒƒƒƒDƒ‚îƒ%ƒ‚øƒƒƒ4ƒƒƒ#ƒƒƒ8ƒƒ!ƒ-‚âƒƒƒ‚ÙƒLƒ#ƒƒƒƒƒ
+ƒAƒƒ2ƒƒUƒ
+ƒ!ƒ-ƒƒ
+ƒƒ4ƒ>ƒƒƒ‚ýƒƒƒ ƒƒƒ‚è‚ë‚ôƒ ƒ
+ƒ-‚ûƒƒ)ƒ‚èƒƒƒ ƒ9ƒ)ƒ‚åƒƒ)‚áƒƒL‚öƒƒƒƒƒ‚õƒƒ(ƒƒƒƒ‚êƒ#ƒƒƒƒ‚ûƒƒAƒƒƒ#ƒƒ‚ò‚õƒ)ƒƒƒ#‚ÿ‚þƒ ƒƒƒƒ%ƒƒBƒƒ%ƒƒ-ƒ	ƒ‚æ‚þ‚ïƒ ‚û‚ÿƒ‚óƒƒ4‚ãƒ$ƒ%ƒƒƒ&ƒƒ"ƒƒ/‚ïƒDƒƒ3‚öƒ‚ã‚÷ƒ>ƒƒƒƒ ƒƒ)ƒ‚òƒ‚ý‚óƒ‚ùƒ.ƒFƒƒ3ƒ.‚úƒ‚ì‚òƒƒ)‚ùƒƒ ƒƒƒ.ƒƒƒ	ƒ‚ïƒ;ƒƒƒ‚øƒƒ3ƒƒ#ƒMƒ
+ƒ	ƒ0‚þ‚ý‚õ‚ûƒƒƒƒ‚øƒƒƒ*ƒ ‚ôƒ$ƒƒ!ƒ&ƒ5ƒ‚îƒƒ-‚ïƒ2ƒ$ƒƒ‚ìƒEƒƒƒƒ)ƒ3ƒ
+ƒƒƒƒ=‚ñƒ7‚ø‚ÿ‚ÿ‚è‚öƒƒ	ƒ+ƒƒƒ‚ñƒ'‚æ‚øƒƒ&‚üƒBƒƒ"ƒ-ƒƒ4‚íƒ"ƒ&ƒƒ"‚øƒ‚ïƒ‚ÿƒ‚ö‚ëƒƒ‚ðƒ*ƒCƒ ƒ‚ôƒ>‚ëƒƒ‚þ‚ãƒ‚ñƒƒ0ƒƒƒ)ƒƒ)ƒƒ7ƒƒƒƒ	ƒ7ƒ‚åƒBƒ‚ñƒƒƒƒ‚Ò‚àƒƒƒ3ƒ	ƒ ƒ‚ùƒ‚ýƒƒDƒƒƒ/‚õƒ!ƒƒƒ‚Éƒ ƒƒ'‚õƒƒƒƒ(ƒ)ƒ$ƒƒ	ƒ-ƒƒƒƒƒ‚æƒƒ‚þƒ	ƒ-ƒ.ƒƒƒ‚ñƒƒƒ6ƒƒƒƒ&ƒƒƒƒƒƒƒƒƒ‚ùƒƒ ƒ%ƒ*ƒ‚é‚ó‚ô‚ñƒ-ƒ,ƒƒ-‚ûƒƒ?‚úƒƒƒƒ6ƒ$‚õƒ8ƒƒ$‚ö‚ôƒ"ƒƒ9‚èƒ‚ýƒƒƒƒƒƒ8ƒ5ƒ7ƒ#ƒ8ƒ!ƒƒƒ‚ñƒ&ƒƒƒ#ƒƒ#‚÷ƒ)ƒ‚òƒƒ0‚ûƒƒ%ƒ‚õƒƒPƒƒEƒ!ƒƒƒ
+ƒƒ=ƒ%‚öƒBƒƒƒƒƒ@ƒƒƒ:ƒ‚üƒ$ƒƒƒ‚îƒƒƒƒ(ƒ,ƒƒ:ƒ	ƒƒ0ƒ!ƒƒƒ#ƒƒ.‚ú‚öƒƒ$ƒ‚êƒƒ‚õƒ‚ðƒƒ#ƒ‚äƒƒ1ƒƒI‚ÿƒƒƒƒ(ƒ
+ƒƒ‚øƒD‚îƒ*ƒ
+ƒƒƒ ƒƒƒ ƒƒ
+ƒ1ƒƒƒ‚ÿƒƒƒ#‚úƒƒƒƒƒ8ƒƒƒ$ƒƒƒƒ‚ðƒƒGƒƒ*ƒ)‚êƒO‚öƒƒƒƒ3ƒ)ƒƒƒIƒƒƒ+ƒƒƒƒ0ƒƒƒ+‚ûƒ!ƒƒƒ!‚ð‚ù‚ôƒ.‚üƒƒ:ƒƒƒƒƒ,ƒ-ƒ"ƒƒ$ƒƒƒ&ƒƒ8ƒ/ƒƒ‚úƒ>ƒ!ƒƒƒƒƒƒ;ƒƒƒ
+ƒ#ƒƒ$ƒ*‚üƒ2ƒ ƒ.ƒ%‚þ‚å‚üƒƒ1‚÷ƒ%ƒƒƒ.ƒƒƒƒƒƒEƒƒ	ƒ7ƒƒ(ƒ ƒƒVƒƒƒ9ƒEƒ4‚éƒƒƒƒƒFƒƒƒ.‚ûƒƒ ƒƒ*ƒ#‚þƒ@ƒƒ‚ïƒƒƒP‚ñƒ7ƒ‚ïƒ#‚ý‚ùƒƒƒƒ4ƒ.ƒ-ƒƒƒ‚íƒ	ƒ%‚óƒ‚úƒƒ%‚é‚éƒƒ>ƒ5ƒ‚Ûƒ‚ßƒƒƒƒƒ4ƒƒƒƒƒ7‚èƒ‚ì‚ðƒ3‚÷ƒ‚ûƒ ƒSƒƒ'‚øƒƒ.‚þƒƒ/ƒƒƒ ‚úƒLƒƒƒ#ƒƒƒ‚ÿƒƒƒ+‚ø‚èƒƒ‚óƒƒƒƒ#ƒ%‚øƒ‚ëƒƒ#ƒ3ƒDƒƒƒƒƒƒ0ƒƒ‚õƒ ‚ôƒ ƒ‚ý‚ôƒƒ(ƒ0ƒ.ƒ‚ÿƒƒ+ƒ)ƒƒ4ƒƒ"‚ýƒ	ƒ
+ƒ?ƒ.ƒƒƒ#ƒƒ‚åƒƒ*ƒ$ƒ	ƒƒGƒ.ƒ.ƒ*ƒ	ƒƒƒ	ƒ/ƒ1ƒ$ƒƒƒ:ƒ8ƒFƒƒVƒƒ	ƒ‚ôƒƒƒ‚þƒƒ	ƒƒ%ƒ&ƒƒƒƒA‚ðƒ+ƒƒ"ƒBƒƒVƒƒƒ-ƒƒƒƒ‚í‚þ‚ñ‚üƒƒƒƒ ƒƒ‚×ƒƒƒ"‚ý‚ó‚åƒXƒƒ.ƒƒ	ƒƒƒ'ƒƒ1ƒƒVƒƒƒƒƒ‚ÿƒ1‚÷ƒ ƒƒƒƒƒ(ƒƒ3ƒ@ƒƒƒ ‚óƒƒƒƒ2ƒ ƒ*ƒ%ƒƒ%ƒ‚Ûƒ	ƒ(ƒƒ4‚ùƒ5ƒ%ƒ‚ôƒ/ƒƒ,ƒƒƒƒ ƒ ƒ!ƒ'ƒE‚÷ƒ:ƒ6‚ÿƒ ƒƒƒƒƒ1ƒ6ƒ.‚îƒƒ ‚þƒƒƒEƒƒƒƒ‚þƒƒƒ.‚Øƒƒ‚ãƒ2ƒƒƒƒƒƒ
+ƒ8ƒƒ‚ïƒƒƒƒ#ƒƒƒƒƒƒ‚äƒ(ƒ
+ƒ'ƒƒ*ƒƒƒƒƒƒ-‚æƒƒƒ-ƒƒ1‚ìƒ>ƒ)‚ûƒ‚Ôƒ:ƒ4ƒƒƒƒ‚ÿ‚èƒƒ‚Ø‚ñƒƒƒ;ƒƒƒ(‚ñƒ‚Þƒƒ#ƒ%‚éƒ#ƒƒƒ
+ƒ‚ÿ‚òƒƒƒƒƒ!‚ðƒƒƒƒƒ#‚ýƒ‚ùƒƒ$ƒƒƒ+ƒƒ6ƒ‚ÿ‚àƒ‚ïƒƒ0ƒ ƒƒ	‚öƒ:ƒ+‚òƒƒƒƒƒ‚ðƒ%‚÷ƒKƒƒƒ‚Þƒƒ+‚öƒ‚ùƒ‚Üƒƒƒ4ƒƒ0‚öƒƒ‚îƒ
+ƒ(ƒ ƒƒ@‚ùƒƒFƒƒ	ƒƒƒ ƒƒƒƒ1‚ñƒ.ƒ'‚îƒƒEƒƒƒ‚ðƒ8ƒƒ ƒ&‚èƒƒ%ƒƒƒ
+ƒ0ƒƒ
+ƒƒ‚àƒƒ%‚ðƒƒƒƒƒ#ƒƒƒ:‚÷ƒƒƒ-ƒƒƒ/ƒƒƒƒ0ƒ‚íƒ-ƒ/ƒƒƒƒƒƒƒƒ,ƒƒ‚Øƒƒƒƒ)ƒ!‚ûƒ-ƒ2ƒƒ‚þƒ$ƒ
+ƒ‚ýƒƒƒƒ0ƒ	ƒ4ƒƒDƒƒƒ‚ë‚ñƒ%ƒƒ"ƒƒ!ƒ0ƒƒƒ‚Õƒ‚ùƒ	ƒ"ƒƒ	ƒƒƒƒ8ƒƒ#ƒ4ƒ+ƒƒƒ"ƒƒƒ‚ýƒƒ‚ñƒƒƒ2ƒƒ‚ÿ‚ü‚ô‚úƒ!ƒ‚ñ‚û‚æƒ"ƒƒ'ƒƒ ‚ÿƒ‚ÿƒƒƒƒƒƒ1‚Øƒƒ ƒ‚úƒƒ!ƒƒ‚ðƒ$ƒƒƒ‚âƒƒƒ#ƒ%ƒƒ3ƒƒ‚ó‚ðƒ-ƒƒƒ
+ƒ$ƒ$ƒ'‚ùƒƒƒ9ƒƒƒƒ=ƒƒƒƒƒƒ)‚úƒT‚ù‚ø‚ýƒƒ‚ÿƒ
+ƒƒƒD‚çƒ
+ƒƒ ƒ
+ƒ$ƒƒ‚÷ƒ)ƒ
+ƒƒƒ‚óƒ"‚æƒƒ2ƒ3ƒ*‚æƒ"ƒƒƒ+ƒ:ƒƒ+ƒ'ƒ	ƒ.ƒƒ#‚úƒ.ƒƒ;ƒ5ƒ%ƒƒƒƒƒƒƒ.‚þƒƒ‚ãƒ%ƒ‚þƒ+ƒ5ƒ$‚íƒƒBƒ$ƒ*‚Óƒ2ƒ7ƒ#ƒƒƒ‚ûƒƒ‚üƒ‚âƒ)ƒ‚ïƒƒ2ƒ	ƒƒƒ'ƒƒƒƒ'ƒƒ‚öƒƒ‚þƒƒ‚õƒƒ)ƒƒ‚ùƒƒ‚úƒƒ7‚þƒ‚üƒƒ‚óƒ1‚ðƒ'‚ÿƒ,ƒ‚÷ƒƒ	‚éƒ ƒƒƒ‚Ô‚õƒ'ƒƒƒ0ƒƒƒƒ‚÷ƒ	ƒƒ‚øƒƒƒƒƒ ƒ(ƒ ƒF‚è‚ÿƒ&ƒ	‚þƒ2ƒ:ƒ‚ñ‚ú‚÷‚ü‚òƒ*‚ûƒ1ƒƒƒƒƒ<ƒ'ƒ:‚óƒƒ‚ò‚÷‚õƒ)ƒƒ ƒ%ƒƒƒ5ƒ ƒƒƒ‚õƒƒƒ1‚Öƒ6ƒƒƒ,ƒƒƒ&‚øƒƒƒ.ƒƒ!ƒƒ‚üƒƒ‚ò‚ÿƒƒƒ
+‚õƒ!‚úƒ1‚þƒ$ƒ ƒ!ƒ‚þƒ!‚å‚ãƒƒƒƒ‚à‚ë‚ñƒ;ƒƒƒ$ƒ'ƒ‚ô‚ëƒƒ2‚ëƒ0ƒ‚î‚ñƒƒ-ƒƒ‚ïƒƒ;ƒ‚ðƒ%ƒ‚ÿ‚óƒƒ'ƒƒ0ƒƒ‚éƒƒƒƒ ƒƒƒ
+ƒ‚òƒ4‚þ‚òƒ‚éƒ‚û‚áƒ5ƒ*ƒ#ƒ	ƒ+ƒƒƒƒƒƒƒ
+ƒ-ƒƒ‚ñƒƒƒJƒƒƒ‚Ýƒ&‚ëƒ‚ëƒ)‚ð‚ëƒ‚ë‚ùƒ$ƒƒƒ‚øƒ5‚íƒ‚éƒ,ƒ‚øƒ3ƒ!‚ôƒ ƒƒ#‚ì‚ýƒƒƒƒ"ƒ‚ìƒ	‚õƒƒƒƒF‚çƒƒƒƒƒƒ&ƒƒ4ƒ‚ÿƒ!ƒ+ƒƒƒƒƒƒƒƒƒƒ/ƒ‚ëƒ‚ýƒƒ3‚à‚øƒƒ‚øƒGƒƒƒ‚ý‚öƒƒƒ-ƒ ƒ*‚üƒ*‚ø‚ý‚õƒƒ ƒ"ƒƒ‚þƒ)‚üƒ/‚éƒ,ƒƒ!ƒ"ƒ0ƒƒ&ƒ&‚é‚ïƒ2ƒ+ƒ‚ïƒƒ2ƒƒ'ƒƒƒ‚þƒƒ%ƒ4ƒ0ƒ	ƒ,ƒƒ8ƒ2ƒ
+ƒ+ƒ/‚øƒƒ‚Ì‚üƒƒƒ3ƒƒ-ƒ	ƒƒƒ&ƒ‚øƒƒ#‚úƒ%ƒ‚ûƒK‚óƒ‚ù‚ÿƒƒ!ƒ‚ïƒƒ
+ƒ‚üƒƒ'ƒ%ƒ‚ýƒ$ƒƒƒ/ƒ!ƒ*ƒƒ‚ûƒ.ƒƒ*ƒ#ƒ‚û‚ÿƒƒ‚íƒ‚ý‚öƒƒ#‚Þƒƒƒƒ0ƒƒƒ ƒ<ƒ)‚ìƒƒ)ƒƒ&‚ñƒ@ƒ‚ìƒƒƒ%ƒƒƒS‚è‚òƒ1ƒ‚æƒ‚ö‚÷‚ÿ‚ðƒƒƒBƒƒƒ‚ýƒ%ƒN‚òƒƒ‚ï‚àƒƒƒ:ƒ‚ôƒ‚úƒ‚ùƒ9ƒƒƒ2ƒƒ(‚þƒ-‚üƒƒ3ƒƒ‚ñƒ‚ùƒ ƒƒ2‚ûƒƒƒ5‚Éƒ%ƒ ƒƒƒƒ‚ãƒ6ƒ:‚üƒƒƒƒ‚ð‚üƒƒƒ-ƒƒ&ƒ$ƒƒƒƒƒƒƒƒ&ƒƒƒƒƒ ‚ôƒ+ƒ*ƒƒƒƒƒ,ƒ0ƒ‚Û‚öƒƒ=ƒ$‚÷ƒ'ƒ$ƒ ƒƒ%ƒQƒ)ƒBƒ(‚éƒ‚øƒ'ƒ9‚þƒƒƒ*ƒ‚óƒƒƒƒ ‚þ‚Òƒƒƒ3ƒ‚àƒ‚ü‚ÿƒ@ƒ‚ûƒ#ƒƒ‚Ø‚ïƒ'ƒHƒ"‚öƒƒƒƒ	ƒ/‚ÿƒ ƒ‚÷ƒ&ƒ ‚ÿƒ#‚þƒ,ƒ*‚ùƒƒ‚ùƒƒ ƒƒ(ƒ‚èƒ‚ùƒ*‚ëƒ1ƒ
+ƒƒƒƒ ƒ‚ïƒ.‚õ‚î‚çƒƒ%ƒƒ
+ƒƒ‚ðƒ	ƒ‚öƒƒ#ƒƒ ƒ"‚øƒƒEƒ7ƒ-‚üƒƒ‚óƒƒƒ<ƒ+‚ìƒ7ƒ?ƒ!‚íƒ!ƒ‚ùƒ1ƒHƒ0ƒ.ƒ3‚ùƒ ƒ#ƒƒ#‚üƒƒƒ‚õƒ ƒƒ$ƒƒ%ƒ.ƒƒ‚ÿ‚þƒƒ$ƒƒƒ ƒ
+ƒƒƒƒƒƒƒ‚õƒƒƒ'ƒ:ƒGƒB‚òƒ4ƒ,‚ßƒ1ƒƒ‚ùƒƒ‚öƒ(ƒ‚Ûƒ1ƒƒ4ƒ&ƒƒ‚ÿƒƒ‚ó‚ûƒƒ%ƒƒ?ƒ!ƒ+‚Ùƒƒƒƒƒ(ƒƒSƒƒ'ƒ ƒ*ƒ‚ú‚íƒƒƒƒ‚÷ƒ‚ì‚ð‚ùƒƒ‚óƒƒ$ƒƒƒƒƒƒƒƒ-ƒ‚ñƒ6ƒƒ$ƒ‚õƒƒ‚Ïƒƒ>ƒƒƒ7‚úƒ ƒƒƒ ‚úƒ‚÷‚üƒƒ.‚ùƒƒ
+‚úƒVƒƒ‚óƒƒ‚ø‚Õ‚òƒ!ƒ&ƒ‚úƒ3‚õ‚è‚æ‚÷ƒƒƒƒ	‚ûƒ	ƒƒƒƒ"ƒ‚î‚òƒƒƒƒ‚õ‚ùƒ‚ûƒ‚ý‚ÿ‚îƒ ƒƒ0‚þƒ‚ïƒ‚üƒƒ$ƒ$‚ý‚æƒƒ‚ûƒ	‚ù‚ûƒ>ƒƒƒƒ.ƒƒ,‚îƒƒ‚óƒ0ƒƒƒ‚ýƒƒ	ƒƒƒ&ƒ1ƒ-‚øƒƒ	ƒƒ9‚øƒƒ'‚þƒFƒ!ƒ+ƒƒ0ƒKƒ)ƒƒƒ)ƒ
+ƒƒƒƒ‚ÿƒƒƒ'ƒ ƒƒ‚ýƒƒ*‚þ‚Üƒ>ƒ	‚óƒ9‚í‚öƒƒƒ6ƒƒ#ƒ:ƒ@ƒƒ'‚òƒ ‚íƒƒƒ6‚øƒƒƒƒƒƒ)ƒƒ‚ùƒ‚ÿƒƒƒƒ-‚ïƒCƒƒ:‚ßƒƒ‚ïƒ‚ï‚þƒƒ:ƒ
+‚é‚ïƒ"‚û‚ì‚úƒƒƒ)ƒ3ƒƒ;ƒƒƒƒ‚ý‚ïƒ3ƒƒƒƒ*ƒƒ‚öƒ'ƒƒ)ƒƒƒ‚üƒƒƒ‚òƒƒ7ƒ‚æƒ2‚ôƒ!ƒ‚çƒƒƒ	ƒƒ‚ô‚ðƒƒ1ƒ)ƒ"ƒƒƒ,ƒ4ƒƒ ƒ ƒƒOƒƒƒƒ‚ùƒ‚øƒƒ‚ï‚í‚û‚ûƒ"ƒ(ƒƒƒ5ƒIƒ0ƒƒ0ƒƒƒƒƒ‚÷ƒƒ(ƒƒ.ƒƒƒƒƒƒ(ƒ#‚ûƒƒ7ƒ-‚èƒ ‚ýƒ;ƒ‚ÿƒ:ƒƒ
+ƒƒƒƒ;ƒaƒƒ
+ƒ4ƒ‚öƒƒƒƒ-ƒ‚þƒƒ0ƒƒ*ƒ-ƒ
+ƒ#ƒ‚åƒ8ƒ‚ûƒƒ%ƒƒ‚çƒƒƒ‚úƒ+ƒƒ-ƒƒƒ8‚ä‚èƒƒƒ&ƒƒƒƒ‚øƒ‚õƒƒ/ƒƒ#ƒ7‚Ø‚ÿƒ0ƒƒƒƒ/ƒ‚åƒ0‚ø‚÷ƒ&‚ôƒ‚ð‚üƒ‚áƒƒƒ"ƒ	ƒƒƒ8‚íƒ&ƒ‚åƒ3‚ùƒ1ƒƒƒƒ3ƒ‚÷ƒ=ƒ"ƒAƒ)ƒƒƒƒƒ‚õƒƒƒƒR‚è‚ëƒƒ ‚ã‚üƒ
+ƒ6ƒ)‚ýƒ‚ú‚õƒƒ1ƒƒ1ƒ	ƒ"ƒƒƒ‚ë‚úƒ!ƒ9‚Ý‚ýƒ‚ÿƒ‚öƒƒ ƒ	ƒ‚÷ƒƒ
+ƒ#ƒƒ<ƒƒƒ*ƒƒ&ƒ*ƒƒƒ‚ôƒƒNƒƒƒ2‚äƒ3ƒƒƒ(ƒ$ƒ=ƒƒƒƒƒ‚î‚ðƒ&ƒ:‚ùƒ%ƒƒ.ƒ/‚Ð‚ñƒƒ-ƒƒ-ƒƒƒTƒƒ)ƒƒ1ƒ	‚îƒ‚øƒ)‚âƒƒƒ‚ïƒƒƒƒ'‚ûƒƒ‚ûƒ7ƒ ƒ+ƒ-ƒ‚øƒ0ƒ‚ë‚öƒƒ‚üƒƒƒ-ƒ	ƒƒ1ƒ	ƒ'‚þƒƒƒ
+ƒ	ƒƒƒ!ƒƒ‚÷‚ø‚þ‚þƒ‚ðƒ*ƒ‚ðƒƒƒƒ3ƒ.ƒ4‚óƒƒJ‚óƒ5ƒƒƒƒƒƒƒƒ	‚÷ƒƒƒƒ:ƒƒƒƒƒ	ƒ‚îƒ
+ƒƒƒ-ƒƒ*ƒƒƒƒ$ƒ*ƒ	ƒ-ƒƒƒCƒ‚êƒ ‚ö‚ïƒ!ƒ.ƒƒ1ƒƒƒ	ƒ	ƒ‚ûƒƒ‚öƒƒ ƒƒƒ&ƒ ƒ‚ï‚ÿƒ-‚ù‚î‚ÿƒ	‚ïƒ%ƒ"ƒ(ƒ"ƒƒ1ƒƒƒ*ƒƒ#‚âƒƒ$ƒ4‚ÿ‚òƒƒ/ƒ.‚ùƒƒƒƒƒƒƒƒ(‚ûƒBƒƒƒƒƒƒƒ,ƒ=ƒƒ)‚ìƒƒ!ƒGƒƒ
+ƒ
+ƒ;ƒ8ƒMƒƒBƒƒ4ƒ
+ƒ‚æƒƒ#ƒƒƒƒƒƒ	ƒƒ‚ýƒ‚ÿƒ!‚Üƒƒ‚ôƒƒ#‚ì‚æ‚çƒ‚úƒ"‚üƒƒ	ƒ4ƒ‚âƒ#ƒ‚ûƒƒ5ƒƒ	‚ðƒ‚í‚úƒƒ1ƒƒ@ƒƒ'ƒ%ƒ<ƒ%ƒ6ƒƒƒƒ#ƒ6ƒƒƒ‚øƒƒƒ
+ƒ	ƒƒƒƒfƒƒ(ƒƒ$ƒ	ƒƒ9ƒƒ@ƒ‚ðƒ?ƒ‚øƒ"‚÷ƒƒƒ
+ƒƒ9‚ùƒ;ƒƒ.ƒƒƒƒ-‚î‚óƒƒƒ"ƒ-ƒƒ:ƒ$ƒƒƒ‚õƒƒPƒ‚íƒƒƒƒƒ#ƒ
+ƒ0ƒƒƒ+ƒƒ1ƒ	ƒ(ƒ#ƒ'ƒ3ƒ;ƒƒ%‚ÿƒ=ƒƒƒƒ#ƒ(‚ôƒ#‚óƒ7ƒ7ƒƒƒ ‚éƒ	ƒ'ƒ1ƒ)ƒƒ!ƒ.ƒƒ
+‚ðƒƒ4ƒƒƒƒ2ƒƒ.ƒƒ‚Øƒƒ!ƒƒ	‚ðƒƒƒ'ƒ:ƒ%ƒ/ƒ'ƒ‚ëƒ ‚ú‚öƒ‚÷‚øƒ$ƒ	‚ñƒ!ƒ.ƒ ƒ"ƒƒƒ5ƒƒ-ƒƒƒ1ƒƒƒ,ƒ‚ÿƒ ‚ñƒ$ƒƒ	ƒ‚úƒƒƒƒYƒƒ ƒFƒ‚ÿƒ%‚ýƒ'ƒƒ2ƒƒ‚íƒ,ƒ‚Óƒƒ9‚ëƒ‚ôƒƒƒGƒ‚÷ƒ‚÷ƒ‚üƒƒƒƒƒƒƒ‚øƒ‚ùƒ‚üƒ.ƒƒIƒ‚öƒ$ƒ‚ýƒ(‚òƒƒƒƒ‚úƒƒ1ƒƒƒ ƒ‚ÿƒƒ	ƒƒƒƒ‚çƒƒƒƒ‚ûƒ
+ƒ!‚ê‚ý‚ñƒ
+ƒƒ#ƒƒ(ƒƒ<ƒ(ƒƒ(ƒ*ƒƒƒBƒƒ:‚þ‚áƒ!ƒƒ‚ôƒ‚üƒƒ ƒƒƒ‚ñƒ!ƒ;ƒƒ!ƒƒƒ‚üƒ3ƒ8‚ìƒ2ƒ[‡½ƒ(ƒ‚ñƒ+ƒ!ƒƒ ‚êƒƒ(ƒƒ%ƒ(‚óƒ&‚çƒ‚áƒ;ƒ‚ü‚òƒ	ƒ‚ýƒ%ƒFƒ4ƒ‚ñƒ;ƒ*‚ýƒƒƒ‚ùƒIƒ2ƒƒƒ/‚áƒƒƒ‚ýƒƒ‚æƒ‚÷ƒƒ<ƒ ƒ ƒƒƒ5‚ä‚è‚ýƒ"ƒƒ@ƒ‚þƒƒƒ%ƒ+ƒƒƒ ‚íƒ7ƒƒ!ƒ/ƒƒ"‚ô‚ùƒ‚ýƒ%‚õ‚ôƒ)ƒ?ƒƒ	ƒK‚ãƒ‚éƒ3ƒ ‚òƒ‚÷ƒƒ#ƒ6ƒ?ƒ ƒ4‚×ƒƒ%ƒƒ-ƒ‚êƒ8ƒ‚øƒƒ3ƒ‚ðƒƒƒƒƒ?‚ù‚Ýƒƒƒ#‚ðƒƒ‚þ‚ÿƒ‚Ðƒ
+ƒƒ&ƒƒƒ ‚ûƒƒƒ/ƒƒƒƒ&‚åƒƒ.ƒ,‚ïƒDƒƒ	ƒ ƒƒƒƒ(ƒƒƒƒ‚ëƒ‚ÿƒ
+ƒƒ>ƒƒƒƒ‚òƒƒ‚úƒ,ƒ,ƒƒƒ
+‚þƒ‚õ‚÷ƒ	ƒ{ƒ3ƒƒ‚þƒXƒ2ƒ;ƒƒƒƒƒ‚øƒ‚üƒƒƒƒ‚îƒ4ƒ%ƒ8‚âƒƒƒƒ ƒ‚öƒ(ƒƒ	ƒƒ‚ôƒƒ'ƒ+‚êƒƒƒ)ƒƒ2ƒ ƒ‚ßƒ(ƒƒ"ƒ1ƒ;ƒ‚èƒƒƒ)ƒ‚õƒƒ-ƒƒA‚ò‚úƒƒ)ƒ‚âƒ+ƒƒ
+ƒƒƒ)ƒ'ƒƒƒ"ƒ6ƒƒƒ ‚êƒ?ƒ2‚öƒƒƒƒ ƒ	‚öƒƒƒ,ƒƒ"‚èƒƒ3ƒ‚÷ƒ5ƒ*ƒ‚çƒ3ƒƒ"ƒ)‚é‚÷ƒƒƒƒ‚íƒƒ#ƒƒ‚õƒƒ"ƒƒ.ƒƒƒ‚ïƒƒƒ ƒƒƒ$ƒƒ)‚îƒƒ ƒƒ‚üƒƒ5ƒ/ƒ,‚ûƒ-ƒ"ƒ‚Ûƒƒƒ‚íƒƒ&ƒ)ƒƒƒƒƒƒ‚òƒ
+ƒƒƒ‚äƒƒƒ%ƒ‚úƒ
+ƒ0‚éƒƒC‚ÿƒƒ&ƒƒ>ƒ)ƒ)ƒ ƒ?ƒ ƒ!ƒƒ ‚òƒ‚Ûƒƒƒƒ.ƒ>ƒ"‚àƒƒ(ƒƒ‚àƒ‚òƒƒƒ*ƒ‚íƒƒ‚òƒƒƒƒƒƒ‚ì‚÷ƒƒ7ƒ‚ôƒ‚î‚þƒ)ƒ‚ðƒ ƒƒ‚Ùƒ‚üƒƒ‚øƒ!ƒƒ ƒ
+ƒƒƒƒƒƒ ƒƒƒƒ&‚æ‚èƒ)ƒ3‚øƒ%‚ùƒƒƒ4ƒƒ
+‚óƒƒ(ƒƒƒ	ƒƒ ƒ‚ñƒ‚ûƒƒƒJƒ‚ìƒƒ‚çƒ7ƒ	ƒƒƒƒƒ‚Úƒ7ƒ+ƒ+ƒƒƒƒƒƒ!ƒ!‚ûƒ‚ðƒƒƒ
+ƒƒƒƒ$ƒ	ƒCƒƒ;ƒƒ:ƒ"ƒ+ƒƒƒA‚õ‚õƒƒƒ5ƒJƒ7‚þƒ‚äƒ'‚åƒA‚ûƒ‚æƒƒƒƒƒ(ƒƒƒƒƒƒ5ƒ7ƒƒ‚Úƒƒ‚ý‚ù‚öƒƒƒ-ƒ#ƒƒ(ƒƒ‚ýƒ8ƒ(ƒƒ5ƒƒ1ƒƒ‚Û‚ûƒRƒƒƒƒƒƒ‚è‚ûƒ*ƒ0ƒ
+ƒBƒƒƒƒ‚ëƒ#ƒ7ƒ!ƒƒ:ƒƒƒƒƒ ƒƒƒƒ‚üƒ	ƒ ƒ.ƒ‚ÿƒ‚ñ‚ùƒƒ ƒƒ&ƒƒƒƒƒ‚õƒ0ƒƒ‚ÿƒƒAƒƒ)ƒ!ƒƒƒ+ƒƒƒ ƒ9‚ÿƒƒ&‚ù‚þƒ&ƒƒƒ0ƒƒƒƒ
+‚õƒƒ
+ƒ
+ƒ#ƒ ƒƒ:ƒƒƒ"‚÷ƒ"ƒƒƒ7ƒ,ƒƒƒ&ƒƒƒV‚Ö‚õƒ(ƒ#ƒ0ƒƒT‚õƒ&ƒ3ƒ(‚ùƒ‚ý‚îƒƒ"‚þƒ>‚ñƒ4ƒ ƒ‚õƒ ƒƒƒ
+ƒ0ƒ%‚üƒ+ƒ%ƒ ‚ûƒ<ƒ ƒƒƒƒ4ƒ‚ïƒ:ƒ'ƒ/‚êƒ‚ëƒ!ƒƒƒƒƒƒƒƒT‚øƒƒƒƒ)ƒ3ƒ
+ƒ=ƒ‚÷ƒ'ƒƒƒ
+ƒƒ!ƒƒHƒƒ ƒIƒ"ƒƒƒ#ƒ)ƒ2ƒ!‚úƒƒ‚Ù‚îƒ6ƒ‚íƒ%ƒ
+ƒ-ƒ
+ƒƒƒƒ'ƒ‚ø‚ü‚þƒƒƒƒ$ƒƒ.‚õƒ)ƒ
+ƒƒƒ<ƒ7ƒƒƒƒ:ƒƒƒ
+ƒƒƒ?ƒ_‚òƒƒ(ƒƒ7ƒ ‚ýƒƒ0ƒƒ‚þƒƒ‚óƒƒ:ƒƒ	ƒƒ"ƒ#ƒ/ƒƒ!‚ôƒƒ4‚íƒƒ ƒƒ3ƒƒƒ ‚ì‚ïƒ1ƒƒƒ6ƒ$‚úƒ$ƒ2ƒ5ƒ‚þƒƒƒ ƒ!ƒƒ/ƒ ƒ‚üƒ‚ýƒ'‚åƒ‚öƒƒƒ0ƒƒƒƒƒ-ƒ*ƒAƒƒ	ƒ,ƒ0ƒ2ƒƒƒƒ1ƒƒ‚ùƒƒƒ+ƒ1ƒƒ$‚ýƒƒƒƒ ƒ<ƒ%ƒ6ƒ(ƒƒ‚øƒƒƒ%ƒ8ƒ"ƒ‚ßƒ‚ê‚êƒƒ6ƒƒƒƒƒ‚ÿƒƒƒƒ0‚ýƒ+ƒƒAƒƒ0ƒƒ>ƒ‚ìƒƒ(ƒ ƒƒƒ9ƒ
+ƒƒƒ"ƒ%ƒƒƒƒƒ"ƒƒ$ƒƒƒƒƒ$ƒƒƒƒ2ƒ9‚òƒ)ƒ>‚ö‚ïƒƒƒRƒƒ6ƒ$ƒƒ	ƒƒƒƒ+ƒƒƒ	ƒ%ƒƒƒƒƒƒƒ0ƒ‚ú‚ôƒ+‚öƒƒ<‚Þƒ<ƒƒƒ"ƒƒC‚ë‚öƒ2ƒƒƒƒƒƒ
+‚òƒ5ƒ)‚ìƒ ƒƒ+ƒ+ƒƒƒ$ƒƒ,ƒ$‚öƒƒƒƒ-ƒƒƒƒƒƒƒ)‚àƒ,‚îƒ5ƒ%ƒƒ+ƒƒƒƒ3ƒ=ƒ9ƒ7ƒ‚öƒ*‚úƒƒ‚ûƒƒƒ6ƒDƒƒQƒ6ƒ!ƒƒƒƒ%ƒ3‚õƒ#ƒ-ƒFƒ"ƒƒƒ	ƒƒ4ƒ7ƒƒ0ƒ‚ú‚âƒ
+ƒƒƒ4ƒƒƒƒ?ƒ&ƒ‚üƒƒƒ"ƒƒƒƒ(ƒ$ƒƒ"ƒƒ;ƒ‚óƒƒ
+‚ãƒ*ƒƒƒ"ƒJƒƒƒ ‚×‚ïƒ
+ƒ‚ýƒ\ƒƒ9ƒ>ƒ ‚Ý‚ðƒ"ƒ0ƒƒ*‚ôƒ9ƒƒ!ƒƒƒ%ƒƒ-‚êƒ‚÷ƒ‚þƒƒƒƒƒƒƒ‚öƒ‚ýƒƒ	ƒƒ7ƒƒƒ+ƒ%‚ùƒKƒ'ƒƒDƒ*‚ó‚íƒ:ƒ‚òƒƒ#ƒƒƒƒ9‚ôƒ.ƒGƒ"ƒ&ƒƒ"ƒ@ƒ ƒ ƒ"‚ìƒ‚þƒ"ƒ)ƒ"‚ùƒ/ƒƒƒƒ‚÷‚õ‚üƒ‚üƒ‚ìƒƒ?ƒ"ƒ"ƒ)ƒƒ+‚äƒ1ƒƒ‚ù‚òƒƒ(‚ÿƒƒƒƒ‚õƒƒ'ƒƒƒƒ.‚ÿƒ0ƒ2ƒ‚ôƒ,‚÷ƒCƒƒXƒ}ƒ†ƒzƒPƒƒU‚÷‚ýƒ‚øƒ3ƒ9ƒƒƒƒ1ƒƒ.ƒƒƒƒ'ƒƒƒƒ‚Ñƒ	ƒ*ƒ3ƒƒƒƒ‚úƒ‚æƒƒ6ƒƒƒƒ‚ûƒ
+ƒ	ƒ‚þƒƒƒ#ƒ*ƒ‚ÖƒƒCƒ&ƒƒƒƒ
+‚õƒ.ƒ ƒƒ)ƒƒ‚þƒƒƒƒGƒƒƒƒ)ƒƒ%ƒ)ƒ.ƒ#ƒ!‚òƒ6ƒ.ƒƒ#ƒ‚õƒ‚þ‚úƒ+ƒƒƒ/ƒ‚ù‚û‚ðƒ‚úƒƒ‚úƒ‚ú‚ôƒ$ƒƒƒƒ‚ù‚÷ƒ6‚þƒƒ‚ÿƒ3‚ó‚ÿƒƒ&ƒƒ-ƒƒ*ƒƒƒ(ƒ-ƒ,ƒ'ƒG‚óƒ7ƒ‚úƒ*ƒ)ƒƒƒƒƒƒƒƒ!ƒƒƒ+ƒƒRƒ	‚üƒ.‚îƒƒ-ƒ.ƒ/‚ý‚éƒƒƒ	ƒ2ƒ;‚àƒ‚ïƒHƒ.ƒ
+‚þ‚þƒƒ‚ëƒ ƒƒƒƒ
+‚çƒƒƒƒ?ƒ=ƒŸƒÿ„(ƒòƒƒtƒƒ3ƒƒ5ƒƒƒƒ#ƒ ƒ6‚ÿƒ-ƒ‚çƒƒ‚úƒ%ƒƒƒ%ƒƒƒ ƒƒ ‚ðƒ‚ðƒ.ƒ
+ƒ.‚öƒ7ƒƒƒ ‚øƒƒƒƒ‚ùƒƒƒƒ1ƒDƒƒƒƒƒƒƒ%ƒƒ‚ìƒFƒƒG‚ãƒƒ ƒ-ƒƒeƒƒ‚ÿ‚ùƒ‚õƒ2ƒ-ƒ‚ÿƒƒ‚êƒ"ƒƒ‚öƒOƒ‚ýƒ‚ìƒ'ƒƒƒ ‚ßƒƒƒ%ƒ>‚ôƒ-ƒƒ‚ãƒƒƒƒƒ1ƒ!ƒƒƒ ƒ&ƒƒ‚ð‚øƒƒƒƒƒƒ:ƒƒ ƒƒ‚ôƒƒƒ	ƒGƒ1ƒ7ƒ	ƒ4‚âƒƒ‚ûƒƒ)ƒƒƒƒ?ƒƒ/ƒƒ ƒ‚Óƒ	ƒ ‚÷‚ðƒ*ƒƒƒ,ƒ+ƒƒƒ‚ãƒƒ"ƒƒO‚ý‚ÿƒ‚ÿƒƒ ƒƒ‚ýƒƒ4ƒƒ(ƒ,ƒƒ%ƒƒ%ƒwƒò„Þ…S„©ƒìƒ[ƒƒƒƒƒ0‚ò‚þƒ&‚àƒƒ
+ƒƒ‚ö‚ßƒ
+ƒƒ?ƒ9ƒ!ƒ"ƒ ‚ý‚èƒƒƒƒ ƒ4ƒƒ-‚ÿ‚÷ƒƒ4ƒ&ƒƒ	‚ñƒƒƒ‚ôƒ‚ëƒ?ƒ5ƒƒDƒ:ƒ‚ýƒ‚öƒ)ƒ(ƒ#ƒ9ƒ‚øƒƒ6ƒ+ƒ0ƒƒƒƒ>‚ýƒƒƒƒ2ƒ ‚ùƒ#ƒ"ƒVƒƒƒƒ‚ìƒ ‚íƒƒ ƒƒ
+ƒƒƒƒ/‚ñƒ#ƒƒ‚íƒ‚óƒBƒ‚þƒ‚üƒƒ*ƒ7ƒ
+ƒƒ(ƒ'ƒƒƒ/ƒƒƒ‚ïƒƒ$ƒƒƒ‚ø‚ýƒDƒƒ+ƒ	ƒ:ƒ‚ÿƒƒ(‚åƒ%ƒ‚þƒƒƒƒƒƒƒƒ‚ùƒ*ƒe‚êƒ#ƒ6ƒƒƒ0‚òƒ*‚ýƒ‚ãƒ/ƒƒ‚þƒƒWƒƒ‚õƒƒƒ‚ýƒƒƒƒ?ƒ$‚ðƒ‚öƒ7ƒ"ƒƒƒƒk„…B…Â…„ƒrƒNƒ‚ïƒEƒ=ƒ?ƒ‚íƒƒ<‚ðƒ%ƒ‚ðƒƒ‚ï‚øƒBƒ.ƒƒ‚ùƒƒ‚öƒƒ‚ó‚òƒ,‚õ‚ïƒƒ‚öƒƒƒ ƒ)ƒƒ#‚ðƒƒƒ/ƒLƒ	‚þ‚öƒƒBƒ‚ïƒ<ƒƒ‚üƒ‚ñƒƒƒ+ƒ7ƒ8ƒƒ;‚ßƒƒƒƒ+‚æƒƒ2ƒ=ƒƒ0ƒ!ƒƒ‚ýƒ"‚öƒƒ‚ôƒ$ƒ ‚ìƒ‚þ‚üƒ1ƒ!ƒ$ƒƒƒA‚ëƒƒƒ!ƒ9‚ûƒ‚âƒ‚õ‚êƒƒ*ƒ‚î‚þ‚óƒ‚ôƒƒƒƒƒ2ƒƒ‚èƒ/ƒƒƒƒ‚öƒ4ƒƒ(ƒƒ1‚ÿ‚ó‚þƒƒƒƒ1ƒ!ƒ‚ôƒ.ƒƒ@‚üƒƒGƒ	ƒƒƒƒ‚ùƒƒ/ƒ"ƒ$ƒ:ƒ&‚ýƒ‚ðƒƒƒƒƒ.ƒƒƒ4ƒ‚×ƒ6ƒƒƒƒ
+ƒ(‚üƒ&ƒƒqƒ¡„G„y„Wƒµƒlƒ5ƒƒ-‚àƒ ƒ4ƒƒƒ‚æ‚ýƒ‚ùƒƒƒ$‚ûƒ#ƒƒƒƒ‚Þƒƒ7ƒƒƒ‚ë‚ÿƒƒ3ƒƒ?ƒƒ1ƒƒ!ƒ:ƒƒƒ‚áƒƒƒƒƒƒ8ƒƒ2ƒƒƒ‚úƒ.ƒ$ƒ0‚óƒ+‚òƒƒ+ƒ,ƒ‚äƒ2ƒ?ƒƒ5ƒ0ƒƒ5ƒ(ƒ4ƒƒƒƒƒƒƒƒƒ2ƒ.ƒ!ƒƒƒ2ƒƒƒ&‚ýƒƒƒƒƒ)ƒƒƒ:ƒƒ	ƒƒEƒƒƒ ƒ ƒ‚öƒ,ƒ7ƒ ƒ‚þ‚ù‚¾ƒƒ)ƒ,ƒ1ƒƒ‚ôƒ6ƒƒƒƒƒƒƒ7ƒ ƒƒ0ƒƒ'ƒƒƒ	ƒƒƒ ƒƒ‚êƒƒ	ƒ
+ƒƒ‚îƒ‚ùƒƒ*ƒ&ƒ+ƒ‚ûƒƒ
+ƒƒ.ƒ!‚ñƒ;ƒƒ+ƒƒƒ-ƒƒ,ƒ&ƒƒ‚òƒƒ!‚øƒƒƒ9ƒ$ƒ'ƒ.ƒ_ƒ‘ƒçƒ°ƒqƒAƒƒ"ƒ‚ÿƒ	ƒƒ/ƒƒ
+‚üƒ‚üƒƒ ‚óƒƒ*ƒ$ƒƒ	ƒ$ƒ7‚òƒƒ;‚øƒ&‚÷‚ÿƒH‚ßƒ‚êƒƒƒƒƒƒ‚þ‚íƒƒƒƒƒƒ#ƒ@‚ü‚þƒƒƒƒCƒƒƒ-ƒ"ƒ‚ûƒƒƒ‚õƒ.ƒƒƒ ƒ=ƒ#ƒ%‚ùƒƒ&ƒƒMƒƒƒEƒGƒ!ƒ‚ñƒ5ƒƒ‚õ‚îƒ/ƒ‚Ú‚öƒ‚ë‚Ñƒƒƒƒƒ'ƒƒƒ0ƒ+ƒ ƒ
+ƒ.‚õƒƒBƒƒ'ƒƒƒ&ƒƒ$ƒ'ƒƒƒ‚òƒƒ+ƒ/ƒƒƒ/ƒ‚úƒƒ=ƒƒ‚ñ‚â‚þƒ
+ƒƒƒƒƒ.ƒ‚ðƒƒ1ƒƒ0ƒ$ƒƒ)‚÷ƒƒ'ƒƒ)ƒƒƒ‚ý‚óƒ2ƒƒƒ9ƒ+ƒ‚ïƒ1‚Þƒ‚óƒ!ƒ ƒƒƒƒƒƒƒƒƒ‚ïƒIƒAƒ=ƒ"ƒSƒkƒLƒƒ)‚ñƒ‚ì‚î‚úƒƒƒ*ƒ!ƒƒƒƒ ‚îƒ‚ÿ‚ýƒƒƒ‚ÿƒE‚ü‚þƒ:ƒƒƒƒ>ƒƒƒ3ƒƒ-ƒƒƒƒƒ#ƒƒBƒ+‚÷ƒ7ƒ!ƒ+ƒ1ƒƒƒƒƒIƒƒRƒ2‚û‚çƒ&ƒƒ1‚üƒƒƒ0ƒ‚ÿƒƒƒ2ƒ ƒƒ9ƒƒƒƒƒƒƒƒƒƒ ƒƒƒ!‚òƒ‚æƒ4ƒ ƒ‚íƒ‚ÿƒ‚ö‚ïƒƒ6ƒƒƒ%ƒ1ƒƒƒƒ‚ÿƒ6ƒ/ƒƒƒƒƒ
+ƒ‚òƒƒHƒ%‚óƒƒ5ƒ5ƒ,ƒ	ƒ‚äƒ1ƒƒ7ƒƒ/ƒ3ƒ7‚õƒ!‚éƒ5ƒƒA‚öƒƒ*ƒƒƒƒƒƒƒ'‚ñƒ8ƒƒ0ƒƒ>ƒƒ!ƒ ƒƒƒ‚Ñƒƒ2ƒƒ	ƒ2ƒ#‚øƒƒƒ0‚ÿƒƒƒ	ƒ=ƒ‚ú‚ßƒƒ:ƒ/ƒƒƒ9‚û‚ó‚ðƒ9ƒƒ-ƒ3‚ýƒ5ƒ!ƒ9ƒƒ!‚ã‚ïƒ"‚üƒƒ‚õƒ‚òƒ
+‚íƒƒƒ ƒ>ƒƒƒ*ƒƒ‚à‚ùƒƒ/ƒƒƒƒƒƒƒƒƒƒ)ƒƒƒ‚ÿ‚ñƒ+ƒ‚ôƒ!ƒ-ƒ<ƒ ƒƒƒƒƒƒƒƒ
+‚þƒ/ƒƒƒƒƒ1ƒƒ ƒ$ƒƒ‚îƒ‚íƒƒƒƒƒƒH‚þ‚íƒ‚ðƒ3ƒ+ƒ(ƒƒƒƒƒ#ƒ2ƒƒƒƒ‚ÿƒƒ0ƒƒ‚èƒ‚áƒ;ƒ+ƒƒ*ƒƒƒ‚ã‚ô‚õƒƒ-ƒƒƒ)‚õƒƒMƒƒ‚÷ƒƒƒ‚óƒ‚þƒ6ƒ!ƒƒƒƒƒƒ*ƒ‚ûƒ,ƒƒ
+ƒ	‚õƒƒ$ƒ-‚Ùƒƒƒƒ ƒ:ƒƒƒ,ƒƒ1ƒ@ƒ ƒ‚úƒ<‚üƒ&ƒCƒ‚ûƒ3ƒƒ5ƒ
+ƒƒ+ƒ7ƒ‚ýƒ‚þƒ5ƒ0‚úƒ‚òƒƒ.ƒƒƒƒ‚çƒ
+ƒƒ‚öƒ‚ÿƒƒƒ@ƒ‚úƒ%ƒƒƒƒ*ƒ3ƒ‚ó‚ìƒƒ0ƒ&ƒƒƒ<ƒ=‚öƒ5ƒ
+ƒƒƒ#ƒ.ƒƒ*ƒ&ƒ4ƒ‚û‚ú‚ÿƒƒƒƒ-ƒƒ.ƒ%ƒ"ƒ&ƒƒƒƒSƒƒƒ‚ù‚õƒƒƒƒ#‚ïƒ‚Þƒ'ƒƒ6‚ßƒ‚ü‚ïƒ0ƒƒ‚üƒƒƒ/ƒ*ƒƒJƒ
+ƒƒ‚þƒƒ‚öƒ‚þ‚îƒ<ƒ$ƒƒ/‚û‚ùƒƒƒ‚õƒ‚ÿƒ‚ïƒƒƒ%‚üƒ‚Øƒ9ƒ‚ôƒƒƒ‚ýƒ2ƒ4ƒ‚öƒ&ƒ‚ùƒƒƒ1ƒ‚ÿƒ#ƒƒƒ-‚þƒ‚÷ƒ6‚Ýƒ3ƒ?‚üƒ‚ðƒƒƒƒ‚üƒ/ƒƒ8ƒ/ƒ"‚öƒ)ƒ
+ƒ5ƒ&ƒ$ƒ‚ìƒ‚ùƒƒƒ$ƒƒ‚âƒ ‚òƒ‚öƒ&ƒƒ‚ûƒƒƒ.ƒ‚æƒ"‚íƒƒ9ƒ,ƒƒ/ƒƒ5ƒƒ(ƒ!ƒƒ
+ƒƒƒƒ+‚õƒƒƒƒ6ƒƒO‚ó‚÷ƒ‚æƒƒƒ;ƒƒƒ‚Ûƒ ƒƒ‚ÿ‚þƒ8ƒƒƒ,ƒT‚ê‚ò‚ø‚ýƒƒƒƒƒƒƒƒƒƒ‚ÿƒƒ‚õƒ ‚úƒƒ ƒ‚æƒ ƒƒƒƒ*ƒƒ‚ùƒƒƒFƒ&ƒƒ‚ÿƒ2ƒƒƒƒ3ƒ‚ßƒƒ‚ýƒƒ‚è‚ò‚ôƒ‚ýƒ
+ƒƒ#‚øƒ*ƒ‚øƒGƒƒƒ!ƒ$ƒƒƒ‚óƒƒ$ƒƒ‚ý‚î‚úƒ#ƒƒ!ƒƒƒƒ6‚þƒ=‚ãƒƒ‚þ‚ûƒ0‚Ï‚îƒƒ6ƒ,ƒƒƒ ƒƒ‚ïƒ‚òƒƒƒƒ8ƒ	ƒ‚âƒƒ!ƒƒƒ‚Äƒƒ(ƒ*ƒƒ#ƒ‚ýƒƒƒ‚úƒƒ	ƒƒ ƒƒ*ƒƒƒSƒ%‚âƒƒ4ƒƒ‚êƒƒ3ƒ#ƒƒ0ƒƒ3ƒ,ƒƒƒƒ2ƒƒ>ƒƒƒ‚ôƒƒƒ-‚áƒƒ$‚é‚ô‚é‚õƒA‚ÿ‚øƒpƒ ƒ%‚Ú‚ýƒ ƒƒƒƒƒ	‚éƒƒ3‚óƒƒƒƒ+ƒƒƒ2ƒƒ%‚ûƒƒƒƒNƒ‚üƒƒ+ƒ(ƒƒƒ6ƒ
+ƒƒƒƒKƒƒ6ƒƒ0ƒ‚ûƒ%ƒ	ƒ‚òƒ=ƒƒ‚ëƒQ‚Õ‚íƒ2‚éƒ‚ýƒ‚ù‚é‚ø‚öƒƒƒ
+‚ÿƒ"‚ýƒ0ƒ‚ó‚íƒƒƒ,‚ø‚áƒ‚÷ƒ!‚ü‚÷‚õ‚ó‚óƒ#ƒ<ƒ*ƒƒ‚ç‚÷ƒƒƒ‚ÿƒƒƒ(ƒFƒ ƒ ƒ‚üƒ
+ƒƒ%ƒƒ+ƒ8‚¸ƒ!‚ëƒƒ‚ÿƒƒƒƒƒ'ƒ&ƒƒ‚ð‚ýƒƒ3‚ôƒ+ƒƒƒƒ'ƒƒƒƒ‚è‚÷ƒ&ƒƒ2ƒƒƒ$‚øƒ0ƒƒ‚ñƒƒ(‚ðƒƒƒƒ/ƒ<ƒ,‚ÿƒ)ƒ:‚ëƒ9ƒ‚ì‚þƒƒ>ƒ(ƒ	ƒ	ƒIƒJƒaƒƒƒƒƒ<‚ýƒƒ*‚óƒ ƒƒ	ƒ&ƒ9ƒƒ#ƒ2ƒ"ƒ‚üƒ#ƒƒ	ƒƒ‚þƒƒƒDƒ
+‚øƒ
+ƒ‚ïƒƒ
+ƒ ƒ‚ýƒ/ƒƒ3‚õƒƒƒ;ƒ#ƒƒƒ‚îƒ/ƒ ƒ-ƒƒƒ‚üƒ ƒ!ƒ"ƒ ƒ!ƒ.ƒƒƒ$‚þƒ‚ëƒƒƒ4ƒ‚åƒƒƒ	‚ôƒ5‚òƒ,ƒ+ƒ ƒ:‚äƒLƒƒ‚ü‚ûƒƒƒ*ƒƒƒƒ‚ýƒƒƒƒ ƒƒ9ƒ‚ÿ‚Ü‚üƒƒ>ƒ>‚õƒ ƒƒ‚ðƒ$‚ã‚ýƒƒƒƒ	ƒC‚æ‚÷ƒ"ƒ%ƒƒƒ‚ñ‚þƒ$ƒƒƒƒ1‚çƒ#ƒƒƒƒ‚üƒ(ƒƒ8ƒ)‚üƒƒ
+ƒ‚÷ƒƒƒƒƒ$‚ßƒƒ2‚æƒƒ.ƒƒ ƒ.ƒ=ƒ#ƒ‚ÿƒƒ#ƒ+‚ûƒƒ‚çƒ?ƒ
+ƒƒ‚ò‚üƒƒ ƒ=ƒƒƒ
+ƒƒƒ‚÷ƒ‚ß‚Þƒ!ƒƒ0ƒƒ‚üƒƒƒ'ƒ‚ßƒƒ‚ÿ‚öƒ#ƒƒƒ ƒƒ‚þƒEƒ(‚õƒ‚öƒƒ‚òƒ@ƒ
+ƒ"ƒHƒƒƒCƒƒNƒƒ ƒ"‚ýƒ	ƒ=‚û‚òƒ‚îƒƒ7ƒ%ƒ(ƒ,ƒ4ƒ‚ûƒƒƒ‚èƒƒ,ƒ‚üƒ'‚þ‚çƒƒ
+ƒƒ-ƒƒƒƒKƒ‚èƒ7ƒƒ#ƒ
+ƒƒ‚þƒƒƒ‚ø‚ß‚ô‚þƒ(ƒƒƒ&ƒ‚ùƒƒƒƒ%ƒƒ%ƒ ƒ%ƒ"ƒ ƒƒƒ&ƒƒƒƒƒƒ3‚êƒ‚ì‚ê‚ñƒƒ(‚Õƒƒ+ƒ2ƒƒƒƒ%ƒƒ‚üƒ‚ý‚úƒ‚üƒ?ƒ8‚ÿ‚àƒ	ƒ,ƒ‚Ö‚ôƒƒ'ƒƒƒƒ‚öƒƒ‚úƒ$ƒ.ƒƒƒƒ3ƒƒ'ƒ!ƒƒ"ƒ‚éƒƒƒƒ#ƒƒƒ‚õƒ5ƒƒ,ƒ#ƒƒ
+ƒ"‚òƒ'ƒƒƒ!ƒ	‚ôƒƒ>ƒƒ1‚øƒƒHƒ#ƒ=ƒ"ƒƒƒƒ+ƒC‚ôƒƒ%ƒ‚öƒƒ-‚õƒƒ$ƒƒ‚ü‚ø‚âƒƒ‚êƒ&ƒ1ƒ*ƒ‚èƒƒƒƒ‚ðƒƒ1ƒƒ.ƒ1‚ðƒ‚Ø‚üƒƒƒ:ƒ/ƒG‚ñƒƒ‚ßƒƒ"ƒƒ1ƒƒƒ ƒ$‚æƒ ƒƒ)ƒƒ‚ýƒ'ƒ‚üƒƒ"ƒƒƒB‚÷‚úƒƒ‚÷ƒ
+ƒ%ƒƒ(ƒ‚ÿƒ2‚ùƒ&ƒƒƒ7ƒƒƒƒ(‚óƒƒ
+‚ð‚Ñƒ$ƒƒƒƒ-ƒ.ƒ#ƒƒ‚íƒ‚üƒ
+ƒQƒ‚ßƒƒƒMƒ1ƒ
+ƒƒ$ƒƒ"ƒƒƒƒ‚ú‚èƒƒ ƒ,ƒƒ‚æƒ,ƒ‚éƒ
+ƒ ƒ‚Úƒ	ƒƒƒƒƒƒƒƒƒƒƒ+‚ñ‚íƒƒ	ƒƒƒƒ‚Üƒƒ*‚óƒ	ƒ‚éƒ4ƒ+ƒƒ%ƒƒ"ƒ‚öƒ4‚éƒ)ƒƒƒƒ'ƒ@ƒ‚ÿƒ ‚ñƒƒ‚ñƒ‚ý‚Ùƒ(ƒ‚õƒ1ƒ ƒƒƒ
+ƒ‚ÿƒ;ƒ‚öƒ‚þƒ	ƒƒƒ+‚üƒƒ ƒ‚æƒ ƒƒ/ƒ‚õƒƒ:ƒ!ƒ‚ïƒƒƒ/ƒ5ƒƒƒƒ‚ü‚Ó‚ûƒ%‚â‚ý‚ùƒƒƒ,ƒ	ƒƒ‚þ‚õƒ.ƒƒ#ƒ‚÷ƒƒƒƒƒƒƒ ƒƒ$ƒ‚ú‚éƒƒƒƒƒ#ƒ;‚æƒ<ƒ‚í‚ÿƒƒƒƒ1‚ýƒ‚Þ‚ìƒ/ƒD‚ìƒƒƒƒƒ#ƒƒƒ‚ñƒ1ƒ0ƒ+‚áƒ8ƒƒ‚æƒ*‚úƒƒƒ‚éƒƒ)‚ûƒNƒ$ƒƒMƒƒƒƒ@ƒ(ƒ‚ìƒƒLƒƒƒ6ƒ	‚ú‚ðƒGƒ‚ûƒ ƒƒƒ5‚êƒƒƒƒ-‚üƒA‚ø‚þƒƒƒƒ ƒƒ(ƒ1ƒ ƒ‚÷ƒ$‚ïƒ‚ëƒƒ‚õƒ‚íƒ0‚øƒƒ)ƒƒƒ!ƒ'ƒƒƒƒ7ƒ!ƒƒƒ+ƒƒƒƒƒƒƒƒ,ƒ=‚ð‚ùƒ	ƒƒƒƒƒƒƒ‚ðƒ ƒ,‚ê‚ë‚õƒ ƒƒƒƒ'ƒ ƒ-‚ôƒƒ;ƒ2ƒ‚ôƒ!‚ü‚çƒ7ƒ"ƒ	ƒƒ/‚ôƒƒ?ƒ)ƒƒƒƒ4ƒƒƒCƒƒƒƒƒ!ƒ‚ÿƒ!‚ïƒ,ƒ‚âƒƒƒƒƒ&ƒ-ƒ‚÷‚òƒƒƒƒƒ$ƒƒ‚êƒƒƒƒ‚ÿƒ'ƒƒƒƒƒ4ƒ=ƒƒ ‚÷ƒ-ƒƒƒ‚ñƒB‚àƒ/ƒ"ƒƒƒƒ;ƒƒ;ƒƒ/‚üƒƒ'ƒ4ƒ'‚ÿƒƒƒ‚óƒ5‚êƒƒ‚éƒƒƒ%ƒƒ‚ú‚èƒ0ƒƒƒ#ƒƒƒ‚ö‚íƒƒƒƒ&ƒ(ƒƒ‚øƒƒƒƒ)ƒ,ƒ/ƒ‚ÿƒ ƒƒ:ƒ&ƒƒƒ-ƒ.ƒ‚ûƒBƒ1ƒƒ‚÷ƒ4ƒ"‚÷ƒ‚óƒƒ,ƒ$ƒƒƒ"ƒƒƒƒƒ‚íƒ(ƒƒ$ƒ ƒƒƒ7ƒƒ-ƒ&ƒ#ƒ4ƒƒƒ‚öƒ‚þƒƒƒƒƒƒƒƒƒ‚ñ‚þƒ2‚ê‚úƒƒƒƒ-ƒƒƒ‚÷ƒJƒƒƒƒƒ‚éƒ)ƒƒ!ƒƒOƒ)ƒ(‚þ‚éƒ$ƒ‚ý‚ýƒ
+ƒƒƒƒ ‚ûƒ2ƒƒ.ƒƒ"ƒ‚ýƒ‚æƒH‚üƒ$ƒ$ƒ.ƒƒ‚õƒ*ƒ-ƒ‚ö‚öƒƒƒ/ƒ‚ýƒ
+ƒ‚ú‚øƒƒ"ƒ3‚ùƒƒ‚öƒƒLƒ$‚õƒ&ƒ‚î‚ü‚òƒƒ‚ä‚û‚îƒ'‚øƒƒF‚öƒ3ƒƒƒ
+ƒƒ ƒƒ!ƒ1ƒ&ƒ‚íƒƒƒ ƒƒƒ!ƒƒ<ƒ=ƒ	ƒƒƒƒƒRƒƒ<ƒ1ƒ‚÷ƒƒ	ƒ5ƒ0ƒ1‚ø‚ëƒ&‚ÿƒ&ƒ#ƒ‚ñƒƒƒƒ‚áƒƒƒƒ‚íƒƒ
+ƒ‚ü‚øƒ5ƒ$ƒƒ$ƒƒƒ?‚øƒ	‚óƒƒ%ƒ‚üƒ&ƒ(ƒ(ƒ ƒƒƒ"ƒƒ
+ƒƒOƒ3ƒƒ%ƒƒ	ƒ‚ù‚öƒƒƒ'ƒ‚ò‚üƒ'ƒƒƒ3ƒ‚üƒƒƒ1ƒ%ƒ
+‚Ûƒƒƒ‚èƒ/ƒ(ƒƒ‚õƒ0ƒƒƒƒ+ƒƒƒƒ#ƒ‚îƒ)‚îƒƒ‚ûƒƒ;‚÷ƒƒƒ>‚òƒƒ
+ƒƒƒV‚üƒ/ƒ+ƒ+ƒƒ7ƒ!ƒ#ƒƒ%ƒƒ*‚å‚ðƒƒ2ƒƒ	ƒ‚ùƒƒƒ‚ÿƒƒƒ2ƒƒƒƒAƒ(ƒƒ!ƒƒƒƒ8‚øƒƒ4ƒ‚ùƒ‚ôƒ$ƒ-‚ëƒ$ƒ(‚÷ƒ‚ò‚ðƒ-ƒ#ƒƒƒƒƒƒƒ&ƒƒ%ƒ(ƒ"ƒ0‚á‚øƒƒƒƒ
+ƒƒƒƒƒ!ƒ‚õƒƒOƒƒ<ƒƒ&ƒƒƒ'ƒ*ƒƒ'ƒ,ƒƒ‚ïƒ4ƒ9ƒ*ƒ)ƒ<ƒƒ‚ýƒƒƒƒ2ƒ5ƒƒ‚ô‚÷ƒƒƒ
+ƒƒƒƒƒ	‚èƒ5ƒƒ,ƒ1ƒ%ƒ!ƒ/ƒƒƒGƒ;ƒƒƒƒ ƒƒ0ƒƒ;‚â‚ôƒƒ‚õƒ‚÷ƒƒƒƒ ƒ2‚õƒ,ƒƒ‚þƒ‚Ûƒƒ‚õƒ1ƒƒƒƒ'ƒ‚õ‚í‚ðƒƒ‚ýƒ:ƒ ‚÷ƒƒ4‚øƒAƒƒ
+ƒƒ%ƒ
+ƒ9ƒ#ƒƒƒ.ƒƒƒƒƒ'ƒ+ƒƒƒ‚ïƒƒE‚úƒƒ'ƒƒƒƒ‚ø‚÷ƒ*ƒ/ƒ9ƒ6ƒƒ
+ƒ&‚æƒƒƒƒƒ‚ùƒ#‚öƒ.‚îƒ6ƒƒ.‚ð‚òƒ*ƒƒ!ƒƒƒ6‚ø‚óƒ‚æƒ(ƒƒƒƒƒƒƒ3ƒ‚ìƒ‚ó‚ñ‚¿ƒƒƒƒƒƒ‚ðƒƒ'‚ÿƒ2‚ôƒƒ,‚úƒ‚ûƒƒ	ƒƒ‚ðƒ'ƒ
+ƒƒBƒ(‚øƒƒ	ƒ3ƒ‚ýƒƒƒƒ6ƒƒ ‚ùƒ-‚éƒ,ƒ>ƒ7ƒ!ƒƒƒ‚øƒ#‚ôƒƒ.‚ÿƒ1ƒƒ"‚úƒƒ‚çƒƒƒƒ!ƒ‚àƒƒƒƒ+ƒƒ%ƒ	‚úƒƒ‚ú‚üƒ=ƒƒ"‚ñƒƒ
+ƒ	ƒƒƒƒ$‚ÿƒ,ƒ‚ëƒ‚éƒƒƒƒƒƒ;ƒ'‚Þƒƒ7ƒ.ƒƒƒƒAƒ2‚ôƒƒ#‚÷ƒƒƒ ƒRƒ	ƒ
+ƒƒ‚õƒƒ%ƒ‚úƒ&ƒ'ƒ‚é‚òƒLƒ,ƒ ƒƒ!ƒ(ƒƒ+‚ýƒ‚öƒƒƒ'ƒƒNƒƒ‚ÿƒƒ,ƒƒ0‚ùƒ$‚÷ƒƒ	ƒƒ
+‚ûƒ)ƒƒ‚÷‚ü‚Ùƒƒƒƒ)ƒ>ƒƒ%ƒ'ƒƒ
+ƒƒ‚ö‚þƒ9‚þ‚óƒƒƒ!‚öƒƒ$ƒƒ)ƒƒƒƒƒ‚ÿƒ+‚÷ƒ7ƒ
+‚ó‚ûƒ‚øƒ?ƒ ‚ÿƒ%ƒ&‚áƒƒƒ6ƒ‚ó‚ï‚ô‚þƒƒƒƒ$ƒ-ƒƒ‚éƒƒƒ ‚í‚ûƒƒƒƒƒ‚îƒ!ƒƒƒ	ƒƒ?ƒƒƒ&ƒ‚äƒƒ+ƒ‚÷‚ýƒ$ƒ)‚ìƒƒ%ƒƒ,‚Ùƒƒƒƒƒƒƒ"‚õƒƒ‚Å‚þ‚ùƒ‚óƒ-ƒƒ,‚é‚ßƒ ƒƒƒƒ
+‚ùƒ ƒ,ƒƒƒ#‚ôƒ ‚åƒƒ&ƒƒƒ ƒƒ‚à‚ûƒƒ#ƒƒƒ ƒƒƒ‚ê‚üƒ‚ûƒ	ƒƒƒ.ƒ3ƒ0ƒ,ƒ*ƒƒ!ƒ#‚Õƒ ƒƒ0ƒƒƒƒƒƒƒƒ‚÷ƒƒ0ƒ1ƒƒ;ƒƒ	ƒƒ‚ù‚òƒ$ƒ
+ƒ ƒƒ)ƒƒ-ƒƒ
+ƒ ƒF‚ÿƒƒƒ-ƒ‚úƒ ƒ6ƒ%ƒƒƒƒAƒƒCƒƒ	ƒƒ/‚Ýƒ‚ñƒƒ"ƒƒ‚üƒ-†5ƒXƒ"‚èƒ	ƒƒ,‚ø‚ðƒ!ƒƒ‚ü‚þƒƒ)ƒ)ƒƒ"ƒƒ‚ÿ‚áƒƒ	ƒ3ƒƒ‚ôƒƒƒ8ƒƒ ‚ûƒƒF‚þƒ#ƒ8ƒ‚öƒ	ƒƒ‚õƒƒƒƒ%ƒƒ‚Ùƒƒƒƒƒƒƒƒ"ƒƒ!ƒ1ƒ+ƒ‚þƒƒƒ5ƒƒƒ(ƒƒ3ƒƒBƒƒƒƒ ƒ(ƒ‚õƒƒ0ƒƒ@‚üƒ[ƒ(ƒƒ+ƒƒƒƒƒƒƒƒ ƒƒƒƒƒƒ	ƒ‚ùƒ#ƒƒƒ
+‚ûƒƒƒƒ"ƒ)ƒƒ‚Î‚ôƒƒƒ	ƒƒKƒcƒ
+‚êƒƒ1‚ò‚ô‚ì‚ïƒ/ƒƒƒƒ"ƒƒ(‚êƒ'ƒƒƒ ƒƒ0ƒ-‚ÿƒƒƒƒ ƒƒƒƒƒ!ƒ	ƒ‚ùƒ‚Øƒƒƒ;ƒ0ƒƒ‚ö‚þ‚þ‚çƒ!‚÷ƒ(ƒ	ƒƒ‚ðƒƒƒƒ2ƒ‚öƒƒUƒ%ƒZ†c„Fƒ/ƒZƒƒ#ƒ‚ñ‚õƒ2ƒƒƒ‚ãƒƒƒƒ‚üƒƒ
+‚àƒ*‚ïƒRƒƒƒ‚ôƒ#ƒ.ƒ3ƒ'ƒ‚úƒƒƒƒ‚û‚ßƒ/ƒ‚ú‚ìƒƒƒ)ƒƒ.ƒƒ+‚öƒƒ ƒ!ƒƒ'ƒƒƒ
+ƒ‚ö‚Ùƒ8ƒ&ƒ$ƒ-‚ö‚âƒƒƒƒ‚ïƒ ƒ4ƒƒ ƒƒƒƒ'ƒ?ƒ‚èƒ ƒƒ!ƒ‚äƒ%ƒƒƒƒƒ,ƒ-ƒ?‚ôƒ‚ëƒ.ƒ!ƒ!ƒ
+ƒ%ƒƒ<‚ü‚ñƒ!ƒ‚ñƒ(‚÷ƒ-ƒƒƒƒ‚øƒƒ!ƒƒ
+ƒƒ.‚ôƒ	ƒ$ƒ‚ë‚üƒƒƒ*ƒƒƒƒ"ƒ4ƒƒ/ƒ2‚ýƒƒƒƒ‚ø‚óƒƒƒ&ƒ;‚ç‚üƒƒƒƒ0ƒƒ‚ðƒ ƒ0ƒ:ƒ‚ýƒ!ƒ'ƒƒƒƒ4ƒƒƒ	ƒƒWƒƒIƒ2ƒƒ(ƒ.ƒ.ƒ4ƒ!‚öƒ‹íƒK†e… ƒHƒ‚òƒHƒ‚ÿƒ,‚úƒƒ$‚â‚ÿƒ4ƒ8‚çƒƒƒ>‚ï‚ù‚íƒ‚Öƒ‚Úƒ-ƒ‚í‚ÿƒƒ#ƒ>ƒ‚ò‚ø‚ùƒƒƒƒ‚ûƒƒ ƒƒ(ƒƒƒƒ‚õƒ‚ðƒ‚øƒƒ6ƒƒƒI‚öƒ*ƒƒƒ2‚ùƒƒ ƒEƒM‚ÿƒ,‚÷ƒ.ƒ‚þƒ2ƒ%ƒƒ$‚Õƒ*ƒFƒƒ0‚ÿƒƒƒ	ƒ6ƒ"ƒƒ	‚þ‚þƒƒ%ƒ$ƒ‚ýƒƒƒ"ƒ(ƒ‚é‚ýƒ!ƒ3‚öƒ‚÷ƒƒ,ƒ2ƒƒƒƒ%ƒ%ƒƒƒƒ+ƒ#ƒ%ƒ‚ûƒƒ'ƒƒƒ"‚îƒƒ	ƒƒ-ƒ'‚ùƒƒ%ƒƒ)ƒ?ƒƒ%ƒƒƒ!ƒ ƒƒƒ)‚î‚øƒ.ƒ‚æƒƒ#ƒƒƒ2ƒƒ‚æƒƒƒ‚èƒ!ƒƒ3ƒ+ƒ#ƒ@ƒ%ƒ*ƒƒƒƒ"ƒƒ!ƒ%ƒƒ‚çƒƒƒ0ƒ>†ç„ƒ!ƒ‚êƒ?ƒ
+ƒƒ.ƒƒ&ƒ-ƒƒ ƒ‚ï‚ôƒ1‚Ùƒƒ:ƒƒ‚ýƒ‚ùƒƒƒƒ
+‚ùƒB‚þ‚êƒƒ‚ÿ‚àƒƒƒƒ0‚øƒ>ƒ‚áƒƒ!‚þƒ1‚ïƒ.‚ùƒ‚àƒ?ƒ,‚ï‚îƒ%ƒ3ƒ2ƒ.ƒƒ%ƒ/ƒ$ƒƒƒ6ƒ)ƒ)ƒ"ƒ#ƒƒ+ƒO‚ôƒ3‚ùƒƒ	ƒ+ƒ‚Ïƒ
+ƒGƒƒ1ƒ-‚ÿƒ#ƒ ‚ëƒ?ƒ‚öƒƒƒƒ4ƒƒ ƒƒƒ%ƒƒ5ƒƒ	ƒƒ
+ƒ!ƒ‚øƒƒ ƒ.ƒƒƒƒ;ƒ3ƒ(ƒ‚êƒ3ƒƒ‚ñƒ ƒ@ƒ‚ßƒƒƒ0ƒ‚ÿƒ
+ƒ^ƒ‚ø‚éƒ8‚õƒƒ:ƒƒƒ ƒ*ƒ*ƒƒƒƒƒ5ƒƒ%‚û‚È‚âƒƒ ƒƒƒ‚ìƒ9ƒ#‚òƒƒ0ƒ&‚ò‚ü‚òƒEƒƒ+ƒ‚þƒ‚óƒƒƒ‚þ‚ÿƒQƒƒƒK†,ƒ=ƒ	ƒ*ƒƒ)ƒ#ƒƒƒƒ ƒ,‚çƒ‚çƒ1ƒƒƒ(‚úƒƒ*ƒ(‚íƒ‚öƒ	‚éƒ
+ƒ4ƒ5ƒ.ƒLƒ‚ùƒƒƒƒ‚ùƒ&‚ÿ‚ÿƒƒ+ƒ‚öƒ‚éƒƒ9ƒ#ƒƒLƒƒGƒƒƒƒƒ ƒ!ƒƒƒƒ+ƒƒ"ƒƒƒƒ‚ùƒCƒƒ‚úƒ6ƒ ƒƒƒƒƒƒ‚ýƒƒ‚Üƒ1ƒ ƒƒƒƒƒ%ƒ‚ýƒƒƒƒ!ƒ1ƒƒ‚Ý‚þƒƒ‚ý‚üƒƒƒƒ	ƒ,‚ÿƒ1‚ùƒƒ.ƒ0‚òƒƒ'ƒ‚ÿƒ*ƒƒƒ*‚øƒ+ƒLƒƒ
+ƒ‚ðƒ3ƒ'ƒƒ	ƒƒƒƒƒ"ƒƒƒ‚ÿ‚ãƒƒ-ƒ1ƒƒƒƒƒ%‚õƒƒƒ5ƒƒ‚éƒƒ ƒ‚üƒƒ%ƒ‚òƒƒƒU‚ÿƒ ƒƒƒ,ƒƒ/ƒ‚îƒ&‚ÿƒƒ"ƒ=ƒ&‚ïƒ%ƒ ƒ/ƒ(ƒ!ƒ1ƒ%ƒƒƒƒƒ‚ãƒƒ1ƒ*ƒ'ƒƒ‚àƒƒƒƒ‚üƒƒƒƒ+ƒƒ#ƒƒ%ƒƒ ƒƒƒ‚ú‚ñƒƒ'ƒƒƒ‚÷ƒ#ƒƒ"ƒƒ‚öƒƒ&ƒƒƒ!ƒƒƒ.ƒƒƒƒƒƒ=ƒƒ‚þƒ3ƒ;ƒƒƒ‚áƒ
+ƒ‚ùƒƒ‚ìƒƒ<ƒJƒ<ƒƒƒ ƒƒƒ‚üƒ‚þƒ‚ù‚èƒƒ0ƒƒ
+ƒƒƒƒƒ ‚õƒƒ)‚÷ƒƒ	ƒ%ƒ8ƒ:ƒƒ ƒ,‚üƒƒ‚ýƒ)ƒ!ƒ4ƒƒ(ƒƒ
+ƒ$ƒ"ƒ‚î‚ëƒ"ƒƒƒƒ ƒ-‚üƒSƒ‚Ï‚õƒ'ƒ ƒ4ƒ
+‚ó‚óƒƒƒ-ƒ ‚ýƒ-ƒƒ
+‚õƒ#ƒƒ‚ëƒ)ƒƒƒƒƒƒƒƒƒ‚ïƒƒ‚èƒƒ
+ƒƒ)ƒ
+ƒ!‚òƒƒ‚þƒ‚Òƒƒƒ$ƒƒ)‚óƒ‚ù‚æƒƒ‚Òƒ&ƒ%ƒ ƒƒ ƒƒCƒ(ƒ ƒƒ‚öƒƒƒ‚ÿƒƒƒƒƒ‚óƒ4‚þƒ&ƒ‚ý‚ëƒ4ƒ‚öƒ=ƒƒƒƒƒƒ‚öƒBƒK‚úƒ'ƒ/ƒ<ƒ2ƒ ‚ÿƒƒƒ‚ôƒ,ƒ ƒFƒƒKƒ/ƒƒAƒEƒ"ƒƒ"ƒ‚ü‚íƒ8‚þƒƒ[ƒƒƒƒƒƒ
+‚ùƒƒƒƒ/ƒ‚ô‚Óƒ(ƒƒƒƒ‚ûƒ.ƒƒƒƒ.ƒ ƒ;ƒ
+ƒ	ƒ/ƒƒ	ƒ‚ÿƒ	ƒ	ƒDƒƒ9ƒ"ƒ‚Üƒƒ0ƒ‚ö‚ÿ‚äƒ
+ƒ0ƒƒƒ&ƒƒ5ƒƒƒ7ƒƒ3ƒ‚Ùƒ‚Öƒƒƒƒ.‚úƒ
+ƒƒƒƒƒ(ƒƒ‚ÿƒ#ƒƒ ƒƒƒ‚ðƒ#ƒ‚ûƒ ƒ‚äƒMƒƒ‚þ‚ìƒƒƒ8ƒƒƒƒƒƒƒ&ƒ6ƒ)ƒƒƒ;ƒ%ƒ
+ƒ$ƒ#ƒƒƒ$ƒ2‚íƒ$‚óƒƒƒƒ"ƒƒ$ƒS‚ëƒƒ"ƒƒ‚õ‚ÛƒIƒ'ƒƒ-‚Ñƒƒƒ8ƒƒ
+ƒ/ƒ‚ôƒCƒ‚ÿƒƒ.ƒ‚ñƒƒƒ*ƒƒ‚û‚â‚ð‚áƒIƒ
+ƒ+ƒƒ$ƒ#ƒƒ(ƒƒƒ'ƒMƒ.ƒƒ[ƒ&ƒ'ƒ3ƒDƒƒƒL‚øƒƒ-ƒ4ƒƒ)ƒƒƒƒ"ƒƒƒCƒ‚í‚üƒƒƒ+‚÷ƒƒƒ‚ÿƒƒ"ƒ‚ó‚óƒ/ƒ/ƒ‚ôƒƒƒ-‚ñƒ1‚ûƒ‚ü‚úƒƒ9ƒƒ‚ñƒ ‚ôƒƒ‚ß‚Ù‚÷ƒƒƒƒ/ƒ*ƒƒƒ,ƒ;ƒ&ƒƒƒ	ƒƒƒ‚ë‚Õƒ#‚êƒ ƒƒƒƒƒ"ƒ5ƒ0ƒNƒƒƒ@ƒ4ƒƒ‚óƒƒ‚ùƒƒ
+ƒ ‚á‚úƒ,ƒƒ6ƒ6‚îƒ"‚ÿƒƒ‚âƒ	ƒ‚ü‚øƒ ‚öƒƒƒ‚ýƒ"ƒƒ
+ƒ2ƒƒ.ƒƒƒ-ƒ-ƒƒƒƒƒƒƒ‚úƒƒEƒƒ*ƒ(ƒƒƒƒƒ ƒ!ƒ%ƒƒƒƒƒƒ‚í‚äƒƒƒƒ
+ƒƒƒƒƒƒ‚â‚êƒ‚ôƒƒ=ƒƒGƒ.ƒ*‚ÿƒ ƒ	ƒƒƒƒ+ƒBƒMƒ‚ƒSƒƒ:ƒBƒ0ƒ6ƒ+ƒ=ƒƒƒ;ƒ6ƒ8ƒ‚î‚òƒ.‚÷ƒƒƒƒ7ƒ
+ƒƒƒƒ#ƒƒ"‚úƒ‚Øƒ‚ðƒ‚ý‚ðƒƒ
+ƒƒƒ&ƒ‚øƒ%ƒƒ&ƒ‚ôƒ&‚úƒƒƒ0‚ðƒ(ƒƒ3ƒ‚ì‚öƒ‚ýƒ‚êƒ(ƒKƒ(ƒƒƒ!ƒ&ƒ:ƒ;ƒ‚ùƒ/ƒƒƒƒ-ƒƒ‚þƒ#ƒƒ ƒ‚òƒ>ƒƒ)‚Óƒ0ƒ#‚ýƒƒ%ƒƒ"ƒƒ‚úƒƒƒ7ƒƒƒ‚îƒ-‚ñƒ ƒƒƒƒƒ'‚ø‚ôƒƒƒ%ƒƒ,ƒ ‚úƒ‚øƒ8ƒ,ƒƒƒƒ#ƒƒ	ƒ‚òƒ‚Üƒƒƒ‚ÿƒƒƒ@ƒ‚ëƒ&‚úƒƒ#ƒƒ‚Ôƒƒ*‚ëƒƒƒ ƒ1ƒƒƒƒƒƒ%ƒBƒƒ‚êƒ‚ïƒ@ƒƒ!ƒD‚îƒƒƒ#ƒƒ!ƒ5ƒ-ƒ0ƒƒFƒYƒ\ƒyƒ¥ƒ™ƒ†ƒ/ƒRƒœƒ?ƒCƒ!ƒƒƒ%‚÷‚ýƒƒƒƒ4ƒ‚ûƒ‚êƒ7ƒƒƒƒ<ƒƒƒƒ,ƒƒƒ ƒL‚î‚óƒ‚þƒƒƒƒƒƒƒ ƒƒ"ƒƒ-ƒ!ƒ-ƒ'ƒƒ(ƒ
+ƒ3ƒƒ:ƒ#ƒ ƒ
+ƒ(‚úƒƒ‚áƒ;ƒ‚ùƒDƒ=ƒƒ	‚÷‚ùƒƒƒƒƒƒ&ƒƒƒ-ƒ/ƒ(‚ýƒƒ+‚îƒƒ‚ú‚ÿ‚è‚õ‚ÿƒ%‚üƒ‚ýƒƒƒ$ƒƒ‚ìƒƒ ƒ	‚ýƒƒ ƒ2‚Øƒ"ƒƒ5‚æƒ ƒ ƒ%ƒ	ƒ‚ì‚ÿƒEƒƒ;ƒ ƒƒUƒ ‚ñƒ'ƒƒƒ‚ù‚÷ƒƒ$ƒ#ƒC‚éƒƒƒƒƒƒƒ ƒ‚×ƒ*ƒ'ƒI‚ãƒ‚ï‚ëƒƒƒƒ‚þƒƒƒƒƒ!ƒ‚þƒ!‚ìƒƒƒ‚ÿƒƒƒ"‚çƒ&ƒƒ ‚üƒ8ƒ%ƒ)ƒ.ƒ¡„„c„‡„ƒ°ƒ_ƒ`ƒ#ƒ*ƒ;ƒ#ƒ&‚ÿƒ-‚û‚ðƒ0ƒƒ‚ùƒƒ	ƒGƒƒ
+‚ÙƒOƒƒƒ‚öƒƒ
+ƒ‚Øƒ‚òƒƒ‚ùƒƒ‚îƒ9ƒ7ƒƒƒ0ƒƒƒ*‚ìƒƒ"ƒ7ƒ	ƒ!‚òƒ(ƒ+ƒƒƒƒƒ$ƒ'ƒ‚÷‚Õƒ5ƒ+‚ç‚ã‚êƒƒƒƒ ‚óƒ*‚ü‚÷ƒƒ‚Ùƒ(ƒ‚þ‚Ñƒƒ5ƒƒƒƒƒ"ƒƒ‚ý‚ýƒƒƒ	ƒ
+‚éƒ$ƒ)ƒ ƒƒƒ-ƒ ƒ ƒƒƒ‚øƒƒ3ƒƒ‚ãƒ3ƒƒ
+ƒ;ƒ&ƒ@ƒƒƒ#ƒƒƒ‚üƒ&ƒ,ƒƒƒ%ƒƒƒ ƒ)ƒ,‚ìƒƒ!ƒ‚ôƒ(ƒ+‚õƒ‚ùƒ	ƒ‚þƒƒ!ƒ=‚ñƒ2‚â‚éƒ)ƒƒ"ƒ,ƒƒ!ƒ‚íƒ.ƒ ƒ9‚öƒ2ƒ	ƒƒ ƒ/ƒƒƒƒƒ ƒ#ƒƒ
+ƒTƒMƒ”„ž…½†ž†Z…ƒ„1ƒ£ƒuƒ5ƒ'ƒƒƒƒƒƒ‚ûƒ,ƒ	‚ûƒ&ƒƒƒ@ƒ‚åƒƒ*‚çƒ%‚üƒƒ ƒƒƒƒ6ƒƒ	ƒ‚ê‚îƒƒ‚óƒƒƒƒƒ.‚èƒ)ƒƒ‚êƒ$‚úƒ4ƒ7‚úƒƒ	ƒƒƒ)ƒ:ƒƒƒƒƒ(ƒƒƒ:ƒ+ƒ‚òƒ
+ƒ*ƒ)ƒ‚ý‚õƒ‚ýƒƒƒ!‚Ðƒ;ƒƒ	‚ôƒƒƒCƒ7ƒƒ"ƒ‚ñƒƒƒ3ƒ‚ìƒ;‚Òƒ‚Üƒ#ƒDƒƒ%‚þ‚ò‚õƒƒƒƒ‚ùƒƒƒ	ƒFƒƒ)‚õƒGƒ‚ñƒƒ
+ƒ#‚ñƒ-ƒƒƒƒ'ƒƒƒƒ<ƒƒƒ!ƒ>ƒ+ƒƒ ƒ4‚ú‚ðƒ‚ïƒƒ#ƒƒ4ƒƒ-ƒƒƒ;ƒ=ƒƒ‚õƒƒƒBƒƒ0ƒ"ƒƒ‚ïƒ
+‚áƒƒƒ‚î‚íƒƒ<ƒ,ƒ&ƒ0ƒKƒa„1…¼‰KŒ‹fˆq…ƒüƒÎƒ9ƒ1ƒƒƒƒƒ4ƒ‚úƒ	ƒ!‚ýƒ‚þƒ‚Ìƒƒƒ&ƒƒƒ ‚ñƒ0ƒ(ƒƒƒ‚òƒ&ƒƒƒƒ ƒƒ‚òƒƒ‚÷‚íƒ ƒ
+ƒƒ	ƒ$ƒ ‚öƒƒ!ƒ$‚ÿƒƒƒ+ƒ4ƒ‚ÿƒ%‚éƒ-ƒƒ(ƒƒƒƒƒƒ0ƒ4ƒ5ƒƒƒ<‚þƒ‚ûƒƒ‚úƒ ƒ‚÷ƒ‚ü‚üƒ‚æ‚öƒ ƒƒƒƒ‚ä‚þƒ0ƒ2ƒƒƒƒF‚êƒƒ-‚æ‚îƒ‚ì‚óƒBƒƒƒƒƒ‚ï‚ãƒ#ƒƒƒ ƒ ƒƒ ƒƒ0‚ó‚ïƒ9ƒƒ'ƒ
+ƒƒƒƒ‚õƒ$ƒJƒƒ‚Ðƒƒ‚ôƒƒ‚þ‚øƒ6‚òƒƒƒƒƒ
+‚ðƒ1ƒƒ	ƒƒ ƒ<ƒ
+ƒƒ‚óƒ‚øƒ/‚ÿ‚ëƒƒƒƒ
+ƒ
+ƒ-ƒ'ƒƒ/ƒ"ƒgƒŽ„–‡Œü’S‘‹%†£„5ƒ—ƒ;ƒ#‚ôƒB‚ëƒ2‚ëƒƒ%ƒ"ƒ=‚ôƒ
+ƒƒ-ƒDƒƒ*ƒƒ
+‚ôƒ-ƒƒƒƒƒ-ƒ*ƒƒ#ƒƒƒ	ƒ2ƒƒƒƒƒƒƒ#ƒ2ƒƒ ƒ	‚äƒ‚ÿ‚æ‚ñƒƒ)ƒƒ‚îƒ2ƒƒ1ƒ[ƒ%ƒ+ƒƒ0ƒ‚õƒ
+ƒ.‚õ‚þƒƒ‚ìƒ7‚õƒƒDƒ	‚ÿƒƒƒƒƒ2ƒ‚øƒUƒƒƒ0‚à‚ñ‚òƒƒƒ%‚ñƒ#ƒ7ƒƒC‚ý‚öƒ2ƒ)ƒ+ƒƒ	ƒƒƒ0ƒƒƒ!‚Çƒƒ,‚úƒ‚ÿƒƒ#ƒ/ƒƒƒƒ%ƒƒƒƒƒƒƒ!ƒ‚áƒƒƒ9ƒ9ƒ‚ñƒ;ƒ7ƒ*ƒƒ	ƒCƒƒƒƒƒ3ƒ
+ƒƒ	ƒƒƒƒƒ$ƒ;ƒ‚êƒ	ƒƒƒ‚þ‚îƒ&‚öƒ#ƒ"‚ïƒ+ƒ(ƒ)ƒ‚öƒLƒƒƒBƒ2ƒ„š‡EŒŽ‘Tì‹†^„tƒ°ƒJƒ8ƒ8ƒ	ƒ4‚ô‚ýƒ/ƒ	ƒ#ƒƒ‚øƒƒƒƒƒ$ƒƒƒƒ"ƒƒ‚ÿƒ#ƒƒQ‚åƒ
+ƒƒƒ‚ñƒƒ ƒ‚îƒ'ƒƒ‚óƒƒƒƒ‚üƒƒƒƒ1ƒƒ ƒƒƒƒ)ƒ‚ûƒƒ+ƒƒ‚áƒƒ9‚ö‚ôƒ‚öƒƒƒ‚øƒƒƒ‚ûƒƒ$ƒƒ-‚üƒ5ƒƒ"ƒƒ(ƒƒ@ƒ$ƒƒ8ƒ0ƒ‚ëƒƒ‚ýƒ0ƒ6ƒ‚Ìƒƒƒ"ƒ‚øƒƒƒ'ƒƒƒ7ƒƒ‚ûƒƒ=ƒƒ‚ÿƒ&ƒ+ƒƒ%ƒ=ƒƒ2ƒ	ƒ‚øƒƒ‚èƒHƒƒƒ3ƒ(‚Ìƒ9‚ðƒƒƒƒƒƒ‚çƒ'‚úƒ‚ñƒ&‚þ‚ìƒ#ƒ3‚êƒ0ƒ<ƒƒ‚íƒƒ(ƒ ƒ!ƒƒƒƒ4ƒ‚øƒƒ)ƒ?ƒƒƒ1ƒƒ'ƒCƒ„„?…®ˆ“‹Šïˆ…¦„9ƒ ƒdƒ-ƒAƒ,ƒƒƒƒ<ƒƒ4ƒƒ‚ìƒƒƒƒL‚öƒ‚ëƒƒ#ƒƒƒ!ƒ)ƒ&ƒƒƒ/‚õƒ/‚ýƒ/ƒƒƒ5ƒ‚ýƒƒ‚ìƒ	ƒFƒ‚ëƒƒ	ƒƒƒ-ƒ;ƒ‚øƒƒ	ƒ‚Ùƒƒƒ
+ƒ‚ýƒ‚ëƒ%ƒƒ‚äƒƒ3ƒ1‚ü‚èƒƒ:‚æƒBƒ‚öƒ5ƒ.‚ñƒ-‚ûƒ
+‚éƒ2ƒ ƒJƒƒƒƒƒKƒ‚ùƒ(‚þ‚ôƒ‚ôƒƒ*ƒƒƒƒ‚Íƒƒƒ‚óƒ/ƒ ƒƒ‚Ý‚Ðƒ6ƒ‚ø‚íƒ ƒƒ‚õ‚îƒ2ƒ‚ã‚âƒ.ƒ‚ÿƒ‚ÿƒ0ƒƒ&ƒƒƒ1ƒ7ƒƒ
+ƒƒ)‚øƒ"ƒ‚ïƒ‚ñƒ‚àƒ(ƒ%ƒ(‚ûƒƒƒƒ.ƒƒƒ‚ñƒƒ ƒ‚ðƒ
+‚þ‚þ‚üƒ!ƒ!ƒƒƒ#ƒ-ƒƒ#ƒ]ƒ°„…~†t†\…s„}ƒ¢ƒXƒYƒƒƒ+‚ùƒƒ‚åƒ,ƒ/ƒ!ƒ‚øƒDƒ.ƒ9ƒ
+ƒEƒ6‚ôƒ(ƒƒƒ	ƒ&‚þƒRƒƒƒ!ƒƒƒ‚ýƒ	ƒƒƒ‚öƒ'ƒ‚øƒ)‚þƒƒ
+ƒƒ1ƒƒ&ƒ2ƒƒ%‚îƒƒƒƒ%ƒ‚þƒ+ƒƒ ƒƒƒ ƒ0ƒƒ!ƒ"ƒƒ0ƒƒƒ<ƒƒCƒƒ)ƒƒ&ƒƒ‚ùƒ%ƒƒƒƒ4ƒƒ ƒƒƒ6ƒƒƒ‚ìƒ$ƒƒ&ƒƒ‚ìƒ	ƒ>ƒ$‚Ôƒ"ƒƒƒƒ‚÷ƒƒƒƒ‚êƒƒ3ƒƒ‚ÿƒƒƒ‚ì‚õƒƒ1ƒƒ"ƒƒ2ƒ	‚þ‚ú‚üƒƒƒƒ‚ùƒAƒƒƒƒ‚êƒ"‚äƒ=‚óƒƒ+‚ùƒA‚ð‚ÿƒ‚÷ƒ‚òƒ ‚ìƒƒƒ‚èƒ‚ùƒ	‚øƒEƒLƒ3ƒƒ=ƒƒ"ƒ3ƒ5ƒ#ƒ?ƒƒµ„0„c„}„ƒ³ƒqƒ6ƒƒƒ&ƒƒƒƒ;ƒƒƒ,ƒƒƒƒJƒ
+‚áƒ0ƒ‚öƒ@‚èƒAƒ$ƒƒ‚á‚çƒ ƒ*ƒƒƒ‚Ðƒ‚èƒƒƒ ‚ïƒ ƒƒƒƒƒƒƒƒƒ‚õ‚ð‚þƒ5ƒƒƒ>ƒƒ&‚÷ƒƒ)ƒƒƒ/‚ô‚ðƒ‚ÿ‚çƒ)ƒ
+ƒ#‚ó‚ó‚û‚ïƒ‚îƒƒ!ƒƒƒƒƒ6ƒƒ1ƒ!ƒƒƒ.‚ÿƒƒ,ƒ8ƒ)ƒ%‚öƒ(ƒ3ƒ
+‚÷‚öƒƒ5ƒƒ%‚éƒB‚êƒƒ8ƒƒƒƒ(‚úƒ"ƒ ƒƒ1ƒƒƒƒ‚òƒ'‚ýƒ(ƒ‚ÿƒƒ'ƒƒCƒ(ƒƒƒ<ƒ&ƒN‚ã‚Ý‚ÿƒƒ:‚íƒ#ƒƒƒ	ƒ‚ñƒƒ.‚üƒ	ƒ	‚þƒƒ%ƒ,ƒ+ƒ&ƒƒƒ‚ôƒ-ƒƒ;ƒDƒƒ/ƒƒƒƒ!ƒ(ƒƒƒ?ƒ.ƒ<ƒ[ƒ}ƒgƒ°ƒƒ»ƒsƒGƒeƒ9ƒ9ƒ*ƒXƒ%ƒƒ‚ÿ‚÷ƒƒƒƒ(ƒ&ƒƒ&‚ùƒ7ƒƒƒƒ
+ƒƒƒ	ƒIƒƒƒƒGƒ+‚óƒ%ƒ ƒƒFƒƒ"ƒƒƒ‚öƒƒ0ƒ%ƒ-ƒƒƒƒ:ƒƒƒ'ƒ&ƒ)ƒƒ‚ÿƒƒ2‚úƒ‚ñƒƒ	ƒƒ(ƒ+‚ê‚ñ‚þƒƒƒƒ‚ôƒƒ)ƒ"ƒ<ƒƒ‚åƒƒ+‚óƒ/‚öƒ;ƒ/ƒƒ ƒ$ƒƒ ƒ4ƒ7‚ñ‚ë‚òƒƒ*ƒƒ
+ƒ‚ø‚ëƒƒƒ<ƒƒ/ƒ‚ÿƒ‚ñƒƒ4‚óƒƒƒƒ ‚ý‚þƒ$ƒ‚ûƒƒ‚õƒ‚ïƒ#ƒ‚ÿƒ)ƒƒƒ.ƒƒƒL‚ÿƒ‚õƒ-ƒAƒ+ƒƒ*ƒ‚ö‚ýƒƒƒ ƒ‚î‚ÿ‚õ‚ÿƒƒƒD‚ïƒƒ‚ÿƒ%‚ú‚ï‚êƒƒƒ"ƒƒƒ‚ùƒ‚Ûƒ!ƒUƒ>ƒ>ƒƒUƒ_ƒPƒ]ƒ„ƒJƒ2ƒHƒƒ‚õƒ*ƒƒƒƒ‚è‚øƒƒ)ƒƒƒ(ƒƒ>ƒƒƒƒ
+ƒƒƒ0ƒ‚÷ƒƒƒ2ƒ$ƒƒ‚ÿƒ$‚ßƒ1ƒƒƒƒƒƒ‚ôƒƒƒƒ
+ƒƒ$ƒƒƒ!ƒƒ'ƒƒ
+ƒ#‚çƒ,‚÷ƒƒ6ƒƒƒ‚äƒƒƒ2ƒ#ƒ	ƒƒ‚Ûƒ‚Ø‚þƒƒƒ‚â‚ýƒƒƒ+‚ü‚ëƒƒ
+‚öƒƒ"ƒ'ƒƒ.ƒƒƒ%ƒƒ4ƒƒƒ)ƒƒ3‚ä‚íƒ‚êƒ$ƒƒƒ1ƒ'ƒƒƒƒƒƒƒ<ƒ(ƒ4ƒ ƒƒƒ‚ôƒƒ%ƒ‚ï‚ç‚Ñ‚öƒ ƒƒ0‚üƒƒ-ƒ9‚êƒ(ƒƒ‚ö‚úƒ4ƒƒ‚íƒ%ƒƒ ƒƒ-‚ôƒƒƒƒ‚ìƒƒƒ‚úƒƒ*ƒƒ/ƒ,ƒ)‚ô‚ÿƒIƒ‚Þƒ"ƒƒƒƒƒ ƒ1ƒ#ƒ ƒNƒ1ƒfƒ!ƒLƒƒƒƒ:ƒ1ƒ,‚ô‚á‚þƒ(ƒ9ƒƒƒƒƒ ƒƒ,‚þƒ0ƒ‚ùƒƒ/‚ñ‚õƒ4‚û‚þƒ‚öƒ&‚û‚þƒ!ƒƒƒƒƒ ƒ0ƒ%ƒƒƒ‚þƒ‚çƒƒƒƒ"‚Úƒƒƒƒ‚ö‚î‚üƒ$ƒDƒ8‚ù‚ôƒ4ƒƒ+ƒƒƒƒ!ƒ‚üƒƒƒƒ)ƒƒEƒ%ƒ‚þƒ‚ç‚ûƒƒƒ
+ƒ&ƒ‚øƒ‚øƒ5ƒ‚àƒƒƒƒ‚øƒ
+ƒ
+ƒ1ƒ‚óƒ‚ãƒIƒƒƒ7ƒ ƒƒƒ!ƒƒ‚øƒƒƒBƒ*ƒ$ƒ"ƒ3‚ýƒ!ƒƒ%ƒƒ)ƒƒ‚çƒƒƒ-ƒ2‚ìƒƒ6‚ùƒƒ@ƒ&‚ì‚ñƒƒ=ƒƒ
+ƒ9‚åƒƒ
+ƒƒƒƒ&ƒ8ƒƒIƒƒ‚üƒ‚ÿƒƒ-ƒƒƒƒHƒƒƒ%ƒ1ƒƒ?‚ó‚ùƒƒƒ+ƒ.ƒƒƒ3ƒƒƒ‚óƒ&ƒ)ƒ&‚Øƒ	ƒ‚óƒ0ƒƒƒƒ	ƒ=ƒ‚óƒƒƒƒ+ƒ8ƒƒ
+ƒƒEƒ/ƒƒ4ƒBƒƒƒ‚øƒ"ƒ-‚òƒƒƒƒMƒƒƒƒƒƒ+‚ùƒƒ"ƒGƒƒ‚ó‚þ‚ð‚ìƒ‚óƒƒƒƒ.ƒ0ƒƒƒ/‚÷ƒ	ƒ‚ýƒƒƒ'ƒƒ1ƒ0ƒƒ'ƒ‚ñ‚÷ƒƒƒƒƒ‚ïƒ0ƒƒƒƒƒƒ?ƒ#ƒƒ‚òƒ=‚ôƒƒƒ$ƒ2ƒƒ'ƒƒƒ,ƒ'ƒ+‚úƒƒƒ	ƒ‚æƒƒ‚êƒ!ƒ‚ï‚ðƒƒ1ƒ1ƒ$ƒ%ƒƒƒƒ#ƒ4ƒ	ƒƒƒ‚Ë‚øƒ‚î‚ï‚ÿƒƒ‚âƒ‚êƒƒƒƒƒ)ƒ0ƒƒ&ƒƒ
+ƒƒ
+‚÷ƒƒƒ!ƒ‚û‚ÿ‚ëƒ‚éƒƒƒƒ
+ƒ‚öƒ‚üƒ'ƒ‚ä‚ëƒ‚çƒ	ƒƒƒ%ƒƒ5ƒƒƒƒƒ@ƒ‚ü‚üƒHƒƒƒƒ ƒƒ‚ÿƒ	ƒ‚þ‚ðƒCƒ‚ü‚úƒ*ƒ6‚ñƒB‚úƒƒƒƒƒ(ƒƒƒ)ƒ‚øƒƒ"ƒRƒEƒƒ:ƒƒƒƒƒƒƒ%ƒ‚ÿƒ*ƒ‚ù‚ñƒƒƒCƒƒƒƒ'ƒƒ
+ƒ"ƒ(‚öƒƒ"‚ÿƒƒ‚úƒ.ƒƒƒ'ƒ"‚óƒF‚ö‚ü‚çƒ.ƒ‚úƒƒƒƒ‚æ‚þƒƒƒ/ƒƒƒ0ƒ,‚ýƒƒƒ
+‚õƒ‚øƒ#ƒƒƒ‚íƒƒ,ƒƒMƒƒGƒ ƒ1ƒƒ'ƒA‚õƒFƒ*ƒƒ ‚öƒƒ&‚æƒƒ(ƒ‚íƒ ƒ$ƒ‚åƒƒ‚êƒ,ƒ8ƒ0‚þƒƒ‚ø‚óƒ&ƒ‚þƒ4ƒƒ"ƒ ‚þ‚÷ƒ(ƒƒ*ƒƒƒƒ
+ƒƒƒƒUƒ8‚ýƒ2‚éƒ&‚ÿ‚ýƒƒƒƒ*‚ü‚üƒƒƒHƒ"ƒƒ‚ïƒ&‚èƒ ƒƒƒ/ƒƒ$ƒƒ1ƒ	ƒ
+ƒ$ƒƒƒƒƒ*ƒG‚ß‚èƒ ƒƒƒƒ(ƒ ƒ7‚ûƒƒƒƒ ‚õƒ‚ù‚þ‚÷ƒ"ƒƒ‚ôƒƒƒ‚÷ƒƒ‚öƒƒƒ!‚çƒ‚ýƒƒƒ[ƒ%ƒƒ1‚øƒ&‚ëƒƒƒƒ	ƒƒƒ‚îƒƒƒ‚òƒƒ‚ñƒƒ/ƒ#ƒ‚ôƒƒ2‚Ýƒƒyƒ2ƒƒƒ
+‚òƒ2ƒƒƒƒ‚ÿƒƒƒƒƒƒƒƒ#‚õƒ#ƒƒ9‚ßƒ!ƒƒ3‚ñƒ ƒƒ	ƒL‚òƒ ƒ)ƒƒƒƒ(ƒƒƒƒ‚óƒ$ƒƒƒƒ"ƒ‚üƒ,ƒƒ3ƒ‚ï‚ù‚Ìƒƒƒƒƒ‚íƒƒ6‚ûƒ=ƒƒ-ƒƒƒ1ƒ*ƒƒ.ƒƒ;ƒ(ƒƒ
+ƒ‚ôƒƒ
+ƒƒƒƒƒ‚þƒƒEƒƒƒ ƒ‚ÿƒƒƒƒƒ ƒƒ$‚ïƒƒƒ
+ƒƒuƒ!ƒ@ƒƒƒ)ƒƒ@ƒ9ƒCƒ7ƒƒƒƒƒ9ƒƒ0ƒƒ,ƒƒ-ƒ>ƒ#ƒƒƒƒMƒƒ$‚÷ƒ‚ýƒ‚ýƒ'ƒ)‚Üƒƒƒ#ƒƒ‚õ‚ò‚ûƒ/‚èƒ
+‚þƒƒ9ƒ6ƒ6‚üƒ
+ƒƒ	ƒƒ‚ì‚òƒƒ2ƒƒƒƒƒƒ*ƒƒƒ	‚Ìƒƒ#ƒ"ƒ;ƒƒNƒ	ƒ „Ý„Âƒ‚Ôƒ/ƒƒ‚ýƒ!ƒƒ2ƒƒƒƒƒQ‚îƒƒ ƒ‚ÿƒ%ƒ,ƒ‚ú‚ÿ‚ûƒ3ƒƒƒƒ‚âƒƒ"ƒƒ=ƒƒƒ!ƒƒ‚óƒ‚ðƒƒ%ƒ‚ùƒ8ƒƒ ƒƒ
+ƒƒAƒ*ƒ‚ü‚óƒ$ƒƒ:‚î‚áƒ
+ƒƒƒ(ƒƒƒƒ@ƒ)ƒ0ƒƒƒ‚ù‚ûƒƒƒ6ƒƒ
+ƒI‚ôƒƒ/ƒƒƒƒƒƒƒƒƒ#ƒ#‚ÿƒ%‚ó‚þƒ,ƒBƒ9ƒƒ.ƒ8ƒ‚÷ƒƒ'ƒ,ƒƒƒ‚ÍƒƒƒRƒmƒNƒBƒ@ƒƒ ƒEƒ>ƒƒ2ƒ^ƒˆƒ]ƒ^ƒYƒ{ƒZƒ"ƒ'‚þƒƒ‚ýƒ,ƒƒ ‚þ‚øƒ	ƒ9ƒƒ‚ûƒ‚ôƒƒƒ‚Ôƒ*ƒ0ƒ1ƒƒƒ‚ïƒƒƒPƒ‚ôƒ
+ƒ*ƒ4ƒƒB‚ÿ‚ûƒƒƒ
+ƒƒ	ƒƒƒƒ"‚øƒ3ƒƒƒ†„ƒNƒƒƒƒƒ=ƒ-ƒƒƒ!ƒƒ:‚ýƒƒ+ƒ	‚Æƒ"ƒƒƒƒ
+ƒƒ/ƒƒ)ƒ‚üƒ1ƒ/ƒ$ƒƒƒ	ƒ6ƒƒ"ƒ%ƒƒ"‚êƒƒƒ'ƒ	ƒ9ƒ!ƒ‚þ‚óƒ ƒƒƒƒ‚øƒƒƒƒ"ƒƒƒƒ ƒ#‚ïƒ
+ƒƒ+ƒƒƒ‚ú‚ø‚÷‚ïƒMƒƒ%ƒƒ‚ôƒƒ?ƒƒƒHƒƒƒ‚øƒKƒ‚÷ƒƒƒ&‚øƒƒ‚ùƒ‚êƒƒ1‚ûƒƒ‚öƒƒƒ‚íƒ:ƒƒ‚õƒ0ƒ;ƒ<ƒTƒPƒbƒƒ'‚úƒƒVƒ;ƒfƒ½ƒý„V„ƒ£ƒjƒIƒƒ3ƒƒ.ƒ-ƒ‚ðƒƒ
+ƒ"ƒƒ&ƒMƒ.ƒR‚Þƒ‚ôƒƒ(ƒƒƒƒ ƒ1ƒƒ.ƒ‚ëƒƒ+‚ðƒƒƒ‚õ‚ùƒ4‚ýƒ=‚ýƒƒ5‚äƒƒ"‚ü‚ìƒ/ƒƒƒƒ	ƒTƒ‚Úƒƒ‚ôƒƒƒ^ƒ‚öƒƒ.‚æƒƒƒ-ƒƒ@ƒƒ(‚éƒ&ƒ0ƒ,ƒƒƒ*ƒƒ‚ñƒƒƒƒƒ2‚õƒƒ‚÷‚ìƒ7‚ûƒ(‚óƒ‚ìƒK‚úƒƒ+‚óƒƒƒƒ	ƒƒƒ‚îƒ.ƒ.‚ü‚öƒƒ‚Ûƒ"ƒ4ƒƒƒ
+‚Ýƒ ‚öƒƒƒ$ƒƒƒƒƒƒ‚ùƒƒƒƒ6‚ú‚åƒƒ‚öƒ1ƒƒƒ‚Ëƒƒ‚ø‚õƒ-ƒƒ+ƒ)ƒƒ‚óƒƒ"ƒƒ(ƒ,ƒƒƒƒ>ƒ"‚ý                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

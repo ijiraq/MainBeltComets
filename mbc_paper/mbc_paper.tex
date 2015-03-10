@@ -1,6 +1,6 @@
 \documentclass[iop,apj]{emulateapj}
 \usepackage{amsmath,amssymb,amstext}
-
+\usepackage{todonotes}
 \usepackage[breaklinks,colorlinks,citecolor=blue,linkcolor=magenta]{hyperref} 
 \renewcommand*{\sectionautorefname}{Section}
 \usepackage[all]{hypcap} %Links go to figures; breaks on deluxetables (use \capstartfalse \capstarttrue to fix it)
@@ -29,7 +29,7 @@ Abstract.
 % so far, im not making a point of using good wording
 % definietly have to go back and add in citations
 
-The active asteroids are small bodies in the main asteroid belt which have transient dust emission producing comet-like comae and tails. Unlike comets, which originate in the Kuiper Belt and Oort cloud and have been scattered inwards by gravitational effects, the active asteroids have  stable orbits confined to the main belt and likely formed in the same location as they reside presently \citep{sheppard14}. For objects which formed in the the outer region of the main belt, beyond the snow line, the crystallized water ice which was present at the time of formation and not exposed to primordial heating may still remain in reservoirs beneath the surface \citep{sonnett11}.  According to models done by \citet*{fanale89},  beyond heliocentric distances of 2.4 AU ice can be protected against sublimation by a "relatively thin" surface regolith  of depth 1 -- 100 m for the entire age of the solar system. If the ice layer were to be exposed to sub solar heating,  sublimation could be triggered,  ejecting dust particles from the surface producing a coma.  %Objects in the main asteroid belt which are driven by sublimation are also named Main Belt Comets (MBCs). 
+The active asteroids are small bodies in the main asteroid belt which have transient dust emission producing comet-like comae and tails. Unlike comets, which originate in the Kuiper Belt and Oort cloud and have been scattered inwards by gravitational effects, the active asteroids have  stable orbits confined to the main belt and likely formed in the same location as they reside presently \citep{sheppard14}. For objects which formed in the the outer region of the main belt, beyond the snow line, the crystallized water ice which was present at the time of formation and not exposed to primordial heating may still remain in reservoirs beneath the surface \citep{sonnett11}.  According to models done by \citet*{fanale89},  beyond heliocentric distances of 2.4 AU ice can be protected against sublimation by a 'relatively thin' surface regolith  of depth 1 -- 100 m for the entire age of the solar system. If the ice layer were to be exposed to sub solar heating,  sublimation could be triggered,  ejecting dust particles from the surface producing a coma.  %Objects in the main asteroid belt which are driven by sublimation are also named Main Belt Comets (MBCs). 
 The source of the dust emission may be different for each object and could include ice sublimation, impact ejecta, rotational instabilities due to YORP torques, or a combination of several effects. \citep{hsieh15}. %; these objects are known as disrupted asteroids. 
 As the source of the observed activity may not be a result of cometary ice sublimation, these objects are better known as active asteroids. Main belt comets are a subset of this group where ice sublimation is thought to be the source of the dust emission. 
 
@@ -41,29 +41,32 @@ As the source of the observed activity may not be a result of cometary ice subli
 
 %Sublimation driven active asteroids differ from comets in that the comets, having larger ice reservoirs, would have stronger sublimation events which could eject larger debris. The cometary tail would then be longer lived as the larger debris would be less effected by the radiation pressure, and thus dissipate slowly. It is also possible, however, that prolonged activity is a result of ongoing ejection of small, fast dissipating particles. \cite{TEST} 
 
-Since the first discovery of an active main-belt asteroid, 133P/Elst-Pizarro, several attempts have been made to identify new objects of this type; at present, eighteen objects have been identified (refer to Figure 1) \citep{jewitt15}. A comprehensive review of such searches can be found in \citet{hsieh15}.  A persistent challenge to this effort is that the detection of the coma or tails around small dark objects is highly dependent on the magnitude constraints of the survey. As most asteroids fall near the limiting magnitude of the survey in which they are discovered \cite{jewitt15}%(is this cite necessary?)
+Since the first discovery of an active main-belt asteroid, 133P/Elst-Pizarro, several attempts have been made to identify new objects of this type; at present, eighteen objects have been identified (refer to Figure 1) \citep{jewitt15}. A comprehensive review of such searches can be found in \citet{hsieh15}.  A persistent challenge to this effort is that the detection of the coma or tails around small dark objects is highly dependent on the magnitude constraints of the survey. As most asteroids fall near the limiting magnitude of the survey in which they are discovered \citep{jewitt15}%(is this cite necessary?)
 , objects which are larger, closer, or have higher albedo are preferentially detected and any dust emission would be more easily apparent. The active fraction of identified active asteroids greater than 1 km to main belt asteroids greater than 1 km is $f \, \sim \, 10^5$, and describes a strong lower limit as many objects are yet undetected. \citep{jewitt15} %From a study of 30,000 objects observed near perihelion, \cite{} Hsieh et all (2015) concluded that $f \, \sim \, 10^4$ for asteroids which are active at any instant in the outer belt.
 
 
 % WHAT IS NEW, BETTER, DIFFERENT ABOUT OSSOS???
 New objects may be able to be identified from the Outer Solar System Origins Survey (OSSOS) which was designed to detect trans neptunian objects, and has a low limiting magnitude of 24.5 mag. The survey covers a wide field of both the ecliptic plane and low inclinations, and observes with long ($>$ 287 s) exposures, allowing for the potential serendipitous discovery of active dust emission which was previously to faint to detect.
 
-
+% area search is attempted to be few stars
 
 \section{Observations}
 
-Observations taken by OSSOS with the Canada-France-Hawaii telescope (CFHT) MegaPrime wide-field optical imaging facility  at the summit of Mauna Kea, Hawaii, have been collected since 2013. The wide-field imager, MegaCam, consists of a 36 CCD image plane, each 2048 x 4125 CCD with resolution of 0.185"/pix. This covers a field of  roughly 1$^{\circ}$ x 1$^{\circ}$ on the sky. Each block of data taken consists of a mosaic of 21 segments of one-square-degree sky coverage, and at present, covers two orbital phase spaces on the plane of the ecliptic, and two off plane at low inclinations. MegaCam observes in the optical to near infrared with filters u*, g', r', i', and z'. Of these, r' and u* are the best suited filters for observing main belt objects, and the analysis presented only includes observations made using these filters (reword!). 
+Observations taken by OSSOS with the Canada-France-Hawaii telescope (CFHT) MegaPrime wide-field optical imaging facility  at the summit of Mauna Kea, Hawaii, have been collected since 2013. The wide-field imager, MegaCam, consists of a 36 CCD image plane, each 2048 x 4125 CCD with resolution of 0.185"/pix. This covers a field of  roughly 1$^{\circ}$ x 1$^{\circ}$ on the sky. Each block of data taken consists of a mosaic of 21 segments of one-square-degree sky coverage, and at present, covers two orbital phase spaces on the plane of the ecliptic, and two off plane at low inclinations. MegaCam observes in the optical to near infrared with filters u*, g', r', i', and z'. Of these, r' and u* are the best suited filters for observing main belt objects, and the analysis presented only includes observations made using these filters. \todo{reword!}
 
 % how is the image data calibrated? filters, S/N? MOPS?
 
 
 
-As the identified active asteroids do not share a specific phase space the analysis was not constrained to just the main belt or plane of the ecliptic, but for all known objects with heliocentric distances beyond the inner belt ( a > 2.064 AU), inclinations below 40$^{\circ}$, and eccentricity less than 0.45. 
+As the identified active asteroids do not share a specific phase space the analysis was not constrained to just the main belt or plane of the ecliptic, but for all known objects with heliocentric distances beyond the inner belt (a \textgreater \, 2.064 AU), inclinations below 40$^{\circ}$, and eccentricity less than 0.45. 
 % to detect objects in the main asteroid belt, objects with semimajor axis 2.064 < a < 3.277 AU, e < 0.45, i < 40 deg
 % PSF detections
 % cuts, identifying process
 
+\section{Identification}
 
+\todo{rewrite with proper good english}
+For all of the OSSOS images (3528 images with exposure times \textgreater \, 200s), every known asteroid predicted to be in the same orbital phase space was recorded, and a postage stamp centred on the predicted location was cut. The asteroid was then identified in the cutout by it's location relative to the predicted coordinates,  ellipticity due to trailing,  magnitude, and it's point spread function. Images with the object being involved with other objects were not used. 
 
 
 
@@ -76,7 +79,7 @@ As the identified active asteroids do not share a specific phase space the analy
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[height=4cm]{inc_a.png}
+    \includegraphics[height=4cm]{i_a.png}
     \caption{Inclination of all known objects in the main asteroid belt as a function of semimajor axis.  Mean motion resonances between Mars and Jupiter as well as the planet's semimajor axis are marked in dashed lines, main belt objects are marked as light small dots, comets as arrows, and active asteroids as stars. \cite{mpc}}\label{fig:1}
 \end{figure}
 

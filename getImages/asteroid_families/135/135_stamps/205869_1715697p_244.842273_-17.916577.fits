@@ -1,387 +1,0 @@
-SIMPLE  =                    T / file does conform to FITS standard             BITPIX  =                   16 / number of bits per data pixel                  NAXIS   =                    2 / number of data axes                            NAXIS1  =                  194 / length of data axis 1                          NAXIS2  =                  194 / length of data axis 2                          EXTEND  =                    T / FITS dataset may contain extensions            COMMENT   FITS (Flexible Image Transport System) format is defined in 'AstronomyCOMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H COMMENT                                                                         COMMENT Observation Summary                                                     COMMENT -------------------                                                     CMMTOBS = 'N/A     '                                                            CMMTSEQ = 'North[1/1] - Ref + [0.0 90.0]'                                       OBJECT  = 'o3o01_R19'                                                           OBSERVER= 'QSO Team'                                                            PI_NAME = 'Brett Gladman'                                                       RUNID   = '14AP05  '                                                            FILENAME= '1715697o'           / Base filename at acquisition                   PATHNAME= '/data/niele/megacam/14AQ09-May23' / Original directory name at acqui EXTNAME = 'ccd13   '           / CCD number in the mosaic                       EXTVER  =                   13 / Now matches the CCD number in the mosaic       DATE    = '2014-05-24T11:32:00' / UTC Date of file creation                     HSTTIME = 'Sat May 24 01:32:00 HST 2014' / Local time in Hawaii                 IMAGESWV= 'CFHT DetCom v4.44 (Nov 18 2011)' / Image creation software version   COMMENT file 1715697o27, raster FULL, etype OBJECT, etime 287, filter filter_na COMMENT                                                                         COMMENT                                                                         COMMENT Unique amplifier IDs for MegaCam:                                       COMMENT                                                                         COMMENT -- -- 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 -- --       COMMENT 72 73 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 74 75       COMMENT 76 77 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 78 79       COMMENT -- -- 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 -- --       COMMENT                                                                         COMMENT                                                                         COMMENT Detector                                                                COMMENT --------                                                                DETECTOR= 'MegaCam '                                                            DETSIZE = '[1:23219,1:19354]'  / Total data pixels in full mosaic               RASTER  = 'FULL    '           / Active raster description                      CCDSUM  = '1 1     '           / Binning factors                                CCDBIN1 =                    1 / Binning factor along first axis                CCDBIN2 =                    1 / Binning factor along second axis               PIXSIZE1=                 13.5 / Pixel size for axis 1 (microns)                PIXSIZE2=                 13.5 / Pixel size for axis 2 (microns)                PIXSCAL1=               0.1850 / Pixel scale for axis 1 (arcsec/pixel)          PIXSCAL2=               0.1850 / Pixel scale for axis 2 (arcsec/pixel)          AMPNAME = '13a + 13b'          / List of amplifiers names for this image        AMPLIST = 'A B     '           / List of amplifiers for this CCD                CCDSIZE = '[1:2048,1:4612]'    / Detector imaging area size                     DETSEC  = '[12628:10581,14320:9709]' / Mosaic area of the entire readout        DETSECA = '[12628:11605,14320:9709]' / Mosaic area of the A readout             DETSECB = '[10581:11604,14320:9709]' / Mosaic area of the B readout             DATASEC = '[33:2080,1:4612]'   / Imaging area of the entire CCD in raw frame    ASECA   = '[1:1056,1:4612]'    / Section by A amplifier in raw frame            DSECA   = '[33:1056,1:4612]'   / Image area of A amplifier in raw frame         TSECA   = '[33:1056,1:4612]'   / Trim section of A amplifier = DSECA            BSECA   = '[1:32,1:4644]'      / Overscan of A amplifier in raw frame           CSECA   = '[1:1024,1:4612]'    / Section in full CCD after BSECA cut out        ASECB   = '[1057:2112,1:4612]' / Section by B amplifier in raw frame            DSECB   = '[1057:2080,1:4612]' / Image area of B amplifier in raw frame         TSECB   = '[1057:2080,1:4612]' / Trim section of B amplifier = DSECB            BSECB   = '[2081:2112,1:4644]' / Overscan of B amplifier in raw frame           CSECB   = '[1025:2048,1:4612]' / Section in full CCD after BSECB cut out        CCD     = 'Marconi/EEV CCD42-90'                                                CCDNAME = '8351-17-3'          / Name of the CCD (manufacturer reference)       CCDNICK = 'Rodolphe'           / Nickname of the CCD                            MAXLIN  =                65535 / Level at 1% linearity departure (ADU) = Averag MAXLINA =                65535 / Level at 1% linearity departure (ADU) A amp    MAXLINB =                65535 / Level at 1% linearity departure (ADU) B amp    SATURATE=                65535 / Saturation value (ADU)                         GAIN    =               1.6900 / Converting gain (e-/ADU) = Average [A,B] amps  GAINA   =               1.6600 / Converting gain of A amplifier (e-/ADU)        GAINB   =               1.7200 / Converting gain of B amplifier (e-/ADU)        RDNOISE =                    3 / Read noise (electrons) = Average [A,B] amps    RDNOISEA=                    3 / Read noise (electrons) A amplifier             RDNOISEB=                    4 / Read noise (electrons) B amplifier             DARKCUR =                  3.0 / Dark current (e-/pixel/hour)                   QEPOINTS= '48%@350 86%@450 83%@550 78%@650 62%@750 38%@850 12%@950' / QE%@wavel CONSWV  = 'Not implemented'    / Controller software DSPID and SERNO versions   DETSTAT = 'temp_status'        / temp_status_comment                            DETTEM  =              -133.20 / Temp. Cold Plate (C)                           INHERIT =                    F / No need to inherit global headers              TIMESYS = 'UTC     '           / Time System for DATExxxx and TIMExxxx          OBSTYPE = 'OBJECT  '           / Observation/ Exposure type                     EXPTYPE = 'OBJECT  '           / OBSTYPE is the new name for this               EXPNUM  =              1715697 / CFHT odometer number                           OBSID   =              1715697 / CFHT odometer number                           EXPTIME =              287.064 / Measured integration time (seconds)            EXPREQ  =                287.0 / Requested integration time (seconds)           EXPMEAS =              287.064 / Measured shutter time (seconds)                DARKTIME=               287.00 / Dark current time (seconds)                    ORIGIN  = 'CFHT    '           / Canada-France-Hawaii Telescope                 INSTRUME= 'MegaPrime'                                                           INSTMODE= 'Normal  '           / Instrument Mode                                REGMODE = 'Normal  '           / Registration Mode                              RAOFF   =                  0.0 / Right ascension compensation                   DECOFF  =                  0.0 / Declination compensation                       BIASSEC = '[0:0,0:0]'          / Dual amplifiers readout - see BSECA & BSECB    SHUTOPEN=               0.0000 / Shutter blade opening time (msec)              SHUTCLOS=               0.0000 / Shutter blade closing time (msec)              FILTER  = 'r.MP9601'           / Name of filter in position                     FILTERID=                 1305 / Holder ID (see also FILTER)                    TESTSPHE=                  1.7 /    temp, surface, telescope spider w/He deg C  QRUNID  = '14AQ09  '           / Q RunID                                        QOBSERVE= 'Lisa Wells'         / Name of Q Observer                             QCOORD  = 'Todd Burdullis'     / Name of Q Coordinator                          QID     = 55200500000000038682                                                  QOBSEQID= 55001400000000131848                                                  QICSEQID= 55051200000000156935                                                  QOBITER =                    1                                                  QOFFID  = 40000200000000005425                                                  REL_DATE= '2015-08-31T00:00:00' / UTC Release Date                              QOGLABEL= 'OG47    '                                                            QOBLABEL= 'OB294   '                                                            QICLABEL= 'IC3     '                                                            TELESCOP= 'CFHT 3.6m'          / Hawaii Big Island, Mauna Kea                   LATITUDE=            19.825252 / Latitude (degrees N)                           LONGITUD=          -155.468876 / Longitude (degrees E)                          TELSTAT = 'auto_guide'         / Telescope Control System status                DATE-OBS= '2014-05-24'         / Date at start of observation (UTC)             UTIME   = '11:27:06.35'        / Time at start of observation (UTC)             UTC-OBS = '11:27:06.35'        / Time at start of observation (UTC)             MJDATE  =        56801.4771568 / Modified Julian Date at start of observation   MJD-OBS =        56801.4771568 / Modified Julian Date at start of observation   SIDTIME = '17:13:10.53'        / Sidereal time at start of observation          LST-OBS = '17:13:10.53'        / Sidereal time at start of exposure             DATEEND = '2014-05-24'         / Date at end of observation (UTC)               UTCEND  = '11:32:40.63'        / Time at end of observation (UTC)               MJDEND  =        56801.4810258 / Modified Julian Date at end of observation     LSTEND  = '17:18:45.73'        / Sidereal time at end of exposure               EQUINOX =               2000.0 / Equinox of coordinates                         RADECSYS= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  RA      = '16:19:22.86'        / Telescope right ascension                      DEC     = '-18:08:53.7'        / Telescope declination                          HA      = '0:53:47.67'         / Telescope hour angle at start of exposure      HAEND   = '0:59:22.87'         / Telescope hour angle at end of exposure        INSTZRA =                15.00 / Instrument zero for RA in arc seconds          INSTZDEC=                15.00 / Instrument zero for Dec in arc seconds         RA_DEG  =           244.845250 / Telescope right ascension in degrees           DEC_DEG =           -18.148250 / Telescope declination in degrees               OBJNAME = 'o3o01_R19'          / Target name                                    OBJMAG  =                  0.0 / Target magnitude                               OBJEQUIN=               2000.0 / Target equinox                                 OBJRADEC= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  OBJRA   = '16:19:22.86'        / Target right ascension                         OBJDEC  = '-18:08:53.7'        / Target declination                             OBJRAPM =                 0.00 / Target right ascension proper motion in as/yr  OBJDECPM=                 0.00 / Target declination proper motion in as/yr      NGUIDER =                    2 / TCS Number of guiders                          NGUISTAR=                    2 / TCS number of guide stars/probes in use        GUINAME = 'North field guider (South probe)' / TCS guider name                  GUIEQUIN=               2000.0 / TCS guider equinox                             GUIRADEC= 'FK5     '           / TCS guider system for equinox                  GUIRA   = '16:20:01.88'        / TCS guider right ascension                     GUIDEC  = '-17:29:39.9'        / TCS guider declination                         GUIRAPM =                 0.00 / TCS guider right ascension proper motion arcse GUIDECPM=                 0.00 / TCS guider declination proper motion arcsec    GUIOBJN = 'auto GSC: 0'        / TCS guider object name                         GUIMAGN =                  9.5 / TCS guider object magnitude                    XPROBE  =               42.209 / Telescope bonnette guide probe X position      YPROBE  =                9.736 / Telescope bonnette guide probe Y position      ZPROBE  =              -12.318 / Telescope bonnette guide probe Z position      GUIFLUX =                -9999 / TCS guider flux                                GUIFWHX =              -9999.9 / TCS guider average x FWHM in pixels            GUIFWHY =              -9999.9 / TCS guider average y FWHM in pixels            SKYFLUX =                    0 / TCS total sky flux                             GUINAME1= 'North field guider (South probe)' / TCS guider #1 identification     GUIEQUI1=               2000.0 / TCS guider #1 equinox                          GUIRADE1= 'FK5     '           / TCS guider #1 system for equinox               GUIRA1  = '16:20:01.88'        / TCS guider #1 right ascension                  GUIDEC1 = '-17:29:39.9'        / TCS guider #1 declination                      GUIRAPM1=                 0.00 / TCS guider #1 right ascen proper motion arcsec GUIDEPM1=                 0.00 / TCS guider #1 declination proper motion arcsec GUIOBJN1= 'auto GSC: 0'        / TCS guider #1 object name                      GUIMAGN1=                  9.5 / TCS guider #1 object magnitude                 GUIPOSX1=               42.209 / TCS guider #1 probe x position                 GUIPOSY1=                9.736 / TCS guider #1 probe y position                 GUIPOSZ1=              -12.318 / TCS guider #1 probe z position                 GUIFLUX1=                -9999 / TCS guider #1 flux                             GUIFWHX1=              -9999.9 / TCS guider #1 average x FWHM in pixels         GUIFWHY1=              -9999.9 / TCS guider #1 average y FWHM in pixels         GUINAME2= 'South field guider (North probe)' / TCS guider #2 identification     GUIEQUI2=               2000.0 / TCS guider #2 equinox                          GUIRADE2= 'FK5     '           / TCS guider #2 system for equinox               GUIRA2  = '16:18:57.38'        / TCS guider #2 right ascension                  GUIDEC2 = '-18:48:10.0'        / TCS guider #2 declination                      GUIRAPM2=                 0.00 / TCS guider #2 right ascen proper motion arcsec GUIDEPM2=                 0.00 / TCS guider #2 declination proper motion arcsec GUIOBJN2= 'auto GSC: 0'        / TCS guider #2 object name                      GUIMAGN2=                 11.6 / TCS guider #2 object magnitude                 GUIPOSX2=              -24.604 / TCS guider #2 probe x position                 GUIPOSY2=               15.157 / TCS guider #2 probe y position                 GUIPOSZ2=              -12.305 / TCS guider #2 probe z position                 GUIFLUX2=                -9999 / TCS guider #2 flux                             GUIFWHX2=              -9999.9 / TCS guider #2 average x FWHM in pixels         GUIFWHY2=              -9999.9 / TCS guider #2 average y FWHM in pixels         AIRMASS =                1.308 / Airmass at start of observation                TELALT  =              49.8004 / Telescope altitude at start of observation, de TELAZ   =             199.8230 / Telescope azimuth at start, deg, 0=N 90=E 270= DOMEAZ  =                199.7 / Dome azimuth at start, deg, 0=N 90=E 270=W     MOONANGL=               125.20 / Angle from object to moon at start in degrees  MOONPHAS=                -0.12 / Moon phase @ 0 HST, 0..1 new>full, -1..0 >new  MOONUP  = 'False   '           / Moon up? True or False                         MOONALT =               -18.80 / Moon altitude at start in degrees              MOONAZ  =                76.80 / Moon azimuth at start in deg, 0=N 90=E 270=W   FOCUSID = 'MegaPrime'          / Telescope focus in use                         TELCONF = 'MegaPrime'          / Telescope focus in use                         CALFOCUS=               -3.577 / Telescope focus calculated from model in mm    DEFOCUS =                0.000 / Telescope defocus from calculated in mm        FOCUSPOS=                -3618 / Telescope focus encoder readout                TELFOCUS=                -3618 / Telescope focus encoder readout                BONANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ROTANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ISUGAIN =                 0.30 / Instrument Stabilization Unit control gain     ISURATE =                50.00 / ISU control rate in Hz                         ISUTCSOR=                 1.00 / ISU offload rate in Hz to telescope position   ISUSTATE= 'Full    '           / ISU control state (Off/Only/TCS/Full/Frozen)   ISUSTDVX=                 0.00 / ISU most recent minute std dev in x in arcsec  ISUSTDVY=                 0.00 / ISU most recent minute std dev in y in arcsec  FSAGAIN =                 0.00 / Focus Stage Assembly movement control gain     FSARATE =                 3.33 / FSA control rate in Hz                         FSATHRES=                5.000 / FSA movement threshold in mm                   FSASTATE= 'None    '           / FSA control state (Off/On/Paused)              FSANMOVE=                    0 / FSA number of actual moves in last 10 minutes  FSAMINZ =                0.000 / FSA minimum position in last 10 minutes        FSAMAXZ =                0.000 / FSA maximum position in last 10 minutes        FSAMEANZ=                0.000 / FSA mean position in last 10 minutes           FSASTDVZ=                0.000 / FSA position std dev in last 10 minutes        TCSGPSBC= '0144 11:27:02.071644' / TCS GPS read out in BCD                      TCSGPSTM=             11.45058 / TCS GPS clock time in decimal hours            TCSRBUSS= '18:59:10.000'       / TCS RBUSS clock time                           TCSEPICS= '20140524 11:26:45.074' / TCS EPICS clock time                        TCSAMODE= 'G       '           / TCS acquire mode - T/O/G/g/P for t/o/g coords  TCSMJD  =        56801.4771070 / TCS MJD                                        TCSLST  =             17.21839 / TCS LST in decimal hours                       TCSAPHA =             13.21421 / TCS apparent hour angle in degrees             TCSAPDEC=            -18.18131 / TCS apparent declination in degrees            TCSOBHA =             13.21118 / TCS observed hour angle in degrees             TCSOBDEC=            -18.17322 / TCS observed declination in degrees            TCSENHA =                48226 / TCS hour angle absolute encoder in bits        TCSENDEC=               -50128 / TCS declination absolute encoder in bits       TCSEDHA =             13.30531 / TCS hour angle absolute encoder in degrees     TCSEDDEC=            -18.19072 / TCS declination absolute encoder in degrees    TCSINHA =                    0 / TCS hour angle incremental encoder in bits     TCSINDEC=                    0 / TCS declination incremental encoder in bits    TCSSEHA =                 0.02 / TCS hour angle servo error in arcsec           TCSSEDEC=                 0.08 / TCS declination servo error in arcsec          TCSGEHA =                 0.00 / TCS hour angle guider error in arcsec          TCSGEDEC=                 0.00 / TCS declination guider error in arcsec         TCSMVX  =            -9999.900 / TCS secondary guider acquisition x move in mm  TCSMVY  =            -9999.900 / TCS secondary guider acquisition y move in mm  TCSMVRA =              -2.9100 / TCS right ascension acquisition move in arcsec TCSMVDEC=              -4.8100 / TCS declination acquisition move in arcsec     DOMESHUT= 'OPEN    '           / Dome shutter state (OPEN/CLOSED)               MIRRCOV = 'OPEN    '           / Mirror cover state (OPEN/CLOSED)               WINDSCR =                    0 / Windscreen elevation in degrees                DOMELOUV= 'CLOSED  '           / Dome louver state (OPEN/CLOSED)                VENTMODE= 'MANUAL  '           / Dome venting control mode                      VENTL1  = 'OPEN:70:70:70'      / Dome vent L1 door and vane configuration       VENTL2  = 'OPEN:70:70:70'      / Dome vent L2 door and vane configuration       VENTL3  = 'OPEN:70:70:70'      / Dome vent L3 door and vane configuration       VENTL4  = 'OPEN:70:70:70'      / Dome vent L4 door and vane configuration       VENTL5  = 'OPEN:70:70:70'      / Dome vent L5 door and vane configuration       VENTL6  = 'OPEN:70:70:70'      / Dome vent L6 door and vane configuration       VENTR1  = 'OPEN:70:70:70'      / Dome vent R1 door and vane configuration       VENTR2  = 'OPEN:70:70:70'      / Dome vent R2 door and vane configuration       VENTR3  = 'OPEN:70:70:70'      / Dome vent R3 door and vane configuration       VENTR4  = 'OPEN:70:70:70'      / Dome vent R4 door and vane configuration       VENTR5  = 'OPEN:70:70:70'      / Dome vent R5 door and vane configuration       VENTR6  = 'OPEN:70:70:70'      / Dome vent R6 door and vane configuration       TESPMIRE=                 0.20 / 03 temp, surface, primary mirror east deg C    TESPMIRW=                 4.30 / 02 temp, surface, primary mirror west deg C    TESPMIRS=                 4.51 / 01 temp, surface, primary mirror west side deg TEAPMCLW=                 3.00 / 54 temp, air, primary mirror cell west deg C   TEAMIRCI=                 1.89 / 58 temp, air, mirror cooling in at unit deg C  TEAMIRCO=                 3.10 / 27 temp, air, mirror cooling out at cell deg C TEAPMSPN=             -9999.90 / 65 temp, air, mirror spigot north cass deg C   TEAPMSPS=                 4.96 / 64 temp, air, mirror spigot nouth M3 deg C     TEATRNGE=                 2.20 / 23 temp, air, top ring east deg C              TEATRNGW=                 1.78 / 06 temp, air, top ring west deg C              TEANRLSB=                12.76 / 19 temp, air, north rail support beam deg C    TESHRSET=                 9.79 / 08 temp, surface, horseshoe east top deg C     TESTTRSH=                 1.61 / 97 temp, surface, telescope truss S high deg C TESTTRNM=                 2.34 / 94 temp, surface, telescope truss N mid deg C  TESTTREM=                 1.83 / 95 temp, surface, telescope truss E mid deg C  TESTTRWM=                 1.96 / 96 temp, surface, telescope truss W mid deg C  TESTTRSL=                 2.00 / 98 temp, surface, telescope truss S low deg C  TESTTRSE=                 2.58 / 69 temp, surface, telescope truss SE lower deg TEALOWWS=                -3.40 / 38 temp, air, dome lower weather stat side deg TEATOPWS=                -3.60 / 36 temp, air, dome top weather stat side deg C TEATOPOP=               -16.00 / 37 temp, air, dome top opposite weath side deg TEA2INCH=                 2.59 / 45 temp, air, two inches above fifth floor deg TEA2INEB=                 2.50 / 53 temp, air, two inches up by electronics deg TEA6FOOT=                 2.13 / 43 temp, air, six feet above fifth floor deg C TESCONRM=                 5.55 / 61 temp, surface, floor above control room deg TESPIERN=                 4.70 / 59 temp, surface, floor by north pier deg C    TESPIERS=                 4.50 / 60 temp, surface, floor by south pier deg C    TEAWTHRT=                 1.70 / 35 temp, air, weathertron deg C                TEMPERAT=                 0.80 / 86 temp, air, weather tower deg C              WINDSPED=                 9.98 / 84 wind speed, weather tower knots             WINDDIR =               320.99 / 85 wind direction, weather tower deg (N=0 E=90 RELHUMID=                26.38 / 87 relative humidity, weather tower %          PRESSURE=               617.74 / 31 barometric pressure, control room mb        DDSEEMEN=                 0.56 / Dome DIMM mean seeing, arc seconds             DDSEEMED=                 0.55 / Dome DIMM median seeing, arc seconds           DDSEEMOD=                 0.52 / Dome DIMM mode seeing, arc seconds             DDSEESTD=                 0.06 / Dome DIMM seeing deviation, arc seconds        WMSEEMEN=                 0.39 / Weather tower MASS mean seeing, arc seconds    WMSEEMED=                 0.41 / Weather tower MASS median seeing, arc seconds  WMSEEMOD=                 0.30 / Weather tower MASS mode seeing, arc seconds    WMSEESTD=                 0.07 / Weather tower MASS seeing deviation, arc secon WDSEEMEN=                 0.54 / Weather tower DIMM mean seeing, arc seconds    WDSEEMED=                 0.54 / Weather tower DIMM median seeing, arc seconds  WDSEEMOD=                 0.51 / Weather tower DIMM mode seeing, arc seconds    WDSEESTD=                 0.03 / Weather tower DIMM seeing deviation, arc secon SPOZPMEN=                 1.72 / SkyProbe (orig) mean absorption, magnitude     SPOZPMED=                 0.07 / SkyProbe (orig) median absorption, magnitude   SPOZPMOD=                 0.07 / SkyProbe (orig) mode absorption, magnitude     SPOZPSTD=                 3.70 / SkyProbe (orig) absorption deviation, magnitud CRUNID  = '14Am04  '           / Elixir camera run ID                           BIAS0   =    1252.192626953125 / Mean bias level                                BIAS1   =     1254.75634765625 / Mean bias level                                FLAT    = '14A_r_flat.fits'    / Flat Image                                     CADCPROC=                  2.0 / Version of cadcproc                            BZERO   =                32768                                                  HISTORY imsplice: FLIPS ver 3.0 - Elixir by CFHT - Sat May 24 2014 -  1:33:29   HISTORY imsplice: Splicing the two readouts (A&B) per CCD into a unique image   HISTORY imsplice: Splicing results in all detectors as if read from A amplifier HISTORY imsplice: NEXTEND keyword updated (/2) = number of CCDs vs. amplifiers  HISTORY imsplice: EXTNAME keyword becomes `ccdxx` instead of `ampxx`            HISTORY imsplice: AMPNAME keyword now covers both amplifiers (eg `29a + 29b')   HISTORY imsplice: keyword {GAIN, RDNOISE, MAXLIN} replaced by two keywords [A,B HISTORY imsplice: DATASEC and DETSEC keywords now reflect the entire CCD        HISTORY imsplice: BIASSEC becomes irrelevant -> replaced by BSECA & BSECB       HISTORY imsplice: New keywords are DETSECA, DETSECB, DSECA, DSECB, TSECA, TSECB HISTORY imsplice: New keywords are ASECA, ASECB, CSECA, CSECB                   COMMENT Unique detector IDs for MegaCam (North on top, East to the left)        COMMENT    --------------------------                                           COMMENT    ba ba ba ba ba ba ba ba ba                                           COMMENT    00 01 02 03 04 05 06 07 08                                           COMMENT --------------------------------                                        COMMENT ba ba ba ba ba ba ba ba ba ba ba                                        COMMENT 36 09 10 11 12 13 14 15 16 17 37                                        COMMENT --------------------------------                                        COMMENT 38 18 19 20 21 22 23 24 25 26 39                                        COMMENT ab ab ab ab ab ab ab ab ab ab ab                                        COMMENT --------------------------------                                        COMMENT    27 28 29 30 31 32 33 34 35                                           COMMENT    ab ab ab ab ab ab ab ab ab                                           COMMENT    __________________________                                           COMMENT The two upper rows of CCDs are flipped, a=A amp, b=B amp                HISTORY = AstroGwyn: Run on 2014-05-26 14:56:06 (UTC)                           NORDFIT =                    3 / Order of fit                                   NSTARS  =                  224 / Number of stars in final match                 ASTERR  =               0.2781 / 68%-tile of Residuals                          ASTCAT  = 'Otmp.1715697.2massco' / Reference catalogue                          CTYPE1  = 'RA---TAN'           / Coordinate type                                CTYPE2  = 'DEC--TAN'           / Coordinate type                                CRVAL1  =    244.845250000     / Tangent point RA, degrees                      CRVAL2  =   -18.1482500000     / Tangent point Dec, degrees                     CRPIX1  = 1.494676875099999E+02 / Tangent point x, pixels                       CRPIX2  = 4.560318848560000E+03 / Tangent point y, pixels                       CD1_1   =   5.196839756663E-05                                                  CD1_2   =   3.585442715847E-08                                                  CD2_1   =   2.112194540377E-08                                                  CD2_2   =  -5.191784841682E-05                                                  PV1_0   =   3.358668257198E-06 / xi =   PV1_0                                   PV1_1   =    1.00054573436     /      + PV1_1 * x                               PV1_2   =  -2.677991192457E-05 /      + PV1_2 * y                               PV1_3   =    0.00000000000     /      + PV1_3 * sqrt(x**2 + y**2)               PV1_4   =  -1.313220116148E-06 /      + PV1_4 * x**2                            PV1_5   =   2.302199200761E-05 /      + PV1_5 * x*y                             PV1_6   =  -1.158540298473E-06 /      + PV1_6 * y**2                            PV1_7   =  -2.234057084187E-02 /      + PV1_7 * x**3                            PV1_8   =   1.149029547060E-05 /      + PV1_8 * x**2 * y                        PV1_9   =  -2.246243461811E-02 /      + PV1_9 * x * y**2                        PV1_10  =   3.404211975096E-06 /      + PV1_10* y**3                            PV2_0   =  -8.116479565851E-05 / eta =  PV2_0                                   PV2_1   =    1.00138181669     /      + PV2_1 * y                               PV2_2   =  -2.684693851282E-05 /      + PV2_2 * x                               PV2_3   =    0.00000000000     /      + PV2_3 * sqrt(x**2 + y**2)               PV2_4   =   5.539387010111E-05 /      + PV2_4 * y**2                            PV2_5   =  -2.331085364165E-06 /      + PV2_5 * y*x                             PV2_6   =   1.035074579372E-05 /      + PV2_6 * x**2                            PV2_7   =  -2.256341720080E-02 /      + PV2_7 * y**3                            PV2_8   =   1.140895366722E-05 /      + PV2_8 * y**2 * x                        PV2_9   =  -2.244844222941E-02 /      + PV2_9 * y * x**2                        PV2_10  =   3.419770285190E-06 /      + PV2_10* x**3                            HISTORY = PhotGwyn: Run on 2014-05-26 21:56:16 (UTC)                            ZPO     =               32.114 / Original zeropoint from Elixir                 PHOTZP  =               32.150 / Best estimate zeropoint                        PHOTZPS =                0.000 / Uncertainty on PHOTZP (random only)            PHOTZPN =                    0 / Number of usuable calibration stars            ZPD     =               30.000 / Desired, post-SWarp zeropoint                  ZPR     =                2.150 / zeropoint shift PHOTZP-ZPD                     FSCALE  =             0.138038 / Scaling factor to get this zeropoint shift     PHOTREF =    'Not Photometric' / Source of photometric calibration              COMMENT   PhotGwyn: using default value of PHOT_K: -0.10                        COMMENT   PhotGwyn: using default value of PHOT_C: 26.0                         COMMENT   PhotGwyn: ZPO = 2.5*log10(EXPTIME) + PHOT_C + PHOT_K*(AIRMASS-1)      COMMENT   PhotGwyn: ZPO only valid if image taken under photometric conditions  HISTORY = PhotGwyn: PHOTZP = ZPO ++0.036 to match SDSS                          COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             …Q……'„õ……&…:…/…„ò…„ð… …I…)„ò…6………………E…… ……„ô…"…„û… ……………O…„î…„å…&…>…„à…	„à…L„ô……X„ð…7…E……H…;………)…„Ð………2……(…„ò„Ù……5…(…7…+……„þ…"……F……„û……!…:…<…………C„å………(…„ñ……"…„þ…'………2„ö„û…„í… ……$…„í…„è……„ü…………„ú…)…]………$…9„ë„ï…<…„ð…2…(……„â…-…„Þ……5…………J„ø…„÷……	…-…*………$…„ö…#… „þ…-„ú„ê…"………2………„õ…………D…„ù„ì…„ø………/……=…(…3… …… ……C…A…'…D………„ï……… …#……!…=…0…=…L……#…(…„ð„õ…$„æ……„û…-…,…… „ð…3……8„ú…9…4„í„ü……G…"………-…:„Ø……!……#…R…4„ò…/„ÿ„é…„õ„÷„ü………2„ï…….…….…„õ…4„á……5…2……@…-…M……=…;„û…8„÷…*„ô…5……	„÷„ê…m…	………„í„÷„ç…C…+„ó…)…&…„ô……
-„ü……)…"……„Ø…„î„ò…A„õ„þ…„Ò………"„þ……„ê…„í……%…!…J„ë…@………H………#„ä„ü„Ù……„å…&…9…!…9………„ü…„ï…,……I…&…„ö„ï„þ…
-…#…	„í„ß„ë…?…e…(„ì…8……"…2…/…„ó…	…… ……0…P„ð„ü„ò„î……S……7……………<„Í„ý…!…&…@…4…3„ý…………8„ú……„í…X„ô…-…%…C…5………„õ„è… …-…………@…!…(…7…„ü…4…F„ö…„ê…………A… …1…(…#„÷………$… „ý…%……3…9„ß…*…4…*……:„ü……O……$„÷………N„×…………„Þ……2„Ü……F„ú………:……3…5………„÷„ö„÷„ñ……'…„ï…)…a……>…………9…>…(…A……#„ÿ……………7…%… …$……4„è…………"…'…………B…„þ„ê…$…„ð…„ë„í…)…… ……„ò…
-…'…………………-………W…………'…„÷„é„ð…„ÿ…„á„Ò„×„ï„ç…/„Þ……+…M„÷…„î…'……8……„ú……1„á……„õ… …(………C…„é„ñ……u…………'… „í…„ï…=…8„ú…$…M………'…%………R„»………'….…,„÷……/„ô……4„ð….……	……i…)…1„ø…>„õ……………D……:…-…„Ö…	…;…„ú…'…0…"…,……………I….… …………:„Ø…&„õ…E…6…@… …… …„÷……%„ý…"…!…„ÿ… ……;…!…„ý„ø…;……)„ú…:…5……>………„ý…#…;„ý…B……X…S………/…„ò… „ö…)…0……H„ú……… „ì…K„ü…4…
-……!……!……(…„ê…„ò…„é…!……:…Q………„â…„ý……>„þ…+…6…I…………4…;…„ø…#…*„ù„å„õ…:…3…,…#„ü…H…	…)„è……………$…;„û„ò…(…I…1…„à…
-„ñ…„ç„é…„þ…	………	…………<……)…&„ç„î„Ë…U……"„î……2……#…V……-„á„Û………-…!……„ï„ö…&…!…„é…………#„ý…&…?„Î…'…0…0…,…6…D…,„ß…7…$…*…$………„Ù…'…„â……"…	„è……:…#……,…………… …Y……$………,…C…#„ó…)…!„þ…„ú…9…„ü…„Û„ü„ÿ…„ì……)……!…>…>„÷……	…„ñ…&…;…A… …)…$…/…„÷„ö……M…„å„í…„Ý… …„ï……………………„ö…„Ú…=…2„ä…„Ù…/…!„õ…„ú…#„ò… …„ò„ý…)……:…6…„ü……7„þ…>…/„õ……]……6…)…,……*… „à……V……=…	… „÷…%„ù…1……$…
-…„ü…
-…………!…8…(……!…<…>…G…!„ç………8……+…$….…1…-……'…D…………*„ú…,…„ä…7…G…4…!…„ð…„Û„ï………	……<……
-…E…2……$……"„ì……………„ò…]…„þ…(…C………8…;…„ñ„ú„â…/…,………………?„ï…&„Ü…0…5…'„ö„ø…-…'……%…… …0…*…6…2…:….…:„ù…&…-„Ù…-…*… …"……=…„÷…C…G…„ú„ó……… …………0„ê„ï……………0…„ø„ò… …„æ…6„Ý………2……2„ú„ô…L…%…„û…
-……1…„û„ò…>…"„ê……6………$…3…C„é…3…5…„í„þ…?………#…„ù……2„þ………… …#… ………,…(„ö……`…1„ý„é……,…(……%…$……$………U…"………%…$…
-……………………9………!…/…?„Ü…D„ô„ø…„É…„ä…-…	…D…„þ…,„÷…\…3………,………3………5……:…B„ú„û…G…A…„ú„ÿ…Z……B„ü….„þ… ……!……„÷„ÿ……!………;……)…-„û…„÷…)…
-……2……;…'…„ü……"…„õ……… …!„è…E„Ù… …R…„ú…!…„ù……
-„ì…… …<……/…J……'…$……)…4…„ý…&………'…
-…………0….…„í„î………%………*…,…5…„î…………………&…„ã…C……………„í…„È………@…E…"„÷…'… ……5…………(……*…E……5………%…/……
-…………+…
-„ú„ö…„ÿ…	……„ù…I…$…„ä……	…„á……G… „ý……<„ò…:………„û…„ÿ…0„ð… …*…3…,„Ë…
-……………„ê………	„ñ…„ú…,……'……-…C„ð…$……$„Û…3…;…%…K…F………9……"…#…4…„Ð…,…'…@…$…<„ù…4…F„þ…J….„ü……_…+„ý„í…„Û„û„Ì…`„é……5……4„ð………*……/„ç… …………=…
-…„ö……/……)…*………„þ…#…7……*„ü„æ….…I…;„ú‡æ…q…B…„ü…9…)……)…………[…„í……„î……K…,………3„ö………„ü……1„ñ………*„å…F……A….…"„Û………„í…Q…6„÷…E…	…*……=…"…
-……@…-„Á… …„þ…9„â„ý…2„ö…………	…
-………„÷………)…C…„ð…„é…*…D……	…'…/…„ñ…„û„÷………E„õ…:……/…6…J…„ë„å…-……„ú„ö…4……	…=„ç…………F„ù„þ…:…
-…<……$…2„ï„÷…'…"„Î…„þ……7…4„É„ø…D……„÷…=„Ú………8…:……„â„ç„ý…„Ð…4„ý………C…C„º„ô…„÷…#„è…„ù„÷…0…„î„Ç……9…0…I„ö……=……4„æ…„ì…0……-„ò…Ì…ó…#………/„Ï…6„ï……… …„þ…#……,…4………"…0……+……*„ý…………/…@……$…?……(„þ…D…… …/…)…M……A……E…….…„ò…	……/„ö…^…„õ…$……„ï……"„ï…\…………)……#…………
-……"…C„ó…O……R…M……i…………„ó……1„ý…A……D„ý…(……&……'„æ„î……M…1…A…F…!…„ü…„Þ…;…N…„ñ……3„û………„þ…C„ú……L……………#………„í…
-…!…„ÿ……M…„ý…$…„ý…<……0…	……5„û…8…)……„é„î…7…R…#„ú……-…"……„ç……-…„ê…„Ô…n……)…*…„ò………#……)……„æ…… ……!…… ……)„ð…„ù„ð….……K……$…c……"…$………1…!……1„é…X………;…!………………6……………1„ù……#…………….……„þ„ï…F…„ô…„â…….…%……%„þ….…F„ÿ…….„þ…V…„î…8„ó…„ó…„ä…%…)„í………$…6……/…„ë…>…:…6……	„ù„Þ„õ„ö„ÿ……5…„ø……+……B…!…„û…3……… „÷…!……;……*…	„ý…… „ò……4……R………#………	………:… „ê………>…„ù……-……O… „ù…%……………)…1……„õ„ÿ…„ñ……„ý„ã….…!……)……+…+„í…9……%…………+…„è„Ü„ÿ…„å…'…	……#„ó……L…D…+…&„þ…&…1„Ü……„ë…%…………%„ù…4„ý…"…………„ü………
-……!…,…5………<„ö„ã…J„ø……… ……B…J…+…$……1„Î………!……„ø…-……… ……8………9…8… ……
-„û…„ý…3……„õ„û………5……9…P„ÿ„ù……………„û…'…A…„ý…H……+…„í……6…R…#…<……&…„Û…/„ø……"„û…„õ……………"„ð…6„à…!…3…+…„þ…2„ý„Ë……4„ö…„ö………'……„ü……!…#…„ÿ…F……!…+…	…-…6„ñ…,…L„ó…………=……T…„ô…C…„ö….…>………„ú…'„ÿ……	…#…1…(…„÷…$…%… …O„ÿ……c„ì„ì…@„û………….„þ……
-……(…#„û„û„ê„å…3……;„é………]…„ö…„ñ…,„ô……„ö…=…G… …b…0……….……	……%……E……%…„ÿ…„ô„ý… …>…'„å…&„ý…$…:„é…„â………… …&…… …„ì„ó„õ„é„Ï„ì„ý…5…Z……(„ð…„ö…$…!„í„õ…„ä……„í…H„ô„ë……U…„ð……„Ø…„ÿ„ö………„ø„ö„ñ„ö…„ì……'………(……0…„û…………&…!…=……G…:„ÿ…„é„ü…$…!……+…(…4…………8„á………	…5… …"…#…„û…#… …/…………;„ý…'…/…………„ú……#…„×…:…+„õ…(………Y……=………I„ì…	….…………„ù…+…*………	…-….……;……„é…<……„×„æ…… …5……%…„÷……=…"…6„ð…F…#…„õ…„ú……B…<…………3…	…„ø„ä„û…9……R„ì…	„ü„ñ……!…	…I……………9………$„ý…8„ú….…b…$……"…)…„Ø…C……)…………$„ù…=…6„û„ø„õ……1……„è„å„ÿ„Ó………… ……#„þ……1„ç……5……C…„ñ…,………„ö………1…….…3…+…,………:„ÿ….„ç………(………„í……'… „ô……)…„ß……„â……… „ê…1…<…!…9…;… …Y…,… … …………#„ú………@…„å…„ô………„ï….…#………… „î…)…
-…#…O…1……Y……„ü…#…9……*„Ú…#……!…
-…#…)……9…M…C…„ò……:…/…:…%……!…!…&„ø…………„ö…/……!…„ñ…„û…2…$……&…0„ó………@…V…&„ù…8…&„à…1……………H…„ÿ…"……!…
-……'…H…&… …M…„Þ…………3……!……#…„ñ…+…„ú………„ö…„ç„ø………„ù…?……i……………	…………!…8…@…….……4„ù…„õ„ÿ„ü…………………
-……„ø…………3„ü„á…7……!„×…-„ú…#…H……„õ…,…&„â…'……$…„ù……„ó„÷…#…„ù…„º…7…;…„û…$……I…+…………;…F…#……@…G…?„å…[…#„ù„Þ…!…$…*…?„ë……„î„Ü……@… ………„Ú„Ò…„ÿ…E…/……………(……………%…K„ç…!……„ô………%……A…K…J…„ð……9…„º„ñ……!…6…7………„þ…3„Ø…„ù…!…1… …a…=…1…;……-„û„ð…Q…$……"…+…„ù………<„û…1……2……2…1„Å……#…1…………………$…#…>…7…………5…&„û…	…&„ù…3…)……+…„ò…H…"„ë…!„õ…(…„ã…„Õ… „ã………
-„Ü„ð„í„Ç„ý……… …„õ„×„ó…!…„ü………………3….…"„÷…„ï……„õ……2…"……!…-………„ï…	„ú„æ……&…)…$…$…[…………………„÷„à…+„ù…C„ë…G… …*„þ…Q…%……A………<………!……	„ð…:„ó„Ø………„ê…„þ……"……"„÷…%……„Ý…k„Æ…5„õ„ô……/…%………D……5…6…S…„Ã…H……
-…„ô„î…G„Ø………(…9„å……F……
-……………E……„þ…„è………„ó„û………………„è………3………
-………:…-………………?……„ÿ„Ö……;……!….…+„Î…M…1…„ß…'…… …R…*…„Ö……=…………„Ü…„Þ„é…-„ð„Ë…=…	……D…„ï„Ñ„á„è…N……;……\…3……&………-„ê„ê…!…„ù„ù… …(……&……*…3„ã…"„é„ÿ……„û…„Ü………1…-…*……„ô…….…'„û…-……
-…=„ù………!…-…>…-„å…H„ê„ô„î„þ„ï…8……)……	…„¼…„ß…K……K…„ð…+…)„÷………„ã…[…%…*…„ø…C„ë„ó………)…………„ã…	…F…B………J……L…]…S„õ…'…'…,…+„ë……………%……6…6……„ã„é……2…G…%„ï„ê„û… …+…;„ï…%…………J…0…„þ„ç…/…Y…„Ù…„Ô…2…!……"…P…1…„ì„ú……B………„û…… …„÷…………9…„ý………0…%„þ…6…„ô…7…$………)…#…………„ü„ï…A…#…C……
-…$…&…L…$…„é……4……T…„ù………„ý…2…"…%„â„û…/…„Ç…0…C……(…3……$„Õ……V…-…%……
-…… ………0…!…7„Ü…,…7… …>…:…$………,……A…"…"…… …… … …1…………„ý…&„ú…@………0„ý„ø……5…"………A„ý…#……C„ô…"…(……*…K…O…1…Q…!…5…8…1……3…:„ì…-…=„ë…5…„ú…8…B„ë… ………>…1………V…)…„ù…:…D…„è„ú……#…D…?………2…!……8…<…7…>……… …/…„ü…=…„æ„ò….……2…%…………
-…………C……4…E…K……"„Ò…-……R……<…………%……'„ø… „ó…>…+„Ú„é… …,……"…………@……*…„û…*…<„ø….„ì…	…3…#……'…1„ñ…„ô…-…#…„è……O……„ç…2…5………@„ô„ú…!„ç„î……&……'„ð…1…„ê……%„ì„û……3„é…&„ö„×……„ê…„ö…[„Þ…J…#……(……A„ÿ……0„ÿ…!„ä…7„ð…… „î…:„ÿ…L„û„Þ………%… …E…I…V…r…Y…p…p……_…J…<……B……9…>… ……>……#„þ…„ú…-…………>……4…„ç„ê…„ý„÷„ð… …+…H„í…;„ù…… …E…*„é……„ü……	„õ……+…….„þ……%…@„ñ…„ô……%„ø……………Q…%………„ü……„ö…„Û…!„þ……>……#… „ü……%…&„ý…O…6…$………'……9…&…#„Ñ……0……3……&„ù…)„þ…*„ì………„ö….…5…$…:…W„í…2……!……6…7………:………)………………„á„ì…)……3„â……„õ…$…"……:…*„ð… „ç„Û………!„Ý…0…6…A…	„û…………!„ß…>…………+„ý„ò„ò…!…;……,„ú…%…&…I…I…W…x…±††8†.…¬…´…„…8…"…'…2…/……:…9…B…%…„ÿ……=……1…)„ú…I„õ„û…„å…3…-…?…„ÿ……:…„ê……„ñ……<……………„þ…„ù…$…C…„è……*……8„ú……L……1…,…„é……#„Ê…)…A„þ„ä…6…„ó… „ð… ……3…
-„®………?…(…`…2„ò……>„à……„Ý…… …S„þ…4„ø………9…„ð„ð…„ü„Þ………#……,…%„ú…/……>…X………………&…„û…6…
-…H„ÿ………q…
-„ú…&…!….…'……+„â……$………*…%……………'……1…"…!…
-…9…3„â……F…$„å…(…:……J„ù„î…„î„ü……	…,„Ý„ÿ„ë…!……!…D… …j…N…“†V†³‡‡†}†A…Œ…[…N…_….……+…<…4……)„ú…'…)……!…5……1„å…………„ë„ø…?…<„ÿ……!……B… „ý„þ…E…-…………G„ú„õ……)„÷…A……&…A…„Ý„ç…„Ë……6„ô„ó…I…„ø…(…………;„Ò…Y…………E„þ…0…„ý…!……A„ò…„é„Ó…„ó………
-„ð…2……K„÷………8…„÷…:……6„è„î…(„÷…„õ…*……"……G…F………+…&„ï„ü…'…„½… ……„ë„û…„ã…"…M……„ç……9…!…,…„ç……….…,…0……&…„þ…7„ú…….…D…>…9………7……)…0…… …2„ü…
-…………
-„÷„¼„ý„ý„â…0„÷……D…… …h…{…œ†*‡‡úˆÈˆÁ‡Ä††…å…¦….…>…=„î……>„÷„ä…3…>…„û…*…-… ……E………L………!„ó…8„ý………'„Î…2…8…………„ø……5…2…… ……?……G„æ…)…(…„ß„â„×…!……#„å„þ…„ü…0……5„ó…7……)…?… …%…,„û„ú„Û……(„ú……(„ô„ê…	„ß„ò„é……F………	…/……3„Ñ…+…1…'…*„á…„æ……„û….……
-„ô…"… „õ„ñ…*…$………!……/……4…„ï„ð…„ç……P…:„ß………„ð… „õ……\…„ù„ö….…I…4……….…h……A„ü….……„ý…„í…
-…„í………#…4…„é……K…„ü„ú………8…>………5…………?…+……Í†™‡öŠ‹LŠÜˆ¿†Û†…´…\…4…e…D…………N…„ö……6……„ø……*……„ò……(……………7…„ù……%„ô„ó…#…………K……!…2……c…	………	… ……„ô…,…$……	……G„ß…„ÿ……!… „ê„ó……'„õ……N„ù…?…„ø„ñ…………I„ú…$……………-…C…	….…5„å…"…„é„þ…	…'„á……„ë…+……S„ÿ…5………,…*……„Û…A…'…;…j„ð…9… ……8„ÿ…4…$……1„ð„Ü„å…„Ë„ö……#„ç…0……„è„ù……D…;„ä…… „ð……#„÷……„ß„ú…1…,…N…2……C…7…!„í……?………………Y…„Ù………S„í„ç………;…I…{…÷†Ôˆ~‹pŒÕŒG‰ž‡@† …\…ˆ…;………N„Ó„õ……#…"…………-…;„á…,……0…(…	„ð…„ö….……6„Ü…$„ë………"…)…H……G…<…… „ï„â„é„ò……#„ù„þ…$…0………9…
-…+…=…(……)……:……………I…T…„ÿ……L„û…:…(…!…+……L…'„ó…A„ë„â…)…7……„ù…„í………„ù…………2„ú…… …+……$………P………I…:…„ü……
-„ë…'……O…$„ô„ÿ„ô…+…#……;…	…„á… …„ä……… …+…?…3………`…%……1„ñ………3………„ì………!…U………1…
-………C…,„ê…4…„ï…„ÿ…2…,„ç…7…!„ó……#…….…>…Z…t…Õ†ñˆeŠ¨Œ%‹I‰‡z†A…¹…r……C…:„ý„×…G„þ…*…6…„Ö… …„ð…………C…>„ù……….„ñ…
-„ç………-…2….…(…&…„ø„ÿ…7…„Æ„ú…„÷„ü……d„ú…=…:„ô…1…h…)…„ì……:………!…(…C…„ø„å…„ð…3…?„ù…………H…'„ý„á…4……9…"…@……
-……8………=……%…4……„ü…„ë…%……„í………„ú……3……………3……2………3…F„ý…„å………&„Ï…„ò„è……„Û………„Ú…?…2……"……S……*……	…………„é……………………
-…%„Ù…&…$……6………-…+………6….„ò„æ„î…2…6………8…0…Y…f…f…Í†¦ˆ‰IŠ=‰/‡À†·†…}…;…"…3…<……„Ü…!…+…0…q…„Ü…A…D„ö………)…„È„ü… ……„ê…„ì…*… „ý…„å„ó……/„ö„ô…
-…5…„û………*…………!…<…	„õ…
-….…„ï…=……1„á…„û…"……„ò„ÿ… …'…*…"„æ……A……„ÿ…,……<………
-….…/…A„í……C… …„ó……'…„à………,……;…&…:…!…%„ð………
-…$„Í…„ù…!……%„ü„ü……	„î…„ò„ð„ø„à…4……7„ñ………!……,…„ï„í…………„ï„Ö…	…;…9„û…
-… …+……'…	…%……#…3„â…„ÿ„ì………>„í……„ý„¯……………„ä…"……„ü„Ü…H…0…d…ž…¹…û†·‡L‡Ó‡G†º…Ï…ˆ…Q…4……L…„õ…D…8…$……„ç…4……	……1……„ñ……2…:„Ä……#…-…;…„ï…„Û„ö…"… …]………„à…9…„Ý…#……„ë……H„ö……+„é…„Ù„ç…$„è„ã…0…… …1……'…1„ÿ…	…%…'…„ú…B„Ã……2…$…………„ñ„ù…0„û……/„ô…………… „ò…„ô……)……1…Y…„å………„ñ„û….…#„ô…„Ò…3„÷…5………&……=…;…+……„þ……9„å„ä…J„ð…*……&……„â„ô………;„õ„Þ…"……6…"…$…<…%…4„û„ñ……)…7…3………!……………)„Ú………6…"…*… …9…4….…-…1…;…%……4……L…6…ˆ…Š†
-†&††"…Û…Ë…}…[…S…0…=……H…'„þ…	…2……&…„Þ…=…`…3…$„º…„õ…„é„ï…+……„í…K…*„ó……………S…………=…………O„ë……"… ……………$…
-…/…
-…	…3…8…„ÿ…,„å…„ù… …2………%……3„ÿ…0„Ç„ô…„ò………@……„í……)…„í…"……/……D…"…„Î……„Ê„ÿ……„ñ…	……*„ñ…*…………	…*………X…'„ÿ…+…0…)„æ……7…0…E…………„ø…H……>…4… „þ…(…………;…….…=„þ……&…………$„ÿ„ÿ„Þ…„ý……)…"……<……„ù……
-…(„ê„ÿ…6…„ú…… …… ……….………V…O…w…'…k…{…Á…¾…ä…U…$…W…0…:„ÿ…I…+……-…$…„ô…F……„ï„ü„é…k„ü„ú„ë…………1… …… ……J……>…B……%…K……2……„ö…\„ï„ø……'„Ü… …>„è…3…#……:„ÿ……P„ø………%…„Ü…
-„Î„þ….…„ü……………8…(………„á„þ…Y…5„æ………K…… „ò…„è…„ú……1„ì……9………… ……'……&……………)………>„û………/……„Ý„û…9……'…"……L„ö„Ö…>…1„Ô……+………#…………G…-……0…%………4„î…0„û„ý……,… …1…)…$„õ…3…„ð…5…+… ……„å…R……………….……2………/……1…&…8………[…‚…›…¡…3…[…G…
-……7…P……!…1„ÿ…2„ç…„ù…N…&….……/…… „è…*„æ…+….……!…„ô…….…N………)……d…)…"…(…J…„ú„õ…„í………
-…B………8….„ý„÷……6„Þ„ô…7……2……6…!„ú…$……!…„ô……„é… ……6…„ç………„ð„þ…„ÿ…2………………0………2……„ö……… ….…4… „ë…
-„ú……!….„÷………………9……5…4…4…………7„ù……„÷„î…8………„à…… …(…<…%………-…G…„î…)„û……$…„ÿ…#…*…„þ…	…>…8„û…&…1„å…M„Õ………	……3…%„å……„í„ç…F…„õ………&……I…„þ…/…;…]…C…Y…7…K……;…………„è…4…#…„ÿ„ñ……-…+……%„ô…	……!„ø……„ò…!…„ï…„÷…$…#……2…3…M…C…[„ú……	…2…$………%……:„û„ó…„ù…2………*……#„ä……A….…
-…„ý…,…'……M„ê…………#…+„ò…5…$…	……„ä…1…6„þ………2………<„ú„û„º…………„ñ„û…	……@„á…-………C…4„ò…6„ù…<…„ï„õ……$„ù………&…*…"…'…<„û„ÿ……-…A……+…%…„û………:…„ù…6…/„æ…H„ä„ä„ò…C……G„ü…„ß…:…9…8……6„î…………,………„ü…*…d„ÿ……„Ú………………-…,„î…@…(……	…5…G……<…K…Q…*…&…*……7…0…&……	…… …………[„ã„õ„ÿ„ù…„Ò…#…„ö…%„÷…!…„ö„÷…,…„ä…………E…„Ý………&…*…„û„ù…M……%…:…
-…„î…„Ú……&……5………T„õ…%…!„ý……<………„ø„î…*…	„ö„Ë……I……„í……/………<………(……8……2……A…G…,… „â…,„ø……(„ñ………„ð…„ý„å…„ø…$…#……„è…5…P…$…9…3……„þ„ÿ„ÿ…+…………:…V……#„ý……… „ò……(………… ……)„÷…*…	……"…„ù…„ù……(„ð„ê………0…3…/……(… …5…?„÷…;„ö„Ê…G„÷„ý…2„ú„ö…………^…(„î……*…H……O…@…"…+……H…&…	…0„ü………„ë„ø…*„ÿ…… „ø„ù…,……&………&„ô„Ý……B…6…>…
-……!……A…5…/………0„ú…„ÿ… …#… …„Ü„ü…*……„â„ú……………„þ…C…$…F…5„÷„ø……………„û„Ï……………5„Ï………………„ñ… …/……4………>„ÿ…1„ñ…………2…@…„ú„Ø…H………„÷…7….… ……………/…„ü…9……	…… …„á„ó…<…0…1…(…„ù„ð….…
-……„ë…"„í…)„ÿ…(……
-…9…2…!…^„é……U„À…………K… …„è„ù„ý…'…V……$….„è……„ø…+…/…)„ú…„î…;„ô……4………B……… …c…/……*…4………………/………….„ý„ã…$……=„ú………„÷…%……$………„é„à…%„ë…@……„ô…K…'…&……"……„ù…'„ÿ„ð…3……1„ù……T…2……-… …-…V„÷„ò…„´„ð………%……;……„æ„ý…&…>…#…5……„ì…+…
-„è…%……P…#„á„ò„ô… …$…1…%„Ï…F……$……0………;„ü……$……„å„ú……„ÿ……4…5…P„ÿ…C„Ù„ò„ÿ…"„ô… …@……%…(………2…$…+…@…0…„ÿ…'……0…8„ù…@…/…=…4…3…(…„õ„ÿ………*……„þ…:„ò…5…"……,„û…B……………2………#……F…!……#……'„þ…)„Ý……3„Ü….…)…0…@…;…,…0…*… …$…?…7„û…H……„ï……)……,…g…+„Õ„é…"……"……„î…„ï…#„Û……>…:…3…6…5…)……„ñ………9…#…$„ô… …9…=„î„è„ü…8…8…„ø…<… „ú…"„ú„÷……1…0……5„ó…!… „ï…)…#„ê… …„ÿ„î…-…………7„õ…+…0……„æ„Í……„î……
-……!…R….….…,………&„÷……)„ô„þ……"………'……„ñ………………$……"……'… …1…G…&…8…	…j„è………„ù…n……B………(…#…„ñ…„û…	…I…8„ø„ú………'………	……„Ö„î…&……„÷…8……………*…„ø…D…0……-„ù………	………%…	………	…M…4…W…@…7…$……V…„ú…„ô„ø…0…;…>……3…$…3…@…(„ö… …-…4… „ê… …;…„ê…1……#„ÿ„ê……0…,……„ì………&…4„ä… ……6……%………7…:…„ã„ñ…+„ý… „ñ……$…+„ó….…………„ò…-„û„ð………
-„ÿ…4……!„ê„ñ……
-………+„ô„ü…A…9……)…
-……T…7……3„ô„û…#……/„ì…6……„û…0…*„î……„î„ú…„ð…$……8……„ß……!…C…5…9…M„à…>…H…;……C…$…„×……8„ë…5…„Õ……M„÷……3……B„ç…@„ü……3……$…(…*„â…-„þ„ô……)……„Ì…2„ó…D…!…$……G…7… …… ……)……„æ……,…%………*…/…!„Ü…„÷„ñ„ò…2„ò„ù…=…$…B…„è…&……%„í…O………I…!……%„ö………%…,… …-…,……=…$……'……6…7……H………6………)…0…J……%………„ô…)………	…"……+„î………	„Ø…k……8…)……3„ÿ„ì…………B…'„ë…	…F…-…"„ç…„ó…+……2…F…:…‚…B…w…@„ê…N…,„Ç„ú……… „þ….„ú„é…9……„ô„Ò……………„ù……… …… …-… „Ú…3„ê…<……&…8……3……
-……+„ü…………3……D…„è……'……„û… ……*…„ô…H„Î„î…„ô…………7…„Ø………+………0………8………
-……(……………-……„ú„ô…:„÷…8…
-„í……+….„í……1……… …)„ñ……+…)…!„ø…5…F…„î„ï…g„ô…4……8… „ó…E…0………(„ù…„ú… „í…;…'……„ø…%……'……H„ù„Ù…„ó…6…&…!„ù„ö…7…„ò„å„ù…N„à…„à……B…„ô……)„ó„é……………/…C…„Ï………4„ë…-…,…G…a…B…<…L……2…1………&…	„á„ö„ë….„û…4…)……)…'…A„û…„ü…1………„û…Q…„Õ…@…D…„ÿ…3……5………………N………„á…„î…!……8„Û……X…„ï…(…6…%……
-……7…„ø…„ø…M……;……%……)…0………*…….…………………„ø„ò…1……%…3…8……„û…?……8…„î…"„ö……+…F…)………2…3…„ù…„ü„í…„Õ…„å………„å„ú…$„ä……… …,„ï……„þ„ú„ÿ„è…S…„ç…3„é… …„ú…/…;… „ì……*………#…„î…„ó…)…6…P„Þ……………„ù…„í…-……………g………9…-…,………8…………<…,…y……:…A„å…
-…V……I……„æ…„ö„é…*…	…9……„ì„â……,………>„õ…=……^………I…	……„æ…	…+…@…#…&…;…„ñ……3„ÿ…,……9…………*…[„ó„ü…,„ö…/…
-…1…„à„ý…?…=…"……'…„ü……„ö………………?…
-„Ö…$„è………:„é…U…2……!……&…P……-… „ÿ……%………… ……L……L„ÿ…:…-„ò…w…………„ÿ….…………7…„ç…!…?…„è…>……6…&„ñ„ó„ï…;……8…„û……1………………N…	…P„×…(…&………&……/…:……8……„ë…I…„ì…9…O…"……(…6„û……9… „ä…„ÿ……I…….………%………=………
-…„Ø„ÿ„ç…………4……
-…'…(… ……"……
-„ü…K„õ…H„ô……7……„ï…)…%„ü………„ù„õ…„ú…,…A…P„ù„í…„ÿ…&…F……„ä……,…„é………+…/„þ… …M……„ß„Ì…=…=…K……-…	…„ò„ù…5……+„ó„ú………#…#…I…'„ð…„Û…„Ù…………;…1„ï…„ó„ì„þ……„Ó…<„ü„ó……,…#„î„ò…	… ……@„õ………$………$„ü……„Þ…„þ…„ç………I……„Ú……3…
-…0……………&……„ò……b……„ø…;„ú…G…>…=…)… …
-… …,„þ……„ó„ß…)…„ÿ…„þ……F„÷……	…O…U…(…!…8……4„Ó…I…$………B… …(…4…„è……;…#……„ò…*……„á…;„ì„õ………#…!…$…2………!…„ï„ò…8……„à…„É…+…
-…4…7………<…„ò„ö………„÷……„ú…….„ê„ì…„ì……„ý…B„ã………C…:…	…
-„ù…I……„÷……+…@……„û…Y………„Ë…K„þ…………„Ý„ö………"…9„ã……%…1„è……(…K…„î…	…^…„ï……+…=…9…I„å….………,„ú„ó…………%…&……#„ú……"„ó…C……0……„ð„ß…6„Ç„×…F……*……….……]…*… ……*……$„ú„ü…………#…„ÿ…F…"„á„®„é……….…-………„õ„ì…0…„ì……,„ý………0„ï…„õ…8…=… ……+…$„ì…-…2…$………………&…@……"……"„ù…„ý…@………„ø………… … …!„ô„ã„Þ…„ë……U…!……,…-…:…„æ…%………4„û………%„á…9„õ„ú… ……o…+…	………… …„ò„ó„ü„ö……(……„ñ…9……+…*….……„Þ„Ö…„ÿ…/„õ……3…E…………,„ý……4……$……@…………>„ð…0…J…9…'…%………„ô……… ……5„ã„å…?…(„Û…+……„æ…… ………S…%„Ö……$…)„í…D„Ú………J………+…L………„í… „×…5„ý……………*…-…'…„ÿ…
-…/………#………„ë„ÿ„ë„Ù…(…@…2„É…#„î…8„ã…$„º…	…„ï……+…E…'…4…………8…5……… …„Ü…C…c………„æ…0…5…„ù„ö„ù…	…#……5…c…„ÿ………………R………!……„ñ„ë…;…Y……3……<…)……1……C…'……„û…)…„ø„ô„ý„ý…„ï…„ÿ„ë„ù…………4………0…a…	…&…#……0„î…„è„ß……@…'„é„õ…B…,„é…O„þ„ö……3……-……6… …<…F„Ý…=„ü…/…1„ë…„ì…8…+„ö….…………„ê…„ú……%…%…„õ……J„î„ô………….„Î….……%…‡……k…M…………+….…:…„ý…„ü„ý…2…„ï……„ò…:……………-…1……K………	…%…"……"…………E…-„ü„å…=…………………(…+„õ…„å……„æ„ç„û….……)…A…1…#…
-…„ë„è„î…G…"……9…………(„î….……;…F…*…'……… ……„õ…?……„õ…#…„è…=„ú……„î„ÿ…A…>……5……/…x………&„ø…;…B…]…%… „¶……E„ø…………+…4……1………8…9……!…… ……$……,…	……+…)„÷……@……:…S… …I„Ý„ó„ó…'……„ý……'…,….………
-…'…I„ø……………9„á…2…9…0…X……(…„÷……C…7…A…8…/………#…o…*…+……*………G„ü……,………
-…"… …„ý…„ø……J…„ì…%…	„ÿ„Ï…(„á…C…………
-…„ú…#…%…!…„ð…1……)…<„þ…………
-…+….……………………'…
-……/…+……5……D……D„á……%…=……„ý…… „ø„í……„ò……
-„å„ÿ…8…„ò„é…7……A…9„í…8………„ï…C…„á…"… „õ„ì…9„à…,……„õ……………8… ……>„ë……….…!……'…7…)…3„ç… ………6…
-„ø……9……„â…/…=„Ò……+…… …N… …-„õ…H…/…„÷„ú…….…X…„ù…)„÷…-………$…R……/………… „þ…
-…
-„ó…;……"….………G…2…Q…{…,…0……W………"…1….…„ò„û„ü……………!„ß…„æ……0…„ß…,„ø…3…„×……
-…"…!…)…„é…'„ò… „Ù…(… „ù…$„õ…9……N……„ß…-„ó…„ß… ……*„ò…X„û… ….…*„ø……&„ü……(„ú…7…!……*…	…„÷„þ…0…….…„Ú„õ…… …„ô…!„ò„ñ……B……&„ü…………;……„ì… …!…$……4…„ò……2…C……1……„Ú„ú…<………>……@…6„ü…G…„ï…$……%…!„÷„ó…;…„ñ„Å…?…$„Í………%„Þ……#„ò…„þ…….……]…„ÿ…1…$„ú…0………F…………!„Õ…„þ…(…(…………O…0……,………*…G…5…!……9…0…i…G…R…\…7……+…%……/„í…/„õ„ô…	……7……?…….„ò„ø…„ó…9„ü„ù……………„ì„ü…„ú…!……5„Ý„Å…„ø…!……………@„õ„ò…:…A„Ù……,…………>……)………$……6„Ó„ö……&„û…5…„÷……„û………I…!…	………2…:…&…….…1„æ…*„ð……„ê…„þ…………)…V………'…G…3…„þ„÷…… …"…
-„ÿ…„ó„é……L„Ì…%…+…(………&…„á…:… …%……<…6…M……*…&…2…"…„ý…3……$„÷……	„þ…………(„×…B„ø…„è„ñ………T…„ß…(…$…"…„ò…„Ý…-„ö…%…Z…9…6……K… …„í……7…>………=…
-……N…]…¼…ƒ…f……3….……)„é……„ú………'„ê…„ä……&…„÷„ú…„ï…4…9…@…$…'„ó…*…„ô…………„ð… „ì„ý……J……"……!…,…*…„ñ…
-…„ô…0…&………0…0„î…„ì……„ù…….…b………$…P……….„Ü…	……„ü… …!…+………… ……„þ„ó…$…„ô…*…7……?……„ï……„ê„ñ…+……E…4…… ……"………(„û…1……^…2…-…„þ„Ý…;…-„ø„ü„Ñ……/„ö…	…+„ù„ù„ý………„û„ß……N…&…$…:……+…!„ò…%…C……„â…i…@…I…………„Ð…„Ü„Þ…G„û…)„ò„ï„à………………&…E„ð…„û……G…$………8…›…µ…‹…·…A…i…"……… …H……8………1… ……„ù…?„ï………:…)…"………„Ý……„Ù„ð…6„ê……………2……………	„ï„×………C„Þ…F……„è„ì…4…'…(……P…J…„ø„û……%……
-„ý…0…L„ÿ…„Ô…6……„ö…A…#…%…,……*…$…*…………„ÿ…7…*…!…(„þ……7…
-…"……?……;…E……>„þ„Û……(„ë„â…&„ü…
-….…$„÷…C…,………„ì…„þ…
-…<… …K„ñ…A…,… …>…%…E……a„ÿ………	………*………… …
-…>…7……………%…0…J„ý……„ý„õ….…&…]„ô……„õ„û……%………!……!…3„û„ÿ…+…4…*…… …
-…7…q…¡† …¨…N…/………?…5…3……(……/„ì„ö…O…„õ…0………>…$„ö… „Ú…„î…„ú…#……)…„ó……H…)…<…„ø…8……………7………………@„ê…………+…!„ë„þ……F…2„ê……
-…@„ó……2„ð…„ù….…
-… …E……„þ…*„ÿ……„ð„ñ…-…(…8…!…,„ô…„Ý……)„é…Y… ……„ü……(………„â„û„Ò………2……,……
-…"……2„è…1……………!…„ë…$…	…%……
-„ì„ã…… …M……………………„é………„í…2…'…;„ô…………)…!…,…„ü……!……"…„Ý…`……H…=……+…„Í…….…"…%……1…4…;…+………J…\…­…‹…Ë…”…”…B…%…)…&…,……„ë…„æ…/……………0…………=……&„Þ„þ……*…………*……?…„õ… „ü„ù„å…$„ð„ú…„Ð…………„ä„ý………$„ï………:…
-…F„û……7…N………,…"…„ú…….…<…………………:„þ…V…A„ñ…/……+…
-………… „û…8„ø… ………)……„ù……"…„ø………#…(…………F…"……2„ý……#…*……	„Ë……	…….„ç…,„ì„þ„ä…&…4„þ…:„ý„ä…P…4…V…E…… …4„ü…J……+…„ì…A…&„ë„ì……@„÷……-…	……;……2„û…„ï„ì„÷……C………„þ…+…„ñ…„ù…C„û…4…%……#…C……^…´…U…†…ƒ…~…9……!…9………3……@„ð„ÿ………!…… …„ø„Ú…8…
-……,„å… ………I„­………„ù…„Ö……(„ì………A………@……*…„ë„ó…,………0…"„þ…%…(…5…;…… …!……%……F…3……$…9……*…….…@……5„ð…'„ñ………„ö…	…E…„ü„õ…„ð„Ú…5…	…+…	…/…%…$………%…	…„ï…6…………C…7…'…S…*……(…*…………„ê…
-……%…+…„è……$…….…5…,………„ý……3…„ÿ„ÿ……7…=„Ú„î„ì……„ú…………&…:…3…………„ÿ… …%…?… …„Ù„Ü………(…U……„Ú…1……6…Z…………<………/………6…h…T…©…S…S…=…„ö…!………7……)„ü……„ø„Ú…4……)……'………/…#…
-„â…„Ö…@……
-„û„ï… ……*„ë„ê……#……q……„î…„ù……/„ë…C…1„î……„ú…;……F……	…	„ö…6„Ê„þ„ø……H……„ý…!„þ…B……#…f…„â…*…"…!…0…„þ…„ô…………„ò„ç„Ü……
-„ú…&……… …)…„ë„ê……„ñ…;…2………!…?…F…,…*………3„à„ú……2„í……………„ò„Ü………
-……„»„þ„Ù„ã„á…*…)…&„þ…W………	………#„Ç…	……-…#……„ý……*„è„ô…„û…… ……„þ…………*…„þ…e…)…C………%………X…Q…6………¥…4…S… …J…+……2… …………7…………S…F…„ü…=……
-…„º…	………:….……„Ô…„î……8„ù…:……&…………E……)„Ó……#…„é„í„ß………2………)…'…#…%…T„Þ…T…„ø……-„ò…C…8…/… …,…„þ…"…>…„é……'„û…„÷…'………7…	„ì„û……„Ý………0…„ø…„ì……+…„ë„õ…T…7…*…„ü……:…1…„ü……4………„ü……„õ…„þ…'„ÿ…L…+…C„í„ò…	……1„÷…„ö……$…)…„Ø……(……K„ç„Ú………W…………6……„þ„ú…………………„í…4…/…K……………G…*„þ…_……
-„æ…+…„ù…@……T…[…a……Z…O…$….„ý…„ù…&„é„¾„æ………3…B……?„ð…*…P…………„æ…„ð……„á…… „õ…#………„ñ„ù…&……3„Ý…*……„ý…………„û………………-…(……F„ÿ…$…………-……Q„í„ý…7…4„û…*…F…#…1…S………5…*„ù…&…1…„ô…'… „ÿ……„ô…„ü……-……+„ü…
-…„ý…… …#„õ…A………„Ú……8…>………"„ë…#…….……$…)„Ñ……%„ø…*…"…9………„ý…„ù„í…7„Ô…&………… „û…(…„þ…0…;…„ÿ……„Â…#„ë…)„ý….…A……„æ„í…-……………*„ý…„ì…„ò……C… …:„à…G…„ã„ù…2„ï…'…S…L…B…[…M…I…
-……4……#…… ……*„ð……+……… …„ô……G…U…(……„ß…3…………%„õ………………C……%……M…=……1…„û„¾…………„ß…"…9…[………0……"…%……….……(…5…)…%„þ…3………„ô……„ý… „ü………1„ÿ…$……C„þ…4…\„ý…$……7…$…H………<„ÿ„ú…'…%…………(……………O………….…… ……,…(…….……&…2…„ó………7…/…………(…„ù…………/„á………$…*…3…<… …„õ…„ü….„ì…………-„á… ……A„ó…………+„ê………„é„ü… …%„õ…S…%„þ…
-…„ý…D…„î…'……,……E……9„ý…*……+…„ß…-… „ù…s„ô…„ö„ÿ„ý………………E…„å……1……+„ô…5…„ý„ñ…8……1…F…„ð…!… …….„ï…3…„÷……„ú…!………"„è…/… „ø…6…7……5…… „ÿ…(……1„û…1……„ê…$„Ç……„ñ…………
-……„û„ø…+…„ã„å…„ë…2………„ý„ú……7…6…9…
-…*……G…,„ÿ…@……'………;…)…/……„Ú…-…=„ë……	…Q…G…+……#„þ…/„ù„Þ…'…„ø…2……… …………„õ…(„õ…#„ì….„ÿ„é…%…$…G…,„æ…O…#…„æ…………:…-…„ö…3…$……J…-………%…>„ý…„ø…#…„ï…
-…M…,…1…………T……"……+…………;……(…*„þ……!……………„ò………'…„õ„È……„þ„ø„û…,…… „î…„è……,…C…„Þ……	…„÷…!……9„ü…@…„ö„ã…
-„ý„ë……3…?…
-… „ò„ì…-…#……\….…E…F…&…2……0……T…'…$„ó„õ„÷…„Ú…	….„ê„ô… … „ü……„ÿ….… …^„õ……„ó…L……2……3…G…'…9…"… „õ„þ…E… …5……….…„ð……>„õ…7…„Ô„ó…!…„þ…-… …H…4……2…:…=………2…T….„ú……F„à„ý…?……N……„ë…-…„â…#…%…0…„þ…
-…%…E…2……;…*…
-…(…„ã……………„Û…E………%……„Ö…'……
-………3„ö…,…F…0…7„ø…X……K……„û…
-…'„û„ý…&……"…=……„ý…@„ô………,………"……„ö……5…6…„û…'……5…+„ú…„ù„û„ä……….……0…„å…?…%…….…E……„ó„ý………„ñ……<„Î…$…;„×…H…„Ñ…+………1…)………(„Ý…>…„ô……)…„ê… ………………%„ë…)„í…„Ð…4„÷………@…+……3„Ø……F…„÷…5…n…#„Ý…9„ò…„ô…M„ë…-………?……(……………/…B…@…!„ê…%……>… ………i…S……	……u…J……?…!…„ý……„û…3…………„ý…„ô„ü„û…$……'……………H…„õ…………………9…N……	…… ………	…I„û…0…<…f…6………2…„Þ…H„ü„Û„ì…>…„ý……)………"……'… …>…………	…6……<„û…………„á……0„ù……2…%……;„î…:…„û…/…… ……#…#……;……(„Ë… ……P… „ì„å……$„÷„ñ„ï…4„é………2…\…N„þ„ü……<………P…
-…,„ö…<…'…-…:………
-…5…0… „ð……"„à……"…%…A…T…<………"…
-…„ü…L…5…'„ú……/„à„÷…$…/…(„Ü…„ú„æ… ……:………*………&…D…8„ö………/……0…$……*„Å……O……„û…K……>…0…9…,„Þ…+……
-„Û……	…„ü…„î……,…N„ð……J„Õ…(…J……J…	…„ú…………9…'„÷„ë„ï…………J…"…„Ì…A„ò„ã…„ý……8…!…>…(…+…O„î…„ò……C„å…„ö…„ü„ü………#….„õ…8……………>…Y………………
-„ê…&………………5…#…<„ì…… …+………„ë……………%…„â…L„Ü…„í………'………………"…„ü…:………<„ê… „û……………;…G……1…c„þ…
-……5…„û…:…:…-„ý…:„û„æ……H…#…c…….„ò……%…
-„ä…„í„â…E………7…+…S…8…………J„þ…"……/…„ü…3…+…'…K………„í…„ü…W„å…,…„ó„ý…=…„ç…………,…%……	„û„Ü…………"………f………!………-… …M…"„ß…	…F……,……*……(…:…/…………C…………#…………„Ý…2…„þ„ì…2…„û…………„ü…J…„ò„ÿ…=…2„ñ……$……„ð„ÿ„â………F……&…„õ… …e……5…K…	„ú„í…„ú„ð„ö………H„ï……D……)…………#……	„Ù…#…;…X„æ…	…"…/……6……2…&……w„ÿ…*……*…6„÷……!…I…+„ö… …7„ç…<„ê……
-…4…+„ü…9„ÿ………!…&…H…&…	……„ì…'…<……„ù… „û……0….……
-„î…5„Ð……J„Þ…B… „á……$…%„ü„é……*„ú„î………„í…K…4…„ê„ä„é…g…„þ……,………$„ê…3… ……………8„ã…&„â„ó„ÿ„æ„þ…„þ…"…$…$……'………„ì….…?„÷…H…„ô„õ„ÿ………)…………*„ô………@…5…-…9„è…………-„ì„ò…!………
-……@…!……„ù……………%…„þ…8…%„õ……*…………………I…,……!…=………D„ÿ………„þ„Ò……#…
-…„ð…:… ……#……L…… …:„ò…„ú„Ì„ö…„ý……)…
-…… ……
-…2……(…„ù„ý„ò„å….……„ö…9…8„æ…:…2…8…)„ú…„õ…-…"„î……#…„ü„ý…„ä…………„ý…!………„à…A…	…„÷……"……#…(„ô…F„ò……N…!…$…#……… „í……?……,…7„ø…„û„ä…„ú……………&„ö…!…	…-…„ö…"…G…5…O„ý……#„ç…C……/„Õ……M…	…„ô„ó…&………,„â………6„Û„î„â………+„ó……%……-………3……*…„ð………,………M….„ë…+…„ý…+„ð…2„ý…„ø…%…………N…„ö„ò…………4„ÿ…„î……"„ú„ø…………… …„ù……U…U„÷…?…?„Ù„ò… „ø„ì…………„þ…3…k…„å„þ„ü……9………„æ…<…„Ô…………B…@……6…>………1…!… „ÿ…E………"…7…1„è…,…*„ë„ê… „â…„÷…0……)„ë„ì…
-…D………6„þ„õ…/……"…„é…D…:…„õ………"………E…&…!„×…'„ì…A„Þ…=„Ú…………*…	„ø„þ… ……„æ„ø………
-…………N…<„ð…………!……„à„ü„é„þ………'…e„â„å…D…	…'…… „Ù„ø……„ì…B…*…$……;…U…………„ã„ÿ„ü…„Þ…:….………	….…2……„ø…„õ…D…
-…„ì………,……!…,…„ý…„þ…0…[…H„Ô………„ü…………#…)„à…'…2…-…e„ï…
-……	………L…=…„ð…„ÿ……)…„ü……„Ô…(… …&„ì„ø……'…!…
-…#…+…P…0…….„ÿ„ì„Þ……5…
-……N…………………3…D……„ò………%…&………=……
-……!…<…/„ö…)…M…„ö„Ì„ì…!……„æ……………:…………<„û…G„â„ï………„þ„Ý„ý……„ü…*„ë…I…„ì………(……c…9……%…
-…5…C………D……"… … …&……$……<…K„å„ë…„ò……„þ„Ê…„è…4… ……$…/………<… … …8„ó………B„ë… …7„ò…K„þ……"…$„ö……„î…A………4…„ê„í… …„÷…#…=…5…F…?…+…	…
-„ò……„ú……+… „û…:……6……D…„÷………+……!……<…(……………„í…
-……2……„ü…&…(…………………„Ô„ø……+…(„ÿ……3„ü„í…„í„õ…)…5………;„ê……….„þ…'…;…(…=…4„×……………"…+……(„û„ì…@…&…*…;…Y„ó„þ„ý„ï„ü„ÿ…„ò……(…„ô„ú…!…,… …1…O…… ……2„á…… …„ú…-….…„þ….…C………"…… …………	„è…„å„ý………/„ü„û…&…;……1……„ú…„ï…„ü…………„ê……„ö„ò………"….…„ö…………„ù…,„ñ…-………„þ…A…&„ö…1…C………:„õ………„×…+…„÷……)…E……„ì„Ê…(…„ý…	…/……I…I…„ê…6…/…„ð……1……#……A…	…:……0„ù….……"…*„þ„ø……(…!…)…&………… ……8„ê……I…,…-…………2…:……,……@……,……………4…=„ø…L… …U…………&……(„ñ…„á…;„õ„÷…K„»…………U…+………„ï…„÷…#„ì…„Ø…G…A……D…#…1…!„ä…%…U…J…(…„ó…„ñ„ð……	…0……"………„à…,…!…&…&„ñ………C…4……$„÷… ………Y… ………„·… …*„ñ…„ý…#………	……„ö… ……&…„ù…6…2…-……0…U…H…b…0…„ü…8………&…H…/……B…H…5….……H…-„ê….….…B…5„æ…„Ø……„Ý……H…,……„â„ø…%„õ„û…„ÿ„Ú….…,„ö„é…„÷„é…M………„Ø…!…………„ù……„í„ç………T…0…9……E„ï„ý……6……….„÷…„ã„ÿ…1……	…+„ü„ø……„ï…	„ç„â„õ……&……………	………F…%……J…5„Ú„à„ó…#„õ„ì…s……… ………!…E…9„ë……………$……………:„ú„ç……„ì…7…7……=…1…N……7……„ä„ÿ„þ„þ…'…„Ü…„ê„ö„ÿ„õ„ù……„ù…….……#…a………H……!……„ô….„Þ„ô„ö…H…„õ„ð……6… …<…:………„á…,….……!„ý„ü……
-…9„û„ì……'…„î……'……4……………8…*„÷…!… „û„õ………„Ø…4…3…%„Ú…*…
-„ø… …!…
-……)………	„ñ…„ü………„ö„ì„æ„ê…„Õ……2………=„ø„é„ö…;…„ý…………2…„õ…„ô…$…	………,…B……
-…)…5…„ð…D„û…7…%…<„ü…………„ý…6…/…	…$„ý…2…*„ÿ……!„ö…„û……8„Ë…j…*……„ý…=…!…#„í…„ø……C…„ö….……;…„í…C„ç…„÷……… „ú„÷„æ…….…	„ó…1…"„õ…0„ø…„þ„è„Æ…$…%…	………	…„ø„å…)………„â… …„Ü…„ô……U„ã……*…A„ð„ô…	…………:„ü………)…%„÷„ý…………&…„ö… …Q…„ô……$„ë…9„ø…V…„ù…„ñ……… „ö…+……,…„ü„ÿ………0……3……9…„õ……4… …P„â…4…+……b….……+… „Õ„×……8„â…"…'…+……"……/…„ò…'…;……/…„è„ñ…………+„ý…!……„í„Ð……M……
-…$……„ç…%… „ð…1…D…+…$„û…1……"…„Ö………„ü…„î„æ…)…„ÿ……*…'…?„ù„ê…W……Q„ÿ…"…3„ÿ…9„þ„É………&……„ö„ë…&……h…)…:… …B…7„ó……„í…)…*……6„ê„î„ò……
-…„ù……$„þ…0„ò„÷……6……(…!…=…&………(…$„è…„ú…„ø……P…„ã…3……(„ò…*………„ó„ô…&…3…)…………„õ…………/„æ……„þ…)…„ô……4…	…H…L…O…4„÷……%…%………;„í……„ø„û…3…6…I……X……&…„í……/„ÿ……„Ù………@…„è…N„á„ì…D…:…,„Ó„ê…!……„ô…„û„ø………%„ð………'……5… …"…G…„ù……„Ó…&…H…0……D………„æ…Z…+………)„ÿ„ù…(…
-…*…'„ß…B…0…„ó„Ø……„ö……!……„ë……„ó„æ„ò…„õ…*……2…#…)… …/…2„ø…………„ú…#….……………%…1……(……%………G…6……-………F„Ý…N…1„å…„ô…4„å…….………	„ô…&„õ…'…&…E…6…7…@……x…'………&„í…>…X…G……G…@…
-…… …"……0…0…B…S…!…"„å………*…	……W…………… „ý…7…#„ü„ó…%…?…	………„þ„ö…	…!…2„î……………<……………7…(…3…W…………-……O… „ò…„ó…$„ó„ñ…"…… „õ… ……)……$…(…„í……R…………„í…………4……8…5………0……	…%„ô………5…„õ…-…&………I…„÷„ä„ÿ…„ü……………	………+„õ„û„ø………„ù…„ß…<…„ì…*„ÿ……	……/………………„û…*…………I……J„ð„ï…)……„Ù….…„÷…&…'…„ü…$…&……$………D„ü… …,„ú…4…………2…:……"…(………*…*…-…„ø„ú…=…„å………„ü…„æ…&„é….… „ã…+…&„î…U…………&…„ñ„ù… ……… „ê……=………:……6…*…………=……!…N… …F„ö…(…………8„ÿ…-„û…
-… „ä…H…„ô…&….…-……!……„ø…1…#„ø…;„ç…<……"………%……„ú………&„å„÷„û„û…„Ú…1… …J……J„û„ý„î……&…„ù… ……-………6……!……2…8………„è…"……„ø………%………„ù………B…3…5…G„ò…3„ÿ…„ø„ý„Â„û……„×…%…(…E„ñ…… „Ø….…„õ………(…-…„ð„ü……,…>……&……!…"…	……4……&……%…	…„ç„Ù…X„ÿ…0„ë……„þ„ü…*…„ô…4… ……"…G……!……%…3……………8……)„Ù…d……)…"…+…
-„û„ù„ö…………„ø…9„á….………9…S… „ð„à„î…
-…I…-„ê…… ………$„ï…$……„ì……„ü„ù……„ì…Y…/„ó………=…„Ù…'„ö…„Å……„ü„ã„ì…H…%…A……P„ß„ö……„ï„ö……"…/…0…………-………*„þ……#„ý…„ÿ„Ò………?……8………„þ…………………*…„õ„ì…$……*………„Ê„ç……………T…„ð…
-………
-„ú…*…;………L„ü…„ç…'„ê…………………P…j„ò……'…@……………'…6…,…)„ç…@„î…-………………"„ü…J………%…%………„å…(…&…0…=……
-…9……A………%…/…„ù… ………„î…„þ…„ÿ…@…N…+…„½…!…Q„ú„ã…#…!…O…&„ý…J„½……$…$……-„ÿ…4…*… …=……=…… …………8„ö…„ê…N… …"… …G…O…K„ø…`…=……………$…„ú„ê…E……J„ó„û…0…!„í…(……#„÷……5„á…+………2…$……1……&…)…!…$„ü…-„ó……)…J………&„ð„ë………G……5„ú„ê……:…+………………(……(…+…B…„ð„ê……!…-……"„ý……(…,…*…„ü……;„ê…J……3……&…!…D……„ö……„ù„þ….„î…X„ù……K………1……#……… …!…#…0…U…@……*…"„ó……/…'……„í…… ………„õ… „ó…&…7„í„ç„ð…………-……$…(…4„î…>„û…9„Ö…R…#„þ…=………………+…„þ…:…(…$………-„ï… ……,…………7……!……$…„ó…8…„ó…)…!„õ… ………D……	…X…4„ø…#…+…………?……………H…"…„ì„à……2„û…………„ý……a…&„ò……`„÷……….…„þ„æ………I„ò…„ç……„ô……B………#…„ù…*…2„ý……1…W„Ý……!…„ð„õ………„ö……'…!…………7…
-………'……&…E„ü……J…&…P…"…„õ……H…….…„ÿ………………„é………L……
-…„ï„þ…'…M„ý……%……„ø„ù…… …1„ó…;…K„ç…1…F„ñ„Ó„ô…5…;…„ÿ………<…I„û…(…(…$……=…3……-……%………A……;…%…„ý„ì…+„ì……!…0„í„ö…
-…J…„æ……Y…………„æ……„ô…Z…%…„þ…F…„ç……E…4……A………D…………/……D„à…„ï…„ù…+……„û…*…
-„ý……
-…;…&…"…5…………………'…„ü…Q…„ë…„ð„Ö… …4……%…(……1……$…„û……„ë…#……3……/…	……-„ú„ð…„õ„þ…„÷„ä……„ù„Ü„ñ…<……„ý…+…5„ï…'……=……5…4„é…U…(……*…0………/………4…T„í„þ……… …%…………?…:…3…0……………P……8…2…B„Í„ù…!… …#…„í…5…H…<„ë…„ú…;„é……5……………!…-……)……………	…&„ó……*…L………„Ô………O…„ý…:……"…#……
-……I„ß…2…4……a…………K…:…2…„÷…„ø…,…=…,„õ……)…"…%……„ú…„Û„î„ý…2…@„í„þ…
-…#„ê…:……„ö…-……	„û………4…1…0……C…„ú…„ï……,………„î……2……^…=……E…3…„ì………2…„ó……0………"„é…7………%…)……"….…#…2…#………7….„ä……$…… …5…&…„ý„ô…S…„å…4…A…0…	…1……I…5…„î…3…………………)……$…0…K…
-…<……„ÿ……'……"…B…8…………/……„÷…………3……L…]„ñ……#…
-„ì……………?……6…„å……4…„ð…2……
-…… … …„â„ú…"„þ………$…F……-……$……	……<„Û…	…+„ä…&…#„õ„õ„Ò………c…2„ñ„û„è„ù…!…X…„í„ô„ÿ……K…„æ…,………U„û…C…„ù„ä……+…&…8„á„ý………N……)…D……„ð…B……#„é…)…+„ú…>……!…„â„ò……„ø„ô„ý…„õ…„ã„Ã…4„ÿ…'………)…F…(„ò„ü……)„ÿ„é„ã„ñ…	…„ô…'………#…6……*………+„Ö………
-…„è…'…
-…7…	…8…$… „æ…
-…„ç………………^… …Z…$…$….…=„ù…%…1……<……/„ù„â„ó„î…(…:„æ…"…7… …Z…9…1„ü…)…„í……………?……5„ë… ……-„ü…,……<…#„ñ„ø……„÷………1…3…%…=… … … …R…-……!…%……2…4…"„î…$…%……„ñ………!„Ú„õ…8…J……
-…&„þ…I…&…„ù…B……… ……$……6…%……4…-„ð…%…'…„þ…<….…„Û…-…-„å…1„û…$…	…7…3…&…(…B……(…A…K…5…*…5„â„þ……9…'…,…)…8…L…$… …$……„ñ… …-………=…&…*„Ô………
-„ý………………9……;…=……„õ………&…H……&„í„ÿ„è……%…*……\…(…$…-…$…D……„ÿ…4………#…	…;…P…7…O…„ú………5………,„ê„ÿ………<„ß…… …L… …0…M…… ……_…„ò……„ô……M…6…„õ……………3……„þ….…(…"…+„û…=„ú……H…+… …7…6…„ì………
-…………5……„ß…„ú…„ü…„ÿ…$……1„û……7„ù…/…;…8…0……'…7……„ú…-……$…6„ÿ„ç…„ø…….„ë……„Þ„Ù……!„õ„þ……9……	„ü…
-…„Ù„ü……„ø…„ý……	…„û……9„ä……+…(……/…„ô…%„é……E…)…V…4…„þ…%…„ó…………………7…………)„ý…5……,……0…@…5…'……%…„æ………b„ö„ç………%…#……<…0………………,… …„ü……„ë……
-………"„ü…[…%……8…;……H…C…$…>……D…7…:…l…?……0… ……I………D………(……………2… ………a……R…K…4„í…… …\…I…"…5…C……b„ÿ…K………„ù…„ç„ÿ„ù……7………7……_…………3„û„æ…%…'…„ü…„ï…	„ù…'……9…&…?„Ó……G„Ù…!„ö………"……„þ……F……+…„ü…„ý…$…7…$…K…)…
-…9…+…„ð……2……/……+……„ì…E„Ó…=…!„ð…!… … „ê…	…(……(„ð…+„ö„ò„Æ…)„é………3„ó„ù…	…C…)…)„é„ë…!…E„ñ……„ù…P…=…)………(……"…I…9…„å…"„ð………………!…(…(…>…#…&„Ò…3…H„ý…C…?…………<„ø……"……………/„è„÷…=…`…(…$…6……J…+…'……@…\…;………………E…$…0……@……………#…&……J…a…a…?…[…F……N……H„ý…4……………„÷…,…%… „ù…#…………+…"„ÿ…„ö…(„è……'„ñ…„ú„ì…A„ù„Ù„½„þ……„ó„þ…%„ü„ø………1„ß……„â…………8„±……„â…+……-………„Ã……;………/„Ñ…#…„ä„ê…„í…R………!…„è…3…2„ë„ê…#… …„ä………7„ÿ………6…………„ù„ø…I…"…t„ñ…`… …………,…&…/„¿…A…*…9„ô………	„ò„ò…-…E„è…F„Û…„þ„Í…„Ð……0„Ó…?…!….…G„ñ„ÿ„ó…7…„ø…9„ú……
-….………<…0„Ï…@………Y……;…J…6…R…B„þ„ú…B…/…„û„ï…>…,…„ó……)…6……*„î…'…D…Q………#…"……… ………L…$„Ù…?„ç……!……(…	…$„ù…V……………………?…………… …
-…C…-………….…„ý…]……(…"……2…J…… „Ç„ì…4…$……3……>„½…,……„ñ…5„ý…<……„ç„ä…„þ…„î…………E„ÿ…„û…6„å„ë„ô„ç………„ã„ù„ÿ„ý…)…„þ……………'…E…0…………8……………$…„×„ò…)……S……/…„û…„É………S……„ö……*…J……2…„Þ………P……7…H…?…:…;„é„ö…!……C…………)…'„÷„ü„Ó…„ÿ…… …………<……$……E……E„ö…………H…H………7………&…;………)…>…
-…F…„õ…<„ý…1…3…2……#………J…„ú…„Ð…3„û…'……,…:… „ö…*„ô……/……*…H…(……	… „ê„ù……?„þ…„ï…9……&…„ù…(…D…………D„á…%………*……„ù…$„¾…#…'…„ø………„å……$………V„ó…=„ö„ù…
-…>…„æ„õ„ä„è…„ã……E„ý…6……/…#…%„ÿ„÷………'„Í…T„å…"…E……L……2…I„é„ÿ…!………Y…G„ø„ï„÷……„ð………
-…… …,…;„ÿ…„ü„ô…„ï…%„ç……A……%…0„ù…^….„Ú…„ü…………&…1…„ð…„ç…„ø………C„ù……*…0„ÿ…„ñ…/…A…X……"……„æ………&…… …………<„Ø…*„ø…)……6„ì…N…<…….……&…n………<…-…'…8…„ä……$…*………………
-……(„Û…„ä„ø………„ï…)…„ú… ……#…1„í…„ç…………3…„×…
-…9…>……0…)„ì„ß„õ…
-……%„ï„þ…T„å…„ä…………:„ú„ú…„ù……„à…*…1…*„ó…&……………)„á………+…T………„Ö…!…>…0……B…"……K………=… ……9……9„ñ„ã…,…„þ…„û……`…$……<… …)…=………„÷…%………"…+…;…	„ç…7…………(…C…„â……+……„õ…^…„û……*… „×„ù„í…N……"…… …T…… …A………„÷…!…4„é„Ý…
-…9…S„û………1……(…„ó…….…(……8„è…)……/…F…A……	„Ü…+…(… „õ…2…-„ö„Õ…#…!„ü„æ……„ö„ÿ……	…8……F…4…5………E……-…B………
-…„à…….„ÿ…0…„ë„ê…X….……\…^… „ý…5… „û……
-……)„Õ……)…2„û…………=…<……@…"……………„ß……!…………………C……<„Ù…:…;…
-……2……#…&…/…,„î……$….……$…2„ÿ…,….……
-…A„ã…=„Û…….……$…„ñ…
-…….…+…"…-…4…„ù….„¾……$…9…4…Z„÷„ó…7„÷…… ……*……"……………)„ç„æ…8…#…*…7….„ò„ü…………
-…<……<……7……"……„ø…C…!…%…„é…6……
-…4…2…„ø……7………;……
-„ù……M„Þ…'„þ…+…6…„ñ…*…$…7…/…-„ô……:…0…!…'………#……*„ã……„ø……/…$…„û„ü…-„Ø……m„ú…-………%…,„è„ò„ù…„ú…D…1… ……„Ù……3…/……+…+………;……„æ…*„æ……… ……„ú…
-…1……„é…3„ô………7…)…2…$…*…
-…"„ó………3…2…B…R…L…m…4…'…-…4…#…… …#…L…„á…	……-… „Û„û…>…8„ö„È……;……A……>……3…7„â…„à……	…@…………1…;…U…a…=„ô……K…„õ……7…-„æ…:„è„é…$…1…8„à……4„ò…,„þ…,…„ÿ…1…,„é…„ì………O…„Þ…%„ö…„ê…j………
-…#…„ì„ë…Z…„Ñ…………T…„ô…#…M……"…„ì…Q……&…	…(… …c…)…3……… …2„é…E…1……„ò…3…„ì„ô… ……*…$…„÷…!„ï„÷….…/…J„ö„ú„ù…#………5„ú…D„ò…
-„ß……>……	„ý……l… „î…,… …&……'…+…!„Ú…*„û…>„è……-…„ê…9…:…4„å„ñ……-…G…H… ……#…A…,……d…Y…3…`„ä…$„ó………D…-…)……………%…„â„å…>…#„ÿ…*………………„ó……„ø…"…*………„ú…C…!…3„ó…A„ß…„ü….„ø…7……„ú… „û„ô…6…
-„ú……+„ù…@…………1……„õ……-……„ø„è………… …C…&………….……G…1……<„ÿ………&…%„ý…… „ð…!…A„í…„ú………=……;……S…„ø„î…„þ„Ú…„ò„ð…1…&……*……+……„ß…4……4…G„Ü……„õ…=…4….…,……I…	………'……)…%………<…*„ï…>……„Ó…6…„ú„ñ„É…"……$…	……"„í„ô…Q„á…„å……!„ÿ……A…
-…-„þ……(…„æ…!……g…\…d…¢…8…_………M…4…Z… …9……
-…#…+…„ô…/……:…!…H………'„Û„õ……$…2……2…„ì…%…(…8…„ï…%……4„÷….……!…-…E…%…+„÷…,….……3……Y……H„ÿ… „Þ…!…………Q…3…#„Ñ…… …>…………!………-…….…(……„Þ……C…„î„û…5…&……!…„í…<……
-…,………(…„ê……"…
-… „Ñ…D„í……"……'…3…„ú…„â… „Ö……%…+…&…(„ÿ…………1…	……………„ú………$……X………„á…„à… …"„ø……
-……„ó„í…„Ú…… „ÿ…„à„ñ…,…$…„â…(„ô…„ø„ü„ý…„å„û„þ…*……4…,…„÷…8………X…‰…w…n…U……„ù… ……„ú….…&……… ……4……………6…G„ú…+………2…,……*„ã… ……3…2„î…„þ……F„ý…
-„é… …6…'„õ………)„ï…„ï………$………„ú……F„î………'…%….…P„ø…8………+…&„û…+……C„ô„÷……"…9…3……-…1……'……#„ì„û…„ø„õ…(„ó…*„ý………?…….…%……4……&…B…„ô…„ñ„Ô„ñ…… „õ……0……„ú…/„í…5…………+…
-…„ô„ü„Ì…„ú……?„ß…2…;…'„ó…… ……„é……-…	…„â„á„ÿ… ……*…„á„ô…*……„ü„ë……>…+„Ý…7„ø„ú„ú…^„ó…3…	………	… ………;…<……4…y…D…)…N…R…„ü……I…(„à……7„ô… …D……6„ü……„õ…„ñ…E…#…-…>………>…<…… ………-…„è…	…4‡‹…‹…„é…A……)……
-…	…T…2„ô„à……1……7„í…„û……	„ó… …	……2…l…<… ……/…-……#…	…0„â……….…S………	…l„ý…7…-… …4…0…"…
-… …%…8„í………… „ý„í……………,……„ü…„÷…-…4…+…(…„ò„÷„ú……#„þ…%„û…*„â…„ê„ø„ê……-…!…B„Ð…"…3…-…+……„è„ò……&…
-………„ä„ö…"…/…„õ…?…>…&…+……"„ù…6…………+……„ö…„ò…„ö………L………„á…R…5…„ú…„÷……$…4…%…B…E……M…#………2…0…a……R…8…K…A……;„ö…3…9…„ý„ù…)…'……0…………*…?…
-…„û„þ……%…2… …,…9………K……)………„à…!………A……)…2„ç……@…*…„Õ„Ø………………&„å…*……1„ú…………)…<….………5„à„ì„ð„ß„Ò„ú………M„ù…*…%……2…X…………$………………)…?……6…'……&…/…………„Ä……)…„ó……P…%„ó…„ó……„×…F…„é„ü…H……&……………H„ä„þ…„÷„ú……@……	„ø………O…5…„ÿ„õ…$„Ü….…1……… …
-„í………„ð…„ö……*…)„ù…4…	…%…„ú……/„û…$…4…'…………7…9…'……'…………"…E…=„ý„õ„ý……*…„ð….„ú…„ò… ……,„ê„ø„í…1…/… …„ë……%……0……;„ñ…&… …8„ù……0…„ø………….……"…O……„ý……;……
-„ñ„¶……<…3„Ô………#„ñ„ö………… …„ó………)…………„ö… …'…:…„÷…"… „ê„ÿ……7…;…K………„ß„î……,…3…„ò…*…„ó…… … ……„û„ó…J…„ñ…;…7… ……I„ø…5……………3…c„í„ü………!…„û……,…3„½„ê………„ý„è…„ç………„ù…………„ø„ô…„ö„õ……	……………„ù„ò…„ÿ…6…2…'……„÷…
-……„ù…	…!………a…!……2„Þ…E„ù…5„ë…(……C….„ä……*…(…4…6……*„ú…#……\……
-…#…	…?…………'…!„ü…7…„Ó…1……C……9…„ø„Þ…… „Í……<…„õ……C…(…………5……„ç„ý…„Ë…@…/….…C…„î„þ…C…………1……„ú…-…„ö…I…'…R………3…Q…O„î……!„î…„ý…….…$………3… …(…)………„Ó…0…A………Q…)…=„ù…	…C….…/…………,…(…8„å……„ù…#…………„ø…„ï……/„ü…9„ÿ…-…"…
-……………	„ý„ÿ……&…#…D…P……1……+„ø…„ÿ…F…	…6………… …?„â…:…I…1…!…„ë„æ„ë……=„ÿ…	…%…?…2„Ù……1…+„ð……… „ë……
-……#…	…!… …5…S……9… …'…„ó„ü„å„Ù….…(…„ú…………(„ä…,…„æ…(…
-…………,…,…8……„Ü…8… …„û…„Þ…„ì…#„â……3…n…„ú„ý…… „â…4„û……&…e…!…$„õ…;…4…„ò…^„ÿ……4…	………………:…„ï…%…„ü…8…………„ô…'…o„ï……3……
-…,……)…(…„ã„ñ………:………„è…„ï„è…… „Ù…F………(……-….….………"…6……„ø„ù………………C…„õ……„ù„û„ÿ„÷„é……„õ…„õ„þ…	…*……„þ…9…5„ù„ÿ„æ…………<…#…….…7………@…8…0„ï…$…4…)……A…„ú……)„ó…„ö…S„ì……„ø…………
-…%…9„Ù…'„î………F…D„ß…L………„è…2…1…b… ….…;„ò„ó„í…2……4……!„ï…'„ô…4……)…/…*…)…„ô…,„í…a…	….„ö…!…U…@„ä…I…„ó…$…	………%……1…:…	……?……#…5…\……8………"………3…….„ð……A…U………%„õ…7…„Í…/„þ……+…(…)„þ………&….…„ù………"……………@„æ„ã……/„û„ï……„ï„ï…………=…5….„õ„é…„ý„ä………7„ù„ÿ…5…0………#……2„ß„ú…8……;…„Ý… ….…?…„ð„×…,…1„ç…!….………,„þ„ò„Ý……e…:…„ú…… …
-……^….……F…„ú…N…4………*…%…„í…M…4…3…„ó……%…%………„ö…%……„ý…Z… ……%……„ë……„û…„÷………-…2…
-„ë„ã„î………(…D……3……-…&…"„Ý…<………1…%„ï…"…"…… ……>…	……D…#…9„æ…*„ì…1…=…!…7…B……6„û„å„î…-……
-…"…„í……;……2…5…(…!……!„ó…„è„õ……3„þ„é… …………C„Ñ…#…J…2…„ñ… … …+…„ð„ð……	………U……*„Ë„þ…%…)…………]…*…&… …	„ý……*„ç…'„ä… …%„õ…$„þ…B……%………2…<………„ì„ñ„é„ì…0„ý………+………(…6…&……
-…7……1…… ………!……+………2…-…_…$…2…/„è…
-…&……'„þ……A…"…„Ø„Æ… …	„ü„ô…… „ÿ„þ„ø…@…1……1„æ„ô……„÷„î…E….…%„×„é……+…#……Q………,……?…,…2……+„ð…9………„ñ………0„ë„ÿ….……Y……
-……………8… ………4…>…w…0…2……6…/…#…%…:……B……4…N………„ò………(…+………*……@…F…„ô…„ü„ü……9„å„Û………X……
-…….……„ú„ú………1…….„þ„É„à…'…„ò…%……;……-…„ý……„ñ„û…………!………&…*………7…………Y…9…\„Ë„û…"„ð……&………`……5…1…O……*…E…
-…„ü„î„ù……'„ä……(…!…,…)…$…`„æ………„þ…„ë…(„ð……$…„ó…„ï…+……(………;………/……„è…%…„ö……„ï…C…8„õ……(„ç…<……„é………I…D…,…„ñ…&…
-……:……v……(…6……'….…!„Ø……&„ý„þ……„õ…„ó………>…?…!…<…=…%…?……-„ÿ…D„è……8…0………$……D…E…"„ý…4…9…0„ò……	„å„à………"„í„à…(………5…S…R…7… …„ù……*…%… „ø………;…K…#…„ó„û…………	…
-……+……,…4……„ð………7…„ð…!…„ù……=„Ú„ù„ä……„ô„ê……2„ü…'…………6„ÿ…
-…?…"…„þ…2…+…… „þ…?……0……K…<…E„û…C…„î…-…
-…:……(…(…#…)…#…… …	…%…
-…+…………………H……………;……G„ý………4…„û……C…N…9„ø…A„ò……„ý……!…D…„¾…)…?…6…n„ç…&…„þ… …6„î…"…"….……„û…„î……8…0……………0………R………'…/…Q……]…%…&…„ÿ……)…………*………„ã…'…,…………=…„ë…„ï„ô……… ……+… ………7…J……………„þ……
-„û…5……<……(„ü„ù…"„à…(…[„í…„ë„û……$…N……„à……
-…… „ô…………)…0…U…"…-„ï…/…………
-… …(… ……2………,……1………………-………„ñ…!…5……„ö……<„ø…?…4……,………*…	……%…)„ÿ„ô…3…N……'…… …„ù…X…„î…„ö…3„ñ……*…6„ø„é……+…+……'…:……
-…„ì…3…„ô….…………„þ„ï…„ü„ç„ù…-………'„å„ö…C…„ù…„å…J…(…<…9…;…4…2… …U…3„ÿ…*…0…T…… ……,…/…9…'„î„û……$……l……„î„ä……3…… „ò…:………………7„ô…!………
-…P……C„þ………………„ð…)……#„ü……………)„æ„ñ……0…,………6…„æ…"„í„ô…*……5…„Ú……D…9…?…„ý…
-…B…$……:…*…
-…	…1…8…$…*…C„ÿ…………/……………… …Z„Ò…1… …
-…*…… „ñ…2…………„ð„ù…9…9„ë…3…:…+„û……%…A………………U…„Í…„þ…>…	…)…8…„î……+……………A……
-………………D…+…F…/…4…@…………#…………"„û…/……+……
-…;…$……P„ü…7…J…1…>„÷…S………<…Z…*…2„þ……„ù…	„þ…(„æ…2…G„þ…„ð„ã„á„î…4„×…
-…I…R…<…8…„ú„å„û…M……-………"„ü……
-…„é„ñ… ………/„å…:…„ô…	…„î……„ú…)…(…:„ù„í……U„ð…-……	…„ÿ„Ò………C………+„ï„ÿ„ÿ…d„ú……(…	……E…………,…5…„ó…(……I……!……………h…-…„ú……'…2……
-…;„é……-„î„â…G…;… ………<……-„ö„é…%…(…„é„ø…!…!……„ù„ý……J„ð…„î…0…„þ„à…"„ë…(……A…+…H„ø……1…*…,„ü……"…&„ð…7…7……F… …
-…:……1„û…,…!…
-…„ì„ì………….…X……Y…I…$…&„ö…'…a…F…………'…„ú…
-…………C…7…-…%„æ…A………E……N…E…#…K…1„ê„þ„í…<… …&…+„ð…„ð„ç…„ö…(……%……N…B…„Ù…+…%…	„ö……>…„å…8….……#…#………+…-…"………… … …„î„ù…O……"……%………/……„ù……$……„ï…!……Z……7…Z…?„ì… … …V…(………Z…
-„î…„ú… …„ð…#………1…6„é…………„ô…4…&…M„ý……„÷…7…#…6……3…]…]…„ò………B„ð……)……+…h…3…>………(……3…V„ý…@…z……
-……P……&„ï……?…N……2…„â„ÿ„ù…-……….…,……T…4……	………,……K……9„ö… … „÷…„ÿ…	…c…	…B„ã…„ç…"„æ………?……*…0… …Q…………………„ü…3…0……!……,……,………„ß…(……6„û„û…„è…„ú…………G……6„í…I…
-…#…*…„ÿ„Ö………-……Q…=… ….…,……#…„ü………,……&…
-…)…?…?…,………-„þ…„ð„ï„ø……„ü…C…E……+…„ù……/…K…2…3…1……„ý…6……„þ…-„ô…A…A…„ü……„û…F„Õ„ý„ó…2………@……>………8„þ……/…„õ„è……„÷…	…$…„÷…7………)…	…%…„ý…;…'„ä……J…2……,„â„ÿ…"„ç„ñ……2…h……6„ï„Á…… …„ÿ…M…„ô…'…h……E…3… …H…e………0„ò„ÿ…-„ó„õ…$…9…(…	…„é……,…,……„é„Ô…„ý………2…„à…„÷……E……2………4…0…	…„þ„ì„û„ä„Æ……………%„ñ…4…„ö…7…„ì…………„ì…6„ì…2…-„ð„Ô…………„ß…………#…L„ú„û…2„ù……D……….…$…>…„ý……6…1…=…H……O„ß…………&…„ÿ…D………	…„þ…@…0„í…„Ì…&…„â…f………F…0…+………:…I…P…K…?„ö„ü…T……M…
-…5„Ü…*…>……2…'…5…„é…'„û…-……„ù…B…<……E…7…4…b………!…4…/……k…%……O…„ù……$„ç………,……R…0…!…„Ê…)…I……K…=……"……… „þ…@…#….……D……0………H…………2…………:…&…=„ú…&„ÿ…=…
-……-…(…„×…………!……„ô…)……?…K…………„ò…„ø… ………„ð„ú„ð„ñ…D…'……)…	…………………„÷……I……;…)…$…7…… „ò…&…………;………!…(……%…"… ……8„ë… …"…D…'„Ø…„ö…@…„ú…)…P…C…"…3…!……5…S…O…„ô…"……„û…2…+……H…1………-…3…"…!…5……'…	…?…4……„ë……M…!…7…„û…P…8…………`…Z……4…,…*……5„ý…1…>…"………/……<…„Ü…S…H…/…9„õ…D…„Þ……"……	…@…/…%…g…>…M…!…„þ………………„×… …5…„ø…"….„ã…
-…(…+„÷„Õ…6……%…4„ó…
-……!…
-„û…………3……J…)„ü……7………8……'…7„ß„÷…„ã…)…>…/……#…+„õ…*…C„Þ…K……$„ñ…	… ……%…„è……………*„Ù„ç…"…„â…„æ…+„ù„û…<…,…	„Þ…(…K…4…„ç…/………„ö…+…;………*…%…=…<…T…………*………[……„ì… „ñ…………	…„þ…:…C…„õ„ý……3……………„÷…%…/…:……+„ø…„Û……4…W…c…@…+…8…-…S……i…€…G…@…K…H…d……E…<…o……………T…„ü…………3…'….„Ó„÷…6…&………'…!…>…)…$…„ý„æ„õ……'……„÷……„ý……6……8…8…+„ü„à…3…!…5…B…:…R…!……"…<………"„í…„ú……„ð……„ê…	……:… „ì……………!…%„ß…!„ú……„ó„ð…"„ù…,………=„ù„û„ö………„þ…9…7„ï…
-……%…B…„ú………@…N…2…!„þ…,……5…9…4…&…A„ù„÷……=…….………………4„ó…………*…"„û……Y…D…8…J…$…0…„í……"………„ð……„ú……)……4…!…6„é…;„à……S…… …'………9……y…W……U…<…F…}…N…h…g…^…u…t…S…]…~…g…Y…O…(…*…,…4…A…„ç„ÿ………?…….……„í…„ï…8„Ý…)…………B…_……?…(……1„õ„î…
-„þ……7……#„ø……!……!…)…&……„þ………4…2……&………„Ó…………/„Ù………$…
-„ã„þ„è… …/…Y„ï…1…„ù…L…	„ò…„è…$……8„ï…#……5…(…C…D…(„Ò„ò„æ…?…4……#… ……;…………„ç…!…"„õ……„ÿ…… …5„ÿ………!„í…A……„ø……4……'…„è„÷…„ø…+…X………<…*…#…"„ï„ð…+……/………Q…6…N„ú…$…T„ô………%……:………2…….„ù……(…1……<…1…?…a…%…8……}…€…^……»…¯……¯…±…”…z…˜…………h…K…X…#…8„Ø…9……+„ñ…E……#…… „Ð„ô…#……………"„û……*…8„ý…)…I……1…I…'……(…=……/…„ï…………………/…9„õ……A…N…|„ö…… … …3………,…„å„ú….…+…V……"…………„á…;… …„è„÷…/„þ…)„þ……	………3…0…:….……%…,…„Ó…„ý„Ü…+…„Û………:……1…………„ã……D……D………A…!…#…4……$……„ÿ………&„ð…… ……!„ð„õ…:…„ð„Ñ……#….…,„ö……#… …<…………'…<…9…„î…L…5……
-……'„÷…"„ñ…„í……:…(…-…/…T…$…]…‘…å…­†…å…ö†:…û…´…ò††'…÷…õ…¿…Ö…—……O…i………L…,…+……1…<………9…'…<……6„ù………"….…&………„ú…_………*…………O…„÷………„Ì…#„Û„í……A…6…)……_…#…?…I…„÷…>…&………J…)……………………+…„ã„ü…,………………8…*„õ„ê…P……>„û„ý„Û………@…&„õ…„è…„þ„Ú…N……………+…A„õ……
-„ò„ù……#………'…-…:……/…&……G…2…E„ø………:……'…………4…J……W………-… …….……*………-…H„ï…„Í………/… …&„þ……D………„þ…+…:…„ê…,…(……1„æ…7…d…¸…Ø†\†S†Â†Ç† †Ó†½†€†Â†X†c† †f†E…ä…þ…Ž…Y…4…]…+………5…=…R„ú„þ……&…"……@…………_……O…„ö……………,………(……„ó„Ý…„ì……………$…"…!…*……B…_…€…j…A……)…
-……-…*……„á………$……]„ó…(…„ú„ì…„ù…'…I…„ù„ú…^… …&……Q…
-…_„û…"…„õ…2…!„ö„ê„ö…………,… ……'„ò…„Ù…L…
-…*……'…9„ñ„û…!….…!…%…-„÷…$…„ü……=………8…„þ…]„ã……„ö……(…………8„ü„ï…„ÿ…%…%…-…………„ã…"………„ñ„û…>…„ú„ò…6……-…[„ý……„û…Q…2…Y……<…œ…œ†n‡2‡p‡Ã‡í‡Ç‡½‡ ‡–‡È‡…‡‡‡|‡k‡J‡g†©†$…š…Y…6…7…7……*…„ã……4………G……0„×…………
-……#„é……„æ…… … ………!…„þ…„÷……C…)………	……A„ù……3…t…[…‰…_…8…e………„ð…0…2…)……………,…(……)…„ô……„ê……M„ò… ……8…#…%…„ù…E„ë„é…-…… …'…$………)„ÿ…D„ò…… ……E…/…,……4„ý…>……C„ò„ß…#……!…5……1…8… …	…/…D……$„é…„Ü…K………,……?…>………… ……„í…%„ñ……„ú…+…8…„ì…*„Ú„õ…F…R…	…&…!………i…Z……;„ø…!… …………)…W…|…}†E‡ˆˆ±‰m‰†‰e‰X‰!‰;‰y‰¡‰u‰+‰ˆ¦ˆE‡h†„…Ô… …h…>…N…… ………=„ü…t„ð……1…-…J……„ú…-„ê……-…"…„ë…„÷……+„ð„û………'…G…9„Ù……„ò……R„û……+……f…Z……W…k…!…Y……„ð…,……„ì… „ü„ö…,…,……1………H……&„ÿ…2………A„è„ñ…F…Y…?…H…2…>…Q…,……@…:„ÿ…„ç…………"… „Õ…*…7…„ô„ö„ø…"……………!… …………8…!…%…$…„ä…E…„ÿ…„ñ……8„Û……(…F…………„÷…+…„í…„õ……!…………9……C……B…1……'…%…A…A…B……1…&……0…4…4…5…@…4……;…z…Ý†¥‡«ˆ§‰¤Š‚Š¬Š¹ŠŽŠ”ŠEŠÙŠŠQŠ’Š8‰â‰Uˆ'‡…í…‡…4……G„ù…#……………5… ……8…(…C„ï„ÿ„Õ…>……„ü„ë……A„ñ„î………8……9……5…*…„â„ê………„ú……„Ý…-…M…H…A……J……)„ä…#…„û… „ê…1„æ…#…………*… „á„ð…………………„ç…-…
-……%………&„ì„ò……B…….…… …5„í…3…q…9…„ü………	………!…!……9„ô…
-…„þ…<…R……#……*…(…	„ê…?……„ï…(„à…$…Q…9……$…!…… ……<…4…0…………„é……„ó„û……5……J………,…… ……………E……0„ú………„ù…M…K…b…Ÿ†ª‡†ˆ›‰ÝŠ{ŠcŠÂŠTŠ·ŠïŠÇŠNŠZŠYŠ%Š$‰Oˆ†ë†(…i…d…;……2…	…„ÿ…*……Q… …,…$……„õ„ø…6…„ä„ü…7…$………4…M…„Þ……:……D„ú…………„ø…„Þ„ö……………I…'……[……8…„þ…)…,„ü……/…(….…=„û„ù„è„Þ…+„û„ì……8„Ü……#……7„ñ„ö…/…P……$…l…(…!…„ý…*…&…7„í„þ…„û…P…5…x…Z……„í…„î„ï„ü…&…/„ô„ç……:„ø……………!………'…"………„ø…4……)…B…
-…B…2……/………R………&„ý……F…F……P…0…„ï……&…„ø…4…B…F…)……0……9…0„ã……@… „û…*……a…*…v…ã†B†ì‡±ˆ2ˆä‰G‰‰*‰¸‰¢‰è‰•‰p‰6‰#‰ˆI‡†»…Ó…_…?…W……+…/…<………8… ……&…3……H„Õ…%…„ù…„ö„Þ…9……>……E…*…>……^„ü……'…7„ö…3…9„õ……	……0…9…%……*……… …„ü…%…+………M…$…„ä…6„ô„ë…$„÷„ì…
-…I…:… …)„ü……„÷„÷…R……	……;„ò…2…„ð…0… …+…/…E…=…-……?…;… ………7…….……„ï…(……<„÷……8„þ…"…„æ… ……,……=………H…… …„ò…	… …E…"…………4……9…„ý……Y…@……"…………"„ú„ö…B…K…:…$…"…S…6…6…T…@……5…8………'……9…
-…Q…/…$…Z……Ã†\†Ä‡‡e‡v‡à‡·‡ý‡ø‡ô‡â‡é‡ó‡Â‡–‡†y†<…~…L…5…E…@„þ…H…
-….……&……„ú…	…„è…A………$…'…:„Î…0…$„û…&… … …
-………*………#„ú……%…	„ú„ù…	… ……3………	…………c„þ……"…„ü„Ï„ä…)……I…„ÿ………,…1…"……>…?……4„ó…-„î…9…4…	„ò…,…B„è………#……&„û… „æ„ö……2………1…„Õ…„ö…„þ…1…6…………#„ø„ö„ë……#…'…
-„÷…6…$…7……)……%…&…	……„æ…-……„õ…+…(„õ…………„ù……L„û„ý…6…„ò……"…'… …9…… …………'….…:………G…F…%…………0…Y…N…T…ï††i†m†\†‘†ã††½†Ð†¯†Ë†ß†š† †y†2……h…[…I…!…K…/…)…?… ………„ÿ…„õ„ì… ……….…„à…9……„ñ…,„ô„ë………Y„î…………„ü…!……#…\…0…	…………D…(„è„â……,…(…4…$……$„É…,„ô…
-„í………… „÷…„å……A……'…„ý„Ü„ü…#… ………	„Û„å… …„ü…„ð…………@…K…9…0……„ú……"……1…=…8…„ß…*…… … …/„ï……6…G…$…2…<…4……+…„ï……+…%…5…/„ÿ…5……K„ð…$…l………H……)…?…/………5„û…!……2…n……„ý…„û………	…„ú…F… …3…'…(… ……G…………:…E…)…³†Ð…Æ…Ì…Ô…Ö…à††%†@†F††…ý…´…˜…w……'…V…)…;…0…8…?„ï…N…„Ð……9…B„Ø…/………*……#…5…,……„è…$„ó…@………%…„ë………4…,……………„ö……:…!…&…-………„ä………„ó…	……„Ñ… …$…#…]…$……„ý…„ù„õ„ä….……-…„é….„ñ……„ü………&………„é„ú„þ……)…;…,……„ú………4………8…$…+……4„×…I…B…,„ý………„ÿ…%…,„ã…„ù…„í……7„ô„ú……+………H…*…9………D„þ…7…1… …4……„ì…(…>„î…4„þ„ö…2„í…<…„ù……1…A„þ………„Ö…c……)…G„ô…B……,……‘…”ˆc†Í…¯…Š…‚…h……‰…»…²……Œ…«…†…w…M…2…)…A…M……V…
-…Y……%…….…………"……„ë…………/…*„ò…4… ……7…/„ð…e…$……"……%…C……„ó„ú…	………1…:………(…>………+„ù…*…$……„ê……;„Ú…4…%… „þ…(……………………J„Ï……„ù…„ó…„ë„ù…0……;…4„è………+…-…………„Ü…5„Ô………P„í…!„ê……A…%……(……„Ì…1…N…„ð………>…$…>…C……………6…
-…#………@……$…@………$„ç……"…7…(………H…%……*…I……$…	………]…P…8…0……)…………/…$………L…0……„ø…@…#†i‹Ï‡_…>…q…f…‰…j…H……A…N…Q…8…2…u„ý…6…1…G…Q…=…………S……*…&„ð…„î…)…*„ù…&………#„é…	…„í„ú………„õ…)…3„÷…1…….…9…4…3…	…„þ…2……:……5„ô……/…„Ø……F……"„ä„ô……+…	„÷…'…„û„÷„÷……
-…„Ü„ð… „õ…0…5……………@…G…;…@„ü„÷…#……*…3…„õ… „ü…_„å„÷…J…	…+„Þ…6…7…M…… …C………2………………0……a…7…„õ„ù……6…#……6……„ç…(„ê…………$…b…………'„ý„ô… …… …6…T………C„ü……'…/…3……K…G…?…… ………7…'…C…0…"………Q…P…2…5……C…%…i…?…4…C…M…>…R…K…S…O…n…7…7…f……&…=…=…&…$…C…P…#…;„ø……1………<„ô……„à„ó„ú……H…1……$……&……„ý„á…K……#…'„ß…4…d……2……0…………9„Ó…!…!……F…)…„þ„û„ç……4…„ÿ…„ë…<„ò„æ„á…A…+…… ………$……5„ý……„î…5…+……!…,………*…'„ø…"……#…„ø…"„þ………………„ñ…… ……7…D…&……#…"…+…0…7…S…„þ„ë……………8………„ñ…3…;…8„ú…4…]……%„÷…-…<…+„á…T…@„ó…	…A…………K…„û…9…,…0…<……P…F…9…X„ö…'…"… …=……I…?………„ú……3…X…… ™…G…L…3…8…1…1…>…P…/…f…$…1…R„ù…4…9…N………%…@…;…@…'„ã…„ò„õ……?…………„ó„ÿ………*… ……„é„ý„ê……0…Q…„ÿ…(…L…$…8……=…………„÷…G„Û……/„õ……9…(……„ã„õ…,……J…@…?„ê…………„æ…M……S…0…„ï„ä……………	„ç……@„÷………$…………7……	…'„É…,…-„ä„Ç…!……………$…6…M…f„ý…P………B„ï…………D……L… …M…5…9„õ……E…
-……	„ÿ…2……G……………/……<……?…„ÿ…………'…-…l……;…0……<…C…B…………L……;„ý……G„÷………C…<…?…F…(…5…G……*…C……?…(…"…-…#…H…T…2„ÿ……%……;…M„ì…„þ…#…
-…………„þ„ê„ã………!…0…„ó…6…
-……3…>…,„î……1…-„î……3…„ö…"…M……„ü…%………3……D……A……8…„ú…>…0…………?…„î……………	„ï„ï………………0„ò„æ„ã…+„î……„ñ………„ê…„Ô„þ…!„æ…„ç………;…„Ù…(…-„ù…8…„Ü„þ„ÿ……>…-……>…… …a………4…;………/………#…C………G„ø……!…+…"„÷…'………$……0…„ù„Å…0„õ……$…*…>……j……$…8………8…P……8…	……+…7……"…#……6„ô…@…/„ú…8………H…3…C…1…"…8…J……F…p……#…A…)………^…
-……%…/……(…9…Z…j…„å…0…„ì……K…………7…B…#…L……„þ…6…-…M…………$… ………3…/…%…„ø„÷………&……$……/…H…@…6………	…!…
-…[…………)„ì……F„â…„þ………………… „ç…/„Ù„Ð……………
-……$„ë……B…<……)…1……….„ô…)„ý…'…3…"…*…2… …$…&„ò…:…_…l…3…R…M…8…M…1…f…`„ú„ÿ„ô„ú…	…„ä…=„Ú…*…+…#……"… „Þ………„þ……=……*…%…&…T…„ø…$………^…f…Z…6…k„ì…	…e…J……….…P…5„Ý… ……I……!…/…-…_…K……f…"…ƒ…H…D…2…-…Z„ï…I………,…'…4…3……0…O………….„í…	…………'„ÿ…„ì…„Ë……6……)……………(„ÿ…3…3…F„ð………0…)…D„Æ…'……F…J„Ç…@……M…-„â…
-…7…E…C„þ…)…F……9… „Ø…+„ã…"…O……5…2…Q…'……/„ð…A…)…„Ü…… ……2…'……
-„í…+… …„ñ… …1…*…+„ç…<…+…„ÿ…d……$„Ü…C„ô…@………N…„í……F…L…j…s…˜……€…>…W…V…A…V…2„î…G……V…'…„ô……'……/…C………
-….„æ…$…%… …M…F…„ô…+„ï…=……"…=…c…A…W…5…'…9…*…!…x…+…c…5…(…5…P…0…>…,…I…h……	…`……a…7…%………?…3…e…3……Y……%„í„ð…$…:………7……	…&…K„ò…<…>………#……/…'„Õ…)…$…2…J…„ñ„ï…
-…/…'„å………>…#…1………"…#……&…-…'………0…>…8……7…?…D…Y…,…C…/…>…F…_…9…'…9…0……………„é…N…+………,……,……$……"…… …#„å…?„Ý……+….„Î…!„ê……5„ì„÷… „í…E„ø…N„þ…„î…-„÷„ö………&…
-…$„û…†…Ð…Œ…Û…¼…º……ˆ…)…7…2……	………'„á…C…„ú…*„ÿ……$………+…I„÷…
-……„ñ…9……3„ú…L…#…A…7…$„ÿ…B……P…J…M…N…!…0…K…G……E…5……D…;…!…%……#…L……„á…1……4…<……-…-…1…@…………;…P…-……… „ù……1…F…"…>„¿…„ø…'……$……D„ç„ä………(„ÿ„È………#…K…,…„û…!„Ø…… „ó…$……"…………„ö…'………4……U…A…4…0……D…B…?…o…2……H„û„ý„ø……\……!…7…-…!…_…8……&…5…A…=…+…)…;…!…„ý„ä…„í…,„Ý„ý…„è„ÿ„Û……………4…F„ô… ……………2…*…"…>„û……Œ††>††¶†G…Ù…q…r…4…… ………:……0…#……Q…A… …<…2…2…&……G„ð„ç…„ø….…„×……#……A„î……;……<…5…O„ã…7…Z…5…3…1…)…I…<… ………?„í…/…………1„Ý…8…<…)…A……:„ò…P…*…@…)…'……9…"…%…"…„ÿ…f… ……„ù„ú„å………… ……5„ß…-…„ü… …:…H…-…………;…/…„×…0……*……………„ù…=…„è… ….…!… …+…k…P…>…H……µ…Ó…Š…Ô…ª…l…J……	……E…7……'„ÿ„ï„þ……:…….…J„ÿ… ……-…,…„ú……9„ü„ö……!…:……a…4…D„ñ……… ……O… …/…?…X……>……#…4…'……6…:…Ò†¯‡J‡ä‡ð†þ†…É…r…/…\…7…………:…M…V…"…	…„û…	…2„í…=……!…&…3…-…G„æ……T„æ……)……D…G…I…5……E…9…a……u…/……$…<…#…5…B„ø………………„þ…5…:…)…"… …I…:….…Q…(……4…!„ô…'…$………A……@„ü…B……„à……D„à……(„à…I………,„ú…„ö„×„ò…	……?… „â…K…#…………4………„ñ… …„í…5…#„ü…4„ö…<…F…u…2…ƒ…Ÿ…Š††|†r†i†…¾…z…Z…3…<…T…1…&…4„ê…?…	…3„þ„ò„ø…$…@…„÷…;„ù……0……6…„ì…*„ñ…„é…C…/…A…………………]„ü„á„þ„ó………….……$…'„á†:†úˆ‚‰­‰%‡ô†~…Ö…x…F…^……)………U…K„÷…„ô…………	……….…:…%„ô…D„ë„ó…%„ò…(……V………………T…L…T…….……;…B…M…-…=…&…]…H…„ú„ü……!……P…+…#………………9…….……#„Ñ………#…@……1………„ò…
-…7„ÿ…'…6…„ñ„û…„ô…:…	…:…………'…0…+…Q„Ò…………………2…… ………0…8…,…„ñ…8…i…'„ô…1…N….…X…–…ý†/‡'‡Ï‡ê‡’†–†…œ…t…j…T…+…1…5„ÿ„ÿ………„ú…%„Ö…=……&…„î……8„þ„í…
-„ú…………)…„ô…-…"…:…>„þ…2…#„ö….………N… „É…„ý„ù„û……*…%†‡Lˆ×‰¹‰,‡¼†„…å……C…-……T…0…&…2……0…*…\…+……Q…B……/…#…3„ÿ…$…)………/„ý…	…/…$…Q……:……*…@…+…L…T…&…A…7………D….…#…=…J………)„ý…/…5…z…K……(…#………<……"„ú……C…:……%„ý…6…=…?…	…5……„í……"…5…!………G…W…$………=…
-…„û…"…/„É…&…0…*…(……G„â……D……&…F„ú„í…	…4………-………,…D…#…8…p…¦†)†øˆy‰ØŠ@‰ ‡à†Š…ñ………d……P…6…&…………/……„ý……„×…„×……„Ü…………2…X…„ñ…;…T…
-„þ…… …„ç………!„é…0…/„ù„×„ÿ…!…+……D…1……ó†óˆ(ˆõˆZ‡8†5…•…•…6……/…;…C…,…)…F…*…J…$…1…\……"… …„û…A……$…!…0……)………Y……#…&…e„þ……:…„ù…H„³…………>…P…E…=….……&…Q…<……,…)…,…(…'…)…+…=…j…"…&……1…0……-…*……%…0…E…$…"…7…L„ù…+…„Å…G„ú…1………&……G„÷…„ü……0…„ö…8…„õ…(……*„õ………4……0„ú„ÿ…………………„ó……8…E…0……ï†d‡ãŠSŒê£‹œˆ´†â…æ…†…^……3…"…….……„ü…>…	……1…8… ………
-….„é„ô……1…+„ã„ç……A„é……*„ë…!………… „ò„ø…&…„ñ… ……I„õ„ò………,„Í…ê†I‡$‡{‡:†k…¯…p…=…….…+… ……………'…4…%……5… …'… „õ…Y………D…„î…………>……5…„þ…Q…M…2…%…G…Q…X…Y…m…Y…‡…?…c….……#…I…J… ……………N…„ú…5…"…B……I…,…/…P… …/…C……-…1……2…"…„÷…&……0…K…]„þ………„Þ…Z„þ……„õ„ô…E…<………4„ø„ã…<…+……%„ð…„õ…………=„Ö…y„û„ù….………(……Z…1…_…u† ‡ˆO‹·ŽÁ9Œn‰@‡6† …x…E…)……D…H……….…………(„ó……(…-„ö…"…2…0…1……-…„Ñ…(…6…%…/…„ü„ë…"„è…(………5…B……„ï……4……"…8…9……a……¡…Û†^†p†…Ò…¶……U…Z…………4……C…………]„ï…&…>…"…'…7……%…&…V……"…….…*…………0……1……
-…„ü…Q……d…V…8…5…;…-……A………>…T…X…'…b…f……%„õ…3……%…@…>……5……B……V…?…@…G………*…P……„î„ü……>…)…(…;……'…A…………%…'…?…>„ç„ï….„ú…$…………4„û…-…"…
-… …)….„î… ……„æ…„÷„è……
-……n…†…Ç†¬ˆ/‹=¸ä‹|ˆp†³…ä…~…ƒ…H…S… ……-„ø……%„ø…2…
-………%„ü…D…„ý……(………-…'„ÿ…„î……!… „ß…2……0„ý…………3……„ÿ…U……?…„ø… …7…"…`…¹…º…Þ…Í…§…?…g…ƒ…I…a……F…………
-…0………D……,…<„õ…<„ü…_……#…(……H…+…U…'…B…"… …"…6…4…4…6…#„ÿ……4…ƒ…q…k…y…a…/…0………P„û…>„ù…… …h……H…K……4…„ý…%„ï………*…!……L… ……3….… …2……"…E……:… …………C„Ú„í………„ô………)„ý„ê…B„ò„ý„ù……,…6………7………	…+…"…%…1…………"…:……O…>…†…Í†Y‡±‰ŸŠÕŠ÷ˆü‡~†T…ì…f…X…$…2…$…*………/„á…(……,…+………………„Ö……?…0„÷………„ù…
-„ÿ„ÿ„ì…*…$„ò…;…s…M…6…………)……6…&……/…$… „ú…x…m…}…a…J…S…R…T…(……/…9…"…2……………P…3…G…#…0……6……?…M…1…W…#…&….…9…#…7……&……&… …]……*…?…?………S….…I…U…F……D…e…p…N…-……)…=……J„û…#…"…*……/…………`…-…5……a…7„ó…!……2……#…„Ø…K…„®……"… …7………H„æ…„ä…„ù…&…„ë…=……J„ñ……H…"…:……„ó„ù…P„æ……7…&…%……………,…8…H……i…¾…â†Ø‡¿ˆDˆ?‡®†s†…†…w…L…9…'………#…	…9…&………%…1…(……2…@……………………(…7…8…(„ú…… …$………J„ø…
-………„ÿ… …=„ö……3……,„Ö…„ç…1…H…h…F…m…`…0…:…6…n…=….…>…„ò…+… …3…]…„ê…1…G…?„ó………<… …L…L„ú…@…?…5…„û……i…F…?…G…/…N„ÿ…P…4…I…$…]…1…M…d…9…X……!…S…D…!…/…%………C……"…+…p…S………>……I…9…K………!…M…,…„÷…(…"……8…:………/„×„ï………)…9……A„ö……„ò……„ï„ð……"„ú…'………#…„Ø„ô„ö…………„ù……,…1……"…e…7…B…„…º†#†|†Ð†œ†‰…ï…}…Y…<…D……?„ì…„ð…V………&…„û……„ö…/…%…#……!„ì…„î…8…K…g…!„æ…………„Þ…(………„þ…)…6……,„þ……%„Þ…&…………$…/… …%…4…(…
-…F…/… ………,……9…:…9…F…*…W„ø……:…4…#…………5…Q……G…;……O…$…G…
-…5…C…Q…3………B„î…„æ„þ…=……n…Z…C…8…)…9…P…9…s„þ…M…2…%…”……µ…C…\…c…N……-…/…„þ………………P„ø………s……Z……%…/…3…„ð………„î…,…Z„õ…/…>……$……*….…1…?…-…&„õ…„ú………+…%…#…2…0„ÿ…………(……-………6…s…:…^…¾…Ü…Ì…ç…Ë…»…h…u…*…F… …4… …#…„Þ„à…$………Z„ø„ö……„ÿ…„ï…#……)…2„õ…………@„ø…………+……F……„ù…Y…8…%…%…Q…„ë…/…#…<…Z…7…2…u…,…B…1……5…3……L… …„é…R…(…	…„þ…7……?…0…7……b…(…)……?….…G…C……E…H…4……K…*…1…[„å…Q…v…^….…e…0…Z…;…d…5…?…C…L…O…3…{…?…!….……
-……œˆ¼†?…i…*……8…`…?…$…0……#……)…!…
-…7…=„ö…1„ò„ó„ø…M…„Ø„þ………………(……'…!…4…'………„è………„÷……………*…… „ð„í……7……
-…… …*…B….…8……N…0… …H…\…x…t…‚…‹…E…-…F…z………"…#………^„þ…(… „ý…2………5…"…:…@………(…I„ê„ê…„õ„ë……………'„ö…'……V…&„ü…K…„þ…%…*„û…)………A…L„è„ÿ………A……I……/………^……4…!…1…0„ý…)……6…I……8……G………=…(…2…!……2…&……=…@…P…Z…2…&…?…]…d…2…L„î…H… …4…?…F…v…f…M„þ…I…Q…>…P…M…"…C…b……@…`………-…1……2……>………9…'…5…^………M………W…6„ú……;…$…>…*„÷„ü…………… „Ô„ö…?„ÿ…!……'„ñ………3…$……„ò……B„ä…„î…(…*…/…-…%………„á…"……J……W…2……K…M…7…F…c…k…7…$…9… ……L……4……T…'……A……
-…„×………$…1…J…&…I… ……+„þ…-…2„ö………………8…9…„è……G……„ó……„ê…@„ï…/„Ç……5……,…Z……+…A…F…,…g……/………n…,„è……;……!……,…9„ñ„ñ…………h…d……3…?…Q…H…J…]…:…O…T…F…a…1…Y…G…Q…L…1…•…Z…s…R…ˆ…T…Y…G…A…[…4…W…@…`„÷……I…J…[……&……=…?„÷„ñ… ………J……„Ú…=…=…$…3…N…+„ñ…4…#……g…7………)……!…7…C……/…*…H…>…(……-…„Î„ü……	…=…>…$…!„ñ„ú„ö…………-„â………h„ù……3…$…I…Q…d…+…@…=……!…<………
-…K…	…	„Ø…„ï…„ø„ø„ü„ð…T„ô………………„á……%…1„ê…-„Þ…#…5……7…B„æ…)„ú……"„à„æ………%… …(……8……4…… …]……#……*…„Ø……5…„ñ…A…5„ý………7…8… …F„ù…%……%…………:……	…A……J…D…³…r…‰…‘…L…;…\…9…S…%……G…I…;…U…\…o…&…}…9…y…j…t…p…r……&…/…M……S…,„ü…6……E…U…………J…„Û„ÿ…&…?…E…+…6…(…7„ÿ…B„ß…F…?…G…V……6……E……„à„ó…/………………)…?„Ù„ë…„õ…+……… „ÿ……S…„ý„Ú…0…$…………+…#…*„é……-…>…<…;…+………3…U…H……(…4…0…1…(…F…„ü……!……„ô…
-…)„Ü…%…R…(…%…K„þ„ß…(…9……1…	…'………+…&…?…K„ý…„é…)……„û„ñ……… „õ…A……t…………5…………9…Q…&…„ï……f…
-…B……(……"…+…8„õ…7…&……!…3…2…8…<…T…x…i…‘…Å…¹…‘…´…]…+……b…@……j…7…s…”…X…œ…c…‚…‰…l…2…:…“…D…h…B…0…>……6…M…@…D…@…K…"…+…:…+…K…+…L…A……… …	…
-…………1…P…X……	……„ô…,…1…=„÷…/……,…7„ý……-…„ù…(…[„è………„ô…„ü…„õ…"„é…„ö…"„ÿ……>…0……7„÷…
-…………*…J…T…„÷„÷„ö……1…\….……0……E………„ü„ë…
-…… „Ú…S……!„þ……„à„ï…„õ„ÿ„ð…„ñ……&…8………=……………„ì…0„ù…X…)…… ………;……-…S…)„ý…:…!…(………!…2…L…-……>…>…G…….……*…"……<…ˆ………%…3…8…!…H…5…p…¯…í…ä†…Î…5…Y…a…B…t…k…o…l…h…[…j…y…f…Œ…Œ…e…{…D…>…=„÷…@…K….……-…=…#…p…3…1…4„ý„ý…d………
-…H…G…0……A…………>…'……,„ù…*…+„é„ö„û…N…	…(…o…„þ…O…!…„Í„Þ„ü……#…&…+……„õ„í…„÷…G…„þ………9…#…………7………'„ä„ü……:……@…„þ…4…Q……!………:…………)………….……C…+……4………,…"………!…#…,…6„ø………… …+„ê…&…,„þ„ô…#………+„í…?……+…8…………@…+………'…Z…6…#…3……#……K…N…M…(…0…'…… …_…3„ó…&…h…3…H……e…G…6„þ…-…'…#…v…º†'†…Î………t…B…k…I…$…q…@….…ƒ…,…‹…†…h…|…K…Y…u…X…a…N……\…Z…U…M…1…D…2…:…0…<…
-…K…%…c…7…?…4…„õ…*…"…C……"…
-……?…"……!…:……1„ù…&…………… „Õ…!…E…9„ý…„ì…2……&…"…/…	……$„÷…-……)………7… …,……,…`……	……„ã…%„þ„ç„÷„±„í„ï…„æ…O……………„ï……)…„ù…(…/„æ„ä„ò…2…„Û…„ò…5…$……%…„Ç……	……L„ø……„ó……„ð„í……=„ß…S…	………………V…„ý„ô…………;….……!…R…V…………;…6……V…@…&…1……f…-…	……(„ò…X……@…-…N…<…‚†…ö…¦…À…–…B…*……q…`…8…q…X…s…J…{…p…c…}…@…!…o…d………>…[…D…B…;……V…]…#……d…4…Z…2…<……@„ñ……………&…5„ô……… …U……………8…"…G……!…'„ý…X……*…D…!…$…………„÷………„û…A„ù…0…#………M……!„é…>…	„ø……"…)„ÿ…J„ú…………„ñ…1…	…4„ø…2…0…„ì…
-………%………8…8…O…R……2….„í…9…2………„ç…-„ù„þ……)……/… …$….… „ë…>„ÿ„ä„þ…„è…$…$…C…I…9……	…7„ö……&… …0…5…
-……5…e……D……F…A……„ÿ……(……>……!…-……"…&…F…@…D…5…-…Y…}…Z…™… …¡…­…Z…e…•……b…—…=…5…E…?…^…j…r…™…`…œ…i…Z…d…L…Q…ƒ…G……$…+…O…0…#……1…„ù…4……0… …>……j…C…#……C…6…#…	…………<…„ý„ó…N…"…9…6……4………!……C……C…@„ú…"„ü………&„õ…4…4…„à…?„ã………!….„ù…/„ý…„å…<……	……3…5……„å……4…0…7……[…o…A„î……„ÿ…:…K…)…„ý………J„ý„ø„ñ…5…„Û…J…„á„ð… …*……	……/…%……0…„ÿ……&„è…
-…………<………)……:………;„õ…A„ê…………
-…`………!…1…&… … …+…!……8…2…=…@…H…H…4…A„é…K…#……r……]…M…Ÿ…E…z……{…m…K…W…l…,…A…e…U…v…r…‰…I…©…y…h…u…;…M…=…\…4…E…p…K…b…M…8…)…6…Z…#…N… …I…7……?…-„â…S…6……1…,…&……&…*…G……,…………%………K…„ò………$………#„ä…<„Î……… …;…5„õ„û…s„û………(……„ÿ…
-……„ì………#… ……-„ã……F…%„ë………………@…(……0…….……„ñ…„ø„ß……"………„å„Û…………F„î…	……„õ………)„õ……;…7…………………„û„Ý„ô…+„ø…5…D„Æ„Ü………(……%…)…„ü…!…(…………:………1……0…"…5…:…T…=…E…h…?…(…7…,… …<…T…4…ˆ…p…G…i…y…:…W…y…”…a…c…s…R…{…¤…ƒ…´…‘…”…º…`…q…†…F…p…C…2…u…R…o…N…8…$…<…•…!…j…F…b…<…,………*…M……(…3……I…8…'…B…J…=…;……………B„ù…S„É…….…$……7……„ê……<„ë…5……„ç„ü……@„ù… ……E………1„ß…&………>…!……2…"…9…„ü…&„ÿ……"……B…„ü……Y………L…)…%…8…"„ø„ô…	…(……"……*………
-………(…P……C……*……*„ë…W……2„ø… „ù……@…„ü„÷„ô„ô…………….…„ü……G…?……<……L…*……………H„ù…
-……5…Q…B…%……'…F…=…N…_…\…+…J…k…s…5……<…2…J…`…t…L…u…b…D….…_…™…z…|…–…a…ˆ……Ó…¤…¥…t…ƒ…Z…†…t…h…*…Š…2…r…/…8…T…B…>…c…+…'…`……A…'…,…6……U…$…5…B…9……<…G…8………i…6„ô……,…K……>…>„ö… …$…?…,„ÿ„õ…<…6…„ë……)………8…@……9……<……0„÷………G…:………„ê…*……0„ê…0„û…#…$…„ö…O………„í„õ…………<…,…O…„ó……„ö…5…$…F„ô…A„þ„ý…„ó…3…„ø……=………!„ô…B„ù…„ý… ……„û………„þ………h…„µ…
-„÷………E……J„ï……,…G…-……$………6…3…*…;…B…s…3……r…0…2…a…O……4…L…S…b…«…@…‚…>…j…k…ˆ…>…f…¡…E…}…Š…q…Ž…Ç…î…Ö…À………ž…Þ…€…o…|…‹…X…q…Y…J…H…I…A…-…=…5…K…P…G…g…†…<…;…<…… …0…'…c…-„ý…3….…
-…2…….…[„ù…e……D…… ……:…%…@„ö…C…„ý…!………'………@……„þ….…„ú……
-…………&…F…„õ……„ò…0……… „í…0…„ï…6…@…%…$… ……=„ý…0…D…/………/…Y„÷…………p„ý…*„Ê…… …H………7……!…?„ù……*„ý……#…7„ø…„å……<„ë……%…#…
-…>…….„í………(…4…!„ÿ………K…7…)……!… …+…;…C…)… ……/…^…>…D…D…J…B…7…G…:…<…@……A…v…?…"…T…F…G…v…u…h…‰…‘…i…F…„…›…‚…Ø…Ñ…·…Í…ä…Â…Ç…˜…¥…|…´…N…^…b…]…X…€…P…R…,…3…k……B…@…B……+…!…'…E…O…………;…-……
-…,…$…„î…………F………E……/…(……4………/…R…-…*…?……+…„û…<……$…1………„ÿ…P…	………H……G…,…………8…"…?………)„æ…=…W…7„è…$……9…	………+…4… ………„þ…„û…„ý„ë„á…„ý„å„ð„ü… …-…+„ó„þ…*……)……„ü……^…&…„ñ… …$……$…<……#„î……1…k…(…4…)…….………C…-„ï… …4…3…,…$……J……E……S…?…6…D……-……4…H…9…p…A…k…|…^…U…n……g………‘…g…˜…š…Ž…Ø…¶…­†…÷†…ö…Š……²…ž…¥…[…g……Z…x…U…™…‘…V…N…w…2…\…I…'…n…O…k…,…6…-…Z…$……]…R……5…3…B…:…	……,…N…*…M…$…Q……"……!……H„î…B„þ… …%……!……2…$„ù…A……C……5….……P…;…G…
-…:……W…„÷…+„û…1„ÿ…	…@…8…3……A…@…"…)……2…„È…H…	……„ÿ… …„è…5………5……8…^…-…#…,……!…8„ù…„å„Ï…M„ö…„ê……A…%…„÷………&„ù……„Î„þ„æ…:…)…E……&…4…M…4…<……=…U…7…M…/……&…+…K…………8…z…&…C…j…………2……0…I…E…\…E…C…o…a…/…ª…O…a…n…¿…¡…€…Á…¨… …¶…©…«…Ø††I†…ï…Ï…å…š…¿…w…–…¯…‘…½…{…C…Ž…C…S…g…–…L…K……s…H…3….…`……C…L…E………?…3…%…<……H…L…5„ô…J…-…F……P„ø…!…*…=……	…O…7…$…„˜…0…3……„Û„í…/……„Ü…„í…„Ý……0……D„ó…„û……'……L…%…)„ñ…9…&……………„ø…:…„û…7„Ð…
-…… ………<„ô…$…=„å…K… „ý…'……„þ…	„û……„ù…	„Û…„ù„÷…V„Ò………	………8…-……&…"……6…N„ô…9… …Z…c……!…(…D…9…#……R….……„ù…&…A…J…^………1…E…H…6…Z…#…[…6…,…`…~…Z…7…–…Y…d…L…œ……¬…ª…Ÿ…š…Â…×…¾…É†(†0†=†I†…Ñ…Ù…º…Š†…Ž…á…©…°…—…Y…z…c…z…c….…>…X…5…K…D…<…X…+…I…E…5…d…0…S…!…	………%…*…?………<…7…U…$„ù…X……L…7…P…1…H„ù„å……-……0„û…2………*……X„Æ……)…+……0…%„ý………+…%…0„ÿ…"…
-…………A…*……3„û…………!……0…@…0…*………=„þ……+…5…2… …#…6…!……L…………)„ó……'……/……„ø…„û…0„ó…,…E…N……(…'… „À…………0…	………1…K…2…^…1…„ø…9…G…………3……/……@…@…O…,…6…I…%…B…c…'…L…=…U………r…!…a……:…Y…Ž………‹…Í…Õ…‹…Ñ…ß…é…£…Ò††=†X†œ†k†6†+†/†	†3…¨…Û…Ì…º……j…u…u…w…Q…g…„…j…*…O……>…8…T…/…P…L…O…*…N…`………!…	…H…-…3…5…D……G„í…'…%….…$…8…B………L…A…9……„õ………K……„Ý…H…>…!……'„ÿ…'…(….…2…S„ô…%„ì…
-…
-„ü……„ê„÷„ü„÷…#…(…5………:……0…2……>……7„Ú….„ù„ý…)„ê……„ô……<……*……B„ÿ……4…„ú…………*…(……7„ü……
-……8…)„ï……'„ý……)„ð…-……*…(…4…$…"……A…*…Y…	„þ…!…l…,…W…9…$…W…B………V…7…‰…G…K…c…P…M…K…W…4…>…p…\…š…¯…t…Ç…×…Ô…¶…¹…Í†?…õ††0†€†—††s†]†¥†A††6…è†…ï…§…›…“…¸…“…q…j…g…K…z…l…l…W…b…9…;…y…,…A…J…P…3…H……6………U…B……0…?…………0…/…S…W………D…"…4……?„ø…„é„æ……5……E„å…'„û……M„ÿ…$…„÷…!„ø…X…	……………………………>…&….„Ò„õ……#………„ý…&…
-………(………;………„ý…+…&…"…8…>………,„ú……<„ý…6„ö…F………=…%…!…„ä…D„û„è…
-………………-……………X…J…….…2……7…T…D…B……C……>…L„ô…Z…'…<….…E…U…s…f…?…_…3…X……V…p…”…‰…h…\…¼…œ…«…Õ…à†††>†s†Z††›†Î†¾†ž†«†‚†ˆ†`†e†\††…ž…½…W…Å…j…t…k…™…‚…’………‰…q…T…8…U…a…/…0…G……
-…q……1…e…U…@…(…D…H…	…
-…Z…&…8„ó……W……>…I…J……$……1……„ý…&„ø……/…………E……… …!…………W…%………9…„þ……„ü….…………„ù…&……„Ó„ü…,…)…#„Ù…P……#………………„ÿ……	„û………„á….…„ò…I…
-…„ú„î„÷……:…=…„ý……*………*„è………#………	… …A…3…&…G…1…G…;…:…<„ù……>…0…M…Z…@…R……-……?…C…#…T…f…<…;…6…a…-…h…I…o…s…Z…½…À…ˆ…¦…Æ†…Þ††J†††}†¤†½‡‡‡`†Þ†Ô†§†—†§†n†…ö†…«…¾…ª…¶…k…z…’…‡…ƒ…f…t…0…s…7…M……7…5…%…H……v…j…5„è…P…F…J…7…#…\…(…\…3… …F…2…>……,……„é…!…)……I…„ù…………*…8…)……,……)„Û…„ý…"„ï„þ……'„í…	„ô…Y……@…„î„ô…„ú„Þ„è„ë…….…&…?…*…(…G……!…
-……„ü…?……&„ö…<„ý……"…/„æ………<…………M…"„þ…;……&…„Ø…… „í…&…	…
-„å……„ô…C…9………………b……%……„é…J„Þ……7……;…3… …%…R…k…?…9…X…8…K…L…K…,…i…µ…Z…Y…d…¯…ž…“……Ø…ï†3…û††<†y†w‡†¿‡‡‡_‡m‡É‡Ò‡«‡Z‡#†Ð†ª†Õ†™†n†P†…û…¸…Þ…“…¾…¶…¤…_…ˆ…i…N…b…+…T…4…$…@……c…L……-…'…P…y……;…<…………R…H…F… …1…9…!…#…'…-…	……g……B…A…)…4……)…6„æ………„ñ…… …@………#…=……V………>…"… „ÿ…+………J…I……………„ë……)……Q……„ø……<„û….…	……<…-…(„ò………*…………"„ý„ÿ…„ü…&………P…„ò…T…1…,…e……2……%„æ„ø…3…<…)…,……#„è…D………3…„þ…&…2…
-„é…$…#……[…;…#…V…-…^……N…o…}…ž…k…‚…S…T…\…±…À…¿…©…¼…ù†…ë†M†!†e†G†‡†ñ‡‡‹‡w‡¿ˆ7ˆPˆbˆ6ˆ‡¥‡•‡‡†¬†h†]†,†…œ…â†…½……r…™…]…‚…n…C…=…d…S…O…$…U…Y„ù…!…<…:…r…>…L…S…
-………3„ý…I……*……'…/………@„ý…&…3…;……5………$……	…F……„ú…(„þ„õ…1…)„ö…5…'……#…S…„Å…=…„Ø…… …„ô…$….…(…6……G„ö…F…7…%…%………&………O„ò…"„þ„à……&„í………4…/…„ñ…+……Z……&…„ù……2…,…c…
-………"……„õ…………=„ù„ý…^……;…(… …`……7…a……D…F……V…E…X…/…%…I…=…#……u… …&…M…C…=…>…6…i…‡…r…¥…Ñ…¹…²…â…å…ò†X†X†”†Ü†û‡)‡B‡†ˆˆAˆ¤‰Jˆñ‰t‰ˆÏˆˆ8‡©‡´‡†Ü††\†O†-…ñ†…Ñ…¹…™…‡…·…f…º…1…t…Q…h…Q…-…R…4…Q……S…L……-…E…H„ú…k…-…U…4……G… …*…<…@…3………(…S…„Ò…3…G„ì…„Þ…1…3…<…'„å… ……/………3„ó……"…„Ö„Ù……'…"……„ç…0……3…h…5…„è…(……	„õ……;…-…K„î……%„÷…-…„ì„û…7…-…„ã…„ô…-…2…R…„ì„Ö…(„ð…-……„í……"…<„þ………	……„ì………4…'……	…„ÿ…F…"…7…1…<…@…
-……G…… ……j…Y…>…<……S……V…t…<…\……r…‹…o…‚…”…m…o…¿…•…‘…Ù…ô…Ô††£†‚†Ü‡-‡2‡¦ˆˆUˆè‰.‰ìŠFŠ´ŠDŠFŠ4‰l‰9ˆ—‡ñˆ‡T†Ý†¶†Œ†q†(…ç…ì…Ê…·… …¬…w…ƒ…]…b…‚…E…n…!…W……I…………(….…#…C„ø…9…?….…3…$…?…………#…%„ô………=…/…U……3…R„ç…„ù„ç…:……,…2…!……M…„ñ…%…,…/……*„í……D…0„ã„÷…W…8…0…………5……„ó……"…)……………„æ…1……'… „æ…,….…L…(…"…3…„ø……„ö……I…….„è…$„ö„õ…
-……C„ù……7…… ……A…0…7…………„ý…/„ú……3……K……i…2…#……6…P…9…O…‡……/…C…H…p…]…w…g…¥…o…œ…Ž…\…Ç…d…Ì…±…µ…î…ß††,†¢† †Ý‡k‡âˆ;ˆ’‰‰¼Š:‹NŒÏ¹x½‹Ð‹~‹
-Š9‰¡ˆòˆ6ˆ‡{‡B‡†F†#†(† …ç…Ì…¡…”…g…x…‹…n…†…E…c…5……(…x…?…… ……1……4……U……H…„ñ…1…„ú…/„ö„û…9……Q…@…+………:…7…?…"…2…2„ÿ„ö…………'…A„ý…	………(…:„ä…>…D……:…………/…„ö… … ………'„ý„ï…!……?„ó…	…6…„û…=……5„ì……+… ……„ã……&„û…&…$„â„ó…H…&…„ù…H…%„ö………"…„Þ…	…5…………9…„ü…!…@…Y…	…J…/„à……@…W…=…(…8…+„î…'…4…1…P…]…-…=…+…f…d…§…P…Ð…˜…¦…Ö…™…¼…Ÿ…„…Â…í…Ò††-†D†‡†Ä‡‡3‡åˆ7ˆÖ‰ÄŠU‹‚ŒŸmŽjz?|SŽØŽL‹±‹Š‰ˆœ‡ø‡p‡v†È†±†l†G†…á……t…€…Á…Ž…Ÿ…=…J…w…2…+…I…3…L…6…9…S…Q…V…B…"…I…)…)…;…6…8…%…3…3…;…G„ò……'………H……=„ú……2…4……%….…… „ù…8…R„ñ…-„÷………
-„ú„ï… „à„ú……+…„þ…I………%…B„ð…„ý„ä……„õ…T……:…1…"„È…[…8…….…Q„Ø…>…„Î…8…%… …D„ö„ø…'„þ…"„õ…„æ…2…8…+………'…„ø„Ü……„å…„æ…;………„ø………W…/„ø………5…A… ……6…e…D…^…1…T…0…R…\…®…Å…ô†0††J†%…Ì…¿…©…¤…¦…ð†"††p†}†®†ÿ‡†ˆ;ˆK‰>Š‹RŒ=uÚ’ŸzŒ{#¼’¨Ž×3‹¨ŠŽ‰›ˆnˆ‡¾‡g†ã†:†P†…Ë…ø…Å…ž…u…q…L…2…F…1…l…A…t……9…`…6…A…9…L…X…"…K…D…2…P„î…L…@„ø…/…,…P……J……"…#„ø„ÿ…,……„ý„à…9„ù…/……!……L…!…*…„î…6„ô„ú…&……)……#……1…-…'…(…&……*……<…!„÷…	…0…5…A……"…„ì……2…-„û… „ö…	„þ…/…:………9…(…4…M…#„ý…C…1„ö……… …-…………)…]…	„þ„Ú…;„ú„Ä„Ý…E……\…*…)……1…… …8…2„ÿ…2…"……\…&…f…%…1…J…N…5…V…X…«††O†ò†ö†Ð…ù…¸…‘…Ÿ…¥…Ç†††:†Z†â‡‡ˆ‡¨ˆÅ‰4‰û‹`Œ½ŽwÄ“;–g˜ÆzÙ{6w«˜O•£’¼ Ž3Œ(ŠÉ‰’ˆÂ‡ù‡¡†÷†¯†M†N…½…÷…Å…ª…®…Š…]…P…‰… …’…:…N…"…'…T…t…9…%…F…8„ê……"…B………E……)…;…	… ………&…#……?…,…7……	„ô…N……
-…5…5…F………8„Ý…1… …H…+„÷„þ…"„ç„á„ë„ó…………+…„÷…„ã„ý……
-„Û….…"… …$………,„þ……„ÿ…;„ô…………)…„ø… …J…
-„ü……6„â„ÿ…C„é…………4……%…„í…H„í……„é……D…„ü…!… „â…3…3…8…#……>…2…0…4……+…!…&…B…n…"…R…*…^………ö††¾‡‡Š‡9†`†…×…Ÿ…Ë†#†(†B†(†q‡‡Y‡êˆa‰,ŠG‹^1‘ã•«™zž|x’wV{Êy|¢úž‘˜È”)‘)ŽžŒ:Š™‰Dˆe‡ø‡†¥†”†S…î…à…œ…”…¸…¥…ž…s…N…l…s…q…F…R…O…C…T…F…Z……'…%…A… …K…?…0„Æ…K…U………7…F…8„ç…8…=„õ…'…$……?…E„Ý…H… …N…3…„ù…„æ………4……7…<……)…(…(…#…4…… … …?… …… …0…"…I…G„ô……-…R„þ………/„ü…@…………4„ö…)„Ö…%„Û…'„ø…1………X„ý… …<…*… …$……1„ó……&…3…D…,…+……„æ„Ý…	…(…@……=……V…$…&…O„ô………8…D…2…^…U…/…q…!…?…F…Z…U…N…Ã…û‡;‡›‡†è†v…ø…÷†,…Ó††5††–†á‡]‡½ˆD‰‰Ú‹_Œ´’–A›Ù£G¬xðzŸ|JwÄxŸ¬ï£›¬•t‘mŽ‹ÀŠW‰ˆP‡k‡*†’†J†Y†…Æ…•…Œ…}…t…m…Q…H…y…=…V……/„ÿ…=…9…;…<……0…?…G………@…(„ë……#……1…&…6…)…„Û…&…+……I…M„ö…J…[…/……………)…"…2…#…A…B…F……„û………'……)…„þ……C…7…7„û……*…;….……7„ÿ…P…
-…………„ä…„õ…7…„ù……„ò……… …7……3…D……?…>…"…	………„õ…………1…0…+……D„í…>„ò……„ø…6……_…&……V…Z…Q…d……D……%…/……I…\…c…U…o…Ž…¹††²‡B‡,† †
-…í…Ù…Í†H…þ†0†,†k‡@‡pˆˆí‰¦Š Œ{Žn‘ï–œl¦³SÅ»{HyØ{zzæ|Æw³S¥›À•5…K‹‰Ûˆ¬‡Ã‡†¿†g†G††…Õ…Ÿ…p…ƒ…l…e…h…A…m…Z…L…d…0…C….…M…&……6…-…#……J…'…>………C…H…T……………I…/…… …/…2………………"…A…2….…………B…„ô„ô„ü„Î…6…………(…+…	…!„ë…„à„Ý…C…………#…(…:…-„ì…'„í…&…$…………	……+… …R………… …E….…„ø………%…"…„à………„ä„Ú… …9„÷…„ä……Q…7„ê…4„ä……3…7…,…R…d… ………`…2…@…/…:…3…b…O…”…1…@…~…y…È…Ù††Ü†{†B†)…è…ï†††-†f†ª†ö‡V‡ªˆT‰wŠ~ŒŽð”É›Ã¤úµÍ4òD|Qv´~yzðyó5Í;³é¤™L’ÙŽ½Œ@Š€‰ ‡å‡¦‡9†W†h†0…õ…©…Ä…™…©…t…`……_……/…„…^…_…B…<…%……a…&…E………… ……<… …2………;……	……K………X……+……….……)…;„Ö……… …3……„ì„ó…!……"………/…………………………2…'…"…*…„ù…0……„ç„ö…/…9………„Ò…„ï………!… ……F„Í…L…„þ„þ………(…9…G…"……)…2…,…………H…7„ø…6……„ý…'……;…,………8……C….……=…A…‡…,…a…&…:…T…D…e…k…_…•…›…×†*†2…È…Ò…À…ë††I†€†…†™†Ð‡˜ˆ+ˆãŠ‹B·’í™¡)¯wÈ\ó*yòzß|Îuëy|•wÑõÇ¬ëžÎ•Ãš@‹‰„ˆ”‡Ë‡†Ü†]†V…ð†…¨…v…´…¤…y…_…)…>…N…]…2…m……
-……H…6„ù…9…C…"…&…M„÷…B…F………=……)……9„ï…R…U…„ù„ù…+…%„õ„ï……R…"…5„û…9…5„û„ü„×………:…Z„â…2……-…c…2……8…+„ï…I„ý…„ì…0…)………M………	…4„þ„ø…(……5……&„æ…%………!……&…,…;…#…-„ú„þ……#„í…-…„þ…-……)……;………8…d…,…… …*…„é……B…V„à…9…….…1…W„ö……Y……:…,…V…k…C…Z…Q…ƒ……Ì…Ö…¦…Ú…Ê…Å…à††#†††ü†ã‡{ˆˆ¾‰ÛŠÈŒ#Ž‘1•(›æ§ê»sß9&²ytyQzË}y°zÜ{6'@Ý¶ú£˜Ñ’ŽI‹ŠˆÁˆ‡Y†ù†‘†[††…ç…Ä…¶…–…l…N…Œ…­…j…ƒ…-…Z…D…:…E…M…3…F……4…/…<…F…8…G…E…<……A……0…V…F…_…d……2…3…#…Q……0……3…K…7……-…;…'…=…K…4……?…(…"…@…%…:„é…-…(………………&…	„õ„ú………#…A……:…S„þ…,…	………B…F…„î…„ö…'… ……„ú„å……C……„þ……U…F„þ…_……?…&„ï…*……	…„ì…„Ô…„õ„÷…„ö…c„ÿ…X…:…P…N…M…;…d…'…[…[…U…ˆ……L…X…¥…d…@…Ž…œ…²…ó…Ä…É…Æ…ù†+†8†‘†˜‡‡fˆˆ‰bŠÇ‹àƒÙ’ú˜BŸõ­™Æø_y{–wyX|yšvƒUˆï@¾†§4šs“«Œ
-ŠˆÔˆ5‡~‡ †¯†`†$†&…Î…ú…Ø…¢…¤…{…«…c…€…p…Q…W…j…E……b…L…X…H…M…M…c…V…T…W…-…3…F……U…%…>…;……(…2…?…4…[…/…A…D…2…1…@…&…)„þ…>…(….……<…Y……	………&…2………„ä…Q…„Û„í….„Þ…c…=…2…)……&…P…!„í…I…%……M„ô…
-…5……„÷„ÿ……)……A„þ………\„õ……„ý„Ï… ……*…„×…E„Û………,…3……………„ã„ì…………G…?…i…O…_…9…M…]…(…r…‡…d…l…¢…‚…¨…_…z…k…ž…Ä…´…ì…ñ††&†2†~†µ‡‡H‡Óˆe‰nŠ9‹ªB†’*•|š„£+±‚Ï 	‡yuÖvÄz{x÷y xñyüfßõ²Âb©9›B”@ŒRŠ‰ ˆ4‡]‡6†ð†¢†7†…ö…Þ…»…Å………–…”…¹…m…L……{…V…j……[…V…G…2…w………6…z………	…2…C…r…^………<…:…G….……;…C…G„ï…/…k…$…3„í…#……;…Q…8…-……:……„å……0…8…F…„ï………?……&…5„ë…S„ã…,……;……7…………D…:„ö„÷„ì………… „ù…-…„ù„ü„ó…)…5… ………	………„ù„ë…A…„ñ…„÷…C…"…!………%…C…4…4„í…G…C…e…2…S…a…>…I…P…Z…&…k…c…U…b…=…l…¦…µ…j…ª…“…”…¹…Å†	†…ë†@††ú‡‡‰ˆ4‰AŠ‹—a„’@”ö˜Ìž¥í³âÐ”	z@{1xƒyyxyy{hyùW+îâ¿‚¨)š¯“OŒSŠXˆëˆ‡š‡.†½†—†˜†…ç…È…Ó…µ…°…ƒ………™…`…x…W… …‘…€…z…d…m…7…1……n…X…G…8…=…U…&…R…]…%…K…$……0„ò…….„ê…C…n…%…2…M…"……4…$……:…&„ñ…0…L…?…+………… …%………:„ô…-…%…G……3……2…D……!……"………&…"…#„ú……3…>…	……=…s…)„ê…1„õ…-………………;…;„ú………%…<…+„ÿ…F……=…B……d„ò……E„í…„î…%…i…:…T„é……B…H…N…A…o… …a…(…*…S…_…U…T…Š…l…}……”…€…©…Ý…°†?†J†ž†À†å‡=‡ïˆ¬‰¹‹Õ“P—š–ž.¡¦§ë´#Ì’`oªuz|rvyäy}x/yW-CÞí¸•¤ß™’ÛŽ-‹òŠ%ˆª‡Ú‡p‡†Ä†W†L…û…ç…ô…¾… …¢…¡……D…•…o…=…x…R…A…t…|…N…*…^…H…|…2…9…+……D…s…c…u…0…;…3…6…=…$……M…-…"…a……+…G…-„Ö…,………!…:…:… …
-…"……&…"…P„÷„ö…]…+…	… …4…3……1…+………P…g„à……M……!…*……!…(…'…"…
-….………„ú„î………"……E… ……G…(……(… ……7„×…-……)„Õ……$………"…(„ê…P……*……$…-…`……%…C…G…A…'…P…N…k…@…3…G….…X…w…f…‘…¤…^…{…Å…¬…È…Á…Ý†L††r†ï‡QˆˆÿŠNŒ“é™5 	¦k©Û«8¬:´QÅTër:z¤yz‚|³|Ý|	xžÿYË/¯ '–‹‘¢á‹V‰¯ˆ‡‡ï‡,‡†z†d†…Ù…Ñ…Ž…œ…˜…¸…o…c…^…Z…Q…[…T…]…)…c…:…M…D……T…"…6…5…<…3…E…S…I…3…5…l…<…)…Q…	……7…,………„ÿ…0……<„Õ…*…:…„÷…„û…!…B…&…U…+„ù…9………
-…„é…„ô…H…… …9…………N…<……„ó……&……1…$………2„è…8………7……„å…………	…… …H…„õ…7„ù……3……!…+……6…_…(………"…S…„â„â…<…3…,…d…k…!…-…r……:…-…-…V…)…h…_…P……n…j…Ž…`…–…r…®…Ö…´…¸…ï†††‡€ˆ.‰‹ì’—™y¤Ú³"¿êÃÎ¿Þ¶ïµ¼êÔO=x>yu{ÍwÎvž|ÛØØ¹½¦v›”eÖŒ¯Š¨‰ˆ7‡Š†Ö†Â†:†#†(…á…Ü…Ò…˜…j…y…†…i…g…S…p…w…i……E…C…D…O…A…l„à…3…2……u…3„þ…………'…*…!……0……:….…5…V…8…#„ð……8……3…:„ì…&…7…!„ñ… …M…,…"…3…$…
-„ê„ü……)……„ñ……
-…7…?…7……„ù…… …<………G„ó……„ð………… …„å………$…3……K„ü………-„ë…„í…#………m….…"…4…+…4……………„÷„û…F…1…P…[…6…X…1…u…………p…(…8…c…*…H…]…<……9………>…›…p…X…k…»…ƒ…Æ…Ù…ì†?†—†õ‡•ˆš‰òŒk–ß£¹×Àôñú¤åÏË»Q·óÀ‚ÖUø_zgxã{¸{ìzs×½Îª‘žÜ—M‘ÁŽ<‹­ŠTˆü‡ù‡.†ä†L†,†…ß…Ö…œ…´…Y…D…›…f…Ž…]…^…g…i…;…H…S…!……5……`…E…P…9………$…#…1…E……;……,…………3……'……#…(…)…!……Q………6………@………!„ø……@„ý… ………?…9…… …„ü…4„õ…„ñ„ô…-„ÿ…0…'…B…1…2……"…2„ü„ç„Ý…?„Ø…&………=„ð……'……8…%… …+…0…5…„¼„ü…Z…*„Ý…/…+…… „ÿ„þ…<„é„ì……*……„ö……7…B…5……F…1…a…L……>…9…S… …E…S……‚…‘…J…€…x…¬…v…Î…½…Ã…Ù††>†§†ì‡‹ˆûŠ•d’V›œ¯0Óè"FO
-àèKÂç³ø³rº•ÉŠ}.{¡y+|{ú·Ãª°Ÿ­˜u“ µŒ÷ŠÛ‰cˆt‡½‡h†»†p†"†…Â…¯…¦…p…t…R…ˆ…O……r…5…;…a…2…9…I…#…'……t…1…6…^…………F……^…„ì…>…M„ä…+……E…(„ï……;…„ë…+…„ú…/…%………M…<…„æ…%……,…-…j…1…*…Q…*………… „ð………„í…6………%„ú……D„è„ò… … …!……„ß… „ó…f………B……„ì…„ü……$…„Ú………3„ç…B……9……\…G…V„î……1…;„ø……Z…1„û………c……K…0…1…9…>…Q…<…a…6…(…™…<…)…P…@…v…~…c…[…y…x…®…«… …Ô†U†5†•‡‡ˆ‰ŠþŽ“™Ÿ¹•ì8A¯y{{XOŽûqÆÖ°1¨îªÂ°6~h|{,z=Ù¥Äì˜Â“Î…d‹¦Š"‰'ˆ"‡Š‡†¬†$†c†…È…§…{…`…s…¨…l…`…S…\…:…3…'…2…S…f…P…C…)…5…8…F…1…6…D… …@…1…a…>………O…%…=…=……C…L……….„å…A……
-…!…S…#…"…P………)……3……#„Ý……'…D…&„ì……,„Ý……%…8……+……_…J…„ú……….……„ø…:…7…G…P…"…„ú…0„æ…7…7…,……$…:„ì… …"……$…„÷…+„ö……&…<…@……„Ô…………\… ……„ý………V„ö…U„é…[…G…F…=…!…<…N…P…I…b…4…}…:…Q…x…q…\…º…œ…u…Æ…¶…Û† †h†Z‡‡æ‰Š¹Ž#”Ž¡r¼‰÷;Ry•yÖMïùQÂƒ«5¡H ,¡$vjuíx*wžhš?–K“}ë‹ïŠ0‰1ˆ6‡Ó‡6†Æ†s†b††	…Ô…ˆ…`…H…X…v…~…b…W…8…3…U…Q…€…m…S………8……C… …J…E„÷……=…N…_…o…3…+…-…D…A…-……1……)…,……B„ò„ÿ„ú……………<……C…"…0…*„÷………C…<„â……!…+…$„ó………#…7…………=„ô…3…J…8„Ñ…4„ü………O…8„ç„ù……	…	…D…,……,……„á„õ………+…%……(…„ù……<„û…J……*……R…(„÷…(…8…/……8……„ô…~…_…&…1….…f…O……<…	…5…F…T…o…7…p…(…@…i…`…f…n…¥……Î…Ð…ú…ÿ†˜†ã‡ˆÐŠxû“Ÿ¸1ç¦0Ák3c"ªß±·T¤*œW™K˜{™*{¨z{m–“¨‘eŽêf‹ÁŠV‰¡ˆµˆ‡t†ï†L†:†%…ú…î…¸…s…N…Z…‡…b……J…A…W……F…V…)…M…x…U„ø……e……(….…A…<…;…C…;……*……(…P…j…)…*…;……7„å…=„Ô…….………F…,…N………:……'…R…„â…
-…0…O…G……/…O…!…3„ù…1…D…H…„ÿ„ò…>…
-…+„ü„ò…6…
-……1……#…>…-…,…E………E………'………*…3…„ô… ……	……-…&…(„à…-…
-…„Ë„ó……:…W„ð„Ì…(„÷……:…%…/…V……e……O…5…C………n…;…3…!…>…>…H…X…=…S…{…F…u…… ……²…É††A†I†Ï‡™ˆMŠŒÑ‘R›h¬øÍ¶ö>fçAÂV©j,–°”?“4“w¹{Çy)µ7ïŒ¶‹!Š2‰@ˆ·‡ä‡²‡w†ê†s†…÷†	…®…¨…¶…z…a…D…1…R…C…C…[…O…"…%……!…f……p……,…J……+……Y…#……C…m…'…!….…7……………G…„ï„í…9…9…3……„þ…„é………„õ……3…
-… …#……'……I……:…„ì…………,…<„ê……3………)„ý…$…M„ñ……Q„ç… ……&…=……-…………$….„ù……5……-………)…7„è…………„ñ…8…
-……0„æ… …&„ö…„÷…%…,……	……&……„Û„ô…M………W……#…+…_…R…E…<…J…A…P…M…d…f…\…|…s…›…ÿ…ò†w†À‡?‡¼‰‹<•V ±Å»Ò-Î¼,ª‰ž— ’LcÄMuCu'yyŸŒ‹‹\ŠÛ‰”‰ˆœ‡Ý‡e‡†û†{†<…ÿ…Ù…Ò…~…c…À…c…0…a…A…6…B…,…\……9…M…N……k…`…D…:…V…M………`…5…-…F„û…<…W…#…)………/………G„í…1…………„ö………*„ñ……8……	…0…… …&…&……*…'…:… ……<…!„Î……@…… ………"…]„ê…/……#„ó…&„ò…"…)„ü…&…„ï…„ø„ö………D……/…8…„í…………„ð…9…>„Ý„ì…(……………… ……A…„ü…?……………&…2…B…F….…7…W……>…I…A……O…i…1…j…,…>…O…D…&…Ÿ…e…©…o…„…Á…Ì…Ý†=†®†ã‡pˆžŠ0Œ—K–ža§!«Â©¢c›I•1‘ùŽÕ«E	|‹–‹dŠDŠ#‰WˆÂˆ`‡Ö‡‡†Ü††,†,…Ê…Î…Æ…£…k…‡…g…‹…E…e…6…1………S…7…L…&…„é……„ü„ö…F…E…V„â„ü…A…,…8„þ……>…\……$……$…^…2…V…1…0………3…„ä… ……-………0………T……-…,……,…9…'……………………„å…„ô„Þ…*„í…C…d…,…#……I…;…… „ú„õ„ø…'………„é…&…U…8…„ç…#……„ó…
-…%„ì…D…„è…………W…)„ö…,… „ã„Ù……B……1………b……7…>…*……S…]……/…(…6…f…G…n…0…Y…3……&…]…u…r…ƒ…ˆ…œ…†…‘…û††P†³‡9ˆˆÜŠ‡ŒÒ³“w–¼™n˜U•¯’­³ÃŒ“‹£‹|ŠÛŠñqˆŠ0‰Ð‰ˆ¶ˆŠˆ‡¨‡1‡†Ò†­†@†…ã…î…Ê…Ã…„…„…n…|…I…e…7…(…E…=…N……I…]…2…0…0…	…8„÷……0…&…P…/……T……„é….……H…R…$…/…W„ø……w……… ……&……(…7„è…$…….……I„ý…$„ù…„õ……(……:„é……"…7…!…„ä…W…)…………9…„ñ…/…;…-…!…	„ø… „ú…)… …/…%„ø„ô……)…$…8…„õ…&…„ç…)„ý…………7…I…$…………R…@…G…!………….…„þ„ë…3…                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

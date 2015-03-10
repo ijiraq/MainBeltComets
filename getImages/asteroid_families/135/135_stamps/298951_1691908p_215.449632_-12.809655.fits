@@ -1,478 +1,0 @@
-SIMPLE  =                    T / file does conform to FITS standard             BITPIX  =                   16 / number of bits per data pixel                  NAXIS   =                    2 / number of data axes                            NAXIS1  =                  195 / length of data axis 1                          NAXIS2  =                  194 / length of data axis 2                          EXTEND  =                    T / FITS dataset may contain extensions            COMMENT   FITS (Flexible Image Transport System) format is defined in 'AstronomyCOMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H COMMENT                                                                         COMMENT Observation Summary                                                     COMMENT -------------------                                                     CMMTOBS = 'N/A     '                                                            CMMTSEQ = 'SINGLE[1/1] - Ref + [0.0 0.0]'                                       OBJECT  = 'R_13AE_8'                                                            OBSERVER= 'QSO Team'                                                            PI_NAME = 'Brett Gladman'                                                       RUNID   = '14AP05  '                                                            FILENAME= '1691908o'           / Base filename at acquisition                   PATHNAME= '/data/niele/megacam/14AQ03-Feb24' / Original directory name at acqui EXTNAME = 'ccd23   '           / CCD number in the mosaic                       EXTVER  =                   23 / Now matches the CCD number in the mosaic       DATE    = '2014-02-25T13:05:16' / UTC Date of file creation                     HSTTIME = 'Tue Feb 25 03:05:16 HST 2014' / Local time in Hawaii                 IMAGESWV= 'CFHT DetCom v4.44 (Nov 18 2011)' / Image creation software version   COMMENT file 1691908o46, raster FULL, etype OBJECT, etime 287, filter filter_na COMMENT                                                                         COMMENT                                                                         COMMENT Unique amplifier IDs for MegaCam:                                       COMMENT                                                                         COMMENT -- -- 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 -- --       COMMENT 72 73 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 74 75       COMMENT 76 77 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 78 79       COMMENT -- -- 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 -- --       COMMENT                                                                         COMMENT                                                                         COMMENT Detector                                                                COMMENT --------                                                                DETECTOR= 'MegaCam '                                                            DETSIZE = '[1:23219,1:19354]'  / Total data pixels in full mosaic               RASTER  = 'FULL    '           / Active raster description                      CCDSUM  = '1 1     '           / Binning factors                                CCDBIN1 =                    1 / Binning factor along first axis                CCDBIN2 =                    1 / Binning factor along second axis               PIXSIZE1=                 13.5 / Pixel size for axis 1 (microns)                PIXSIZE2=                 13.5 / Pixel size for axis 2 (microns)                PIXSCAL1=               0.1850 / Pixel scale for axis 1 (arcsec/pixel)          PIXSCAL2=               0.1850 / Pixel scale for axis 2 (arcsec/pixel)          AMPNAME = '23a + 23b'          / List of amplifiers names for this image        AMPLIST = 'A B     '           / List of amplifiers for this CCD                CCDSIZE = '[1:2048,1:4612]'    / Detector imaging area size                     DETSEC  = '[12703:14750,5045:9656]' / Mosaic area of the entire readout         DETSECA = '[12703:13726,5045:9656]' / Mosaic area of the A readout              DETSECB = '[14750:13727,5045:9656]' / Mosaic area of the B readout              DATASEC = '[33:2080,1:4612]'   / Imaging area of the entire CCD in raw frame    ASECA   = '[1:1056,1:4612]'    / Section by A amplifier in raw frame            DSECA   = '[33:1056,1:4612]'   / Image area of A amplifier in raw frame         TSECA   = '[33:1056,1:4612]'   / Trim section of A amplifier = DSECA            BSECA   = '[1:32,1:4644]'      / Overscan of A amplifier in raw frame           CSECA   = '[1:1024,1:4612]'    / Section in full CCD after BSECA cut out        ASECB   = '[1057:2112,1:4612]' / Section by B amplifier in raw frame            DSECB   = '[1057:2080,1:4612]' / Image area of B amplifier in raw frame         TSECB   = '[1057:2080,1:4612]' / Trim section of B amplifier = DSECB            BSECB   = '[2081:2112,1:4644]' / Overscan of B amplifier in raw frame           CSECB   = '[1025:2048,1:4612]' / Section in full CCD after BSECB cut out        CCD     = 'Marconi/EEV CCD42-90'                                                CCDNAME = '8351-6-4'           / Name of the CCD (manufacturer reference)       CCDNICK = 'Clarisse'           / Nickname of the CCD                            MAXLIN  =                65535 / Level at 1% linearity departure (ADU) = Averag MAXLINA =                65535 / Level at 1% linearity departure (ADU) A amp    MAXLINB =                65535 / Level at 1% linearity departure (ADU) B amp    SATURATE=                65535 / Saturation value (ADU)                         GAIN    =               1.5700 / Converting gain (e-/ADU) = Average [A,B] amps  GAINA   =               1.5600 / Converting gain of A amplifier (e-/ADU)        GAINB   =               1.5800 / Converting gain of B amplifier (e-/ADU)        RDNOISE =                    3 / Read noise (electrons) = Average [A,B] amps    RDNOISEA=                    3 / Read noise (electrons) A amplifier             RDNOISEB=                    4 / Read noise (electrons) B amplifier             DARKCUR =                  2.8 / Dark current (e-/pixel/hour)                   QEPOINTS= '48%@350 86%@450 83%@550 78%@650 62%@750 38%@850 12%@950' / QE%@wavel CONSWV  = 'Not implemented'    / Controller software DSPID and SERNO versions   DETSTAT = 'temp_status'        / temp_status_comment                            DETTEM  =              -133.17 / Temp. Cold Plate (C)                           INHERIT =                    F / No need to inherit global headers              TIMESYS = 'UTC     '           / Time System for DATExxxx and TIMExxxx          OBSTYPE = 'OBJECT  '           / Observation/ Exposure type                     EXPTYPE = 'OBJECT  '           / OBSTYPE is the new name for this               EXPNUM  =              1691908 / CFHT odometer number                           OBSID   =              1691908 / CFHT odometer number                           EXPTIME =              287.083 / Measured integration time (seconds)            EXPREQ  =                287.0 / Requested integration time (seconds)           EXPMEAS =              287.083 / Measured shutter time (seconds)                DARKTIME=               287.00 / Dark current time (seconds)                    ORIGIN  = 'CFHT    '           / Canada-France-Hawaii Telescope                 INSTRUME= 'MegaPrime'                                                           INSTMODE= 'Normal  '           / Instrument Mode                                REGMODE = 'Normal  '           / Registration Mode                              RAOFF   =                  0.0 / Right ascension compensation                   DECOFF  =                  0.0 / Declination compensation                       BIASSEC = '[0:0,0:0]'          / Dual amplifiers readout - see BSECA & BSECB    SHUTOPEN=               0.0000 / Shutter blade opening time (msec)              SHUTCLOS=               0.0000 / Shutter blade closing time (msec)              FILTER  = 'r.MP9601'           / Name of filter in position                     FILTERID=                 1305 / Holder ID (see also FILTER)                    TESTSPHE=                  0.6 /    temp, surface, telescope spider w/He deg C  QRUNID  = '14BQ01  '           / Q RunID                                        QOBSERVE= 'Peter Forshay'      / Name of Q Observer                             QCOORD  = 'Todd Burdullis'     / Name of Q Coordinator                          QID     = 55150500000000037307                                                  QOBSEQID= 55001400000000128838                                                  QICSEQID= 55051200000000155547                                                  QOBITER =                    1                                                  QOFFID  = 10000000000000000001                                                  REL_DATE= '2015-08-31T00:00:00' / UTC Release Date                              QOGLABEL= 'OG19    '                                                            QOBLABEL= 'OB58    '                                                            QICLABEL= 'IC2     '                                                            TELESCOP= 'CFHT 3.6m'          / Hawaii Big Island, Mauna Kea                   LATITUDE=            19.825252 / Latitude (degrees N)                           LONGITUD=          -155.468876 / Longitude (degrees E)                          TELSTAT = 'auto_guide'         / Telescope Control System status                DATE-OBS= '2014-02-25'         / Date at start of observation (UTC)             UTIME   = '13:00:22.01'        / Time at start of observation (UTC)             UTC-OBS = '13:00:22.01'        / Time at start of observation (UTC)             MJDATE  =        56713.5419214 / Modified Julian Date at start of observation   MJD-OBS =        56713.5419214 / Modified Julian Date at start of observation   SIDTIME = '12:59:44.64'        / Sidereal time at start of observation          LST-OBS = '12:59:44.64'        / Sidereal time at start of exposure             DATEEND = '2014-02-25'         / Date at end of observation (UTC)               UTCEND  = '13:05:56.89'        / Time at end of observation (UTC)               MJDEND  =        56713.5457973 / Modified Julian Date at end of observation     LSTEND  = '13:05:20.44'        / Sidereal time at end of exposure               EQUINOX =               2000.0 / Equinox of coordinates                         RADECSYS= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  RA      = '14:22:20.86'        / Telescope right ascension                      DEC     = '-12:41:08.0'        / Telescope declination                          HA      = '-1:22:36.22'        / Telescope hour angle at start of exposure      HAEND   = '-1:17:00.42'        / Telescope hour angle at end of exposure        INSTZRA =                15.00 / Instrument zero for RA in arc seconds          INSTZDEC=                15.00 / Instrument zero for Dec in arc seconds         RA_DEG  =           215.586917 / Telescope right ascension in degrees           DEC_DEG =           -12.685556 / Telescope declination in degrees               OBJNAME = 'R_13AE_8'           / Target name                                    OBJMAG  =                  0.0 / Target magnitude                               OBJEQUIN=               2000.0 / Target equinox                                 OBJRADEC= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  OBJRA   = '14:22:20.86'        / Target right ascension                         OBJDEC  = '-12:41:08.0'        / Target declination                             OBJRAPM =                 0.00 / Target right ascension proper motion in as/yr  OBJDECPM=                 0.00 / Target declination proper motion in as/yr      NGUIDER =                    2 / TCS Number of guiders                          NGUISTAR=                    2 / TCS number of guide stars/probes in use        GUINAME = 'North field guider (South probe)' / TCS guider name                  GUIEQUIN=               2000.0 / TCS guider equinox                             GUIRADEC= 'FK5     '           / TCS guider system for equinox                  GUIRA   = '14:22:45.97'        / TCS guider right ascension                     GUIDEC  = '-11:59:52.3'        / TCS guider declination                         GUIRAPM =                 0.00 / TCS guider right ascension proper motion arcse GUIDECPM=                 0.00 / TCS guider declination proper motion arcsec    GUIOBJN = 'auto GSC: 0'        / TCS guider object name                         GUIMAGN =                 11.5 / TCS guider object magnitude                    XPROBE  =               28.731 / Telescope bonnette guide probe X position      YPROBE  =               19.519 / Telescope bonnette guide probe Y position      ZPROBE  =              -12.350 / Telescope bonnette guide probe Z position      GUIFLUX =                -9999 / TCS guider flux                                GUIFWHX =              -9999.9 / TCS guider average x FWHM in pixels            GUIFWHY =              -9999.9 / TCS guider average y FWHM in pixels            SKYFLUX =                    0 / TCS total sky flux                             GUINAME1= 'North field guider (South probe)' / TCS guider #1 identification     GUIEQUI1=               2000.0 / TCS guider #1 equinox                          GUIRADE1= 'FK5     '           / TCS guider #1 system for equinox               GUIRA1  = '14:22:45.97'        / TCS guider #1 right ascension                  GUIDEC1 = '-11:59:52.3'        / TCS guider #1 declination                      GUIRAPM1=                 0.00 / TCS guider #1 right ascen proper motion arcsec GUIDEPM1=                 0.00 / TCS guider #1 declination proper motion arcsec GUIOBJN1= 'auto GSC: 0'        / TCS guider #1 object name                      GUIMAGN1=                 11.5 / TCS guider #1 object magnitude                 GUIPOSX1=               28.731 / TCS guider #1 probe x position                 GUIPOSY1=               19.519 / TCS guider #1 probe y position                 GUIPOSZ1=              -12.350 / TCS guider #1 probe z position                 GUIFLUX1=                -9999 / TCS guider #1 flux                             GUIFWHX1=              -9999.9 / TCS guider #1 average x FWHM in pixels         GUIFWHY1=              -9999.9 / TCS guider #1 average y FWHM in pixels         GUINAME2= 'South field guider (North probe)' / TCS guider #2 identification     GUIEQUI2=               2000.0 / TCS guider #2 equinox                          GUIRADE2= 'FK5     '           / TCS guider #2 system for equinox               GUIRA2  = '14:22:46.25'        / TCS guider #2 right ascension                  GUIDEC2 = '-13:21:19.3'        / TCS guider #2 declination                      GUIRAPM2=                 0.00 / TCS guider #2 right ascen proper motion arcsec GUIDEPM2=                 0.00 / TCS guider #2 declination proper motion arcsec GUIOBJN2= 'auto GSC: 0'        / TCS guider #2 object name                      GUIMAGN2=                 13.2 / TCS guider #2 object magnitude                 GUIPOSX2=               27.998 / TCS guider #2 probe x position                 GUIPOSY2=               18.678 / TCS guider #2 probe y position                 GUIPOSZ2=              -12.323 / TCS guider #2 probe z position                 GUIFLUX2=                -9999 / TCS guider #2 flux                             GUIFWHX2=              -9999.9 / TCS guider #2 average x FWHM in pixels         GUIFWHY2=              -9999.9 / TCS guider #2 average y FWHM in pixels         AIRMASS =                1.278 / Airmass at start of observation                TELALT  =              51.5399 / Telescope altitude at start of observation, de TELAZ   =             146.2572 / Telescope azimuth at start, deg, 0=N 90=E 270= DOMEAZ  =                143.4 / Dome azimuth at start, deg, 0=N 90=E 270=W     MOONANGL=                67.20 / Angle from object to moon at start in degrees  MOONPHAS=                -0.12 / Moon phase @ 0 HST, 0..1 new>full, -1..0 >new  MOONUP  = 'False   '           / Moon up? True or False                         MOONALT =                -6.70 / Moon altitude at start in degrees              MOONAZ  =               106.90 / Moon azimuth at start in deg, 0=N 90=E 270=W   FOCUSID = 'MegaPrime'          / Telescope focus in use                         TELCONF = 'MegaPrime'          / Telescope focus in use                         CALFOCUS=               -3.315 / Telescope focus calculated from model in mm    DEFOCUS =                0.000 / Telescope defocus from calculated in mm        FOCUSPOS=                -3319 / Telescope focus encoder readout                TELFOCUS=                -3319 / Telescope focus encoder readout                BONANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ROTANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ISUGAIN =                 0.30 / Instrument Stabilization Unit control gain     ISURATE =                50.00 / ISU control rate in Hz                         ISUTCSOR=                 1.00 / ISU offload rate in Hz to telescope position   ISUSTATE= 'Full    '           / ISU control state (Off/Only/TCS/Full/Frozen)   ISUSTDVX=                 0.00 / ISU most recent minute std dev in x in arcsec  ISUSTDVY=                 0.00 / ISU most recent minute std dev in y in arcsec  FSAGAIN =                 0.00 / Focus Stage Assembly movement control gain     FSARATE =                 3.33 / FSA control rate in Hz                         FSATHRES=                5.000 / FSA movement threshold in mm                   FSASTATE= 'None    '           / FSA control state (Off/On/Paused)              FSANMOVE=                    0 / FSA number of actual moves in last 10 minutes  FSAMINZ =                0.000 / FSA minimum position in last 10 minutes        FSAMAXZ =                0.000 / FSA maximum position in last 10 minutes        FSAMEANZ=                0.000 / FSA mean position in last 10 minutes           FSASTDVZ=                0.000 / FSA position std dev in last 10 minutes        TCSGPSBC= '0056 13:00:11.380832' / TCS GPS read out in BCD                      TCSGPSTM=             13.00316 / TCS GPS clock time in decimal hours            TCSRBUSS= '08:12:10.011'       / TCS RBUSS clock time                           TCSEPICS= '20140225 12:59:53.386' / TCS EPICS clock time                        TCSAMODE= 'G       '           / TCS acquire mode - T/O/G/g/P for t/o/g coords  TCSMJD  =        56713.5417981 / TCS MJD                                        TCSLST  =             12.99277 / TCS LST in decimal hours                       TCSAPHA =            -20.89285 / TCS apparent hour angle in degrees             TCSAPDEC=            -12.75025 / TCS apparent declination in degrees            TCSOBHA =            -20.88853 / TCS observed hour angle in degrees             TCSOBDEC=            -12.74348 / TCS observed declination in degrees            TCSENHA =               -75899 / TCS hour angle absolute encoder in bits        TCSENDEC=               -35316 / TCS declination absolute encoder in bits       TCSEDHA =            -20.78664 / TCS hour angle absolute encoder in degrees     TCSEDDEC=            -12.75653 / TCS declination absolute encoder in degrees    TCSINHA =                    0 / TCS hour angle incremental encoder in bits     TCSINDEC=                    0 / TCS declination incremental encoder in bits    TCSSEHA =                -0.06 / TCS hour angle servo error in arcsec           TCSSEDEC=                 0.02 / TCS declination servo error in arcsec          TCSGEHA =                 0.00 / TCS hour angle guider error in arcsec          TCSGEDEC=                 0.00 / TCS declination guider error in arcsec         TCSMVX  =            -9999.900 / TCS secondary guider acquisition x move in mm  TCSMVY  =            -9999.900 / TCS secondary guider acquisition y move in mm  TCSMVRA =              -6.2600 / TCS right ascension acquisition move in arcsec TCSMVDEC=              -8.4900 / TCS declination acquisition move in arcsec     DOMESHUT= 'OPEN    '           / Dome shutter state (OPEN/CLOSED)               MIRRCOV = 'OPEN    '           / Mirror cover state (OPEN/CLOSED)               WINDSCR =                    0 / Windscreen elevation in degrees                DOMELOUV= 'CLOSED  '           / Dome louver state (OPEN/CLOSED)                VENTMODE= 'MANUAL  '           / Dome venting control mode                      VENTL1  = 'CLOSED:0:0:0'       / Dome vent L1 door and vane configuration       VENTL2  = 'CLOSED:0:0:0'       / Dome vent L2 door and vane configuration       VENTL3  = 'CLOSED:0:0:0'       / Dome vent L3 door and vane configuration       VENTL4  = 'CLOSED:0:0:0'       / Dome vent L4 door and vane configuration       VENTL5  = 'CLOSED:0:0:0'       / Dome vent L5 door and vane configuration       VENTL6  = 'CLOSED:0:0:0'       / Dome vent L6 door and vane configuration       VENTR1  = 'CLOSED:0:0:0'       / Dome vent R1 door and vane configuration       VENTR2  = 'CLOSED:0:0:0'       / Dome vent R2 door and vane configuration       VENTR3  = 'CLOSED:0:0:0'       / Dome vent R3 door and vane configuration       VENTR4  = 'CLOSED:0:0:0'       / Dome vent R4 door and vane configuration       VENTR5  = 'CLOSED:0:0:0'       / Dome vent R5 door and vane configuration       VENTR6  = 'CLOSED:0:0:0'       / Dome vent R6 door and vane configuration       TESPMIRE=                -2.90 / 03 temp, surface, primary mirror east deg C    TESPMIRW=                 1.20 / 02 temp, surface, primary mirror west deg C    TESPMIRS=                 1.11 / 01 temp, surface, primary mirror west side deg TEAPMCLW=                 0.70 / 54 temp, air, primary mirror cell west deg C   TEAMIRCI=                 0.79 / 58 temp, air, mirror cooling in at unit deg C  TEAMIRCO=                 1.00 / 27 temp, air, mirror cooling out at cell deg C TEAPMSPN=             -9999.90 / 65 temp, air, mirror spigot north cass deg C   TEAPMSPS=                 1.76 / 64 temp, air, mirror spigot nouth M3 deg C     TEATRNGE=                 0.90 / 23 temp, air, top ring east deg C              TEATRNGW=                 0.68 / 06 temp, air, top ring west deg C              TEANRLSB=                 9.56 / 19 temp, air, north rail support beam deg C    TESHRSET=                10.99 / 08 temp, surface, horseshoe east top deg C     TESTTRSH=                 0.46 / 97 temp, surface, telescope truss S high deg C TESTTRNM=                 1.14 / 94 temp, surface, telescope truss N mid deg C  TESTTREM=                 0.62 / 95 temp, surface, telescope truss E mid deg C  TESTTRWM=                 0.71 / 96 temp, surface, telescope truss W mid deg C  TESTTRSL=                 0.66 / 98 temp, surface, telescope truss S low deg C  TESTTRSE=                 1.22 / 69 temp, surface, telescope truss SE lower deg TEALOWWS=                -1.90 / 38 temp, air, dome lower weather stat side deg TEATOPWS=                -1.20 / 36 temp, air, dome top weather stat side deg C TEATOPOP=               -13.50 / 37 temp, air, dome top opposite weath side deg TEA2INCH=                 1.09 / 45 temp, air, two inches above fifth floor deg TEA2INEB=                 4.70 / 53 temp, air, two inches up by electronics deg TEA6FOOT=                 0.83 / 43 temp, air, six feet above fifth floor deg C TESCONRM=                 2.25 / 61 temp, surface, floor above control room deg TESPIERN=                 3.60 / 59 temp, surface, floor by north pier deg C    TESPIERS=                 3.30 / 60 temp, surface, floor by south pier deg C    TEAWTHRT=                 0.80 / 35 temp, air, weathertron deg C                TEMPERAT=                 0.74 / 86 temp, air, weather tower deg C              WINDSPED=                34.82 / 84 wind speed, weather tower knots             WINDDIR =               288.22 / 85 wind direction, weather tower deg (N=0 E=90 RELHUMID=                 5.96 / 87 relative humidity, weather tower %          PRESSURE=               611.66 / 31 barometric pressure, control room mb        DDSEEMEN=                 0.45 / Dome DIMM mean seeing, arc seconds             DDSEEMED=                 0.46 / Dome DIMM median seeing, arc seconds           DDSEEMOD=                 0.48 / Dome DIMM mode seeing, arc seconds             DDSEESTD=                 0.05 / Dome DIMM seeing deviation, arc seconds        WMSEEMEN=                 0.04 / Weather tower MASS mean seeing, arc seconds    WMSEEMED=                 0.04 / Weather tower MASS median seeing, arc seconds  WMSEEMOD=                 0.04 / Weather tower MASS mode seeing, arc seconds    WMSEESTD=                 0.00 / Weather tower MASS seeing deviation, arc secon WDSEEMEN=                 0.42 / Weather tower DIMM mean seeing, arc seconds    WDSEEMED=                 0.42 / Weather tower DIMM median seeing, arc seconds  WDSEEMOD=                 0.42 / Weather tower DIMM mode seeing, arc seconds    WDSEESTD=                 0.00 / Weather tower DIMM seeing deviation, arc secon SPOZPMEN=                 0.10 / SkyProbe (orig) mean absorption, magnitude     SPOZPMED=                 0.10 / SkyProbe (orig) median absorption, magnitude   SPOZPMOD=                 0.10 / SkyProbe (orig) mode absorption, magnitude     SPOZPSTD=                 0.00 / SkyProbe (orig) absorption deviation, magnitud CRUNID  = '14Am01  '           / Elixir camera run ID                           BIAS0   =    1005.242492675781 / Mean bias level                                BIAS1   =    1114.706298828125 / Mean bias level                                FLAT    = '13B_r_flat.fits'    / Flat Image                                     CADCPROC=                  2.0 / Version of cadcproc                            BZERO   =                32768                                                  HISTORY imsplice: FLIPS ver 3.0 - Elixir by CFHT - Tue Feb 25 2014 -  3:06:55   HISTORY imsplice: Splicing the two readouts (A&B) per CCD into a unique image   HISTORY imsplice: Splicing results in all detectors as if read from A amplifier HISTORY imsplice: NEXTEND keyword updated (/2) = number of CCDs vs. amplifiers  HISTORY imsplice: EXTNAME keyword becomes `ccdxx` instead of `ampxx`            HISTORY imsplice: AMPNAME keyword now covers both amplifiers (eg `29a + 29b')   HISTORY imsplice: keyword {GAIN, RDNOISE, MAXLIN} replaced by two keywords [A,B HISTORY imsplice: DATASEC and DETSEC keywords now reflect the entire CCD        HISTORY imsplice: BIASSEC becomes irrelevant -> replaced by BSECA & BSECB       HISTORY imsplice: New keywords are DETSECA, DETSECB, DSECA, DSECB, TSECA, TSECB HISTORY imsplice: New keywords are ASECA, ASECB, CSECA, CSECB                   COMMENT Unique detector IDs for MegaCam (North on top, East to the left)        COMMENT    --------------------------                                           COMMENT    ba ba ba ba ba ba ba ba ba                                           COMMENT    00 01 02 03 04 05 06 07 08                                           COMMENT --------------------------------                                        COMMENT ba ba ba ba ba ba ba ba ba ba ba                                        COMMENT 36 09 10 11 12 13 14 15 16 17 37                                        COMMENT --------------------------------                                        COMMENT 38 18 19 20 21 22 23 24 25 26 39                                        COMMENT ab ab ab ab ab ab ab ab ab ab ab                                        COMMENT --------------------------------                                        COMMENT    27 28 29 30 31 32 33 34 35                                           COMMENT    ab ab ab ab ab ab ab ab ab                                           COMMENT    __________________________                                           COMMENT The two upper rows of CCDs are flipped, a=A amp, b=B amp                COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  HISTORY = AstroGwyn: Run on 2014-03-05 09:41:40 (UTC)                           NORDFIT =                    3 / Order of fit                                   NSTARS  =                  442 / Number of stars in final match                 ASTERR  =               0.0731 / 68%-tile of Residuals                          ASTCAT  = 'Etmp.swarp.rdm.relev' / Reference catalogue                          CTYPE1  = 'RA---TAN'           / Coordinate type                                CTYPE2  = 'DEC--TAN'           / Coordinate type                                CRVAL1  =    215.586920000     / Tangent point RA, degrees                      CRVAL2  =   -12.6855600000     / Tangent point Dec, degrees                     CRPIX1  = -2.491068343750000E+03 / Tangent point x, pixels                      CRPIX2  = 2.482173999230000E+03 / Tangent point y, pixels                       CD1_1   =  -5.190557195059E-05                                                  CD1_2   =  -2.244682594806E-07                                                  CD2_1   =  -1.532258275726E-07                                                  CD2_2   =   5.190494653970E-05                                                  PV1_0   =   1.275175061111E-04 / xi =   PV1_0                                   PV1_1   =    1.00131882808     /      + PV1_1 * x                               PV1_2   =   5.757738370696E-04 /      + PV1_2 * y                               PV1_3   =    0.00000000000     /      + PV1_3 * sqrt(x**2 + y**2)               PV1_4   =  -4.011940850674E-05 /      + PV1_4 * x**2                            PV1_5   =  -3.565566221224E-05 /      + PV1_5 * x*y                             PV1_6   =  -1.834506041827E-05 /      + PV1_6 * y**2                            PV1_7   =  -2.268225112571E-02 /      + PV1_7 * x**3                            PV1_8   =  -1.695779579600E-04 /      + PV1_8 * x**2 * y                        PV1_9   =  -2.268669036340E-02 /      + PV1_9 * x * y**2                        PV1_10  =  -4.780448998073E-05 /      + PV1_10* y**3                            PV2_0   =   1.140380228560E-04 / eta =  PV2_0                                   PV2_1   =    1.00139033587     /      + PV2_1 * y                               PV2_2   =   5.761092754765E-04 /      + PV2_2 * x                               PV2_3   =    0.00000000000     /      + PV2_3 * sqrt(x**2 + y**2)               PV2_4   =  -3.792485142351E-05 /      + PV2_4 * y**2                            PV2_5   =  -3.688457518717E-05 /      + PV2_5 * y*x                             PV2_6   =  -1.717505910712E-05 /      + PV2_6 * x**2                            PV2_7   =  -2.268989196376E-02 /      + PV2_7 * y**3                            PV2_8   =  -1.694806847706E-04 /      + PV2_8 * y**2 * x                        PV2_9   =  -2.268782827779E-02 /      + PV2_9 * y * x**2                        PV2_10  =  -4.755364708043E-05 /      + PV2_10* x**3                            HISTORY = PhotGwyn: Run on 2014-03-05 17:41:58 (UTC)                            ZPO     =               32.117 / Original zeropoint from Elixir                 PHOTZP  =               31.976 / Best estimate zeropoint                        PHOTZPS =                0.004 / Uncertainty on PHOTZP (random only)            PHOTZPN =                   92 / Number of usuable calibration stars            ZPD     =               30.000 / Desired, post-SWarp zeropoint                  ZPR     =                1.976 / zeropoint shift PHOTZP-ZPD                     FSCALE  =             0.161972 / Scaling factor to get this zeropoint shift     PHOTREF =   'previous MegaCam' / Source: Etmp.photcat                           COMMENT   PhotGwyn: ZPO = 2.5*log10(EXPTIME) + PHOT_C + PHOT_K*(AIRMASS-1)      COMMENT   PhotGwyn: ZPO only valid if image taken under photometric conditions  HISTORY = PhotGwyn: PHOTZP derived from previous MegaCam data for this CCD only COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ƒñ„#ƒð„ƒðƒõ„ƒîƒÓƒÉƒÜ„„ƒ×ƒï„"ƒæ„„ƒù„ƒè„„ƒÓƒìƒÑƒÐ„ ƒê„'ƒö„ƒú„"ƒ÷ƒð„ƒìƒñ„,„ƒü„(ƒÝ„+„„ƒðƒÒ„ƒïƒæ„
-„Oƒºƒù„ƒç„ƒÍ„
-„	ƒÜƒû„"„„%„„„ „ƒÌ„
-„„	„ƒàƒñ„ƒÙ„ƒþ„!ƒú„$„„ƒßƒØ„$ƒêƒïƒü„„ƒ¹„„&„ƒæ„ƒúƒñƒÔ„„!ƒå„ƒá„„ƒüƒÍ„„ƒûƒõ„D„ƒïƒúƒÕƒêƒó„„ƒâƒÜƒô„ƒò„„ƒÿ„!„ƒý„6„ƒúƒðƒö„„`„ƒßƒé„ƒëƒþƒÝƒ÷„„„ƒêƒðƒçƒìƒÏ„„ƒâ„(ƒß„ƒâƒ°ƒãƒÄ„ƒòƒèƒüƒÙƒÕƒÿ„ƒðƒê„ƒ÷ƒ÷ƒæƒòƒì„„O„„8ƒãƒæƒÝ„„ƒÉƒê„	ƒíƒí„!„ƒöƒÜƒé„$„„'„ƒ÷ƒôƒé„
-„ƒÛ„„ƒå„„ƒïƒéƒöƒèƒíƒúƒó„„„„„ƒÞ„+„ƒö„$„ƒ¹„*ƒõ„ƒê„„„„ƒèƒó„„„„ƒó„„.ƒøƒôƒÝ„ƒûƒöƒçƒß„ƒðƒð„IƒÌ„ „ƒôƒß„ƒÕƒí„„
-ƒàƒÚƒÁ„ƒú„„„„„„ƒíƒÞƒ¸ƒî„ƒïƒçƒó„ƒê„>„!„ƒêƒþƒìƒÿ„ƒÓ„„;„)ƒéƒùƒ¿ƒ­„ƒòƒû„„
-„„„„	„ƒÒƒù„5ƒñƒÛƒÑ„ƒà„ƒúƒåƒèƒÛƒÓƒû„„ƒúƒÜ„ƒí„ƒÖƒÉ„ƒá„„	ƒîƒä„)„ƒîƒ­„ƒó„ƒûƒÞ„%ƒíƒí„ƒïƒÕƒë„ƒØƒúƒö„'ƒùƒï„ƒÿ„ƒð„#ƒõƒõƒîƒýƒëƒâƒÔ„ƒæ„%ƒáƒÝƒïƒëƒø„ƒþ„+ƒà„ƒñƒðƒÒƒ÷„ƒÙ„ƒ¾„ƒ÷ƒÒƒºƒåƒã„„„„ƒÞ„ƒ÷„„(„„„„ƒÖ„
-ƒ÷„+„
-ƒßƒþ„ƒüƒûƒú„ƒüƒºƒþƒÔƒòƒëƒÛ„„	„„ƒã„2„„„ƒÜƒ¼ƒìƒéƒð„(„„ ƒì„ƒËƒùƒõƒü„ƒï„ƒÕƒôƒïƒÇ„ƒØ„ƒÛƒÜƒåƒÞƒîƒìƒí„
-„„ƒë„:ƒü„„„„%„„„ƒý„„ƒÕ„„ƒû„„„9ƒ÷ƒÍƒéƒúƒúƒñ„ƒýƒã„„ƒù„	ƒÏƒÇ„ƒâ„ƒå„ƒêƒõƒü„
-„„„ƒóƒç„9„ƒíƒÑ„ƒÕƒãƒâƒÈƒÝ„ƒäƒã„ƒØƒõ„ƒêƒõƒÏ„„"ƒáƒùƒï„„ƒù„ƒæƒøƒïƒôƒòƒè„	ƒóƒùƒÔƒýƒùƒø„„:ƒØ„ƒôƒÀƒöƒü„ƒÑ„ ƒÚ„„	ƒüƒèƒ÷„ ƒåƒöƒýƒ÷ƒíƒÐƒô„.„„0ƒßƒâƒÿ„ƒæƒú„„$ƒû„„„-ƒðƒÜƒê„ƒû„+ƒüƒï„ƒù„„ƒöƒèƒù„„*„„ƒ¾ƒø„:„„„ „„ƒÕƒÌƒïƒèƒòƒïƒøƒîƒíƒýƒõ„	„ ƒûƒèƒü„$ƒöƒõ„ƒù„„„„"„%ƒá„„$ƒÍƒôƒòƒèƒöƒÿ„5„6ƒôƒö„ƒß„ƒìƒÐ„ƒì„„)„„„„„ƒþ„&„ƒÖƒûƒýƒÐ„„ƒðƒñ„ƒòƒüƒÓƒöƒæƒæ„„ƒøƒâ„ƒòƒÚ„ „ƒë„„6ƒì„ƒê„ƒèƒ÷„>ƒÝƒìƒû„ƒù„„.„„ƒðƒî„+ƒÏ„$„6„„ƒêƒöƒí„ƒÅ„ƒåƒî„„8ƒåƒýƒìƒöƒÙƒüƒãƒÔ„ƒý„„
-„„ „ƒìƒô„ƒòƒÛƒøƒû„/ƒÚ„ƒîƒö„„5„„P„ƒæ„ƒ÷ƒõƒíƒü„„„„!ƒóƒÔ„„„„„ƒêƒð„-„ƒÿ„„ƒó„ƒÝ„ƒçƒúƒçƒõƒà„„
-ƒÝ„ƒò„ƒøƒåƒäƒà„„„ƒïƒß„„„ƒÕ„ƒäƒá„+ƒÉƒº„ƒÃ„'„„„ƒÈƒÉ„ƒèƒØ„„ƒÿ„ƒðƒñƒù„„#„ƒÍ„„ƒúƒë„%ƒ÷„@„ƒüƒúƒë„„„ƒþƒæ„ƒè„ƒßƒÞƒàƒóƒãƒÿƒá„ƒìƒÿ„„„ƒÙƒ½ƒûƒàƒöƒ×ƒýƒÿ„"ƒæƒÏ„ƒîƒÕƒ»„ƒåƒõ„„ƒÊ„!„#„ƒûƒÑƒÖƒìƒòƒñƒúƒÝƒàƒÚ„8„ „
-„„ƒã„ƒëƒî„ƒéƒÆ„ƒâƒôƒèƒù„ƒõ„ƒðƒÔ„ƒÍ„„ƒÕƒò„ƒôƒûƒì„(ƒâ„
-ƒôƒý„„„ƒô„„ƒìƒôƒ÷ƒÛ„„ƒé„ƒöƒé„ƒÞƒ×ƒõ„%„3„$ƒìƒõƒô„„)ƒøƒñ„„ƒú„ƒÖƒÛ„ ƒëƒèƒè„„-„„&„„ƒÖ„ƒõ„%ƒÃƒâƒûƒ×„„„ƒßƒû„ƒë„ƒñƒüƒÌƒîƒëƒùƒ×„7ƒÖ„ƒÜ„„ƒùƒèƒõ„/„„
-„„-„ƒëƒ÷ƒØƒñ„ƒÒƒìƒþ„*„=„ƒÚƒô„ƒÜ„„ƒèƒÅ„ ƒïƒå„ƒö„„„ „ƒíƒø„"ƒþƒã„ƒýƒþ„„„ƒò„ƒÞƒôƒöƒø„ƒçƒòƒ÷„ „ƒä„7ƒÜ„„ ƒäƒÞƒåƒû„-ƒíƒéƒïƒïƒõ„ ƒïƒðƒéƒÓƒîƒø„„%ƒëƒø„„ƒõƒúƒÿ„-ƒÝ„2ƒÿƒþƒû„„	„'„ƒö„„ „ƒéƒæƒù„ƒêƒì„ƒÞƒâƒò„ƒÜ„ƒÕƒüƒô„„„ ƒÀƒûƒïƒí„ƒé„ ƒÆƒä„ƒôƒïƒÐƒÞƒûƒå„ „+„ƒäƒïƒðƒñƒÜƒõ„„ƒüƒå„ƒëƒá„ƒÉƒÚƒøƒÙƒßƒûƒûƒõƒôƒÞƒÐƒÜƒõƒÑƒðƒêƒÿ„„ƒÖƒõ„ƒåƒÏ„ƒñ„„„„„ƒüƒéƒê„1„„!ƒÚƒÀƒö„ƒç„„.„„ƒáƒæƒúƒê„„$„ƒäƒàƒ×ƒØƒÑƒâƒú„„ƒÿ„	„ƒëƒÔƒö„„ƒèƒû„ƒå„?ƒú„'ƒÙ„)ƒÿ„ƒì„ƒë„ƒì„„ „ „$„„aƒÙƒ¶ƒð„ƒÊƒþƒÝƒöƒØ„ƒÖƒê„ƒó„#„ƒô„ƒÐ„ƒæ„„„„„ƒ÷ƒâƒÙ„ƒÓ„„„%„%„$„„„%„'„„
-„„„„ƒè„ƒ÷„„„ƒî„ƒüƒæƒÓƒþ„ƒä„ƒãƒÃ„„ƒê„ƒÆƒêƒéƒèƒð„ƒþ„„ƒëƒå„ƒêƒð„„ƒ¶ƒù„ƒËƒêƒè„ƒí„ƒë„ƒü„ƒêƒÉƒçƒÉƒÛ„„ƒõƒù„ƒÙƒõ„„Gƒ÷ƒå„	ƒßƒêƒÈ„ „ƒÑƒïƒóƒÓ„ƒÝƒþ„„/ƒÏƒÅ„ƒß„ƒðƒý„ƒßƒçƒï„„„ ƒé„„?ƒÎ„ƒì„„„ ƒý„ƒãƒï„ „	„
-ƒáƒò„„„<ƒë„`„"ƒõ„ ƒÿƒÜ„+„„ƒåƒû„.ƒèƒíƒìƒÉƒÿƒü„ƒáƒã„
-ƒï„$ƒõƒåƒÙƒîƒñ„ƒÊƒâƒõƒî„'„„'ƒð„ƒû„„ƒ²ƒýƒÉƒÿƒÜƒù„„„„?ƒà„ƒÐƒô„%„ƒëƒÜ„ƒí„ƒíƒñƒä„ƒàƒü„#ƒ÷„„ƒÞ„„„ƒýƒßƒí„„ƒá„„ƒÝ„„ ƒù„ƒä„.„„„„„ƒß„'„ ƒò„„'„„3ƒó„ƒó„(„0„%„(„„ƒïƒóƒæ„„)„
-„„„„ƒìƒåƒã„„)ƒö„„ƒöƒëƒþ„ƒãƒùƒíƒë„„„„ƒøƒñƒóƒóƒçƒÙƒì„„ƒìƒçƒ¾ƒëƒðƒñƒÐ„„ „)ƒÙƒé„ƒÜƒóƒï„ƒô„„ƒØ„ƒôƒí„	„ƒùƒÒƒâ„„„„4„&ƒáƒï„ƒõ„F„„
-„„„ƒëƒÿƒð„ƒõƒåƒæ„&ƒÞ„ƒôƒþƒåƒÇƒá„„Dƒõƒ÷ƒå„ƒâ„„ƒþƒ²ƒÙƒù„„ƒüƒ÷ƒû„ƒÙƒïƒª„„ƒîƒòƒüƒð„(ƒþ„„ƒçƒÒƒÓƒÌƒ÷ƒõ„ƒñƒä„5„ƒôƒåƒÛ„ƒðƒð„/„„„„	ƒë„„ƒê„ƒù„„ƒµ„#„„ƒíƒØƒØƒï„%ƒ×ƒû„ƒïƒà„ ƒò„ƒû„„)„ƒé„„ƒå„„#„ƒïƒý„ƒÝƒä„„„ƒî„<ƒý„ƒò„	„4„„"ƒâ„ƒæƒó„ƒÚ„ƒò„	„ƒ×ƒÖƒè„ƒï„ƒé„„„1„	ƒ¾ƒÛ„„#„	ƒÄ„ ƒßƒÓƒúƒüƒçƒñƒü„1„ƒë„„7„„*„„ƒÅ„ƒá„„ƒ÷ƒØ„„ƒÔ„
-ƒð„„ƒðƒÜƒéƒî„G„$ƒß„-„ƒÞƒÑƒçƒôƒóƒßƒÿƒÝƒü„-„„
-ƒò„ƒø„ „"ƒêƒò„„„ƒðƒù„ƒø„ƒÎ„ƒÿ„„$„ƒôƒú„„ƒá„ ƒñ„„ƒãƒý„
-„„ƒõƒïƒèƒÊ„ƒÎƒÛƒÿ„„ƒ÷„*ƒé„ƒ½ƒôƒÄƒß„„?„	„
-ƒõ„„ „„ƒùƒäƒé„ƒóƒëƒòƒÕ„ƒÿƒäƒîƒãƒñƒì„ƒîƒÕƒÔ„„ƒÿ„ƒø„ ƒñ„	ƒÙ„ƒó„ƒÿƒöƒç„ƒüƒûƒýƒëƒùƒí„„D„„ƒê„„ƒñ„„ƒÜƒò„ƒè„B„ƒæ„„„0„ƒäƒñ„ƒì„%ƒòƒý„&ƒóƒðƒäƒø„?ƒæƒøƒÿ„*ƒæƒØƒ÷ƒØƒð„ƒÉ„„ƒÚ„ƒÿ„ƒçƒåƒóƒâƒåƒ÷„ƒÀ„„ „ƒÌ„ƒëƒÙƒí„ƒøƒð„„ƒûƒåƒùƒä„	ƒéƒá„ „„ƒ­ƒï„ƒßƒû„ƒæ„6ƒÛ„ƒùƒõƒÇƒàƒì„„ƒÿƒ÷„„„ƒ¾ƒõƒòƒå„ƒåƒÊ„ƒáƒçƒí„„ƒý„3ƒßƒÒƒø„„„ƒ¾„„„-„$ƒíƒô„	ƒñƒýƒõ„„„„ƒñƒë„„#ƒ÷ƒûƒÿ„$ƒé„„ƒê„Bƒþ„„ƒÑƒþ„„„ƒÉ„.„„ƒíƒàƒõ„„	„ƒÍ„ƒê„„„ „ƒ±ƒòƒî„„$„„„„ „ƒÿ„.ƒé„%„„„$ƒþ„„.ƒñƒüƒÄƒþƒâƒù„„ƒÜƒîƒùƒñƒñ„ ƒêƒþƒ×„„ƒö„ƒè„ ƒÙƒú„ƒÀ„
-ƒü„$„+„„ƒçƒÑ„„ƒßƒáƒûƒæ„„
-ƒòƒðƒèƒöƒü„<ƒÏƒúƒÖƒöƒÜ„
-ƒï„„ƒç„"ƒù„ƒø„„ „ƒë„„>ƒÒƒÞ„ƒ÷„
-„	„"„ƒÄ„„ƒú„„ƒè„0„„„„$ƒò„ƒêƒôƒ¼ƒ·„„ƒùƒ¼„„%„ „&ƒëƒñ„ƒûƒò„!ƒúƒÅƒá„„ƒÝƒñƒ÷„ƒ×ƒÒƒ¼„ƒä„	„ƒç„ƒæ„ƒåƒð„„9„„ƒÛƒûƒêƒÐƒÛƒáƒÍ„4ƒßƒÛ„ „„2ƒøƒãƒñ„„-ƒí„ƒÖƒîƒôƒûƒòƒäƒÙƒöƒàƒÞ„ƒõ„ƒÿƒÜƒÓƒð„ƒüƒæ„ ƒ÷ƒåƒëƒé„ƒÏ„ƒò„*ƒ÷ƒåƒîƒîƒ÷ƒÙƒô„+ƒò„ƒÐƒýƒßƒÆƒí„%„)ƒë„„5„ƒíƒúƒ×ƒêƒÝ„ƒî„„„	„2„ƒôƒðƒÛƒø„ƒè„„ƒõƒùƒÚ„	ƒï„„ƒÑ„ƒñ„$„„ƒô„#ƒþ„ƒÔƒî„„+ƒùƒÇƒÍ„„ƒÕ„„„ƒþ„7„ƒÿ„„„„„ƒÃ„	ƒøƒ÷ƒúƒøƒô„ƒíƒõ„$„„ƒó„ƒî„.„„„#ƒà„'ƒæ„„„„!„ƒîƒÏƒü„
-„ƒãƒõƒÑƒÛ„ƒö„	ƒú„ƒò„„ƒÑ„)ƒøƒèƒú„„ƒàƒÖƒò„„ƒïƒí„%„Mƒê„ƒê„!ƒáƒ÷„„„#„ƒÞƒú„ƒùƒñƒÜƒëƒô„ƒÚ„ƒÏƒ»„ƒ÷„
-ƒíƒéƒøƒÏ„ƒèƒÊ„	„„ ƒàƒøƒõ„1„„„ƒÁ„„ƒÚ„ƒó„„.„J„„ „ƒö„F„4„"„ƒï„„ƒî„ƒìƒÙ„ƒð„ƒÑƒó„$ƒö„ƒðƒÔ„3„„ƒé„ƒéƒþƒÿƒÿ„ƒû„ƒúƒÏ„ƒó„*ƒà„ƒì„ƒÜƒçƒýƒö„„„„ƒõ„„ƒýƒö„ „3„„1„„ƒá„„„ƒë„ƒñ„"„
-ƒðƒî„,ƒÎƒÞƒÎƒÿƒø„ƒñ„ƒøƒõ„A„„ƒîƒýƒú„*„ƒÝƒóƒÜƒí„ƒï„ƒý„„ƒë„ƒ÷ƒèƒò„„ƒÿ„ƒíƒç„ƒùƒäƒìƒßƒöƒç„„ƒáƒý„ƒï„„„ƒæ„ ƒåƒïƒÒƒß„"ƒÍ„1ƒðƒ¬„„ƒÞ„ƒø„%„'„„ƒýƒéƒÓ„"ƒãƒýƒô„+ƒä„„ƒø„ƒý„„	ƒÙƒøƒé„ ƒù„ƒÿƒðƒå„ƒñ„ƒßƒõƒ÷„$ƒòƒÚ„ƒò„ƒû„„ƒÍ„„„ƒÚƒæƒè„„ ƒù„
-„ƒì„1ƒõƒû„ƒí„ƒïƒþ„ƒö„ƒô„„'ƒË„)„ƒõ„ƒÚƒî„„„:„ƒëƒãƒ÷ƒðƒØƒÎƒÍƒÙ„)„ƒÛ„ƒ¸„ƒÛƒØ„„„„+„„#„ƒÂƒãƒè„„ ƒîƒç„„ƒÝƒâƒÐ„„„ƒÜƒØ„ƒîƒ÷„„ƒäƒõƒé„„„ƒï„ƒö„ƒÿ„„ „ƒÈƒùƒù„ƒó„ƒþ„ƒÙ„ƒß„(ƒÐ„ƒÕ„„8ƒïƒîƒó„ƒé„2ƒÓƒêƒ×ƒâƒþƒýƒÿƒãƒù„'ƒí„&„ƒñ„,„ƒèƒîƒåƒÛ„"ƒåƒÈ„1ƒôƒÈƒå„ƒî„„-ƒÏ„„„ƒøƒèƒð„ƒÂ„ƒØ„ƒ¾ƒð„3„ƒâ„2ƒéƒê„ƒé„"ƒó„ƒÿ„ƒâ„ƒûƒêƒÁ„„ƒØƒêƒñƒòƒá„„ƒüƒýƒð„„„„1„3ƒá„ƒÝƒóƒÈƒÛƒùƒñƒ×„„„„„„ƒë„„ƒÛ„ „ ƒí„„„*ƒî„ƒÇƒÐƒóƒªƒã„ƒ÷ƒêƒÑƒþƒí„„ƒëƒ½ƒèƒâ„3„„„*ƒèƒá„„„„ ƒß„ƒ÷„„ƒðƒþƒö„ƒßƒú„ƒí„#ƒë„„„„ƒ×„ƒë„„„ƒû„„ƒüƒßƒï„„"„ƒåƒÖ„ƒ°ƒÙ„!ƒÑƒÝ„ƒ¿ƒô„ƒþ„„„ƒßƒ×ƒüƒÜ„ƒåƒüƒü„=ƒâ„7ƒöƒòƒúƒíƒÙ„
-ƒåƒã„ƒæƒÛ„
-ƒü„%„#ƒ÷„„„„„„„„(ƒÿƒñ„ƒïƒÕƒíƒûƒÝ„ƒþ„ƒ×ƒþƒù„ƒÖƒúƒÑƒíƒïƒìƒí„„ƒó„„ƒÂ„ƒû„ƒÊ„ƒø„ƒâƒèƒÏ„!„<ƒÏ„ƒù„#„„ „'„!ƒøƒÍ„„ƒß„Dƒë„ƒþƒû„„„„$„ƒ÷„ „ƒôƒ½ƒëƒÔ„C„'„ƒû„„„„ƒñƒù„=„%„ƒãƒñ„'„„ƒï„„„Dƒå„4ƒÿƒÒƒÚƒþ„"„#„!ƒÈƒçƒÕ„	ƒÎƒÿƒóƒô„„<„„ƒÖ„ƒÛƒá„ƒÕƒç„ƒÿƒþƒïƒñƒÿ„ƒÝ„ ƒçƒåƒý„„„„!ƒ¨ƒÑƒÙƒú„%ƒÒƒë„„ƒ÷ƒæ„
-ƒçƒð„	ƒâ„„ƒóƒÏ„„ƒøƒ¿„(ƒó„;„„„G„ƒßƒûƒÙƒíƒ÷„„ƒãƒÖ„:„ƒåƒñƒÕƒÕƒ÷„„„„ƒ÷„ƒÝƒæƒôƒÞ„„ƒø„„ƒñ„ƒîƒì„ƒõƒæƒöƒûƒà„ƒ½„ƒüƒüƒíƒèƒÍƒéƒæ„ „"„ƒñ„!„ƒÓƒí„ƒåƒô„
-ƒòƒó„'ƒíƒü„	ƒï„„!ƒüƒÛƒÿƒïƒÂ„„„	ƒù„„
-„C„„„0„„ƒç„„ƒðƒòƒþƒøƒùƒñƒø„ƒúƒûƒü„„ƒú„&ƒùƒüƒß„ƒñƒáƒêƒêƒè„0„„„<ƒð„ƒéƒé„ƒè„*„„„„ƒè„„ƒüƒëƒð„„ƒû„;ƒÛƒÅƒìƒôƒÑƒù„ƒøƒßƒû„„ƒù„,ƒéƒÎ„ƒõ„ƒÐƒñƒûƒÃƒÌ„„ƒë„%„„ „„&ƒýƒà„ƒû„	ƒåƒÛ„„„ƒëƒôƒØƒû„ƒøƒè„6„
-„„„ƒõ„„
-ƒýƒî„#„
-ƒíƒÿƒç„„"ƒÏƒý„	„ „ƒÎ„%ƒç„„ƒÝ„ƒî„ƒÿƒù„„!ƒíƒÄƒã„„0ƒæ„/ƒÏƒà„„#„ƒå„ƒõƒÛƒüƒÓ„ƒÛƒùƒåƒßƒ÷„ƒþ„ƒâƒÄƒÜƒßƒí„„„ƒôƒæ„„„#„„ƒÿ„„
-„„„„ƒÏƒãƒþƒÓƒßƒßƒÔƒæƒÐ„„d„„+ƒÖƒÚƒÿƒíƒËƒçƒé„„ƒò„"„„ƒó„„ƒáƒìƒøƒãƒò„„„ƒýƒñ„„ƒé„ƒÿƒ×ƒõ„ƒ×„#ƒç„1ƒñƒøƒÓ„ƒãƒýƒä„&ƒõƒú„ƒô„<„ƒé„7„;ƒë„ƒÌƒæ„„ƒæ„ ƒÿƒúƒê„ƒâƒý„„„/ƒè„"„'ƒÑƒç„„ƒáƒÙ„„„ƒäƒãƒéƒò„'„„„:ƒÓ„„3ƒöƒû„ƒû„ƒÙ„ƒôƒîƒÛ„ƒù„ƒÏƒã„$ƒòƒûƒìƒüƒûƒþ„ƒÛƒéƒòƒÑƒôƒö„„ƒóƒÇ„$ƒòƒáƒòƒ×ƒå„ „	„@ƒÜ„&ƒñƒóƒí„„#ƒÅ„„ƒúƒñƒþƒîƒè„„ƒá„„ƒç„ƒÜ„„„„'„„ ƒ÷ƒé„„„ƒñ„„ƒ÷„ƒï„ƒÿƒöƒû„ƒéƒî„	„ƒâƒðƒ÷ƒðƒ÷ƒñƒäƒéƒÝ„ƒ÷„ƒ÷„„ƒþ„„„ƒåƒÍƒù„!ƒá„„„ƒØƒÕ„!ƒùƒï„
-„„U„„„ ƒõƒá„ƒéƒçƒíƒðƒ¿„ƒçƒíƒè„&ƒóƒþƒõ„„ƒß„.„ƒíƒïƒùƒú„„ƒúƒçƒûƒìƒßƒÌ„ƒæ„)„ƒÿ„„-ƒüƒÔƒ×„)„1ƒÓƒÓ„„„
-ƒñƒùƒü„%ƒû„ƒùƒð„„&„„#„„„„„ƒÃƒö„„ƒÿ„<„ƒØƒÉƒäƒø„„%ƒÍƒÑƒõƒûƒ»ƒØƒçƒñ„„„„>ƒâ„ƒà„ƒÌ„ƒöƒýƒÊƒîƒðƒç„„„ƒçƒïƒèƒõƒí„*„„	ƒð„ƒó„ ƒáƒÚ„ƒýƒþƒòƒï„ „„ „ƒÿƒêƒïƒçƒÉ„ƒè„ƒê„„ƒÓ„ƒóƒáƒæ„„7ƒÜƒýƒÓ„
-ƒÏƒö„ƒîƒ÷„„„ƒÛ„ƒû„ƒû„ƒëƒÔ„$ƒÿ„ƒñƒòƒéƒé„
-ƒèƒÉƒåƒÂƒÎƒá„„ƒï„	„Y„ƒò„„B„„ ƒòƒñƒÎ„ƒàƒô„ƒç„ƒø„„ ƒùƒï„
-ƒðƒÀ„„?„ƒýƒÈƒè„„ƒøƒó„„"ƒÓƒ½ƒìƒãƒìƒøƒúƒé„,ƒ×„ƒýƒë„%„ƒøƒíƒÜ„„„„ƒü„„ƒü„ƒîƒîƒð„ƒê„„„5ƒï„ ƒú„ƒà„ƒõ„„„1„ƒþ„ƒãƒþ„ƒî„„ ƒèƒÿ„	ƒÝƒìƒäƒß„ƒÖ„ƒØƒÑƒÐ„„ƒúƒ÷ƒåƒäƒÙƒð„ „#„
-ƒü„ƒþƒøƒæ„„„„ƒò„„„
-ƒÜ„+„ƒçƒÞ„„ „ƒäƒî„„ƒê„ƒçƒó„„„ƒæ„*ƒÖ„ƒàƒê„„ƒÿ„ƒÑ„„ƒãƒæ„,ƒðƒå„„ƒúƒìƒ÷„„ƒô„ ƒÏƒÕƒùƒÛƒìƒËƒÛ„'ƒÕ„-„%ƒøƒÉ„2ƒëƒë„$ƒíƒõ„„ƒø„ƒßƒõ„„)„*„ƒáƒõ„ƒþƒøƒÚ„„/„ƒë„ƒûƒÝ„ƒøƒç„;„ƒ»ƒðƒþƒù„ƒãƒÍƒê„+„„ƒæƒçƒã„ƒøƒÞƒï„&ƒèƒéƒêƒìƒú„ƒùƒãƒÝƒïƒô„ƒÒƒàƒúƒÄ„%ƒòƒç„ƒõƒú„ƒí„>„)„„ƒûƒÛ„	ƒäƒÓƒý„ƒð„ƒÐ„„ƒþƒñ„ƒàƒØƒÈƒî„@„ƒçƒ÷„#ƒòƒ÷ƒùƒâƒà„ƒóƒò„„ƒûƒéƒß„ƒû„ƒÖƒ½ƒÿƒæƒéƒâ„„ƒÄ„ƒ÷ƒöƒå„ƒñ„ƒÏƒí„ƒâ„ƒåƒÓƒò„ƒö„ƒåƒøƒÝ„!„„#ƒäƒù„„ƒôƒÐ„ƒîƒàƒù„ƒú„+„ƒõƒð„ƒéƒ¿„ƒéƒïƒöƒÿ„„ƒÝƒÞƒÙƒ¿ƒØ„ƒéƒÜƒÕƒõƒô„/„ƒô„	„ƒúƒåƒÑƒõ„$ƒúƒéƒÏƒë„ƒó„.ƒ÷ƒæ„&ƒðƒö„ƒÛƒß„ƒìƒñƒÚƒéƒéƒË„„ƒÖ„ƒú„„+ƒý„'„ƒô„ƒéƒÚƒðƒãƒúƒ÷ƒõƒãƒîƒðƒûƒñƒëƒýƒÔƒÕƒØ„ƒóƒóƒÊƒô„ ƒÌƒ×„*„ƒý„ƒâƒñ„ƒá„1ƒø„ƒø„ƒè„„ƒíƒð„„ ƒýƒðƒú„ƒòƒÊƒå„ƒñ„ „ƒïƒÙ„ƒÉƒü„„ƒçƒóƒû„ƒÀƒûƒøƒáƒèƒô„ƒÜ„$„„ƒÓƒùƒâƒúƒóƒÙ„ƒê„ƒô„„ƒÛƒã„„„ƒþƒý„%ƒí„„„„„ƒãƒüƒí„ƒíƒÆƒÙƒÙƒô„„„ƒïƒßƒô„ƒÁ„„#„„ƒú„„„ƒõƒàƒé„„ƒûƒØƒÚƒâƒè„ „ƒñ„ƒò„„„ƒþ„„ƒú„ƒó„$ƒÐƒÚƒþƒó„„4ƒÏ„!„„ƒÓƒÎ„ƒë„ƒù„„1„7„„ƒøƒóƒöƒò„ƒàƒÖ„ƒÔƒø„„ƒôƒõƒöƒÍƒð„„
-„(ƒü„„ƒëƒòƒòƒö„„ƒïƒÒƒÝƒý„„ƒéƒÿƒûƒëƒÑƒëƒÕ„„ƒïƒãƒðƒýƒú„„ ƒì„ƒëƒìƒï„„„9„ ƒØ„„ƒæƒÞ„ƒÎ„„„„;„„„ƒóƒôƒþƒÿ„„ƒýƒþƒä„0ƒïƒöƒðƒðƒø„„„ƒàƒÌƒðƒþ„#„„ƒâƒùƒÅƒÛƒö„ƒýƒíƒöƒ×ƒúƒíƒý„ƒá„ƒ÷ƒý„	„ƒÌƒùƒûƒðƒõ„ƒó„ƒìƒÿƒÔƒñ„)„ƒúƒè„ƒÔ„&„„„ƒ÷ƒöƒà„„ƒÈƒýƒÙƒÝƒÛ„&„ƒ÷ƒäƒÓ„#ƒØƒô„!ƒõ„„ƒÝ„ƒó„ƒõ„#„7„ƒòƒú„„ƒÙ„'„„ƒÑ„ƒÿ„ƒü„„!„ ƒëƒü„„„ƒñ„ƒÛƒñƒüƒÞ„ƒäƒåƒñƒá„%ƒ×ƒ×„ƒÆ„ƒØ„„ƒãƒìƒçƒ¼ƒÒƒúƒï„„ƒžƒïƒøƒ³„ƒ¶„	ƒú„ƒÿ„ƒçƒûƒç„ƒïƒêƒó„ƒÕƒæ„„ „(ƒòƒúƒû„2ƒõƒù„„ƒßƒ÷ƒèƒú„ƒÜ„Eƒû„ƒÚƒùƒò„
-„,„9ƒßƒñ„ƒüƒÈƒè„5„+„+„„
-„„„!ƒÓƒôƒÿƒáƒäƒÑƒð„(ƒßƒàƒøƒòƒÙƒöƒõƒ÷ƒý„!„ƒåƒí„ƒëƒð„„„ƒþƒë„„ƒàƒãƒôƒá„ƒ×„„ƒýƒèƒþ„
-ƒÑƒïƒèƒÞƒÈƒÒƒ×ƒÑƒÄ„„ „„
-ƒÜƒÝ„„ƒô„ „
-ƒëƒÓƒòƒâƒÙƒûƒÚƒçƒí„ƒõƒï„„,„
-ƒÔ„„„/„ƒïƒøƒúƒó„ƒì„ ƒôƒð„7ƒÝƒÞ„„„ƒé„3„„„„„ƒë„Lƒéƒóƒèƒý„„„ƒôƒÓ„#„„ƒóƒý„.ƒÖƒî„„ƒé„
-ƒã„ƒÿ„	„„ ƒê„„ƒ»„ƒÿƒÿ„&„ƒþ„(„ƒÿƒàƒ½„ƒÍ„„G„ƒä„ƒòƒçƒåƒßƒÏ„„ƒì„'„„„„ƒòƒóƒã„
-„„'„ „„+„ƒÙ„Gƒ÷„ƒþƒÎƒëƒ¸„ƒâ„(„;ƒÈ„ƒô„!ƒã„ƒá„„	ƒë„%„„„„#ƒðƒß„2ƒõƒáƒÔƒ÷ƒþ„Bƒôƒìƒèƒõƒð„$„ƒØƒã„„„„„„„„	„ƒÇ„ƒóƒûƒ÷ƒÜƒêƒüƒáƒõƒîƒíƒã„#„ƒäƒõƒïƒé„ƒøƒïƒôƒýƒï„„6„„„ƒß„„&„ƒúƒÒ„„	„„„#„ ƒÐƒÓ„„„ƒûƒóƒøƒú„„„
-„„„„„ƒê„ƒù„ƒÄƒüƒðƒéƒú„ƒä„ƒÍƒò„„„ƒòƒ×ƒ´ƒê„6ƒêƒòƒèƒù„„6ƒñ„„	ƒÄ„„„ƒúƒè„„„„@„„ƒ÷„!„!ƒÚ„ƒÕƒÜƒðƒýƒé„#ƒ×„„„	ƒðƒüƒúƒï„„=„„Eƒô„ƒÅƒüƒøƒôƒòƒêƒåƒÑƒñ„„ƒïƒØƒû„ƒëƒú„8ƒÂ„„ƒøƒÙƒù„	ƒâ„ƒé„	„„$ƒàƒõƒà„8ƒú„ ƒó„ƒÊƒçƒæƒÿƒâƒàƒÊƒäƒýƒßƒñ„„	„2ƒþ„ƒÜƒå„%ƒöƒäƒûƒûƒÌ„-ƒíƒãƒùƒãƒÒ„ƒÕƒçƒÎƒñƒâ„5ƒð„ƒùƒÍƒë„ƒó„ƒÿƒÿ„„ƒý„$„%ƒË„ƒãƒßƒóƒñƒáƒËƒù„7ƒîƒß„ ƒÿƒþƒ×ƒÑƒë„
-„ƒöƒùƒÒƒÿƒö„(„„	„ƒàƒûƒïƒçƒú„„<„„„$ƒâ„ƒåƒð„ƒßƒôƒÿ„„„„„ƒÙƒèƒîƒå„Kƒî„„„"ƒïƒð„„ƒñƒü„+„ƒñ„-ƒë„„„*ƒ÷ƒý„„„ƒÉƒäƒÛƒÚ„#ƒó„„"ƒØƒûƒ÷„*„ƒÕƒû„„ƒö„2ƒéƒçƒÞƒùƒü„ ƒõƒêƒÕ„
-„„ƒÚƒüƒã„ƒà„ƒÉƒÉƒÒ„ƒÌƒïƒÛ„„„„	ƒ×„ƒíƒáƒèƒÿƒÅƒ÷ƒî„ƒÁ„„6ƒëƒü„„	ƒÚƒÔ„ƒñƒ¿„ ƒÓ„„ƒÌƒûƒËƒó„#ƒÿ„ƒëƒ¿ƒåƒÓƒíƒüƒó„	„„)„ƒüƒåƒâ„„ƒõ„'ƒéƒÇ„,„„ƒô„„	„„ƒÐ„„
-ƒçƒâ„„	ƒò„
-ƒùƒÜ„ƒóƒòƒýƒíƒÛƒç„
-„ƒþ„ƒä„ƒË„ƒþ„„„"ƒçƒÿ„+ƒä„„„
-ƒôƒÈƒõ„„„ƒòƒÑ„„„ƒúƒ×„„=ƒÙ„„ „„3ƒò„@„ƒì„$„!ƒ÷ƒñ„ƒý„ƒý„„„„	„3ƒàƒÚƒïƒÇƒÛ„ƒÝ„ƒï„„„„,ƒóƒÈ„ƒì„„:ƒ×„ƒÕ„ƒµ„„2„ƒÝƒßƒÑƒÅ„ƒûƒÿƒÒ„ƒõ„ƒü„„1„ƒØƒéƒè„ƒ÷„„„*ƒì„„„%ƒû„„(„„+ƒõ„ƒÍ„+„	„ „ƒóƒÞƒþ„!„„ƒóƒÉƒû„	„„„„„ƒö„„!ƒÙƒíƒõ„„"ƒÚ„„#ƒÒ„@„ƒõƒþƒ×ƒö„ƒÚ„
-ƒÏƒýƒÙƒÕ„ƒôƒôƒó„ƒçƒÙƒà„ƒü„„„ƒ¼„#„%„ƒûƒü„„ƒÿƒëƒ÷ƒü„/ƒñƒö„„	ƒëƒÚ„„ƒÿƒÿƒì„ „„$„„ƒí„ƒøƒìƒü„„ƒî„&„>„„5„„„ƒÅƒñƒý„8ƒðƒäƒà„
-„„E„„ƒÏƒæƒüƒö„'ƒýƒþ„ƒèƒîƒòƒûƒß„ƒëƒð„„!„„ƒÇ„„„'ƒùƒâ„„ƒßƒÇƒï„ƒâ„„„„	ƒ÷„„&„„ƒòƒÝƒñƒ¼„ƒñƒøƒýƒËƒÕƒÿ„ƒöƒúƒýƒóƒù„„ƒþƒ×„ƒï„"ƒáƒØƒï„
-ƒùƒºƒù„„$ƒÆ„-ƒåƒõƒá„ƒê„ƒî„„3ƒõ„„ƒò„ƒæƒà„„ƒÚ„„„
-ƒß„ƒó„ƒþ„
-ƒâ„ƒôƒÞƒÛ„ƒí„„ƒÏ„„„%ƒûƒþƒãƒï„#„,„ ƒÑƒû„„ƒôƒõƒâ„„„ƒòƒâ„„„„„ƒÑƒÐ„„	ƒë„„„ „ƒæ„ƒý„„ƒú„"ƒâƒñƒÍ„ƒô„	ƒòƒõƒî„ƒà„)„%ƒâ„
-ƒó„ƒÓ„„ƒîƒì„ƒòƒð„ƒö„
-ƒáƒøƒîƒýƒø„#„ƒÆƒû„„ƒÿƒúƒø„ƒô„ƒûƒî„„ƒÜƒó„'„ƒó„„ƒÍ„ƒó„.ƒø„ƒÿ„:„„-ƒÝ„ƒáƒÎƒþ„ƒìƒù„„J„„ƒþƒõƒÄ„%ƒéƒõƒáƒà„(„ƒçƒùƒòƒô„.ƒö„ƒë„ ƒÜƒï„:„ƒüƒã„)„1ƒé„ ƒû„ƒðƒö„„„„ƒêƒóƒà„„&„)„$ƒî„ „-„0ƒü„'ƒöƒî„ƒöƒþ„	„ƒÎ„„ƒðƒçƒû„„„ƒå„3„„	„ƒþ„„ƒù„„#„ƒàƒãƒÁ„„ƒð„„„1ƒþƒù„!„ƒêƒíƒöƒÛƒìƒêƒÐ„ƒþ„„<„ƒÒƒù„7„„ƒûƒá„ƒßƒîƒë„ƒóƒýƒë„„„ƒÈƒ÷„ƒ¯„(ƒõ„„„ƒù„„„„'„ƒè„	„ƒ¾ƒàƒò„'„ƒÉ„ ƒñ„„2ƒõƒÿƒß„ƒâƒõƒô„ƒßƒý„ƒÚƒÞƒá„"„ƒþ„„#„F„	„„7ƒôƒùƒõ„„ „ „„„ƒµƒãƒÎƒáƒßƒÐ„ƒòƒæ„'ƒáƒó„„„%ƒåƒØƒãƒÚ„ƒãƒþ„„ƒí„„„ƒÛƒçƒÁ„ƒñ„ „0ƒûƒöƒåƒñƒÍƒò„„ƒë„ƒûƒÝƒðƒúƒÊƒò„)ƒçƒüƒÍƒì„„„N„1„.„@„ƒãƒÓ„„/„„ƒû„ƒÓ„„ƒî„ƒêƒå„"„„#„ƒõ„„„ƒÿ„ƒçƒæƒíƒêƒ÷ƒÿƒÜ„ƒÿƒßƒìƒê„	„ƒïƒÙƒó„ƒÿƒÚƒÖ„!„ƒîƒäƒÑƒÐ„ƒú„„ƒâƒñ„ƒí„„
-„„„„„ƒÓ„6ƒõ„+„ƒ÷„ƒïƒñƒÀ„ƒé„„ „.„„ƒéƒÞ„„ƒÉƒíƒèƒø„ƒî„„„„ „%ƒß„ƒö„„D„+ƒóƒóƒø„
-„ ƒôƒë„„ƒÀƒÙ„ ƒû„ƒÿ„+„„„„!ƒîƒõƒß„ƒå„ƒüƒãƒ×ƒôƒá„„+ƒéƒÿ„ƒöƒÿ„ƒôƒØƒéƒá„ƒÒƒô„ ƒÿƒÒƒÿ„„ƒæƒŸƒ×„„ƒß„„„ƒû„	„0„„ƒî„„ƒýƒçƒÖƒÆƒÀ„ƒùƒâƒøƒß„$„ƒÙ„(„„H„„¦„¦„¯„G„,„ƒøƒüƒäƒÏ„ƒñƒÃ„)ƒäƒêƒìƒÃƒøƒõƒõƒÈƒÁƒ¸ƒôƒðƒÿƒÛ„ƒöƒçƒó„/ƒõƒï„ ƒÍƒè„„	„.ƒûƒý„ƒíƒóƒô„„ƒèƒÙ„ƒßƒî„'ƒÄƒéƒ×ƒóƒÿ„„ƒÿƒÚƒù„5ƒøƒüƒýƒäƒ«„„„ƒíƒüƒõƒæƒà„„ƒÀ„(ƒúƒûƒùƒõƒÅ„.ƒÿ„„%„ƒ·„ƒî„ ƒÕƒÝ„„ „„„„
-ƒöƒð„	ƒø„ƒÝ„„!„ƒß„ƒòƒÙƒéƒÙƒ÷ƒíƒèƒù„ƒö„ƒøƒìƒß„ƒÙƒüƒÓ„„ƒòƒò„ƒý„,ƒá„„ƒü„ƒÞ„ƒá„(„	ƒÚƒ×„„0„„!„ƒïƒÝ„„3„ƒô„„„„„)ƒû„ƒÑ„„„ƒÓƒñƒéƒýƒßƒÿ„„ƒâƒáƒí„ƒÿ„ „ƒÐ„„%„S„[……Y… „˜„U„ƒûƒçƒØƒó„1„:„(„ƒüƒØƒÈ„„„ƒãƒãƒùƒê„ƒõ„ƒÜ„„ƒö„ƒÞƒâ„ƒÛƒÚ„ƒÖƒø„ƒÛƒîƒÈ„-ƒéƒíƒÅƒßƒí„„ƒñƒØ„	„„ƒï„ „ƒÉƒúƒì„ƒîƒîƒòƒç„ƒÒ„ƒú„A„ƒöƒÿ„ƒôƒõ„„„„
-ƒçƒöƒÔƒüƒùƒÓƒÄ„„„ƒüƒàƒá„„„+„(„ƒÍƒüƒõƒýƒë„'ƒýƒÔƒíƒâ„„.ƒî„#„ƒÜ„„ƒÅƒÛ„„„+„ƒûƒî„ „
-ƒÿ„„„ƒóƒä„
-„ƒéƒÊƒóƒß„*ƒÕƒýƒü„„„ƒõƒîƒ¿ƒÅƒà„ƒ×ƒîƒñ„„ƒÛ„ƒïƒõ„„	ƒûƒà„ƒâƒþ„„„#ƒíƒ÷„!„ƒË„„„„„„ƒæƒßƒó„ƒîƒý„'„„„$„‘…)…Î…j„Ç„3„C„'ƒÖƒè„„„%ƒæƒé„„„	„ ƒÙ„„ƒû„ƒÖ„„ƒÕƒÊ„ƒû„„ƒè„„-ƒé„$ƒÉ„ƒó„ƒï„ƒ÷ƒî„ƒëƒì„ƒó„ƒÖƒäƒÿ„1ƒåƒÔ„ƒÿ„ƒøƒðƒâ„„ƒòƒë„.ƒë„„„„(ƒëƒöƒãƒñ„ƒíƒÜƒÿƒðƒî„$ƒÿƒàƒÓ„„ƒÍƒìƒÒ„ƒýƒý„ƒ§ƒêƒàƒòƒëƒáƒõ„„
-„„ƒÔ„ƒéƒù„„&ƒóƒéƒï„ƒþƒæ„„ƒðƒúƒú„ƒñƒç„ƒô„ƒÏƒßƒì„„ „ƒóƒìƒ÷„„ƒë„„ƒûƒó„	ƒöƒïƒé„„'ƒÙ„ƒü„„„#„„%ƒçƒñƒÏƒäƒøƒç„Pƒðƒúƒæƒ¿„ƒÝ„ƒìƒóƒ½ƒéƒÕƒï„ƒöƒã„	„.ƒæƒèƒø„ ƒàƒíƒô„$„M„{„þ…W…6„Ž„Uƒö„ƒðƒû„-ƒô„„)ƒíƒîƒå„„'ƒøƒí„„'ƒúƒÝƒøƒýƒþƒÍ„„ƒæ„
-ƒ÷„„ƒº„„ƒóƒßƒë„„„„ƒÝƒý„E„ƒí„
-ƒó„ƒËƒ±„.„-ƒ÷ƒßƒõƒýƒðƒÛƒîƒñ„ƒéƒÒ„,ƒñ„8ƒÔƒúƒú„ƒîƒäƒé„(ƒé„ƒø„ƒáƒø„„„ƒö„„,„„ „„ƒÉ„2„ƒíƒãƒ×„„ƒøƒîƒíƒØƒ÷„„„	ƒÓƒê„4„ƒµ„8„	ƒ÷„„„
-ƒÖ„„&„ƒÏƒõƒê„#ƒé„-ƒüƒä„ƒÿƒýƒðƒøƒÀƒë„ƒá„'„„ƒêƒíƒì„„„ƒú„ƒü„-„ƒÙ„„ƒõƒÅƒäƒ×„„ƒ÷„5„ƒÞƒàƒü„(ƒèƒèƒðƒ¥„„„„ƒÐ„„ƒêƒæƒôƒçƒÓ„ƒýƒÝƒø„*„„s„“„«„‡„„+„BƒßƒÔƒüƒ÷„„ƒÖƒûƒÜƒ×„ƒÔ„„ƒÈƒïƒ÷ƒØ„ƒýƒî„1ƒûƒÞƒó„„ƒïƒø„„ ƒß„,ƒÅ„„ƒúƒÓ„ƒßƒôƒî„&„ƒâ„ƒáƒÿƒÕ„ƒÝ„ƒÓƒï„„ „„!ƒö„„R„Q„;ƒæƒþƒíƒøƒÌ„"ƒöƒúƒô„ƒÖƒ×ƒöƒ¹„"„„	ƒÞƒùƒõƒúƒò„„ƒá„ƒºƒýƒæƒðƒúƒÙ„.ƒöƒÕƒö„ƒèƒáƒéƒ÷„G„„„„„„ƒ÷„„ƒÖƒ÷„„ƒ×„„Dƒýƒûƒíƒã„„„
-„„ƒñ„„ƒý„!„ƒù„ƒðƒÕ„ƒõ„ ƒçƒÜƒõƒöƒîƒ¹„ƒöƒü„„ƒêƒø„ƒþƒê„@„/ƒè„„„ „ƒñ„ „„ƒö„ƒŠƒøƒâƒïƒ÷ƒú„ƒéƒìƒïƒúƒ÷„„„„„„T„a„(ƒèƒþ„ƒå„ ƒïƒàƒöƒúƒõ„ƒÀƒÛƒêƒöƒüƒè„(„	ƒ÷„„.„„„„@ƒè„„
-ƒþƒûƒéƒûƒúƒÐ„„ƒÓƒìƒüƒÜƒµƒñƒø„ƒÿ„ƒýƒí„ƒÚ„„)ƒàƒöƒì„„ƒÖƒÿ„„„&„\„©„~„ƒöƒõ„2„„ƒóƒäƒÿƒþ„ƒùƒì„ƒê„„ƒí„ƒü„„ƒûƒÿƒì„ƒê„ƒÇ„ƒù„„%ƒý„ƒù„4„ „ƒå„!„ƒðƒâƒéƒîƒöƒñ„„ƒÿƒí„ƒÜƒîƒâ„„„)„„
-„#ƒ¿ƒÛƒó„ƒÿ„
-„„„ƒÐ„„„#ƒñƒè„„ƒÝƒÅƒñ„ƒâ„&„ƒø„„„ƒÖƒÚ„ƒöƒÐ„ƒÑƒõƒõ„
-„	ƒùƒÙƒé„„„ƒçƒó„ƒà„„+ƒõ„ƒÏ„„„&„„/ƒÿƒø„
-ƒï„ƒú„+„„#„„„ƒÐ„„
-„ƒÕƒÔƒñƒÝ„„„ƒóƒí„„„ƒì„)„ƒ½ƒë„ƒÌ„ƒèƒÞƒù„ƒ÷„%ƒÙƒíƒôƒâ„ƒî„ƒÃƒå„	ƒ÷„ƒÁƒãƒå„'ƒô„„„ƒº„„ƒÑ„9„ƒ¹„-„v„»…`„ê„f„;„ƒÒƒì„„ƒó„ƒíƒÇ„ƒïƒõ„ƒù„ƒÖƒûƒåƒãƒø„ƒíƒüƒõƒþ„ƒûƒõƒÊ„ƒòƒê„ „ƒóƒãƒ¸„&ƒüƒäƒ÷„„ƒýƒä„„„ƒä„
-„ƒý„„=ƒåƒÆ„.„
-ƒþ„ƒëƒÞ„ƒÙƒûƒã„„'„ ƒÂƒü„ƒû„„„%„„ƒû„ƒâƒÛƒõƒÛƒö„
-ƒëƒéƒþƒå„#ƒÅƒÐƒò„=ƒ«ƒÛ„ƒò„„ ƒþƒõ„ƒÕƒÝƒçƒËƒð„„ƒâƒ¢„ƒÿƒÒƒ½„ ƒþƒà„7ƒû„H„	ƒô„)ƒûƒß„	„„„
-ƒàƒãƒôƒÊ„„ƒï„"ƒï„'„ƒÕƒîƒå„„ƒà„„„ƒö„;ƒîƒÜ„ƒãƒøƒÝƒÊ„!„ „ƒÉƒ»„„ƒ¾ƒÞƒö„ƒä„ƒéƒãƒÊƒÝ„ƒíƒ÷„¾…"ƒã„„„„;„)„ž…O…Ü…S„›„Aƒò„#„ƒïƒÕƒèƒÉƒñƒó„	ƒý„3ƒü„"ƒôƒÙ„ „„„„ƒÖƒá„„"„ ƒ¿ƒÆƒÐ„ƒãƒÌƒòƒûƒï„„ƒö„)„„	„„(„„„#„	ƒ©„ƒì„!ƒÏ„„„ƒõƒÝ„ƒð„„C„„„ƒøƒðƒÔƒð„!„
-ƒëƒû„„ƒø„ „„-„„ƒùƒÿƒýƒì„ƒä„„ƒ÷„ „ƒëƒíƒùƒôƒßƒÞ„ƒí„/ƒ×ƒÜƒúƒÏƒó„ƒèƒã„	„„„ƒéƒÙ„:ƒÝƒê„„„/„.ƒ­„$ƒÚƒö„ƒø„ƒõ„„	ƒö„ƒ÷„ƒÄ„ƒË„ƒçƒþ„ƒ×ƒÊƒ÷ƒÚ„
-„„„ƒÜƒÕ„ƒäƒ½ƒð„„ƒâ„ƒóƒþƒæ„„	ƒÚ„„ƒ×ƒÝƒè„ƒÜ„ƒìƒøƒèƒè„ƒëƒê„„$ƒõƒù„6„„1„?„”„ü…ˆ…„¥„%„.ƒò„ƒýƒÐ„5„„ƒùƒæƒÜ„	„„7ƒÉ„+ƒç„ „„„„ƒòƒðƒö„„!„„ƒÜƒ°„„„ƒÒƒÓƒõƒô„„„ƒáƒè„ƒþƒÒƒà„ƒíƒòƒèƒà„,ƒçƒ÷„„ƒàƒø„ƒÞ„„ƒæƒô„„„	ƒÚƒõ„
-„ƒýƒ×ƒÕ„0ƒýƒóƒÓ„ƒ×ƒÛƒØƒô„ƒàƒê„„ƒùƒÙƒÙƒýƒúƒ¸ƒò„ƒòƒä„„ ƒäƒâƒêƒú„ƒò„ƒöƒôƒáƒêƒÜ„ƒù„ƒç„„ƒÕ„ƒÿƒþƒèƒø„ƒÎƒÜƒã„ƒò„ ƒÿƒùƒü„ƒü„„ƒþ„ƒûƒù„ƒÜƒá„ƒÕƒàƒ÷„ƒÒƒøƒð„#ƒó„ƒÖƒöƒðƒú„ƒá„ ƒöƒï„*„„
-„7ƒß„)„.ƒèƒë„!„ƒöƒí„„8„„
-„„ ƒêƒÿƒß„„$„”„©„Ð„S„@„ƒÚ„!ƒÞ„ƒäƒü„„#ƒÚ„„ƒâƒæƒÆƒáƒø„ƒìƒòƒñƒèƒõ„"ƒâ„	„ƒú„	ƒþƒåƒèƒþƒæ„„„ƒûƒèƒïƒõ„„„&ƒâ„ „„„ƒü„)„ƒÜ„
-„ƒÐƒÙ„„	„„„.ƒôƒÆƒæ„„„„@ƒûƒà„„„0„
-ƒëƒêƒà„A„ „„ƒùƒüƒØ„	ƒÕƒõ„2„„1ƒÐƒÞƒì„-„ ƒ¯ƒÓ„„„„ƒéƒí„ƒñ„ƒõƒþ„ƒîƒ÷ƒØƒçƒðƒÈ„ƒÜƒ÷ƒóƒË„„ƒâ„	„ƒòƒüƒâ„ƒò„„ ƒÙ„ƒó„ƒàƒõƒßƒö„„	ƒþƒñ„ƒùƒó„„*„'„„ƒøƒÔƒã„„ƒüƒô„ƒïƒÊƒíƒû„ ƒûƒïƒï„ƒåƒüƒò„	ƒÎ„„„ƒÛƒöƒÆ„6ƒâƒüƒÏƒþ„„„„„‚„ƒ„9„F„@„*ƒâ„„„1„
-ƒçƒ÷„„ƒÌƒÛ„	ƒþ„ƒùƒî„ƒíƒÑ„„G„„„„„%ƒî„„„„„ƒù„!ƒù„=ƒóƒñ„,„„4„„„„$ƒòƒ¾„(„„$ƒõ„„+ƒü„"ƒöƒÞ„F„„ƒûƒÞ„„„„„„„„=ƒçƒËƒó„„„ „	„ƒÞ„ƒü„ƒç„„„ƒÏ„ƒÞ„„„ƒàƒû„„„!ƒÿƒíƒô„ƒ÷ƒÜ„	ƒê„(ƒÚ„ƒÌ„„„„ƒéƒãƒùƒÿƒò„ƒôƒîƒÅ„ƒ¿„ƒóƒÒ„ƒâƒÐ„ƒêƒÍƒù„ƒæ„ƒÊƒÔƒå„ƒðƒÑƒÖƒúƒýƒî„„ƒßƒö„„/ƒº„ƒÿƒç„ƒù„ƒö„ƒå„6„„"„4ƒß„ƒù„ƒÖ„„„ƒõ„*ƒ÷„ƒó„ƒýƒÏ„ƒÉ„!„Mƒäƒýƒþ„?„,„„„„	ƒìƒá„ƒéƒî„ƒüƒêƒÿ„„„7„,„„ƒÌƒð„ƒüƒì„„ ƒú„ƒù„„-„ƒñ„,„„ƒþ„„„ „	„ƒåƒ»„ƒýƒú„ „ƒè„ ƒô„
-„!„„„ƒõƒ÷„ƒÂ„3ƒË„ „„ƒúƒûƒôƒî„ƒìƒÙƒð„)ƒÜƒÒ„„ƒø„„ƒõ„ ƒëƒ¹ƒí„„'„ƒò„„ƒï„ƒü„)ƒüƒÚƒñ„	ƒòƒôƒÄ„ƒðƒëƒæƒæ„>ƒî„4ƒàƒûƒæƒ¾„„ƒÌƒú„ƒ¾ƒ³ƒéƒìƒÔƒø„„„
-ƒóƒá„*„ƒâ„„„„ ƒÕ„ƒúƒðƒÚ„„„ƒî„ƒÓƒñ„#ƒü„ƒà„G„	ƒØƒä„ƒíƒäƒÿƒ¼ƒü„ƒá„ƒæ„„ ƒÛƒâƒÞ„ ƒÎƒ÷„ƒÉƒÒƒûƒâƒíƒì„ƒö„-ƒá„„ „„!„ƒõƒ¿ƒþƒ÷„ƒåƒìƒòƒöƒíƒÿ„9ƒìƒùƒë„ƒÞƒ×„„!„ „„"„
-„„"„ƒÝƒêƒé„$ƒÞ„„ƒå„ƒåƒÖ„	„ ƒúƒÒ„„ƒÀ„ƒÚ„$ƒõ„	ƒï„„ƒ¹ƒËƒî„ƒüƒÞƒöƒÕƒí„„„)ƒçƒèƒë„ƒÏƒÝƒÆƒò„&ƒî„„ƒß„ƒ÷ƒôƒï„ƒú„!„"ƒßƒßƒæ„ƒâƒý„„ƒÄƒÿ„ƒäƒæƒÙ„/„„ƒ÷ƒÐƒØƒ÷ƒëƒ±„„ƒûƒíƒñ„ „ƒÑƒñƒþƒå„ƒßƒð„ƒÎƒë„ƒóƒôƒàƒò„ƒò„ƒÝ„	„ƒ×ƒË„ƒáƒíƒùƒáƒóƒÁ„ƒç„.ƒ¿ƒß„	ƒË„!„„ƒÛƒëƒî„#„„„ƒÙƒ÷ƒàƒÉƒæ„ƒò„ƒì„„„„„
-„ƒèƒÝ„ƒãƒ÷ƒú„ƒÛ„ƒ÷„ ƒÔƒÏ„ „„„„8ƒ×ƒ÷„„„„„„
-„2„#„„ƒèƒìƒýƒî„ƒÛƒë„ƒðƒòƒö„ƒö„ƒþ„1„;ƒûƒÜ„„„ƒñ„?„„F„g„F„8„ƒôƒåƒì„„'ƒ÷ƒòƒô„ƒöƒø„ƒè„
-„„ƒøƒì„„„„ƒëƒØ„„„&ƒôƒé„ƒí„„„ƒÙƒã„„ƒøƒûƒöƒï„ „„+„*ƒùƒòƒçƒà„„„'„ƒñƒîƒëƒùƒÜƒäƒ×„„/„„	„„	ƒæ„*„ƒÙƒÝƒô„ƒãƒü„ƒñ„„„ƒìƒþƒÂ„ƒüƒù„ƒðƒðƒò„*ƒÅ„)ƒç„"ƒÓƒü„ƒóƒßƒÿƒäƒèƒþ„@ƒþ„ƒìƒêƒùƒÆƒôƒûƒçƒö„„„7„$„*ƒç„„ƒÝƒå„ƒó„.ƒýƒÿ„ƒÑƒê„„ƒÞƒñ„ƒøƒáƒþƒÖƒä„ƒï„ƒÒ„ƒû„ƒæƒåƒÔƒä„„ „7„ƒà„„„„ƒð„ƒê„GƒÚƒ÷ƒëƒóƒÖƒØƒî„„„„	„ƒå„„ƒó„„ ƒé„„„r…‡¿…D„
-„„ƒúƒÝ„ƒû„„„„„„„	ƒì„ƒËƒö„„ ƒæƒëƒàƒç„ƒï„$ƒß„ƒÑƒæƒçƒü„ƒ÷„8„
-ƒÎƒí„ƒéƒ½„ƒóƒ×ƒêƒäƒõƒôƒÞƒûƒçƒëƒÇƒåƒúƒî„*ƒóƒûƒñƒëƒò„ƒã„„„ƒÕƒöƒáƒð„3ƒÓƒàƒóƒìƒã„
-ƒèƒûƒÞ„ƒí„ ƒó„ƒó„ƒâƒê„„ƒè„„ƒíƒá„-ƒÆƒá„ƒôƒÜƒÜƒæƒñƒñƒèƒô„ƒàƒß„ƒþƒêƒý„"„ƒÜƒì„
-ƒðƒö„„ƒþƒÿ„
-„„.ƒ÷ƒãƒÔƒæƒú„%ƒèƒÕ„„#„„ƒÌ„ƒÞ„
-„„ƒÂƒÜ„ƒØƒæ„„@ƒðƒæƒØ„ ƒøƒÌƒÌ„ƒøƒêƒà„„ ƒþƒþƒâƒøƒè„ƒâƒæ„„ƒþƒî„ƒø„„&ƒ®ƒî„„„t…h†X…Þ…D„B„ƒì„8ƒÌ„ ƒÞ„„ƒàƒö„ ƒìƒÚ„
-„ „,„0ƒîƒò„„ ƒø„ƒÎ„„"„„ƒÀ„&ƒêƒÞ„ƒâƒú„4„4„ƒôƒðƒÔ„ƒªƒÆƒôƒà„ƒìƒê„ ƒÀ„„
-ƒì„ƒæƒè„ƒâƒðƒÌƒà„ƒôƒö„<ƒÞ„ „Vƒöƒúƒú„ƒîƒæƒìƒèƒÒƒîƒäƒÜƒÈ„„ƒòƒúƒîƒ¸ƒö„ƒèƒú„
-ƒðƒøƒð„ ƒè„ƒä„ƒöƒü„„„ƒðƒðƒú„ƒÐƒæ„ƒÎƒô„ƒâƒþ„,ƒàƒì„„„ ƒîƒôƒÎƒèƒèƒüƒèƒòƒòƒÒƒü„6„ƒø„ƒúƒúƒÚ„ƒê„ƒ×„#„ƒä„ „„„„„„ƒÞ„ƒáƒùƒþƒê„)ƒöƒä„ƒóƒë„ƒê„ƒÚƒéƒÛƒû„„„ƒÍƒé„„„ƒ÷ƒÙ„„%„„…Ó‡…˜„M„„)ƒõƒæƒòƒõ„ƒá„ƒóƒùƒò„!ƒþƒÍƒýƒØƒò„„1„„ƒý„„„"„%ƒïƒòƒøƒÎƒäƒßƒõƒî„ƒæ„ƒ÷„ƒÿ„„ƒø„*„7„
-„„ƒêƒóƒë„ƒü„6„„ƒÌ„&ƒõƒûƒ÷ƒÇƒðƒì„ƒïƒå„+„FƒËƒþƒãƒÛƒÅ„=„1ƒòƒúƒýƒå„"„„ƒÖƒôƒØ„ƒÆƒüƒÏƒûƒûƒÑ„„ƒû„„„ƒá„ƒôƒøƒñ„„ƒóƒ÷ƒñƒÝƒÿƒÝ„„„ƒûƒñ„„ƒÔƒòƒþ„„„	„*„ƒì„„„„!„	„ƒçƒþƒáƒñƒ÷„„„
-ƒæƒã„+„ƒâ„ƒÚƒð„„„ƒëƒþƒÙƒë„B„8„`ƒëƒüƒÆ„
-„„ƒõ„ƒúƒîƒò„ƒéƒóƒò„ƒÿƒøƒí„„ƒðƒàƒËƒî„
-„ƒà„„„…„„Bƒøƒüƒý„„„!ƒåƒæ„4„„ƒú„	ƒÿ„ƒÛƒî„#ƒü„ƒáƒÐ„„ „ƒæƒä„9ƒöƒãƒìƒì„	ƒä„	„ƒí„„ƒÚƒýƒõƒãƒý„ƒýƒÜƒøƒôƒÜƒöƒúƒö„
-„ „ƒûƒÛƒùƒè„+ƒ¶ƒð„„ƒ÷ƒäƒÍƒíƒÿƒÙ„„"ƒýƒñƒ¹ƒÞƒáƒë„ƒè„ƒÿ„!„„„4ƒç„„ƒãƒÂƒÍ„ƒì„„ƒøƒæƒåƒë„ƒíƒãƒúƒÙƒÖ„)ƒü„ƒÿƒÿ„ „„(„ƒÍ„ƒé„ƒÛƒëƒÑƒæƒÝƒûƒ­ƒÞƒæƒî„2ƒÜ„;ƒñƒñ„(ƒñ„ƒãƒãƒõ„ ƒå„„&ƒôƒè„.„%„ƒÁƒø„ „ƒôƒðƒòƒø„„ƒøƒö„,ƒð„„ƒÐ„ƒæƒâ„ƒÒ„"ƒú„ƒõ„„	„>„ƒõ„„ƒÔƒïƒÀ„„(ƒØ„
-ƒµ„ƒî„6ƒò„„)„ƒì„ƒìƒü„„'ƒÉƒðƒÜ„!ƒãƒúƒÞƒ÷ƒüƒÏ„ƒüƒê„„ƒá„ „ƒäƒé„„,„ƒó„„ƒìƒÓ„ „ „ƒÞ„ƒÚ„ ƒø„„)ƒÜƒï„ƒü„„„&ƒÞ„ „ƒðƒÜƒù„?ƒô„„ƒþƒùƒöƒðƒüƒù„ƒöƒíƒÛ„ƒÜƒåƒï„ƒóƒåƒÍƒÊƒúƒã„	„ƒÙ„ƒïƒÈ„ƒô„„ƒù„„ƒüƒÁƒê„ƒù„„
-ƒý„„ƒÑƒñƒóƒãƒæƒÞƒ¦ƒàƒéƒõƒö„*„Nƒú„„"„ƒý„
-ƒîƒØƒõƒèƒØ„ƒÔƒøƒðƒÜ„ƒýƒý„ƒìƒ¼„ƒõƒÇƒä„ƒø„„ƒò„I„$ƒóƒÕƒí„„)ƒõ„)ƒÕ„ƒöƒø„ƒø„ƒè„ƒù„(„'ƒñ„2ƒÓ„„„„ƒý„„ƒò„ƒõ„)ƒìƒü„ƒý„„„ƒß„ƒ÷ƒÞ„„ƒØ„
-„ƒêƒÞ„ƒû„„ƒÿƒéƒø„„„ ƒÿƒÔƒþ„ƒë„'ƒâ„„„ƒî„
-„	„ „ „„
-ƒù„(ƒÌ„(„ƒñƒÚƒöƒî„ƒÉƒÐƒê„„ƒÈ„ƒãƒä„K„„ ƒâ„ƒé„ƒÉƒÖ„„	„ƒ÷„ ƒëƒùƒö„!ƒÞƒé„#„„ƒóƒõƒÞ„„ƒé„ƒåƒò„ƒùƒÞ„ƒ÷„„„ƒô„%ƒöƒëƒøƒûƒöƒä„ƒù„„)ƒì„ƒÔ„*„ƒé„ƒÜƒÀ„ƒÒ„„„ƒ÷ƒÅƒÿƒõ„ƒÍƒü„ƒ÷ƒÙ„ƒõƒè„ƒÿƒäƒâ„ƒâ„ƒç„ƒð„ƒð„ƒøƒãƒÑ„„ƒÿ„„ƒÒ„7„ „"„„„„„,ƒåƒïƒýƒß„ƒõ„ ƒåƒó„ „ƒÐƒíƒä„	ƒûƒ×ƒúƒÛ„0ƒÞƒâ„„F„„ƒý„„„ƒñ„„„ƒýƒá„*„ƒõ„„ƒù„„„ƒù„„ƒÑƒï„!„ƒ÷„ „+„ƒþƒ«ƒüƒáƒþƒåƒÇ„ƒäƒòƒ×„„ƒß„„ „„„ƒøƒßƒýƒê„ƒäƒä„ƒùƒÛ„ƒí„OƒìƒüƒÖƒëƒî„ƒõƒÊƒéƒÂ„„ƒÍƒÉ„ƒÜ„ƒÞƒÜƒÌƒãƒòƒûƒÝƒô„„„ ƒúƒë„„„%ƒøƒøƒïƒÙ„ƒÞƒïƒæƒõƒæ„ƒì„„„0ƒÏƒæ„,ƒôƒý„ƒîƒ¿ƒóƒïƒé„	„„%ƒÔ„ƒèƒëƒÖ„ƒÃ„ƒò„5ƒï„„„;ƒ÷ƒèƒúƒéƒâ„ƒïƒü„„+„ „ƒúƒóƒõ„ƒÀ„Eƒìƒ÷ƒãƒíƒîƒï„	ƒñ„„ƒùƒÌƒþ„ƒç„„„ƒæ„*ƒÜƒçƒÿƒð„!ƒõ„ƒÞƒáƒê„ƒö„ƒú„„„ ƒ÷ƒç„#ƒÚ„„ƒß„ƒºƒçƒÜ„1„„ƒü„	ƒû„„„„"„ƒéƒäƒò„ƒôƒÅƒÏƒáƒñ„ƒéƒô„ƒ×„ ƒæ„„„ƒûƒâ„„„)ƒñƒþ„+„„ƒìƒý„"ƒüƒÂƒå„ƒë„„„ƒé„ƒÝƒñƒé„!„ƒéƒíƒð„„ƒáƒçƒýƒè„„„ƒ÷ƒþ„„ƒéƒþ„ „„„ƒì„ƒäƒÝ„ƒùƒØ„„„„
-ƒïƒÙƒÚ„„	ƒÎƒ×„	ƒþƒé„ƒèƒÓƒÿƒóƒû„!ƒÔƒØ„„ƒô„ƒçƒë„„)„ƒñ„ƒå„„ƒûƒí„ƒé„ƒä„ƒ÷„„ƒÞ„„!ƒñƒËƒþƒò„„„„„/„„„*„"„„ƒÝ„ƒû„ƒü„„„ƒëƒÛƒôƒß„„ƒóƒæ„„ƒÑ„„(ƒþƒ÷ƒñ„„ƒ×„„„ƒÓ„,„ƒÓƒåƒæ„ƒúƒçƒØƒë„ƒïƒÒƒÔƒèƒäƒü„ƒøƒªƒî„„ƒü„ƒëƒûƒé„
-„-„ƒüƒõƒÖ„ ƒóƒú„ƒóƒÞ„„ƒÆ„ƒöƒõ„„„ƒù„ƒîƒø„„ƒðƒÔƒë„„ƒÏƒ÷ƒüƒùƒ÷„ „
-ƒÎ„„„„&„„ƒõƒóƒßƒè„„=ƒèƒþ„ƒèƒèƒÝ„„„ƒð„ƒß„	„„
-ƒÏƒø„0„'„ƒÜƒìƒí„ƒèƒâƒÓƒÏƒîƒî„„„„ƒÅƒûƒÉ„„ƒõ„ƒß„ƒÚƒØ„	ƒïƒ÷„ƒÍƒìƒÝƒýƒÉƒå„ƒÁ„
-ƒùƒó„ƒÝƒù„„#ƒõƒõ„ƒç„ƒÿƒìƒêƒ¿„ƒÔ„2ƒô„ƒÖ„ƒÙƒå„ƒÓƒÝ„2„„ƒÏ„7„„ƒÔƒÕƒú„
-„ „ƒÝ„ƒô„ƒæ„'ƒÖ„ƒú„„„ƒòƒÜ„ƒà„ƒÉƒú„„9„ƒýƒî„%„$ƒí„ƒÐ„	ƒþ„!ƒøƒâ„ƒï„ƒúƒüƒâƒÝ„„ƒÄƒù„„,ƒõƒêƒàƒúƒú„ƒ÷„„ƒôƒô„„ƒîƒë„„„ƒý„%ƒûƒ÷ƒÐƒÞ„ƒÃ„ƒáƒá„„
-ƒóƒÜ„„„„ƒÌƒÎ„ƒ÷„„ƒØ„„ƒýƒßƒïƒëƒìƒõƒíƒã„4ƒêƒó„&ƒÚƒÿƒåƒÞƒñ„ƒÝƒÛƒí„!ƒÛ„ƒëƒÛƒÚƒû„&ƒÐƒñ„ƒÿƒ×„ƒéƒáƒûƒö„4„ƒ÷ƒý„„ƒÞ„ ƒÙ„„ƒÄ„„'ƒõ„„„ƒúƒô„ƒÈƒý„ƒô„ƒßƒÅ„„ƒæ„7„3ƒÆƒèƒû„ƒêƒèƒÆƒéƒðƒçƒæ„!„ƒé„„.ƒáƒ¯„	„0ƒõ„„„	ƒêƒÉƒêƒçƒñ„,ƒ÷ƒè„ƒï„ƒÓƒß„ƒÓ„!ƒÏ„„%„„ƒãƒÝƒñƒãƒÝ„„„„	„ƒÝƒë„ƒûƒãƒøƒÓƒö„!„)„„„ƒì„ƒêƒøƒí„+ƒû„ƒóƒûƒùƒõ„/„	„„
-„,„„2„8„ƒÕ„„.ƒò„„ƒâƒþ„ „ƒæ„ƒî„ƒñƒÜƒé„„ƒÒƒè„„6„ƒï„
-„„ƒâƒêƒïƒÝƒ×ƒõ„ƒÕƒãƒÞƒýƒò„„„ƒýƒê„ƒýƒåƒÍƒÓ„5ƒ÷ƒîƒñƒïƒúƒí„„#ƒå„„DƒîƒýƒëƒÊƒóƒñ„„
-ƒá„ƒ÷ƒâƒâ„ƒð„ƒÖƒ÷ƒéƒâ„ƒÕ„„ „ƒù„)ƒúƒé„ƒÐƒéƒéƒÈ„"ƒïƒïƒÝ„
-„„ƒâƒçƒÓ„„ƒÆƒß„ƒÿ„ƒóƒûƒÃ„„ƒûƒó„„
-„(„ƒø„„
-ƒóƒÎ„.„ƒäƒúƒâƒï„ ƒû„"ƒú„„1ƒû„ƒý„4„
-„„,„„„ ƒæ„„„'ƒýƒàƒãƒù„;ƒó„ ƒßƒè„„ƒó„„„ƒýƒóƒç„„„ƒäƒó„ƒë„„2ƒé„'„„„ƒù„
-„„ „&„„*„„ƒÞ„ƒõ„2„„ƒâƒÒƒú„	„„9ƒÞ„#„„=ƒâƒÿ„&ƒåƒó„ƒöƒñ„„
-„„ƒÏƒóƒø„ƒê„AƒýƒÿƒßƒÏƒáƒéƒî„ƒËƒéƒõ„ƒôƒýƒé„„ ƒØƒÛƒø„ ƒé„ƒæ„"ƒë„„„ƒãƒã„ƒÃ„ƒø„ƒú„ƒñ„	„ƒýƒ÷„„#ƒÉƒï„„ƒôƒÿ„„ „
-ƒëƒý„ƒî„ƒÊƒÆ„ƒÍƒÜƒÎƒÜƒìƒã„ƒÒ„!„%ƒÉ„ƒí„„„„	„ƒé„ƒê„„"„ƒà„ƒÞƒñ„„„„ƒüƒíƒâ„„„ƒÚƒî„ƒìƒù„ƒçƒ×ƒíƒã„	ƒúƒùƒóƒá„ƒùƒüƒâ„%ƒÿƒëƒ×„ƒ÷ƒÅ„.„ ƒ×ƒý„ƒäƒÆƒÞƒø„ƒøƒà„ƒæ„ƒò„I„„,ƒþ„ƒÑ„„*„.„ƒÿƒóƒôƒüƒ÷ƒÒƒð„ƒåƒòƒù„,„ƒþƒïƒöƒÐ„„„„ƒä„ƒÇƒÞƒéƒäƒÔƒþ„ƒêƒÕ„#ƒòƒÛ„„ƒê„ƒìƒÚƒñ„2ƒ»„ƒæ„ƒñƒõƒãƒæƒ³„ƒåƒêƒõƒÒ„ƒùƒÚ„)„ „ƒêƒüƒíƒÈ„(„ ƒøƒò„ƒëƒý„„„,ƒùƒÞƒôƒòƒøƒÔ„„„	„	„
-ƒþƒåƒú„ƒøƒÜƒÎ„0„ƒú„„ƒþ„„ƒþƒõƒø„ƒçƒÑ„ƒ÷ƒþƒîƒ÷ƒô„„ ƒç„„„ƒóƒï„„„ƒì„O„ƒè„ ƒæ„ ƒñ„„!ƒà„„&„„ƒòƒêƒñƒíƒüƒùƒý„+„ƒð„ƒó„&„„ ƒý„!ƒäƒæƒåƒìƒÜƒòƒÜƒýƒû„ƒøƒë„ƒã„ „„'„(ƒøƒñƒìƒÞ„ ƒíƒÉ„ƒò„ƒÓ„„ƒü„ƒõƒÖƒü„ƒæ„ƒÚ„4ƒÿ„ƒæ„$ƒã„„ƒêƒíƒþƒûƒèƒã„„„„ „„ƒúƒä„„„„ƒí„9„7„„„ƒôƒîƒüƒä„+ƒÒƒâ„9„„ƒÿƒÏ„ƒóƒæƒÙ„ƒÒƒèƒõƒî„ƒà„„„„„ƒèƒÿ„ƒÓƒÆƒÔƒø„ƒâ„ƒ×„ƒÑ„ƒçƒáƒå„	„„„ƒç„&ƒò„„'ƒáƒñƒØ„„)„ƒöƒÓƒíƒùƒýƒå„$ƒØƒöƒñƒù„ƒÿƒÿ„3„ ƒïƒ÷ƒ¹ƒØƒùƒáƒÔƒï„ƒôƒú„„ƒæƒùƒöƒã„„ƒØ„„„(„ƒúƒíƒäƒÙƒóƒý„„ƒØƒñ„'ƒùƒüƒßƒãƒý„„„„„„%ƒñƒù„„ƒÏƒï„ƒñ„ƒé„„ƒÒ„ƒÚ„ƒø„+ƒéƒîƒæ„ƒõ„/ƒÜ„O„"ƒÄƒùƒé„ „
-„„„„ƒåƒë„„„)„ƒù„	„ƒôƒþƒøƒ×„ƒå„„„	„"„!ƒÞ„ƒõƒâƒýƒò„ƒÕ„ƒûƒÞ„-„ƒáƒËƒåƒô„@„ƒÛƒñƒûƒã„„ƒíƒñƒÞƒÿƒêƒÿƒï„ƒãƒóƒÿƒÞƒçƒÜƒÒ„&„„ƒû„„ „ƒÛƒâƒüƒÚƒõƒØ„ƒàƒêƒñ„ƒå„8„ „ƒ÷ƒïƒÏ„ƒû„ƒë„.ƒëƒå„6ƒ¸ƒ·„ „-„ƒúƒÑ„ƒã„ƒÖƒø„„6ƒâƒóƒá„!„„„)„ƒØƒâ„ƒó„ ƒõ„ƒáƒÉƒá„ƒóƒÿ„ƒçƒä„ƒçƒØ„ƒïƒú„ƒìƒð„ƒìƒùƒÓƒõ„<„!ƒËƒû„:ƒï„ƒÍƒñƒÿ„„	„(„(ƒï„	„ƒÉ„„#„,ƒÈ„ƒöƒ·ƒÒ„ƒíƒõ„Iƒõƒñƒó„ƒüƒË„ƒê„„ „ƒÚ„ƒÇƒÙƒñ„„'„„„ƒÿ„.ƒì„%„ƒñ„Kƒô„2ƒÏƒùƒõ„>ƒãƒÜƒ÷ƒçƒò„ƒÔ„&ƒåƒó„„„„)ƒþ„ƒõ„ƒõƒëƒÖƒíƒÿƒâƒý„„ƒéƒïƒæ„„ƒÏƒÞ„„„ƒêƒö„	ƒÛƒýƒâƒéƒÞƒé„ƒÏƒúƒü„ƒö„ƒý„.„ƒÚƒîƒÝ„ƒï„ƒó„ƒÿƒ÷ƒë„ƒñƒëƒæƒù„„ ƒÑƒ÷„ƒþƒùƒîƒ÷ƒöƒÝƒò„'„ „„ƒþ„„%ƒ¿ƒé„ƒÂƒäƒÂ„
-ƒöƒ÷„ƒôƒãƒÐ„„ƒùƒàƒî„	„&ƒÓ„'ƒ×ƒë„„„
-ƒýƒÚƒïƒÛƒù„„„ƒüƒÿƒû„„„„„„„ƒ½„/ƒä„ƒØ„„„#„„„#ƒû„$ƒÐ„:ƒÐƒö„ƒé„„ƒä„.„„ƒÈ„)ƒöƒòƒöƒù„)ƒúƒçƒø„ƒÖ„"„ƒåƒñƒí„#„ƒüƒô„(„"ƒîƒëƒÌƒßƒöƒÂƒôƒûƒùƒÿ„ƒõƒùƒéƒÿƒÊ„„	ƒðƒù„ƒé„ƒýƒíƒî„„ƒù„ƒðƒÔƒåƒÞƒõƒó„ƒå„ƒÚƒöƒüƒõ„ƒâ„ƒëƒô„)ƒôƒØƒå„ƒóƒð„„#ƒ÷„„„ƒé„„7ƒðƒßƒæƒãƒì„8ƒÿƒõƒãƒËƒÞ„„ ƒß„ƒæ„„-„„„ƒõƒãƒýƒåƒë„ƒñ„„„	ƒàƒý„3„
-ƒñ„„ƒÖ„ƒõƒäƒõƒÇ„,„-ƒô„„ƒêƒðƒâ„„ƒáƒåƒãƒî„$„„ƒð„
-„!„!ƒô„%ƒí„„ƒ×„„	„ƒýƒâƒíƒéƒÚ„	„	„„„„„„ƒ÷ƒÐ„„ƒõƒôƒïƒó„ƒË„„ƒßƒæƒÔƒÙƒø„ƒü„„„„ƒô„„„!ƒÔƒë„"ƒó„ƒîƒþ„ƒÍƒú„„ƒà„„„'„„„„ƒþƒç„„ƒêƒé„„ƒ÷ƒ÷ƒ÷„$ƒÛƒíƒÉƒ½„ƒê„ƒÖƒêƒîƒûƒÁƒÍƒÜ„„„ƒñƒä„N„&ƒèƒêƒÊƒÛƒîƒý„ „-„„ƒÞƒí„„ƒÏƒÎƒãƒíƒïƒÜ„ƒù„ƒ×„ƒÜƒû„ƒõƒõƒ÷„ƒ»„„!ƒÝƒ×„ƒ·ƒëƒü„ƒüƒóƒóƒëƒß„ƒñ„„#„$ƒøƒù„!ƒðƒû„ƒç„ƒüƒîƒûƒÛ„ƒÅ„ƒÿ„
-ƒä„,„„„(„ƒÊƒÚƒô„„ƒý„(ƒá„„„>ƒó„ƒ÷„%„ƒù„ƒÆ„ƒ÷„ƒðƒìƒÈƒÙƒäƒú„„„„
-ƒ÷ƒçƒà„„&„ƒéƒæƒõƒûƒç„ƒúƒÓƒï„„0ƒÿ„Hƒïƒåƒò„	ƒêƒôƒæ„!ƒëƒùƒåƒàƒãƒò„ƒÒƒúƒì„„„+ƒË„ƒòƒÕ„"„ƒü„#„„3ƒù„ƒì„„*ƒÎ„„=ƒÉ„„2„	ƒòƒÛƒõƒç„„„„ƒàƒÝƒþƒæ„„ƒö„„ƒóƒÜ„ƒí„ƒÐƒô„!„„„ƒà„	„ƒá„.„„„
-„ƒä„„ƒüƒç„&ƒç„„#ƒè„ƒÖƒøƒ÷ƒæƒÔ„%ƒç„„„„„ƒùƒÁƒãƒëƒïƒê„„	„ƒé„ ƒä„„ƒÝƒã„%ƒí„&„„ƒó„
-ƒô„,ƒàƒúƒÝ„.„„„ƒóƒðƒéƒñ„/ƒð„„„„ƒ×ƒ÷„$„$ƒé„„ƒö„ƒè„ƒöƒý„„ƒñ„„ƒê„#ƒÝƒüƒåƒäƒð„ƒúƒÎ„„„„ƒþ„„8ƒþƒðƒú„ƒ×ƒõ„„ƒãƒ×„„ƒð„5ƒò„ƒôƒíƒþ„ƒè„	ƒÊƒöƒû„„„„„„„ƒéƒãƒü„,ƒÞƒäƒì„„ƒàƒÔƒùƒÞƒêƒÿƒÓ„„ƒðƒüƒìƒïƒÎƒÄ„„„„ƒè„ƒî„ ƒû„„ƒÜ„ ƒøƒç„ƒ°ƒý„1„	„„„„'ƒôƒæ„ƒîƒï„„)ƒñ„
-„$„„„„ƒüƒû„!„%ƒÚ„ƒÜ„„„ƒÿƒðƒô„ƒî„„ƒÞƒüƒÛƒÝ„#ƒÔƒéƒé„ƒò„ƒñƒàƒò„9ƒ¢„„„„ƒÿƒûƒÞ„ƒêƒÔ„„ƒõƒäƒìƒÑ„„ƒáƒä„„*ƒó„ƒçƒõƒØƒè„„ƒÎƒîƒá„%ƒý„„ ƒñ„$ƒåƒÝ„„	ƒÏ„7„ƒò„$„ƒøƒúƒùƒïƒóƒã„ƒòƒµƒ¿ƒöƒÌƒõ„„„ƒÍ„ƒÙ„$ƒîƒÀƒêƒ»„ƒö„„„0„ƒË„6„(„ƒú„„4„„ƒÿƒíƒá„ƒñ„ƒã„ƒÌ„ƒØ„#ƒåƒáƒóƒòƒÿƒý„„CƒþƒÚƒî„„'„ƒì„ƒá„
-„ƒòƒ÷ƒý„#„1ƒã„6ƒú„„ƒúƒû„"„„„ƒÙƒáƒ×ƒáƒ÷ƒÍ„&„„ƒØƒúƒõƒàƒìƒýƒ÷ƒìƒèƒõ„„ƒñƒè„„„ƒÝƒã„	ƒïƒé„ƒþ„/„„(„ƒéƒ×ƒö„ƒ²ƒíƒç„„„	ƒýƒÁ„ƒõƒùƒÞ„„ƒú„„ƒÉ„ „ƒý„ƒÑƒõ„„\ƒíƒûƒÇ„„!ƒÜƒëƒäƒ×ƒé„„„„„ƒíƒé„;ƒÕƒæƒË„ ƒ¸ƒâƒã„
-„ƒõƒùƒù„'ƒýƒßƒçƒêƒ÷„'„	ƒû„ƒþƒæ„(„„%„„„ ƒÚ„„.„ƒÃƒ÷ƒ÷„„!ƒù„7„„"„.„.ƒûƒÇƒð„„ ƒ»ƒëƒçƒô„ƒõƒ¼ƒô„ƒò„0„#„
-„ƒû„ƒë„ƒû„ ƒìƒñƒó„ƒó„	„ƒâƒô„ƒñ„!ƒö„„„ƒëƒü„>„ƒáƒïƒûƒÿ„„ƒÐ„ƒò„5ƒÇ„„„ƒõ„ƒñƒïƒëƒûƒÿƒÿƒÇƒåƒöƒßƒã„„ƒý„%„ƒô„„„„„„ƒúƒÚƒ÷ƒïƒð„„.„#„„„&ƒõƒ»ƒäƒ÷ƒñƒÞƒüƒòƒþ„+ƒóƒùƒ¼„
-ƒøƒëƒè„	„
-„ƒã„ „!ƒØ„
-ƒý„„+ƒÝ„ „„&„	„ƒú„ƒôƒþƒíƒáƒæ„Nƒó„	„ƒÙ„)„„„ƒß„ƒí„ƒê„„„ƒøƒÿƒÿƒýƒó„+„ƒÛ„„„ƒÐ„ ƒüƒé„ƒîƒø„ ƒåƒùƒÿ„ƒÌƒò„ƒåƒæƒôƒàƒä„ƒîƒø„ƒ÷ƒâƒêƒÏ„„ƒëƒä„„ „„ƒó„,ƒÔƒï„ƒæƒý„ƒøƒã„ ƒðƒïƒÍƒê„ƒé„ ƒï„„„ƒ©ƒýƒóƒþƒÚƒù„ƒáƒü„M„	„„ƒõ„„„ƒêƒÜ„„ƒæƒß„
-ƒü„„ƒ´„ƒÐ„ƒöƒÎƒß„ƒÏƒîƒß„*„ ƒè„'„ƒô„ƒÆƒð„„ƒò„ƒëƒï„"„#ƒÛ„'ƒçƒÿƒíƒÓƒòƒÓ„„ƒÛƒòƒó„ƒõƒú„„
-ƒÞ„ƒÈƒç„„	„„,ƒäƒ¼„	ƒíƒ¿ƒù„„„ƒèƒ÷ƒôƒñƒÚ„ƒãƒàƒêƒü„„'ƒîƒì„„„„„„„/ƒù„„„#„„„„,ƒâƒÖƒÞ„„ „ƒÚ„„„9ƒîƒêƒÒ„ƒúƒÏƒç„ƒÖƒÕ„ƒþƒîƒæƒã„ƒÖƒð„$„ƒù„„ƒþ„„„/ƒá„„ƒý„„ƒüƒÝƒû„„„„ „„ƒÉ„„;ƒê„.„1„„!„„„„ƒáƒâ„)„#„„#ƒÑƒÞƒçƒø„ƒüƒüƒÑ„„ƒã„*„
-„„WƒýƒîƒÓƒåƒî„„„&„"ƒ×ƒò„!ƒæƒö„-ƒôƒÀ„ƒÿ„ƒóƒðƒåƒÖƒí„„3„ƒù„F„ƒô„„„ƒ×„Q„8ƒç„„-„„„ƒú„„ƒñƒùƒñ„*ƒÜƒôƒû„ƒËƒ×ƒðƒÅƒ²„ƒô„%ƒçƒÓ„„ƒï„ƒÿƒñ„ƒî„
-ƒí„ƒß„„„„„ƒå„ƒúƒýƒäƒÙƒí„ƒûƒêƒÏƒç„F„6ƒäƒéƒî„#ƒþƒû„
-ƒï„ƒóƒê„+ƒÌ„
-ƒñƒëƒãƒù„„„„CƒáƒÏƒòƒÖ„#ƒóƒ¿ƒå„'„
-ƒô„„„ƒú„„ƒèƒòƒó„%ƒþƒ÷„,ƒö„ƒü„
-„„„-ƒò„"ƒè„ƒÀƒÿ„ƒØ„ ƒö„&ƒñƒßƒý„$„ƒÞ„ „ƒá„$ƒßƒà„„9„.ƒ÷ƒÒƒôƒü„„ƒü„ƒéƒòƒòƒê„ƒò„ƒÛ„ƒÔ„ ƒÿƒ×„ƒà„*ƒá„„>ƒûƒê„"ƒÜ„„„ƒæ„4„ƒþƒÉƒÍƒý„7„%„ƒñ„ƒÙƒþƒëƒäƒúƒôƒþ„#ƒñƒÌƒà„„„B„ƒËƒÜ„ƒÑ„„„ ƒû„„„ ƒð„ƒëƒò„!„„ƒô„ƒÜƒ×ƒðƒÖƒÙƒäƒÌ„*ƒñƒïƒôƒ÷ƒôƒçƒã„ƒèƒìƒÆƒúƒöƒÑƒÿ„„ƒøƒþ„„!ƒÜ„#„ƒôƒîƒ×ƒÌƒðƒíƒòƒþƒõƒ÷ƒåƒëƒíƒàƒÿƒí„ƒýƒû„ƒ¾ƒàƒé„ƒÓƒøƒôƒú„)„ƒà„ƒëƒé„,ƒ¶ƒáƒåƒÑƒÝƒñƒúƒÑƒÐ„„ƒý„ ƒåƒø„ƒäƒÙ„ƒõƒÈƒÞƒåƒñƒÞƒàƒôƒõƒÙ„ƒðƒÔ„*„&„I„„„-„ƒÔ„Iƒä„ƒØƒé„@„„„ƒ÷ƒù„'ƒûƒüƒè„ƒõƒë„ƒð„ƒñ„ƒì„ƒÝ„ƒÿƒñ„„ƒùƒÌƒõƒåƒý„ƒÒƒîƒï„@„ƒâ„*„	ƒÄ„!„"ƒÍƒýƒê„-„„.ƒåƒï„„ƒá„„ƒÿ„„„ƒú„„2ƒÝ„ „+„ƒÕƒýƒü„„„„ƒÅ„„ƒùƒÝ„ƒÝƒð„„5„ƒè„ƒíƒá„ƒï„ƒâ„„ƒý„&ƒ÷„„„$ƒó„ƒüƒ÷ƒþƒ×ƒåƒÃƒóƒó„„ƒÙ„ ƒ÷„ƒð„ƒàƒýƒùƒî„ƒæƒÄ„„!ƒáƒÏƒëƒýƒú„ƒêƒç„ƒâ„ƒÖƒò„+ƒùƒóƒØƒüƒóƒÁƒç„ƒãƒñƒêƒô„ƒè„„ƒô„ „ƒïƒë„„„„ƒæƒüƒìƒØƒô„„ƒø„5„ƒã„ƒùƒßƒæ„„„ƒù„ƒþ„„ƒñ„$„„ƒýƒÿƒøƒò„Oƒö„ƒøƒùƒß„
-„„	ƒñƒß„„„ƒÒƒôƒô„„ƒóƒÚƒü„0„„&„ƒèƒæƒßƒó„0ƒþƒåƒçƒøƒØ„„„$„„ƒõ„)ƒãƒåƒü„„„„„9„ƒí„	„#„ƒþ„*„ƒÕƒî„"„$„„ƒôƒè„„„ƒú„ƒôƒÖƒü„ „)ƒéƒÜƒÿƒôƒë„"ƒà„„ƒïƒðƒùƒÿƒèƒØ„ƒþ„„	ƒéƒüƒì„„„ „„ƒÏƒçƒß„"ƒÆƒë„ƒýƒÒ„3ƒñ„„„ƒÆƒä„#„„6„,ƒüƒé„ƒÞƒ™„„*„ƒîƒó„ƒÓƒ×ƒîƒëƒ÷ƒïƒâ„„„ƒìƒêƒåƒû„„ƒñƒçƒÔƒóƒÝ„„ƒÜƒõ„ „ ƒ×„ƒö„)„„ƒ÷ƒøƒï„ ƒÌ„ ƒÔƒý„ƒãƒÞƒáƒð„„=„ƒûƒÚ„ƒßƒï„ „„ƒíƒø„ƒç„„„ „1ƒó„	„ƒû„„„ƒø„„ƒù„	ƒö„„ƒôƒüƒý„*ƒç„ƒÐƒý„ƒé„„„ƒ÷„	„ƒûƒþ„ƒñƒ÷ƒÜ„(ƒãƒ½ƒè„	ƒØ„„„„„	„Kƒïƒê„ƒî„	„„„„„ƒØƒÍƒÿƒÕƒ÷ƒê„ƒðƒò„&ƒí„7ƒò„ƒå„ƒø„„!„„ƒæ„ƒÚ„ƒþƒØƒç„ƒãƒÐ„ƒÝ„	„„3ƒá„ƒëƒÎƒÚ„ ƒé„ƒïƒÐ„„ƒÙƒê„ƒá„ƒý„„ƒÏ„TƒÇ„-ƒòƒö„
-ƒÛƒç„!„„	ƒÿƒ÷ƒÝ„ƒÙ„ƒøƒâƒæƒÔƒ×„„„ƒÂ„„-ƒó„„ƒÙ„ƒÿƒîƒ÷„„	„„„6„„„ƒú„ƒèƒÚƒÿƒäƒÇƒöƒö„	ƒ×„ƒïƒæ„„„ƒÖƒïƒÏ„„ƒð„#„ƒëƒð„„	ƒúƒüƒú„„)„@ƒþƒ¹„„?„ƒþ„
-„ƒéƒý„ ƒþƒïƒõƒÝƒë„7ƒ¿„Vƒó„„ƒþ„„
-ƒï„Iƒ÷„4ƒî„	„„ƒÞƒâƒøƒóƒþƒþ„ƒèƒÿ„3„„-ƒ÷„;„K„„ƒõƒì„2„)„(„ „0„9ƒé„„%„„ƒÞ„„„ƒîƒåƒîƒæ„"ƒöƒÍƒìƒêƒéƒû„	„ƒÛ„ƒùƒû„„0ƒõƒéƒÃƒö„„„ƒÛƒ÷„„ƒÌƒÒƒñ„„ƒÌƒóƒö„ƒëƒËƒðƒô„)„ ƒßƒåƒë„ƒ±„ƒüƒýƒíƒí„„.„,„ „ „=ƒâƒð„„ „ƒùƒåƒó„$„„.ƒúƒí„ƒðƒû„„„„ ƒÍ„„
-„ƒíƒØƒèƒìƒñ„ ƒíƒæƒúƒúƒíƒÄ„(ƒí„ƒàƒì„ ƒø„ƒû„„„ ƒÉ„„ƒüƒøƒÓ„0„ƒäƒÔ„4„„$ƒü„„ „X„ƒø„ƒò„9„„ƒù„ƒäƒê„ƒþ„„9ƒëƒé„
-ƒØ„„„„„„	ƒû„„7ƒÓ„„„1„8„ƒþƒÑƒÒƒãƒí„„ƒù„„„9ƒö„ƒâ„ƒùƒì„)ƒåƒÖ„„ „ƒëƒÔƒÜ„ƒ¬ƒÚƒÏ„„'„„;„(ƒí„ ƒ÷„ƒæƒÊ„ƒÿ„+„ƒö„„TƒòƒÒƒæ„„ƒÿ„ƒü„ƒ×„ƒå„/ƒð„%ƒé„„ „„ ƒÖƒêƒÿƒåƒä„„„1ƒü„ƒö„ ƒÿƒâ„ƒó„ƒýƒé„ƒè„ƒÄƒõƒµ„ƒÝƒïƒûƒåƒìƒá„ƒôƒäƒû„„ƒã„ƒã„	„„	ƒðƒèƒüƒÑƒä„„„ƒõƒàƒå„„"„ƒó„„„ƒý„ƒó„ƒïƒã„ƒì„ ƒøƒêƒò„	ƒÍ„ƒø„ƒêƒàƒý„-ƒØ„)„ƒì„#„/„4„)„A„1„>„„„>ƒî„ƒÿ„„„ƒ×ƒñƒ÷ƒç„„„ƒÅƒð„(„ƒ÷ƒí„ƒá„8„+ƒæ„„ƒó„6ƒÜƒ¼„„	ƒó„/ƒìƒ×„„
-ƒíƒù„ƒÿ„„&„ƒôƒò„
-„ƒóƒõ„ƒÛ„ƒíƒÛƒåƒè„„„4ƒä„ƒÝƒØƒçƒí„ƒöƒÓ„„ƒôƒù„„	„ƒÙƒé„ƒà„ƒË„„„„„„„„„ƒüƒÿ„„ƒÚ„ƒõƒì„
-„„!ƒäƒá„-ƒñ„ƒî„„„ƒþƒØƒÙ„#„ƒü„„ƒ÷„„
-„ƒåƒóƒÎ„ƒú„%ƒÆƒÄƒ÷ƒëƒýƒÐƒá„ ƒü„ƒã„„ „„„@„ƒá„„ƒó„ƒù„ƒíƒùƒåƒì„„ƒÐƒí„ƒ÷„ƒÝ„,ƒî„„„ƒû„„ƒüƒí„;„ƒãƒã„ƒÿ„ƒÝ„K„)„„A„{„‘„q„Á„F„?„7„ „&„-ƒó„ƒàƒ÷ƒï„„ƒóƒòƒÚ„„	„2ƒþƒëƒóƒÔ„ƒî„ƒÙ„„+„ƒø„„ƒê„3„ƒóƒöƒçƒù„„„i„ƒ÷„	„@„„-ƒß„„	„„'ƒãƒÊƒí„7ƒÆ„„<ƒý„ƒ¾ƒøƒù„ƒÖ„ƒÎ„
-ƒô„%ƒø„„ƒùƒú„ƒî„ƒÑƒñƒá„6ƒÚƒù„„ƒö„ƒÏ„„%ƒùƒú„ƒóƒô„„ƒì„	„„-„
-„ƒêƒ×„ƒùƒÆƒÓ„ƒñƒñƒþƒñƒé„„ƒýƒõ„ƒè„ ƒç„ƒù„ƒËƒøƒéƒüƒûƒÕƒâƒüƒêƒñƒü„ƒ¿ƒ÷„„„ƒï„)„„ƒî„„ƒº„*ƒòƒå„+„%ƒñ„ „„+ƒ÷ƒþ„1ƒü„ƒþ„ƒÝƒÓƒñ„%ƒ×ƒîƒÌƒôƒû„!ƒòƒï„ƒîƒùƒý„„„„‡„·„¶…B„ë„ë„u„a„6„'ƒþ„-„ƒö„5ƒÚƒÛ„/„„„„„(ƒÌ„ƒýƒûƒå„ƒù„ƒâ„„„ƒë„„„ƒÔ„#ƒù„ƒáƒ½ƒøƒê„„)„ƒÚ„ƒñ„3ƒÝ„ƒÞ„-„ƒýƒõ„ƒÓƒúƒé„ „KƒÝ„ƒßƒÝƒý„ƒ×ƒÙƒøƒí„ƒõ„„„ƒåƒÌ„„ƒö„'„,ƒüƒÐ„„ƒ¯„,„ƒüƒþ„ƒïƒóƒë„ƒã„1„ƒÎ„„)„ „ƒç„ƒø„ƒûƒüƒô„ƒé„1ƒë„ ƒéƒäƒýƒÕ„ „ƒù„„(„ƒÛ„„ƒÌ„ƒñ„„&„„ƒøƒí„ƒé„ƒóƒÆ„,ƒóƒúƒö„'ƒåƒáƒø„„ƒàƒä„„ƒÒƒçƒôƒÍƒäƒñƒÝƒ·„„ ƒý„„ƒß„ƒí„„„„ ƒçƒà„8„ „„)ƒç„„#„„M„d„Ä…ˆ…ã…À…¼…G„Â„f„b„/„„„„ „-„#ƒûƒîƒýƒý„ƒü„ƒð„ƒí„#ƒò„$ƒþ„„ƒèƒËƒ÷„	ƒôƒúƒþ„„„„„!„ƒíƒë„ƒÞ„„„„„ƒï„ƒí„ƒ÷„ƒåƒñƒäƒæ„2ƒá„*ƒí„8ƒâƒü„	ƒó„%„ƒùƒÕƒûƒ¨„„„ „	„„„ƒû„„„.ƒñ„$ƒßƒîƒöƒêƒéƒïƒþ„-ƒÑ„7ƒô„M„„ƒÊ„ƒæ„
-ƒûƒñ„„ „ƒ÷„5„„ƒüƒÓ„„ƒÖƒÝƒê„ƒèƒÕ„ƒÞ„ƒõ„4ƒýƒàƒê„&ƒùƒû„ƒòƒâƒ×„„„„„ƒé„ƒÚƒòƒ³„„#ƒ÷ƒì„„ „	„„„&ƒ÷„„„
-ƒúƒþƒüƒì„'ƒñƒø„ƒöƒ»„'„„„„„„2ƒùƒß„„„ƒþ„„$„V„A„¥…e†P†¤†V†$…-„ò„E„4„/„,ƒÒ„ƒì„J„$ƒ÷„ƒâƒøƒþƒ÷ƒó„ƒ¿ƒ÷„ƒï„&„1„ƒþƒø„'„„„ƒñƒýƒïƒï„„ƒ¼ƒî„6„„„#ƒÚƒõ„„ ƒâ„ƒæ„)ƒûƒìƒêƒ¨ƒö„ƒöƒÓƒì„ƒÏƒü„*„ƒàƒÝ„
-ƒû„CƒúƒûƒçƒûƒÍ„0ƒñ„ƒð„„ƒèƒòƒþƒëƒöƒøƒóƒÛƒò„#ƒèƒ÷ƒè„3„„„	„„(ƒïƒñ„„ƒñƒíƒè„„„+ƒåƒð„ƒåƒñƒ×ƒÌ„!„„„ƒÙƒç„„„6„"ƒöƒæƒþƒä„ƒõ„„@„ƒýƒÏƒô„(„ „ „„ƒÔ„ ƒü„ ƒÎ„ƒá„*ƒÐ„„„„
-„„ƒôƒñƒôƒæƒëƒÂƒû„(ƒÊ„ƒøƒò„ƒëƒå„'„ „„„ „ƒÊƒüƒàƒß„„H„&„?„º……r†D†^†I…Ú…^„™„`„,„ƒ÷ƒÌ„ƒúƒæ„ƒÈƒûƒë„ƒóƒËƒù„"ƒßƒ×ƒØ„D„ƒî„„„„„„ƒýƒäƒ÷„$ƒèƒÛ„ƒýƒé„„ƒÝƒòƒâ„
-„„ ƒú„ƒÔƒÕƒÓ„„„„ƒêƒÎƒÔ„.ƒó„)„„„ƒóƒã„„ƒØƒæƒì„„„@„„„ƒÕ„"ƒûƒÑ„ƒø„„„
-ƒå„„ƒÓƒÝƒåƒø„ƒìƒó„ƒä„„ƒ÷ƒè„„ƒÓ„
-ƒëƒô„	ƒã„%„ƒáƒóƒÜ„ƒôƒòƒì„ƒñ„„ƒÒƒôƒôƒë„,„„„„
-ƒê„ƒæƒæƒøƒà„ƒæ„
-„ƒñ„ƒöƒåƒîƒú„„	„ƒí„ƒóƒÕ„„ƒÛƒþ„„ƒ÷ƒüƒÑƒôƒÿƒó„ƒî„!ƒúƒê„„„„ƒó„>ƒ÷ƒþ„ƒã„ƒý„„„S„•…
-…5…´…î…·…„±„c„„„&„:„ƒíƒÿ„„ƒñ„„„„„-ƒïƒË„ƒûƒßƒõƒõƒêƒü„#ƒþ„ƒæƒèƒÛ„„„ „ƒïƒÜ„ƒëƒüƒòƒõƒãƒãƒîƒý„ƒØƒÛƒá„0„'ƒË„„„„„$ƒñƒØƒû„	ƒöƒÍ„ƒ÷„„ƒôƒÊ„„&„„ƒÉƒâƒýƒì„„ƒë„„ƒÕ„ƒèƒÈƒÛƒÿ„ƒÕƒä„ƒó„8„ƒúƒç„#„ƒÐ„	ƒÉƒäƒáƒíƒäƒß„„„ƒÝƒú„„ƒõ„„ƒù„„„,„/ƒÿƒ×„
-„„ƒ¢ƒèƒèƒé„„„ƒÍ„7„ ƒó„	ƒßƒäƒñ„„„4„'ƒó„„ƒá„ƒú„$ƒá„„ƒú„ƒ¿ƒè„
-„%„ƒñƒ×ƒýƒç„,„#ƒÐƒüƒ·ƒè„ƒâƒøƒóƒõƒöƒñ„„ƒçƒê„*„D„K„£„·„à……?„Þ„³„S„$„„&ƒâ„ƒÑƒõƒõƒù„ƒä„ƒì„ ƒö„ƒÛƒï„ƒà„ƒùƒì„„ƒý„
-ƒøƒôƒÿƒýƒóƒé„„ƒïƒç„	„ƒÜ„ƒíƒÌƒúƒýƒé„'„	„ƒþƒû„ƒÜ„„ƒþƒ÷„ƒêƒÙƒáƒø„+„ƒùƒåƒì„2ƒõ„,„ƒÞƒò„!ƒèƒÛƒÛƒÐ„7„ƒûƒÂ„„„ƒý„'ƒÌƒéƒù„„%„„ƒÿƒùƒ¹ƒéƒÕ„ƒÿƒ½„„„	ƒîƒåƒñ„.ƒïƒËƒ÷„>ƒé„ƒýƒØ„ƒêƒÜ„.ƒñ„„ƒéƒÉ„ƒè„„ƒîƒò„„„ƒê„ƒõ„0ƒî„„!ƒß„„ƒúƒ÷ƒè„ƒðƒô„„„ƒãƒô„ƒîƒó„ƒÿƒÿ„
-ƒæƒÐ„ „„„7ƒðƒÚƒþ„ƒñ„	ƒÿ„„"„ƒÔƒü„„„„ƒù„"„6„G„d„‘„„„_„6„„
-„„ƒ¾ƒîƒí„ƒÊƒâ„„„„ƒØƒÝƒàƒô„„„ƒå„„ƒÖ„	„ƒÍ„ƒÏƒû„„"„ƒøƒò„+„„<„ „ƒýƒí„„„„*„+ƒÖ„&„ƒ¾„„D„ƒöƒñƒýƒöƒÛ„ƒûƒç„ƒï„	ƒü„„
-ƒ×ƒÎ„ƒû„*ƒËƒØƒýƒüƒºƒä„ƒ¦„"ƒøƒï„„„ƒíƒù„ƒç„ƒ÷„„„„ƒÛƒìƒõ„
-ƒèƒöƒå„ƒñƒðƒÝƒôƒ÷ƒßƒ­ƒÝ„0ƒûƒÖƒÝƒÁƒòƒìƒò„ƒß„ƒà„!„ƒôƒòƒìƒàƒé„"„Dƒâƒä„ƒÜƒý„ƒÓ„!ƒÅƒý„ƒÆ„„5„ ƒïƒÉ„„ƒ£„ƒöƒûƒ´„ƒÏƒæƒÝ„ƒ÷ƒçƒó„„<ƒÔ„„	ƒÿ„„„ƒø„„,„(„„„=ƒûƒüƒñ„'„„!„„"„S„>„=„6„-„„ƒþ„ƒð„„:ƒç„;„„ „GƒÛƒÿƒýƒÙ„"ƒôƒþƒû„„„ƒçƒÐ„ƒûƒû„#ƒåƒï„ ƒû„ƒð„ƒðƒûƒú„„
-„	ƒÏ„„ƒü„„7ƒùƒÿ„$„ƒû„ƒú„ƒ÷„ƒë„„ ƒàƒÕƒä„ƒùƒÿƒÔ„0„"ƒÆ„ƒçƒÇƒæ„„„1„ƒÊƒøƒó„„ƒê„4ƒî„ƒ¿ƒÚ„ƒùƒÓ„ „ƒíƒýƒîƒòƒðƒüƒéƒüƒõƒüƒÝ„ƒ¶ƒþƒðƒÝ„	ƒðƒÛ„
-ƒèƒÞ„ „„ƒë„„„ƒãƒæƒãƒëƒÛ„ƒÚ„ƒòƒÔ„+„„„ƒü„„$„ƒÑ„	ƒìƒí„	ƒî„ƒÏ„'ƒ÷ƒöƒÊ„"„1ƒíƒÒƒõƒûƒöƒû„ƒôƒÛƒ·„„ƒÐƒþƒÙƒàƒáƒÞƒú„ƒëƒ×ƒçƒà„+ƒöƒÔƒø„„„„ƒÒ„ƒøƒéƒøƒôƒËƒá„)ƒÖ„„ „„>„ƒè„#ƒÜ„ƒÑƒù„ƒóƒÞƒóƒá„	„„„„$„!ƒù„ƒØƒÿƒæ„ƒõƒúƒ×ƒõƒêƒÝƒô„„ƒîƒñ„„-„	ƒö„„$ƒûƒõƒçƒø„ƒþ„
-ƒá„„&„ƒë„ƒì„„ƒê„ƒäƒã„	„ƒÁƒþƒó„„BƒÍ„„ƒÛƒüƒõƒöƒäƒä„ƒñ„	ƒÕƒùƒ×ƒê„„3ƒéƒë„ƒéƒý„„„ƒøƒúƒÙƒõƒÃƒñ„*ƒðƒö„	„ƒÛƒá„0„ƒüƒóƒ×ƒîƒüƒ¾„7„-ƒìƒÝƒðƒå„ƒÝƒÏƒú„ƒð„5ƒó„-„„7ƒñƒÙ„!ƒßƒé„ƒñƒäƒõ„&ƒÛ„	ƒáƒûƒïƒàƒú„
-„ „„„ƒÜƒñ„'„„„)ƒ÷„1ƒüƒ÷ƒÆ„„ƒõ„/„6ƒôƒÿ„ƒÓ„!„+„ƒûƒË„„ƒÝ„„„	„(ƒì„ƒÔƒòƒñƒí„„+ƒÔƒõ„„;„'ƒåƒã„ƒóƒî„0ƒó„'ƒñƒí„"„ƒãƒêƒù„„)ƒõƒé„ƒÞ„„ƒÇ„'„ƒáƒüƒø„ƒð„„#„„ƒô„ƒÿ„„„„„Cƒõ„„„ƒÃ„„„ „ƒ¾„3„„"ƒó„ „„ƒÒƒü„„$„ƒþƒ³ƒÝƒõ„ƒðƒðƒã„„*ƒð„ƒí„ƒõ„ƒ¿„ƒï„(ƒÙƒøƒñ„„ƒÕ„„„ƒ÷ƒ×ƒóƒýƒÕƒêƒùƒüƒé„„ƒâ„„	„ƒïƒó„ƒï„ƒÜ„!„„+„„ƒôƒÛƒÒ„ƒÓƒÿƒûƒõ„$„ƒäƒÿ„„ƒáƒùƒúƒæ„)ƒû„ƒûƒñƒùƒî„-ƒèƒýƒô„ƒý„ƒÏƒÚ„„„ƒíƒ¿„ƒô„ƒò„„ƒýƒý„„„„„ „'ƒýƒñ„ƒýƒö„#ƒ÷ƒî„ƒþ„ „„ƒëƒ÷ƒí„-„ƒË„„$„ƒóƒÁƒóƒú„ƒÎ„„ƒñ„ƒý„„ „ƒ½ƒýƒîƒúƒñ„„„ƒùƒýƒå„ƒéƒÞƒûƒùƒõ„ƒÎ„ƒóƒ¸ƒ÷ƒÚ„„ƒÀ„„ƒâ„„ƒÐ„%ƒï„„„„„ƒÚƒº„ƒÝƒõƒë„ „9ƒÛƒúƒå„„ ƒì„ƒú„„%ƒáƒþƒú„(ƒûƒá„ƒü„„„ƒþƒûƒó„„„	ƒì„ƒôƒûƒõƒô„#ƒá„„ƒöƒýƒî„ƒÃƒû„7ƒêƒãƒÔ„(ƒüƒùƒÙƒß„ƒõ„„ƒõƒíƒø„ ƒî„.„„„„ƒï„
-ƒåƒÏ„„„ƒø„ƒï„"ƒõƒë„ ƒó„ƒ´ƒìƒýƒñ„ƒÃƒçƒñ„'ƒá„#ƒï„„ƒóƒôƒê„„ƒý„
-ƒ÷„ƒõ„>ƒþƒý„ƒç„„ „„ƒý„ƒÿ„ƒî„)ƒÍƒò„ƒã„„&ƒÝ„„ƒùƒü„ƒàƒåƒÙƒó„„„ƒñ„	ƒü„ „$ƒýƒóƒÚƒà„„ƒåƒâ„ƒåƒèƒÙ„„ƒë„„	ƒýƒïƒ÷„„ƒÝƒï„!„
-„ƒëƒä„ƒþ„„„ƒö„ƒýƒð„„!ƒùƒÐ„ƒ±„ƒù„ƒØƒëƒÝ„ƒêƒÏƒóƒðƒé„	„ƒüƒí„	„„ƒÖƒûƒÞ„„„ƒû„)ƒô„%„#ƒä„ƒá„"ƒø„ƒý„'„„)„„*ƒë„„„ƒçƒöƒØƒÃ„	ƒù„%ƒ÷ƒô„"ƒÜ„„7ƒ÷ƒàƒ÷„ƒ¿ƒí„„!ƒøƒø„ƒÈƒä„„#„„
-„ƒÜ„$„„ƒð„4ƒïƒûƒà„ƒÕƒîƒßƒè„ƒÅ„ƒý„„ƒâƒçƒ÷ƒß„ƒúƒãƒçƒïƒ¾ƒÕ„
-ƒöƒÝƒò„ƒ÷„ƒÝƒâƒò„ ƒï„„,ƒù„ƒÚƒý„ƒÍƒüƒû„5„„ƒ¼ƒõƒÅ„&„„„„„„ƒå„„ƒèƒâƒÙƒôƒî„„=„ƒóƒÑƒõƒàƒë„ ƒñƒéƒÝ„&„ ƒãƒÚƒÛƒàƒï„„ƒðƒì„%„ƒ÷ƒý„ƒèƒôƒÚƒç„„„ƒë„„%„„ƒ°„„%ƒûƒø„„„ƒÕƒàƒßƒóƒÙ„ƒûƒã„„!ƒÜƒÙƒÿƒÕƒò„	ƒÖ„&„(„ƒö„ƒß„ƒá„ƒû„&ƒíƒÝƒÿ„ƒð„ƒäƒèƒç„ƒòƒÍ„„„„1ƒý„ƒÏ„ƒîƒÍ„ƒæ„ƒû„ƒõ„%„ƒó„„„	ƒáƒÝ„ƒæƒöƒðƒï„ƒôƒþƒÞƒý„
-„.„„„„!ƒô„„ƒôƒñ„ƒôƒæ„ƒü„ƒµƒ»ƒÔƒäƒí„(„ƒü„„ƒÏ„„ƒßƒü„„ ƒî„ƒá„	ƒðƒ÷„„ƒö„ƒî„ƒÓ„	ƒçƒ÷ƒÿ„„ƒ÷ƒõ„ƒÖ„„ƒæ„ƒðƒéƒÂƒëƒé„ƒöƒü„-„ƒÎ„	ƒÙ„#ƒáƒê„„ƒÒƒæƒõƒá„ƒç„ ƒÍ„ „ƒãƒû„„„,„ƒõƒìƒû„ƒì„	ƒÈƒÝƒðƒüƒûƒÚ„ƒì„„„ƒÖƒèƒôƒïƒÐ„„!ƒçƒðƒöƒÓƒíƒø„„ƒõ„(„„ƒÍƒô„8„ƒúƒ¾„ƒÖƒæ„ƒÛƒîƒöƒÝ„ƒø„ƒò„&ƒêƒùƒï„„ƒÇƒæ„ƒØ„ƒúƒãƒø„„ƒñƒûƒüƒÄƒÑƒô„ ƒß„ƒè„„!ƒÌƒÔƒõƒå„ƒú„
-„ƒþ„„:ƒý„'ƒÙƒå„-„„ƒÚ„#ƒû„ƒÞƒùƒÔƒòƒô„#ƒìƒýƒÛƒùƒÿƒî„„/ƒÂƒÛ„>ƒýƒóƒ×„ƒü„„ƒè„#„„ƒçƒù„ƒöƒÒ„	ƒÙƒõƒø„ƒú„„ƒè„„„„„ƒë„„„	„„ƒâ„1„'ƒç„„ „	ƒú„ƒîƒõ„„„%„%ƒèƒó„)ƒ¿„#„„
-ƒûƒýƒ×ƒê„ƒñ„ƒì„ ƒÓƒÉƒý„„„8„„„4„„ƒò„„ƒüƒüƒô„ƒ¿„ƒõ„ƒÜƒþ„-ƒãƒð„„%ƒÿƒà„„1„ƒë„ƒä„ƒð„"„ƒïƒçƒô„ƒõ„ƒè„%„,ƒë„ƒå„'ƒõƒîƒûƒçƒÿƒÛƒå„„"ƒÁƒðƒý„*„	„ƒá„„ƒïƒ½„ƒæ„ƒâƒÙ„„ƒÿƒêƒþ„ƒÔƒßƒþƒø„	ƒÇ„ƒö„,„:„$„ƒÿ„*„ƒêƒö„ƒüƒä„ƒùƒñƒÝ„„)ƒõ„2ƒüƒð„
-„?„„„„ƒÖ„„$„„„ƒÑ„ƒàƒò„„„ƒÿ„ƒóƒí„ƒô„ ƒðƒõƒÜ„ƒòƒãƒôƒúƒü„=„„ƒ÷„ƒîƒÎƒýƒóƒî„ƒëƒùƒôƒõ„ƒÈƒòƒÂ„(ƒò„„ƒ¾ƒõƒØ„„„„„ƒÛƒÛ„ƒî„ƒý„„„„ƒã„	ƒúƒÛƒñƒé„ƒû„„„„ƒîƒå„„#„ƒù„ƒîƒø„'„„„„„„ƒíƒúƒ÷ƒþƒí„ƒóƒÌƒíƒû„ƒòƒø„ƒýƒóƒøƒ÷„ ƒàƒÝƒÊ„ ƒ÷ƒâƒä„„ƒØƒóƒ¹ƒéƒÝ„ƒó„„Dƒõ„"„	„„$ƒÄƒÝƒüƒô„ƒé„ƒêƒàƒã„ƒÿ„	„ƒöƒþ„„„ƒù„+ƒñ„9„ƒÁ„ƒï„ƒÚ„"ƒì„„ƒüƒß„#ƒã„„-ƒÿ„*ƒÏ„"„„<ƒô„2„ƒÈƒÎ„ƒù„ƒæƒÙƒØ„1„„„„„*ƒúƒÛƒæƒÝƒ÷„/„ƒÛƒæƒÇ„5„„„ƒø„&ƒé„„„„ƒò„GƒÇƒþƒó„„ƒðƒýƒóƒòƒÚ„ƒöƒé„„ƒðƒø„(„ ƒ÷„ƒû„ƒúƒÿ„„#„+ƒèƒ÷ƒùƒþ„„„ƒüƒìƒþ„ „ƒÍ„„ƒß„ƒûƒù„„ƒþƒÎ„#„!„„ „„$„5ƒè„„„ƒâ„ƒÔƒõ„„0„ƒùƒóƒñ„„ƒòƒà„„2ƒä„<„(ƒõƒê„„ „
-ƒñƒÛ„%„ƒßƒîƒÒ„ƒóƒï„ ƒÓ„„$ƒõƒä„ƒá„„ƒú„ƒèƒôƒú„ƒÐƒâƒôƒòƒä„ƒþ„+„ƒ×„„ƒÖƒÌƒö„9„
-ƒå„(„%„A„„
-„ƒÔ„%ƒç„ƒð„„„ƒùƒîƒ÷ƒú„
-ƒè„„„!ƒõƒÿƒØƒù„„@„ƒü„ƒø„„
-„
-ƒò„&„ƒÞ„%ƒØƒæƒ÷ƒöƒã„ ƒìƒþ„ƒÐƒñ„„„ƒì„ƒöƒçƒàƒÑ„„*ƒð„#„ƒù„„ ƒþƒüƒþƒÿƒÓƒïƒáƒØƒú„(ƒÖƒþƒèƒè„ƒÄ„'ƒþ„ƒØƒô„ƒâ„„	„„ƒÉ„„ƒÿƒóƒûƒÿƒùƒö„ƒúƒÔƒþƒî„ƒþƒìƒòƒì„ƒáƒü„„+ƒÈ„ƒäƒéƒßƒüƒÕƒíƒèƒì„ƒÖ„!ƒò„„ƒâ„„„ƒÄƒãƒÓƒé„ƒæ„ƒÚƒäƒÒƒâƒñ„>ƒÝ„$ƒÈ„„„ƒÌƒôƒñƒÐƒÐƒÞ„ƒôƒã„ƒì„ƒö„(ƒÿ„-ƒ÷ƒÎƒô„ƒßƒðƒø„&ƒÛƒøƒíƒé„<„ƒûƒþƒî„„ƒÊ„ƒøƒé„„ƒþƒø„„6„ƒó„ „„ƒè„„ƒ÷„„„ƒìƒ÷ƒôƒî„„„ƒÖ„ƒîƒûƒð„ƒî„ƒü„„
-„„„ƒüƒê„„ƒï„„ƒÕ„ƒúƒðƒâ„:ƒæ„1ƒî„4„ƒæ„„ ƒß„>ƒÙƒø„ƒî„„'„A„ƒñ„C„„ƒíƒå„ƒß„„ƒþ„	ƒð„ƒö„ƒüƒõƒïƒó„„„„ƒø„„„„Aƒâ„"ƒþƒúƒåƒã„„„ƒÖƒÌƒôƒè„ ƒø„4„ƒöƒôƒÙƒó„2„$„„ƒüƒ×ƒÝ„<ƒÿƒå„„ƒú„„ƒò„ „ƒôƒí„„ƒöƒæƒãƒèƒö„ƒÝ„'„ƒû„„ƒõƒìƒè„%ƒë„
-ƒÿƒÊ„	„ ƒê„„)ƒë„ƒçƒò„„ƒÚ„ „„ƒÌƒóƒë„„„„ƒøƒû„ƒÀƒçƒñ„ƒå„;ƒûƒèƒ÷„ƒþ„ƒÜƒüƒû„ƒôƒá„ƒÚ„ƒãƒÉ„ƒò„ „
-„ƒï„„ƒò„„ƒÕƒÙƒáƒÔƒû„„„„ƒþ„ƒ÷ƒ÷ƒù„ƒöƒÄ„ƒàƒÈ„ „!ƒ×ƒÔ„
-ƒÌ„ „„ƒñƒò„ƒöƒôƒÿ„„ „ƒÅ„ƒÿƒøƒÔƒàƒè„ƒóƒé„„„5ƒæ„$„ƒÁ„.„„ƒØ„ƒð„&ƒ÷ƒÝ„)„ƒÿƒþƒºƒñƒï„ƒ÷ƒ÷ƒÚƒÊ„$„ƒë„"ƒöƒê„ƒþƒÛƒö„	„ „ƒôƒì„
-„ƒíƒù„„ „ƒú„ƒüƒÔ„Q„„„„„ƒÜ„„ƒî„	ƒæ„6ƒî„ƒ÷ƒñ„ƒë„„ƒñ„ƒêƒ÷ƒÊƒöƒ÷„6ƒø„)ƒüƒâƒÄ„	ƒúƒôƒÝ„„ƒûƒâƒ³ƒþƒÔ„
-ƒçƒúƒê„ƒû„ ƒòƒòƒ÷„„BƒøƒôƒÝ„„ƒíƒá„ƒû„&ƒÀƒü„ƒèƒéƒìƒêƒÜƒýƒÊ„„ƒåƒê„ƒ÷ƒë„„ƒ÷ƒÝ„ƒ÷ƒÍƒé„ƒçƒôƒñ„ƒçƒùƒèƒËƒñƒàƒû„„ƒ÷ƒøƒñ„5„ƒÆƒý„!ƒÈƒó„„ƒí„„„!ƒû„ƒðƒ÷ƒëƒÇƒñƒùƒí„„8ƒõ„„5ƒç„„	„„ƒýƒçƒÖ„ƒäƒò„„ƒÑ„ƒþƒÛ„„„!„„„.ƒè„„„„ƒüƒß„„4ƒåƒÉ„„„ƒÈƒè„ƒýƒç„ƒôƒù„„ƒõƒøƒæ„„ƒíƒßƒûƒý„„ƒéƒÚ„„3ƒó„ƒæƒüƒôƒõ„-ƒæ„ „ „	„ƒ÷ƒû„ƒûƒî„„1„ƒãƒæ„„„ƒø„
-„ƒçƒö„3„ ƒÈƒÚ„„ƒûƒìƒø„„
-„ƒêƒýƒö„„„„ƒõƒóƒÛƒÕƒËƒÖƒëƒÿ„ƒÄ„ƒÒƒÕƒàƒÕ„ƒï„ƒðƒëƒí„„0„#ƒá„„ƒÚƒõ„„ƒó„ƒÍ„„„„„ƒáƒßƒíƒþƒñ„+„ƒèƒÜƒ´„&ƒ×ƒÇ„„ ƒÕ„„ƒáƒð„ƒàƒØƒí„„ƒþƒù„„ƒ½„„=ƒóƒ÷„
-ƒúƒÜ„ƒÇ„„ƒí„„ƒÙ„„	ƒþƒöƒðƒÖ„I„'ƒÃƒúƒð„„„„ƒîƒÌƒüƒéƒò„ƒñ„„ƒì„!ƒýƒÛƒñ„!„ „ƒß„(ƒì„„„/„„!ƒõƒÙ„<„„„„5„ƒßƒÙƒìƒÛƒö„„„„ƒ¹ƒÞƒÕƒóƒßƒëƒÝ„ƒÖƒáƒë„„ƒý„ƒü„ƒõ„ „#„„
-ƒôƒß„#ƒû„ƒÇƒü„ƒåƒð„„ƒö„ƒö„ƒàƒè„"ƒåƒíƒèƒóƒäƒÞƒ÷„'„ƒû„ƒá„„"ƒæ„„ƒó„ƒðƒ÷ƒûƒÔƒý„ƒï„!ƒáƒûƒìƒùƒû„	„„„ƒ¾„„„2ƒÄ„ƒÊƒø„ƒûƒô„ƒÔ„ƒ×ƒû„F„,„ƒÖƒÜƒÛ„„ƒçƒþƒÿƒïƒØƒú„„-„„ƒøƒó„ƒü„ƒá„„(ƒüƒá„„ƒß„ ƒü„„ƒì„ƒúƒÔ„)ƒî„)ƒà„ƒþ„„„„(ƒø„ƒÛ„ƒúƒñ„„„ƒòƒ¿„„$ƒòƒçƒÚ„„„ƒòƒÚ„„„ƒù„ƒñƒñƒâƒùƒõ„„
-ƒÖ„
-ƒûƒä„ ƒø„ „ ƒìƒèƒê„„ƒâ„)ƒëƒôƒäƒëƒöƒâƒÛƒñƒ×„	„„$„„ƒò„„„„	ƒâƒòƒ÷ƒìƒÍƒ÷ƒ×„
-ƒí„ƒçƒóƒÈ„ƒö„„„"„ „6„ƒþ„ƒñƒðƒÝ„ƒðƒÍ„„ƒèƒÎ„„ƒû„ƒöƒðƒº„ƒü„„	ƒéƒÜƒú„<ƒýƒãƒõƒý„ƒí„ƒô„ƒÙ„ƒî„„ƒÚ„#„ƒï„„$„ƒâ„ ƒþ„	„%ƒ«ƒ÷ƒÿƒñ„ƒìƒë„„„ƒàƒûƒä„ƒû„ƒ×„(„„„„ƒìƒç„ƒÙ„ƒÝƒè„
-„ƒòƒ÷ƒáƒöƒæƒþ„„-ƒò„	„„ƒÿƒæ„7ƒÔ„„#ƒï„(ƒüƒåƒî„„„!ƒõƒ÷ƒâƒïƒÿƒÕ„„„ƒþ„ƒûƒæƒÂƒíƒÂ„„!ƒý„ƒúƒîƒßƒý„ƒèƒ¼ƒÜ„ƒô„„ƒûƒÉ„„„ƒäƒþƒîƒèƒû„	ƒòƒø„ƒÏƒßƒô„9ƒ÷ƒã„„ƒÑƒê„.„ƒæ„„ƒöƒÖ„	ƒùƒõƒåƒ÷ƒùƒå„„5„ ƒúƒÔƒ÷ƒÒ„ƒíƒßƒüƒËƒÖ„ƒý„ƒïƒºƒàƒÓ„,ƒéƒâ„„„ ƒñ„ƒÛ„ƒÏ„ƒó„„„ƒÞƒë„„ƒÙ„„ƒÙ„„„%ƒó„„ƒþƒä„/„F„ ƒÍ„?ƒë„„„„ƒò„„ƒìƒ×„„?ƒøƒÿƒí„„ „ƒ÷ƒýƒû„„ƒúƒ÷ƒé„ƒðƒíƒãƒí„/ƒýƒã„'„$„ƒúƒê„ƒ×ƒÓƒÿƒ÷ƒàƒü„ƒß„Aƒßƒçƒðƒôƒó„„:ƒÜ„„ƒôƒñ„ƒñ„„#„ƒñ„ƒÓ„ƒéƒê„„ƒÿ„ƒû„)„„	„ƒí„„.ƒß„„„0„„ƒÛƒøƒý„„ƒÙƒ÷ƒÐ„ƒð„„ƒÿ„„ƒíƒîƒí„„ƒÛƒê„	ƒë„ƒù„ƒäƒÌƒñ„ƒÿƒÚ„ƒë„	ƒÁƒò„9„ƒú„ƒÞƒÙ„„„„ƒëƒí„ƒï„„„,ƒÔƒÞ„„„ƒõ„„ƒöƒÐ„ ƒþƒýƒêƒîƒ¬ƒ¿ƒÜƒÝƒìƒúƒàƒç„ƒóƒÏƒíƒÈƒ½ƒé„ƒâƒàƒÜƒôƒû„ƒóƒñƒéƒ×ƒú„:„„„„„ƒü„=ƒãƒò„ƒâƒôƒ¤„„ƒñ„„„ƒèƒÏƒÙƒñƒ·ƒË„„„	„ƒáƒÚ„	„1„ƒðƒð„	ƒõ„„„ƒ¿„„ƒ÷„ƒþ„ƒñƒõƒØƒíƒëƒß„„-„ƒÿƒÖƒÛ„„„„ƒäƒû„„ƒñ„7„ƒò„ƒòƒý„„„E„„ƒøƒåƒð„$„	ƒñƒÿƒÕƒßƒð„#„ƒó„„„ƒØƒÁ„„/„ƒÿ„ƒï„2ƒÏƒùƒÍ„
-ƒòƒÿƒíƒÒƒóƒîƒÖƒøƒõƒç„ƒþ„ƒôƒ÷ƒÑ„ƒéƒäƒ÷ƒÿƒÞƒòƒý„„ƒÚƒåƒàƒ×„"„ƒßƒæƒç„"„!„:„„ƒï„Hƒå„ ƒâ„„„„ƒíƒâ„ƒëƒÛ„„
-„!ƒ×„ƒëƒé„ ƒíƒÙƒèƒÛƒú„ƒóƒë„„ƒíƒÿ„ƒô„ƒô„„„6ƒä„„„„„ƒüƒÕƒÔƒ÷„„„ƒòƒô„„„„ƒóƒæ„*ƒÇƒé„ƒõƒÜ„„(„=„ƒØƒçƒøƒãƒø„„„ƒì„ƒûƒøƒô„*„„„ƒõƒêƒÝ„
-ƒóƒÏƒìƒø„ƒãƒëƒßƒóƒßƒüƒâƒñƒÂ„-„ƒû„+ƒñƒÕƒüƒù„ƒü„ƒõƒé„@ƒø„ƒÌƒÖƒò„
-„„ƒØ„ƒîƒýƒùƒù„ƒñƒÙƒÖ„ƒèƒÏ„ƒ×„ ƒöƒÔ„„ƒß„)„„ƒà„„ ƒýƒ¾ƒõƒý„„„„„„#ƒê„ƒþƒïƒö„„ƒâƒõƒû„ ƒï„.ƒÄƒóƒó„„„ƒÔ„ƒõ„„!ƒå„ƒÔ„	„ƒî„ƒê„„ƒá„ƒðƒø„ƒâƒýƒÀƒìƒÐ„„"„„"ƒøƒÒƒóƒõƒîƒñƒî„„ƒèƒê„(ƒÔ„$„
-ƒô„ƒî„"„ƒÓƒô„ƒÝƒìƒØƒýƒêƒõƒÿ„ƒÇ„ ƒ÷ƒçƒõƒóƒè„„„„„„„ ƒäƒçƒß„ƒñ„)ƒÚ„„„.„ƒÑ„ƒÝ„„ƒÐƒæƒýƒøƒÏ„ƒíƒç„ƒÝƒàƒòƒÐ„„ƒìƒæƒó„'ƒóƒØ„„„ƒçƒêƒñ„ƒã„ƒö„„%„„)„„„ƒå„„ƒ×ƒãƒíƒ÷„ƒýƒØ„(„ƒñ„ƒä„„„ƒüƒ÷„	ƒÉƒëƒ÷ƒó„„ƒÝƒÚ„„ ƒï„„ƒó„„9„2„„„„*ƒý„ƒãƒÖƒæ„)ƒü„2„*„ƒù„'ƒÛƒß„ƒó„ƒâƒÒ„$ƒÿƒÿƒô„„„
-ƒüƒï„ƒâƒÛƒîƒä„„6„„'ƒýƒì„-ƒü„	ƒñƒãƒõ„„„ƒøƒ±ƒãƒÛƒýƒÐ„„5„'„„„„ƒØ„„ƒð„„„ƒÒƒõ„ƒïƒ÷„„ƒÜ„	ƒÿ„„ƒæƒðƒÖƒë„„&ƒ½„
-ƒý„„=ƒó„„ „„„ƒñƒûƒÚƒý„ƒÆ„„„„#„„„„$ƒø„A„	ƒø„„„ƒí„?ƒõ„1ƒïƒÝƒéƒë„	„ƒÊƒýƒó„„„ƒÃƒÓƒí„„„1ƒðƒñƒÞ„(ƒÍƒî„ƒ¾„ƒÈ„ƒÿƒÆ„%„!ƒà„
-ƒèƒüƒÙ„ƒÊƒóƒåƒö„ ƒæƒíƒá„ƒÒ„„ƒÓ„ƒì„ƒâ„„„ƒøƒõƒË„ƒÚ„„ƒÓ„„ „„„&ƒðƒó„ƒøƒÔƒÞ„„ƒÐ„#ƒðƒë„„"ƒÊ„„EƒÍ„ƒã„„ƒãƒ×ƒäƒÿƒîƒÇƒü„"ƒøƒíƒÏƒíƒÓ„„?ƒãƒð„ƒùƒðƒæ„„ƒäƒçƒÆƒéƒæ„3ƒð„ƒÑƒõƒôƒÇ„
-„ƒìƒÒƒçƒÛ„„„ƒÜƒÑƒÛƒèƒØ„ƒäƒÛ„ƒð„#ƒé„ƒæ„„'ƒÑ„ƒù„„,„ ƒì„ƒäƒÞƒû„„"ƒª„ƒëƒì„ƒé„ƒ×ƒÜ„ƒû„	ƒßƒò„ „„ƒå„„ƒûƒæ„„ƒóƒï„„ƒûƒÄƒ÷„"„„4ƒÿ„*„;„'ƒÀ„%„ƒëƒô„„ƒÿ„ƒï„ƒý„„ ƒßƒä„ƒèƒõƒýƒ×ƒêƒìƒüƒûƒµƒûƒã„„„ƒåƒý„„	ƒåƒÆƒé„ƒí„ƒß„ƒûƒëƒÓƒ¸„„"ƒýƒËƒûƒßƒ÷„#ƒà„„ƒÛ„ƒó„„
-ƒß„„ƒú„3ƒÿ„„6ƒß„;„ƒÿƒýƒÛ„„„ƒÔƒù„ƒÖ„ƒÚƒùƒÑƒú„„ƒÏ„ƒñƒÝƒéƒç„ƒô„ƒâ„ƒã„
-ƒöƒÔ„ƒæƒä„ƒÝƒãƒø„ƒåƒä„ƒÞƒßƒÛ„ƒï„5ƒà„ƒÔ„
-ƒþƒèƒéƒöƒõ„„„ƒû„ƒöƒçƒéƒõ„!„„„ƒûƒëƒì„„„	ƒÚƒòƒø„ƒóƒæƒêƒã„„!„ƒüƒè„ƒÿ„ƒå„
-„+„ƒö„„%ƒð„ƒÛƒêƒòƒùƒÎƒÒƒíƒþ„„ƒþ„ƒîƒð„„ƒÜƒøƒß„„„ƒï„4ƒùƒí„ƒô„„„ƒìƒÏ„ƒêƒèƒÔ„ƒþ„ƒè„ƒäƒî„„ƒëƒÿ„ ƒè„ƒØ„ƒî„„ƒÇ„„ƒìƒï„	ƒé„„	ƒê„ ƒü„ƒç„„„ƒö„„*ƒöƒÕƒæƒùƒôƒæ„ƒÍ„„„„ƒýƒùƒðƒûƒøƒøƒö„„ƒéƒþƒÚƒâ„WƒÑƒõƒöƒôƒùƒô„„ƒâƒÂ„ƒßƒÌƒó„:„N„*„„„„
-ƒàƒûƒèƒØƒ÷ƒüƒÿ„$„ƒèƒçƒüƒüƒØ„3„ƒ¼ƒÞƒè„ƒ÷ƒíƒí„$„ƒêƒó„ƒîƒà„ƒþ„ƒÎƒüƒÞƒðƒàƒÿƒá„	„	ƒ÷„ „ƒåƒÖƒÝƒëƒÿƒì„„ƒþ„ƒâƒõ„ƒÖƒÔ„ƒðƒä„„ƒú„„ƒíƒÐƒë„„„„ƒï„ƒùƒò„„ƒïƒìƒò„<ƒêƒçƒãƒû„0„ƒò„	ƒÇ„ƒþ„ƒøƒýƒóƒî„ƒÿƒ¿ƒûƒí„„$„ƒÞ„ƒÙ„ƒý„/„ƒõ„ƒÓƒã„„„*ƒø„!„ƒþ„ƒôƒºƒï„„!„ „ƒØ„ƒý„Eƒÿƒà„ƒ÷ƒý„ ƒéƒÏƒé„„ƒã„ƒµ„%ƒý„ƒóƒþƒåƒõ„„ƒôƒÓ„ƒíƒðƒêƒêƒÉƒæ„ƒîƒå„„
-ƒÛƒïƒóƒÛƒ÷„ „K„+ƒö„ƒÞ„„!„#„ƒ×ƒæƒø„ƒó„ƒå„&„„„„ƒÎƒÖ„)„ƒó„„ƒÿƒó„
-„„„„ƒ÷ƒÿƒ·„ƒßƒÿ„„„„ƒüƒïƒâƒÝƒöƒñ„ƒòƒãƒÒ„ƒú„#ƒñ„„„ƒÔƒùƒíƒ÷ƒÞƒåƒî„ƒÊƒå„„„#„ƒÙ„„ƒä„C„ƒà„ƒùƒäƒÑƒÜ„„ƒíƒò„ƒï„ƒñ„ƒß„	„1„ƒØ„)„ƒ÷ƒö„„ƒöƒÙƒÓ„„/ƒé„ƒõƒû„„„"„„„E„ƒî„„„C„9„„„	„„„ƒéƒäƒú„
-ƒÇƒùƒîƒï„„„ƒç„„ƒòƒÐƒè„ƒã„ ƒìƒÓ„ƒç„„ƒí„
-ƒÅƒÿ„„ƒôƒÓ„7„„ƒôƒàƒ÷ƒî„ „ƒ÷ƒå„ƒéƒï„@„„	„4„ƒñ„)ƒÈ„ƒþƒâƒ÷„*„6ƒá„„„ƒíƒüƒÒƒíƒåƒÝ„ƒö„ƒñ„"ƒÍ„„+„
-ƒîƒçƒý„ƒè„„ƒçƒçƒÝ„ƒÜƒïƒý„&ƒÐ„„/„„ƒÞ„„	ƒýƒûƒíƒóƒñƒÁ„„ƒî„„ƒÿ„(„„ƒæƒóƒÖ„ƒä„ƒâƒä„,„
-„ „„ƒîƒó„ƒò„	„ƒæƒòƒÝƒðƒþƒêƒîƒîƒúƒÐ„ƒØƒêƒûƒýƒïƒÛƒöƒð„ƒ÷ƒïƒãƒéƒà„ƒêƒõƒôƒü„„ƒþ„ƒÝ„ƒì„ƒøƒ÷ƒÖƒú„„ ƒã„„ƒó„ ƒñ„ƒôƒþƒ÷ƒî„&ƒîƒç„ ƒòƒêƒøƒõƒøƒâƒü„„„ƒÿ„,„&„ƒè„ƒüƒæ„ƒÕ„„ƒëƒæ„ƒúƒû„„.„ƒðƒü„„ƒä„ƒà„,ƒîƒÿ„ „„„ƒÉƒèƒç„„„„ „-ƒÿ„,„ƒé„ƒê„ƒü„„„ƒèƒâƒâƒð„„
-ƒö„„„„„„„
-ƒýƒÞ„&ƒî„ƒýƒá„ ƒå„,ƒÒ„„ƒùƒï„(ƒõ„ ƒõ„„ƒþƒô„ƒýƒû„„ƒúƒû„
-„ƒþƒâƒûƒû„	ƒÜ„„„ƒìƒó„ƒú„„„„0ƒó„ƒþ„„#ƒòƒü„(„„%„„8„ƒóƒÆƒæ„ „ƒø„ƒü„ƒêƒÖƒô„ƒÿ„ƒÿƒê„„	„„ƒÜ„„ƒÜƒôƒå„,ƒåƒÌƒéƒîƒâƒû„
-ƒå„ƒâ„ƒé„„„ƒïƒîƒØƒóƒîƒò„„„„ƒÛƒü„ƒèƒæƒÌ„„ƒôƒã„„„ ƒñƒÛƒúƒóƒõ„ƒìƒúƒ÷„ƒß„ƒÐƒà„ƒ÷„
-ƒÁƒÓ„ƒÉƒáƒÕƒïƒÚƒþ„ƒÝ„	ƒö„„ƒî„$ƒà„=„„„ƒóƒÚƒú„	„„7„
-„ƒè„	ƒÎ„ƒºƒûƒç„„„„ƒô„ƒù„	„	ƒæƒÕƒùƒé„
-ƒæƒÈ„;ƒàƒì„ƒöƒò„(ƒÜƒçƒì„ƒê„„„ƒþƒì„	ƒã„ƒþ„ƒîƒÙƒÝƒø„
-„„„ƒüƒáƒëƒòƒõ„„ƒú„„1ƒÆƒ"ƒ×„ƒó„
-„ƒî„8ƒáƒõ„ƒìƒþ„)„ƒþƒøƒÞ„(ƒö„„„„$ƒêƒì„ƒþ„„„ƒ÷ƒþƒà„„ƒà„„.„„„„ „ƒô„ƒç„
-„„„„„)„ƒÄ„„„ƒüƒøƒñƒø„„
-ƒÌ„„ƒþ„„„„„&ƒðƒúƒÔƒèƒ÷ƒÛƒÚ„ƒÊ„„/ƒæƒí„	„ƒã„„"„ ƒèƒÌƒà„„ƒþ„#ƒàƒúƒæ„„ƒö„„„„„ƒå„ƒÊ„ƒü„„ƒôƒÝƒ¼ƒÄƒü„ƒê„!ƒÌƒÔƒð„ƒÛƒÑƒ÷ƒ÷„2ƒâƒúƒï„,„	„ƒêƒí„ƒ¼„ƒæ„Aƒú„ƒòƒþƒåƒòƒýƒô„ƒë„A„„ƒÝ„
-„)„„.ƒÞƒìƒø„„ƒþƒÀ„ƒöƒû„
-„ƒû„„„>„ƒì„ƒî„ƒì„„ƒùƒÊƒô„-„ƒúƒ.ƒ™ƒìƒõ„„„%ƒß„ƒë„ƒù„ƒéƒùƒí„<ƒÌ„!ƒíƒÞƒüƒÓƒÿƒü„ƒ÷ƒýƒòƒí„ƒô„ƒþƒîƒßƒøƒü„„6ƒù„„ƒà„„ƒàƒ÷„„?ƒÛ„[„ ƒíƒêƒõ„/ƒÙƒøƒëƒä„#„ƒÌ„ƒð„ƒùƒý„„!„ƒÿ„„ƒùƒåƒû„ƒå„	ƒþƒá„„„<ƒá„ƒì„ƒèƒô„„	ƒ÷„ƒâƒÕ„„„„ƒß„(„„„%„ƒÕƒÔƒòƒÅƒë„ƒä„„ƒïƒí„5„„ƒÒ„ƒåƒð„„)ƒî„„„„
-„ƒïƒÊƒâ„%ƒß„„ƒú„%„„ƒþ„ƒ÷ƒí„
-„8ƒþ„ƒäƒúƒôƒúƒûƒú„„ƒó„ƒøƒæ„9„ƒïƒçƒëƒòƒäƒÝ„ƒä„9ƒûƒëƒÞƒãƒòƒÛ„ƒÚƒøƒîƒäƒë„„ƒÜƒöƒúƒØ„0ƒã„„ƒ×„„ „ƒÜƒÆƒÿƒÖ„(ƒ¼„ƒÍ„„ƒêƒÙƒÏ„„ƒÎ„ƒùƒý„E„ƒñ„ „„„„ƒîƒë„;ƒé„„:„.„.ƒûƒÉƒö„'„ƒñ„„„ „ƒùƒöƒß„ƒÿƒîƒüƒëƒéƒÏ„ „ƒöƒüƒèƒíƒïƒÍ„ƒô„„ „„ƒ÷„„ƒçƒý„„„ƒñ„„"„„bƒæƒÞ„„ƒç„„"„0ƒû„ƒïƒùƒÙ„	ƒôƒî„„ƒìƒú„„„
-„„ƒóƒëƒìƒìƒÙ„ƒ÷„"ƒö„ƒëƒú„„„ƒòƒòƒåƒ·ƒèƒÜƒé„ƒ÷ƒñ„$„„„&„„ „„.„ƒîƒÕƒð„	ƒüƒðƒä„„ƒÎ„ƒðƒñƒú„ƒúƒóƒõ„„"ƒÅ„„ƒò„ƒõ„ƒßƒô„„ƒñ„„"„ƒÀƒßƒï„„„ƒÇƒð„#ƒò„"ƒè„ƒíƒóƒë„„ƒü„„ƒ¼„„ „ƒæ„ƒòƒ¾„„ƒðƒüƒâƒìƒíƒýƒú„„„ƒÆƒþ„ƒø„ƒêƒÐƒØƒùƒÐ„ƒÛ„„ƒò„
-„„ƒîƒì„ƒê„„&„„„ƒõƒú„/ƒæ„1„ƒ÷ƒêƒäƒÓƒÔ„4„„1ƒôƒöƒïƒëƒöƒè„„„	„ƒÿƒóƒéƒõƒäƒæ„„8ƒæƒïƒð„„ƒøƒÜƒðƒëƒñ„ƒãƒùƒõ„ „ƒ¡„ƒÎƒë„ƒÑ„„
-ƒêƒÜƒå„„ „ƒæƒÜƒà„ƒõ„ƒøƒè„6„ƒý„„„ƒó„„$ƒÓƒÌ„ƒ×„$ƒáƒáƒìƒÙ„%ƒù„„
-ƒñ„#„„„„*„4ƒãƒâ„ƒã„„ƒõƒê„ƒí„„„*„„ „„ƒîƒþ„ƒÀ„ƒßƒçƒðƒð„,„„„„D„ƒõ„ƒïƒôƒùƒýƒÑƒò„%ƒÿƒíƒí„ƒÖ„ƒß„„„!„ƒÞƒÛ„„6ƒöƒõƒãƒÜƒþ„ƒçƒÜ„„„ƒíƒÄƒëƒñƒÝƒëƒüƒ÷ƒù„ƒõƒ÷ƒä„ƒî„ƒï„„„„"ƒá„ƒïƒöƒàƒüƒñ„	ƒôƒÛƒð„ƒØƒöƒÙ„„ƒûƒòƒ÷„„„„ƒã„ ƒê„„ƒëƒÉƒçƒØƒâƒíƒï„„ƒé„„ „ƒô„ ƒûƒöƒÖƒÑƒÂ„ƒàƒìƒþ„ƒáƒõ„„ „ƒÁ„#„ƒåƒÿƒúƒíƒè„„ƒ¾ƒ÷„„ƒíƒÆƒÌƒà„ƒæ„
-„ ƒß„„%ƒçƒ·„0„ƒÕƒ×ƒýƒ×ƒñƒÃ„$ƒøƒñƒõƒÚƒå„ƒÙ„„ƒåƒ×ƒö„„ƒÿƒù„„-ƒÜƒ÷ƒÛ„
-ƒûƒü„L„„4ƒõƒñ„„„
-„ƒäƒÙƒ³ƒïƒó„!ƒ¾ƒË„
-„ƒÙƒéƒà„„„ƒêƒÿƒë„„„ƒìƒÇ„ƒø„)„$ƒð„„ „"„ƒí„ƒêƒù„<ƒö„ƒô„„
-ƒá„ƒèƒùƒØ„ƒìƒå„!„ƒç„„„6„„	ƒÃ„7ƒôƒ÷ƒìƒì„„ƒüƒìƒåƒßƒÚ„ƒÎ„„„„+ƒç„ƒþ„9ƒòƒï„b„0„ƒÇƒù„Pƒùƒù„-ƒô„„'ƒÿƒõƒñƒé„„„
-„„ƒþƒü„„„$„"„ƒïƒÎƒË„ƒÔƒú„ƒÖ„ƒôƒíƒðƒýƒì„)ƒìƒò„#ƒñ„ƒé„ƒÆ„ƒõ„6ƒî„„„„„„-„„„	ƒô„ƒêƒôƒöƒÖ„*„8„„ ƒàƒ×ƒå„ƒïƒÄƒíƒà„>ƒÿƒõƒíƒÙƒþ„ƒèƒÿ„ƒæƒ´„)ƒÚƒë„ƒÅƒã„ƒ÷ƒåƒ³ƒð„ƒ×ƒâ„?„ƒú„ƒÇ„"„„„„	ƒÔ„„ƒõ„ƒÅ„„ƒú„&„ƒéƒóƒúƒÜƒõ„ƒà„„„ƒØ„ƒó„ƒÿƒùƒü„„ƒÒƒú„„„1„
-ƒÛƒðƒöƒÊ„ƒå„ƒùƒí„"ƒð„ƒî„$„X„„„ „„ „„ƒí„ƒú„„„
-ƒñ„ƒöƒ÷„„„ „/„„"ƒòƒûƒà„„ ƒñ„„ƒê„ ƒãƒä„%„„%ƒäƒú„ƒÛƒø„	ƒû„„ƒÝƒæ„ƒ÷ƒô„-ƒð„ƒôƒú„"ƒìƒøƒÓƒìƒì„„@„„ƒè„„ƒÆƒÔ„ƒö„2„)„„„$ƒ÷„ƒÙƒú„(ƒôƒýƒß„„ƒàƒÞ„„,ƒì„4„„„ƒä„„.„ƒóƒÜ„ƒéƒìƒö„ƒóƒïƒÅƒùƒý„ƒýƒàƒú„-ƒäƒþƒí„ƒà„„ƒÿƒý„„	ƒâ„„ƒþ„=„ „„3„ƒëƒé„„ƒæ„ƒãƒù„ƒã„„ƒÚƒÙƒä„"„ ƒòƒì„„„„'„ƒçƒë„ƒëƒà„„„#„„„ƒñƒí„:„„(ƒýƒËƒà„&ƒáƒûƒõƒõ„ƒã„„ƒÉ„
-ƒä„„ƒô„ƒñ„8ƒõƒñ„"„4ƒÞƒöƒõƒô„ƒõ„„„#„„„&ƒùƒú„ƒïƒß„&„C„ƒýƒß„ƒâƒñƒñƒøƒÿ„$ƒèƒý„„ƒãƒÿƒöƒðƒùƒå„/ƒþƒà„ƒîƒÏ„ƒÿ„	ƒùƒò„ƒùƒáƒý„ƒ×„ƒ«ƒÿƒü„„8ƒû„
-„ƒþƒñƒçƒö„„„ƒË„ƒóƒýƒÊƒô„ƒêƒý„„ „ƒôƒÝƒù„„'ƒÿ„„„ƒü„„„ƒõ„ƒÏ„„ƒ±„„ƒù„3ƒùƒ×„#ƒûƒë„„„,„ƒ÷ƒÛƒí„ƒöƒæ„ƒúƒñ„ƒÏ„ƒç„	„ƒýƒò„	ƒå„ƒØƒÓƒï„„ƒíƒýƒêƒòƒÐƒùƒö„„„ƒÚ„<„ƒâ„ƒõƒÿ„ ƒÌ„$ƒ´ƒõƒê„„„„„	„ „6„ƒø„%„	ƒþ„
-ƒØ„„„ƒã„ƒèƒæƒþƒç„„ „„
-„+„ƒÌ„ƒå„„ƒþ„ƒä„ƒèƒû„ƒñƒî„ƒåƒ÷ƒÿ„„„„„„„„„9ƒ±ƒãƒÊ„„'„GƒÜ„ƒôƒýƒïƒÈ„ƒÿ„ƒèƒëƒô„$„.ƒüƒçƒÃƒÙ„„ƒõƒöƒðƒÎ„/ƒà„ƒæ„„"ƒø„ƒö„„ƒìƒð„(„
-„>ƒè„„ƒäƒß„„„ ƒìƒâ„„(„7„9„„ƒÒƒë„ƒî„ „
-„ƒéƒþƒïƒõƒðƒØƒù„	ƒº„ ƒò„ƒôƒîƒÕƒý„„ƒÜƒî„ƒí„„„„ ƒèƒòƒÈƒØƒÏƒï„„ƒø„ „ƒô„ƒñ„„„ƒä„ƒà„	„ƒïƒûƒìƒ÷„„„„!„ƒÃ„„ƒÛ„ƒÑ„ „„ ƒÞ„)„0„7ƒéƒþƒå„ƒûƒçƒþƒÛ„ƒä„ƒÿ„„ƒë„„„FƒÛ„„.„„6ƒýƒü„„ „K„ƒùƒ×ƒÕ„„ƒó„6„„ƒêƒýƒíƒûƒãƒþ„„„'„Dƒø„ „ƒú„ƒãƒÙ„ƒøƒè„ƒØ„„ƒèƒõ„ƒõƒþƒæ„„ƒÑƒçƒÿƒñƒê„ƒç„ƒô„ƒ´ƒðƒáƒÿ„&„ƒú„ƒÖ„„.ƒôƒÜƒá„„ ƒõƒö„0„„	ƒÝƒùƒØƒÿƒäƒñ„ƒõƒÝƒàƒÝ„ƒàƒð„„„ƒÁƒùƒé„)„„„„ ƒö„„„ƒïƒý„ƒóƒÚƒÒ„	„„ƒòƒì„„„ƒøƒÿƒç„ƒÝƒð„&ƒ÷ƒí„ƒÎƒõƒþƒéƒíƒáƒìƒý„ƒïƒïƒñƒëƒìƒó„%„ƒçƒé„„„„„„0„„„!ƒñƒË„„„„ƒó„
-ƒò„„ƒÙ„ƒÐ„=ƒýƒÙƒÏƒó„ ƒüƒûƒö„ƒí„ƒòƒº„8ƒïƒóƒÚƒòƒü„„ ƒîƒê„ƒØƒêƒØ„*ƒÝ„ƒö„„„*„„ƒáƒæ„ „/ƒþƒö„„
-„ƒûƒãƒðƒñƒÕƒæƒû„ƒæƒâ„ƒÐ„
-„„0„ƒüƒçƒþ„ ƒõ„ƒÿƒî„ƒü„2„ ƒÚ„ƒþƒâ„ƒçƒå„$„ƒÍ„„&„ƒëƒñ„ƒ¾ƒçƒß„ƒß„ƒÕ„„ƒÚƒ÷ƒñƒîƒë„3„ƒó„,ƒô„
-ƒò„ƒã„„ƒé„!ƒø„„ƒï„+„ƒôƒüƒâƒé„-„(ƒü„ƒ×„ ƒèƒè„ƒé„&„„„ƒæ„„ƒæƒñ„„
-ƒìƒüƒöƒö„ƒáƒñƒíƒý„ƒÛƒùƒø„ƒæƒîƒú„„ „4„ƒú„,„„„„„+„)ƒÃ„CƒØ„„ƒü„ƒ¼„„ƒþƒíƒÅ„ƒÿ„ƒþ„%„ƒíƒïƒü„	ƒÙƒý„5„„3„.„„ƒØ„"„9ƒñƒÙƒõƒôƒù„ƒàƒÿ„„ƒØƒþ„„ƒñ„ƒã„$„ƒü„ ƒéƒþ„=„ƒõ„S„„„ƒè„ƒäƒ÷„!„ƒøƒå„ „)„#„ƒûƒé„ƒê„„ƒøƒöƒáƒæƒÝƒÝƒìƒë„/„%ƒð„ƒé„	ƒèƒõ„ƒÌƒÚ„ƒõ„ƒÿƒáƒÞƒê„„ƒþ„„ƒÚƒÍ„G„ƒò„+„6ƒû„„ƒà„&ƒà„	„„„„„„ƒé„ƒÜ„ƒõ„ƒé„7ƒð„„ƒý„<ƒï„„ƒðƒØƒúƒñ„„„ƒüƒãƒå„ƒüƒÛ„,ƒñƒû„ƒÿƒò„ƒÃƒç„ƒøƒÅ„ƒÜƒ÷„„)ƒéƒ÷ƒÙƒ×„„ƒûƒí„„„ƒÙ„ƒëƒ÷„ „ƒó„ƒÒ„ƒß„!ƒê„„„,„„„&ƒöƒä„Aƒ÷„"ƒà„„ „%„ƒÓ„ ƒò„
-ƒà„ „„„ƒ÷„*ƒ»ƒÈƒÿ„„ƒñ„„ƒëƒóƒ×ƒè„ƒþ„ƒýƒó„ƒë„&„1„„OƒîƒïƒÙƒÒƒþƒÑƒîƒîƒÿƒæ„ƒùƒü„„2„„ ƒË„7ƒõ„ƒøƒéƒç„„„XƒáƒÝ„ƒîƒíƒúƒù„„ „ƒýƒãƒþ„„ƒ¼„5ƒóƒ×ƒôƒÓƒú„
-„„$„„„ƒèƒºƒêƒ÷ƒ÷„ƒôƒøƒæƒÖ„„ƒàƒã„ƒÙ„ƒé„ƒÖ„L„ƒúƒÔƒ÷ƒîƒý„„#ƒ×ƒô„/ƒÔƒýƒÏ„ƒÌƒñ„„)„„ƒçƒ­ƒÒƒóƒðƒïƒáƒÞƒçƒè„„ƒÖ„ƒÕ„ ƒúƒÝ„3„ƒìƒÖ„ ƒæƒóƒù„ƒùƒû„„)ƒö„„ƒÒƒì„ƒìƒÝƒæƒÐ„ƒç„„
-ƒÿƒë„ƒÎ„„ƒó„ „
-ƒæƒö„T„'„=„ƒáƒâƒö„%ƒÿ„„„„
-ƒìƒ÷„ƒõƒü„-„ƒü„ƒ÷ƒï„ƒôƒð„"„ƒû„ƒ¸ƒø„„ƒèƒîƒâ„„ƒÚƒîƒáƒñƒëƒïƒäƒÕ„ƒôƒéƒ×„„ ƒþƒÓƒåƒöƒã„ƒûƒëƒÐ„ƒÛ„ƒïƒú„„„ „6ƒáƒï„„ „„
-ƒø„ „F„ƒòƒÝƒøƒ×ƒ×ƒü„ƒö„,ƒÐ„0ƒÏƒÔƒÛ„„„ƒï„ƒÍƒîƒøƒâ„*„„ƒâ„ƒÞƒòƒÿƒòƒóƒõƒÿ„$ƒè„„„ƒúƒû„+„„„„„ƒçƒïƒïƒíƒñ„ ƒÞ„ƒßƒáƒö„	„„ „ƒÝ„„#ƒÉƒúƒÃ„„
-„(„ƒè„2ƒøƒíƒåƒàƒõƒàƒÞƒ²ƒØ„„"„%ƒóƒô„3„ƒûƒäƒüƒíƒÓƒì„„„3„ƒ÷ƒ÷„-ƒú„„„
-ƒû„%ƒÏƒà„
-„„„ƒçƒÙƒþ„ƒï„ƒù„ƒçƒõ„„„6ƒóƒ¯ƒ¥„ƒî„ƒÁ„#„„„ƒß„<„ƒì„„$„ƒï„ „2ƒßƒùƒæƒÜ„
-ƒë„„ƒõ„ƒôƒÓƒþ„„„%„ƒË„ƒòƒýƒèƒùƒþ„„„ƒû„ „„ƒá„9ƒý„0ƒËƒéƒõƒëƒÞƒØ„1ƒõƒñƒÞƒõ„„#ƒè„ƒöƒè„„„ƒã„„ƒûƒá„ƒó„ƒ×ƒõ„„&ƒö„ƒóƒÝ„„„%ƒØ„„„ƒýƒåƒéƒç„ƒ÷ƒöƒöƒÞ„ƒ÷ƒ½„ƒùƒñƒøƒõƒè„„„ ƒó„„„ƒ×„!„ ƒþƒçƒý„>ƒÚƒþƒñƒå„„„'„ƒê„ƒû„„„ƒÈƒòƒä„2„„ƒò„„1„#„ƒÍ„ƒ÷ƒûƒÃƒßƒûƒèƒïƒå„+ƒè„„ƒô„	ƒòƒ×ƒÒƒî„ƒëƒÐƒé„„ƒîƒùƒò„„„„„„„ƒóƒûƒþ„ƒùƒ¾ƒâƒü„ „ ƒõ„„„=„„ƒýƒÄƒù„ƒÇƒñƒë„ƒøƒÌƒñ„ƒìƒí„ƒÿƒù„"ƒ÷ƒòƒïƒé„„„ƒò„ƒì„„	„„Qƒÿ„!„ƒü„„„'„„!„„„,„?ƒØƒâƒîƒè„ƒä„	„ ƒôƒÛ„I„ƒçƒ¿ƒåƒÌ„„ƒú„„ƒì„ƒû„„ƒÿƒýƒÈ„ƒý„
-„ƒÝƒýƒ½ƒë„0ƒë„ƒýƒóƒáƒèƒà„ƒóƒõ„ƒë„ƒù„ƒÓ„„ƒòƒåƒäƒð„ƒë„
-„ƒý„
-„„ƒø„„„
-„„„ƒø„ƒÕƒá„„+ƒÅƒñƒÛ„ƒ¾ƒÇ„„ƒÛƒÆƒÒƒÛƒúƒ»ƒþ„ƒÕ„ƒßƒóƒúƒøƒöƒÒ„ƒìƒî„ƒî„Jƒø„„	ƒúƒþƒï„„ƒêƒë„„$ƒâƒþ„„ ƒÜƒî„ƒÛ„„!ƒä„„ƒäƒÿƒÔ„ƒÊƒø„ƒäƒç„6„ƒô„„ƒèƒÐƒá„ƒáƒÍƒþ„ „„ƒó„ƒÞƒ¸ƒþƒÊ„	ƒã„ƒ÷„+„ƒæ„ƒÕ„1ƒ¶„ „„„ƒâ„ƒæƒÞƒûƒ÷ƒþ„„„ƒ±„IƒËƒÐ„„„ƒòƒïƒ÷„ƒ÷„ƒä„„„.„ „„„ƒà„:„„ƒé„.ƒûƒå„ƒúƒÓ„ƒþƒöƒöƒí„!ƒù„„ƒâ„ „„4ƒà„„7ƒîƒõ„ƒþƒø„„ƒÞƒØƒó„„'„„ƒßƒì„ƒø„"ƒ÷ƒü„ƒïƒûƒåƒ÷ƒðƒß„5„#ƒæ„„„ƒÞƒéƒø„ƒö„ƒü„ƒì„„ƒø„ƒÉ„„„(ƒîƒê„ƒÌƒðƒâ„+„ƒüƒåƒãƒß„ƒß„ƒÂƒåƒìƒ¤„ƒÿ„
-ƒþ„
-ƒÌƒïƒü„„„ƒîƒöƒÚ„„	ƒñ„ƒû„ „ƒãƒõƒóƒì„ƒö„„ƒÕ„ƒü„„'ƒñƒû„ƒ×ƒõƒë„2„ƒúƒÏƒþ„ƒÐ„„„ƒÛƒäƒôƒó„„„	„,„*„.„ƒðƒÙ„ƒýƒÿ„ƒõƒàƒè„>ƒÿ„„„ „„ƒñ„„„„ƒÁ„„
-„ƒð„	„„ƒþƒè„%ƒÐ„„ƒöƒï„'„„„ƒÖƒû„.„„„ƒÃƒÌƒüƒÞ„ƒô„*ƒÓ„ƒç„%ƒþƒã„„ƒôƒ¶ƒòƒúƒ÷ƒ÷ƒè„+„&„ „)ƒðƒé„ ƒî„„„"„„„
-„Wƒê„ƒì„ƒæ„ƒÙ„ƒóƒëƒÛƒùƒìƒð„„ƒèƒøƒà„„@ƒó„„ƒþ„	ƒñ„ƒÆ„ƒòƒáƒ¿ƒþƒËƒú„„„ƒø„„	ƒì„ƒ÷„„„ƒúƒú„	„
-„ƒØ„ ƒûƒåƒþ„ƒõ„„"ƒÄ„ƒõ„„ƒùƒæ„„ƒÔƒï„+ƒêƒåƒë„„„„3ƒù„„-„„„„„ƒùƒìƒÜƒÖƒßƒáƒíƒ÷„„„„ƒâ„„ƒýƒø„ ƒÅ„ƒöƒà„ƒí„ƒèƒï„„A„„ ƒæ„ƒü„9„ƒÖƒâ„ƒÖ„"ƒì„Eƒüƒü„ƒü„„ƒéƒîƒøƒÓƒÒƒþ„ƒÝ„ƒÿƒò„ƒàƒìƒæƒôƒñ„I„ „ƒÃƒòƒè„
-ƒËƒß„ƒþ„ƒ÷ƒí„„ƒüƒôƒóƒòƒú„ƒËƒö„7ƒæƒßƒñƒõƒè„„3ƒô„„ƒáƒÛ„ƒø„„ƒø„„ƒü„„!„„ƒüƒÇƒþƒÙƒâƒøƒä„ƒÓƒéƒêƒâƒêƒÝ„„„„'„ƒæ„ƒÊƒãƒñƒçƒ×ƒÞ„ƒù„ƒùƒß„ƒ½„	„„ƒÉ„ƒì„-„„„ƒë„0„„„ƒóƒü„ƒþƒç„ƒàƒÝ„ „	„ƒô„/„%„Gƒñƒú„„/ƒè„„„„„„„1ƒý„ ƒß„„ƒë„„ƒúƒùƒû„ƒþƒÛƒÛ„ƒç„ƒú„„	„ƒùƒÏƒðƒÿƒãƒÉ„ƒô„ƒü„#„ƒø„„6„„ƒû„Hƒá„„%„	ƒø„„„„ƒäƒ÷„ƒÔ„1„,ƒ÷„„
-„ƒóƒä„ƒö„ƒïƒÇ„ƒ«„,„„.„&„*ƒ÷ƒç„„„	„„ƒå„5ƒüƒñƒñ„ƒÚ„ ƒõƒðƒø„ƒ×„;ƒî„ƒíƒæƒë„ƒÏ„ƒÛƒó„	„ƒüƒ¾ƒùƒÿ„+ƒÖ„„ƒíƒýƒÑ„(„;ƒùƒìƒ÷ƒÛ„„ƒãƒë„ƒñƒÈƒï„ƒýƒÿƒ÷ƒÓ„ƒý„ƒÚƒçƒÐƒé„„ƒôƒþ„2ƒüƒôƒå„9ƒÖ„	ƒíƒÿ„„!ƒÆƒêƒëƒó„„„.„/„ƒú„„„ ƒêƒóƒÎƒóƒþƒúƒâƒõƒÀƒç„ƒÒƒïƒ÷„
-„ƒéƒæƒì„„-ƒÒ„„„„ƒúƒáƒ÷„„„ƒÓ„„)ƒä„ƒñ„ƒøƒá„3ƒÏƒü„ƒíƒúƒÑ„,ƒõƒÚ„„.ƒóƒì„
-„„„„ƒòƒé„#ƒÓ„„0ƒý„„„ƒõ„ƒåƒôƒí„ƒïƒØƒàƒÒ„ „„ „$„ƒéƒæƒãƒÕƒìƒë„ƒú„ƒí„ƒöƒòƒôƒâ„„„ƒà„„„*„„ƒÿ„%ƒôƒâ„"„'ƒë„„ƒçƒñ„„ ƒþƒü„.ƒø„„
-ƒôƒõƒõƒü„ƒöƒòƒÚƒìƒð„ ƒÜƒèƒé„*ƒò„ƒð„ƒúƒçƒ÷ƒáƒãƒà„-ƒõƒþƒ÷ƒòƒáƒð„ƒþ„„8ƒøƒý„(„ƒØƒúƒæ„ƒä„„„'ƒÛ„#„„&„ƒÐ„ƒâƒÝ„ƒÿƒ÷ƒúƒÝ„„+ƒá„„ƒñƒú„ƒáƒÙ„„ƒã„„QƒöƒÅ„+„ƒÿƒå„„„„„ƒî„„ƒú„!ƒì„	„ƒã„ƒíƒÃƒæ„!„ƒîƒï„ƒêƒÃ„ƒåƒïƒÝƒÚƒã„ƒ÷ƒþƒÿ„ƒÖƒé„„#ƒÔ„ƒïƒæ„„'ƒÏƒù„ƒÿƒÝƒèƒö„„„ƒèƒáƒå„ƒý„ƒåƒ¿ƒì„%„„
-„ƒæ„#„ƒý„ƒÌƒú„„ƒê„8„„%„!ƒä„Fƒî„ƒÝ„#„Pƒâƒû„ƒø„„„ƒãƒÒ„ ƒÞ„ƒâƒÍƒýƒñ„„$„ƒõ„(ƒÖƒþƒÂƒïƒê„„(„„„	„ƒü„
-ƒæƒûƒô„-„"„„„0„,„"„ƒüƒùƒë„„%ƒÞƒöƒý„ƒÿƒÑ„ƒ÷„
-„	„ƒõƒçƒæƒîƒö„ƒý„„„„5ƒöƒïƒâ„ „IƒíƒÛ„ƒîƒôƒãƒõ„„ƒý„@„BƒÄƒà„ƒøƒóƒå„!ƒþ„ƒÝƒò„9„„„„„!„&ƒÏ„0ƒùƒÿ„5ƒé„	ƒ÷„„ƒùƒþ„ƒÉ„„	„ƒóƒê„ƒðƒð„ƒÿƒá„ „„
-ƒâƒþƒÝƒõƒýƒï„#„$ƒíƒè„ƒë„„
-ƒíƒõ„„ „ƒàƒåƒá„#ƒÔ„ƒÍƒãƒôƒÌ„ƒúƒéƒþ„„„„ƒð„ƒô„	„„„„ƒú„
-ƒäƒüƒéƒñ„„(„,„ƒàƒð„„„ƒÝƒè„!„ƒàƒíƒíƒÈ„ „;ƒù„ƒâ„„ƒÝƒðƒÿƒåƒúƒúƒÿƒî„ƒø„„„„„ƒð„6ƒþƒË„ƒæ„„ƒÿ„„„„„.ƒí„„ƒôƒúƒØ„ƒü„4ƒÚƒÕ„ƒÃƒîƒûƒòƒÒƒëƒÖƒîƒé„$„&„ƒß„„ƒÍƒóƒæƒÈƒÛƒâƒö„ƒßƒï„ƒþƒÉ„ƒÿƒ÷„	ƒü„ƒð„„)„ƒëƒÆ„ƒÒ„"„ƒÖƒôƒå„ƒû„ ƒêƒÛ„ƒÖ„>„„ ƒäƒûƒøƒî„-ƒùƒøƒèƒÎ„ƒÒ„„ƒìƒïƒàƒÿƒâƒè„)„ƒè„ƒçƒêƒò„„ƒò„„ƒúƒàƒ´„!ƒðƒþƒôƒÞ„„ƒÛ„„ „ƒÞ„„ƒó„„ƒøƒäƒýƒü„#ƒÏ„„„ƒüƒùƒÌƒöƒä„„	„„ƒÔƒã„!„„#ƒèƒü„ƒÚ„ƒâ„ƒóƒõ„„ „ƒû„ƒé„„ƒëƒû„	„ƒâƒÐ„5„„ƒñ„ƒê„„„ƒå„ƒþ„„„ „'„„„"ƒøƒÖƒð„ƒêƒÇƒïƒë„HƒÞ„„'„ƒýƒã„ƒñƒû„
-ƒøƒñƒûƒè„„ „ƒÉƒðƒé„„ƒö„„„„ƒò„„„„	ƒôƒóƒ÷ƒÖ„„	ƒôƒûƒìƒË„
-ƒé„ƒ÷„&„„„„*„ƒýƒæ„ƒÌƒä„ƒüƒã„6ƒÙƒÛ„*ƒöƒôƒí„
-„:ƒÞ„ „
-„„„„ƒËƒüƒÿ„ƒãƒÞ„ƒÜƒìƒö„„„ƒûƒúƒîƒì„„„ƒüƒÿ„ƒôƒÜƒÜ„„ƒüƒ÷ƒ×„„6„„+„„„„*ƒôƒëƒü„ƒþƒÿ„„„#„
-ƒá„ „/„EƒÔƒùƒá„ƒíƒÊ„ƒìƒÃ„„	ƒ¬„„„
-„„„ƒÝ„.ƒâ„ƒîƒØƒé„„ƒüƒÿ„„ƒú„ ƒâƒòƒê„„ƒÖ„„„„„„?ƒþƒÚ„„ƒù„8ƒï„ƒÇƒïƒ÷ƒìƒï„„„$„#„„ ƒÝƒÜƒ¾ƒüƒçƒíƒÖƒØ„Fƒúƒþƒïƒâƒóƒú„ƒíƒí„)„„ƒÜ„%ƒéƒøƒ÷ƒñƒöƒÓ„„„ƒîƒíƒÒƒéƒôƒß„ƒæ„ƒæ„ƒãƒôƒáƒÿƒÓƒè„ƒü„+ƒøƒ×ƒï„„3„„3„!„
-ƒë„ƒç„6ƒû„ƒú„„„
-„ƒûƒå„<„ƒî„„„+„ƒûƒÒƒí„„&ƒäƒÛƒçƒþƒìƒóƒÐƒéƒúƒþ„„5„„,„ „+ƒÄ„ƒÿ„ƒË„„„ƒòƒÝ„ƒöƒç„ƒæ„„ƒï„„„ƒöƒð„ƒÉ„	ƒôƒÿ„ƒì„„ƒÁƒü„	ƒÄ„ „+ƒþ„+„ƒñ„ƒñƒè„„ƒñ„„„ƒç„„ƒó„ƒáƒï„ƒÌƒâƒòƒÞ„ƒïƒãƒþ„„5„ƒÑƒ÷„	ƒûƒú„"ƒÏ„ƒÎƒå„!„„ƒä„#„„/„„	„ƒã„ƒýƒ÷„)„	ƒÖƒÕƒÛ„ƒìƒ÷ƒòƒ÷„„ƒÖƒã„ƒÓƒÙƒØƒÍƒí„ „„ƒëƒþƒìƒàƒüƒñƒàƒò„ƒëƒø„"ƒÝƒ÷ƒöƒìƒæƒÈ„„„„„!ƒòƒß„„ƒ÷ƒÞƒãƒò„ƒûƒÐ„ƒæƒúƒÛ„2„#ƒÓƒÅƒã„ƒßƒÈƒï„„"„ƒòƒ÷„
-„ƒÁƒüƒØ„„„„ƒòƒô„&„„	ƒì„7„(„„„„ƒúƒô„ƒóƒÖ„ƒð„„ „„0„ƒôƒò„„„D„	ƒÔ„%ƒþƒíƒÖƒøƒóƒÄƒõƒòƒøƒøƒÿ„ƒä„„„ƒõƒÿƒïƒÈƒñƒÞƒäƒÐƒæƒóƒæƒç„„
-ƒô„ƒùƒûƒ÷ƒÞƒúƒÞƒÉƒØ„ ƒü„„ƒâƒþ„ƒáƒæƒõ„„"„ƒùƒóƒúƒÜƒÔƒÝ„ƒÔ„	ƒìƒñƒñ„ƒôƒýƒù„ƒÏƒá„ƒáƒð„„&ƒöƒæ„ƒìƒï„ƒðƒÞ„)ƒÞƒÉ„ƒÍƒæƒæƒüƒÔƒò„ƒþ„„„"„0ƒ÷„ƒç„„„ƒêƒóƒû„„'ƒàƒñƒÿƒíƒú„ƒîƒçƒïƒ÷ƒô„ƒÖƒßƒÓƒìƒß„ƒ³ƒÊ„(ƒâ„HƒùƒÜƒê„ƒþ„ƒü„
-„ƒÝ„ƒýƒÚƒÒƒÿ„„.„ƒð„„*„	„ƒ¸„ƒÞƒô„,ƒé„ƒüƒã„„
-ƒ×ƒõƒÿƒñƒöƒá„ƒúƒúƒý„„„ƒö„"„„,ƒÒ„„ƒû„ƒþ„„ƒòƒ·ƒÑƒï„ ƒþ„„„%ƒìƒüƒãƒíƒÞ„,ƒøƒý„ƒÖƒúƒÑƒä„„„ƒý„ƒâƒø„	ƒðƒÊƒñ„„„ „ƒüƒð„„„„ƒÜƒû„„ƒñƒüƒû„D„ƒÖ„„„ƒê„ƒå„ƒý„„
-ƒôƒþƒî„/ƒèƒèƒÛ„„„„„ „ƒá„ƒüƒã„„ƒþ„„„2ƒöƒôƒù„ ƒúƒþƒß„ƒúƒ¼„ƒÊ„ „„„8ƒÙƒüƒñƒæ„ƒúƒ¾„ „%„ƒô„+„ƒö„"ƒàƒÍƒô„*„ƒáƒÜ„#„„„„ƒü„„„ƒÕ„ƒäƒÊ„„ƒÛƒüƒê„/„<„ƒöƒìƒðƒÖƒÿƒÑƒüƒèƒ÷„„ƒô„„)„ƒìƒÔƒÌƒáƒè„„ƒë„„ƒô„ƒØ„„ „„ƒêƒüƒæ„ƒÌ„3„'„)„"„„„#„ƒðƒêƒùƒÏƒìƒØƒòƒÞ„„„ƒè„.ƒöƒÊ„ƒêƒî„ƒü„„„ƒîƒø„D„!ƒêƒçƒàƒþƒüƒéƒþƒù„„„#„„ƒÚƒñ„<„*ƒÿ„ƒëƒºƒç„,„„
-„ƒê„„„ƒìƒÛ„„„„„„ƒþ„&„„
-ƒïƒê„ƒø„ƒèƒî„„4„ƒùƒë„„„#ƒêƒöƒõ„ƒÇƒôƒçƒú„ƒöƒòƒþƒìƒûƒî„!ƒõƒßƒÐƒÚ„ƒÎƒóƒÞ„	ƒé„ ƒÝ„„ƒïƒõ„ƒüƒäƒòƒóƒï„ƒÿƒ¹„„ƒþƒöƒóƒòƒÅ„ƒêƒõ„ƒâƒÛƒðƒëƒÛƒû„ƒÑƒç„#„ƒóƒçƒíƒöƒÜƒï„ƒÖ„	ƒßƒï„„ „„&ƒõ„ƒÏ„„ƒùƒðƒøƒøƒÙ„„ƒèƒøƒÙ„ƒáƒÓƒø„ƒýƒõ„ƒäƒçƒöƒñ„„&ƒÒƒò„„!„„%ƒÖƒïƒÚƒã„ƒÖƒ×„ƒÐƒè„„ƒå„ƒõ„ƒæƒè„!ƒçƒý„!„ƒâƒùƒè„ „,ƒú„ƒæƒÁ„ƒáƒùƒÏ„ƒÿ„3ƒÿ„„„„„AƒèƒÐƒ£ƒïƒûƒßƒÍ„ƒð„	ƒÒ„„
-„„
-„ „„ƒÖƒùƒØƒäƒþ„ƒí„ƒ»ƒòƒß„-„+„ƒô„ƒÿ„
-ƒé„ƒöƒ÷„*„ ƒéƒË„ƒò„ƒí„$„ƒøƒóƒíƒñƒÆƒÜ„ƒü„ „!„ƒûƒ×ƒí„ƒç„„ƒçƒç„ƒç„„„„=ƒüƒû„ƒüƒÉ„&ƒêƒõƒñƒú„ƒµ„ „„„ƒõƒø„&„+„„„ƒö„ƒþ„ƒêƒåƒõ„ƒêƒóƒø„„!ƒÙƒíƒÛƒø„ƒõƒï„„8ƒÿƒßƒü„ƒÍƒìƒù„-ƒç„ƒåƒÜƒöƒô„ƒÓƒçƒìƒå„ƒô„„ƒüƒå„G„ƒëƒÙ„„-ƒíƒÕƒñ„„ „„ƒïƒå„ƒñƒü„ „ƒýƒý„ƒêƒðƒ÷„Q„%„ƒó„„ƒûƒíƒíƒñ„„ƒø„1„„„„„
-„
-ƒÖƒæƒßƒç„„„„ƒì„„„ ƒû„„@ƒâƒþ„ƒü„„„!ƒï„ƒú„ƒè„ ƒý„9ƒóƒþƒ÷ƒû„ƒ÷ƒþ„„	ƒò„„ ƒô„ƒÂ„„ƒòƒÌ„„%„„„(ƒõ„ƒ÷„ƒ¥ƒÕƒøƒå„ƒò„7ƒÿƒêƒØƒéƒùƒûƒå„
-ƒû„=„„„ƒÄ„ƒÀƒýƒøƒìƒû„7ƒí„„„/ƒø„ƒÁ„ƒÃƒà„ƒÎƒýƒâ„„!„)„„„ƒøƒáƒÙ„'ƒÐ„„ƒá„„ƒèƒöƒß„?„„„*ƒÜ„„ƒÅƒæƒûƒí„
-ƒÅ„„"ƒñ„ƒè„2ƒë„ƒü„ „
-„ƒõ„3„„ƒâƒà„ƒòƒó„ƒåƒç„:„„ƒêƒûƒý„ƒùƒü„„ƒÜ„'ƒêƒÛƒÜƒì„„„„;ƒÎƒëƒõ„ƒÒ„ƒþƒæƒò„ƒñƒ×ƒàƒÙ„ƒúƒâƒçƒ÷„ƒð„„?ƒàƒô„ƒÙƒê„„ƒö„5ƒñ„ƒËƒî„!„&ƒóƒü„„„ƒðƒöƒà„&„„ƒî„ƒæ„
-„„ƒõ„ƒø„ƒáƒÛƒõ„ƒÙ„ƒûƒá„„ƒÄƒõƒñ„„„ƒü„„ƒí„ƒõƒóƒè„„ƒÕƒã„	„3„ƒë„ƒú„ƒâƒäƒì„ƒÔ„ƒç„(ƒÿƒ¼ƒñ„„„„$„
-ƒÇ„„ƒöƒ÷„Oƒè„+„ƒÉ„„$ƒàƒø„„-„1ƒß„3ƒìƒÿ„4ƒù„!ƒ÷ƒëƒû„ƒàƒà„
-„„&„ƒñƒìƒæ„„C„ƒ÷ƒæ„„	„_„
-ƒûƒù„ƒÍƒ×ƒÙ„ƒë„„'ƒþ„„„	ƒË„!ƒç„6ƒäƒñƒÕ„„#„ „„„+„„„ƒã„ƒýƒ¼ƒòƒÞ„ƒìƒê„
-ƒþ„ƒÍ„ƒïƒÕƒùƒúƒÍ„ƒÙ„ƒý„„ƒÁƒî„	„ƒÈƒíƒé„„„2ƒýƒßƒÑ„„ƒ÷„ƒíƒý„ƒë„„„*„3ƒôƒé„ƒØ„ƒý„„ƒýƒëƒ×„„ „ƒü„„ƒôƒþ„*„„„ƒûƒýƒóƒàƒÉƒþƒäƒè„1„ƒÁƒÛ„ƒ¾ƒçƒîƒüƒ×„ƒØ„ ƒø„$ƒäƒê„„ƒêƒòƒôƒßƒä„Tƒç„„„ƒòƒøƒß„#„ƒèƒùƒÀƒí„ „ƒòƒúƒçƒò„
-ƒÊ„„!„„ƒÿƒíƒüƒéƒñƒßƒÞ„„„ƒò„ƒçƒé„ƒÅƒé„ƒÆ„„„„!ƒÜƒØƒéƒé„„3ƒÝƒ×ƒÒƒÀƒëƒÝƒìƒÐƒð„„(ƒèƒó„"ƒÓ„ƒá„ƒþƒîƒÛ„'„5ƒõƒö„„„	„ƒò„„ƒÒƒô„
-ƒóƒòƒô„ƒüƒëƒÝ„„„!ƒñ„ƒò„„ „ƒàƒò„ƒùƒé„„ƒö„ƒâƒ»ƒü„„ƒÜƒèƒÒ„„ƒâƒ÷ƒâ„ƒàƒæ„ ƒô„„ƒô„%ƒöƒê„„„„ „ƒÛ„ƒÿƒåƒò„3„ƒôƒÙƒè„ƒî„„„ƒÚ„„ƒÛƒõƒÙƒàƒû„
-ƒî„)„„4„„„ƒþ„„„„
-„ „ƒï„ ƒÐƒã„„ƒÄƒù„%ƒÚ„	ƒ÷ƒÇƒØƒÎƒôƒÄƒÛƒùƒÔ„ƒÂƒö„A„„ƒðƒÎƒ÷„„ƒò„„	„„:ƒñƒöƒû„<ƒê„„„
-ƒô„„ „ƒÎƒöƒÒ„ƒú„S„ ƒè„ƒïƒÜ„ƒãƒÈƒà„„ƒä„ƒó„„2„„„„„ƒìƒîƒí„ƒï„„„$ƒõƒï„„*ƒùƒøƒé„ƒæ„„ƒÉƒ÷ƒüƒè„„„&ƒ×ƒäƒÞ„„ „„„
-„ƒÐƒö„„ƒï„„ƒûƒîƒÖƒÓ„ƒÒƒÂƒçƒÿƒò„„„%„ƒÜƒÎ„&„„ƒúƒâƒêƒÜƒÝ„ƒê„$„„,„"„„ƒéƒãƒö„7ƒüƒð„„ƒÚƒä„ƒöƒÚ„ƒü„5„„ƒÅƒëƒá„ƒú„4„1ƒë„„„"„„„ƒá„ƒÔƒáƒüƒã„&ƒë„1ƒÚƒÚ„	ƒô„„„„ƒ÷ƒÔ„	ƒ÷„ƒí„;„ ƒÿ„„
-ƒü„ƒçƒÏ„*„
-„ƒó„ƒÔ„„„ƒüƒï„„ „ƒþƒè„„„&„ƒìƒì„ƒõƒØƒù„„ƒÛƒîƒÑƒþ„„„ƒñ„6ƒþƒåƒù„ƒØ„+„„
-ƒß„„ƒïƒý„ƒàƒ½ƒÊƒþƒòƒú„ ƒÛ„„ƒý„ƒôƒò„„„„"„<ƒîƒé„„„„ƒøƒàƒù„2„	„7ƒÑƒôƒè„"„C„ƒß„„ƒñƒØƒÈƒäƒâ„„„ƒï„„ƒõ„*ƒçƒÖƒÿƒùƒ÷„ƒÌ„ƒ÷ƒòƒïƒí„ƒð„
-„ƒøƒ²„ƒïƒô„„ƒÐƒè„#ƒæ„ƒúƒõƒ÷„ƒôƒëƒ÷ƒîƒî„ƒúƒð„#„3ƒô„„$ƒç„„„ƒÓƒÜ„
-ƒüƒåƒùƒúƒðƒìƒãƒÝ„ƒÏ„ƒÿƒâ„8ƒÕ„ƒñƒñ„„?„*ƒû„%„(„„„„ƒ÷ƒðƒØƒô„„ƒîƒã„ƒðƒÈƒãƒâƒÿ„ƒÀƒõ„ƒ¿ƒé„0ƒíƒí„„%ƒä„ƒÕ„ƒ»„+„2ƒÿƒÓƒõƒõ„ƒÿ„ƒú„ƒÕ„ƒíƒÞ„ƒö„„!ƒ½ƒäƒÂ„ƒü„ƒß„ƒé„9ƒüƒõ„ƒù„„„ƒø„„„!„ƒö„/ƒê„„ ƒýƒóƒ÷„ƒñƒòƒÿƒ»„ƒø„„„ƒîƒù„„„„„5„1ƒê„!ƒñ„ƒ¸ƒê„	„1„„	„'„ƒõƒþ„„ƒ÷ƒÔ„ƒòƒÿƒéƒÝ„3„ƒüƒêƒæ„„(ƒÕƒñƒáƒêƒù„„„ƒàƒÒ„ƒö„"„
-ƒÉ„ƒù„„„ƒÅ„#„ƒ·„„„	„„/„ƒÝƒÿ„;ƒ«ƒò„ƒë„ƒî„„ƒÁ„ƒú„ƒÿƒæƒÚ„„„%ƒ÷„„"ƒîƒê„ƒÐƒö„ƒø„ƒæ„„,„„ƒå„ƒ÷„&„ƒÞƒé„ƒñƒË„	ƒá„„+ƒç„ƒõƒå„ƒë„„„
-„„„„ƒñƒýƒù„Gƒá„ƒû„„$„ƒý„ƒÒƒìƒûƒûƒíƒÐƒÓƒþ„ ƒÏƒêƒûƒÐƒÞ„„	„ƒÓ„6„	ƒÚƒöƒéƒáƒä„<„ ƒùƒó„„ƒë„/„)ƒí„ƒâƒß„9„ƒå„Y„„!ƒãƒú„„=ƒ÷„
-„;„%„„3„ „„ƒñƒïƒÙƒ÷„ƒÚƒñƒÿƒëƒº„ƒëƒÍ„„„„#„„	ƒß„„ƒÔƒë„ƒè„ƒþ„ƒèƒþ„„-ƒé„#ƒí„„„„„-ƒú„„„ƒö„ ƒ»„
-ƒÚƒý„„*ƒÛ„„0„„„	ƒ×„„ƒ÷ƒë„ƒæƒþƒçƒõ„*ƒò„8ƒÙ„ƒçƒþ„„„ƒö„ƒýƒúƒíƒÞƒýƒ÷„ƒçƒú„!„
-„!„H„
-„;„ƒÔƒï„"ƒí„„!ƒÎƒÙƒôƒÚ„ƒàƒéƒê„„„ƒìƒñ„„ƒý„„ƒíƒù„„ƒíƒå„ƒäƒúƒý„ „„ƒý„„#ƒæƒúƒìƒøƒùƒÐƒõƒÉƒéƒì„„0„	ƒð„8ƒÁƒ®ƒè„ƒÙƒúƒûƒãƒø„ƒ­„	ƒÙ„ƒÌ„ƒäƒéƒñƒÎƒù„!„ƒÝ„9ƒÿƒùƒþƒýƒñ„ƒïƒÝ„<ƒÛƒÝƒß„ƒã„„ƒýƒóƒõ„Fƒû„„(„„„ „&ƒÚ„ƒç„„ƒï„„%„/ƒãƒÌƒä„ƒ÷ƒí„ƒÿƒëƒ÷ƒìƒþ„EƒÔ„ƒõ„ƒÙ„„„ƒÐƒá„ƒúƒÛƒÛ„#„„ƒíƒý„„"ƒëƒë„ƒøƒáƒé„	„„„„„ƒàƒì„0ƒÚ„ƒÙƒí„„„ƒð„„„#„ƒñƒþ„ƒÉƒï„ƒ÷ƒíƒýƒìƒí„„(„A„J„(ƒú„	„„ƒß„.ƒìƒÙƒãƒðƒþƒÆ„ „'ƒñ„&„
-ƒìƒÐƒÐ„ƒÐ„„ƒûƒý„4ƒøƒíƒýƒ×ƒî„	ƒï„„	„ƒØ„„„7„ƒõƒóƒù„Bƒö„ƒü„!„ „„"„	ƒÛƒÈƒö„ƒþ„!„$ƒý„)„„„ƒí„ „ƒì„ „
-„„„ƒüƒïƒæ„„
-ƒÛƒõ„	ƒãƒó„ƒÜ„ƒâƒØƒÛ„ƒëƒÞ„#ƒû„	ƒó„ƒÈ„„ „ƒË„ƒÞƒü„„„„ƒå„„ƒÉƒñƒòƒÔ„9ƒèƒÚ„„'ƒöƒþ„„2ƒóƒé„#ƒÖ„ƒäƒêƒö„.„)„„ƒôƒòƒî„,ƒö„ƒ¬„ƒüƒÿƒóƒâ„„ƒþƒ¾ƒòƒà„ƒò„
-ƒø„„
-ƒõ„ƒöƒ÷ƒÖƒêƒá„7„„ƒÞ„ƒîƒþ„#„„ƒò„„„„ƒÝ„>ƒßƒå„„ƒó„R„(„„„Pƒçƒü„„0„5„„ƒðƒûƒø„ƒôƒêƒÈƒùƒôƒêƒúƒå„„ƒÙ„ƒÖƒîƒï„„„ƒå„ƒü„„$„„ƒï„Yƒûƒö„„ƒç„ƒÅ„ƒÐƒô„ƒñƒÚƒîƒÖ„&ƒäƒô„ƒæƒïƒÐƒÒƒÐ„ƒý„ƒîƒõƒÜ„ƒß„ „„„ƒí„ƒÿ„ƒë„ƒÈƒñƒëƒô„ƒÛƒåƒÿƒð„ƒö„„ƒîƒÞƒõƒóƒì„ƒÖ„ƒâ„ƒëƒÒƒæƒéƒõ„'„„$„ƒçƒÒƒí„ƒð„ƒòƒÒƒÙƒåƒæ„ƒÞƒýƒåƒ·ƒÜƒÞƒç„„)ƒÉƒëƒü„
-„ „ƒôƒù„ƒçƒíƒî„„ƒè„ƒûƒÎ„„ƒÞ„ƒöƒù„ƒç„ƒÜ„ƒò„	„ƒð„„„ƒà„ƒòƒõƒê„„ƒöƒîƒþ„„ „ƒûƒñƒØ„ƒø„„ƒð„#„!„
-ƒÜ„!„ƒõƒñ„ƒÐƒÁ„ ƒà„„$ƒú„„D„,„„#„	ƒïƒ×„ƒñ„	ƒ×„*ƒ×ƒñ„ƒù„ƒùƒõƒß„#ƒÅƒêƒúƒã„„ƒÞ„	„„ ƒÜ„ƒõƒéƒø„„ƒÞ„„ƒ÷ƒõ„ƒ÷ƒãƒõ„ƒÜƒß„ƒô„
-ƒßƒí„ „„E„ƒúƒßƒðƒÑ„ƒÿƒµƒùƒíƒè„ƒÙ„„ƒí„ƒù„ ƒáƒñ„ƒÖ„ƒÔƒûƒåƒÝƒþƒþƒø„ƒûƒù„+„	ƒíƒÜ„„„„5ƒïƒÛƒ÷ƒí„ƒò„„ƒøƒöƒë„!ƒñƒè„ƒýƒëƒø„„„ƒæƒæƒïƒï„„ƒð„ƒòƒø„„ƒð„
-ƒâƒÛƒòƒÜ„„ƒã„„ƒêƒûƒæƒäƒèƒâƒßƒöƒÿ„„ƒí„	„ƒéƒö„ ƒýƒÿ„„*„*ƒðƒëƒâ„„ƒ÷ƒÜ„ƒì„ƒúƒ÷ƒú„„ƒê„„„,„„ƒÎ„„„J„„„ƒÔ„ƒíƒöƒò„„:ƒô„ƒòƒûƒ÷ƒûƒà„„„„ „ƒÍ„ ƒô„„ƒïƒñ„„ƒá„ƒòƒû„ƒé„ƒûƒáƒéƒÿ„'„ƒá„ „ƒÛ„„ƒþƒÿƒûƒéƒçƒæƒ÷ƒê„ „)ƒùƒß„„"„ƒù„„„„ „„[„Aƒþƒø„„ƒùƒÒƒìƒø„ƒú„	ƒíƒìƒÎ„3„„(ƒù„%„„ƒùƒûƒò„+„„ƒÌƒÓƒÏƒï„1„„„
-„„„„$„ƒÃ„!„ƒ×„/ƒüƒçƒã„„ƒüƒÞƒêƒö„ƒêƒõƒâ„ƒ°„2ƒûƒ÷„„ƒù„ƒ÷„
-„
-ƒÜ„„„ƒõ„„ƒÏƒØ„ƒÅ„ƒàƒàƒè„„ƒì„„	ƒû„ƒìƒÙƒú„ƒû„ƒõƒÝ„BƒÐ„ƒñ„ƒêƒú„ „„„ƒå„ƒ¸„ ƒé„„ „#„+„ƒàƒò„
-ƒô„ƒÓƒÎ„„ƒßƒ÷ƒôƒÕ„"ƒÝ„;„„„;„„„ƒÐƒï„„ƒ×ƒÞƒÙƒÅƒã„„ƒºƒìƒÖƒþ„ƒúƒØƒù„„4ƒÿ„-„„ƒ÷ƒÊ„„9„)„„„„-„„HƒÝƒõƒì„'ƒú„ƒý„.„ƒëƒÿƒñ„2„ƒüƒöƒÊ„5„„„
-ƒÝƒÕ„„ƒ÷ƒàƒðƒüƒî„ƒþƒÏ„„„ƒóƒì„#ƒñ„ƒõ„/ƒì„„„„ƒçƒûƒÇ„„'„ƒß„ƒüƒóƒë„ƒïƒïƒù„„ ƒøƒï„„„ƒÈƒïƒÔƒèƒãƒûƒê„3ƒû„„ƒü„3„ƒù„„7„ƒò„„„„„ƒ÷ƒüƒ÷„„ƒäƒö„„ƒëƒïƒîƒÿƒè„„	ƒó„ ƒþƒù„„ƒïƒÿƒûƒç„!ƒêƒñ„ƒÿƒôƒóƒíƒò„„„ƒÏ„„ƒÕ„%ƒõ„#ƒòƒð„	„'„ƒòƒüƒñ„ƒÕ„ƒöƒ÷„„ƒûƒäƒé„„ ƒÝ„=ƒÑ„„%„„!ƒåƒáƒô„„ƒë„ƒú„ƒäƒÂƒÔƒæ„„ƒë„ƒÙ„ „#ƒÿƒßƒðƒÿƒû„&„„„„ƒÑ„ƒîƒÝƒå„ƒß„„
-„*ƒø„ƒô„„4ƒØƒÑ„ƒâƒþƒë„„„„„„ƒÑƒí„ „ƒÛ„9„ƒù„ ƒÉƒÜƒû„=„ƒÿƒÍ„„
-ƒßƒù„>„NƒûƒÑƒí„ƒÙƒà„ƒßƒø„ƒé„BƒýƒÔ„„	„ „ƒõ„„„ƒõƒÅƒÔ„0ƒñƒìƒó„„„$„@ƒÝ„<ƒÚƒñ„$„ƒðƒÎ„ƒñ„ƒç„ƒûƒÎƒÃƒï„ƒßƒìƒ¸ƒÇ„ƒû„„„ƒ÷ƒö„„ƒØƒôƒÙƒç„ƒÂ„ƒôƒÛ„ ƒóƒÕ„ƒßƒåƒýƒý„„ƒõƒí„„ƒüƒ¾„ƒý„ƒçƒë„ƒô„"ƒê„ƒúƒêƒñƒÞƒóƒéƒÝ„„ƒù„ƒéƒòƒÐƒý„5„1„ƒñƒè„,ƒ÷„„„ƒþ„	„#„Gƒ÷„„„ƒÕ„„ƒû„„ƒñ„ƒÕ„ƒðƒíƒ×ƒçƒÃ„ƒô„ƒî„ „ƒúƒâ„„ƒé„„ƒÉ„3„=ƒÏ„0ƒðƒåƒè„,„ƒã„„$ƒêƒü„„„ƒðƒä„„„ƒõ„ƒçƒõƒïƒøƒî„ƒÝƒÓƒó„#ƒèƒÒƒøƒú„ƒÙƒÙ„„„„ƒè„
-„ƒò„„ƒÏƒåƒðƒÖƒî„„„"„ƒÛ„$ƒê„„„	„ƒô„„+ƒ÷„„ƒßƒøƒú„ƒô„„ƒí„„ƒõ„ƒð„„ƒú„ƒûƒêƒò„ƒûƒØ„7ƒë„ƒÿ„ƒÛƒá„!ƒýƒì„&ƒý„
-ƒèƒðƒ÷„„	ƒÕ„„ƒô„
-„
-ƒ÷„ƒÞ„
-„„„ƒîƒÚƒò„„ „ƒö„„$„ƒÝƒÇ„+ƒò„ ƒßƒÓ„'ƒþƒÑ„ƒýƒâƒØ„„ƒýƒé„	ƒÒƒéƒê„„„„ „ƒÅƒÞ„ƒóƒô„$„ƒúƒæ„ƒô„"ƒÂƒéƒã„„ƒò„ƒëƒèƒäƒÒƒúƒì„	ƒö„-„„„„ƒØƒçƒáƒðƒó„!„ƒÏƒÀƒëƒó„ƒø„ƒô„ƒþƒò„)ƒà„AƒóƒåƒóƒÜ„„„„„>„„ƒø„„ƒö„%ƒå„„ƒö„ ƒà„„!„ƒòƒý„4„8„ƒí„ƒ®ƒÈƒðƒÚ„,ƒäƒßƒð„(ƒòƒâ„ƒÌ„,„-„ƒÉ„-ƒäƒæƒò„„„„!„ƒêƒñƒì„„ „	„ „&ƒé„ƒÄƒèƒòƒÿƒç„„ƒù„ „.„ƒÙƒçƒýƒþ„„ƒù„+ƒ÷ƒïƒì„ƒñƒû„„=ƒõ„+„	ƒü„ƒÝƒ÷„ƒâƒË„ƒï„„'„ƒòƒúƒæƒø„ƒú„
-„„„4ƒæ„ƒÆ„ ƒëƒð„)ƒñƒø„„	ƒÍ„„„$„„ƒáƒÐƒõƒÖ„8„*„ „„ƒëƒê„„„ƒó„0ƒõ„"„3„„ƒÒƒ×„„„ ƒë„ƒáƒêƒãƒèƒé„„ƒÕƒë„%ƒì„ƒö„	ƒòƒëƒä„ƒòƒù„!ƒôƒëƒæƒÍ„„ ƒó„„„ƒæƒàƒàƒô„„„
-„	„„„ƒã„„„„	ƒþƒÕ„&„ƒãƒð„,„„ ƒÛƒä„ƒò„ƒó„„ƒÙ„ƒÒƒâ„ „ƒñƒñƒöƒ÷„„ƒûƒâ„ƒá„ „„„9„„3„„
-„„ƒôƒÐ„ƒÙƒð„ƒÕƒã„„-„„1„$ƒüƒâƒÙƒáƒÖƒæ„„B„„ƒîƒÉƒá„"ƒ÷ƒÙƒû„„„„ƒâƒúƒÙƒþƒý„
-„ƒï„5ƒèƒÇ„!„.ƒÊ„
-ƒß„$ƒâ„ƒàƒä„ƒôƒÝƒºƒÄ„4ƒè„ƒÃƒö„ƒà„ƒóƒáƒôƒë„„ƒÝƒïƒê„„.„„ƒáƒáƒôƒþƒý„!„„5ƒÒƒìƒëƒô„„ƒé„<„„„ƒâ„„7ƒÒ„
-ƒï„ ƒï„„"ƒÜƒÏƒ¾„ƒ÷„,„„„ „„ƒã„ƒþ„„ƒêƒò„7„+ƒïƒûƒÜƒÿ„„	ƒþƒûƒä„ƒúƒð„6ƒö„ƒêƒîƒê„„„„"„5„„
-„ƒÿ„„ƒçƒâƒøƒèƒþƒð„„7„„„ƒï„
-„&ƒóƒÛ„	ƒÞ„4„ƒÒ„ƒÔ„ƒéƒø„ƒî„„„„„ „ƒë„„+ƒìƒõ„#„ƒî„1„„„B„ƒðƒùƒÚƒç„ƒéƒí„!ƒþ„„ƒÄ„„ƒÄƒû„"ƒòƒø„ƒê„5ƒþƒÝ„ƒþ„ƒô„ƒäƒûƒò„
-„ƒÒƒßƒ×ƒÖ„„ƒê„„ ƒæƒÌƒð„„ƒüƒÿƒÚƒÆ„„„Iƒêƒ×„ƒìƒò„„	„„„!„5ƒê„„ƒü„ƒíƒìƒ´„„„„ƒÛ„„
-„„ƒ÷ƒ¼„„ƒá„ƒâƒö„ ƒ÷ƒäƒô„<„ƒèƒé„„ƒíƒüƒäƒþƒáƒþ„ƒî„Aƒä„ƒ×ƒÿƒ¿ƒóƒÓƒøƒðƒï„„ „ƒØ„ƒÛ„(„ƒí„„ƒü„ƒÿ„„„„ƒØ„„„ƒøƒ÷„ƒøƒÿ„ƒì„(„ƒåƒû„0„ „„„„'„ƒó„ƒÚƒà„„ƒòƒâƒÞƒÔƒþƒÑƒËƒÖ„ƒý„„ƒß„„	ƒî„"„„„
-ƒÎ„„!„„ƒáƒõ„"ƒôƒú„ „„ƒÿ„„2„ƒßƒó„ƒç„@ƒé„ƒÞ„„(ƒÜ„„7ƒêƒìƒùƒôƒÑ„ƒò„ƒîƒïƒ¹ƒÝƒâƒúƒç„„„7„„ „	„ƒáƒÚƒÞƒíƒú„ƒø„ƒÄƒãƒÇ„%„„/„„ƒã„+ƒýƒå„„ƒÙƒüƒç„ ƒø„
-„4„„„*„B„ „„#ƒý„„!„ƒçƒó„
-ƒÎ„„„„5ƒí„ƒêƒíƒìƒñ„ƒíƒÿƒñ„ƒßƒëƒñ„„ƒôƒí„ƒäƒüƒÏƒÎƒâƒùƒî„'ƒà„ƒçƒý„ƒû„ƒ¡ƒû„1„„
-„ƒýƒä„ƒñƒð„„ƒçƒØƒ÷ƒáƒïƒßƒÎƒð„„ƒí„„ƒûƒüƒÙ„„ „„„ „„„„	„„'ƒúƒÿƒóƒý„ƒä„ƒ×ƒó„„ƒâƒó„„ƒç„„,„
-„	ƒÓƒíƒëƒï„ ƒÛƒðƒæ„&„
-„„(ƒñ„„,ƒÎƒÒƒÏƒøƒî„ƒ÷ƒðƒÇƒ×ƒÿ„
-ƒçƒü„ƒú„„„„ƒÑ„ ƒî„ƒí„Nƒú„ƒéƒïƒÚƒ÷„„„ƒð„ƒÃƒö„ƒÓƒÔƒîƒÆ„ƒý„„ƒù„ƒú„ƒôƒç„;ƒúƒ÷„ƒÒƒíƒâƒïƒ¶ƒë„ ƒùƒé„„ ƒìƒ÷„+„ƒç„„ƒúƒÔƒó„ƒÒƒáƒéƒÕƒÅ„„„„1ƒêƒßƒîƒÐ„9ƒú„„ ƒþƒõƒÎ„ƒùƒø„'ƒÞƒýƒí„,ƒã„„6ƒö„„ƒÕ„ƒßƒ¿„ƒã„ƒêƒóƒÏƒêƒõƒþƒåƒðƒæƒùƒüƒáƒüƒÉƒÿ„„„ƒà„1ƒìƒÔ„ƒ×ƒýƒð„,ƒñƒùƒÌ„„ƒá„ƒ÷ƒÑƒÿƒÉ„
-„ƒîƒú„„„*„ƒÚ„9„„„ƒõƒÂƒÞ„„„„„„„<ƒþ„ƒó„%ƒïƒü„ƒÿƒþƒéƒùƒþ„ƒñ„	ƒï„„„„ƒø„ƒéƒìƒø„.ƒàƒï„ƒðƒé„„„ƒýƒçƒûƒû„ƒô„ƒÁƒþ„(„„ƒúƒî„ƒù„ƒéƒâƒï„ƒêƒæƒß„ƒî„„„„)„ƒüƒøƒÛ„„„'„„ƒû„ƒéƒë„„6ƒýƒòƒþƒò„„ƒíƒì„„ƒñƒÙ„ƒÛ„1„ƒï„ƒø„ƒç„8„„„$„ƒÚ„
-ƒÚƒæ„ƒñƒâƒë„„ƒê„ƒ÷ƒþƒØƒÝƒõƒß„ƒüƒþƒÚ„ƒØƒòƒÛƒ×„ƒÎ„ƒðƒÕƒïƒñ„3ƒý„2ƒÅƒÉƒö„.ƒçƒëƒÿƒß„%ƒêƒë„-„,„„„'ƒí„„„„ƒýƒçƒÝ„ƒúƒïƒï„1ƒñƒèƒþ„„ƒß„ƒãƒó„ƒÐƒÞ„„#„
-ƒï„ƒõ„ƒðƒé„ƒø„„ƒö„ƒî„"ƒê„„„ „&„„ƒò„„/ƒÕ„ƒô„„ „$„ƒèƒßƒ×„ƒË„ƒü„ƒñƒñƒîƒÛƒòƒÛƒéƒÕƒÿƒä„ƒýƒèƒåƒï„„„ƒòƒñƒ×ƒý„:ƒÅ„„„ƒúƒøƒÓƒÎ„ƒà„ƒÞƒíƒçƒâ„ƒ×ƒõƒêƒåƒÞƒö„ƒò„„Gƒ÷ƒì„ƒéƒÏƒÍ„ ƒâƒø„ƒö„	ƒì„ƒëƒá„ƒö„"ƒõ„"„!ƒÌƒòƒê„„ƒÙ„
-„ ƒúƒìƒóƒýƒÏ„ƒô„-ƒöƒíƒÌƒÿƒëƒçƒÙ„ƒ÷„„„„7ƒÿ„	ƒéƒÇƒé„„ƒÞƒä„ƒöƒù„(„ƒ¼ƒýƒû„„ „)ƒÜ„„„0ƒô„	ƒÙ„$„„„„ƒø„„ƒÿƒßƒá„ƒúƒÝ„„ƒÁƒíƒÓ„$ƒèƒã„„„ƒë„ƒØ„ƒêƒí„"ƒõƒáƒ÷„„	„„ „„ƒþ„„„5„ƒØƒì„!ƒñƒë„ƒú„„*ƒê„ƒÝƒ÷„	ƒÄ„„ƒè„„ƒù„ƒö„„5ƒÛƒîƒî„„„ƒù„ƒØƒô„ƒþƒöƒê„
-„„„ƒáƒöƒíƒþ„„ƒîƒÕƒð„&ƒâ„7ƒþƒòƒöƒÞƒÜƒâ„ „	„ƒÖƒÿ„ƒèƒü„ ƒèƒÉ„„„ƒñ„%„„*„"„„"ƒùƒð„ƒæƒâ„„ƒú„ƒäƒÏƒÝƒßƒÕ„-„ƒð„ƒÚƒòƒ÷ƒéƒøƒù„ƒúƒù„/„-„„(ƒéƒü„0„„ƒüƒË„„„„ƒìƒûƒÞ„„.ƒÖ„.ƒ÷ƒð„ƒÿƒè„ƒäƒöƒì„$ƒË„0ƒîƒô„ƒÜƒØƒÚ„„-ƒó„
-„,„*ƒõƒþƒðƒø„ƒóƒô„„ƒúƒâ„*ƒòƒéƒ÷ƒèƒØ„
-ƒÝ„„ƒö„%ƒò„ƒð„
-„„,„!„ƒòƒþ„„„%ƒøƒçƒá„ƒÕ„ƒø„„„„ƒî„ƒö„"„„(ƒÜ„$„
-ƒÌƒø„$„„
-ƒòƒô„„„ „ „„„„ƒä„ƒöƒúƒî„„ƒä„"„„ ƒö„„„„„ ƒäƒÌ„ƒÞ„ƒðƒòƒöƒüƒäƒî„&„ƒîƒü„ƒþ„
-„
-ƒÎ„„„„ƒöƒþƒðƒÆƒÎ„ƒàƒÊ„2ƒÒƒÊƒè„
-„„
-ƒú„„„„ƒ¼„„ ƒàƒÞ„ƒÜƒè„…„öƒúƒÜ„„ƒÜ„ƒø„ƒüƒâƒìƒØƒð„„
-ƒä„"ƒüƒÜƒþ„„ƒìƒÚ„ƒü„ƒêƒèƒþ„„„ƒâƒìƒúƒøƒø„ƒæƒú„„,ƒì„ „
-ƒä„$ƒôƒøƒÖƒÜ„„ƒüƒÜƒøƒâƒÄ„ƒúƒþƒÒƒà„„„ƒÖƒöƒøƒüƒØ„ƒâƒôƒòƒò„ƒØƒòƒö„ „"„ ƒò„ƒÔƒöƒöƒêƒÔƒð„„ƒÐ„ ƒð„ƒèƒæƒì„„ƒü„„„"„ƒðƒúƒô„!ƒê„$ƒéƒýƒÙ„ƒþƒõ„)ƒèƒüƒá„ƒèƒæƒüƒûƒô„„ƒú„
-„ƒÆƒùƒê„„„+„-ƒó„ƒÄ„ƒý„	ƒåƒæ„	ƒÇƒýƒí„„„„'ƒû„„	„	ƒûƒö„„„ƒ÷ƒðƒõ„
-ƒóƒøƒáƒîƒë„„ƒøƒß„„ƒõƒæƒûƒñ„ƒêƒó„ƒìƒâ„:„ˆ„%„ƒå„ƒ÷„8ƒñƒÓƒÂ„ƒú„ƒáƒëƒáƒÀƒÛƒÜ„$„„„#ƒú„
-„#ƒÙƒí„ƒýƒé„5„ƒêƒÁ„„„ƒéƒ×ƒÛƒíƒøƒÆƒ÷ƒð„ƒÝƒý„"ƒáƒøƒà„ ƒÞ„Gƒà„ƒý„ƒñƒýƒíƒîƒÙƒëƒî„ƒù„„ƒÏƒùƒô„ƒñƒý„ƒû„„/ƒñ„„„„)ƒÿƒþ„„ƒä„)„„„ƒè„„ƒßƒúƒøƒî„ƒüƒïƒñ„%ƒö„ƒÃƒÛ„„ ƒÁƒà„7ƒîƒûƒëƒÿ„ƒæƒÓ„$ƒë„ƒüƒÿ„$ƒ¹ƒÛƒõƒíƒñƒáƒÊƒÙƒê„0ƒÄ„3„„ „„ƒç„„ ƒð„„„ƒº„„ƒÚ„ƒùƒòƒè„ƒûƒÖ„„	ƒç„ƒâƒù„ƒÎƒî„„ƒø„„6ƒò„„	ƒîƒ¸ƒýƒÝƒñƒüƒÀ„„„	ƒýƒè„„ƒþ„+ƒüƒâ„ƒïƒÖ„„ƒàƒê„"ƒÌƒù„„„ƒøƒéƒïƒä„#„„„ƒì„#„ƒÒƒþ„„ƒúƒíƒÏ„„„„	„ƒÛ„ƒû„4ƒõ„ƒï„ƒíƒÞƒç„„„!ƒñ„Z„,ƒç„ƒ÷„ƒÿ„ƒßƒÛ„ ƒöƒ÷ƒíƒôƒóƒÿ„ƒó„„„„3ƒã„!ƒáƒÿƒæƒÿ„1„„ƒøƒêƒì„%„ƒáƒâ„ƒùƒîƒìƒãƒÝ„,„„.„B„„„*„8„ „4ƒÞƒÃƒ×„ƒå„ƒÜ„#ƒüƒÝƒð„+ƒé„ƒê„%„ƒÉƒæƒñƒÓƒþƒÛ„ƒúƒö„ƒðƒüƒâƒû„„„%ƒá„!ƒÝƒó„)„ƒçƒÜƒõ„„ „ƒéƒþ„.ƒñƒñƒÜ„5ƒõƒ¹ƒÞƒÿƒÕ„„8ƒå„„ƒÅƒ»ƒ÷„)„„2ƒà„	„ƒìƒÚƒ÷ƒíƒäƒôƒìƒâƒâƒë„ƒöƒõƒæ„ƒçƒûƒëƒìƒð„ƒÐƒñ„ ƒì„ „ƒïƒþ„ƒðƒê„„ƒó„ƒõƒæ„ƒØ„ƒý„„ƒö„"ƒÒ„„ƒêƒùƒë„ƒæƒÖƒý„>ƒøƒÑ„-„„3ƒß„ƒ÷„ƒ÷ƒùƒï„„ƒç„„ƒëƒþƒÔƒñƒð„*ƒÏƒû„ƒØƒúƒêƒíƒõƒÍƒÔ„"„ƒèƒñƒë„„)ƒé„„„„ƒô„"ƒú„„ „„#„ƒì„„"ƒÑ„#„ƒþƒó„ƒýƒö„ƒÍ„ƒÛƒðƒãƒñƒï„„ƒüƒÝ„ƒçƒñ„ƒúƒÿƒæ„„H„ ƒß„ƒü„ƒüƒúƒö„„„„ƒï„ „ƒñ„ƒÿ„(„
-„„ƒõ„ƒêƒèƒû„-„;„„„ƒðƒ÷„„ƒÓƒô„„ƒþ„ƒðƒì„3ƒõ„„ƒïƒïƒòƒÿ„„	ƒùƒü„„„ƒùƒí„ƒÅƒË„ƒö„	„
-„ „ƒÞ„„ƒÙƒè„ƒÔƒÕƒì„'ƒÄƒôƒßƒåƒÙ„„„9„„„?ƒÚ„„ƒõ„ƒÖƒö„	ƒë„„ƒïƒÖƒ÷„-ƒÝƒûƒÿƒà„„„ƒü„"„	ƒý„„„ƒâ„ƒïƒËƒÎ„„7ƒåƒÿ„ƒëƒõƒò„ƒò„"ƒÔƒñ„ƒçƒÞƒý„ƒùƒþƒù„ƒõƒßƒÔƒ÷ƒëƒë„ƒýƒÔ„„ƒã„ƒë„
-„
-ƒÂ„„2ƒù„4„(ƒÝƒóƒö„ƒðƒÖ„ƒû„.„ƒê„ƒø„ƒï„ƒîƒµ„)„ƒò„(ƒýƒûƒò„ƒ»ƒçƒú„ƒáƒÙ„+„ƒù„ƒüƒøƒÿƒöƒú„'ƒæƒùƒå„#ƒÛƒÓƒã„ƒëƒôƒùƒå„ƒõƒú„ƒÐ„ƒ÷ƒËƒ²ƒðƒ½„ƒÝƒÙƒè„„	„ ƒøƒ×„„#ƒæ„ƒëƒìƒý„„„ „„ ƒç„
-ƒòƒïƒû„>„„„	ƒéƒëƒÂ„%ƒéƒÏ„ƒùƒâ„	„ƒÚƒËƒçƒþƒø„ƒáƒ×ƒä„„$ƒìƒØƒñƒö„„„ƒÞƒè„„„ƒ÷„ƒèƒýƒèƒÜ„ƒôƒí„„ƒç„ƒÞ„„„ƒèƒñ„„„„ƒéƒàƒèƒî„ƒãƒöƒÓ„„ƒèƒÕƒþ„(ƒéƒë„ƒîƒòƒóƒý„ƒÍƒß„ƒê„	„ƒ÷„„.„„„ƒÏƒû„ƒÙ„„ƒê„„ƒøƒã„„4ƒôƒõ„!ƒöƒÛ„„ƒê„„'ƒýƒèƒÐƒìƒ°ƒù„ƒëƒüƒÔƒÍƒüƒüƒüƒÜ„„!„„-„8„C„ƒüƒüƒ÷ƒÞ„ƒî„
-ƒóƒíƒÌ„„"ƒðƒù„ƒÙ„„.„ƒüƒò„„ƒôƒùƒöƒæƒëƒãƒò„
-ƒ÷„„ƒðƒõƒåƒäƒÈ„„'„ „ƒÞ„ƒè„"ƒä„ƒ±ƒýƒÜ„ƒä„ƒÆƒú„ƒÛ„ƒÛ„„ƒú„„ƒÃƒã„„ƒÔƒç„„„„ƒìƒèƒôƒìƒÏ„„„!„ƒê„ƒÏ„„„ƒùƒñƒç„ƒü„ƒÿƒëƒ÷„ƒà„ƒúƒÚƒñ„ƒÕƒøƒî„ƒåƒþ„ƒä„Kƒûƒö„ƒü„"„3„„„„ƒíƒõ„
-ƒèƒê„ƒíƒâ„ƒø„ƒØƒõƒÖ„(ƒùƒøƒþƒº„ƒò„„„!ƒî„	„„ƒÂƒî„„ƒä„„ƒø„"ƒï„„ƒó„ƒÔƒá„„
-ƒýƒðƒÙƒö„ƒïƒËƒìƒÿƒþƒùƒÑ„ „„ƒÜ„4ƒãƒûƒð„"„„#„ƒåƒÕ„ƒºƒè„„0ƒü„„„ ƒÞ„„	„ƒïƒÿƒûƒèƒÒ„ ƒëƒúƒÇ„„
-„
-ƒü„ƒêƒí„ƒó„ƒäƒýƒõƒéƒÏƒî„ƒê„ƒÿ„ „„ƒø„„	ƒõƒã„6„„„ƒàƒúƒõƒ×„ƒÚƒï„„ƒðƒæƒé„ „„ƒ¡ƒå„„ƒðƒð„+„ƒûƒ÷ƒÿƒã„$ƒÛƒú„D„ƒßƒâ„/„„)„5ƒï„„„ƒÑƒð„ƒõ„„„„%ƒæ„„„?ƒñ„'ƒû„ƒñƒÝƒï„ƒ÷ƒî„<ƒìƒÿ„	ƒøƒÕƒôƒ÷ƒÜ„ „„ƒóƒþ„„ ƒçƒý„„ƒëƒö„ ƒÓƒúƒé„„"„ƒëƒÿ„„)„ƒúƒþ„-ƒð„1ƒçƒè„ƒÓ„/ƒÚ„„ƒù„ƒöƒáƒöƒêƒë„„„„ƒú„ƒê„ƒþƒñ„„'ƒíƒáƒð„3„,ƒéƒêƒø„„ƒïƒØ„6ƒäƒøƒÒ„ƒé„„ƒµƒþƒù„ƒêƒãƒþƒÀ„ƒì„ ƒÛ„ƒÀ„„1„#ƒçƒìƒ×„ƒâƒê„„ƒê„„„„„,ƒÌ„„„?ƒñƒñƒñ„„$ƒð„„„„'ƒê„
-„ƒûƒö„„„/ƒù„„!„3„%ƒÒƒçƒåƒøƒôƒôƒûƒë„8„"„	„„„*ƒêƒß„"ƒù„	„ƒç„%ƒõƒï„,ƒø„ƒã„„!ƒ÷„/ƒï„„
-ƒÙ„#„	„„„ƒá„„*ƒå„0ƒòƒíƒõƒîƒóƒèƒä„'ƒë„„ƒûƒù„ƒáƒë„$ƒèƒàƒÌƒì„ƒùƒãƒ÷ƒÍ„ƒÖ„ƒß„„ƒûƒÛ„ƒÒ„ƒè„	„*ƒùƒþ„BƒôƒÿƒçƒÏƒÿ„„ƒÝ„"ƒöƒÜƒó„
-„„„	ƒî„„	„ƒòƒÑƒúƒö„„„$ƒÿ„„-„	„5„8„„!„„„„"ƒâƒûƒö„„ƒþ„ƒÜƒçƒô„	„9ƒËƒý„ƒÚƒõ„„„ƒÓƒÍƒæƒÙƒÚ„ƒí„„%ƒã„ƒé„ƒµ„ƒýƒõƒòƒûƒÏ„ƒéƒÞƒõƒè„ƒó„„*ƒÓ„ƒê„*ƒðƒÊƒÝ„„„=„„;„,ƒÊ„„„„„ƒí„„ƒùƒí„„ƒäƒþƒ¯„„(ƒý„ƒûƒ÷ƒöƒáƒüƒéƒíƒãƒýƒãƒõ„ƒïƒæ„ƒó„ ƒÈ„ƒð„ƒÛƒÜ„ƒþ„)„„1„HƒÒ„„ ƒú„ƒÝƒØ„;„„„@ƒçƒÿƒóƒæƒú„ƒû„ƒð„ƒâƒþ„„„„ƒçƒõƒó„ƒÿƒí„ƒâ„ƒñƒÐƒâƒá„„ „ƒïƒæƒëƒð„Kƒ÷ƒîƒèƒõ„ƒñƒ¿„ƒìƒþ„„„ƒúƒä„ƒû„!ƒõƒþƒù„ƒþ„„ƒÓ„„	„M„„B„	„	ƒë„*ƒãƒÂƒì„„ƒå„ƒðƒêƒøƒæƒù„„
-ƒé„ƒØ„„„>„„ƒÞ„„)„ƒö„ƒû„
-„„ ƒÝƒØƒý„!ƒÆƒÈ„ƒò„ƒçƒâ„„ƒðƒýƒéƒÔ„ƒúƒæ„(ƒÔƒõƒ´„ƒéƒñƒÜ„„ƒ÷„„ƒö„A„„„
-ƒçƒÑƒï„„ƒå„	ƒúƒ÷„ „ƒú„EƒÐƒã„„ƒÇƒõ„ƒçƒåƒõƒñ„ƒåƒçƒþ„ ƒü„-ƒÃ„„„ƒøƒß„ƒÙƒþƒñ„ƒü„ƒíƒÜƒ×ƒåƒõƒé„"„ƒùƒáƒÐƒõ„ƒÙƒä„"ƒè„ƒÛ„C„+„„ƒç„	ƒä„„ƒý„ƒÐ„„ƒïƒâƒè„)ƒó„ ƒúƒóƒÿƒà„„ƒÇƒÊ„$„Mƒûƒöƒþ„4ƒðƒâƒô„„ƒüƒþƒû„„$„„„ƒñƒÀ„	ƒö„ƒõ„„
-„9„*ƒü„2„ „+„„ƒíƒÞ„ƒý„ƒóƒëƒðƒöƒ×„ƒÖƒ÷ƒîƒæƒîƒþƒÎ„„ƒÉ„ƒÅ„#ƒêƒíƒø„ „/ƒäƒö„„„„*ƒ÷„ƒõƒþƒò„8„ƒí„ƒýƒý„ƒêƒñƒÙƒëƒÎ„ ƒåƒéƒÐ„%ƒï„ƒîƒþƒòƒàƒÜƒÃ„ƒêƒø„ „+„ƒè„ƒþƒõƒíƒéƒðƒøƒÖƒçƒè„„„ƒþƒÒƒßƒñ„,„ „ƒÚ„ƒú„ƒèƒöƒôƒðƒÜ„ƒå„	ƒ÷ƒÃ„„ƒú„ƒøƒîƒûƒÎƒÚƒëƒñƒß„ƒþ„ƒëƒè„ƒâ„„„ƒÙƒé„ „„,ƒû„4„„ „ƒâ„%„%ƒÿ„%„„ ƒâƒ×ƒù„„"„
-„ƒúƒð„ƒôƒÇƒö„„D„ƒ¸ƒþ„@ƒò„ƒæƒâ„„ƒ¶ƒÝ„„ƒïƒØ„ „Fƒïƒõƒëƒð„$„„CƒË„8„8„„„+„$ƒù„„„ƒõ„„„8ƒëƒ¾„*„„ƒÌƒÖƒéƒÏƒÝƒñ„„ƒÛ„„ƒçƒã„$ƒìƒëƒñƒÿ„ ƒð„	„„ƒ÷ƒú„ƒâƒñ„„„Cƒñƒéƒé„ƒñƒûƒÛ„„„!ƒÛ„ƒëƒóƒêƒîƒ÷„	„ „„ƒöƒþƒí„(ƒñƒî„„+„:„'„ƒû„ƒß„ƒàƒù„„ƒÿƒØƒôƒóƒéƒÝƒç„ƒ¿ƒèƒð„#„'„ƒØƒì„„1„
-„„FƒÏƒÛ„ƒß„%ƒí„„7„)ƒë„ƒñƒé„!„„#ƒÒƒÿƒæ„+„ƒù„„$ƒýƒó„„ „„„ƒóƒò„"ƒý„ƒòƒÛƒé„ƒûƒÏƒÛ„
-ƒû„„	ƒîƒäƒÒ„ƒí„„„ƒÖƒâ„ƒà„ƒñƒöƒÝ„-„ƒï„*ƒÎƒé„„"„„„ƒãƒê„
-ƒà„ƒõ„)„„„„„ƒû„%„:„„„„„ƒèƒÝ„„0„„ƒÛ„„&ƒÓƒêƒÇ„ƒñƒÕ„5ƒò„!„„ƒûƒè„	ƒí„!„ƒÍƒð„„"„ƒßƒË„„„NƒÚ„ƒéƒÃƒöƒëƒõ„ƒû„-ƒñ„„	ƒÿƒÐƒõ„„ƒÔƒí„ƒÿƒÿ„ƒø„ƒóƒå„„%„.ƒëƒìƒÚƒë„ƒ÷ƒÛƒë„ƒã„„ƒ°ƒõ„	ƒÐƒØ„9„ƒûƒöƒê„„ƒó„„ƒîƒøƒà„„0„ƒþ„9„ƒ¿„ƒÕ„ƒñƒÊƒé„)ƒÀ„ƒüƒ÷ƒîƒÎƒü„(„ „5ƒô„ƒð„„„ƒù„„ „2ƒí„„ƒÞ„!„ƒß„ƒúƒèƒé„ƒÚƒÿ„ƒìƒôƒü„„„„ƒåƒç„ƒíƒúƒúƒ¸„ƒ÷ƒÙ„ƒè„„%„!„ƒù„!„ ƒýƒÁƒå„„„ƒæ„„
-ƒÚ„.„/„ƒùƒë„„.ƒÖƒøƒçƒþ„;ƒÍƒéƒñƒï„ƒú„„2„ƒÕƒØ„ƒ¿ƒã„ƒíƒì„	„„ƒéƒ÷ƒûƒþƒóƒãƒ÷„„ƒý„%„+„ ƒðƒÙ„1ƒÑƒßƒë„ƒï„ƒûƒýƒÿ„ ƒ¿ƒóƒÿƒüƒæƒÃ„ƒý„ƒ÷„„„ƒæƒØ„ƒ÷„N„„„„ƒ×ƒÌƒãƒøƒ÷ƒøƒñ„ƒàƒï„-ƒÇƒóƒùƒùƒà„#ƒü„%„„!ƒû„Fƒ÷„ƒð„„„ƒì„„„ƒô„/„„„ƒí„„„„!ƒõƒë„„ƒîƒëƒìƒè„ƒÊ„„ƒß„
-„'„
-ƒíƒÒƒë„ƒë„ƒï„ƒôƒîƒ÷„„ƒø„„„ƒð„„„„ƒáƒÆƒåƒø„ƒÆ„ƒÏ„ƒéƒÓ„„ƒúƒôƒîƒô„ƒô„ƒì„„ƒà„ƒØ„
-ƒôƒüƒê„$„„ƒÜƒÜ„„„ ƒþ„(„$ƒö„*„(ƒÞƒì„&ƒÎƒÊƒè„.„@ƒÞƒÚ„„ƒÎƒîƒú„ „ƒØƒâ„ƒöƒðƒþƒôƒö„ „„(ƒæƒä„ƒ¶„4„ƒ¸ƒü„0ƒôƒà„ƒúƒú„„ƒìƒà„„ ƒð„„ƒúƒòƒîƒøƒò„:ƒÔ„ƒÊƒîƒèƒì„&ƒðƒØƒæ„
-„6„ƒÆƒä„ƒöƒòƒìƒÜ„ƒÎ„„ ƒþ„2„„ƒöƒà„„
-ƒö„ƒú„ƒö„„ ƒþ„6ƒÐƒÊ„8ƒôƒîƒÜ„„ƒö„ƒôƒð„ƒô„*„B„ƒÒ„.„„„„„
-„ƒÀ„ƒú„„„
-ƒø„"„„ƒöƒü„„4„„ƒìƒø„„„„ƒúƒú„ƒô„ƒòƒÖƒþƒü„„„„„ „ƒøƒþ„„H„„ƒö„ƒé„„„ƒö„„„ƒòƒþ„„-ƒèƒñƒÙ„ƒçƒÿƒÛ„ƒä„„ „ƒè„ „ƒüƒéƒõ„ƒó„0ƒóƒÚ„ƒÚƒÞ„%ƒóƒÜƒéƒÞ„;ƒÃ„)„ƒýƒÓƒøƒý„	ƒÙ„L„-ƒëƒ×„,„/„ ƒØ„ƒú„*„„)„&ƒñ„ „
-ƒð„„„„ƒíƒù„„„2„ƒûƒÿ„ƒñƒÜƒüƒÕƒñ„„ƒõƒü„„„#ƒâ„ƒÛ„ƒíƒÔƒõƒÓƒåƒÿ„„ƒÛƒû„ƒýƒìƒÓ„„&ƒñƒòƒ÷„ƒéƒÌ„!ƒâƒúƒàƒî„ƒñƒÞƒò„ƒÏ„/ƒþƒè„ƒæƒäƒöƒò„„ƒÑ„ƒø„„„„ „„.ƒâƒò„#ƒê„ƒßƒÒ„%„„„ƒí„
-ƒçƒúƒâƒò„DƒîƒßƒËƒõ„„ƒèƒýƒì„„ƒÌƒÛƒÜƒßƒì„	„„ƒ¶„(„$„„ƒóƒô„„ƒó„
-„„ƒûƒÝƒñƒÑƒÇ„ƒþƒÉƒÊƒùƒçƒþƒÙ„„ƒûƒòƒÝƒö„ƒùƒá„„ƒ×ƒò„,„,„„ƒð„
-ƒõ„*„ƒúƒó„ƒãƒó„ƒù„„ƒî„„ƒ³ƒð„ƒá„ƒïƒ¾ƒøƒè„„ƒô„ƒÕ„ƒýƒù„
-„„"ƒõ„ƒÁ„„)ƒôƒôƒøƒå„„/ƒô„ƒïƒÏ„
-„&„„ ƒæƒßƒá„„„„*ƒö„ƒþƒÊ„„ƒó„ƒÿ„	ƒç„„ƒÞƒçƒ÷„1„.„#ƒó„„ƒå„„„&ƒè„"ƒý„(„„*„ƒãƒó„ƒë„3ƒä„ƒãƒõ„#ƒù„ƒóƒôƒæƒÙ„„ƒýƒý„„ƒîƒÔ„&ƒï„ƒëƒô„ƒØ„ƒíƒæ„ƒô„„ƒý„„„FƒÔƒüƒ÷„„3„„*ƒçƒùƒý„/„	„'ƒá„„ƒ×„'ƒñ„	ƒêƒïƒî„„ƒÕ„ƒçƒö„ƒèƒþƒë„0ƒÐ„ƒóƒÞƒè„9ƒÛ„(„„ƒäƒý„ƒæƒð„ƒÓƒÐ„ƒçƒûƒö„
-„„!ƒáƒ½„„„ƒå„!ƒù„ „,ƒÖ„„„5„„ƒãƒä„
-ƒâƒÔ„$ƒÿƒíƒçƒÒƒó„;ƒþƒÝƒâ„ƒØ„%ƒñ„ ƒüƒþƒî„„„"„„ƒô„„„„/ƒü„ƒÿƒç„#ƒø„„ƒíƒñ„ƒìƒÜ„„	ƒûƒÛƒÖƒý„)ƒÚƒß„ƒäƒÌ„„„*„ „„ƒÜƒØ„ƒòƒëƒþƒï„„=„ƒÛƒ½„„ƒøƒÕ„
-„,„ƒÕƒäƒèƒßƒÔ„„	„„ƒó„ƒð„„!ƒõƒÕƒûƒÆ„„ ƒúƒòƒì„„ƒîƒçƒëƒãƒêƒöƒè„ƒõƒÞ„;„„ƒÀ„ƒÓ„(ƒóƒïƒÕ„„ƒÙ„„„*„ƒî„„ƒòƒæƒþ„ƒúƒÐƒÆ„2„„6„
-ƒô„ƒîƒðƒðƒÌ„
-„„ƒæƒäƒâƒÜ„„ „ ƒæ„4„„ƒü„ƒþ„"„.„„ƒä„ƒäƒâƒüƒèƒø„ƒþƒî„ƒì„„ ƒìƒòƒÒ„ƒÚ„„ƒø„N„„ƒîƒú„„0„(ƒöƒöƒôƒì„ƒþƒÖ„„„„ƒÔƒöƒîƒø„ƒÞ„ƒöƒê„„$„ ƒÄ„„„@„ƒþ„„ƒþƒòƒú„N„ƒî„:„„,„„„„ƒôƒø„ƒðƒòƒèƒäƒèƒìƒèƒæ„ ƒ¸ƒôƒìƒâ„„ƒü„ƒä„*„ZƒÜ„„ƒîƒêƒü„ƒþ„B„„„ƒä„„ƒþ„ƒêƒð„„„(„(ƒÚ„„ƒè„ƒöƒì„ƒî„„„„2„„„ƒú„&ƒø„ƒê„,ƒÄ„„„ „ƒÚ„ ƒâƒö„`„
-ƒ¾ƒþƒðƒàƒæ„„ƒýƒòƒòƒþ„„(„„ƒÜƒä„ ƒü„ƒÆ„„ ƒîƒØ„ ƒí„&„#„ƒÖ„
-ƒî„.ƒØ„„ ƒÙ„&ƒÜƒÜ„	„ƒüƒðƒð„„„
-„ƒÛ„#ƒèƒøƒÌƒËƒõ„ƒË„/ƒý„(„*ƒöƒïƒàƒÞ„ƒûƒøƒîƒýƒþƒÈ„„!ƒÂƒÿƒûƒ²„ƒÂƒêƒý„ƒá„„„„ƒÿƒüƒßƒðƒÝƒøƒ÷ƒô„
-ƒä„ƒØƒÏƒõ„"ƒïƒþƒÜƒôƒñƒÕ„ƒÇ„„ ƒê„ „ƒî„ƒþ„"ƒëƒÉƒÝ„"ƒÔ„„#„„M„!„/„„	„„	ƒæ„	„ƒæ„ƒù„ƒé„ƒî„ƒöƒÍ„„ƒü„ƒó„6ƒïƒîƒÑ„.ƒÌƒ÷„„ƒøƒü„ƒï„ƒú„„
-„3„„„„„ƒõ„ƒé„$„„ƒèƒòƒ÷ƒùƒßƒý„„:„„„ƒîƒ÷„ƒ÷ƒé„ƒùƒøƒæ„ƒæ„„!ƒæƒú„	ƒþ„ƒÞƒÞ„ ƒÃ„ƒá„ƒÿ„	ƒÿƒåƒé„ƒå„ „
-„ƒüƒØ„„„$ƒë„ƒâƒáƒö„ƒëƒñƒþ„„ƒòƒëƒ÷„ƒøƒû„#ƒëƒãƒò„ƒõƒîƒÖ„ƒÛƒèƒÙ„„ƒñƒë„
-„„ƒä„ƒóƒöƒáƒî„'„ƒ×ƒäƒì„ƒÄƒÂ„„ƒåƒÄƒ÷ƒùƒ×„/ƒõ„ƒèƒð„ƒã„4„'„ƒÝƒ÷ƒùƒûƒ×„(ƒî„„ƒí„ƒÚ„ƒÙƒÓ„„ƒñƒð„ƒû„„„ƒíƒö„ƒÐƒå„„„ƒé„4„„„ƒìƒýƒçƒÉƒÜƒðƒÒ„1ƒãƒã„„„,„ƒüƒÞ„	ƒ÷„„	ƒöƒýƒö„(„„#ƒÿ„'ƒê„„ƒúƒÊ„ƒ÷ƒúƒù„ ƒõ„ƒ¿ƒò„ƒþƒïƒíƒô„„„ ƒû„„ƒð„„„„„ƒÿƒò„ƒý„ƒÛ„&„„„!ƒùƒîƒìƒÝ„
-ƒñƒëƒßƒ÷ƒÔ„
-„„ƒó„5ƒ÷ƒü„ƒÓ„-ƒö„ƒý„ƒýƒåƒñƒóƒñƒý„'ƒèƒáƒòƒôƒÁƒçƒûƒûƒð„ƒó„„ƒù„„B„ƒí„ƒóƒò„ ƒä„ƒó„ „
-ƒÁ„ƒóƒÝ„	„ƒæ„ƒì„ƒãƒþƒð„„ƒðƒÚ„ƒÒƒ¥ƒæ„ƒûƒýƒõƒö„#„ „ƒßƒù„%ƒÜ„„ƒùƒß„„	ƒãƒÙ„„„ƒû„	„„ƒÚƒÓ„„„ƒ×„.„1„2„ƒÞ„"„„„&ƒâ„8„ƒÙƒÏ„„&„ƒÜ„#ƒêƒó„1ƒþƒþƒÛ„„-ƒÝ„!„ƒ×„/ƒÉ„„„	ƒü„$„*„4„<„$„,ƒõƒÌ„ƒì„	„ƒçƒíƒû„ƒíƒõ„„4„„„-„!„„
-„„„„ƒõ„„„ƒÍƒÚƒóƒï„„ƒóƒÖƒçƒ¾ƒô„„
-„ƒüƒå„&ƒ÷ƒúƒéƒûƒþ„ ƒß„ƒþ„ƒ²ƒÐƒóƒÙƒì„5ƒñ„„ƒµƒû„	„„ƒÝ„/ƒý„5„ƒòƒàƒéƒïƒõ„„„ƒ¶„„ƒçƒµ„„„(„ƒö„ƒå„H„ƒ÷„
-ƒø„ƒß„„-„
-ƒÍ„„1ƒÙƒïƒé„„ƒÏƒüƒë„ƒÿ„ƒâƒøƒ÷ƒýƒø„„ƒúƒø„,ƒñƒþƒÿ„ƒöƒâƒ÷ƒùƒõƒõƒà„„ƒÜƒù„FƒÒ„&„ „2„ „„ƒû„5ƒêƒïƒÓ„ ƒå„„„„ƒü„ƒñ„ƒë„„.„ƒà„„„ƒë„ƒëƒä„3„ƒò„ƒòƒù„ƒãƒâ„)„%ƒ×„„ „„.ƒþ„
-„ƒæ„0„ƒò„ƒýƒù„ƒû„„„ ƒÓ„„„„3„ƒç„3„ƒñƒðƒûƒÝƒØƒñ„	„,ƒù„ƒî„„#ƒÅƒòƒè„ƒäƒó„„ƒóƒð„ƒð„„„„ƒìƒÿƒÜ„ƒÌƒÿ„$„ƒùƒÍƒÐ„
-„„ƒÞ„#„ƒíƒà„ƒôƒí„"ƒã„„ƒã„„„,„ƒä„/ƒÜ„2„ƒåƒ÷ƒ÷„,ƒø„ƒæ„%ƒÊ„ƒý„„ƒÖƒÔƒêƒìƒÖƒô„ƒäƒõƒè„„ ƒÉƒÉ„„„"ƒÐƒž„"ƒà„„ ƒî„„„+ƒå„„„6„+ƒø„ƒÅƒÊ„ƒÇ„7ƒï„*„!ƒô„	ƒæƒ³ƒùƒÛƒîƒö„"ƒüƒôƒÎƒõƒüƒæƒò„ƒÒ„ƒ÷ƒâƒû„„„!„„ƒÆƒÚƒÑ„	„„„A„„/ƒîƒÿ„ƒòƒôƒüƒïƒô„	„„ƒäƒÿƒþƒÞ„„5„9„ ƒÐ„„	„„!„„2„,ƒï„„„ƒòƒù„ƒâƒüƒÉ„„ƒ÷                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

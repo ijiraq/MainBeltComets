@@ -1,673 +1,0 @@
-SIMPLE  =                    T / file does conform to FITS standard             BITPIX  =                   16 / number of bits per data pixel                  NAXIS   =                    2 / number of data axes                            NAXIS1  =                  198 / length of data axis 1                          NAXIS2  =                  197 / length of data axis 2                          EXTEND  =                    T / FITS dataset may contain extensions            COMMENT   FITS (Flexible Image Transport System) format is defined in 'AstronomyCOMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H COMMENT                                                                         COMMENT Observation Summary                                                     COMMENT -------------------                                                     CMMTOBS = 'N/A     '                                                            CMMTSEQ = 'SINGLE[1/1] - Ref + [0.0 0.0]'                                       OBJECT  = 'E+2-1   '                                                            OBSERVER= 'QSO Team'                                                            PI_NAME = 'Brett Gladman'                                                       RUNID   = '13AP06  '                                                            FILENAME= '1635778o'           / Base filename at acquisition                   PATHNAME= '/data/niele/megacam/13AQ11-Jul03' / Original directory name at acqui EXTNAME = 'ccd35   '           / CCD number in the mosaic                       EXTVER  =                   35 / Now matches the CCD number in the mosaic       DATE    = '2013-07-04T07:59:28' / UTC Date of file creation                     HSTTIME = 'Wed Jul 03 21:59:28 HST 2013' / Local time in Hawaii                 IMAGESWV= 'CFHT DetCom v4.44 (Nov 18 2011)' / Image creation software version   COMMENT file 1635778o70, raster FULL, etype OBJECT, etime 287, filter filter_na COMMENT                                                                         COMMENT                                                                         COMMENT Unique amplifier IDs for MegaCam:                                       COMMENT                                                                         COMMENT -- -- 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 -- --       COMMENT 72 73 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 74 75       COMMENT 76 77 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 78 79       COMMENT -- -- 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 -- --       COMMENT                                                                         COMMENT                                                                         COMMENT Detector                                                                COMMENT --------                                                                DETECTOR= 'MegaCam '                                                            DETSIZE = '[1:23219,1:19354]'  / Total data pixels in full mosaic               RASTER  = 'FULL    '           / Active raster description                      CCDSUM  = '1 1     '           / Binning factors                                CCDBIN1 =                    1 / Binning factor along first axis                CCDBIN2 =                    1 / Binning factor along second axis               PIXSIZE1=                 13.5 / Pixel size for axis 1 (microns)                PIXSIZE2=                 13.5 / Pixel size for axis 2 (microns)                PIXSCAL1=               0.1850 / Pixel scale for axis 1 (arcsec/pixel)          PIXSCAL2=               0.1850 / Pixel scale for axis 2 (arcsec/pixel)          AMPNAME = '35a + 35b'          / List of amplifiers names for this image        AMPLIST = 'A B     '           / List of amplifiers for this CCD                CCDSIZE = '[1:2048,1:4612]'    / Detector imaging area size                     DETSEC  = '[19044:21091,1:4612]' / Mosaic area of the entire readout            DETSECA = '[19044:20067,1:4612]' / Mosaic area of the A readout                 DETSECB = '[21091:20068,1:4612]' / Mosaic area of the B readout                 DATASEC = '[33:2080,1:4612]'   / Imaging area of the entire CCD in raw frame    ASECA   = '[1:1056,1:4612]'    / Section by A amplifier in raw frame            DSECA   = '[33:1056,1:4612]'   / Image area of A amplifier in raw frame         TSECA   = '[33:1056,1:4612]'   / Trim section of A amplifier = DSECA            BSECA   = '[1:32,1:4644]'      / Overscan of A amplifier in raw frame           CSECA   = '[1:1024,1:4612]'    / Section in full CCD after BSECA cut out        ASECB   = '[1057:2112,1:4612]' / Section by B amplifier in raw frame            DSECB   = '[1057:2080,1:4612]' / Image area of B amplifier in raw frame         TSECB   = '[1057:2080,1:4612]' / Trim section of B amplifier = DSECB            BSECB   = '[2081:2112,1:4644]' / Overscan of B amplifier in raw frame           CSECB   = '[1025:2048,1:4612]' / Section in full CCD after BSECB cut out        CCD     = 'Marconi/EEV CCD42-90'                                                CCDNAME = '8261-14-3'          / Name of the CCD (manufacturer reference)       CCDNICK = 'Estelle '           / Nickname of the CCD                            MAXLIN  =                65535 / Level at 1% linearity departure (ADU) = Averag MAXLINA =                65535 / Level at 1% linearity departure (ADU) A amp    MAXLINB =                65535 / Level at 1% linearity departure (ADU) B amp    SATURATE=                65535 / Saturation value (ADU)                         GAIN    =               1.5850 / Converting gain (e-/ADU) = Average [A,B] amps  GAINA   =               1.6200 / Converting gain of A amplifier (e-/ADU)        GAINB   =               1.5500 / Converting gain of B amplifier (e-/ADU)        RDNOISE =                    4 / Read noise (electrons) = Average [A,B] amps    RDNOISEA=                    4 / Read noise (electrons) A amplifier             RDNOISEB=                    4 / Read noise (electrons) B amplifier             DARKCUR =                  2.4 / Dark current (e-/pixel/hour)                   QEPOINTS= '48%@350 86%@450 83%@550 78%@650 62%@750 38%@850 12%@950' / QE%@wavel CONSWV  = 'Not implemented'    / Controller software DSPID and SERNO versions   DETSTAT = 'temp_status'        / temp_status_comment                            DETTEM  =              -133.20 / Temp. Cold Plate (C)                           INHERIT =                    F / No need to inherit global headers              TIMESYS = 'UTC     '           / Time System for DATExxxx and TIMExxxx          OBSTYPE = 'OBJECT  '           / Observation/ Exposure type                     EXPTYPE = 'OBJECT  '           / OBSTYPE is the new name for this               EXPNUM  =              1635778 / CFHT odometer number                           OBSID   =              1635778 / CFHT odometer number                           EXPTIME =              287.074 / Measured integration time (seconds)            EXPREQ  =                287.0 / Requested integration time (seconds)           EXPMEAS =              287.074 / Measured shutter time (seconds)                DARKTIME=               287.00 / Dark current time (seconds)                    ORIGIN  = 'CFHT    '           / Canada-France-Hawaii Telescope                 INSTRUME= 'MegaPrime'                                                           INSTMODE= 'Normal  '           / Instrument Mode                                REGMODE = 'Normal  '           / Registration Mode                              RAOFF   =                  0.0 / Right ascension compensation                   DECOFF  =                  0.0 / Declination compensation                       BIASSEC = '[0:0,0:0]'          / Dual amplifiers readout - see BSECA & BSECB    SHUTOPEN=               0.0000 / Shutter blade opening time (msec)              SHUTCLOS=               0.0000 / Shutter blade closing time (msec)              FILTER  = 'r.MP9601'           / Name of filter in position                     FILTERID=                 1305 / Holder ID (see also FILTER)                    TESTSPHE=                  3.9 /    temp, surface, telescope spider w/He deg C  QRUNID  = '13AQ11  '           / Q RunID                                        QOBSERVE= 'David Woodworth'    / Name of Q Observer                             QCOORD  = 'Todd Burdullis'     / Name of Q Coordinator                          QID     = 55150500000000033798                                                  QOBSEQID= 55001400000000109770                                                  QICSEQID= 55051200000000133139                                                  QOBITER =                    1                                                  QOFFID  = 10000000000000000001                                                  REL_DATE= '2014-02-28T00:00:00' / UTC Release Date                              QOGLABEL= 'OG7     '                                                            QOBLABEL= 'OB16    '                                                            QICLABEL= 'IC1     '                                                            TELESCOP= 'CFHT 3.6m'          / Hawaii Big Island, Mauna Kea                   LATITUDE=            19.825252 / Latitude (degrees N)                           LONGITUD=          -155.468876 / Longitude (degrees E)                          TELSTAT = 'auto_guide'         / Telescope Control System status                DATE-OBS= '2013-07-04'         / Date at start of observation (UTC)             UTIME   = '7:54:34.89'         / Time at start of observation (UTC)             UTC-OBS = '7:54:34.89'         / Time at start of observation (UTC)             MJDATE  =        56477.3295704 / Modified Julian Date at start of observation   MJD-OBS =        56477.3295704 / Modified Julian Date at start of observation   SIDTIME = '16:22:40.22'        / Sidereal time at start of observation          LST-OBS = '16:22:40.22'        / Sidereal time at start of exposure             DATEEND = '2013-07-04'         / Date at end of observation (UTC)               UTCEND  = '8:00:09.02'         / Time at end of observation (UTC)               MJDEND  =        56477.3334377 / Modified Julian Date at end of observation     LSTEND  = '16:28:15.27'        / Sidereal time at end of exposure               EQUINOX =               2000.0 / Equinox of coordinates                         RADECSYS= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  RA      = '14:18:23.94'        / Telescope right ascension                      DEC     = '-13:49:19.9'        / Telescope declination                          HA      = '2:04:16.28'         / Telescope hour angle at start of exposure      HAEND   = '2:09:51.33'         / Telescope hour angle at end of exposure        INSTZRA =                15.00 / Instrument zero for RA in arc seconds          INSTZDEC=                15.00 / Instrument zero for Dec in arc seconds         RA_DEG  =           214.599750 / Telescope right ascension in degrees           DEC_DEG =           -13.822194 / Telescope declination in degrees               OBJNAME = 'E+2-1   '           / Target name                                    OBJMAG  =                  0.0 / Target magnitude                               OBJEQUIN=               2000.0 / Target equinox                                 OBJRADEC= 'FK5     '           / Coordinate system for equinox (FK4/FK5/GAPPT)  OBJRA   = '14:18:23.94'        / Target right ascension                         OBJDEC  = '-13:49:19.9'        / Target declination                             OBJRAPM =                 0.00 / Target right ascension proper motion in as/yr  OBJDECPM=                 0.00 / Target declination proper motion in as/yr      NGUIDER =                    2 / TCS Number of guiders                          NGUISTAR=                    2 / TCS number of guide stars/probes in use        GUINAME = 'North field guider (South probe)' / TCS guider name                  GUIEQUIN=               2000.0 / TCS guider equinox                             GUIRADEC= 'FK5     '           / TCS guider system for equinox                  GUIRA   = '14:18:11.37'        / TCS guider right ascension                     GUIDEC  = '-13:10:23.0'        / TCS guider declination                         GUIRAPM =                 0.00 / TCS guider right ascension proper motion arcse GUIDECPM=                 0.00 / TCS guider declination proper motion arcsec    GUIOBJN = 'auto GSC: 0'        / TCS guider object name                         GUIMAGN =                 12.0 / TCS guider object magnitude                    XPROBE  =              -11.669 / Telescope bonnette guide probe X position      YPROBE  =               10.216 / Telescope bonnette guide probe Y position      ZPROBE  =              -12.292 / Telescope bonnette guide probe Z position      GUIFLUX =                -9999 / TCS guider flux                                GUIFWHX =              -9999.9 / TCS guider average x FWHM in pixels            GUIFWHY =              -9999.9 / TCS guider average y FWHM in pixels            SKYFLUX =                    0 / TCS total sky flux                             GUINAME1= 'North field guider (South probe)' / TCS guider #1 identification     GUIEQUI1=               2000.0 / TCS guider #1 equinox                          GUIRADE1= 'FK5     '           / TCS guider #1 system for equinox               GUIRA1  = '14:18:11.37'        / TCS guider #1 right ascension                  GUIDEC1 = '-13:10:23.0'        / TCS guider #1 declination                      GUIRAPM1=                 0.00 / TCS guider #1 right ascen proper motion arcsec GUIDEPM1=                 0.00 / TCS guider #1 declination proper motion arcsec GUIOBJN1= 'auto GSC: 0'        / TCS guider #1 object name                      GUIMAGN1=                 12.0 / TCS guider #1 object magnitude                 GUIPOSX1=              -11.669 / TCS guider #1 probe x position                 GUIPOSY1=               10.216 / TCS guider #1 probe y position                 GUIPOSZ1=              -12.292 / TCS guider #1 probe z position                 GUIFLUX1=                -9999 / TCS guider #1 flux                             GUIFWHX1=              -9999.9 / TCS guider #1 average x FWHM in pixels         GUIFWHY1=              -9999.9 / TCS guider #1 average y FWHM in pixels         GUINAME2= 'South field guider (North probe)' / TCS guider #2 identification     GUIEQUI2=               2000.0 / TCS guider #2 equinox                          GUIRADE2= 'FK5     '           / TCS guider #2 system for equinox               GUIRA2  = '14:18:04.62'        / TCS guider #2 right ascension                  GUIDEC2 = '-14:26:51.1'        / TCS guider #2 declination                      GUIRAPM2=                 0.00 / TCS guider #2 right ascen proper motion arcsec GUIDEPM2=                 0.00 / TCS guider #2 declination proper motion arcsec GUIOBJN2= 'auto GSC: 0'        / TCS guider #2 object name                      GUIMAGN2=                 12.0 / TCS guider #2 object magnitude                 GUIPOSX2=              -19.256 / TCS guider #2 probe x position                 GUIPOSY2=                5.616 / TCS guider #2 probe y position                 GUIPOSZ2=              -12.275 / TCS guider #2 probe z position                 GUIFLUX2=                -9999 / TCS guider #2 flux                             GUIFWHX2=              -9999.9 / TCS guider #2 average x FWHM in pixels         GUIFWHY2=              -9999.9 / TCS guider #2 average y FWHM in pixels         AIRMASS =                1.423 / Airmass at start of observation                TELALT  =              44.5404 / Telescope altitude at start of observation, de TELAZ   =             224.4726 / Telescope azimuth at start, deg, 0=N 90=E 270= DOMEAZ  =                226.7 / Dome azimuth at start, deg, 0=N 90=E 270=W     MOONANGL=               157.80 / Angle from object to moon at start in degrees  MOONPHAS=                -0.13 / Moon phase @ 0 HST, 0..1 new>full, -1..0 >new  MOONUP  = 'False   '           / Moon up? True or False                         MOONALT =               -51.10 / Moon altitude at start in degrees              MOONAZ  =                12.30 / Moon azimuth at start in deg, 0=N 90=E 270=W   FOCUSID = 'MegaPrime'          / Telescope focus in use                         TELCONF = 'MegaPrime'          / Telescope focus in use                         CALFOCUS=               -4.038 / Telescope focus calculated from model in mm    DEFOCUS =                0.000 / Telescope defocus from calculated in mm        FOCUSPOS=                -4038 / Telescope focus encoder readout                TELFOCUS=                -4038 / Telescope focus encoder readout                BONANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ROTANGLE=                 0.00 / Telescope bonnette rotation angle in degrees   ISUGAIN =                 0.30 / Instrument Stabilization Unit control gain     ISURATE =                50.00 / ISU control rate in Hz                         ISUTCSOR=                 1.00 / ISU offload rate in Hz to telescope position   ISUSTATE= 'Full    '           / ISU control state (Off/Only/TCS/Full/Frozen)   ISUSTDVX=                 0.00 / ISU most recent minute std dev in x in arcsec  ISUSTDVY=                 0.00 / ISU most recent minute std dev in y in arcsec  FSAGAIN =                 0.00 / Focus Stage Assembly movement control gain     FSARATE =                 3.33 / FSA control rate in Hz                         FSATHRES=                5.000 / FSA movement threshold in mm                   FSASTATE= 'Pause   '           / FSA control state (Off/On/Paused)              FSANMOVE=                    0 / FSA number of actual moves in last 10 minutes  FSAMINZ =                0.000 / FSA minimum position in last 10 minutes        FSAMAXZ =                0.000 / FSA maximum position in last 10 minutes        FSAMEANZ=                0.000 / FSA mean position in last 10 minutes           FSASTDVZ=                0.000 / FSA position std dev in last 10 minutes        TCSGPSBC= '0185 07:54:30.277595' / TCS GPS read out in BCD                      TCSGPSTM=              7.90841 / TCS GPS clock time in decimal hours            TCSRBUSS= '19:36:20.000'       / TCS RBUSS clock time                           TCSEPICS= '20130704 07:54:19.279' / TCS EPICS clock time                        TCSAMODE= 'G       '           / TCS acquire mode - T/O/G/g/P for t/o/g coords  TCSMJD  =        56477.3295166 / TCS MJD                                        TCSLST  =             16.37654 / TCS LST in decimal hours                       TCSAPHA =             30.85868 / TCS apparent hour angle in degrees             TCSAPDEC=            -13.88477 / TCS apparent declination in degrees            TCSOBHA =             30.85156 / TCS observed hour angle in degrees             TCSOBDEC=            -13.87731 / TCS observed declination in degrees            TCSENHA =               112442 / TCS hour angle absolute encoder in bits        TCSENDEC=               -38470 / TCS declination absolute encoder in bits       TCSEDHA =             30.94276 / TCS hour angle absolute encoder in degrees     TCSEDDEC=            -13.90990 / TCS declination absolute encoder in degrees    TCSINHA =                    0 / TCS hour angle incremental encoder in bits     TCSINDEC=                    0 / TCS declination incremental encoder in bits    TCSSEHA =                -0.01 / TCS hour angle servo error in arcsec           TCSSEDEC=                -0.03 / TCS declination servo error in arcsec          TCSGEHA =                 0.00 / TCS hour angle guider error in arcsec          TCSGEDEC=                 0.00 / TCS declination guider error in arcsec         TCSMVX  =            -9999.900 / TCS secondary guider acquisition x move in mm  TCSMVY  =            -9999.900 / TCS secondary guider acquisition y move in mm  TCSMVRA =              -9.1000 / TCS right ascension acquisition move in arcsec TCSMVDEC=             -42.0400 / TCS declination acquisition move in arcsec     TESPMIRE=                 0.50 / 03 temp, surface, primary mirror east deg C    TESPMIRW=                 4.61 / 02 temp, surface, primary mirror west deg C    TESPMIRS=                 4.61 / 01 temp, surface, primary mirror west side deg TEAPMCLW=                 4.30 / 54 temp, air, primary mirror cell west deg C   TEAMIRCI=                 3.49 / 58 temp, air, mirror cooling in at unit deg C  TEAMIRCO=                 4.70 / 27 temp, air, mirror cooling out at cell deg C TEAPMSPN=             -9999.90 / 65 temp, air, mirror spigot north cass deg C   TEAPMSPS=                 5.96 / 64 temp, air, mirror spigot nouth M3 deg C     TEATRNGE=                 4.40 / 23 temp, air, top ring east deg C              TEATRNGW=                 3.88 / 06 temp, air, top ring west deg C              TEANRLSB=                11.36 / 19 temp, air, north rail support beam deg C    TESHRSET=                12.79 / 08 temp, surface, horseshoe east top deg C     TESTTRSH=                 4.26 / 97 temp, surface, telescope truss S high deg C TESTTRNM=                 4.98 / 94 temp, surface, telescope truss N mid deg C  TESTTREM=                 4.13 / 95 temp, surface, telescope truss E mid deg C  TESTTRWM=                 4.40 / 96 temp, surface, telescope truss W mid deg C  TESTTRSL=                 4.66 / 98 temp, surface, telescope truss S low deg C  TESTTRSE=                 5.13 / 69 temp, surface, telescope truss SE lower deg TEALOWWS=                 0.70 / 38 temp, air, dome lower weather stat side deg TEATOPWS=                 1.10 / 36 temp, air, dome top weather stat side deg C TEATOPOP=                -3.60 / 37 temp, air, dome top opposite weath side deg TEA2INCH=                 4.79 / 45 temp, air, two inches above fifth floor deg TEA2INEB=                 4.10 / 53 temp, air, two inches up by electronics deg TEA6FOOT=                 4.53 / 43 temp, air, six feet above fifth floor deg C TESCONRM=                 5.95 / 61 temp, surface, floor above control room deg TESPIERN=                 6.10 / 59 temp, surface, floor by north pier deg C    TESPIERS=                 5.60 / 60 temp, surface, floor by south pier deg C    TEAWTHRT=                 4.00 / 35 temp, air, weathertron deg C                TEMPERAT=                 4.74 / 86 temp, air, weather tower deg C              WINDSPED=                 5.68 / 84 wind speed, weather tower knots             WINDDIR =                50.67 / 85 wind direction, weather tower deg (N=0 E=90 RELHUMID=                55.49 / 87 relative humidity, weather tower %          PRESSURE=               618.36 / 31 barometric pressure, control room mb        DDSEEMEN=                 0.75 / Dome DIMM mean seeing, arc seconds             DDSEEMED=                 0.78 / Dome DIMM median seeing, arc seconds           DDSEEMOD=                 0.79 / Dome DIMM mode seeing, arc seconds             DDSEESTD=                 0.09 / Dome DIMM seeing deviation, arc seconds        WMSEEMEN=                 0.36 / Weather tower MASS mean seeing, arc seconds    WMSEEMED=                 0.34 / Weather tower MASS median seeing, arc seconds  WMSEEMOD=                 0.29 / Weather tower MASS mode seeing, arc seconds    WMSEESTD=                 0.08 / Weather tower MASS seeing deviation, arc secon WDSEEMEN=                 0.53 / Weather tower DIMM mean seeing, arc seconds    WDSEEMED=                 0.52 / Weather tower DIMM median seeing, arc seconds  WDSEEMOD=                 0.51 / Weather tower DIMM mode seeing, arc seconds    WDSEESTD=                 0.04 / Weather tower DIMM seeing deviation, arc secon SPOZPMEN=                 0.01 / SkyProbe (orig) mean absorption, magnitude     SPOZPMED=                 0.02 / SkyProbe (orig) median absorption, magnitude   SPOZPMOD=                 0.01 / SkyProbe (orig) mode absorption, magnitude     SPOZPSTD=                 0.02 / SkyProbe (orig) absorption deviation, magnitud CRUNID  = '13Am06  '           / Elixir camera run ID                           BIAS0   =    960.4053555941024 / Mean bias level                                BIAS1   =    1258.365839115351 / Mean bias level                                FLAT    = '13AQ05_r_flat.fits' / Flat Image                                     CADCPROC=                  1.8 / Version of cadcproc                            HISTORY imsplice: FLIPS ver 3.0 - Elixir by CFHT - Wed Jul 3 2013 - 22:01:20    HISTORY imsplice: Splicing the two readouts (A&B) per CCD into a unique image   HISTORY imsplice: Splicing results in all detectors as if read from A amplifier HISTORY imsplice: NEXTEND keyword updated (/2) = number of CCDs vs. amplifiers  HISTORY imsplice: EXTNAME keyword becomes `ccdxx` instead of `ampxx`            HISTORY imsplice: AMPNAME keyword now covers both amplifiers (eg `29a + 29b')   HISTORY imsplice: keyword {GAIN, RDNOISE, MAXLIN} replaced by two keywords [A,B HISTORY imsplice: DATASEC and DETSEC keywords now reflect the entire CCD        HISTORY imsplice: BIASSEC becomes irrelevant -> replaced by BSECA & BSECB       HISTORY imsplice: New keywords are DETSECA, DETSECB, DSECA, DSECB, TSECA, TSECB HISTORY imsplice: New keywords are ASECA, ASECB, CSECA, CSECB                   COMMENT Unique detector IDs for MegaCam (North on top, East to the left)        COMMENT    --------------------------                                           COMMENT    ba ba ba ba ba ba ba ba ba                                           COMMENT    00 01 02 03 04 05 06 07 08                                           COMMENT --------------------------------                                        COMMENT ba ba ba ba ba ba ba ba ba ba ba                                        COMMENT 36 09 10 11 12 13 14 15 16 17 37                                        COMMENT --------------------------------                                        COMMENT 38 18 19 20 21 22 23 24 25 26 39                                        COMMENT ab ab ab ab ab ab ab ab ab ab ab                                        COMMENT --------------------------------                                        COMMENT    27 28 29 30 31 32 33 34 35                                           COMMENT    ab ab ab ab ab ab ab ab ab                                           COMMENT    __________________________                                           COMMENT The two upper rows of CCDs are flipped, a=A amp, b=B amp                COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  HISTORY = AstroGwyn: Run on 2013-09-19 14:30:31 (UTC)                           NORDFIT =                    3 / Order of fit                                   NSTARS  =                  441 / Number of stars in final match                 ASTERR  =               0.0570 / 68%-tile of Residuals                          ASTCAT  = 'Etot.swarp.rdm.relev' / Reference catalogue                          CTYPE1  = 'RA---TAN'           / Coordinate type                                CTYPE2  = 'DEC--TAN'           / Coordinate type                                CRVAL1  =    214.599750000     / Tangent point RA, degrees                      CRVAL2  =   -13.8221900000     / Tangent point Dec, degrees                     CRPIX1  = -9.151957925960000E+03 / Tangent point x, pixels                      CRPIX2  = 7.478689920979999E+03 / Tangent point y, pixels                       CD1_1   =  -5.109686076317E-05                                                  CD1_2   =  -5.495304687803E-07                                                  CD2_1   =   2.545496934385E-07                                                  CD2_2   =   5.118219662053E-05                                                  PV1_0   =   7.000837495426E-03 / xi =   PV1_0                                   PV1_1   =    1.01683827829     /      + PV1_1 * x                               PV1_2   =   7.747714293082E-03 /      + PV1_2 * y                               PV1_3   =    0.00000000000     /      + PV1_3 * sqrt(x**2 + y**2)               PV1_4   =  -1.634085830171E-03 /      + PV1_4 * x**2                            PV1_5   =  -1.164381144831E-03 /      + PV1_5 * x*y                             PV1_6   =  -6.195098089033E-04 /      + PV1_6 * y**2                            PV1_7   =  -2.502686090234E-02 /      + PV1_7 * x**3                            PV1_8   =  -1.819983153338E-03 /      + PV1_8 * x**2 * y                        PV1_9   =  -2.472893526364E-02 /      + PV1_9 * x * y**2                        PV1_10  =  -4.906503548117E-04 /      + PV1_10* y**3                            PV2_0   =   5.971259417165E-03 / eta =  PV2_0                                   PV2_1   =    1.01455989886     /      + PV2_1 * y                               PV2_2   =   7.751995069979E-03 /      + PV2_2 * x                               PV2_3   =    0.00000000000     /      + PV2_3 * sqrt(x**2 + y**2)               PV2_4   =  -1.346722338668E-03 /      + PV2_4 * y**2                            PV2_5   =  -1.252075228653E-03 /      + PV2_5 * y*x                             PV2_6   =  -5.709736037846E-04 /      + PV2_6 * x**2                            PV2_7   =  -2.467539077618E-02 /      + PV2_7 * y**3                            PV2_8   =  -1.861702355129E-03 /      + PV2_8 * y**2 * x                        PV2_9   =  -2.478608817368E-02 /      + PV2_9 * y * x**2                        PV2_10  =  -4.733679159066E-04 /      + PV2_10* x**3                            HISTORY = PhotGwyn: Run on 2013-09-19 21:30:44 (UTC)                            ZPO     =               32.103 / Original zeropoint from Elixir                 PHOTZP  =               31.959 / Best estimate zeropoint                        PHOTZPS =                0.007 / Uncertainty on PHOTZP (random only)            PHOTZPN =                   75 / Number of usuable calibration stars            ZPD     =               30.000 / Desired, post-SWarp zeropoint                  ZPR     =                1.959 / zeropoint shift PHOTZP-ZPD                     FSCALE  =             0.164665 / Scaling factor to get this zeropoint shift     PHOTREF =   'previous MegaCam' / Source: Etot.photcat                           COMMENT   PhotGwyn: ZPO = 2.5*log10(EXPTIME) + PHOT_C + PHOT_K*(AIRMASS-1)      COMMENT   PhotGwyn: ZPO only valid if image taken under photometric conditions  HISTORY = PhotGwyn: PHOTZP derived from previous MegaCam data for this CCD only COMMENT r.MP9601=r_SDSS -0.024*(g_SDSS-r_SDSS)                                  HISTORY = PhotGwyn: asssumes exposure 1615906 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615907 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615943 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615937 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615935 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615940 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615936 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615905 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615942 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615922 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1616328 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616495 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1615939 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615941 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1616329 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616330 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1615934 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1616327 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1615938 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615921 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1616324 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1615904 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1615917 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1616501 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1615918 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1616496 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616500 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616326 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616494 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616333 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616325 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616320 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616498 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1615920 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1616331 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1611947 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1611929 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1615919 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1611948 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616499 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1611932 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616321 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616493 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1611950 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616497 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1611953 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1615923 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1616334 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616502 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1611946 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1611949 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616503 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1611930 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1611954 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616509 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616512 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616511 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616508 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616510 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1607609 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1611944 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1616507 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616513 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616505 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616515 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1607610 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616519 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616506 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1607623 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616518 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1616516 taken on 2013-04-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1607779 taken on 2013-02-09 is photometri HISTORY = PhotGwyn: asssumes exposure 1607636 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1607611 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1615944 taken on 2013-04-04 is photometri HISTORY = PhotGwyn: asssumes exposure 1607617 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1607630 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1607627 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1609158 taken on 2013-02-15 is photometri HISTORY = PhotGwyn: asssumes exposure 1607615 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1611704 taken on 2013-03-06 is photometri HISTORY = PhotGwyn: asssumes exposure 1611939 taken on 2013-03-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1607619 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1607628 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1612253 taken on 2013-03-09 is photometri HISTORY = PhotGwyn: asssumes exposure 1616345 taken on 2013-04-07 is photometri HISTORY = PhotGwyn: asssumes exposure 1607633 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1607624 taken on 2013-02-08 is photometri HISTORY = PhotGwyn: asssumes exposure 1612057 taken on 2013-03-08 is photometri END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             þ!öïîé.äßü ó-ýúÎçïüçô	&éüóèý/
-õÙö
-øîõÝ(úÓ /õôø&ð&ôýý ×	 	ý
-%&üØ"òûùëúí
-
-Ù%ä).	
-'îüêõñ!ÿùöþ&-;*ß-öJü3.üðîâþôä	+(ùöÙ5á(ì%ó)øêùã/óîù)&5øâð. êúéàÚ) %÷ë#ûôëøÿñ#þ5öÞþç*&ð ,ýéãôþûóú åúó!üþê
-ûø
-øÉê'#îôò	ÿ>ð4ù&çÞ ýøëýõõù
-
-ùì"ûûõèúæýÝ* ?Dóûäß'ðòóõþÿè(&îïëöøôöúûô	ÿ
-çùêýóÕ!úçç!-ìòí /þ
-,þóòäü3÷âÌþûã
-0þïë +ï$îûãüþéþÙ"'÷áÿÙ&ä 5'"	ñóé" üûÔÖ!óòJíòó#÷-üß*%
-
-÷
-2!óôûóü	+úáGÔ	Ùðúôþæí%$	ýøï&ÿúðéù(%öæïÓýúí!ÿìèøïøãù	ùñ%5,û.$ÿ1.äÿ é2é/ ü+'ý&î-.ú(ñþ ù"øÿ#õèòæ	$íèü,*ùé÷"ïöùôè/óã=òó/0þ	ö.ì!ù/
-ÿã.ê/ûçï!
-1çòèýòêýõîþëí
-)!(ô	ã÷#õ:ñòå
-óüöùê þí-õò(ï1;	úêÚÿî(é÷
-2ü#òÿêß&
-Ìùó5+4L ñú%ðß /Fóôáä!!ûó$  øþù÷õ!þåþ	êãøú#ñ ÿïíúÿ:0(õð÷ÿ	Ûâý÷ñ$ýÿíñß·ã8ÿ3û&óò01ÿëü
-ú)íþ'Úõ"1/÷ý7÷äý*òÞîþ$ùáþ±ù	Ò #"ý*õÿ!è çü"úíé$óêå$ïö= ûü8îëù îöæøå+ù<í)
-ñ
-%æÝõçù¾"7 2)#ñ$þÿ"%Óñô"ÿþùØ ûðÊ )ñü íúîûÿõì#áõÿ!Öþ"ï		ûçëï"ýêÏ6	ï!,'.üðÿâ)8ü(î(ü8õüþÿ)Êíô	ô%Ýÿ$7
-ÿ5òö'ã9 ê.ô	ËÑöãå
-ùùüû*ü	îô.'	êþö
-*Ûçøùþ
- øî %åÿ
-ûú	ÚÏ úó ú
-ô7ôý' 
-úóÚ39îýýûéíÓüëè	 ã $Ò	ÿû+ÔÚäüñ&øû1àç*ü#ëö ÿ,þ÷óãôÜïêüûüûêô#úûòì)&öÿÝ%
-*ûòü)
-	úøìíáäú+æþ
-!	#& ÷.Úþ-0õõüò-!Q5%	ý+%øû
--ùÔ7îø ø#/
-ñ
-!ü(	ùäè;ù
-
-â$ý×íüöííþüäöë!ãð%ûâòåöìûñúäõ Ê 	ì#	-ó
-øä &ý% ÿ+ÿÜóó"8øûöîûHÿë
-ûöú ó)öú0! Ù</ü÷Ò*G	2ù
-öÚ+ìôÝÿ6 	þ"B+üòñò/þôí(&þÿê	û%ìõ-é&ú3öÿåùìÞ&ïö:û*÷##þô"ùôè4'
-ì".êè+è*üíÿ"è(÷  þïËîýéõèû ã!ÿëõðû÷èõùßìÜÞ<ÿýè #÷ëû	æüüûíò=Ëöèþýùàûñ(û"üÊú
-ý,à ïô#*÷ç"
-ò éåõ%ìüç6ö 	 Ùö,ÿàù%þý
-úò@íÿ8þ	 E-í 
-/-Üú!(ÚÞìæ!â
-óîþöø?äúÚ óì÷ß	 ò.û òî:"ãõ	÷í AáóîA÷÷èíó%âòï(óðPýÕ/öþÎåîùíéí*êù ã,!í!û$Ô;ñîô÷	üù	Ü*	ñúÿö)ïêù('ø	îýü*ù(-çóñ"þ+û!òÓìõ'$úK(Ôÿ0ÿòø*½ç7ó
-
-÷ÿ4"úøø"Ñíå*óðóîê
-Óõ"	
-&äÿ
-ïü!&êúý (2áÛ óâ 4õâþ0îå
-
-÷	<áðýùæ
-úìÎîöùøï	ç!ýöîÄÞþäùï.îþï" úñ:úáÞâê'ûúúêü!"Ôè÷	÷", 
-	ãøKþ&âú×òþóé÷þøçíèùðÏõóïð!2ìíöæä	úßþóõä-)  ýè"ý
- õ, ìïäåïÿû
-èôæ öòù		òú#.àô&  åæó þúÛ1û%õñ÷ôùðï÷&áë×õþò Ö*'åÿ!õúãìþñ ó"òòùì'öéÔ.Õ-'üöü%ó(ÿõýë *ÿ)%	$üý
-ùî''ýûê"ú'é
-4÷ÚúûâóÜ$úßôóýÌ05ç, óïßüö÷ýêàïç%ðÿîèøö7#¿þåûäôûôéúì×ÿüéîÿ%õü¾ýùûðüþó
-êõ4#Ýü	üÎ÷þ=üø2 õ3éÌõÖòüþíðú,ûì	óí
-	òó	ôïããíç2/ù#$ìÛù,ïIøÿö7	è *åäöìåâ4þïÓ'úÿö<Ýú2ó;á	ãûäçÿãéó÷æòÓùîPéý$íõú ý	Ý Ûøõ
-Ü3öîÔ4úà$Üú)	ïò%!Úøóøë	þ#ùÝå ýþÿ, Fü5øÜü(,Û3ùö
-óä'ûú÷ûúÿ.,êòúüïÒúúñ ÿù
-à'ÿ÷ÛåEã,Ø&÷ûýöè) ëEúú(Öð ô1øìÌß#ü!"Þ	)ç)ñüçë!õ6âùï	Úííê#û$4.ú ìÛù4ðþ	  éû&ï
-ø.ûñÍ û÷ôüÕó. ïäî ÿøòõùÒ)ÿ'ü÷ý1ùóë÷üäñê	þ6Üâ<éûê 2ú+ +#?Ü úüç	@ß
-)õ,úÔí(íñÙ
-ùÊö÷åÿ"4Ù*	ûÏèú(&àÞâ á'êüñ -ëEëø# -í#æø*=4ûóü"	 øéúò% èøäÎíó-5ãà%ó  à0ÏAàø/øøèêýø
-ÿ'5!-!ïäòï0ýøöðòà 3âÿ üë-òúó ïå	ÿ ôí% ôìûàûùí,é',"-ØóêîÜ($øþ
-!å2Ô)öÓäý"äýòòíçãD>óñ	óÕý@øô&ê òçþúüåý$Þ("ü(Ô!ó!æùÛ+ôó úüìïîý;. ÿ 7ðþúú$.ñäëóë÷ÿü$æ $á-ï÷ü
-æùÛò.óÏî
-,á (Òù%&
-ôê(ÿåï1Dý!
-ð$ û ûê"	ÿáäêÞáõÏûæóö<
-	çïñðòë÷+ !ýôïí*ï÷ýþýÑþ%þòô÷ü÷	úÏöþý
-'ë
-òðø	3'úÌôþüôæî)ùø$Ïÿ%	ïþ
-ØÍëì	 ìîýÚú	ê0ìòí"÷ù	úÛú÷%= -û(é  ÷
-ñ	Õèõíöîß$øÿú 8ï$éöÏ$éçùõýò	Ì óóòñïéõâ
-5ð+"ô	òê	!
-âðóò($ÿûûúúà0"/÷úêü 
-÷ñÜÝì	.ï$ûáãýîâÒýå&ñ÷òÿæ-Úþøñ '("
-û+Ö8"(äýô$éþøñÿÞýãùóûçáü	þæù	æÿÿ	!þ	ñ÷ûë%Ñçÿ
-
-ûÿ÷ýÚ+50Ñ>×çüì" ñþÜøü÷õßè	!3õçþ!"ñôáëÏ
-ÿùîëöÿü< ô.>
-(å,-ô !
-ú0è;	èö)ôä"ùþâññûûùõJù!Oø'à%*'ä0A%
-øýþ	÷ê!Ý4ø")ü
- õ;8ù'+ö"
-ö$(á)úæÜç2ò+ë  øûï
-ñÿôõ ôÅä"	Û&óì øöÿùúë!	 -:/ùùêìïø  ûé#å	5(êöýõ÷ø(3ïùäûì"ã,(& ûã
-ðþÖæüíüñ3õ#*ïîý
-&)ò÷îýéôþ%Úð#!óïô ëèÚèÿö3 üñåüAË" ßïô ø	â6Úí	"ÅûñúýðÔëÿ*ÐQûà3 é-î$÷õü;ßÞäôýË	
-(
-î ëè	÷ü		ûö -
-Þôò÷úò0ýäãçô
-×ï@Ùè÷ÿúú÷üîöþòì*ýõ5íù'ÿ,øý.+øýïèìüíñùô÷	
-çêüçôó
-!ôBôÝ û Ýæ,1öIàá #	õõðæù;ýü÷*ð%ùæü1äÛ%"øõàõ@ý)Þ ôï'÷!îôï!Ñðì ûûî ýîÛô<ü !àê	1! â/Ëæýãáý%òÿþë*èòü ðù
-äýùü ï/ëõñ/ãö&Ü$$	ñô	þàóúÒé44
-Ôï.
-#õúÙ)Ðßÿêþï þ!-Æ ÿì	íäÚâüüøöòîþ	!&ø.àÞÿê
-6÷#îææ	)ÜúûðûÙ#î ïöøðé!èîïýò1&õ þýþ)ý,+ü1Û $ùú é	;/ùëï$ÿñ=ìë#%Ï4àùú
-%õ#ÿ*/(ìèòýôâúãû%â"
-ôüí -îT0!2ýôûôHìù!øõÿýîóîþ×ú(üëý&' ýø
-õâ&çõü+ÕXõøù%ò7#&#ÿ8Üö ñ 
-ûúý÷ò÷ëú
-öì	üÿ	ûñðìß$òîîüÿãú#÷9æ
-òö#þ.áýîÿþé ßÿ(éæâþóòÏ 
-5ÿÕ(Üöêü		ÿßöûÚÿõæò	Aõâ×ú"úâó4ýôý÷ý÷ôöáùä 2þø-:43ôûóõíÞñý8ù!ñ	ûäÖÓúãìüú$ñ8ôìÌíïõ
-æ×öìù+  ,ýùö%ü4ý÷ +ìüæä"á;íÕò×!ýþû7ïõ%ö&/üë%íþÿCH/ýöÌ9+ùúæâ!/9
-(÷Ü)ôÖúäú"õ"2  ï+	Ü
-	ÿëñíúõæÆýè÷ÿëÿå44ÿøüê3üîõ
-ß *3÷&*ðå! úü"6ôüæìüÙý%ÿÔÿß9 ðòúéä8GêìëG
-ó	RÐåìâþõî5/
-%ÞùØ'
-é	þÿ!ùSô/"(÷%
-Ôøûéõ
-àô2ñü'#Öþ ?äóÚÿÿè#âè-ÿóö$ +ûýúáÿü.\+ù%ôö!øðöæì.0öé$îÜñ'ýç"äóÝúöÒöþñàêÒàüñ
-ÚûýH)ÿòøõëüõÿôÝ÷þî+ Ú$ïùËôä#ç.ö,èãåûîÝó !ù"L  ýëêûâ
-çþè0üùãã/ï'èî ðøð9"ýðþ	,-æßÿ%ï 	 èñþ,ú,øýñþæóýþù ì,üßöáÑýþ	5ù÷þöö+#ÿë!ûùúõÝþÿìì>)%ñ
-êý!ô%#*ïíÞ÷'ìãëæé'ê ö%	øë$þ	ÿô! áý-,ëýßýéÿôæH ý ÞÿøéÔøóóöôå'Øö÷)%õìû6û×úõù*øûþ.=ú32þä!ûûÑîó çÞDíññþ!
-Qäô
-ýã
-öþäú+
-
-áï÷ç?/à á	àÒþ #"2'Ûû	C#üöìØ(!ûÏâíÆ,	
-'#õòÿåãêü
-!*î°Ò	 õ
-&ÿðæöò&ó(éûÿâüýþ$ÿþôûýü
-&õü.óýåøúóùòõúàöàG(þíúóõõßõü'@þ	ðýûÚ%þ(ñðøóýëèãÜ
-ð A-6×")ü÷ïñ	÷$
-/Ó&(ú$ø!ð,ûû1î@ÿéF*ÿ ú	#âûå÷ûï0÷ ð9ú ñ#î?ò÷îç7+ñûû:öõ-þ+ï&×ú÷ÿ&àúÀþ÷êñè
-õ7
-ðþÖðøêú	ò%åíé÷ã&üû!ý7&)3ùëãïöüì	5Ýù-ùé	õ	ù2ÿóü9ë)	üð/%Üêñ#Úó	0éÜ×	ãíô"×(7	×*ë>íùÞ$(êúíý
-ÙÙ+ Ýýçñýÿ* ÿÝ'(
-#ü#/ðôñøî/$ìþøú 
-&ðþùü*ëìùÒâæðäï-õYöÓð
-#!(%4êòàáãîúï#!ý%")&ýñÙÞì
-ñ
-
-þû ÿôùõóÖùîá
-æ÷û*÷×è"!		Öõáëæ
-Úññ ùÞ%ôñÿ õ'òý+0æù%öó ô(õçðéûëàé+ÿðü4 ð"óë:à.Ê#ó8ðÿ	8($#!õñÞôó
-ëü
-UõØ"òëþîùâÿ ÷
- !È/åóþåû6øû.49A"þëòö
-3óýóð)ô"÷ù%'æ(ðæ âùÙ øóøô
-- ñ'	æ÷÷éìòå.
-4,#"Þí#ÿò"	
-÷8òàû'"'( ñ'è%ßÿàï2äÖö#ïäé(ñ÷Üõ	îõ 	ê%âç Û	øíÍ
-ùÓ!íû*øüé(óïçôøûû&ùðýçÓ'úóöðÒø)ãûù-õüãà/ñ"üæï'+þïýîôöÞù$ðöþ
-í	ÿõ	$ú ð%òû÷ç$Ýò 	ú+	ðîò	úúú'û
-ó Ø#è
-&I	õó'üçÿýþ ú÷ÝðøçÚ
-ÿàí
-"Þÿ/ðÿîÏ
-ó#ãïêìòüúùï 
-ò/ì'êbõ*<Áß)ëúæÖ÷ö0þþ<ðþÛûøæKÛâ*ßöê êðõÓ   	úý
-÷"îø"îõÞ.ù%F×óç/ûüé0úù& í  óáî%îò÷ëå
-ù
-æ÷ëñ"ü å-Ä)ûþð%í#
-û-ÌÒöîöì!÷þ+úú6 éÙü$ú!íþ	
-ö	îøóöã
-*ÿû-ùðòð	ô 
-3ñðø&
-òêú
-á&!úãüðíÜîÜ3
-Ûöýíó:ß÷õòñó
-ïûôôòEáÚÔéèýù	$-úÄþöõ
-å.ùçíÿè#ùØîüÿ!çø
-- ûçàóÿüëñÆýÞDãëï/úÿý(ùýÓ.ý"+æð$îéþ$2þú5ã!"ã	ã :úã ý*/	ùç-ô Ùç$ñý÷(òðü>ò"í	ú  &æ!&;5ú.÷	þý+òîöüöæ÷Ôøþû!ýð#õï÷
-õð,øëöùàúë 	("áøý&;ùìíïìúìúþúï*Ñ
-/'ëò! ôì5ü#õöñäBêòþóû5ì ð)+Ôûô-ý'7ôðüú!úëýÛïýîùþûý×÷óïÿü÷âà")ñD )ýñ÷-  þé!	á	ëàëôúäî÷ üýþ$/äøØÜñýîýúüùÿí ñâä'É	ø#!)õ ïñ
-$õQíìõ'ùßøöñ)4ôò6üîüõù&-Ðù!&
-å_ùúû/A-üûò5äýø!öðÿü7×úüü÷ôüá$íúôüÚÞ"ø	-òðü ïÿåð ø &÷öîû0ð èìïôÿôúûà þÜë) /÷ûñ!ï÷( ×ò4Ùòý$ ôëøøñìöàô-ãûüçãø-ö
-ì#óýñ ÓÙ"ýòÿâ  ô ù8ÿ
- ÷øïÿúßúI#.Õð8
-õã$+ýúöðò"àþüçÿ
-ë
-õ  ôÑ÷Q
-ÚÀôý-û,&ÿþ,ìô@ûõ úÚ,	) óíáN*(Ýùì%5&óþùüÿñ	á)Úü"
-äë,îõ$Ýôì6ï1ò"ôï7ùûöëø ûÑôûòü,ñ*?ñø0ÿúøéþîü $	÷ïCôØÜèÿ!ùöÿ,'$ïû-ûñìêèëÿâèêï+6ç1÷ÿ êý1 Týóýù%2ñú(øë8ûóüê÷Ó$ÿúüåûô ! õ ñëÉ%æñ)<ùêÿåíýýÿè"Aûôú éóêãéþ!2	çû 'å×ôÜ	þûî2"î1õìû)/Þõ- 	øòýêî	ôòÿîý
-ÿô!ó û*'íîþøý	 öòðòî)ç$ñúü÷æ éßåïôôøõ
-å þ÷"å æì:!í&
-àöí3)ìüç÷3àúBÿ ïô"ä	æÛû'ù
-ïêÕóæø3ãõæþ+ê@êç ôîÿ ê	úèü':ðüî)î:
-#4	õ	1+(ø2÷#5àðæìæë
-3ùÜ ô+ôûåùëñôñêõý 7!!&3öëÓòÂ
-"ó)÷ÜóüëÓ*þ÷ò#îó íñ*àß&% ØÛ)!Ô
-þ#ÿõ!û÷þþõóô(ðïGáùü÷ø7âþ /ëãíùíû!*($ú?3#1!)/,9+-'&÷ò
-âñúêìøø2õ%ô/ <õòïé3
-÷	ý )üêIDý
-÷)Cðôð÷*Ëß/+Êð ú6ýóôã!# þ÷ +
-ú Óãþ
-ù1è îôùûû!üü.åû
-ñõ+òô¾+ 
-ÿïöýû(Hî!;]	/.*ù4üÑîïÿ(ù3+óÀâÙñ#ýïßöúðéïî!÷áüOòóû÷Û*öéæ )Ýäòöï)ôíðþôóüø'îêú
-	ôö%ôÿ	$@'þ	,ùê	@îîö÷'þðû é$ñ(óüüèí÷øíïåÔ
-Õ
-(Öùíæéð(=3î5\"#M<Mõ(ñ$Ôò/'
-&/õûõë×÷ïñ#ï+	õBW11×(î úþö&Ùúý!éöüûâ.ø$+üöï"ó&óÿáøì0óï9þûî(èãôÅö
-
-)þ7ú ù0íÊçøá%ìK1ìöÿ$_;&B%B>B==+<Cõù%óñÿ÷õÝÛí'ùß
-ööþ÷	õ7ùõ" êPõå,1þâý 
-	êöóæë
-õþð:úôè
-;*ø   åöøëý÷ùåöìüåýî%ßËõ!ó	 ×IÿüÕîü
-3ø*ôÿòþþðã	
-ú
-.5#3:t^L/E1[2ø<ýØÛß+éøéþøóïû'Ü
-îâõß".(ê'0øÜàþ!õüëâ
-ôÿ$þÿúÈ.ü;Øë÷2ñéÿñ-
-úë/9
-ó!ñÿö(åéáñ÷
-ýKáõ øðJþøìî ÿð&"Ö*RB:*RCpNK%K)Kó-õý$÷óæ#éâ 
-øìúvÕùû&ó*ûïßëòJêõ$ôïøùü
-ï!&ûééÚò$ðûÖ3;	ñ½æéêð -1þ3F*ìî÷úôIôù%üéò
-òïæðôúü76ãÿö: <ò%ìÞò4û>)-^.V5_iUVf1=.ô&ÿ.ïáëõðñ2îñ8ö×'<âù3%û#ÿüÞ.õåòÚì9é	/,ñäÝÖëî 2ãìñÙî3ÙB&Ù3Å0Öìç/ã6!øôùøÿòðþó	'Ö÷êú÷äõÛõå(0íÍöøÚ÷+üùÿøöÎåáìò÷E	3 --Y2=-='AL&/í#:	þÿöù÷/+h›ûúí 9üùô3æ:é ô#ÿúþù	èüö>ÿàõê÷ï&ðôì÷äù		5ûÓú'	õ$ û#ûøîíóó#éEøëüïþçü ?õê/Ü ñ%ç, &è÷÷ù
-ýøËÿÿ9=ÿ) 1TtUköJ=1ö&
-"+Õ"ì)ï	õæ0Ñ,Ò) ûÖ)ò6èø2÷ß'4óú$ôî÷ôï	
-å6,íÅ!ðáüÿðõ$ì:íð/å0ê &üùòþ	$ò9ß(27#÷ý êñ
-,ýÚåé$)"õ"ü(èóé!=÷ï6
-,.0(E5?C&÷  ë ø
-)öÿû÷þô1Êûû#' Õ çý1ó
-øî(ù"0*þö÷òØÈ/Ùåã›
--ë,ë" "þ,ô ñÿîúù öèô	ÞðÕ&5è0W õ2÷ê$ùßý íúóÿ÷û÷#ÿ÷âç.ø4þ%.63A/.$>þ(ø,îô?41Ú3ùúôäà8D
-Ü+éêæ12#ù<ùôÿH.#üï 	ô'üïúú)":ôýÿ	]‰;üÞæ
-üðòíøáÿâõ-ýí$Ö 	æþøüù&ï-à
-õ.ýö÷æüâöüé
-)øþ,
-(2.'Ýýú%óßû
-7>(#:C	!3÷ùýúí9èû,üç/øø$&	óøÒè,9ôéóéòòþó	ôûìüã:S/óü'!)&üÐöøÿ6	ññá!ùóÓöúöýüü"ù÷÷÷.õì÷ 21Ùæð!úìùý""ý
-%þðÿüý&ý 7ú*Ö#îõøþõùÿ"ð"$ìñ ûàð)%$õñ"õ! è
-ýüù ä
-"üïù ìÑ+ÚõË
- îÜèã%íâù!
-ñ.×	õ4ßúÿ"øà)òðþýóêï+ðóóõÕì$ýñ"ß ë!øöØ
-ðáñëèÜ%",&ôê)"ó	Kòè@6'ýè ñî%æùÿ! ù7ûêñ(NE÷ùí3+î  -ÿ	ÿõ%ì0÷ùï@ëíúþçúöøê
-
-ì=ê	ööØ	ôý
-	áþõíÐ ûó
-ñ&
-@ê÷êæõü(òì	ë 5ð9	äÿÌí'Ûøñùèð)óÍ*ü, *5%ã ø'øÓ ';×÷ÿíê$"ýëùùõD%ý$6ñçÞ * Bí
-	.õ	1õ %.#ð	ôEìèû	ýûüð
-ï. ëú&æ%ó)ñêøö"ôâÜü	Ú
-&ó	2@ò	 *Öñ÷ãíï ú!üøäóô+úÿè,ó ðÿéõô9ñ	ö#%'ìçöA0
-ï÷îïö û"*ûð>ß</Ý³"=ð)ûúýüùöøúûôóúö  üøôäõñ<ã';
-×4þþþ	ûöä
-ø
-ð þú!.ðù"ú>øüæóôöóöîòðû4üîðò/ô'óýðîõäøúüúè1 2ø èä ñ ú& æ#ï&
- $Òùõõê%é*ø4"+!+ Tò3âZ-üìì(ÿÎåüý&ô>ùêíöàíú â	Úð<ïùß!ùüä1úðæ øø 
-ùI)øûû+ôö$!ïè"ûóôèí 1'òú#ç0ìð öÝ$æ"47/.ýÿóòë"èüúò
-
-ç#% Ýäýù<îûèàøðïÎì7Kµ3®8,åù -þ'é!0 ïûõ Û'ýñþäúæðïÎõÿ ï
-5 + ö#àá	þûð0öüëü)ý*ûç÷êíüßÖø7êßýûÇ3ôåþ"ä
-	 ïòPõûõAòúïî(õåõê;A=úö*+Üôþþ
-ìô=úáóûÿ,	ïìõåæ™Aešûòÿ6øöÛýõõ åÛñÿòó#@Ô,(ûøíã$ôÝ
-$0î ßå!-ô¶Þ  .ùðçìó4÷	%ú('ùñýÙ"($!÷ßò2ôíûøüÝøèòó %õùûB çï(öõòïöü%Û% ïù!êêú	#ÈÌÛ6#)1%)	Û('äèàþïÜæôñèÜÝ!ì 	ý"ü!öù4 'ÿìÝ=ô$ý&íüíéÞù(3í	ô,)þýõüæ#îù ûé+
-í,
- +	$Öò	44õÿ*4ê<ÿýÖç4ÝñÛðõ.÷ð'Sôúñ;)&é1ö!ïéùþãòáßÕ òíãñöÚùõÖ&ü	ûóøýÔö#øô ÙñÿÞé	"þÿçÿ
-îÿúð*&&Ýþ ÿ÷ü
-øÔè
-#	
-ó)úäãò÷úæ÷ 
-ýÚñåB2
-ìÖ$-"+ååá!øö'!Ýììúûæâÿýî%ßç ò+  4'þãÖõúä6üýþÿïùýð1ýó#øìïÚÿîö))üýáåüðÙôù
-ð# ô#	þèô #%'>úò!C)î	èùë?Úïúõó$%ß þ! )=!3ð"/"ðø:%Í* ßøþù.üö		:øåóÚ
-ÕðýéÍîúÝùé.*	÷÷óåýäòö	ø %ù
--ê&ñâóö	61îÏÿèýÿ áð2 þþúøìþþýÙÞÿÞáèþéì/ôý$ûôÿãèà7ùòÿûèî%!ûJêåÚéîû	á*Þä.éóä2
- è'é0àèþ%üáÕ40	1òñü.ã#Ýúôëùèì#øóûüùù üäß 6=8ôñò5þòóþý
-	
-%éúôö$ñ&-ò-!ô3ôó'çø	
-ùý2
-ö0ý	û
-ýõçýçö	?C)ó.ùÕ Þ(3ÜFà&ÕîôòûûðîÙá%û.ò1ûõ	
-/Òâ	ÿú&üÏ1ø.ôýÿóæ#Aßêõ
-ìðñû"õÿ&,÷ó	ë	2/. þëøõ"Ò ïñ,Ý	1ûð1æ
-ý$ïî/+ø*ý	úÙðù*&úöÿ8ü4$åø.û à	üüüõðÙ ð
-;ö%ëú!ðê%üöúðúÜö
-üë& 
-Ú#ôÿ åðûå,÷û# ×û)ø* 6þþ/æ"îýöî2 ×ñúÿÞ'úûñîù")ûôéö	ÿ#ëôôÞôï&í2ú5îðF	üçÁþßÝñ# þéü*óø(÷þý	ö(Ôø$ü/øÕ÷óöBýûéòô#Êøî2ñÖî6Ïåï
-Ù$ ø.íÕôûØøìÚõñ&:üÿ	+ï  ùòúþ"%ø	îéîÿúòùü
-'õôýÑ	(ëõúñèôóúòñý%+*ÿïåïüãQ ;ÿ ûØüé$õ
-àõíïø1ýâê,# ùôè!ã	K/
-ùäòÜü.5+M	*×
-Ì÷!ò×$	ê2á	0ùö
-þóÒ÷ß4þ ÷$ö4óõ÷àÕìù0ò×#üí'ñ	 ýöáóô!ñ&	îø'ùûïóê óç	øÊ($
-ýðëýéòö åýçô äüùøã6%6îö(âí/øú3/%+-5ø	Îùûþù úê$úÖû$*	ùå#ýãûôÿ(å%ä-â÷å"üô! 	
-"òõöäû!ñÔÿú	<ðæò:÷G÷û"óéõÙþß
-ýóòÖ(û ñê!	ÿÿ$;÷1	üòø4
-í	ô
-íý	
-ø÷"&*99=EM//ýþùL	0çôúùýæ
-)/þþ%
-1	í4üÿÌØå/
-ãý.	Ý	"ýùù)ÿþá	 ãô*ðõ2*èð"ý"óûößáE	êòEïóïîôòë% 4õ	ðõïà ôùè"$ïçãæïú(!-- ß1@'÷?9`}6óôóøì-*(ãþø	þÿâé ûý	ïó&èüôç1üüòúë,î!È$ú)üäÿííàäø"ößé-ß*üþòåÜÙå #á íæöñÿâÿ÷ü4ß/!($ æ B%óÌôóöåõìùëÛò%/òý×üíÿöâ ñýüÔûòþ[W=LE2ü3ô)âô#é	ùìñÏ#,Ù ×õùëñõ
-	ñúDý64ú+úóß÷0Ü  	õþùÚèûóèûñíúð Ïë#&ä/ãð9ú"Ô%øãõû	>õëõëþó$	ïó	á	ó$ùç.øöç, úö÷ùô#öþ S/KS?N>(/ùæüñöÿý÷àòó"&ë&ýïÿô3êúð#		ßûý!32ùõõ2"ðò%ôüë*	õ*öøà-%úàþéõ!øü÷&	*+üë$ü ð/þ(-ÿ" ò2î%ÖÖüý ÷ûê ûøä%û	üø$%2îíð	ðäð%,ÿûJO(5ML7DI9Ûøýÿ+
-âþÿíå
-âôûñáí"âøÉè !øó!òïîõö*"(ñðäòý%õü þïüî3"ü*/!øúõ Äöôûèù&		'üýÛýÙìãìöõÛì" ü5áûèÏ(ë üâõKîðâæúÿ
-ã	ô*þ&,>>Z_0ÿ&üôóÚ!øú(ó"		-
-Ð
-$ñ÷Ô,Ý"4 ó3ýüßøëöñ"î0!ø
-ßý'ùäò&þþ
-ûÞâãÿë9ð-ñÿêþæ& ê õ")*Ó/úüðöýÝ÷î!ü&Ú×ó>ùÝßìùñ
-ø+' (	HLfF#$ü$' 5Ôëýý!áô ?
-3êùÿèÿáéü80#ðû/÷øöù-èú:ÁÙöû	)0 +÷6ïØïô3%ìóî ÿï  ðëüùù$þÞ) øó6éæü	1 ô/ûòýÞ &àôåøôë+
-Ñ;÷Ú#þë3 QFNiLîöõ
-
-óñþO óã$ú* ãí$÷ýÖ)äó"åïô	ýð.úïç<âþ'$	 7ôþûÖþ÷	þè"ÅéðýûõñýûÝ(ýçèâð	8ð+ýÙÿ!&öû÷6ë4*
-ÿð÷ð(û1
-ó)þîÛ!ùôý5úýúþ3
-?`G%	3û	çüê ß÷ê#û0	çÝú#å õü ÿýò ×ë÷6ñþôýÓôùó3í+æûóåâ&ï
-
-Þ÷ûþ!Òù'éøõ0èý&úíêßç÷ïæí9úâñô'ùßûùû
-'ìåøùø÷&ÛöÐLçî7í(
-û	;6ç6%üâêþä÷åþõ ôíåùý#ÿþæ! ï ü!*.#è21âüî  ýÝ'âì",ãïÿ% Ï:"ôùõúþüøæðî+ÿùâêõá÷
-é-ôñü	úú!Û-ê!íÒ5úÞûçõé-øîîì*ß18,.	Ú'30ùúÿ)Ý.:ôß ò!*×å÷óé3Ýýæð&ý	ñÚ÷àúýóñðø÷ã1çñÜæòðþéøéûÌ%5	:å$Òã
-	(ø	Þ 
-ßú
- <
-ö! ø ïç¨Ü:þ÷Õð# (*&é
-î=Ú%÷5 
-G,èûìïÕ"þ & èêúæýþõóð åîîßòýO!ûþ>!+î
-ÿõ
-û?ò!7 é	Ùã	ß&+ûçìó	àðð÷ð4	çùù
-óì:öâô Éç	ö3
-"óõôÖ&+éþí*#üâòÑ"þõ3úñóôóñ*þôàûæòþò3ùö! 
-ÿß7íõõô7óþå(	"# êýé!û å#( 2/5#+âîðëõÓõýå
-
-¿Ýêïø) òìõñ
-þöûîý*ì
-þïøð×ô ùö&é! ð$áá&u
-(
-ûØ	ßÚ
-Nèßä6õêÑðà)	ùõýÝöûÜêðÕAÆúíîÓØ'éóâÜ×ðæ"ý÷î%.9'"MK;?1,	+"!(öÕÝøçô!ùü Þá0õ#ïðö%;ýö
-ýò
-ÉÛ++ÕØðøÝôñ/ä Ü$(%òëîûð
-î.ô(þõð! ×#î
-ëíàåëúõúî4
-÷ü"ëñ!ì6õ& ý8îîç6æüãÿä%ÿáù	÷ê	òû÷Ú	
-å3":'o\sQQXJE44÷æþ ãû
-1ýü>Ëä :ÿÿÿåÖõ%7÷Ñîýúîä$*'ôïìÔ
-üÜ#
-%òéÿúÝü÷ó$	÷àýÝåü$õóß%Ýûê$(Çøþ+ßùïþúõü-õ
-ãçëìúÛ ùøûêòí!õ!!äÍ
-õæø*ùE LBu^‘kžRG?")	ßâäùò=þýþ- îìúè+ñìôûEÿJ&òôþúß		ïÿñûÿÿ	óÙâ
-÷ù5ôùëæóÊ&ÿ ôíñÞð
-	ÿøì. ðó-ïè9ýôÿöí	ÿõèîÿü	íîúöäE, .ïú#óóùøæ$
-0'Cˆ‚°ÜýóÔµw\L?4.üû ñûÝùúíôûúç1ÿ Ø'åéñ	ÿî5úþó.
-&0÷ëú)#èöÞþþûóûÿò×çÿú5î5 #æÙ *¾þ øüÕ÷ïñê
-öüüîë÷Ùøüû7ôÞë#üôÿÛ4å úàù7Õ÷ø'ûõ.û ( !ð="Fc~«ñn½á±*èd[])!	ô.&ñ
-í)àûæóúä
-5#ñ0ùùö"áö#ÅÛîõóõ ÿõ	(Iíý÷  ïÒôàñúû
-÷ å	$ñô7þû 3gûæ7ûûï-äçâ'ãç öúûá÷ù+öè÷'èõùíJíòóïøè1%ëö"ç(þ)Q«öC.Ð”ÞµÕ·y&C-$ò873øò- Üíøù	Þ
-ýîþ÷Ð2õæÿöýóýîþò2ëÖ
-%ôä* (@ø3ÿ.Ó#
-í+Ù66ñë3
-âÙô$	ø4 ð%î*)!"ýà
-"$ú$Ü
-*é,
-  
-!)3l¹ð”Z	Ðú±™Ó«M#$	&ýýøÈ#*
-ûõêóñó:õâ
-þäôI*â	ß	üíêè.!õûäô'ã õñ#öøøÿ	 ÿÞèýéúîü.çïüì÷íüûüùæãé	ñðï÷&ø#û öéý éî ú9óõâï÷ï îé1õ
-?PA¹¿y	(Àt
-¾¦-(¸_=CE1î>ù"îþÙû%ßñÝû	Ý$ òñ÷ûø#Ûîß	Úÿèý
-î 
-+ö#í#Üæô óÝ ò*+þ2èù÷íã
-ýþúû'÷ßó!ô"0ï	ÿ@îâòðæ (ýõÄù,üíõø*ð ÿä÷óã	4Bû
-Þ!'u‹	AÔ
-ÔÐÐ8Àº'×‚VB%ñ!ò&.+ /ëïÿî¥…ÿð	!"ßþß0ð	óëËôßïòCõ!õþóãöË	=	& óôûåôßùøÖüóöÜ
-äïôëê÷øüé!ùç÷þõþíÿ$ú,åïä	ýà ú.ñüðßýöõ6029=+*F,?vlx˜€ä,ôû7Áf@$÷0æüîì@Öë+ íï	ú$ÝK	6
-÷ýÿöéòíøä÷çò÷
-ë 	ò ûïôêñýî	òø7ðûëùôñ(ñòö/òþßïöìïÙù.
-ÏþÍø"ñõãÒ1ñò(ëû)ûñ'åãü
-Øþ!ø"ü$%ô2û"7"dñÓÒ
-NtØÌHÌì™`¾u#,E$ì-ìúüý+ë% %ù þçý 	,ñäñüãî4õ+øç÷	=Ûð7ìý$ý8 âöàê÷)ÿøìüî õôá×%'üôä÷çõ×óûÐ û!"+þåèF%èò 'ñÿñßØùë!þñî æéýæô,û ì÷õçòóòõúö!0("÷HX‡Ù¢ÐÆ
-˜œÄ„	 ¡
-#¨V/I7êÓí)ðûûýõôï4% ô*âèøóÿúÿßñî!ñ(ýü ïïñì!òñòêø!é
-$ñä
-õ  òäÿ2èñÀ õÒ% ÿý+ÔúÞ
-þöüìä9ýñ÷í/ôûâÜíéß 1ù;!û÷$ÿãñ ïúæC%2BRæÄì7ˆÅ ì[·Ž:$&ÿø Üõù×
-)' â	/òýô 
-ìü2øõ
-"$
- ûï$,ùÕí ûñúïü÷  Þòè à*ì!ÝÒæúÿòû-1'$(÷å-ôãùÛû÷îöã
-ï ûúø%òïúñ'	ù×	úýð þíþÔëø ôò	$ò
-ôÿ<ê&$Z\‡’j;²ºO±MÔ¤MS(*øëù þòýøôýÿôúÿó Ø!ÐM6þùâëÿ!	+#üã ôìÒú$ûøä"ç1åç"þ 
-üýòüê üúá,=éù!ü@Ü.ñÿ ò í.ù ùð6áö×éýôàâ¼ñg û-(ÿ5Sm¥ÿ0P<ØÅ°“K4#$ã
-âë0!ðõ÷ø!P)	ÿÕñíí#÷ñäøìò
-ø		îüþþ4öþ#ù#ý	ðG$ôû÷1:Ñ+éôù è÷÷	#  í/ýþò	öþØ÷æ÷0ø÷ñî	
-
-&áö	ð(×)èÿ	& è! $N8P{ŒÂäÂÂ¡‚PY 3Nå'ø	÷#ì"Çúúïìò$ñ#òðâÝDüó "Ûè'ùï&5ìÛíáûÎýÙþì!	üöÿÕ1ßåô>Õ'%%+(ùéüð çòèþDïüøüæ÷	úñô	õõÖè	è	ûßÞÿú
-1'ðø$ç÷èü=å;;"A&TcjzirƒFW=W7)ï $ùî'	òöþ
-<#ñþð	ÿñúò7öÌ 1ùñìüôæøýéàö
-ô"1ùññáþúÿû?ôìýþ%.üô'íá)ñóð¾&ÿüò#çòþý×/Üý&â#ýêé÷ú 8/FH7GW;`2O*9õ÷.Ù+ãõõü  /Ò		óß+é
-ù
-îêþ
-ö#Ú(ñ	éó+Ëøã
-þù(ÿûê%ö ,&"éö4 U1ù(üûæ4ðþÜ ûåðþò&ðûòóô#ùþùö+óø&ú÷& Ø	þ. î+óÝþ,!Ùùú  ëýQ	
-P.42+30# þ ëîÚ
-ÿì& òôÿýí!ãÜéÙ'5+ðôÞêåï	ÿòé þôþòÚ1)ê
-:øèñÏ*0"õþí!ÿÞ"éüÞ!âþ)&è7ã	ú÷ (ñíëè	$ýû#þò!	Û÷ôòöïð ýòþ ê12þ%)4î)$ù	1áËõ	òóø;÷ßñù#åíò4ØõêåúÿùñöõÞâõ
-
-çüãæöÿ'
-ø+)÷î
-üæ+$ù#'ð7ðÙ"Ó%!!Ý)'Eóà	ÿ	5÷(ýþùùï õú$Ó(úíê,ûøè		ýü'ôû'
-úëêì49&#+/ % ,$ýý9(çý$ÿ ý"ï÷($ö)ý 'õC$ýÿã é6ÿôç!íýÙîéù$1éóûõ4âûèðCôüï â÷úá%ïüõ#4/ú ùþóüóíÒ"ü×ñ&*	ÿ1ý)ûþÎýä÷ÿðð"
-ûþï(1åü6!ü0ô"#ðë,ùHöù4ùüüåìõú÷úø÷Ü÷î!ÜÒÝ,0äýô!+ýúðë
-ç9üúI1!þ$þûû$ëëü,Øùî
-û*ì'  ìÿ.ïúùÜóþÛ!ùáÌ ìÿòçÿ5;'ûÜ-ö!íëèé×ê#ú
-ñû)ûå ÷J-úüöøó  $í
- 	 #ñúßêï	ïûâùÔ+ðÿíö>A#T*1òÚ!ÿÐý$ù.á%Ëñ"òþ÷ò
-þû	ïòìöþõø#ô(òíôóôãôý î4÷ù4	ù$ã
-$)ðý
-ñ û(2ù!	÷Eô þ1ðõH)ÿúùòÖù õKê öß÷ùÙú(ô$Ö	\DfEhRøû
-îõòôÞéë0üïñ÷ýñûðô+!û2áòöÒñýò6éã3õ	û (ñéâêè% û@÷ñú"ÿèòþ/åíúÞõàì Þâøâÿ1æ$( =ý.èç0ý×2+ïÿê*ó%þñ 1ÿã:$Néâøí&%ãñâõå	ï'3c\}•ÂÁ‡^>"*)êøìö*ùñ'õöó*#"Î		'ïóçîøçúðõùØý#ëÑ ÚÝ
- øý	â 0øüñòù ùÑöìõïçô*(÷ãú ÿê%þèí÷óìÿþð4Õ(ý.îëëÚ	öë%ûêüù ïÕó5(L·ñóþ ‹K'øüùäÒ
-ù>û çÙ÷"í!ôùâòýñ8ëéîßùüÞõþþïø5 ñ!ñ 	ü
-à+ôûú&àà $à9â	,íüõ æøä ö
-2Öòþý1íøûñ  ïí	õ"ÿãüü)þüï&é*'&Ó'
-õI7$xììüÅ‹8Fñ/÷)ðçêÚùÝ	ý,ö
-)òöüô÷ò#ò<Ëï*øôùíø	 ôñ	ðô üûüéýø(ÿÛ) ö	üÿ%!ö÷,õÿúô#	%ýõ6ÝþûîÙä õñïû÷õ'ôô"ò$÷,,ñ,-$&6ªÀ î°k8#Ûå&êþ#.ò,ãúøä&àõû #BÙ1õæ+	ý6Ñôÿ"
-ý/	í
-çè0âþ0úÐõâ1'ýóú
-ãýà"ï7+øùâ ñçéüèû.â0ÙèÇ-, )#ôôÚ%ñ2&ôõ'-%ç'ëÚúøåâú bfŽ Ò™E92(éþõàôñÏ=é7þ+ñðã2ïù
-õïþöï÷?ù+è$ýýü !ð"Ôý.òöõÚü2õ-*û ; ã ú$ø!@þø4Ýï õò 3øBüB%&îùé'éí.*ÿâö÷Øóüñ	ôÞâûùÜ#ôýþõ)5XNxag]=@&ÞñøúíÙåù
-
-7üÒ ñóñìðáì  !×ù*íõ.ú?ÿíù#÷	çÿâÆ*ôâáðþLñØ"öÑ
-ûÿì4îä6ãæ&æò	ðúðö0 öÕü
-Ñàùäõïß1ùõ	(òß&ûò
-A@ûø1ñïóõ6÷!
-.IZ6ô#ä$?*êîØò×Ûäúö $ä ò4ûþó. õ%í(4þðìúû$èéýðíé
-ñäñëóðéúî'ÝýüëðìóûýÞ ü3ñ&ú#Èûö Ôõïõâúéñ	æþæ äÞîóíîùì'MÞþäüå¹öÞýÛ+ùòóì79ó9 &*KâîîÚùòüð ÿúùúþ',çþ	î##óô0þøð 3õûÿûõðõõ	ðö(+Ü0 íê#)ôüü9þÓîÛ	(Ô*ó
-÷ó:8úíóìãâùý*ûøõ í#êîÐõàô
-Û+úF
- ÞÆáýðÕß )ýÿ(÷ë0ýñó8ï'ë$öú$ÿøü2/ïèïÖýß%	ôìýàö!ì#Ý/0ðòð 
-;ú- áüÔ*Ü:(!òûæòýÛþü	/÷å Ëæëæ "õÿÿõíü4Ýù	÷$ ðøö-5=7øüÙöñJ+êÿå*ë+û
-þõûç 	÷ýðõîõ
-	1CÖ)íæ! ü  øàç÷Ì
-%ÿðþ', 3&àùáã	×÷Øî9à2÷	 ïüùø+ çä;ôñä %Ù		é.ëþþèüÿOå-) 2é2?ýô ý(íÿ,úóöú'íõ ö-*þûæõêôúè
--ñ ýß óï"	øôÿôö /#ú÷íÞúüöèõýèÖü0$ÿ	ôïòúøàò ÷ý#
-ý÷þñã"öìòøòýì÷ê	õÓùó)í14=,îæøþ÷ô÷ò&3&ùþÿÔ$ ûÎïúìþòøîö!ðøöüøû
-ìþ÷5óÙ2òïéä þì -õþ èüÿ!â7íøü		Ùðáúôúî+ èïí ñ+ óûáøÿ"õþÃü ÿøðó*÷ðöø1æþéæÒõçúþ'í + ó)9ð×9ÿùíòë%:3ô>%
- åØ!ÿôý%çÊê
-üøìóX*	"ð8-	# Þì-
-1ÛôõìäéêÿòCìãÛ!ðóûóêõæò Û#þ÷,+ØôÚ)á<Ûðî 	øÿèÿ üøøòïëõîø öÝû ($%  ü!%.åù,õ &%Îýíø
-ÿ
-)ýõÜéäöýó!ìùöâûéõíÿî÷èàÜ 	ýî',è÷ï%úôìÔù'ãó	 Ú÷ ý$óÕûôÕûëõßëÿ"ú÷-4ø$<ô
-û8èëá)ïú(ü	 úéðúñÚ
-þ1øâíóÙ
-ú úâ+êø	ù	ó
-#ê	ùþ <ê(èÿëúøÇèø4Õñ(ü'Øôÿý  *ñèÿ	òàéüö'8ôéîÙ>*ÿé
-ßëóÔñõÝ',&
-.ÿæøí 1ýÝ÷)	Þ(à ð
-(öÿ÷óû#òïõø &¿ù.øâ/ì Ýôé"îäìþ	ôê%
-=úöñøóýÌ6	àòç#îí÷3Ýöî÷ÿôü÷ïêÕ )þãìûå$üýûðÖ@ ;	ð ý0ûì+	!	 ÿ&íí
-ù öö(+	B
-í8ûýìíúûüÿïýûúû ÿÿ!ýñ7æÿý"ýûù-)	í
-æôõäÖ	äÉ÷	úô"ê	ëø 3Ïîé	/îþ1+89+
- /ñö(Öü÷ .0èûþäê)ðóüæ
-
-0ë
-,
-õó-+0ýÿóû0ñäð&óòøûö&üÐÚ ü	ý÷â 
-íúôüùãÛ# ö		÷þ@â2ý(û%õä!øî!#ýüëü?é3,úúùóðñØøæüõ
-îàúóé$æù4(á%éôþÁø4ø=×Ã6+èü'ö<,ÿð6=ûï'Ø+	éõââü2ý
-îó'Ùöûãèþû ßæúúã 3ïþþ
-è)÷3þÞýéþ/(ïøú þô(ú5öþòøñ,õ/1 #ú!åû
-)%ô,òÞíôú%#+ù ,÷#ý'õûû&ù02ÎíýÝ ÷ø+!çâýÐãûõ!*ü&ø:ìõ!
-.ûéñøþ( üòïòõßÛâ!ÿéÇ "/ êþéö+ï	þüõþÍõ	(&þ(ð"é	ßùñóÝñí÷	é÷ëþþ7þó/à
-ö'! 
-ò$2úñÿüÎÔù/*C
-àüÞÜø4,á1Ç !îÿ!5î1ø×ÿòî*%þòü9ÿ2õ?ÿüæâ	#ùøüãí+,÷ìôòù,	ýú*ÙòçõåÙîèîí&àù$þ..70,ý	()ö ò	ñßï!ýúò÷?ÿ*32$â%êåøþÛóè+% ôðòÿ  2í óýÿÆ"#÷õô
-!ðèÿ1.ÿý$óÞúç
-çß.!öíðîøö6 âúôê <ì 'æ"ü	ùó!/$ðýâð-û)	$àû. ý#íë&çýòæ	ÿ"öè6"6ôýäùûÞ ÷ô òÜ *3!%	õõöÚ/? ÞøíÛAý-Ë&
-7õ:ùåèõÿìú?6 Ý#ïéæ
-4èá=7
-ëû,
- ýó÷ý%Ðý&åøö7&"æÔ		ù	'ß÷ïæç
-6ùñ þñà	Ð ÷ö2K$óþ	ì&(9þ÷<%úØöý	!  ûåóêñ ÂííÍÿ û 
-×»ûüþ&ðÞ'
-ôÿþù#ø 5Þ?%èüøöïÜðõøñðÙßú;	û	þ5)×"6%ðüê8óéý
--úãàì*÷ôéïñìôþÙ÷ÿè(":-C#+%
- ÒõþþïÛêßýäE	Z.Þ#ûòÚý/%øñã	ù!ûöø'#þ1ùû"'
-ÿ éöÿö í ä2íÜù þÿ##ûìÿäøïû	íõäú
-<#ð-õýÊ÷ûÿôô$çèðÚ
-ðêôå6ù
-ÿ÷öé÷æ
-åù,ô
-óÿïþéò ò"10>CE$õ æ	ÿ"ú"í(>÷Õ#ß&Ø	2×úóÕü$þ.$óñù+Óþ<)ÿ##îý&ýý(þøö	 þßF 	ýôæ(	0õþýäñ,òïÓü?&&Ùýü*úê÷.ãé
-ûü.ýúöíþó%+þïúððéý@
-ß ç/ùõ! õ1_H6óòê&!#óçôøáÂðÚòñõõøôú	8ùüçøÂ'ì!ñ67+)Íü.õ÷
-
-ëþ
-ÿü&÷ñ æ÷ùüÿ#ë>æ, Æûõôõ
-ðõ)ñþú(!!øòó#ü ú37ó*ý'ôëæ þÿÙ'ÿûô-úì "ýð0ëýî6ìòp6YF?H&'òÿÚ	ðýÛö%Þ×åÜ$ÿ,ëàÿ.+-$ðï.,,ãæáãå/òêë-$ëõûüù
-ãÞùè-òëÚ*÷âí
-' $ø7 .'ø'ù#(íûö Ö(ó 	ó:çßûóë!èõ" ó=9J=??)*%ú#*ùüá é&ûôïÔ1ý!ØûÛ(&ý%"ì(7&Güïæø&òîþîü%ì !ø	ç $ãüþïîé÷ýð÷$õ çîüñ&òé"úõ6%$Ü'þïýûñû3öÐìóöì)!ì)õþçøø/?@JïûãìîïóÙîûøö')<IIö Û	/âø8ïÜõÿ
-ÿö÷/%OA<é+*?+$!ûø*þøô÷ñ'<ã	àó ÿÿøé+ !6ø$ì"þô êä%ìåüøðåÑùðÐÿú(ùòÉïüðî8îÓ
-ý,øë"ôúÿ7þôýÛ.)	
- $ÿ7 .- 3%þâ$ BôüýñQñþ/ûû.é6-*4*3^h#-(%ÿ%ü$7 0  1ÔýÓ:ôûó /ìòæÛø%	ðúëëÿ êØýíõÿ$ï
-
-$ûê*û("
-ô+òìÿðôúý%òìêäÕ"óþÚ8ìüðGùúäö*7 (
-#)*ø	""ðú(êõ
-ûã$ý-	í÷" öæìëê<ç+C0-1xfNZƒcí#å@÷
-éòë0êîïãñ	òÿö ßõÿ'öé9Ûñ7èÚôûìôüí%ôà4êÍùôûó÷î ùá'íÞ"#ìüúõ$!,î#Þ  óÝäðùâ÷ÿ"9
-'ñùî+!Ñ/ô#ïæê!)Ð+$!á2/øø+&R,pQ†©…ÌÜ˜±GOþ<ï(#ùê;'	%èýüéô!üð÷ö>þüõú$$ñÍô´Ùíó
-øû#ç*ëûBÿ!ú&òò
-öØõõüÔÔ
-Ð3åú	C
-#JÛÞò	à45ÚûôèÜòåì*÷	TPL³á_˜kñÄ’bTSèñýæ*ÿ9ÿô-ÛþæC*3'**ø	îîøçï
-äô÷	?þ( æùÇüðîðîúò#úïõüèö/íò#ù$Ö Ïû."÷ù%38ù÷ü ÷ëëòóáí÷ìö  +'òßé þõ7öÖýùÜ*ôòéý.
-"'ó#+üòý1:.ÃüãF!ê¹äP¤|&1Eþÿ#1ðäõú,ýñ#ñæêÿ:Û÷ðöÿñþß)ãìú'þ7ü0ìÿú: þ	üÏýýäëþ&Øé.	ÔüáïÝ	ïèíóõÞ	$çîýò'óòê
-Üö>þáó*ü!/äôç
-ìøÜõ$åÿ4G©áÕ‹Ú	(EÄ(lv5ýE,Ûñ	ØÍëêÞôúøÛå	òûúý)
-ô#	ù%!î# 1(ÖL	ûëöôéèîüïù
-ýôö#ÔáÓ*,û	
-ëë<üú	!ÿ'õ*ìÿ	â+ùþ÷îó& æðïþóÿû&öéæ
-ûì"ùêê'íôù$;E.‰Ú`¼
-”ôÄÌ”c&:.û÷áLã($"úòìþýë2êííÿï(éíø ÿôåáëïó*üèæýöøüÿ!èû÷5Ìþù ø,=éë-þÙðò	æKùÿûèæH÷	+.ù"ëîôø	ÿ
-#éÿ$÷ó7öü/.YTiþ›k	RÂxt
-h¦ÔÜ}\ZA,ÿÿø
-ÿ"ùáö#
-ú"ä"úèý&ýì51ìú
-ûéíöúà$õâøÝîûöÅèîî&Òïýð üé"ð ãóìú³â2	ì+ñ&,')$á7áüï$à0 â.øüöïþ<
-	 à2%-ò"	ýä*é(;[‰ý³Ä	Ì¼Ô
-6œ¸ P$ - û"õÞñÿäéâø(ÿðþ&ùåð2)×Åìüú-#ñèæAüñùá.ã
-îèâ  	ê÷2öÒõ ú	1êîîéñ0
-þþ'äüòû9öÛ
-÷öûÿ	õñÿ!æ 
-õ *îóûðæñ!â#ò"I"NDnç¡ñð¦ˆþðâ{ç`XM24õ3+å(ïùõÑð
-
-ó"Òÿ:þáöøòúøå+á/áîÚ&úôéøéûõ0	 ëÍù ðÚðÐ8òþ!	ã 
-òüöáÝì(áý)!õ'èþóßôÿå3ùãèîðÙô÷	 ø  Çûë:øé×àéê/=	+	\µKYð	h
-Ð
-üðÈ€M«U	<í"ûêþüí -I÷": 27$á:éç.Þìäôàøû0éò	öý 
-ú'ûþöß<ì0×-úü+ýòîöÿù '.2Û!	"ò÷áïó"ùäü%#ì	+ùïþî3ýñåú	Ò$ýýñüßå(*,î@y¥¸e‘ªe; GÿqI9Dòýþÿú(2 íþ&ûú-Úéþîñò1Õþúÿ0âÙöýÄû$óýíõËßåíü!öìÍÒÇ"î÷ùâ
-ö3%Ø,/ Ì ùë
-ñèóHí
- 	ñû Éôìð
-%ô ô5
- ÿêòð'.+	,úú&	úý%
-ïü/?w‘\ñ6ËEË‰b@1D@â		úû	2	ñæý+âü/$ù
-%"$ùôôçÿ÷àí!
-ô#,ø#øýú'åÕöéêêýí" ú1ùò)ö ö32ýß"%åýEMò 'óóÛùÕùï6Áø
-úêò2 øÿúø)#(^l²Ø=åÕŒh2%?7' <Iøò		*	þû'"÷÷ôõù$àúEý!J *åÕ	þ÷
-ç(þýé$é
-íâ ûÉ
-	Ùøì û	Øß!+%üúâýý6!÷
-öóþöúôóõ	å$	ñð
-
-ö/þ/!-POX@‚€†x:rJ<?òþ ";,2òðôìòüÚÿþ ü)÷øöìðô!
-	× 
-îüáïö8ðý÷</$ÿêúî,æ å	"ù	ð	û7ø	ýÿ,õÕö,20ò +(&ÿ$-$Ýþ3öÿ 0!ö 1þà ö&îò' >A5HRWbEL0#%
-ãìüô"ççüíÔúýûùðúù,%ä÷ÿû'÷ ñòû$#CÓçüÿ-æÒàýñ÷
-ýíø),à < ü#ÿ4.æö 	íÛßúöÙ÷ó-7$ðíãôÞö
-ûç
-")+þöñ*ì+HñG'I833A/+*ø $ù!*>ñ!û
-ðòùÜ*ò
-öÿ")òôööõøþ'ùþùô
-÷ ÝñÙ*)ç üø"(/ 	üðC%êýý"æEèè"$øî
-õ% á9ñøöá""4ôÿ(ø3ó&ÿþ#øïûë6(öè+5K800"î7<8
- 
-ö=	úÌâù
-üñå	ôîø*ÿ0äèñûã$)ö%ëûê#þ þ)ì2Ð%Ý
-ì"éö;Pëò&%áúðúóæäðýö÷þïú,ìÚûóûù32æùýñüðâóúñ0õïô	ûíß×ûùêÿøý-8û$
-910%"Õ	ç(÷ôëó;'%î
-ù=ç%Û÷ 2Úðïú+óñ5þî!"æïì5öÔñ4ãÿô#ÿöä(Ü#(H1-L:*êÓ"@
-òø".öëë* úù)âó$òï*+ç è$Ûð$ëE@õ+-þò-ýùþ ò
-õ
-1.&'"öP,=èüãþû=ôâ
-*ãØ6#
-3â)ÿ ç.ðùø,þôâöûòå#ö&	øþóöþä%òçøþÞâüø4,&,6^y«Kg@),õö×ú-ÔÿÙûùù"Øäßÿçñë%à!	# C:è&.ïõöù-ó ù(ôõ	'ý2	ý!*$':*89 ?ô"íàðþï	Ð2ýþ÷!A,&â(øüä7ýü#ñ
-
- ×
-øë úÿ;ïâÏÇüõê#ëõùÞ÷<p‰¼…Š=? ê  ä'è þ*ôí'øÿ(	æ%ýòÜ"ñéüê*èüôòÿ&4ýíõû%ïñáèòìôFÐñ5)/çöÿç(Tû'(1 #à# áôýðð)+#ýèÇê ö%ù"þýÿþð 
-þ åüïñëô)(ý+ù&ô4! ó÷,öGúë)S½Ï·›^7&+Þá9ö$;0ã.
-
-ðýÎû)çóõ7ë+%üöä#ôø ïá+"áâ!éìð
- 74 ûú1É©4ò	öô öóô3	/ü-÷	-à
-î"Õîúãöë÷õ6à é	ö(Õã%ì 
-ù2é÷* ôêÿô7$:a«£¿—\lD02ï#;;êðè'ôáÝú'	 úåæñê÷õî ()ÚêùõøþÏù	/*ýêá
-ý>ìèøõ
-èð,.+£üë!øñþêú- úôÜ÷êó""ôÿûçòîùû ÿ9ð.ËôÃßðù	ñú,+	öæÊÕÿÍ	ý
-üÿà$â-.ORz´zNC#"
-ôûìô.õ
-ó
-øð$õÕÑÿîÕêþ*ö.ñ"÷	Ïü9õ óüé0úïùÿôÔ þù2!ý:!ãû*ù ñé÷þûàûö'&þçýóÕï"úú+ùóïï:òó#ø!ýÿûéø
-ý%$"ù.üó	Ní(-óÿà21fW:9ù#,í$ýò#	 	
-ÿåþðú#äçã$ï/éþûÓÜ	8ï/àýö*óîÿ*îðóÌ
-î Iü /ãï÷øôõñ	ý$Þ%ûñðø&óþãí
-éùàî!÷ãýÚþÞ"Üñ%ððûøý=ðòûÛöóøþî6ó>D!.èì.îúê*û	íøï äÜôþßßõÝóÙí>õð
-æüè
-èíïøê!í'÷=ùì?é#ý$"âùð"ï%%
-&þ(
-($	ò8ç3û  ûÿãìü
-ùï%ëÿ%
-àï	ô	 âë#"û!'÷ 	ù%	ùÿ÷## G
-$2%òùò%õ$þóé*&ï5)'9î#úøìö'òàñÒ0þõÿúì	æðî ëèù#Aóúûïòù7 þôLâ8	ò.ö)ý÷è!"ë! ú/éú÷ú8#þ êï -Öõ7Ôþùûÿ,ì.ýü.ÌÔùë
-ïüç"ó*ù+.!)1'Õì2ç÷ù'",
-äö)øD!úìô"	åþê ýOÿþÿç÷ÿ
--û+ñ7õ!!ð N'ÿõ$þ1%ì;õíåôóûøðýõôûèù	<0ò	7
-
-ø(:òö÷J ùùéåð*ú
- íê5)ï
-,òÇöÀúçæôó5ñ÷,3ó ü×ÎSüþ$õ#÷ïõùëî !ÚP "8÷úôèà%ûËøÿéú+ö>øE ñæõ÷ø,ýÜÿæñ 0ïæóå%ö øþØ éôí!ýýõöÓ+äö$&Pñ	ë	åô
-	57ßö÷ëÿýïì=	ö1.÷åõø íðñù)*é9èøóøôüéí3ø/ýéúó&
-ü	"ý'ù3÷þ÷&=
-õýR . ùÙ5þ	úõêðåË+ ìïùü*
-'éó8'÷õ
-Aëñ
-×â!ÿööÌ
-ý	'	ÿç÷ý!Ñòç#ÿ ùÿÏõË	î#	
-.õ ôëøõû		 /÷5ÿ"ö	ùúô$:$ôù ãû&ü#ú%ý
-ìõ 
-5í òâ4ñòê&ðüöü1þ #ô Öîüóýí
-'Íñý!øö1ñ  å6öãØßæ'üòÜ#ýé	ÿí ýøäÚ,/ *"Úò>þâõÐöèØàãïúëíùùûûï$	.	ñ'þõ:÷ó#ÿ÷øìø#ïôMñþûë)üëæýòýáçöÚ$÷þê(ýð*ù.äÿ#Ñ?å÷üõâððëù	û
-ú!"ñ	üãíü&êþõüÙ6Úýþÿþ-)ÿ ò% 	ûé,ûáöé!é!Õüùûíøø. ûç%	ã'ýìÞ1	/û: ü ùùã"ùæãñ!ïó*ÿï=
-Ö þ1ó÷ãï%Ï+ð&
-í	ãó)ý	(òòøæó!1ðïòä#(&/"ÿ÷ø
-þöíüÿïù	ùà+þ0÷	+Øü:ë7$ìÿç%ýøø
-
-ê+ øËæÖ	1û õõ úèúè&â&ýî#êüúø6 	è÷÷éÖï
-ð"ñüùÿ5þ
-%þö3+óâá/è÷çùø þþþóóðåü Cêóêõïö0ó÷ò/"Üûç)åùü	
-'ðø*)ö÷ 	ó&'
-)%çüþ!Ô×+þ	Ü& ð óõûö1,ôAîÞ,Þ
-	é		Ýûñòüïð1@ùýâ
-ûþñû *ô#ñô ïôøõ&÷ þí(ìöóö?
-üñÒóìé(=âêçýê û÷ââãöù;
-0ÒÏùÙãé/$-áö #î#øõ%û($-1÷	øãþó!þôøÞïãõßò$)æ ñø ü3Ìÿî÷ü"%Ù$9>ø÷Úùóð+-þ3óõ×Þáë9úóÙÿþ$çû &ôøôîøí ï 
-9þó	ï',/ @ò#'ê-!!÷,ôÿÿ!ãè*þóÓÿÇ3é
-ôâßúöÿöé#úýø6*ðÿÝþûÐöýÿ
-ÿ"ø#ùýüáëð $ùæÿûíþý÷2!ðþüðñ	xIöüïçêùëøëúêÿâç*Þóå Û Ûÿúùôéã++$,õç>"ï)êø
-	üñû&ýæøôï ÷3õ÷+õ!û÷"#óþøá1Íôê
-(ëöùÿÛÛó÷êâðõ))3ë!çýþïüþÿAê æØæ±ÿÿó"þ÷ò)ø
-ëò#6åÐ$ýé )úõ#õ
-ý6ñÿõüí"ÿ&óãüëæÑ+öûøî î÷
-òþõ/õ'üíð â ò"+&-
-æÜ$/ðõß×: ô	÷ëú
-úã>%Þñ
-8@C!ð!ìùéîþü÷Q÷5å"ûôâùúéùíê*	éèðøú0ù,÷þýÜ÷õÞó'ìçò%"óçïæé7öç(,ø#ãúòô	ùâôì÷þÌ.
-ó/	!ü
-ëûú"ùÿ<Õ$ßä!÷íøäûñò"*÷Nj1*52 )û;ÿìúã×ñÇ÷ï418èüøè"ô þÒëÊñ
-ýýèèúõÿùíýÎùöóîûðèüä
-üí/ý5 Û ýò5õ3öùÝÿùùþêÿå#×à% ôþýüåâ7õ.æþÜ	æ+Ô*ñó 4F6TE6ùÊöý#
-úü(.ö	ýûá	÷ñ8×íÏî"Øñ!å2õåþþæôûý)å8à		ãæ#óá-D'&/ó
-÷#þýÿ(ìóåýõáò$íè,	$$ÿúø-$õîù$åõúç'4ùùêÿõùñìÞû%ûÿ(îñì ÷DÿClH`:*& &áó÷÷Ôåö÷" óòÛñ#ëòñ	0øùòõ!ßìþ øõò ÷ûýíø ëûé%á#õé	ò	üúû!á0ëõùÉâöÝ*"!ôõÿ æûáâú!áø(÷úòô7
-ë ÷/0àÿéë#øÿú éð ç)þïñ	ëûÿû+=-Kf„;òÑóüææþïñêù÷î+íïþü.N.óýþ&
-Ð"÷ üßë:Dùñ÷:ìþï&òíò ìã+ã
-éÞ4ìÿè÷
-""þ	úõü,éáï)	ø)+ùðýæùß	ó$þë-ôó÷ïíÿãýï3!üïõ/Ëó; 
-8.ÿCEO\3!òøÿôôû	(óÿé5"
-ÚúYø) êÿÜ‰óðE*	ØD*%úëþý+N	 ø!'éùþõ&E.ï
-éê*!*êú"öý ëð-1.ý"öòÛÚ !-<$Üù(þý"$ôAè,ñó0ð*"!..N7:Iþü%-ö#!$õ#+ûâþ#Ù,o¹T	Ûáââ	ýþö,Ù0
-ö÷÷ýê íúF$8Û	áÐ	ôñëóôûñä÷!	,þçØùâ* )%úþñ	Ðý õ
-ìö!3éõù>ïì ûõ KýèÛ!ü
-'åêß"ñ%ð û): &7í	î*)íEúùâ ìöñMÝç"óô>á	ðíúñØÛ<ùÄ)å& ãúÿç÷
-ë2ø&ü(ö
-äÏøíñ+ï! ý5	áÛîï3ïý
-ÿú
-ø1î&Þ 4# æþ öäý	ó¾!Ûöåë$	(6*(þþ'å	å û	í ð 2ìíê1èá%ûøõôó Òÿï%0#?#?ì ðé)
-ô"ú%öäô$ÿù"ù&üý÷
-ñ	!þûáà á
-üÿéæó4ðçéá ë	ë(%öòüñ8þññçýû
-	ù Âûÿ(áðôãô. ôë(B& &+$5+í=ä"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
